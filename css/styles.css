@@ -6165,3 +6165,39 @@ html[lang="ml"] .sugg-info-card h2 {
     max-width: 140px;
   }
 }
+
+/* Modal Polish & Contrast Fixes */
+.clic-modal-dialog {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+}
+
+.clic-modal-header {
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-color);
+  z-index: 30;
+  position: relative;
+}
+
+.clic-modal-title {
+  color: var(--text-primary);
+  font-weight: 800;
+}
+
+.clic-modal-close {
+  z-index: 40;
+  position: relative;
+  cursor: pointer;
+}
+
+.clic-flip-arrow {
+  z-index: 15;
+}
+
+.clic-modal-footer {
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-color);
+  z-index: 30;
+  position: relative;
+}
