@@ -387,73 +387,101 @@
       </div>
     </section>
 
-    <!-- Dedicated Malayali Malls & Hypermarkets with Auto-Updating Offers -->
+    <!-- Dedicated Malayali Malls & Hypermarkets with ClicFlyer-Style Interface -->
     <section id="hypermarkets-section" class="hypermarkets-section" aria-label="Malayali Hypermarkets & Live Offers">
-      <div class="hyper-hero-strip">
-        <div class="hyper-hero-text">
-          <div class="hyper-live-badge">
-            <span class="hyper-live-pulse" aria-hidden="true"></span>
-            <span data-i18n="hyperLiveBadge">Auto-Updating Weekly Offers</span>
-          </div>
-          <h2 data-i18n="hyperHeroTitle">Malayali Hypermarkets &amp; Live Supermarket Deals</h2>
-          <p data-i18n="hyperHeroDesc">Explore LuLu, Nesto, Grand Hyper, City Flower, and Al Madina across 11 KSA cities. Tap any store to open their official active weekly digital flyer (auto-updated by the supermarket) or receive instant WhatsApp offer alerts!</p>
+      <!-- ClicFlyer Top Search & Location Strip -->
+      <div class="clic-top-bar">
+        <div class="clic-location-indicator">
+          <span class="clic-flag" aria-hidden="true">🇸🇦</span>
+          <span class="clic-country">Saudi Arabia :</span>
+          <strong class="clic-city-name" id="clicCurrentCity">Jeddah</strong>
         </div>
-
-        <!-- Quick Brand Filters -->
-        <div class="hyper-brand-filter" id="hyper-brand-filter" role="tablist" aria-label="Filter by brand">
-          <button type="button" class="hyper-brand-pill active" data-brand="">
-            <span data-i18n="hyperBrandAll">All Supermarkets</span>
-            <span class="hyper-brand-count" id="count-brand-all">32</span>
+        <div class="clic-search-box">
+          <svg class="clic-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="clicOffersSearch" class="clic-search-input" placeholder="Search Supermarkets, Products & Weekly Deals...">
+          <button type="button" id="clicSearchClear" class="clic-search-clear" style="display:none;" aria-label="Clear search">✕</button>
+          <button type="button" id="clicSearchBtn" class="clic-search-btn" aria-label="Search">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
           </button>
-          <button type="button" class="hyper-brand-pill" data-brand="lulu">
-            <span class="hyper-brand-dot lulu" aria-hidden="true"></span>
-            <span>LuLu Hypermarket</span>
-          </button>
-          <button type="button" class="hyper-brand-pill" data-brand="nesto">
-            <span class="hyper-brand-dot nesto" aria-hidden="true"></span>
-            <span>Nesto</span>
-          </button>
-          <button type="button" class="hyper-brand-pill" data-brand="grand">
-            <span class="hyper-brand-dot grand" aria-hidden="true"></span>
-            <span>Grand Hyper</span>
-          </button>
-          <button type="button" class="hyper-brand-pill" data-brand="cityflower">
-            <span class="hyper-brand-dot cityflower" aria-hidden="true"></span>
-            <span>City Flower</span>
-          </button>
-          <button type="button" class="hyper-brand-pill" data-brand="almadina">
-            <span class="hyper-brand-dot almadina" aria-hidden="true"></span>
-            <span>Al Madina</span>
-          </button>
-        </div>
-        <!-- Dedicated WhatsApp Offers Subscription Hub -->
-        <div class="hyper-wa-vip-strip">
-          <div class="hyper-wa-vip-left">
-            <div class="hyper-wa-vip-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12.03 2C6.5 2 2 6.48 2 12c0 1.77.46 3.5 1.34 5.02L2 22l5.13-1.34A9.96 9.96 0 0 0 12.03 22C17.55 22 22 17.52 22 12S17.55 2 12.03 2zm5.82 14.17c-.24.68-1.42 1.3-1.97 1.38-.52.08-1.18.11-1.9-.12-.44-.14-1-.33-1.72-.64-3.02-1.31-4.99-4.38-5.14-4.58-.15-.2-1.23-1.64-1.23-3.13s.78-2.22 1.06-2.52c.28-.3.61-.38.81-.38h.59c.19 0 .44-.07.69.53.25.61.85 2.09.92 2.24.08.15.13.33.03.53-.1.2-.15.33-.3.5-.15.18-.32.4-.45.54-.15.15-.31.32-.13.62.18.3.79 1.31 1.7 2.12 1.17 1.04 2.15 1.37 2.46 1.52.3.15.48.13.66-.08.18-.2.76-.89.96-1.19.2-.3.41-.25.69-.15.28.1 1.78.84 2.08.99.3.15.51.23.58.36.08.13.08.76-.16 1.44z"/>
-              </svg>
-            </div>
-            <div>
-              <strong data-i18n="waVipTitle">Get All KSA Weekly Offers on WhatsApp</strong>
-              <p data-i18n="waVipDesc">Receive LuLu, Nesto, Grand Hyper &amp; City Flower weekly digital flyers directly on your phone every Wednesday/Thursday.</p>
-            </div>
-          </div>
-          <a
-            href="https://wa.me/447460646263?text=Hi%20D%26J%20Techies!%20Please%20send%20me%20the%20latest%20KSA%20Hypermarket%20Weekly%20Offers%20Flyer."
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn-wa-vip-cta"
-            title="Subscribe to KSA Weekly Offers on WhatsApp"
-          >
-            <span data-i18n="waVipBtn">💬 Send Me Weekly Offers</span>
-            <span class="wa-vip-phone">+44 7460 646263</span>
-          </a>
         </div>
       </div>
 
-      <!-- Hypermarkets Grid -->
-      <div id="hypermarkets-grid" class="hypermarkets-grid"></div>
+      <!-- ClicFlyer Section 1: TOP RETAILERS -->
+      <div class="clic-section-block">
+        <div class="clic-section-header">
+          <span class="clic-header-line" aria-hidden="true"></span>
+          <h2 class="clic-section-title">TOP RETAILERS IN <span id="clicRetailersCityTitle">JEDDAH</span></h2>
+          <span class="clic-header-line" aria-hidden="true"></span>
+        </div>
+        <p class="clic-section-sub">Tap any retailer to filter live weekly promotions, brochures & city branches</p>
+
+        <!-- Top Retailers Grid -->
+        <div class="clic-retailers-grid" id="clicRetailersGrid"></div>
+      </div>
+
+      <!-- ClicFlyer Section 2: CATEGORIES -->
+      <div class="clic-section-block">
+        <div class="clic-section-header">
+          <span class="clic-header-line" aria-hidden="true"></span>
+          <h2 class="clic-section-title">CATEGORIES</h2>
+          <span class="clic-header-line" aria-hidden="true"></span>
+        </div>
+        
+        <!-- Horizontal Slider of Category Pills -->
+        <div class="clic-categories-slider" id="clicCategoriesSlider"></div>
+      </div>
+
+      <!-- ClicFlyer Section 3: LATEST WEEKLY PROMOTIONS & FLYERS -->
+      <div class="clic-section-block">
+        <div class="clic-section-header">
+          <span class="clic-header-line" aria-hidden="true"></span>
+          <h2 class="clic-section-title">LATEST WEEKLY PROMOTIONS &amp; FLYERS</h2>
+          <span class="clic-header-line" aria-hidden="true"></span>
+        </div>
+        <div class="clic-flyers-subbar">
+          <span class="clic-active-filter-badge" id="clicActiveFilterBadge">Showing All Active Weekly Catalogs</span>
+          <button type="button" id="clicResetFilters" class="clic-reset-btn" style="display:none;">Reset Filter</button>
+        </div>
+
+        <!-- Flyers 3:4 Catalog Grid -->
+        <div class="clic-flyers-grid" id="clicFlyersGrid"></div>
+      </div>
+
+      <!-- Dedicated WhatsApp Offers Subscription Hub -->
+      <div class="hyper-wa-vip-strip">
+        <div class="hyper-wa-vip-left">
+          <div class="hyper-wa-vip-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.03 2C6.5 2 2 6.48 2 12c0 1.77.46 3.5 1.34 5.02L2 22l5.13-1.34A9.96 9.96 0 0 0 12.03 22C17.55 22 22 17.52 22 12S17.55 2 12.03 2zm5.82 14.17c-.24.68-1.42 1.3-1.97 1.38-.52.08-1.18.11-1.9-.12-.44-.14-1-.33-1.72-.64-3.02-1.31-4.99-4.38-5.14-4.58-.15-.2-1.23-1.64-1.23-3.13s.78-2.22 1.06-2.52c.28-.3.61-.38.81-.38h.59c.19 0 .44-.07.69.53.25.61.85 2.09.92 2.24.08.15.13.33.03.53-.1.2-.15.33-.3.5-.15.18-.32.4-.45.54-.15.15-.31.32-.13.62.18.3.79 1.31 1.7 2.12 1.17 1.04 2.15 1.37 2.46 1.52.3.15.48.13.66-.08.18-.2.76-.89.96-1.19.2-.3.41-.25.69-.15.28.1 1.78.84 2.08.99.3.15.51.23.58.36.08.13.08.76-.16 1.44z"/>
+            </svg>
+          </div>
+          <div>
+            <strong data-i18n="waVipTitle">Get All KSA Weekly Offers on WhatsApp</strong>
+            <p data-i18n="waVipDesc">Receive LuLu, Nesto, Panda &amp; Carrefour weekly digital flyers directly on your phone every Wednesday/Thursday.</p>
+          </div>
+        </div>
+        <a
+          href="https://wa.me/447460646263?text=Hi%20D%26J%20Techies!%20Please%20send%20me%20the%20latest%20KSA%20Hypermarket%20Weekly%20Offers%20Flyer."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-wa-vip-cta"
+          title="Subscribe to KSA Weekly Offers on WhatsApp"
+        >
+          <span data-i18n="waVipBtn">💬 Send Me Weekly Offers</span>
+          <span class="wa-vip-phone">+44 7460 646263</span>
+        </a>
+      </div>
+
+      <!-- Physical Store Locations & Branches in City -->
+      <div class="clic-section-block" style="margin-top: 32px;">
+        <div class="clic-section-header">
+          <span class="clic-header-line" aria-hidden="true"></span>
+          <h2 class="clic-section-title">STORE BRANCHES IN <span id="clicBranchesCityTitle">JEDDAH</span></h2>
+          <span class="clic-header-line" aria-hidden="true"></span>
+        </div>
+        <p class="clic-section-sub">Direct Google Maps navigation &amp; phone contacts for your nearest branch</p>
+        <div id="hypermarkets-grid" class="hypermarkets-grid"></div>
+      </div>
     </section>
 
     <!-- Dedicated Mall Cinemas & Malayalam Movie Showtimes Section -->
@@ -1346,5 +1374,45 @@
   <script src="./js/daily_desk_data.js"></script>
   <script src="./js/i18n.js"></script>
   <script src="./js/app.js"></script>
+
+  <!-- ClicFlyer-Style Interactive Digital Flyer Booklet Modal -->
+  <div id="clicFlyerModal" class="clic-modal" aria-hidden="true" role="dialog" aria-label="Digital Flyer Booklet">
+    <div class="clic-modal-overlay" id="clicModalOverlay"></div>
+    <div class="clic-modal-dialog">
+      <div class="clic-modal-header">
+        <div class="clic-modal-nav">
+          <button type="button" class="clic-modal-back-btn" id="clicModalBackBtn">‹ Back</button>
+          <span class="clic-modal-pages" id="clicModalPageIndicator">Page 1 / 16</span>
+        </div>
+        <div class="clic-modal-title-block">
+          <h3 id="clicModalTitle" class="clic-modal-title">LULU SUPER FRIDAY OFFERS</h3>
+          <span id="clicModalValidity" class="clic-modal-validity">VALID TILL NOV 26, 2026</span>
+        </div>
+        <div class="clic-modal-actions">
+          <a id="clicModalOfficialBtn" href="#" target="_blank" rel="noopener noreferrer" class="clic-modal-external-btn" title="Open official store promotions">
+            🌐 Official Site
+          </a>
+          <button type="button" class="clic-modal-close" id="clicModalCloseBtn" aria-label="Close modal">✕</button>
+        </div>
+      </div>
+      <div class="clic-modal-body">
+        <button type="button" class="clic-flip-arrow prev" id="clicFlipPrev" aria-label="Previous Page">‹</button>
+        <div class="clic-modal-page-wrapper">
+          <img id="clicModalPageImg" src="./assets/retailers/lulu_flyer_cover.svg" alt="Flyer Page" class="clic-modal-page-img">
+          <div class="clic-modal-page-info">
+            <span class="clic-live-page-badge" id="clicModalLiveBadge">● OFFICIAL DIGITAL PROMOTIONS BROCHURE</span>
+          </div>
+        </div>
+        <button type="button" class="clic-flip-arrow next" id="clicFlipNext" aria-label="Next Page">›</button>
+      </div>
+      <div class="clic-modal-footer">
+        <span class="clic-modal-hint">👆 Use arrows to flip pages or tap below to open full promotions</span>
+        <a id="clicModalWaShare" href="#" target="_blank" rel="noopener noreferrer" class="clic-modal-wa-btn">
+          💬 Share on WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>

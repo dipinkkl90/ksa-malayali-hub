@@ -1,3 +1,286 @@
+// ============================================================================
+// ClicFlyer-Style Top Retailer Brands (Jeddah, Riyadh, Dammam & 11 KSA Cities)
+// ============================================================================
+window.RETAILER_BRANDS = [
+  {
+    key: "lulu",
+    name: "LuLu Hypermarkets",
+    name_ar: "لولو هايبر ماركت",
+    logo: "./assets/retailers/lulu.svg",
+    badge: "NEW",
+    is_new: true,
+    offers_count: "45+ Deals",
+    flyer_id: "FLYER-LULU-01",
+    official_url: "https://www.luluhypermarket.com/en-sa/promotions",
+    whatsapp: "https://wa.me/966555122111?text=Hi%20LuLu%20KSA%20Weekly%20Offers"
+  },
+  {
+    key: "nesto",
+    name: "Nesto Hypermarket",
+    name_ar: "نيستو هايبر ماركت",
+    logo: "./assets/retailers/nesto.svg",
+    badge: "NEW",
+    is_new: true,
+    offers_count: "38+ Deals",
+    flyer_id: "FLYER-NESTO-01",
+    official_url: "https://www.nestogroup.com/promotions/",
+    whatsapp: "https://wa.me/966555133222?text=Hi%20Nesto%20KSA%20Weekly%20Offers"
+  },
+  {
+    key: "panda",
+    name: "Hyper Panda",
+    name_ar: "هايبر بنده",
+    logo: "./assets/retailers/panda.svg",
+    badge: "NEW",
+    is_new: true,
+    offers_count: "42+ Deals",
+    flyer_id: "FLYER-PANDA-01",
+    official_url: "https://panda.com.sa/promotions",
+    whatsapp: "https://wa.me/966920027707?text=Hi%20Panda%20KSA%20Weekly%20Offers"
+  },
+  {
+    key: "carrefour",
+    name: "Carrefour Hyper",
+    name_ar: "كارفور هايبر",
+    logo: "./assets/retailers/carrefour.svg",
+    badge: "HOT",
+    is_new: false,
+    offers_count: "50+ Deals",
+    flyer_id: "FLYER-CARREFOUR-01",
+    official_url: "https://www.carrefourksa.com/mafksa/en/promotions",
+    whatsapp: "https://wa.me/966920000282?text=Hi%20Carrefour%20KSA%20Offers"
+  },
+  {
+    key: "danube",
+    name: "Danube Supermarkets",
+    name_ar: "الدانوب سوبرماركت",
+    logo: "./assets/retailers/danube.svg",
+    badge: "NEW",
+    is_new: true,
+    offers_count: "30+ Deals",
+    flyer_id: "FLYER-DANUBE-01",
+    official_url: "https://danube.sa/en/promotions",
+    whatsapp: "https://wa.me/966920001002?text=Hi%20Danube%20KSA%20Weekly%20Offers"
+  },
+  {
+    key: "bindawood",
+    name: "BinDawood Stores",
+    name_ar: "أسواق بن داود",
+    logo: "./assets/retailers/bindawood.svg",
+    badge: "NEW",
+    is_new: true,
+    offers_count: "28+ Deals",
+    flyer_id: "FLYER-BINDAWOOD-01",
+    official_url: "https://bindawood.com/promotions/",
+    whatsapp: "https://wa.me/966920022285?text=Hi%20BinDawood%20Weekly%20Deals"
+  },
+  {
+    key: "othaim",
+    name: "Abdullah Al Othaim",
+    name_ar: "أسواق عبدالله العثيم",
+    logo: "./assets/retailers/othaim.svg",
+    badge: "NEW",
+    is_new: true,
+    offers_count: "35+ Deals",
+    flyer_id: "FLYER-OTHAIM-01",
+    official_url: "https://othaimmarkets.com/promotions",
+    whatsapp: "https://wa.me/966920000702?text=Hi%20Othaim%20Weekly%20Offers"
+  },
+  {
+    key: "grand",
+    name: "Grand Hypermarket",
+    name_ar: "جراند هايبر ماركت",
+    logo: "./assets/retailers/grand.svg",
+    badge: "NEW",
+    is_new: true,
+    offers_count: "25+ Deals",
+    flyer_id: "FLYER-GRAND-01",
+    official_url: "https://www.grandhyper.com/ksa/",
+    whatsapp: "https://wa.me/966555144333?text=Hi%20Grand%20Hyper%20Weekly%20Offers"
+  },
+  {
+    key: "cityflower",
+    name: "City Flower Hyper",
+    name_ar: "سيتي فلاور",
+    logo: "./assets/retailers/cityflower.svg",
+    badge: "DEALS",
+    is_new: false,
+    offers_count: "22+ Deals",
+    flyer_id: "FLYER-CITYFLOWER-01",
+    official_url: "https://www.cityflower.com/promotions/",
+    whatsapp: "https://wa.me/966555166555?text=Hi%20City%20Flower%20Weekly%20Offers"
+  },
+  {
+    key: "almadina",
+    name: "Al Madina Hyper",
+    name_ar: "المدينة هايبر ماركت",
+    logo: "./assets/retailers/almadina.svg",
+    badge: "NEW",
+    is_new: true,
+    offers_count: "20+ Deals",
+    flyer_id: "FLYER-ALMADINA-01",
+    official_url: "https://almadinahyper.com/offers",
+    whatsapp: "https://wa.me/966555177888?text=Hi%20Al%20Madina%20Weekly%20Offers"
+  },
+  {
+    key: "farm",
+    name: "Farm Superstores",
+    name_ar: "أسواق المزرعة",
+    logo: "./assets/retailers/farm.svg",
+    badge: "NEW",
+    is_new: true,
+    offers_count: "18+ Deals",
+    flyer_id: "FLYER-FARM-01",
+    official_url: "https://farm.com.sa/promotions",
+    whatsapp: "https://wa.me/966920000888?text=Hi%20Farm%20Superstores%20Offers"
+  },
+  {
+    key: "prime",
+    name: "Prime Markets KSA",
+    name_ar: "أسواق برايم",
+    logo: "./assets/retailers/prime.svg",
+    badge: "HOT",
+    is_new: false,
+    offers_count: "15+ Deals",
+    flyer_id: "FLYER-PRIME-01",
+    official_url: "https://primemarkets.com.sa/offers",
+    whatsapp: "https://wa.me/966555199000?text=Hi%20Prime%20Markets%20Deals"
+  }
+];
+
+// ============================================================================
+// ClicFlyer-Style Product Categories with Live Counts
+// ============================================================================
+window.FLYER_CATEGORIES = [
+  { id: "all", name: "All Offers", malayalam: "എല്ലാ ഓഫറുകളും", icon: "🛒", count: "8,950+ Deals" },
+  { id: "grocery", name: "Grocery & Rice", malayalam: "ഗ്രോസറി & അരി", icon: "🌾", count: "2,726 Offers" },
+  { id: "fruits", name: "Fruits & Vegetables", malayalam: "പച്ചക്കറികൾ & പഴങ്ങൾ", icon: "🍎", count: "499 Offers" },
+  { id: "meat_fish", name: "Fresh Meat & Malabar Fish", malayalam: "ഫ്രഷ് മീറ്റ് & മീൻ", icon: "🥩", count: "565 Offers" },
+  { id: "dairy", name: "Dairy & Milk", malayalam: "പാൽ & ഡയറി", icon: "🥛", count: "1,110 Offers" },
+  { id: "electronics", name: "Mobiles & Tech", malayalam: "മൊബൈൽ & ഇലക്ട്രോണിക്സ്", icon: "📱", count: "2,227 Offers" },
+  { id: "household", name: "Household & Cleaning", malayalam: "ഹൗസ്ഹോൾഡ് & ക്ലീനിംഗ്", icon: "🧺", count: "1,342 Offers" },
+  { id: "bakery", name: "Bakery & Confectionery", malayalam: "ബേക്കറി & ലഘുഭക്ഷണം", icon: "🥐", count: "1,182 Offers" },
+  { id: "personal", name: "Health & Beauty", malayalam: "ഹെൽത്ത് & ബ്യൂട്ടി", icon: "🧴", count: "4,535 Offers" }
+];
+
+// ============================================================================
+// ClicFlyer-Style Weekly Promotional Digital Flyer Booklets
+// ============================================================================
+window.FLYER_CATALOGS = [
+  {
+    id: "FLYER-LULU-01",
+    brand_key: "lulu",
+    brand: "LuLu Hypermarkets",
+    title: "LuLu Super Friday · Mega Savings Weekend",
+    title_ml: "ലൂലു സൂപ്പർ ഫ്രൈഡേ വാരാന്ത്യ ഓഫറുകൾ",
+    cover: "./assets/retailers/lulu_flyer_cover.svg",
+    valid_till: "26 Nov 2026",
+    days_left: 4,
+    views: "540K+",
+    pages_count: 85,
+    category: "grocery",
+    highlight: "Up to 70% OFF on Basmati Rice, Malabar Fish & Groceries",
+    official_url: "https://www.luluhypermarket.com/en-sa/promotions",
+    whatsapp_cta: "https://wa.me/447460646263?text=Hi%20D%26J!%20Please%20send%20me%20the%20LuLu%20Weekly%20PDF%20Flyer."
+  },
+  {
+    id: "FLYER-NESTO-01",
+    brand_key: "nesto",
+    brand: "Nesto Hypermarket",
+    title: "Nesto Midnight Fiesta · Half-Price Specials",
+    title_ml: "നെസ്റ്റോ മിഡ്‌നൈറ്റ് പകുതി വില ഓഫറുകൾ",
+    cover: "./assets/retailers/nesto_flyer_cover.svg",
+    valid_till: "27 Nov 2026",
+    days_left: 5,
+    views: "380K+",
+    pages_count: 48,
+    category: "meat_fish",
+    highlight: "Flat 50% OFF on Fresh Chicken, Malabar Ayala & Pantry",
+    official_url: "https://www.nestogroup.com/promotions/",
+    whatsapp_cta: "https://wa.me/447460646263?text=Hi%20D%26J!%20Please%20send%20me%20the%20Nesto%20Weekly%20PDF%20Flyer."
+  },
+  {
+    id: "FLYER-PANDA-01",
+    brand_key: "panda",
+    brand: "Hyper Panda",
+    title: "Panda Weekly Fresh Savings · Buy 1 Get 1 Free",
+    title_ml: "ഹൈപ്പർ ബنده ഒരെണ്ണം വാങ്ങിയാൽ ഒരെണ്ണം സൗജന്യം",
+    cover: "./assets/retailers/panda_flyer_cover.svg",
+    valid_till: "25 Nov 2026",
+    days_left: 3,
+    views: "420K+",
+    pages_count: 36,
+    category: "fruits",
+    highlight: "Fresh Farm Fruits, Cheeses & Dairy BOGO Free Fest",
+    official_url: "https://panda.com.sa/promotions",
+    whatsapp_cta: "https://wa.me/447460646263?text=Hi%20D%26J!%20Please%20send%20me%20the%20Panda%20Weekly%20PDF%20Flyer."
+  },
+  {
+    id: "FLYER-CARREFOUR-01",
+    brand_key: "carrefour",
+    brand: "Carrefour Hyper",
+    title: "Carrefour Anniversary Mega Sale & Electronics",
+    title_ml: "കارفൂർ ആനിവേഴ്സറി മെഗാ ഇലക്ട്രോണിക്സ് മേള",
+    cover: "./assets/retailers/carrefour_flyer_cover.svg",
+    valid_till: "28 Nov 2026",
+    days_left: 6,
+    views: "310K+",
+    pages_count: 52,
+    category: "electronics",
+    highlight: "Smart TVs, Samsung Galaxy S24 Ultra & Household Essentials",
+    official_url: "https://www.carrefourksa.com/mafksa/en/promotions",
+    whatsapp_cta: "https://wa.me/447460646263?text=Hi%20D%26J!%20Please%20send%20me%20the%20Carrefour%20Weekly%20PDF%20Flyer."
+  },
+  {
+    id: "FLYER-GRAND-01",
+    brand_key: "grand",
+    brand: "Grand Hypermarket",
+    title: "Grand Hyper Weekend Crazy Crash Deals",
+    title_ml: "ഗ്രാൻഡ് هايബർ വാരാന്ത്യ ക്രേസി ഓഫറുകൾ",
+    cover: "./assets/retailers/grand_flyer_cover.svg",
+    valid_till: "24 Nov 2026",
+    days_left: 2,
+    views: "190K+",
+    pages_count: 32,
+    category: "grocery",
+    highlight: "SAR 10 & 20 Super Deals on Onions, Spices & Tea",
+    official_url: "https://www.grandhyper.com/ksa/",
+    whatsapp_cta: "https://wa.me/447460646263?text=Hi%20D%26J!%20Please%20send%20me%20the%20Grand%20Hyper%20Weekly%20PDF%20Flyer."
+  },
+  {
+    id: "FLYER-DANUBE-01",
+    brand_key: "danube",
+    brand: "Danube Supermarkets",
+    title: "Danube Gourmet Bakehouse & Fresh Market Deals",
+    title_ml: "ദാനൂബ് പ്രീമിയം ബേക്കറി & ഫ്രഷ് മാർക്കറ്റ് ഓഫർ",
+    cover: "./assets/retailers/danube_flyer_cover.svg",
+    valid_till: "29 Nov 2026",
+    days_left: 7,
+    views: "240K+",
+    pages_count: 40,
+    category: "bakery",
+    highlight: "Fresh Croissants, Imported Cheeses & Organic Produce",
+    official_url: "https://danube.sa/en/promotions",
+    whatsapp_cta: "https://wa.me/447460646263?text=Hi%20D%26J!%20Please%20send%20me%20the%20Danube%20Weekly%20PDF%20Flyer."
+  },
+  {
+    id: "FLYER-CITYFLOWER-01",
+    brand_key: "cityflower",
+    brand: "City Flower Hyper",
+    title: "City Flower Super Value Bonanza & Apparel",
+    title_ml: "സിറ്റി ഫ്ലവർ സൂപ്പർ വാല്യൂ ബൊനാൻസ",
+    cover: "./assets/retailers/cityflower_flyer_cover.svg",
+    valid_till: "30 Nov 2026",
+    days_left: 8,
+    views: "160K+",
+    pages_count: 28,
+    category: "household",
+    highlight: "Everyday SAR 5 & 10 Specials, Kerala Lungis & Kitchenware",
+    official_url: "https://www.cityflower.com/promotions/",
+    whatsapp_cta: "https://wa.me/447460646263?text=Hi%20D%26J!%20Please%20send%20me%20the%20City%20Flower%20Weekly%20PDF%20Flyer."
+  }
+];
+
 // Curated Malayali Malls & Hypermarkets across 11 KSA Cities
 // Featuring Auto-Updating Official Live Digital Flyers & WhatsApp Offer Channels
 // Developed by D&J Techies · +44 7460 646263

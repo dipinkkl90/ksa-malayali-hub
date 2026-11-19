@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" width="200" height="80">
+  <rect width="100%" height="100%" fill="transparent"/>
+  <g transform="translate(15, 12)">
+    <rect x="0" y="8" width="50" height="40" rx="8" fill="#E31E24"/>
+    <path d="M12 36 L12 20 L22 36 L22 20 M28 20 L38 20 M33 20 L33 36 M38 36 L28 36" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <text x="58" y="36" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="30" fill="#0B3C78" letter-spacing="-0.5">nesto</text>
+    <text x="142" y="34" font-family="'Noto Sans Arabic', Arial, sans-serif" font-weight="800" font-size="20" fill="#E31E24">نيستو</text>
+    <text x="58" y="48" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="700" font-size="7.5" fill="#E31E24" letter-spacing="1">HYPERMARKET</text>
+  </g>
+</svg>

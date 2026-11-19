@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
+  <defs>
+    <linearGradient id="bgGrand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F37021"/>
+      <stop offset="100%" stop-color="#C24E07"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bgGrand)"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="300" height="60" fill="#ffffff"/>
+  <rect x="20" y="10" width="40" height="40" rx="8" fill="#F37021"/>
+  <text x="40" y="36" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="20" fill="#ffffff" text-anchor="middle">G</text>
+  <text x="70" y="32" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="18" fill="#003366">GRAND</text>
+  <text x="70" y="46" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="10" fill="#F37021">HYPERMARKET</text>
+  <rect x="200" y="14" width="85" height="32" rx="16" fill="#003366"/>
+  <text x="242" y="34" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="11" fill="#ffffff" text-anchor="middle">HOT DEALS</text>
+
+  <!-- Big Title -->
+  <text x="150" y="115" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="28" fill="#ffffff" text-anchor="middle">WEEKEND CRAZY</text>
+  <text x="150" y="140" font-family="'Noto Sans Arabic', Arial, sans-serif" font-weight="800" font-size="20" fill="#FFD700" text-anchor="middle">عروض نهاية الأسبوع الرائعة</text>
+
+  <!-- Big Badge -->
+  <circle cx="150" cy="210" r="54" fill="#003366" stroke="#ffffff" stroke-width="4"/>
+  <text x="150" y="196" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="13" fill="#FFD700" text-anchor="middle">PRICE CRASH</text>
+  <text x="150" y="232" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="34" fill="#ffffff" text-anchor="middle">10/20</text>
+  <text x="150" y="248" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="12" fill="#FFD700" text-anchor="middle">SAR FIESTA</text>
+
+  <!-- Products Box -->
+  <rect x="20" y="280" width="260" height="95" rx="12" fill="rgba(255, 255, 255, 0.95)"/>
+  <text x="35" y="306" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="13" fill="#003366">🧅 Onion Mesh Bag 5kg</text>
+  <text x="220" y="306" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="14" fill="#C24E07">SAR 6.99</text>
+  <line x1="35" y1="316" x2="265" y2="316" stroke="#eee" stroke-width="1"/>
+  <text x="35" y="338" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="13" fill="#003366">🫖 Brooke Bond Tea 800g</text>
+  <text x="220" y="338" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="14" fill="#C24E07">SAR 14.50</text>
+  <line x1="35" y1="348" x2="265" y2="348" stroke="#eee" stroke-width="1"/>
+  <text x="35" y="366" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="12" fill="#333">🥥 Fresh Coconut 3 Pcs · SAR 4.99</text>
+  <text x="260" y="366" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="11" fill="#003366" text-anchor="end">24+ Pages ➔</text>
+</svg>

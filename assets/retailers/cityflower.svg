@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" width="200" height="80">
+  <rect width="100%" height="100%" fill="transparent"/>
+  <g transform="translate(15, 12)">
+    <circle cx="24" cy="28" r="18" fill="#E41E26"/>
+    <circle cx="24" cy="28" r="8" fill="#FFD200"/>
+    <text x="52" y="28" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="19" fill="#E41E26">CITY FLOWER</text>
+    <text x="52" y="44" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="700" font-size="9" fill="#444" letter-spacing="1">HYPERMARKET &amp; DEALS</text>
+  </g>
+</svg>

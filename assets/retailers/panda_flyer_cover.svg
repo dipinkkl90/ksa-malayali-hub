@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
+  <defs>
+    <linearGradient id="bgPanda" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00853F"/>
+      <stop offset="100%" stop-color="#004D25"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bgPanda)"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="300" height="60" fill="#ffffff"/>
+  <circle cx="35" cy="30" r="18" fill="#00853F"/>
+  <circle cx="28" cy="24" r="3" fill="#ffffff"/>
+  <circle cx="42" cy="24" r="3" fill="#ffffff"/>
+  <circle cx="28" cy="24" r="1.5" fill="#004D25"/>
+  <circle cx="42" cy="24" r="1.5" fill="#004D25"/>
+  <text x="65" y="36" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="24" fill="#00853F">Panda</text>
+  <text x="140" y="36" font-family="'Noto Sans Arabic', Arial, sans-serif" font-weight="800" font-size="22" fill="#00853F">بنده</text>
+  <rect x="200" y="14" width="85" height="32" rx="16" fill="#E31B23"/>
+  <text x="242" y="34" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="11" fill="#ffffff" text-anchor="middle">MEGA DEALS</text>
+
+  <!-- Big Title -->
+  <text x="150" y="115" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="26" fill="#ffffff" text-anchor="middle">WEEKLY FRESH SAVINGS</text>
+  <text x="150" y="140" font-family="'Noto Sans Arabic', Arial, sans-serif" font-weight="800" font-size="22" fill="#FFD700" text-anchor="middle">عروض بنده الأسبوعية</text>
+
+  <!-- Big Badge -->
+  <circle cx="150" cy="210" r="54" fill="#ffffff" stroke="#FFD700" stroke-width="4"/>
+  <text x="150" y="196" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="13" fill="#00853F" text-anchor="middle">BUY 1 GET 1</text>
+  <text x="150" y="232" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="34" fill="#E31B23" text-anchor="middle">FREE</text>
+  <text x="150" y="248" font-family="'Noto Sans Arabic', Arial, sans-serif" font-weight="800" font-size="13" fill="#00853F" text-anchor="middle">اشتري ١ واحصل على ١</text>
+
+  <!-- Products Box -->
+  <rect x="20" y="280" width="260" height="95" rx="12" fill="rgba(255, 255, 255, 0.95)"/>
+  <text x="35" y="306" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="13" fill="#00853F">🍌 Ecuadorian Banana 1kg</text>
+  <text x="220" y="306" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="14" fill="#E31B23">SAR 3.99</text>
+  <line x1="35" y1="316" x2="265" y2="316" stroke="#eee" stroke-width="1"/>
+  <text x="35" y="338" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="13" fill="#00853F">🧀 Puck Cream Cheese 500g</text>
+  <text x="220" y="338" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="14" fill="#E31B23">SAR 12.50</text>
+  <line x1="35" y1="348" x2="265" y2="348" stroke="#eee" stroke-width="1"/>
+  <text x="35" y="366" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="12" fill="#333">🍫 Nutella Spread 750g · SAR 19.99</text>
+  <text x="260" y="366" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="11" fill="#00853F" text-anchor="end">28+ Pages ➔</text>
+</svg>

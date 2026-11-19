@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
+  <defs>
+    <linearGradient id="bgCity" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E41E26"/>
+      <stop offset="100%" stop-color="#8B0000"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bgCity)"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="300" height="60" fill="#ffffff"/>
+  <circle cx="35" cy="30" r="16" fill="#E41E26"/>
+  <circle cx="35" cy="30" r="7" fill="#FFD200"/>
+  <text x="60" y="36" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="18" fill="#E41E26">CITY FLOWER</text>
+  <rect x="200" y="14" width="85" height="32" rx="16" fill="#FFD200"/>
+  <text x="242" y="34" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="11" fill="#000000" text-anchor="middle">SUPER DEALS</text>
+
+  <!-- Big Title -->
+  <text x="150" y="115" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="26" fill="#ffffff" text-anchor="middle">VALUE BONANZA</text>
+  <text x="150" y="140" font-family="'Noto Sans Arabic', Arial, sans-serif" font-weight="800" font-size="20" fill="#FFD200" text-anchor="middle">عروض سيتي فلاور الكبرى</text>
+
+  <!-- Circle -->
+  <circle cx="150" cy="210" r="54" fill="#FFD200" stroke="#ffffff" stroke-width="4"/>
+  <text x="150" y="196" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="14" fill="#E41E26" text-anchor="middle">EVERYDAY</text>
+  <text x="150" y="232" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="34" fill="#E41E26" text-anchor="middle">SAR 5/10</text>
+  <text x="150" y="248" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="12" fill="#000000" text-anchor="middle">SPECIALS</text>
+
+  <!-- Products Box -->
+  <rect x="20" y="280" width="260" height="95" rx="12" fill="rgba(255, 255, 255, 0.95)"/>
+  <text x="35" y="306" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="13" fill="#E41E26">👕 Kerala Traditional Lungi</text>
+  <text x="220" y="306" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="14" fill="#8B0000">SAR 12.00</text>
+  <line x1="35" y1="316" x2="265" y2="316" stroke="#eee" stroke-width="1"/>
+  <text x="35" y="338" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="13" fill="#E41E26">🍳 Non-Stick Cookware Set</text>
+  <text x="220" y="338" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="14" fill="#8B0000">SAR 49.00</text>
+  <line x1="35" y1="348" x2="265" y2="348" stroke="#eee" stroke-width="1"/>
+  <text x="35" y="366" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="12" fill="#333">🧴 Malabar Hair Care · SAR 7.50</text>
+  <text x="260" y="366" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="11" fill="#E41E26" text-anchor="end">20+ Pages ➔</text>
+</svg>

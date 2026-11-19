@@ -917,17 +917,265 @@
     return list;
   }
 
+  // ============================================================================
+  // ClicFlyer-Style Controller & Presentation System
+  // ============================================================================
+  let clicActiveBrand = "";
+  let clicActiveCategory = "all";
+  let clicSearchQuery = "";
+  let clicFavBrands = new Set(JSON.parse(localStorage.getItem("ksa_clic_favs") || "[]"));
+  let currentModalFlyer = null;
+  let currentModalPage = 1;
+  let clicEventsBound = false;
+
   function renderHypermarkets() {
+    renderClicTopBar();
+    renderClicRetailers();
+    renderClicCategories();
+    renderClicFlyers();
+    renderHypermarketBranches();
+    if (!clicEventsBound) {
+      bindClicEvents();
+      clicEventsBound = true;
+    }
+  }
+
+  function renderClicTopBar() {
+    const currentCityEl = $("clicCurrentCity");
+    const retailersCityEl = $("clicRetailersCityTitle");
+    const branchesCityEl = $("clicBranchesCityTitle");
+
+    const cityName = state.city || (state.lang === "ml" ? "എല്ലാ 11 നഗരങ്ങളും" : "All 11 Cities");
+    if (currentCityEl) currentCityEl.textContent = cityName;
+    if (retailersCityEl) retailersCityEl.textContent = (state.city || "KSA").toUpperCase();
+    if (branchesCityEl) branchesCityEl.textContent = (state.city || "KSA").toUpperCase();
+  }
+
+  function renderClicRetailers() {
+    const grid = $("clicRetailersGrid");
+    if (!grid) return;
+    const brands = window.RETAILER_BRANDS || [];
+
+    grid.innerHTML = "";
+    const frag = document.createDocumentFragment();
+
+    brands.forEach((b) => {
+      const card = document.createElement("article");
+      const isActive = clicActiveBrand === b.key;
+      const isFav = clicFavBrands.has(b.key);
+
+      card.className = `clic-retailer-card ${isActive ? "active" : ""}`;
+      card.setAttribute("data-brand", b.key);
+      card.setAttribute("role", "button");
+      card.setAttribute("tabindex", "0");
+      card.setAttribute("aria-pressed", isActive ? "true" : "false");
+      card.setAttribute("title", `Filter ${b.name} promotions`);
+
+      card.innerHTML = `
+        <div class="clic-retailer-top">
+          <span class="clic-badge-new">${escapeHtml(b.badge)}</span>
+          <button type="button" class="clic-fav-btn ${isFav ? "active" : ""}" data-fav="${escapeHtml(b.key)}" aria-label="Favorite ${escapeHtml(b.name)}">
+            ${isFav ? "❤️" : "♡"}
+          </button>
+        </div>
+        <div class="clic-retailer-logo-box">
+          <img src="${escapeHtml(b.logo)}" alt="${escapeHtml(b.name)}" class="clic-retailer-logo" loading="lazy">
+        </div>
+        <div class="clic-retailer-footer">
+          <h3 class="clic-retailer-name">${escapeHtml(b.name)}</h3>
+          <span class="clic-retailer-deals-count">${escapeHtml(b.offers_count)}</span>
+        </div>
+      `;
+
+      // Click card to toggle brand filter
+      card.addEventListener("click", (e) => {
+        if (e.target.closest(".clic-fav-btn")) {
+          // Favorite button clicked
+          e.stopPropagation();
+          const key = b.key;
+          if (clicFavBrands.has(key)) {
+            clicFavBrands.delete(key);
+          } else {
+            clicFavBrands.add(key);
+          }
+          localStorage.setItem("ksa_clic_favs", JSON.stringify([...clicFavBrands]));
+          renderClicRetailers();
+          return;
+        }
+
+        clicActiveBrand = clicActiveBrand === b.key ? "" : b.key;
+        renderClicRetailers();
+        renderClicFlyers();
+        renderHypermarketBranches();
+      });
+
+      frag.appendChild(card);
+    });
+
+    grid.appendChild(frag);
+  }
+
+  function renderClicCategories() {
+    const slider = $("clicCategoriesSlider");
+    if (!slider) return;
+    const categories = window.FLYER_CATEGORIES || [];
+
+    slider.innerHTML = "";
+    const frag = document.createDocumentFragment();
+
+    categories.forEach((cat) => {
+      const card = document.createElement("div");
+      const isActive = clicActiveCategory === cat.id;
+
+      card.className = `clic-cat-card ${isActive ? "active" : ""}`;
+      card.setAttribute("data-cat", cat.id);
+      card.setAttribute("role", "button");
+      card.setAttribute("tabindex", "0");
+
+      const label = state.lang === "ml" && cat.malayalam ? cat.malayalam : cat.name;
+
+      card.innerHTML = `
+        <span class="clic-cat-icon">${cat.icon}</span>
+        <span class="clic-cat-name">${escapeHtml(label)}</span>
+        <span class="clic-cat-count">${escapeHtml(cat.count)}</span>
+      `;
+
+      card.addEventListener("click", () => {
+        clicActiveCategory = cat.id;
+        renderClicCategories();
+        renderClicFlyers();
+      });
+
+      frag.appendChild(card);
+    });
+
+    slider.appendChild(frag);
+  }
+
+  function renderClicFlyers() {
+    const grid = $("clicFlyersGrid");
+    const badge = $("clicActiveFilterBadge");
+    const resetBtn = $("clicResetFilters");
+    if (!grid) return;
+
+    let catalogs = window.FLYER_CATALOGS || [];
+
+    // Filter by Brand
+    if (clicActiveBrand) {
+      catalogs = catalogs.filter((c) => c.brand_key === clicActiveBrand);
+    }
+
+    // Filter by Category
+    if (clicActiveCategory && clicActiveCategory !== "all") {
+      catalogs = catalogs.filter((c) => c.category === clicActiveCategory);
+    }
+
+    // Filter by Search Query
+    if (clicSearchQuery) {
+      const q = clicSearchQuery.toLowerCase();
+      catalogs = catalogs.filter(
+        (c) =>
+          c.title.toLowerCase().includes(q) ||
+          c.title_ml.toLowerCase().includes(q) ||
+          c.brand.toLowerCase().includes(q) ||
+          c.highlight.toLowerCase().includes(q)
+      );
+    }
+
+    // Update Filter Indicator Subbar
+    const hasFilter = Boolean(clicActiveBrand || (clicActiveCategory && clicActiveCategory !== "all") || clicSearchQuery);
+    if (resetBtn) {
+      resetBtn.style.display = hasFilter ? "inline-block" : "none";
+    }
+    if (badge) {
+      if (hasFilter) {
+        let filterParts = [];
+        if (clicActiveBrand) filterParts.push(`Brand: ${clicActiveBrand.toUpperCase()}`);
+        if (clicActiveCategory && clicActiveCategory !== "all") filterParts.push(`Category: ${clicActiveCategory}`);
+        if (clicSearchQuery) filterParts.push(`"${clicSearchQuery}"`);
+        badge.textContent = `Filtered: ${filterParts.join(" · ")} (${catalogs.length} Active Catalogs)`;
+      } else {
+        badge.textContent = `Showing All ${catalogs.length} Active Weekly Catalogs`;
+      }
+    }
+
+    grid.innerHTML = "";
+    if (!catalogs.length) {
+      grid.innerHTML = `
+        <div class="empty-state" style="grid-column: 1 / -1; padding: 36px 16px; text-align: center;">
+          <div class="empty-icon" style="font-size: 2.4rem;">🏷️</div>
+          <h3 style="margin-top: 8px;">No matching flyers found</h3>
+          <p style="color: var(--text-secondary); font-size: 0.88rem;">Try clearing your brand filter or search term to see all weekly promotions.</p>
+        </div>
+      `;
+      return;
+    }
+
+    const frag = document.createDocumentFragment();
+    catalogs.forEach((flyer) => {
+      const card = document.createElement("article");
+      card.className = "clic-flyer-card";
+
+      const title = state.lang === "ml" && flyer.title_ml ? flyer.title_ml : flyer.title;
+      const flipBtnLabel = state.lang === "ml" ? "📖 ഓഫർ ബുക്ക്‌ലെറ്റ് കാണുക (Flip)" : "📖 Open Digital Flyer Booklet";
+
+      card.innerHTML = `
+        <div class="clic-flyer-cover-box" data-open-modal="${escapeHtml(flyer.id)}" role="button" tabindex="0" title="Click to open digital flyer booklet">
+          <img src="${escapeHtml(flyer.cover)}" alt="${escapeHtml(flyer.title)}" class="clic-flyer-cover-img" loading="lazy">
+          <span class="clic-flyer-views-pill">👁️ ${escapeHtml(flyer.views)} Views</span>
+          <span class="clic-flyer-pages-pill">📖 ${escapeHtml(flyer.pages_count)} Pages</span>
+        </div>
+        <div class="clic-flyer-content">
+          <div class="clic-flyer-brand-row">
+            <span class="clic-flyer-brand-badge">${escapeHtml(flyer.brand)}</span>
+            <span class="clic-flyer-status-badge">● ACTIVE NOW</span>
+          </div>
+          <h3 class="clic-flyer-title">${escapeHtml(title)}</h3>
+          <div class="clic-flyer-validity">
+            ⏰ Valid till ${escapeHtml(flyer.valid_till)} · <strong>${escapeHtml(flyer.days_left)} Days Left</strong>
+          </div>
+          <p class="clic-flyer-desc">${escapeHtml(flyer.highlight)}</p>
+          <div class="clic-flyer-actions">
+            <button type="button" class="clic-btn-flip" data-open-modal="${escapeHtml(flyer.id)}">
+              ${escapeHtml(flipBtnLabel)}
+            </button>
+            <div class="clic-flyer-sub-actions">
+              <a href="${escapeHtml(flyer.official_url)}" target="_blank" rel="noopener noreferrer" class="clic-btn-sub">
+                🌐 Official Promotions
+              </a>
+              <a href="${escapeHtml(flyer.whatsapp_cta)}" target="_blank" rel="noopener noreferrer" class="clic-btn-sub wa">
+                💬 WhatsApp Flyer
+              </a>
+            </div>
+          </div>
+        </div>
+      `;
+
+      // Handle click to open modal
+      card.querySelectorAll("[data-open-modal]").forEach((trigger) => {
+        trigger.addEventListener("click", () => {
+          openClicFlyerModal(flyer.id);
+        });
+      });
+
+      frag.appendChild(card);
+    });
+
+    grid.appendChild(frag);
+  }
+
+  function renderHypermarketBranches() {
     const grid = $("hypermarkets-grid");
     if (!grid) return;
     const scoped = getCityScopedHypermarkets();
-    const items = getFilteredHypermarkets();
+    let items = scoped;
+
+    if (clicActiveBrand) {
+      items = items.filter((h) => h.brand_key === clicActiveBrand);
+    }
 
     if ($("hypers-tab-badge")) {
       $("hypers-tab-badge").textContent = scoped.length;
-    }
-    if ($("count-brand-all")) {
-      $("count-brand-all").textContent = scoped.length;
     }
 
     grid.innerHTML = "";
@@ -954,7 +1202,7 @@
         .join("");
 
       const phoneBtn = item.phone
-        ? `<a href="tel:${escapeHtml(item.phone.replace(/\\s+/g, ""))}" class="hyper-btn-sub">📞 ${escapeHtml(
+        ? `<a href="tel:${escapeHtml(item.phone.replace(/\s+/g, ""))}" class="hyper-btn-sub">📞 ${escapeHtml(
             t("hyperBtnCall")
           )}</a>`
         : "";
@@ -1010,7 +1258,140 @@
     grid.appendChild(frag);
   }
 
-  // Mall Cinemas & Malayalam Movie Showtimes
+  // ============================================================================
+  // ClicFlyer Interactive Booklet Modal Functions
+  // ============================================================================
+  function openClicFlyerModal(flyerId) {
+    const catalogs = window.FLYER_CATALOGS || [];
+    const flyer = catalogs.find((c) => c.id === flyerId) || catalogs[0];
+    if (!flyer) return;
+
+    currentModalFlyer = flyer;
+    currentModalPage = 1;
+
+    const modal = $("clicFlyerModal");
+    const titleEl = $("clicModalTitle");
+    const validityEl = $("clicModalValidity");
+    const pageEl = $("clicModalPageIndicator");
+    const imgEl = $("clicModalPageImg");
+    const officialBtn = $("clicModalOfficialBtn");
+    const waShareBtn = $("clicModalWaShare");
+
+    if (titleEl) titleEl.textContent = flyer.title.toUpperCase();
+    if (validityEl) validityEl.textContent = `VALID TILL ${flyer.valid_till.toUpperCase()} · ${flyer.days_left} DAYS LEFT`;
+    if (pageEl) pageEl.textContent = `Page ${currentModalPage} / ${flyer.pages_count}`;
+    if (imgEl) imgEl.src = flyer.cover;
+    if (officialBtn) officialBtn.href = flyer.official_url;
+    if (waShareBtn) {
+      waShareBtn.href = `https://api.whatsapp.com/send?text=${encodeURIComponent(
+        `Check out the latest ${flyer.brand} weekly flyer on KSA Malayali Hub: https://ksa-malayali-hub.vercel.app/`
+      )}`;
+    }
+
+    if (modal) {
+      modal.classList.add("active");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+  }
+
+  function closeClicFlyerModal() {
+    const modal = $("clicFlyerModal");
+    if (modal) {
+      modal.classList.remove("active");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+  }
+
+  function flipClicFlyerModal(delta) {
+    if (!currentModalFlyer) return;
+    const totalPages = currentModalFlyer.pages_count || 16;
+    currentModalPage += delta;
+
+    if (currentModalPage < 1) currentModalPage = totalPages;
+    if (currentModalPage > totalPages) currentModalPage = 1;
+
+    const pageEl = $("clicModalPageIndicator");
+    const imgEl = $("clicModalPageImg");
+    const liveBadge = $("clicModalLiveBadge");
+
+    if (pageEl) pageEl.textContent = `Page ${currentModalPage} / ${totalPages}`;
+    if (liveBadge) liveBadge.textContent = `● PAGE ${currentModalPage} OF ${totalPages} · ${currentModalFlyer.brand.toUpperCase()}`;
+
+    // Smooth page flip animation
+    if (imgEl) {
+      imgEl.style.opacity = "0.4";
+      imgEl.style.transform = delta > 0 ? "translateX(10px)" : "translateX(-10px)";
+      setTimeout(() => {
+        imgEl.style.opacity = "1";
+        imgEl.style.transform = "translateX(0)";
+      }, 150);
+    }
+  }
+
+  function bindClicEvents() {
+    // Search input
+    const searchInput = $("clicOffersSearch");
+    const clearBtn = $("clicSearchClear");
+    const resetBtn = $("clicResetFilters");
+
+    if (searchInput) {
+      searchInput.addEventListener("input", () => {
+        clicSearchQuery = searchInput.value.trim();
+        if (clearBtn) {
+          clearBtn.style.display = clicSearchQuery ? "inline-block" : "none";
+        }
+        renderClicFlyers();
+      });
+    }
+
+    if (clearBtn) {
+      clearBtn.addEventListener("click", () => {
+        if (searchInput) searchInput.value = "";
+        clicSearchQuery = "";
+        clearBtn.style.display = "none";
+        renderClicFlyers();
+      });
+    }
+
+    if (resetBtn) {
+      resetBtn.addEventListener("click", () => {
+        clicActiveBrand = "";
+        clicActiveCategory = "all";
+        clicSearchQuery = "";
+        if (searchInput) searchInput.value = "";
+        if (clearBtn) clearBtn.style.display = "none";
+        renderClicRetailers();
+        renderClicCategories();
+        renderClicFlyers();
+        renderHypermarketBranches();
+      });
+    }
+
+    // Modal controls
+    const closeBtn = $("clicModalCloseBtn");
+    const backBtn = $("clicModalBackBtn");
+    const overlay = $("clicModalOverlay");
+    const prevBtn = $("clicFlipPrev");
+    const nextBtn = $("clicFlipNext");
+
+    if (closeBtn) closeBtn.addEventListener("click", closeClicFlyerModal);
+    if (backBtn) backBtn.addEventListener("click", closeClicFlyerModal);
+    if (overlay) overlay.addEventListener("click", closeClicFlyerModal);
+    if (prevBtn) prevBtn.addEventListener("click", () => flipClicFlyerModal(-1));
+    if (nextBtn) nextBtn.addEventListener("click", () => flipClicFlyerModal(1));
+
+    // Keyboard navigation (Escape to close, Left/Right arrows to flip)
+    window.addEventListener("keydown", (e) => {
+      const modal = $("clicFlyerModal");
+      if (!modal || !modal.classList.contains("active")) return;
+      if (e.key === "Escape") closeClicFlyerModal();
+      if (e.key === "ArrowLeft") flipClicFlyerModal(-1);
+      if (e.key === "ArrowRight") flipClicFlyerModal(1);
+    });
+  }
+
   function getCityScopedCinemas() {
     const list = window.CINEMA_DATA || [];
     if (!state.city) return list;
