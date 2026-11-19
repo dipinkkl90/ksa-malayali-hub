@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="100%" height="100%">
+  <defs>
+    <linearGradient id="armBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1226"/>
+      <stop offset="40%" stop-color="#1e293b"/>
+      <stop offset="80%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <radialGradient id="lampGlow" cx="0.5" cy="0.45" r="0.5">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#d97706" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="goldenGlow">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="600" height="900" fill="url(#armBg)"/>
+  <circle cx="300" cy="400" r="210" fill="url(#lampGlow)"/>
+
+  <!-- Ancient Sacred Flame & Sword Elements -->
+  <g transform="translate(240, 240) scale(1.1)">
+    <!-- Glowing Maniyan / Kunjikelu Sword & Silhouette -->
+    <path d="M60,40 L65,220 L55,220 Z" fill="#fef08a" filter="url(#goldenGlow)"/>
+    <circle cx="60" cy="30" r="14" fill="#fbbf24"/>
+    <path d="M20,220 L100,220 L60,260 Z" fill="#b45309"/>
+    <!-- Warrior Silhouette with bow -->
+    <path d="M10,120 Q60,60 110,120 L120,260 L0,260 Z" fill="#020617" opacity="0.85"/>
+  </g>
+
+  <!-- Bottom Vignette -->
+  <rect y="600" width="600" height="300" fill="#020617"/>
+
+  <!-- Badges Top -->
+  <g transform="translate(30, 40)">
+    <rect width="180" height="32" rx="16" fill="rgba(245,158,11,0.2)" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="90" y="21" fill="#f59e0b" font-family="'Montserrat', sans-serif" font-size="13" font-weight="bold" text-anchor="middle">🌟 3D &amp; 2D BLOCKBUSTER</text>
+  </g>
+  <g transform="translate(450, 40)">
+    <rect width="120" height="32" rx="16" fill="#d97706"/>
+    <text x="60" y="21" fill="#ffffff" font-family="'Montserrat', sans-serif" font-size="13" font-weight="bold" text-anchor="middle">⭐ 8.4 / 10</text>
+  </g>
+
+  <!-- Title Block -->
+  <text x="300" y="690" fill="#f59e0b" font-family="'Montserrat', sans-serif" font-size="60" font-weight="900" text-anchor="middle" filter="url(#goldenGlow)" letter-spacing="14">ARM</text>
+  <text x="300" y="735" fill="#fef08a" font-family="'Manjari', 'Anek Malayalam', sans-serif" font-size="34" font-weight="900" text-anchor="middle">അജയന്റെ രണ്ടാം മോഷണം</text>
+
+  <!-- Subtitle & Cast -->
+  <text x="300" y="780" fill="#ffffff" font-family="'Montserrat', sans-serif" font-size="15" font-weight="700" text-anchor="middle" letter-spacing="2">DIRECTED BY JITHIN LAAL · MUSIC: DIBU NINAN THOMAS</text>
+  <text x="300" y="810" fill="#94a3b8" font-family="'Montserrat', sans-serif" font-size="14" text-anchor="middle">TOVINO THOMAS · KRITHI SHETTY · AISHWARYA RAJESH · SURABHI</text>
+
+  <!-- Specs -->
+  <line x1="60" y1="835" x2="540" y2="835" stroke="#f59e0b" stroke-width="1" opacity="0.3"/>
+  <text x="300" y="865" fill="#64748b" font-family="'Montserrat', sans-serif" font-size="13" font-weight="600" text-anchor="middle">UA 13+ · 2H 28M · PERIOD FANTASY ACTION · 3D / 2D</text>
+</svg>

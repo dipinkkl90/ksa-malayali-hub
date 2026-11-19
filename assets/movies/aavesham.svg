@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="100%" height="100%">
+  <defs>
+    <linearGradient id="aaveshamBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0518"/>
+      <stop offset="50%" stop-color="#1f0933"/>
+      <stop offset="100%" stop-color="#05020a"/>
+    </linearGradient>
+    <radialGradient id="neonGlow" cx="0.5" cy="0.45" r="0.5">
+      <stop offset="0%" stop-color="#ffe600" stop-opacity="0.8"/>
+      <stop offset="40%" stop-color="#ff0055" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#120420" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="neon">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="600" height="900" fill="url(#aaveshamBg)"/>
+  <circle cx="300" cy="400" r="220" fill="url(#neonGlow)"/>
+
+  <!-- Halftone / Street Action Pattern -->
+  <g opacity="0.15" fill="#ffffff">
+    <circle cx="80" cy="150" r="30"/><circle cx="520" cy="200" r="45"/><circle cx="120" cy="350" r="25"/>
+  </g>
+
+  <!-- Ranga Chettan Iconic Silhouette (All-white costume, gold chain, aviator glasses, thick moustache) -->
+  <g transform="translate(180, 200) scale(1.0)">
+    <!-- Aura -->
+    <circle cx="120" cy="130" r="110" fill="#ff0055" opacity="0.3"/>
+    <!-- Head / Hair -->
+    <path d="M70,80 Q120,40 170,80 Q190,120 180,160 Q120,200 60,160 Q50,120 70,80 Z" fill="#0d0414"/>
+    <path d="M50,70 Q120,20 190,70 Q210,110 195,130 Q120,70 45,130 Z" fill="#05010a"/>
+    <!-- Aviator Sunglasses (Glowing Yellow/Gold) -->
+    <g fill="#ffe600" filter="url(#neon)">
+      <path d="M75,105 Q95,100 112,105 Q115,130 95,135 Q75,130 75,105 Z"/>
+      <path d="M128,105 Q145,100 165,105 Q165,130 145,135 Q125,130 128,105 Z"/>
+      <line x1="112" y1="110" x2="128" y2="110" stroke="#ffe600" stroke-width="4"/>
+    </g>
+    <!-- Thick Ranga Moustache -->
+    <path d="M70,150 Q120,135 170,150 Q150,170 120,160 Q90,170 70,150 Z" fill="#05010a"/>
+    <!-- All White Silk Shirt with Open Collar -->
+    <path d="M40,210 L85,185 L120,240 L155,185 L200,210 L230,360 L10,360 Z" fill="#f8fafc"/>
+    <!-- Heavy Gold Chains around neck -->
+    <path d="M90,210 Q120,270 150,210" fill="none" stroke="#ffe600" stroke-width="7" stroke-linecap="round" filter="url(#neon)"/>
+    <path d="M96,215 Q120,290 144,215" fill="none" stroke="#ffe600" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Bottom Vignette -->
+  <rect y="600" width="600" height="300" fill="#05010a"/>
+
+  <!-- Badges Top -->
+  <g transform="translate(30, 40)">
+    <rect width="180" height="32" rx="16" fill="#ffe600"/>
+    <text x="90" y="21" fill="#000000" font-family="'Montserrat', sans-serif" font-size="13" font-weight="900" text-anchor="middle">🔥 ALL-TIME SUPERHIT</text>
+  </g>
+  <g transform="translate(450, 40)">
+    <rect width="120" height="32" rx="16" fill="#ff0055"/>
+    <text x="60" y="21" fill="#ffffff" font-family="'Montserrat', sans-serif" font-size="13" font-weight="bold" text-anchor="middle">⭐ 8.6 / 10</text>
+  </g>
+
+  <!-- Title Block -->
+  <text x="300" y="705" fill="#ffe600" font-family="'Manjari', 'Anek Malayalam', sans-serif" font-size="56" font-weight="900" text-anchor="middle" filter="url(#neon)" letter-spacing="3">ആവേശം</text>
+  <text x="300" y="750" fill="#ffffff" font-family="'Montserrat', sans-serif" font-size="34" font-weight="900" text-anchor="middle" letter-spacing="10">AAVESHAM</text>
+
+  <!-- Subtitle & Cast -->
+  <text x="300" y="785" fill="#ff0055" font-family="'Montserrat', sans-serif" font-size="15" font-weight="800" text-anchor="middle" letter-spacing="3">JITHU MADHAVAN FILM · SUSHIN SHYAM MUSICAL</text>
+  <text x="300" y="812" fill="#e2e8f0" font-family="'Montserrat', sans-serif" font-size="14" text-anchor="middle">FAHADH FAASIL · SAJIN GOPU · HIPZSTER · MITHUN</text>
+
+  <!-- Specs -->
+  <line x1="60" y1="835" x2="540" y2="835" stroke="#ffe600" stroke-width="1" opacity="0.3"/>
+  <text x="300" y="865" fill="#94a3b8" font-family="'Montserrat', sans-serif" font-size="13" font-weight="600" text-anchor="middle">UA 16+ · 2H 38M · COMEDY ACTION MASS · MALAYALAM (ENG SUBS)</text>
+</svg>

@@ -1,0 +1,501 @@
+[
+  {
+    "id": "CIN-JED-01",
+    "brand": "VOX Cinemas",
+    "brand_key": "vox",
+    "name": "VOX Cinemas — Jeddah Park (Tahlia St)",
+    "mall": "Jeddah Park Mall",
+    "city": "Jeddah",
+    "area": "Al Andalus / Tahlia",
+    "full_address": "Jeddah Park Mall, Prince Mohammed Bin Abdulaziz (Tahlia) St, Jeddah, Saudi Arabia",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=VOX%20Cinemas%20Jeddah%20Park",
+    "booking_url": "https://ksa.voxcinemas.com/movies/mollywood-times",
+    "mollywood_url": "https://ksa.voxcinemas.com/movies/mollywood-times",
+    "languages": [
+      "Malayalam",
+      "Tamil",
+      "Hindi",
+      "English",
+      "Arabic"
+    ],
+    "experiences": [
+      "IMAX",
+      "GOLD VIP",
+      "KIDS",
+      "Standard 2D"
+    ],
+    "phone": "+966 12 288 8800",
+    "rating": 4.7
+  },
+  {
+    "id": "CIN-JED-02",
+    "brand": "VOX Cinemas",
+    "brand_key": "vox",
+    "name": "VOX Cinemas — Town Square (South Jeddah)",
+    "mall": "Town Square Center",
+    "city": "Jeddah",
+    "area": "Al Marwah / South Jeddah",
+    "full_address": "Town Square, Abdullah Sulayman St, Jeddah, Saudi Arabia",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=VOX%20Cinemas%20Town%20Square%20Jeddah",
+    "booking_url": "https://ksa.voxcinemas.com/",
+    "mollywood_url": "https://ksa.voxcinemas.com/movies/mollywood-times",
+    "languages": [
+      "Malayalam",
+      "Tamil",
+      "Hindi",
+      "English"
+    ],
+    "experiences": [
+      "MAX",
+      "Standard 2D",
+      "Dolby Atmos"
+    ],
+    "phone": "+966 12 288 8800",
+    "rating": 4.5
+  },
+  {
+    "id": "CIN-JED-03",
+    "brand": "Muvi Cinemas",
+    "brand_key": "muvi",
+    "name": "Muvi Cinemas — Mall of Arabia (Jeddah)",
+    "mall": "Mall of Arabia",
+    "city": "Jeddah",
+    "area": "Al Nuzhah",
+    "full_address": "Mall of Arabia, Madinah Rd, Al Nuzhah, Jeddah, Saudi Arabia",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Muvi%20Cinemas%20Mall%20of%20Arabia%20Jeddah",
+    "booking_url": "https://www.muvicinemas.com/",
+    "mollywood_url": "https://www.muvicinemas.com/",
+    "languages": [
+      "Malayalam",
+      "Tamil",
+      "Hindi",
+      "English",
+      "Arabic"
+    ],
+    "experiences": [
+      "XPERIENCE",
+      "Muvi SUITES",
+      "ScreenX",
+      "Standard"
+    ],
+    "phone": "+966 9200 12020",
+    "rating": 4.6
+  },
+  {
+    "id": "CIN-JED-04",
+    "brand": "Muvi Cinemas",
+    "brand_key": "muvi",
+    "name": "Muvi Cinemas — Aziz Mall (Jeddah)",
+    "mall": "Aziz Mall",
+    "city": "Jeddah",
+    "area": "Al Faisaliyah",
+    "full_address": "Aziz Mall, Prince Majid Rd, Al Faisaliyah, Jeddah, Saudi Arabia",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Muvi%20Cinemas%20Aziz%20Mall%20Jeddah",
+    "booking_url": "https://www.muvicinemas.com/",
+    "mollywood_url": "https://www.muvicinemas.com/",
+    "languages": [
+      "Malayalam",
+      "Tamil",
+      "Hindi",
+      "English"
+    ],
+    "experiences": [
+      "Muvi SUITES",
+      "Standard 2D",
+      "Family Cinema"
+    ],
+    "phone": "+966 9200 12020",
+    "rating": 4.5
+  },
+  {
+    "id": "CIN-RUH-01",
+    "brand": "VOX Cinemas",
+    "brand_key": "vox",
+    "name": "VOX Cinemas — Riyadh Park Mall",
+    "mall": "Riyadh Park Mall",
+    "city": "Riyadh",
+    "area": "Al Aqiq / Northern Ring",
+    "full_address": "Riyadh Park, Northern Ring Branch Rd, Al Aqiq, Riyadh, Saudi Arabia",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=VOX%20Cinemas%20Riyadh%20Park",
+    "booking_url": "https://ksa.voxcinemas.com/movies/mollywood-times",
+    "mollywood_url": "https://ksa.voxcinemas.com/movies/mollywood-times",
+    "languages": [
+      "Malayalam",
+      "Tamil",
+      "Hindi",
+      "English",
+      "Arabic"
+    ],
+    "experiences": [
+      "IMAX with Laser",
+      "GOLD VIP",
+      "THEATRE",
+      "Standard"
+    ],
+    "phone": "+966 11 288 8800",
+    "rating": 4.8
+  },
+  {
+    "id": "CIN-RUH-02",
+    "brand": "VOX Cinemas",
+    "brand_key": "vox",
+    "name": "VOX Cinemas — Roshn Front (Riyadh Front)",
+    "mall": "Roshn Front",
+    "city": "Riyadh",
+    "area": "Airport Road / King Khalid",
+    "full_address": "Roshn Front, Airport Rd, King Khalid International Airport, Riyadh, Saudi Arabia",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=VOX%20Cinemas%20Riyadh%20Front",
+    "booking_url": "https://ksa.voxcinemas.com/",
+    "mollywood_url": "https://ksa.voxcinemas.com/movies/mollywood-times",
+    "languages": [
+      "Malayalam",
+      "Tamil",
+      "Hindi",
+      "English"
+    ],
+    "experiences": [
+      "MAX",
+      "VIP Lounge",
+      "Standard 2D"
+    ],
+    "phone": "+966 11 288 8800",
+    "rating": 4.7
+  },
+  {
+    "id": "CIN-RUH-03",
+    "brand": "Muvi Cinemas",
+    "brand_key": "muvi",
+    "name": "Muvi Cinemas — U-Walk (Riyadh)",
+    "mall": "U-Walk Complex",
+    "city": "Riyadh",
+    "area": "Al Nakheel / Prince Turki",
+    "full_address": "U-Walk, Prince Turki Ibn Abdulaziz Al Awwal Rd, Riyadh, Saudi Arabia",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Muvi%20Cinemas%20U-Walk%20Riyadh",
+    "booking_url": "https://www.muvicinemas.com/",
+    "mollywood_url": "https://www.muvicinemas.com/",
+    "languages": [
+      "Malayalam",
+      "Tamil",
+      "Hindi",
+      "English",
+      "Arabic"
+    ],
+    "experiences": [
+      "Dolby Cinema",
+      "Samsung Onyx LED",
+      "ScreenX",
+      "SUITES"
+    ],
+    "phone": "+966 9200 12020",
+    "rating": 4.7
+  },
+  {
+    "id": "CIN-RUH-04",
+    "brand": "Muvi Cinemas",
+    "brand_key": "muvi",
+    "name": "Muvi Cinemas — Al Nakheel Mall (Riyadh)",
+    "mall": "Al Nakheel Mall",
+    "city": "Riyadh",
+    "area": "Al Mughrizat",
+    "full_address": "Al Nakheel Mall, Northern Ring Rd, Al Mughrizat, Riyadh, Saudi Arabia",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Muvi%20Cinemas%20Nakheel%20Mall%20Riyadh",
+    "booking_url": "https://www.muvicinemas.com/",
+    "mollywood_url": "https://www.muvicinemas.com/",
+    "languages": [
+      "Malayalam",
+      "Tamil",
+      "Hindi",
+      "English"
+    ],
+    "experiences": [
+      "XPERIENCE",
+      "Muvi SUITES",
+      "Standard 2D"
+    ],
+    "phone": "+966 9200 12020",
+    "rating": 4.6
+  },
+  {
+    "id": "CIN-RUH-05",
+    "brand": "AMC Cinemas",
+    "brand_key": "amc",
+    "name": "AMC Cinemas — Al Khair (Riyadh)",
+    "mall": "Al Khair Center",
+    "city": "Riyadh",
+    "area": "Al Malqa / Al Khair",
+    "full_address": "Al Khair Rd, Al Malqa District, Riyadh, Saudi Arabia",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=AMC%20Cinemas%20Al%20Khair%20Riyadh",
+    "booking_url": "https://www.amccinemas.com/",
+    "mollywood_url": "https://www.amccinemas.com/",
+    "languages": [
+      "Malayalam",
+      "Hindi",
+      "Tamil",
+      "English"
+    ],
+    "experiences": [
+      "AMC PRIME",
+      "IMAX",
+      "Luxury Recliner Seating"
+    ],
+    "phone": "+966 11 834 3434",
+    "rating": 4.6
+  },
+  {
+    "id": "CIN-DMM-01",
+    "brand": "VOX Cinemas",
+    "brand_key": "vox",
+    "name": "VOX Cinemas — West Avenue Mall (Dammam)",
+    "mall": "West Avenue Mall",
+    "city": "Dammam",
+    "area": "Al Faisaliyah",
+    "full_address": "West Avenue Mall, Omar Ibn Al Khattab St, Al Faisaliyah, Dammam, Saudi Arabia",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=VOX%20Cinemas%20West%20Avenue%20Mall%20Dammam",
+    "booking_url": "https://ksa.voxcinemas.com/movies/mollywood-times",
+    "mollywood_url": "https://ksa.voxcinemas.com/movies/mollywood-times",
+    "languages": [
+      "Malayalam",
+      "Tamil",
+      "Hindi",
+      "English",
+      "Arabic"
+    ],
+    "experiences": [
+      "MAX",
+      "Standard 2D",
+      "Kids Cinema"
+    ],
+    "phone": "+966 13 809 4444",
+    "rating": 4.6
+  },
+  {
+    "id": "CIN-DMM-02",
+    "brand": "Muvi Cinemas",
+    "brand_key": "muvi",
+    "name": "Muvi Cinemas — Al Nakheel Mall (Dammam)",
+    "mall": "Al Nakheel Mall Dammam",
+    "city": "Dammam",
+    "area": "Al Manar",
+    "full_address": "Al Nakheel Mall, King Fahd Rd, Al Manar, Dammam, Saudi Arabia",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Muvi%20Cinemas%20Nakheel%20Mall%20Dammam",
+    "booking_url": "https://www.muvicinemas.com/",
+    "mollywood_url": "https://www.muvicinemas.com/",
+    "languages": [
+      "Malayalam",
+      "Tamil",
+      "Hindi",
+      "English"
+    ],
+    "experiences": [
+      "XPERIENCE",
+      "Muvi SUITES",
+      "Standard 2D"
+    ],
+    "phone": "+966 9200 12020",
+    "rating": 4.5
+  },
+  {
+    "id": "CIN-BUR-01",
+    "brand": "Muvi Cinemas",
+    "brand_key": "muvi",
+    "name": "Muvi Cinemas — Nakheel Mall Qassim (Buraidah)",
+    "mall": "Al Nakheel Mall Qassim",
+    "city": "Buraidah",
+    "area": "Al Fayziyah / Qassim",
+    "full_address": "Al Nakheel Mall Qassim, Prince Sultan Ibn Abdulaziz Rd, Buraidah, Saudi Arabia",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Muvi%20Cinemas%20Nakheel%20Mall%20Qassim%20Buraidah",
+    "booking_url": "https://www.muvicinemas.com/",
+    "mollywood_url": "https://www.muvicinemas.com/",
+    "languages": [
+      "Malayalam",
+      "Tamil",
+      "Hindi",
+      "English",
+      "Arabic"
+    ],
+    "experiences": [
+      "XPERIENCE",
+      "Standard 2D",
+      "Family VIP"
+    ],
+    "phone": "+966 9200 12020",
+    "rating": 4.6
+  },
+  {
+    "id": "CIN-TBK-01",
+    "brand": "VOX Cinemas",
+    "brand_key": "vox",
+    "name": "VOX Cinemas — Tabuk Park Mall",
+    "mall": "Tabuk Park Mall",
+    "city": "Tabuk",
+    "area": "King Fahd District",
+    "full_address": "Tabuk Park Mall, King Fahd Rd, Tabuk 47914, Saudi Arabia",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=VOX%20Cinemas%20Tabuk%20Park%20Mall",
+    "booking_url": "https://ksa.voxcinemas.com/movies/mollywood-times",
+    "mollywood_url": "https://ksa.voxcinemas.com/movies/mollywood-times",
+    "languages": [
+      "Malayalam",
+      "Tamil",
+      "Hindi",
+      "English",
+      "Arabic"
+    ],
+    "experiences": [
+      "MAX with Laser",
+      "KIDS Cinema",
+      "Standard 2D"
+    ],
+    "phone": "+966 14 429 8800",
+    "rating": 4.7
+  },
+  {
+    "id": "CIN-TAF-01",
+    "brand": "Muvi Cinemas",
+    "brand_key": "muvi",
+    "name": "Muvi Cinemas — Jouri Mall (Taif)",
+    "mall": "Jouri Mall",
+    "city": "Taif",
+    "area": "Al Qutbiyyah / Khalid Ibn Al Walid",
+    "full_address": "Jouri Mall, Khalid Ibn Al Walid Rd, Al Qutbiyyah, Taif, Saudi Arabia",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Muvi%20Cinemas%20Jouri%20Mall%20Taif",
+    "booking_url": "https://www.muvicinemas.com/",
+    "mollywood_url": "https://www.muvicinemas.com/",
+    "languages": [
+      "Malayalam",
+      "Tamil",
+      "Hindi",
+      "English"
+    ],
+    "experiences": [
+      "XPERIENCE",
+      "Standard 2D",
+      "Dolby Digital"
+    ],
+    "phone": "+966 9200 12020",
+    "rating": 4.5
+  },
+  {
+    "id": "CIN-KHM-01",
+    "brand": "Muvi Cinemas",
+    "brand_key": "muvi",
+    "name": "Muvi Cinemas — Boulevard Khamis Mushait",
+    "mall": "Boulevard Khamis",
+    "city": "Khamis Mushait",
+    "area": "City Center",
+    "full_address": "Boulevard Khamis Mushait, King Fahd Rd, Asir Region, Saudi Arabia",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Muvi%20Cinemas%20Boulevard%20Khamis%20Mushait",
+    "booking_url": "https://www.muvicinemas.com/",
+    "mollywood_url": "https://www.muvicinemas.com/",
+    "languages": [
+      "Malayalam",
+      "Tamil",
+      "Hindi",
+      "English",
+      "Arabic"
+    ],
+    "experiences": [
+      "Muvi SUITES",
+      "Standard 2D",
+      "ScreenX"
+    ],
+    "phone": "+966 9200 12020",
+    "rating": 4.5
+  },
+  {
+    "id": "CIN-MAK-01",
+    "brand": "VOX Cinemas / Regional Hub",
+    "brand_key": "vox",
+    "name": "VOX Cinemas Regional Showtime Portal — Makkah Province",
+    "mall": "Makkah Metro Mall Theaters",
+    "city": "Makkah",
+    "area": "Central / Al Shoqiyah",
+    "full_address": "Makkah Province, Western Region, Saudi Arabia",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Cinemas%20Makkah%20Saudi%20Arabia",
+    "booking_url": "https://ksa.voxcinemas.com/movies/mollywood-times",
+    "mollywood_url": "https://ksa.voxcinemas.com/movies/mollywood-times",
+    "languages": [
+      "Malayalam",
+      "Hindi",
+      "English",
+      "Arabic"
+    ],
+    "experiences": [
+      "Standard 2D",
+      "MAX"
+    ],
+    "phone": "+966 12 288 8800",
+    "rating": 4.4
+  },
+  {
+    "id": "CIN-MED-01",
+    "brand": "Empire Cinemas",
+    "brand_key": "empire",
+    "name": "Empire Cinemas — Al Rashid Mega Mall (Madinah)",
+    "mall": "Al Rashid Mega Mall",
+    "city": "Madinah",
+    "area": "King Abdullah Rd",
+    "full_address": "Al Rashid Mega Mall, King Abdullah Second Ring Rd, Madinah, Saudi Arabia",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Empire%20Cinemas%20Al%20Rashid%20Mega%20Mall%20Madinah",
+    "booking_url": "https://www.empirecinemas.com.sa/",
+    "mollywood_url": "https://www.empirecinemas.com.sa/",
+    "languages": [
+      "Malayalam",
+      "Tamil",
+      "Hindi",
+      "English"
+    ],
+    "experiences": [
+      "Sphere",
+      "Minis",
+      "Standard 2D"
+    ],
+    "phone": "+966 9200 00140",
+    "rating": 4.5
+  },
+  {
+    "id": "CIN-JOUF-01",
+    "brand": "Muvi Cinemas / Regional",
+    "brand_key": "muvi",
+    "name": "Regional Cinema Theaters Portal — Al Jouf Region",
+    "mall": "Sakaka Commercial Plaza",
+    "city": "Al Jouf",
+    "area": "Sakaka Central",
+    "full_address": "King Abdulaziz Rd, Sakaka 72341, Al Jouf Region, Saudi Arabia",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Cinemas%20Sakaka%20Al%20Jouf",
+    "booking_url": "https://www.muvicinemas.com/",
+    "mollywood_url": "https://www.muvicinemas.com/",
+    "languages": [
+      "Malayalam",
+      "Arabic",
+      "English"
+    ],
+    "experiences": [
+      "Standard 2D"
+    ],
+    "phone": "+966 9200 12020",
+    "rating": 4.3
+  },
+  {
+    "id": "CIN-BAH-01",
+    "brand": "VOX / Muvi Regional Deals",
+    "brand_key": "vox",
+    "name": "Regional Cinema Theaters Portal — Al Baha",
+    "mall": "Al Baha Center",
+    "city": "Al Baha",
+    "area": "Town Center",
+    "full_address": "King Faisal Rd, Al Baha 65522, Saudi Arabia",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Cinemas%20Al%20Baha%20Saudi%20Arabia",
+    "booking_url": "https://ksa.voxcinemas.com/movies/mollywood-times",
+    "mollywood_url": "https://ksa.voxcinemas.com/movies/mollywood-times",
+    "languages": [
+      "Malayalam",
+      "English",
+      "Arabic"
+    ],
+    "experiences": [
+      "Standard 2D"
+    ],
+    "phone": "+966 12 288 8800",
+    "rating": 4.3
+  }
+]

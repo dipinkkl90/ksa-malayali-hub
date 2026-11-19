@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c0a00"/>
+      <stop offset="35%" stop-color="#782300"/>
+      <stop offset="65%" stop-color="#c25e00"/>
+      <stop offset="100%" stop-color="#e09015"/>
+    </linearGradient>
+    <linearGradient id="duneGrad1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b85c00"/>
+      <stop offset="100%" stop-color="#3b1600"/>
+    </linearGradient>
+    <linearGradient id="duneGrad2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e27c00"/>
+      <stop offset="100%" stop-color="#240c00"/>
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="0.5" cy="0.4" r="0.5">
+      <stop offset="0%" stop-color="#fff1c2" stop-opacity="0.9"/>
+      <stop offset="30%" stop-color="#fbb034" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ff4e00" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="600" height="900" fill="url(#skyGrad)"/>
+
+  <!-- Blazing Desert Sun -->
+  <circle cx="300" cy="380" r="160" fill="url(#sunGlow)"/>
+  <circle cx="300" cy="380" r="55" fill="#fffbe8"/>
+
+  <!-- Distant Desert Dunes -->
+  <path d="M0,520 Q160,450 320,510 T600,470 L600,900 L0,900 Z" fill="url(#duneGrad1)" opacity="0.8"/>
+  <path d="M0,580 Q220,500 420,590 T600,560 L600,900 L0,900 Z" fill="url(#duneGrad2)"/>
+  <path d="M0,670 Q180,620 340,680 T600,640 L600,900 L0,900 Z" fill="#1c0800"/>
+
+  <!-- Najeeb Silhouette Walking with Shepherd Staff -->
+  <g transform="translate(265, 500) scale(1.1)" fill="#0f0500">
+    <!-- Head with desert scarf / keffiyeh -->
+    <circle cx="30" cy="20" r="12"/>
+    <path d="M20,18 Q15,35 24,42 Q28,45 35,42 Q40,32 38,18 Z"/>
+    <path d="M18,25 Q8,45 14,75 Q18,80 22,65 Z" opacity="0.9"/>
+    <!-- Torso and worn cloak / thobe -->
+    <path d="M22,35 Q10,65 15,115 L45,115 Q50,65 38,35 Z"/>
+    <!-- Walking legs -->
+    <path d="M18,115 L12,175 L22,178 L28,115 Z"/>
+    <path d="M34,115 L42,170 L52,168 L40,115 Z"/>
+    <!-- Arm holding staff -->
+    <path d="M36,45 L58,80 L54,84 L32,50 Z"/>
+    <!-- Shepherd Staff / Stick -->
+    <line x1="56" y1="25" x2="62" y2="185" stroke="#0f0500" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Dark Bottom Vignette for Typography -->
+  <rect y="580" width="600" height="320" fill="url(#duneGrad1)" opacity="0.95"/>
+  <rect y="640" width="600" height="260" fill="#080300"/>
+
+  <!-- Badges Top -->
+  <g transform="translate(30, 40)">
+    <rect width="180" height="32" rx="16" fill="rgba(0,0,0,0.6)" stroke="#fbb034" stroke-width="1.5"/>
+    <text x="90" y="21" fill="#fbb034" font-family="'Manjari', sans-serif" font-size="13" font-weight="bold" text-anchor="middle">🏆 SHOT IN SAUDI &amp; JORDAN</text>
+  </g>
+  <g transform="translate(450, 40)">
+    <rect width="120" height="32" rx="16" fill="#15803d"/>
+    <text x="60" y="21" fill="#ffffff" font-family="'Manjari', sans-serif" font-size="13" font-weight="bold" text-anchor="middle">⭐ 8.8 / 10</text>
+  </g>
+
+  <!-- Movie Title Block -->
+  <text x="300" y="710" fill="#ffdd80" font-family="'Manjari', 'Anek Malayalam', sans-serif" font-size="52" font-weight="900" text-anchor="middle" filter="url(#glow)" letter-spacing="2">ആടുജീവിതം</text>
+  <text x="300" y="750" fill="#ffffff" font-family="'Montserrat', sans-serif" font-size="28" font-weight="800" text-anchor="middle" letter-spacing="8">THE GOAT LIFE</text>
+
+  <!-- Subtitle & Cast -->
+  <text x="300" y="785" fill="#fbb034" font-family="'Montserrat', sans-serif" font-size="15" font-weight="700" text-anchor="middle" letter-spacing="2">A FILM BY BLESSY · MUSIC: A.R. RAHMAN</text>
+  <text x="300" y="812" fill="#d1d5db" font-family="'Montserrat', sans-serif" font-size="14" text-anchor="middle">PRITHVIRAJ SUKUMARAN · AMALA PAUL · JIMMY JEAN-LOUIS</text>
+
+  <!-- Tags / Specs -->
+  <line x1="60" y1="835" x2="540" y2="835" stroke="#fbb034" stroke-width="1" opacity="0.4"/>
+  <text x="300" y="865" fill="#9ca3af" font-family="'Montserrat', sans-serif" font-size="13" font-weight="600" text-anchor="middle">UA 13+ · 2H 52M · SURVIVAL EPIC DRAMA · MALAYALAM (ENG/AR SUBS)</text>
+</svg>

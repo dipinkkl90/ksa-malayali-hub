@@ -1,0 +1,1350 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KSA Malayali Hub · സൗദി മലയാളി ഹബ് | By D&amp;J (+44 7460 646263)</title>
+  <meta name="description" content="KSA Malayali Hub — The All-in-One Community Portal for Malayalis across 11 Saudi Cities. Curated Kerala Dining, Live Supermarket Weekly Offers (LuLu, Nesto, Grand Hyper) &amp; Mall Cinema Showtimes (VOX, Muvi). Powered by D&amp;J (+44 7460 646263).">
+  <meta name="theme-color" content="#03271e">
+
+  <!-- Open Graph / WhatsApp Preview -->
+  <meta property="og:title" content="KSA Malayali Hub · സൗദി മലയാളി ഹബ് | റിയാൽ റേറ്റ് · സ്വർണ്ണം · ഹോട്ടലുകൾ · ഓഫറുകൾ · വിസ · സിനിമ | D&amp;J">
+  <meta property="og:description" content="“അളിയാ, സൗദി മലയാളി ഹബ്ബിൽ നോക്ക് — നാടൻ ഹോട്ടലും, ലുലു/നെസ്റ്റോ ഓഫറുകളും, നാട്ടിലേക്ക് അയക്കാൻ 12 ബാങ്കുകളിലെ ഉയർന്ന റിയാൽ റേറ്റും, സൗദി സ്വർണ്ണവിലയും, വിസ നിയമങ്ങളും, പുതിയ മലയാള സിനിമകളും എല്ലാം ഒരൊറ്റ ക്ലിക്കിൽ!” By D&amp;J (+44 7460 646263)">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dipinkkl90.github.io/ksa-malayali-hub/">
+  <meta property="og:image" content="https://dipinkkl90.github.io/ksa-malayali-hub/assets/favicon.svg">
+  <link rel="canonical" href="https://dipinkkl90.github.io/ksa-malayali-hub/">
+
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="manifest" href="./manifest.webmanifest">
+
+  <!-- Google Fonts: Playfair Display + Plus Jakarta Sans + Noto Sans Malayalam -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@400;600;700&family=Playfair+Display:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Leaflet Interactive Map (gracefully falls back if offline) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <!-- Sticky Top Navigation -->
+  <nav class="topbar" aria-label="Main navigation">
+    <div class="container topbar-inner">
+      <a href="#" class="brand-lockup">
+        <img src="./assets/favicon.svg" alt="KSA Malayali Hub Logo" class="brand-icon">
+        <div class="brand-text">
+          <span class="brand-name" data-i18n="brandTitle">KSA Malayali Hub</span>
+          <span class="brand-dev-tag">
+            <span class="brand-dev-dot" aria-hidden="true"></span>
+            By D&amp;J · +44 7460 646263
+          </span>
+        </div>
+      </a>
+
+      <div class="topbar-actions">
+        <div class="topbar-live-visits" title="Real-time Pravasi Directory Visits">
+          <span class="live-pulse-dot" aria-hidden="true"></span>
+          <span id="topbar-visits-count">1.3K+ Visits</span>
+        </div>
+        <button type="button" id="open-submit-nav" class="nav-btn nav-btn-accent" title="Suggest a Restaurant">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <span class="nav-btn-label-hide-sm" data-i18n="addSpotBtn">Suggest a Spot</span>
+        </button>
+        <button type="button" id="lang-toggle" class="nav-btn" aria-label="Switch language">മലയാളം</button>
+        <button type="button" id="theme-toggle" class="nav-btn nav-btn-icon" aria-label="Toggle dark mode">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Admin-Only Control Ribbon (Strictly hidden for visitors; visible only after Admin PIN unlock) -->
+  <div id="admin-bar" class="admin-bar" style="display:none;" role="region" aria-label="Administrator controls">
+    <div class="container admin-bar-inner">
+      <div class="admin-bar-status">
+        <span class="admin-badge-dot" aria-hidden="true"></span>
+        <strong>D&amp;J Admin Mode</strong>
+        <span id="admin-change-note" class="admin-bar-note">Authorized editing unlocked</span>
+        <button type="button" id="admin-traffic-badge" class="admin-traffic-pill" title="View Real Analytics">
+          <span class="admin-traffic-dot"></span>
+          <span id="admin-traffic-pill-text">📊 Real: 0 Visits</span>
+        </button>
+      </div>
+      <div class="admin-bar-actions">
+        <button type="button" id="admin-add-btn" class="admin-btn admin-btn-gold">+ Add Restaurant</button>
+        <button type="button" id="admin-change-pin-btn" class="admin-btn">🔑 Change Password</button>
+        <button type="button" id="admin-traffic-modal-btn" class="admin-btn">📊 Real Analytics</button>
+        <button type="button" id="admin-export-js" class="admin-btn">Export data.js</button>
+        <button type="button" id="admin-export-json" class="admin-btn">Export JSON</button>
+        <button type="button" id="admin-export-reviews" class="admin-btn">Export Reviews</button>
+        <button type="button" id="admin-logout-btn" class="admin-btn admin-btn-danger">Lock Admin</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Premium Royal Emerald & Kasavu Gold Hero Section -->
+  <header class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <div class="hero-badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          </svg>
+          <span data-i18n="badgeEdition">KSA 11-City Pravasi Community Hub</span>
+        </div>
+
+        <h1 data-i18n="heroTitle">KSA Malayali Hub · സൗദി മലയാളി ഹബ്</h1>
+        <p class="hero-desc" data-i18n="heroDesc">
+          Discover authentic Malabar biriyani, porotta &amp; beef, sadya, puttu, bakeries, and tea spots across Jeddah, Makkah, Madinah, Taif, Riyadh, Dammam, Buraidah, Tabuk, Al Jouf, Al Baha, and Khamis Mushait.
+        </p>
+
+        <!-- Nostalgic Pravasi Quote Card -->
+        <div class="nostalgic-quote-card">
+          <div class="nostalgic-quote-badge">
+            <span class="nostalgic-quote-dot" aria-hidden="true"></span>
+            <span>പ്രവാസി സ്പെഷ്യൽ · Pravasi Lifestyle Hub</span>
+          </div>
+          <p class="nostalgic-quote-text">
+            “അളിയാ, <strong>സൗദി മലയാളി ഹബ്ബിൽ</strong> നോക്ക് — അവിടെ അടുത്തുള്ള നാടൻ ഹോട്ടലും, ഈ ആഴ്ചത്തെ ലുലു &amp; നെസ്റ്റോ ഓഫറുകളും, നാട്ടിലേക്ക് പൈസ അയക്കാൻ 12 ബാങ്കുകളിലെ ഇന്നത്തെ ഉയർന്ന റിയാൽ റേറ്റും, സൗദി സ്വർണ്ണവിലയും, വിസ-തൊഴിൽ നിയമങ്ങളും, തിയേറ്ററിൽ കളിക്കുന്ന പുതിയ മലയാള സിനിമകളും എല്ലാം ഒരൊറ്റ ക്ലിക്കിൽ കിട്ടും!”
+          </p>
+          <div class="nostalgic-quote-author">
+            <span class="nostalgic-author-tag">D&amp;J പ്രവാസി കൂട്ടായ്മ</span>
+            <span class="nostalgic-author-cities">Jeddah · Riyadh · Dammam · 11 KSA Cities</span>
+          </div>
+        </div>
+
+        <!-- Bespoke D&J Studio Signature Concierge Card -->
+        <div class="studio-signature-card">
+          <div class="studio-id">
+            <div class="studio-monogram" aria-hidden="true">D&amp;J</div>
+            <div class="studio-meta">
+              <span class="studio-eyebrow">Crafted &amp; Managed By</span>
+              <div class="studio-name-row">
+                <span class="studio-name">D&amp;J</span>
+                <span class="studio-verified" title="Verified Studio">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  UK &amp; GCC
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <a
+            href="https://wa.me/447460646263?text=Hi%20D%26J!%20I%27m%20reaching%20out%20from%20KSA%20Malayali%20Hub."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="studio-wa-btn"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12.03 2C6.5 2 2 6.48 2 12c0 1.77.46 3.5 1.34 5.02L2 22l5.13-1.34A9.96 9.96 0 0 0 12.03 22C17.55 22 22 17.52 22 12S17.55 2 12.03 2zm5.82 14.17c-.24.68-1.42 1.3-1.97 1.38-.52.08-1.18.11-1.9-.12-.44-.14-1-.33-1.72-.64-3.02-1.31-4.99-4.38-5.14-4.58-.15-.2-1.23-1.64-1.23-3.13s.78-2.22 1.06-2.52c.28-.3.61-.38.81-.38h.59c.19 0 .44-.07.69.53.25.61.85 2.09.92 2.24.08.15.13.33.03.53-.1.2-.15.33-.3.5-.15.18-.32.4-.45.54-.15.15-.31.32-.13.62.18.3.79 1.31 1.7 2.12 1.17 1.04 2.15 1.37 2.46 1.52.3.15.48.13.66-.08.18-.2.76-.89.96-1.19.2-.3.41-.25.69-.15.28.1 1.78.84 2.08.99.3.15.51.23.58.36.08.13.08.76-.16 1.44z"/>
+            </svg>
+            <span class="studio-wa-number">+44 7460 646263</span>
+          </a>
+        </div>
+
+        <div class="hero-cta-row">
+          <button type="button" id="open-submit-hero" class="hero-cta-gold">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <span data-i18n="addSpotBtn">Suggest a Spot</span>
+          </button>
+          <button type="button" id="hero-view-hypers" class="hero-cta-ghost">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span data-i18n="heroHypersBtn">🛒 LuLu, Nesto &amp; Malls Offers</span>
+          </button>
+          <button type="button" id="hero-view-cinemas" class="hero-cta-ghost">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line>
+            </svg>
+            <span data-i18n="heroCinemasBtn">🎬 Movies &amp; Theaters</span>
+          </button>
+          <button type="button" id="hero-view-daily" class="hero-cta-ghost hero-cta-daily">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span data-i18n="heroDailyBtn">💱 SAR Rate, Gold &amp; News</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="stats-grid" aria-label="Directory statistics">
+        <div class="stat-card">
+          <div class="stat-top-line"></div>
+          <div class="stat-value" id="stat-spots">129</div>
+          <div class="stat-label" data-i18n="statSpots">Food Spots</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-top-line gold"></div>
+          <div class="stat-value gold" id="stat-cities">11</div>
+          <div class="stat-label" data-i18n="statCities">KSA Cities</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-top-line"></div>
+          <div class="stat-value" id="stat-hypers">32</div>
+          <div class="stat-label" data-i18n="statHypers">Malls &amp; Deals</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-top-line gold"></div>
+          <div class="stat-value gold" id="stat-phones">60</div>
+          <div class="stat-label" data-i18n="statPhones">Direct Phones</div>
+        </div>
+        <div class="stat-card stat-card-visits">
+          <div class="stat-top-line visits"></div>
+          <div class="stat-visits-head">
+            <div class="stat-value gold" id="stat-visits">
+              <span id="visit-count-display">1,328</span><span class="stat-unit">+</span>
+            </div>
+            <div class="live-traffic-pill">
+              <span class="pulse-dot-green" aria-hidden="true"></span>
+              <span data-i18n="liveTrackingBadge">Live Pravasi Traffic</span>
+            </div>
+          </div>
+          <div class="stat-label" data-i18n="statVisits">Pravasi Community Visits</div>
+          <div id="admin-visits-pill" class="admin-visits-insight" style="display:none;">
+            <span>🔒 Admin: Real Sessions: <strong id="admin-hero-real-visits">1</strong> (<span id="admin-hero-real-views">1</span> Hits) · Public Baseline: 1.3K+</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Live Pravasi Breaking News Ticker Ribbon -->
+  <div class="live-ticker-strip" role="region" aria-label="Pravasi Live News &amp; Rates Ticker">
+    <div class="container live-ticker-inner">
+      <div class="ticker-badge">
+        <span class="ticker-pulse-dot" aria-hidden="true"></span>
+        <span>LIVE DESK</span>
+      </div>
+      <div class="ticker-viewport">
+        <div class="ticker-track" id="live-ticker-track">
+          <!-- Dynamically populated from DAILY_DESK_DATA.ticker -->
+        </div>
+      </div>
+      <button type="button" id="ticker-open-btn" class="ticker-cta-btn" title="Open Daily Live Desk">
+        <span>റേറ്റുകൾ &amp; വാർത്തകൾ ➔</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="container main-content" id="directory-dock">
+    <!-- Floating Search & Filter Dock -->
+    <section class="control-dock" aria-label="Search and filter restaurants">
+      <!-- City Selector Tabs (Jeddah, Makkah, Madinah, Taif, Riyadh, Dammam) -->
+      <div class="city-tabs-bar" id="city-tabs" role="tablist" aria-label="Filter by Saudi city"></div>
+
+      <div class="search-row">
+        <div class="search-box">
+          <span class="search-icon" aria-hidden="true">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </span>
+          <label for="search-input" class="sr-only">Search restaurants</label>
+          <input
+            type="search"
+            id="search-input"
+            class="search-input"
+            autocomplete="off"
+            data-i18n-placeholder="searchPlaceholder"
+            placeholder="Search hotel, city, area, street, or ID (e.g. Rahmath, Riyadh, Makkah, Dammam)…"
+          >
+          <button type="button" id="clear-search" class="clear-search-btn" aria-label="Clear search">✕</button>
+        </div>
+
+        <label for="area-select" class="sr-only">Filter by area</label>
+        <select id="area-select" class="control-select"></select>
+
+        <label for="category-select" class="sr-only">Filter by category</label>
+        <select id="category-select" class="control-select"></select>
+
+        <label for="sort-select" class="sr-only">Sort listings</label>
+        <select id="sort-select" class="control-select"></select>
+      </div>
+
+      <!-- Quick Filter Chips -->
+      <div class="quick-filters">
+        <button type="button" id="chip-phone" class="filter-chip">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span data-i18n="chipHasPhone">Has Phone</span>
+        </button>
+        <button type="button" id="chip-top" class="filter-chip">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          <span data-i18n="chipTopRated">4.2+ Rated</span>
+        </button>
+        <button type="button" id="chip-reviewed" class="filter-chip">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          <span data-i18n="chipReviewed">Has Reviews</span>
+        </button>
+        <button type="button" id="chip-saved" class="filter-chip">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          <span data-i18n="chipSaved">Saved</span><span id="saved-chip-count"></span>
+        </button>
+        <button type="button" id="chip-near" class="filter-chip">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+          <span data-i18n="chipNearMe">Near Me</span>
+        </button>
+        <button type="button" id="chip-reset" class="filter-chip reset-chip" style="display:none;">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+          <span data-i18n="chipReset">Reset Filters</span>
+        </button>
+      </div>
+
+      <!-- Popular Malayali Areas (dynamic per city) -->
+      <div class="popular-areas">
+        <span class="popular-label" data-i18n="popularAreasLabel">Popular Areas:</span>
+        <div id="popular-areas-list" style="display:contents;"></div>
+      </div>
+    </section>
+
+    <!-- Community Verification Notice -->
+    <div class="notice-banner" id="notice-banner" role="note">
+      <div class="notice-content">
+        <svg class="notice-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="16" x2="12" y2="12"></line>
+          <line x1="12" y1="8" x2="12.01" y2="8"></line>
+        </svg>
+        <div>
+          <strong data-i18n="noticeTitle">Community Directory Notice:</strong>
+          <span data-i18n="noticeBody">Listings combine public directory leads and business records across Jeddah, Makkah, Madinah, Taif, Riyadh, and Dammam. Always double-check opening hours and location on Maps before travelling. Spot a change? Tap WhatsApp to update us instantly.</span>
+        </div>
+      </div>
+      <button type="button" id="notice-close" class="notice-close" aria-label="Dismiss notice">✕</button>
+    </div>
+
+    <!-- Results Count & 3-Tab View Switcher (Grid | Map | Suggestions) -->
+    <div class="results-toolbar">
+      <div class="results-count" id="results-count" aria-live="polite"></div>
+      <div class="view-switcher" role="tablist" aria-label="Display mode">
+        <button type="button" id="view-grid-btn" class="view-btn active" role="tab" aria-selected="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+          <span data-i18n="viewGrid">Grid View</span>
+        </button>
+        <button type="button" id="view-map-btn" class="view-btn" role="tab" aria-selected="false">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg>
+          <span data-i18n="viewMap">Map View</span>
+        </button>
+        <button type="button" id="view-hypers-btn" class="view-btn" role="tab" aria-selected="false">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+          <span data-i18n="viewHypers">Offers &amp; Malls</span>
+          <span class="view-tab-pill gold" id="hypers-tab-badge">32</span>
+        </button>
+        <button type="button" id="view-cinemas-btn" class="view-btn" role="tab" aria-selected="false">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line></svg>
+          <span data-i18n="viewCinemas">Movies &amp; Theaters</span>
+          <span class="view-tab-pill gold" id="cinemas-tab-badge">19</span>
+        </button>
+        <button type="button" id="view-daily-btn" class="view-btn" role="tab" aria-selected="false">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span data-i18n="viewDaily">Rates &amp; News</span>
+          <span class="view-tab-pill live-pill">LIVE</span>
+        </button>
+        <button type="button" id="view-reviews-btn" class="view-btn" role="tab" aria-selected="false">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          <span data-i18n="viewReviews">Reviews</span>
+          <span class="view-tab-pill" id="reviews-tab-badge">5.0</span>
+        </button>
+        <button type="button" id="view-sugg-btn" class="view-btn" role="tab" aria-selected="false">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          <span data-i18n="viewSuggestions">Suggestions</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Cards Grid View -->
+    <section id="cards-grid" class="cards-grid" aria-label="Restaurant listings"></section>
+
+    <!-- Interactive KSA Map View -->
+    <section id="map-section" class="map-section" aria-label="KSA Kerala Restaurants Map">
+      <div class="map-wrapper">
+        <div id="jeddah-map"></div>
+        <div id="map-offline-box" class="map-offline-fallback" style="display:none;">
+          <div style="font-size:2.4rem;margin-bottom:8px;">🗺️</div>
+          <h3 data-i18n="mapOfflineTitle">Interactive map needs an internet connection</h3>
+          <p data-i18n="mapOfflineDesc" style="color:var(--text-secondary);max-width:440px;margin:8px auto 0;">
+            You can still browse all restaurants in Grid View and open any location directly in Google Maps.
+          </p>
+        </div>
+        <div class="map-legend">
+          <div class="legend-items">
+            <span><span class="legend-dot exact"></span><span data-i18n="mapLegendExact">Exact Plus Code location</span></span>
+            <span><span class="legend-dot approx"></span><span data-i18n="mapLegendApprox">Area pin (tap Directions for exact route)</span></span>
+          </div>
+          <span id="map-region-label">Saudi Arabia · 11 Cities</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dedicated Malayali Malls & Hypermarkets with Auto-Updating Offers -->
+    <section id="hypermarkets-section" class="hypermarkets-section" aria-label="Malayali Hypermarkets & Live Offers">
+      <div class="hyper-hero-strip">
+        <div class="hyper-hero-text">
+          <div class="hyper-live-badge">
+            <span class="hyper-live-pulse" aria-hidden="true"></span>
+            <span data-i18n="hyperLiveBadge">Auto-Updating Weekly Offers</span>
+          </div>
+          <h2 data-i18n="hyperHeroTitle">Malayali Hypermarkets &amp; Live Supermarket Deals</h2>
+          <p data-i18n="hyperHeroDesc">Explore LuLu, Nesto, Grand Hyper, City Flower, and Al Madina across 11 KSA cities. Tap any store to open their official active weekly digital flyer (auto-updated by the supermarket) or receive instant WhatsApp offer alerts!</p>
+        </div>
+
+        <!-- Quick Brand Filters -->
+        <div class="hyper-brand-filter" id="hyper-brand-filter" role="tablist" aria-label="Filter by brand">
+          <button type="button" class="hyper-brand-pill active" data-brand="">
+            <span data-i18n="hyperBrandAll">All Supermarkets</span>
+            <span class="hyper-brand-count" id="count-brand-all">32</span>
+          </button>
+          <button type="button" class="hyper-brand-pill" data-brand="lulu">
+            <span class="hyper-brand-dot lulu" aria-hidden="true"></span>
+            <span>LuLu Hypermarket</span>
+          </button>
+          <button type="button" class="hyper-brand-pill" data-brand="nesto">
+            <span class="hyper-brand-dot nesto" aria-hidden="true"></span>
+            <span>Nesto</span>
+          </button>
+          <button type="button" class="hyper-brand-pill" data-brand="grand">
+            <span class="hyper-brand-dot grand" aria-hidden="true"></span>
+            <span>Grand Hyper</span>
+          </button>
+          <button type="button" class="hyper-brand-pill" data-brand="cityflower">
+            <span class="hyper-brand-dot cityflower" aria-hidden="true"></span>
+            <span>City Flower</span>
+          </button>
+          <button type="button" class="hyper-brand-pill" data-brand="almadina">
+            <span class="hyper-brand-dot almadina" aria-hidden="true"></span>
+            <span>Al Madina</span>
+          </button>
+        </div>
+        <!-- Dedicated WhatsApp Offers Subscription Hub -->
+        <div class="hyper-wa-vip-strip">
+          <div class="hyper-wa-vip-left">
+            <div class="hyper-wa-vip-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.03 2C6.5 2 2 6.48 2 12c0 1.77.46 3.5 1.34 5.02L2 22l5.13-1.34A9.96 9.96 0 0 0 12.03 22C17.55 22 22 17.52 22 12S17.55 2 12.03 2zm5.82 14.17c-.24.68-1.42 1.3-1.97 1.38-.52.08-1.18.11-1.9-.12-.44-.14-1-.33-1.72-.64-3.02-1.31-4.99-4.38-5.14-4.58-.15-.2-1.23-1.64-1.23-3.13s.78-2.22 1.06-2.52c.28-.3.61-.38.81-.38h.59c.19 0 .44-.07.69.53.25.61.85 2.09.92 2.24.08.15.13.33.03.53-.1.2-.15.33-.3.5-.15.18-.32.4-.45.54-.15.15-.31.32-.13.62.18.3.79 1.31 1.7 2.12 1.17 1.04 2.15 1.37 2.46 1.52.3.15.48.13.66-.08.18-.2.76-.89.96-1.19.2-.3.41-.25.69-.15.28.1 1.78.84 2.08.99.3.15.51.23.58.36.08.13.08.76-.16 1.44z"/>
+              </svg>
+            </div>
+            <div>
+              <strong data-i18n="waVipTitle">Get All KSA Weekly Offers on WhatsApp</strong>
+              <p data-i18n="waVipDesc">Receive LuLu, Nesto, Grand Hyper &amp; City Flower weekly digital flyers directly on your phone every Wednesday/Thursday.</p>
+            </div>
+          </div>
+          <a
+            href="https://wa.me/447460646263?text=Hi%20D%26J%20Techies!%20Please%20send%20me%20the%20latest%20KSA%20Hypermarket%20Weekly%20Offers%20Flyer."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-wa-vip-cta"
+            title="Subscribe to KSA Weekly Offers on WhatsApp"
+          >
+            <span data-i18n="waVipBtn">💬 Send Me Weekly Offers</span>
+            <span class="wa-vip-phone">+44 7460 646263</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hypermarkets Grid -->
+      <div id="hypermarkets-grid" class="hypermarkets-grid"></div>
+    </section>
+
+    <!-- Dedicated Mall Cinemas & Malayalam Movie Showtimes Section -->
+    <section id="cinemas-section" class="cinemas-section" aria-label="Mall Cinemas and Movie Showtimes">
+      <div class="cinema-hero-strip">
+        <div class="cinema-hero-text">
+          <div class="cinema-live-badge">
+            <span class="cinema-live-pulse" aria-hidden="true"></span>
+            <span data-i18n="cinemaLiveBadge">Now Showing &amp; Mollywood Hub</span>
+          </div>
+          <h2 data-i18n="cinemaHeroTitle">Mall Cinemas &amp; Malayalam Movie Showtimes</h2>
+          <p data-i18n="cinemaHeroDesc">Discover which Malayalam, Indian &amp; international blockbuster movies are playing right now across VOX, Muvi, AMC, and Empire Cinemas in Saudi Arabia. Check real-time seat availability &amp; book your tickets directly!</p>
+
+          <!-- Direct Movie Hub Quick-Links -->
+          <div class="cinema-quick-links">
+            <a href="https://ksa.voxcinemas.com/movies/mollywood-times" target="_blank" rel="noopener noreferrer" class="cinema-quick-btn vox" title="Direct Malayalam Movie Releases on VOX Cinemas">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line></svg>
+              <span>🎬 VOX Mollywood Times (മലയാള സിനിമകൾ)</span>
+            </a>
+            <a href="https://www.muvicinemas.com/" target="_blank" rel="noopener noreferrer" class="cinema-quick-btn muvi" title="Direct Muvi Cinemas KSA Portal">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              <span>🍿 Muvi Cinemas KSA Showtimes</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Live Official Cinema Booking Hubs (100% Real-Time & Authentic) -->
+        <div class="live-cinema-hubs-container">
+          <div class="live-cinema-hubs-header">
+            <span class="live-hubs-badge">🎟️ തത്സമയ സിനിമാ ഷെഡ്യൂൾ &amp; ടിക്കറ്റ് ബുക്കിംഗ്</span>
+            <h3 class="live-hubs-title">Official Saudi Mall Cinema Booking Portals</h3>
+            <p class="live-hubs-desc">സൗദിയിലെ പ്രമുഖ തിയേറ്ററുകളായ VOX, Muvi, AMC, Empire എന്നിവയിലെ ഇന്നത്തെ തത്സമയ മലയാള സിനിമകളും ഷോടൈമുകളും സീറ്റ് മാപ്പും പരിശോധിച്ച് ടിക്കറ്റ് ബുക്ക് ചെയ്യാം. ഒരിക്കലും തെറ്റായ വിവരങ്ങൾ വരില്ല!</p>
+          </div>
+
+          <div class="live-chains-grid">
+            <!-- 1. VOX Cinemas Mollywood Times -->
+            <div class="live-chain-card vox">
+              <div class="live-chain-header">
+                <div class="live-chain-brand-wrap">
+                  <span class="chain-logo-badge vox">VOX</span>
+                  <div>
+                    <h4 class="chain-name">VOX Cinemas KSA</h4>
+                    <span class="chain-sub">Majid Al Futtaim · Official Mollywood Hub</span>
+                  </div>
+                </div>
+                <span class="chain-status-tag live">● LIVE</span>
+              </div>
+              <p class="chain-highlight">സൗദിയിൽ മലയാള സിനിമകൾക്ക് മാത്രമായി VOX നൽകുന്ന ഔദ്യോഗിക <strong>"Mollywood Times"</strong> പോർട്ടൽ. ഇന്നത്തെ പ്രദർശനങ്ങൾ തത്സമയം കണ്ട് സീറ്റ് തിരഞ്ഞെടുക്കാം.</p>
+              <div class="chain-malls-list">
+                <span class="mall-tag">🏛️ Jeddah Park</span>
+                <span class="mall-tag">🏛️ Town Square</span>
+                <span class="mall-tag">🏛️ Riyadh Front</span>
+                <span class="mall-tag">🏛️ Red Sea Mall</span>
+              </div>
+              <div class="chain-specs">
+                <span>⚡ IMAX 3D</span> · <span>🍽️ GOLD VIP</span> · <span>🔊 Dolby Atmos</span>
+              </div>
+              <a href="https://ksa.voxcinemas.com/movies/mollywood-times" target="_blank" rel="noopener noreferrer" class="chain-book-btn vox">
+                <span>🎬 VOX മലയാളം സിനിമകൾ കണ്ട് ബുക്ക് ചെയ്യുക ➔</span>
+              </a>
+            </div>
+
+            <!-- 2. Muvi Cinemas KSA -->
+            <div class="live-chain-card muvi">
+              <div class="live-chain-header">
+                <div class="live-chain-brand-wrap">
+                  <span class="chain-logo-badge muvi">MUVI</span>
+                  <div>
+                    <h4 class="chain-name">Muvi Cinemas KSA</h4>
+                    <span class="chain-sub">The Saudi National Cinema Chain</span>
+                  </div>
+                </div>
+                <span class="chain-status-tag live">● LIVE</span>
+              </div>
+              <p class="chain-highlight">സൗദി അറേബ്യയിലെ ഏറ്റവും വലിയ തദ്ദേശീയ സിനിമാ ശൃംഖല. ഇന്ത്യൻ സിനിമകളുടെ ഏറ്റവും പുതിയ റിലീസുകളും പ്രീമിയർ ടിക്കറ്റുകളും.</p>
+              <div class="chain-malls-list">
+                <span class="mall-tag">🏛️ Mall of Arabia</span>
+                <span class="mall-tag">🏛️ Aziz Mall</span>
+                <span class="mall-tag">🏛️ Al Nakheel Riyadh</span>
+                <span class="mall-tag">🏛️ Dhahran Mall</span>
+              </div>
+              <div class="chain-specs">
+                <span>🌐 ScreenX 270°</span> · <span>👑 Muvi SUITES</span> · <span>💎 Onyx 4K LED</span>
+              </div>
+              <a href="https://www.muvicinemas.com/" target="_blank" rel="noopener noreferrer" class="chain-book-btn muvi">
+                <span>🍿 Muvi-ൽ ഇന്നത്തെ സിനിമകൾ ബുക്ക് ചെയ്യുക ➔</span>
+              </a>
+            </div>
+
+            <!-- 3. AMC Cinemas KSA -->
+            <div class="live-chain-card amc">
+              <div class="live-chain-header">
+                <div class="live-chain-brand-wrap">
+                  <span class="chain-logo-badge amc">AMC</span>
+                  <div>
+                    <h4 class="chain-name">AMC Cinemas KSA</h4>
+                    <span class="chain-sub">American Luxury Multiplex Network</span>
+                  </div>
+                </div>
+                <span class="chain-status-tag live">● LIVE</span>
+              </div>
+              <p class="chain-highlight">ലോകോത്തര AMC Prime സൗകര്യങ്ങൾ, പ്ലഷ് ലക്ഷ്വറി പവർ റീക്ലൈനർ സീറ്റുകൾ, ഒപ്പം ഫാമിലി മലയാളം &amp; ഇന്ത്യൻ സ്ക്രീനിംഗുകൾ.</p>
+              <div class="chain-malls-list">
+                <span class="mall-tag">🏛️ Stars Avenue Jeddah</span>
+                <span class="mall-tag">🏛️ Panorama Mall Riyadh</span>
+                <span class="mall-tag">🏛️ Al Khair</span>
+              </div>
+              <div class="chain-specs">
+                <span>💺 Luxury Recliners</span> · <span>⚡ AMC Prime</span> · <span>🎬 Dolby Cinema</span>
+              </div>
+              <a href="https://www.amccinemas.com/" target="_blank" rel="noopener noreferrer" class="chain-book-btn amc">
+                <span>🎟️ AMC ഇന്നത്തെ ഷോടൈമുകൾ നോക്കുക ➔</span>
+              </a>
+            </div>
+
+            <!-- 4. Empire Cinemas KSA -->
+            <div class="live-chain-card empire">
+              <div class="live-chain-header">
+                <div class="live-chain-brand-wrap">
+                  <span class="chain-logo-badge empire">EMPIRE</span>
+                  <div>
+                    <h4 class="chain-name">Empire Cinemas KSA</h4>
+                    <span class="chain-sub">Middle East Cinema Pioneers</span>
+                  </div>
+                </div>
+                <span class="chain-status-tag live">● LIVE</span>
+              </div>
+              <p class="chain-highlight">അത്യാധുനിക 4DX മോഷൻ സീറ്റുകൾ, സ്പെഷ്യൽ ഇഫക്റ്റുകൾ, ഒപ്പം ജിദ്ദ, റിയാദ്, അൽ ഖോബാർ മാളുകളിലെ പ്രത്യേക ഇന്ത്യൻ റിലീസുകൾ.</p>
+              <div class="chain-malls-list">
+                <span class="mall-tag">🏛️ Al Andalus Mall</span>
+                <span class="mall-tag">🏛️ Othaim Mall</span>
+                <span class="mall-tag">🏛️ Jazan Rashid Mall</span>
+              </div>
+              <div class="chain-specs">
+                <span>🌪️ 4DX Motion Seats</span> · <span>👶 MINIS Kids</span> · <span>🔊 SPHERA</span>
+              </div>
+              <a href="https://empirecinemas.com.sa/" target="_blank" rel="noopener noreferrer" class="chain-book-btn empire">
+                <span>🎫 Empire തത്സമയ ടിക്കറ്റുകൾ ബുക്ക് ചെയ്യുക ➔</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Theaters Directory Header -->
+        <div class="theaters-directory-header">
+          <span class="theaters-badge-pill">🏛️ സിനിമാ തിയേറ്ററുകൾ കണ്ടെത്താം</span>
+          <h3 class="theaters-section-title">KSA Mall Theaters &amp; Screen Directory</h3>
+          <p class="theaters-section-desc">സൗദിയിലെ 11 പ്രധാന നഗരങ്ങളിലെ 19 മാൾ തിയേറ്ററുകൾ, ലൊക്കേഷൻ മാപ്പ്, സ്ക്രീൻ സൗകര്യങ്ങൾ (IMAX, 4DX, GOLD VIP).</p>
+        </div>
+
+        <!-- Cinema Brand Filters -->
+        <div class="cinema-brand-filter" id="cinema-brand-filter" role="tablist" aria-label="Filter by cinema chain">
+          <button type="button" class="cinema-brand-pill active" data-cinema-brand="">
+            <span data-i18n="cinemaBrandAll">All Mall Theaters</span>
+            <span class="cinema-brand-count" id="count-cinema-all">19</span>
+          </button>
+          <button type="button" class="cinema-brand-pill" data-cinema-brand="vox">
+            <span class="cinema-brand-dot vox" aria-hidden="true"></span>
+            <span>VOX Cinemas</span>
+          </button>
+          <button type="button" class="cinema-brand-pill" data-cinema-brand="muvi">
+            <span class="cinema-brand-dot muvi" aria-hidden="true"></span>
+            <span>Muvi Cinemas</span>
+          </button>
+          <button type="button" class="cinema-brand-pill" data-cinema-brand="amc">
+            <span class="cinema-brand-dot amc" aria-hidden="true"></span>
+            <span>AMC Cinemas</span>
+          </button>
+          <button type="button" class="cinema-brand-pill" data-cinema-brand="empire">
+            <span class="cinema-brand-dot empire" aria-hidden="true"></span>
+            <span>Empire Cinemas</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Cinemas Grid -->
+      <div id="cinemas-grid" class="cinemas-grid"></div>
+    </section>
+
+    <!-- Pravasi Daily Live Desk (SAR to INR, Gold Rates, Saudi Visa/Labour, Kerala News) -->
+    <section id="daily-desk-section" class="daily-desk-section" style="display:none;" aria-label="Pravasi Daily Live Desk">
+      <!-- Section Hero Strip -->
+      <div class="daily-hero-strip">
+        <div class="daily-hero-text">
+          <div class="daily-live-badge">
+            <span class="daily-live-pulse" aria-hidden="true"></span>
+            <span>പ്രവാസി ലൈവ് ഡെസ്ക് · Pravasi Daily Live Desk</span>
+          </div>
+          <h2>ലൈവ് റിയാൽ നിരക്കുകൾ, സ്വർണ്ണവില, വിസ നിയമങ്ങൾ &amp; വാർത്തകൾ</h2>
+          <p>
+            സൗദി പ്രവാസികൾക്കായി ലൈവ് SAR to INR ബാങ്ക് നിരക്കുകൾ, ഇന്നത്തെ സൗദി സ്വർണ്ണവില, വിസിറ്റ് വിസ &amp; ഖിവ (Qiwa) തൊഴിൽ ചട്ടങ്ങൾ, ഒപ്പം കേരളത്തിലെ പ്രധാന വാർത്തകളും ഒരൊറ്റ ക്ലിക്കിൽ.
+          </p>
+        </div>
+
+        <!-- Quick Sub-Nav Navigation Anchors -->
+        <div class="daily-subnav">
+          <a href="#remit-section" class="daily-subnav-btn">💱 റിയാൽ റേറ്റ് കാൽക്കുലേറ്റർ</a>
+          <a href="#gold-section" class="daily-subnav-btn">🪙 സൗദി സ്വർണ്ണവില</a>
+          <a href="#visa-section" class="daily-subnav-btn">📜 വിസ &amp; തൊഴിൽ നിയമങ്ങൾ</a>
+          <a href="#news-section" class="daily-subnav-btn">📰 കേരള &amp; പ്രവാസി വാർത്തകൾ</a>
+        </div>
+      </div>
+
+      <!-- 1. SAR to INR Remittance Desk & Interactive Calculator -->
+      <div id="remit-section" class="daily-module-card">
+        <div class="module-header">
+          <div class="module-title-wrap">
+            <span class="module-icon">💱</span>
+            <div>
+              <h3>SAR to INR ബാങ്ക് റേറ്റ് കമ്പാരിസൺ (ലൈവ് റിയാൽ നിരക്കുകൾ)</h3>
+              <p class="module-subtitle">ഇന്നത്തെ മിഡ്-മാർക്കറ്റ് നിരക്ക്: <strong>1 SAR ≈ ₹24.92 INR</strong> · ബാങ്കുകളും ഡിജിറ്റൽ വാലറ്റുകളും നൽകുന്ന ഏറ്റവും പുതിയ റേറ്റ്</p>
+            </div>
+          </div>
+          <!-- Live Interactive Calculator -->
+          <div class="remit-calc-dock">
+            <label for="remit-amount-input">അയക്കുന്ന തുക (SAR):</label>
+            <div class="remit-input-wrap">
+              <span class="currency-tag">SAR</span>
+              <input type="number" id="remit-amount-input" class="remit-amount-input" value="1000" min="50" max="100000" step="50" inputmode="numeric">
+            </div>
+          </div>
+        </div>
+
+        <!-- Remittance Providers Clean Comparison Table & Accordion -->
+        <div class="rate-table-container">
+          <!-- Table Controls: Search & Filter Tabs -->
+          <div class="rate-table-toolbar">
+            <div class="rate-search-box">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <input type="text" id="rate-search-input" class="rate-search-input" placeholder="Search Bank or Wallet (e.g. TeleMoney, Rajhi, STC, urpay)..." aria-label="Search Bank or Wallet">
+            </div>
+            <div class="rate-filter-tabs" id="rate-filter-tabs">
+              <button type="button" class="rate-filter-btn active" data-type="all">All Banks &amp; Wallets (18)</button>
+              <button type="button" class="rate-filter-btn" data-type="wallet">⚡ Digital Wallets</button>
+              <button type="button" class="rate-filter-btn" data-type="bank">🏦 Remittance Banks</button>
+            </div>
+          </div>
+
+          <!-- The Table Component Matching User's Screenshot -->
+          <div class="rate-table-wrapper">
+            <!-- Table Header Row -->
+            <div class="rate-table-header">
+              <div class="rate-col-bank-header">Bank</div>
+              <div class="rate-col-fee-header">Fee(SAR)</div>
+              <div class="rate-col-rate-header">Rate(INR)</div>
+            </div>
+
+            <!-- Table Rows & Accordions populated by app.js -->
+            <div class="rate-table-body" id="rate-table-body">
+              <!-- Dynamically rendered -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Ethical Remittance Disclosure -->
+        <div class="ethical-notice-box">
+          <div class="notice-badge">⚖️ എത്തിക്കൽ ഡിസ്‌ക്ലൈമർ &amp; മാർഗ്ഗനിർദ്ദേശം</div>
+          <p>
+            മുകളിൽ നൽകിയിട്ടുള്ള നിരക്കുകൾ സൗദിയിലെ പ്രധാന ഡിജിറ്റൽ വാലറ്റുകളും ബാങ്കുകളും നൽകുന്ന ലൈവ് ഇന്റർബാങ്ക് ശരാശരി വിവരങ്ങളാണ്. ട്രാൻസ്ഫർ ഫീസും എക്സ്ചേഞ്ച് റേറ്റും ദിവസേനയുള്ള മാർക്കറ്റ് മാറ്റങ്ങൾക്കനുസരിച്ച് ആപ്പുകളിൽ വ്യത്യാസപ്പെടാം. പണം അയക്കുന്നതിന് മുൻപ് അതത് ഔദ്യോഗിക ആപ്പുകളിൽ റേറ്റ് കൺഫേം ചെയ്യുക.
+          </p>
+        </div>
+      </div>
+
+      <!-- 2. KSA Gold Rates (Saudi Bullion & Jewelry Benchmark) -->
+      <div id="gold-section" class="daily-module-card">
+        <div class="module-header">
+          <div class="module-title-wrap">
+            <span class="module-icon">🪙</span>
+            <div>
+              <h3>സൗദി സ്വർണ്ണവില (KSA Daily Gold Benchmark)</h3>
+              <p class="module-subtitle">ജിദ്ദ &amp; റിയാദ് ഗോൾഡ് സൂഖ് ശരാശരി ബുള്ളിയൻ നിരക്കുകൾ (ഗ്രാം &amp; പവൻ നിരക്കുകൾ)</p>
+            </div>
+          </div>
+          <div class="gold-market-status">
+            <span class="status-dot"></span>
+            <span>സൗദി ബുള്ളിയൻ മാർക്കറ്റ് ലൈവ്</span>
+          </div>
+        </div>
+
+        <!-- Gold Rates Grid -->
+        <div class="gold-grid" id="gold-grid"></div>
+
+        <!-- Gold Disclosure -->
+        <div class="ethical-notice-box">
+          <div class="notice-badge">ℹ️ സ്വർണ്ണം വാങ്ങുന്നവർ ശ്രദ്ധിക്കുക</div>
+          <p>
+            ഇത് സൗദി അറേബ്യയിലെ ഔദ്യോഗിക ബുള്ളിയൻ അടിസ്ഥാന വിലയാണ്. റീട്ടെയിൽ ജ്വല്ലറികളിൽ ആഭരണങ്ങൾ വാങ്ങുമ്പോൾ പണിക്കൂലിയും (മജൂരി) 15% സൗദി വാറ്റും (VAT) അധികമായി ബാധകമായിരിക്കും.
+          </p>
+        </div>
+      </div>
+
+      <!-- 3. Saudi Visa & Labour Regulations Knowledge Desk -->
+      <div id="visa-section" class="daily-module-card">
+        <div class="module-header">
+          <div class="module-title-wrap">
+            <span class="module-icon">📜</span>
+            <div>
+              <h3>സൗദി വിസ &amp; തൊഴിൽ നിയമ ഗൈഡ് (Visa &amp; Labour Laws)</h3>
+              <p class="module-subtitle">ഫാമിലി വിസിറ്റ് വിസ, ഇൻഷുറൻസ്, ഖിവ (Qiwa) കരാർ &amp; എക്സിറ്റ് റീ-എൻട്രി ഔദ്യോഗിക വിവരങ്ങൾ</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Saudi Guides Grid -->
+        <div class="guides-grid" id="guides-grid"></div>
+      </div>
+
+      <!-- 4. Kerala & Pravasi Verified News Desk -->
+      <div id="news-section" class="daily-module-card">
+        <div class="module-header">
+          <div class="module-title-wrap">
+            <span class="module-icon">📰</span>
+            <div>
+              <h3>കേരള &amp; പ്രവാസി പ്രധാന വാർത്തകൾ (Verified News Desk)</h3>
+              <p class="module-subtitle">പ്രവാസികൾ അറിഞ്ഞിരിക്കേണ്ട വാർത്തകൾ, വിമാനയാത്ര, ക്ഷേമപദ്ധതികൾ &amp; കേരള പ്രധാന വിവരങ്ങൾ</p>
+            </div>
+          </div>
+          <!-- News Category Filter Pills -->
+          <div class="news-filter-pills" id="news-filter-pills">
+            <button type="button" class="news-pill active" data-cat="all">എല്ലാം</button>
+            <button type="button" class="news-pill" data-cat="visa">വിസ &amp; നിയമങ്ങൾ</button>
+            <button type="button" class="news-pill" data-cat="pravasi">പ്രവാസി ക്ഷേമം</button>
+            <button type="button" class="news-pill" data-cat="kerala">കേരള വാർത്തകൾ</button>
+            <button type="button" class="news-pill" data-cat="cinema">സിനിമ &amp; കല</button>
+          </div>
+        </div>
+
+        <!-- News Cards Grid -->
+        <div class="news-grid" id="news-grid"></div>
+      </div>
+    </section>
+
+    <!-- Community Site Ratings & Reviews Tab (Public Submit · Admin-Only Moderation) -->
+    <section id="reviews-section" class="reviews-section" aria-label="Site Ratings and Community Reviews">
+      <div class="reviews-layout">
+        <!-- Left Column: Overall Rating Summary + Submit Form -->
+        <div class="reviews-left-col">
+          <div class="rev-summary-card">
+            <div class="sugg-badge">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <span data-i18n="revBadge">Community Feedback</span>
+            </div>
+            <h2 data-i18n="revTitle">Rate &amp; Review KSA Kerala Foods</h2>
+            <p class="sugg-desc" data-i18n="revDesc">
+              Share your experience using our directory. Visitors can post ratings and comments freely — moderation and edits are strictly handled by D&amp;J Techies Admin.
+            </p>
+
+            <div class="rev-score-box">
+              <div class="rev-score-big" id="rev-avg-score">5.0</div>
+              <div class="rev-score-meta">
+                <div class="rev-stars-display" id="rev-avg-stars" aria-hidden="true"></div>
+                <div class="rev-score-label" data-i18n="revScoreLabel">Overall Site Rating</div>
+                <div class="rev-score-count" id="rev-total-count">Based on 3 community reviews</div>
+              </div>
+            </div>
+
+            <div class="rev-bars" id="rev-bars"></div>
+          </div>
+
+          <div class="rev-form-card">
+            <h3 data-i18n="revFormTitle">Leave Your Rating &amp; Comment</h3>
+            <form id="site-review-form" class="form-grid">
+              <div class="form-group">
+                <label data-i18n="revYourRating">Your Rating *</label>
+                <div class="star-picker" id="star-picker" role="radiogroup" aria-label="Select rating from 1 to 5 stars">
+                  <button type="button" class="star-pick-btn active" data-star="1" aria-label="1 star">★</button>
+                  <button type="button" class="star-pick-btn active" data-star="2" aria-label="2 stars">★</button>
+                  <button type="button" class="star-pick-btn active" data-star="3" aria-label="3 stars">★</button>
+                  <button type="button" class="star-pick-btn active" data-star="4" aria-label="4 stars">★</button>
+                  <button type="button" class="star-pick-btn active" data-star="5" aria-label="5 stars">★</button>
+                  <span class="star-pick-label" id="star-pick-label">5 / 5</span>
+                </div>
+              </div>
+
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="rev-name" data-i18n="revNameLabel">Your Name *</label>
+                  <input type="text" id="rev-name" class="form-control" required maxlength="60" data-i18n-placeholder="revNamePh" placeholder="Your Name or Nickname">
+                </div>
+                <div class="form-group">
+                  <label for="rev-city" data-i18n="revCityLabel">Your City in KSA</label>
+                  <select id="rev-city" class="form-control">
+                    <option value="Jeddah">Jeddah</option>
+                    <option value="Riyadh">Riyadh</option>
+                    <option value="Dammam">Dammam</option>
+                    <option value="Makkah">Makkah</option>
+                    <option value="Madinah">Madinah</option>
+                    <option value="Taif">Taif</option>
+                    <option value="Buraidah">Buraidah</option>
+                    <option value="Tabuk">Tabuk</option>
+                    <option value="Al Jouf">Al Jouf</option>
+                    <option value="Al Baha">Al Baha</option>
+                    <option value="Khamis Mushait">Khamis Mushait</option>
+                    <option value="Saudi Arabia">Other / KSA</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="rev-comment" data-i18n="revCommentLabel">Your Comment / Review *</label>
+                <textarea id="rev-comment" class="form-control" required maxlength="500" data-i18n-placeholder="revCommentPh" placeholder="Tell us how KSA Kerala Foods helped you find great Malayali food…"></textarea>
+              </div>
+
+              <p class="rev-mod-note">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                <span data-i18n="revModerationNote">Read-only after posting — only D&amp;J Techies Admin can edit or remove reviews.</span>
+              </p>
+
+              <button type="submit" class="btn-whatsapp-solid" data-i18n="revSubmitBtn">Post Rating &amp; Comment</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Right Column: Published Community Reviews List -->
+        <div class="reviews-feed-col">
+          <div id="reviews-list" class="reviews-list"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dedicated Community Suggestions Tab (Read-Only Directory Policy; Admin-Only Publishing) -->
+    <section id="suggestions-section" class="suggestions-section" aria-label="Suggest a Restaurant">
+      <div class="suggestions-grid">
+        <div class="sugg-info-card">
+          <div class="sugg-badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            <span data-i18n="suggHeroBadge">Admin-Verified Directory</span>
+          </div>
+          <h2 data-i18n="suggTitle">Suggest a Kerala Restaurant</h2>
+          <p class="sugg-desc" data-i18n="suggDesc">
+            Listings are managed exclusively by D&amp;J Techies Admin to guarantee accuracy. Visitors cannot directly edit the directory — submit your recommendation below and our team will verify &amp; publish it.
+          </p>
+
+          <div class="sugg-policy-box">
+            <div class="sugg-policy-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <div>
+              <strong data-i18n="suggPolicyTitle">Read-Only Verified Directory</strong>
+              <p data-i18n="suggPolicyBody">Only D&amp;J Techies Administrators can add, edit, or remove listings. Your suggestion goes directly to our review desk on WhatsApp (+44 7460 646263).</p>
+            </div>
+          </div>
+
+          <div class="sugg-studio-footer">
+            <div class="studio-monogram" aria-hidden="true">D&amp;J</div>
+            <div>
+              <div class="sugg-studio-label">Editorial Review Desk</div>
+              <div class="sugg-studio-val">D&amp;J Techies · +44 7460 646263</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sugg-form-card">
+          <form id="submit-form" class="form-grid">
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="sub-type" data-i18n="fieldType">Request Type</label>
+                <select id="sub-type" class="form-control">
+                  <option value="Suggest New Restaurant" data-i18n="fieldTypeAdd">Add New Restaurant</option>
+                  <option value="Suggest Correction / Update" data-i18n="fieldTypeUpdate">Update Existing Listing</option>
+                  <option value="Owner Verification Request" data-i18n="fieldTypeOwner">I'm the Owner (Verify &amp; Claim)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="sub-city" data-i18n="fieldCity">KSA City *</label>
+                <select id="sub-city" class="form-control" required>
+                  <option value="Jeddah">Jeddah</option>
+                  <option value="Makkah">Makkah</option>
+                  <option value="Madinah">Madinah</option>
+                  <option value="Taif">Taif</option>
+                  <option value="Riyadh">Riyadh</option>
+                  <option value="Dammam">Dammam</option>
+                  <option value="Buraidah">Buraidah</option>
+                  <option value="Tabuk">Tabuk</option>
+                  <option value="Al Jouf">Al Jouf (Sakaka)</option>
+                  <option value="Al Baha">Al Baha</option>
+                  <option value="Khamis Mushait">Khamis Mushait</option>
+                  <option value="Other KSA City">Other KSA City</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="sub-name" data-i18n="fieldName">Restaurant Name *</label>
+                <input type="text" id="sub-name" class="form-control" required data-i18n-placeholder="fieldNamePh" placeholder="e.g., Malabar Spice Restaurant">
+              </div>
+
+              <div class="form-group">
+                <label for="sub-area" data-i18n="fieldArea">Area / District *</label>
+                <input type="text" id="sub-area" class="form-control" required data-i18n-placeholder="fieldAreaPh" placeholder="e.g., Al Sharafeyah, Batha, Al Khalidiyah">
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="sub-phone" data-i18n="fieldPhone">Phone / WhatsApp Number</label>
+                <input type="tel" id="sub-phone" class="form-control" data-i18n-placeholder="fieldPhonePh" placeholder="e.g., +966 5X XXX XXXX">
+              </div>
+
+              <div class="form-group">
+                <label for="sub-maps" data-i18n="fieldMaps">Google Maps Link or Landmark</label>
+                <input type="text" id="sub-maps" class="form-control" data-i18n-placeholder="fieldMapsPh" placeholder="Paste Google Maps URL or nearby landmark">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="sub-notes" data-i18n="fieldNotes">Specialties / Opening Hours / Notes</label>
+              <textarea id="sub-notes" class="form-control" data-i18n-placeholder="fieldNotesPh" placeholder="e.g., Best Malabar dum biriyani, family dining available, open 6 AM – 12 AM"></textarea>
+            </div>
+
+            <button type="submit" class="btn-whatsapp-solid">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12.03 2C6.5 2 2 6.48 2 12c0 1.77.46 3.5 1.34 5.02L2 22l5.13-1.34A9.96 9.96 0 0 0 12.03 22C17.55 22 22 17.52 22 12S17.55 2 12.03 2zm5.82 14.17c-.24.68-1.42 1.3-1.97 1.38-.52.08-1.18.11-1.9-.12-.44-.14-1-.33-1.72-.64-3.02-1.31-4.99-4.38-5.14-4.58-.15-.2-1.23-1.64-1.23-3.13s.78-2.22 1.06-2.52c.28-.3.61-.38.81-.38h.59c.19 0 .44-.07.69.53.25.61.85 2.09.92 2.24.08.15.13.33.03.53-.1.2-.15.33-.3.5-.15.18-.32.4-.45.54-.15.15-.31.32-.13.62.18.3.79 1.31 1.7 2.12 1.17 1.04 2.15 1.37 2.46 1.52.3.15.48.13.66-.08.18-.2.76-.89.96-1.19.2-.3.41-.25.69-.15.28.1 1.78.84 2.08.99.3.15.51.23.58.36.08.13.08.76-.16 1.44z"/>
+              </svg>
+              <span data-i18n="suggSendBtn">Submit Suggestion to Admin (+44 7460 646263)</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- About D&J Techies — Our Origin Story Section -->
+  <section id="about-dj-section" class="about-dj-section" aria-labelledby="about-dj-title">
+    <div class="container">
+      <div class="about-dj-card">
+        <div class="about-dj-header">
+          <div class="about-dj-eyebrow">
+            <span class="about-dj-dot" aria-hidden="true"></span>
+            <span data-i18n="aboutEyebrow">Our Story · About D&amp;J Techies</span>
+          </div>
+          <h2 id="about-dj-title" data-i18n="aboutTitle">Born From a Real Struggle. Built as a Solution.</h2>
+          <p class="about-dj-lead" data-i18n="aboutLead">
+            D&amp;J Techies began with two individuals who faced the exact everyday challenges Malayalis experience while living and travelling across Saudi Arabia — finding authentic, dependable Kerala food away from home.
+          </p>
+          <p class="about-dj-body" data-i18n="aboutBody">
+            Instead of leaving those frustrations unresolved, we turned our own real-life experiences into a practical, clean, and reliable digital solution for everyone. Every feature on KSA Kerala Foods is crafted to save time, build trust, and connect our community across 11 Saudi cities.
+          </p>
+        </div>
+
+        <div class="about-pillars">
+          <article class="about-pillar">
+            <div class="about-pillar-icon" aria-hidden="true">D&amp;J</div>
+            <h3 data-i18n="aboutPillar1Title">Two Minds, Real Experience</h3>
+            <p data-i18n="aboutPillar1Desc">Started by two expats turning real-world everyday struggles into thoughtful digital products.</p>
+          </article>
+
+          <article class="about-pillar">
+            <div class="about-pillar-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+            </div>
+            <h3 data-i18n="aboutPillar2Title">Admin-Verified Accuracy</h3>
+            <p data-i18n="aboutPillar2Desc">Curated across 11 Saudi cities with strict admin moderation so visitors always get dependable info.</p>
+          </article>
+
+          <article class="about-pillar">
+            <div class="about-pillar-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <h3 data-i18n="aboutPillar3Title">Direct Concierge Support</h3>
+            <p data-i18n="aboutPillar3Desc">Questions, corrections, or custom tech solutions — reach D&amp;J Techies directly on +44 7460 646263.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Luxury Dark-Emerald Studio Footer with D&J Techies Branding -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-studio-card">
+        <div class="footer-studio-left">
+          <div class="studio-monogram lg" aria-hidden="true">D&amp;J</div>
+          <div>
+            <div class="footer-eyebrow" data-i18n="footerDevBy">Crafted by</div>
+            <div class="footer-brand-name" data-i18n="footerBrand">D&amp;J</div>
+            <div class="footer-tagline">KSA Malayali Hub · UK &amp; GCC</div>
+          </div>
+        </div>
+
+        <div class="footer-studio-right">
+          <span class="footer-contact-label" data-i18n="footerContact">WhatsApp Support</span>
+          <a
+            href="https://wa.me/447460646263?text=Hi%20D%26J!%20I%20have%20an%20inquiry%20about%20KSA%20Malayali%20Hub."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer-wa-link"
+          >
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12.03 2C6.5 2 2 6.48 2 12c0 1.77.46 3.5 1.34 5.02L2 22l5.13-1.34A9.96 9.96 0 0 0 12.03 22C17.55 22 22 17.52 22 12S17.55 2 12.03 2zm5.82 14.17c-.24.68-1.42 1.3-1.97 1.38-.52.08-1.18.11-1.9-.12-.44-.14-1-.33-1.72-.64-3.02-1.31-4.99-4.38-5.14-4.58-.15-.2-1.23-1.64-1.23-3.13s.78-2.22 1.06-2.52c.28-.3.61-.38.81-.38h.59c.19 0 .44-.07.69.53.25.61.85 2.09.92 2.24.08.15.13.33.03.53-.1.2-.15.33-.3.5-.15.18-.32.4-.45.54-.15.15-.31.32-.13.62.18.3.79 1.31 1.7 2.12 1.17 1.04 2.15 1.37 2.46 1.52.3.15.48.13.66-.08.18-.2.76-.89.96-1.19.2-.3.41-.25.69-.15.28.1 1.78.84 2.08.99.3.15.51.23.58.36.08.13.08.76-.16 1.44z"/>
+            </svg>
+            <span>+44 7460 646263</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <p class="footer-disclaimer" data-i18n="footerDisclaimer">
+          Curated lifestyle &amp; community hub for Malayalis across 11 Saudi cities — Jeddah, Makkah, Madinah, Taif, Riyadh, Dammam, Buraidah, Tabuk, Al Jouf, Al Baha &amp; Khamis Mushait. Powered by D&amp;J.
+        </p>
+        <button type="button" id="open-admin-login" class="footer-admin-btn" title="D&amp;J Administrator Access">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          <span data-i18n="adminPortalLink">Admin Portal</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Obsidian & Gold VIP Concierge Button -->
+  <a
+    href="https://wa.me/447460646263?text=Hi%20D%26J!%20I%27m%20contacting%20you%20from%20KSA%20Malayali%20Hub."
+    target="_blank"
+    rel="noopener noreferrer"
+    class="wa-float"
+    aria-label="Chat on WhatsApp with D&J (+44 7460 646263)"
+    title="D&J · +44 7460 646263"
+  >
+    <span class="wa-float-icon" aria-hidden="true">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12.03 2C6.5 2 2 6.48 2 12c0 1.77.46 3.5 1.34 5.02L2 22l5.13-1.34A9.96 9.96 0 0 0 12.03 22C17.55 22 22 17.52 22 12S17.55 2 12.03 2zm5.82 14.17c-.24.68-1.42 1.3-1.97 1.38-.52.08-1.18.11-1.9-.12-.44-.14-1-.33-1.72-.64-3.02-1.31-4.99-4.38-5.14-4.58-.15-.2-1.23-1.64-1.23-3.13s.78-2.22 1.06-2.52c.28-.3.61-.38.81-.38h.59c.19 0 .44-.07.69.53.25.61.85 2.09.92 2.24.08.15.13.33.03.53-.1.2-.15.33-.3.5-.15.18-.32.4-.45.54-.15.15-.31.32-.13.62.18.3.79 1.31 1.7 2.12 1.17 1.04 2.15 1.37 2.46 1.52.3.15.48.13.66-.08.18-.2.76-.89.96-1.19.2-.3.41-.25.69-.15.28.1 1.78.84 2.08.99.3.15.51.23.58.36.08.13.08.76-.16 1.44z"/>
+      </svg>
+    </span>
+    <span class="wa-float-copy">
+      <small>D&amp;J</small>
+      <strong>+44 7460 646263</strong>
+    </span>
+  </a>
+
+  <!-- Restaurant Detail Modal -->
+  <div id="detail-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="detail-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <h2 id="detail-title">Restaurant Name</h2>
+          <div id="detail-sub" class="modal-sub"></div>
+        </div>
+        <button type="button" id="detail-close" class="modal-close-btn" aria-label="Close details">✕</button>
+      </div>
+      <div class="modal-body" id="detail-body"></div>
+    </div>
+  </div>
+
+  <!-- Admin-Only Login Modal -->
+  <div id="admin-login-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="admin-login-title">
+    <div class="modal-card modal-card-sm">
+      <div class="modal-header">
+        <div>
+          <h2 id="admin-login-title">D&amp;J Techies Admin Access</h2>
+          <div class="modal-sub">Authorized administrators only. Enter your studio passcode to add, edit, or publish listings.</div>
+        </div>
+        <button type="button" id="admin-login-close" class="modal-close-btn" aria-label="Close admin login">✕</button>
+      </div>
+      <div class="modal-body">
+        <form id="admin-login-form" class="form-grid">
+          <div class="form-group">
+            <label for="admin-pin-input">Admin Passcode</label>
+            <input type="password" id="admin-pin-input" class="form-control" required autocomplete="current-password" placeholder="Enter Admin PIN">
+          </div>
+          <div id="admin-login-error" class="admin-error-msg" style="display:none;">Incorrect passcode. Access denied.</div>
+          <button type="submit" class="btn-whatsapp-solid">Unlock Admin Controls</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin-Only Add / Edit Restaurant Modal -->
+  <div id="admin-editor-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="admin-editor-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <h2 id="admin-editor-title">Add Restaurant (Admin Only)</h2>
+          <div class="modal-sub">Changes update live immediately. Use "Export data.js" in the Admin bar to publish permanently.</div>
+        </div>
+        <button type="button" id="admin-editor-close" class="modal-close-btn" aria-label="Close editor">✕</button>
+      </div>
+      <div class="modal-body">
+        <form id="admin-editor-form" class="form-grid">
+          <input type="hidden" id="adm-edit-id" value="">
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="adm-name">Restaurant Name *</label>
+              <input type="text" id="adm-name" class="form-control" required placeholder="e.g., Malabar Spice Restaurant">
+            </div>
+            <div class="form-group">
+              <label for="adm-category">Category *</label>
+              <select id="adm-category" class="form-control" required>
+                <option value="Kerala Restaurant">Kerala Restaurant</option>
+                <option value="Family Restaurant">Family Restaurant</option>
+                <option value="Fast Food">Fast Food</option>
+                <option value="Bakery & Coolbar">Bakery &amp; Coolbar</option>
+                <option value="Cafe & Snacks">Cafe &amp; Snacks</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="adm-city">KSA City *</label>
+              <select id="adm-city" class="form-control" required>
+                <option value="Jeddah">Jeddah</option>
+                <option value="Makkah">Makkah</option>
+                <option value="Madinah">Madinah</option>
+                <option value="Taif">Taif</option>
+                <option value="Riyadh">Riyadh</option>
+                <option value="Dammam">Dammam</option>
+                <option value="Buraidah">Buraidah</option>
+                <option value="Tabuk">Tabuk</option>
+                <option value="Al Jouf">Al Jouf</option>
+                <option value="Al Baha">Al Baha</option>
+                <option value="Khamis Mushait">Khamis Mushait</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="adm-area">Area / District *</label>
+              <input type="text" id="adm-area" class="form-control" required placeholder="e.g., Al Sharafeyah">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="adm-address">Full Address *</label>
+            <input type="text" id="adm-address" class="form-control" required placeholder="Street, District, City, Saudi Arabia">
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="adm-phone">Phone (E.164)</label>
+              <input type="tel" id="adm-phone" class="form-control" placeholder="+966 5X XXX XXXX">
+            </div>
+            <div class="form-group">
+              <label for="adm-rating">Rating (1.0 - 5.0)</label>
+              <input type="number" step="0.1" min="1" max="5" id="adm-rating" class="form-control" placeholder="e.g., 4.5">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="adm-maps">Google Maps URL (auto-generated if blank)</label>
+            <input type="url" id="adm-maps" class="form-control" placeholder="https://www.google.com/maps/...">
+          </div>
+
+          <div class="form-group">
+            <label for="adm-tags">Tags (comma separated)</label>
+            <input type="text" id="adm-tags" class="form-control" placeholder="Malabar Style, Biriyani, Family Dining">
+          </div>
+
+          <button type="submit" class="btn-whatsapp-solid" id="admin-save-btn">Save Restaurant Listing</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin-Only Edit Review Modal -->
+  <div id="admin-review-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="admin-review-title">
+    <div class="modal-card modal-card-sm">
+      <div class="modal-header">
+        <div>
+          <h2 id="admin-review-title">Moderate Review (Admin Only)</h2>
+          <div class="modal-sub">Edit reviewer details, rating, or comment text.</div>
+        </div>
+        <button type="button" id="admin-review-close" class="modal-close-btn" aria-label="Close review editor">✕</button>
+      </div>
+      <div class="modal-body">
+        <form id="admin-review-form" class="form-grid">
+          <input type="hidden" id="adm-rev-id" value="">
+          <div class="form-group">
+            <label for="adm-rev-name">Reviewer Name *</label>
+            <input type="text" id="adm-rev-name" class="form-control" required>
+          </div>
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="adm-rev-city">City</label>
+              <input type="text" id="adm-rev-city" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="adm-rev-rating">Rating (1–5) *</label>
+              <select id="adm-rev-rating" class="form-control" required>
+                <option value="5">5 Stars</option>
+                <option value="4">4 Stars</option>
+                <option value="3">3 Stars</option>
+                <option value="2">2 Stars</option>
+                <option value="1">1 Star</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="adm-rev-comment">Comment *</label>
+            <textarea id="adm-rev-comment" class="form-control" required></textarea>
+          </div>
+          <button type="submit" class="btn-whatsapp-solid">Save Review Changes</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin-Only Change PIN / Password Modal -->
+  <div id="admin-pin-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="admin-pin-title">
+    <div class="modal-card modal-card-sm">
+      <div class="modal-header">
+        <div>
+          <h2 id="admin-pin-title">Change Admin Password</h2>
+          <div class="modal-sub">Update your secret Admin PIN / Passcode for full editorial control.</div>
+        </div>
+        <button type="button" id="admin-pin-close" class="modal-close-btn" aria-label="Close password modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <form id="admin-pin-form" class="form-grid">
+          <div class="form-group">
+            <label for="adm-curr-pin">Current Password / PIN *</label>
+            <input type="password" id="adm-curr-pin" class="form-control" required placeholder="Enter current PIN (default: DJ2026)">
+          </div>
+          <div class="form-group">
+            <label for="adm-new-pin">New Password / PIN *</label>
+            <input type="password" id="adm-new-pin" class="form-control" required minlength="4" maxlength="32" placeholder="Enter new secret PIN or password">
+          </div>
+          <div class="form-group">
+            <label for="adm-confirm-pin">Confirm New Password / PIN *</label>
+            <input type="password" id="adm-confirm-pin" class="form-control" required minlength="4" maxlength="32" placeholder="Re-enter new secret PIN">
+          </div>
+          <div class="pin-hint-note">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            <span>Your new password is encrypted in browser storage and will be required for future admin logins.</span>
+          </div>
+          <div class="modal-actions" style="margin-top:8px;">
+            <button type="submit" class="btn-whatsapp-solid">Update Admin Password</button>
+            <button type="button" id="admin-pin-reset-default" class="card-btn" style="color:var(--text-muted);" title="Reset to factory default (DJ2026)">Reset to DJ2026</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin-Only Real Traffic Analytics Modal -->
+  <div id="admin-traffic-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="admin-traffic-title">
+    <div class="modal-card modal-card-sm">
+      <div class="modal-header">
+        <div>
+          <h2 id="admin-traffic-title">Real Visitor Traffic Analytics</h2>
+          <div class="modal-sub">Confidential live visitor counts (Visible only to D&amp;J Techies Admin).</div>
+        </div>
+        <button type="button" id="admin-traffic-close" class="modal-close-btn" aria-label="Close analytics modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="traffic-metrics-grid">
+          <div class="traffic-metric-card">
+            <div class="traffic-metric-num" id="metric-real-sessions">0</div>
+            <div class="traffic-metric-label">Actual Unique Sessions</div>
+            <div class="traffic-metric-hint">Verified unique device visits</div>
+          </div>
+          <div class="traffic-metric-card">
+            <div class="traffic-metric-num" id="metric-real-views">0</div>
+            <div class="traffic-metric-label">Actual Page Hits</div>
+            <div class="traffic-metric-hint">Total directory page impressions</div>
+          </div>
+        </div>
+
+        <div class="traffic-public-notice">
+          <div class="traffic-public-badge">Public Display Baseline: 1.3K+</div>
+          <p>Public visitors see the curated community baseline of <strong>1.3K+ Pravasi Visits</strong>, while this portal gives Admin the 100% accurate real-world visitor telemetry.</p>
+        </div>
+
+        <div class="traffic-meta-box">
+          <div class="traffic-meta-row">
+            <span>First Recorded Hit:</span>
+            <strong id="metric-first-visit">—</strong>
+          </div>
+          <div class="traffic-meta-row">
+            <span>Latest Session Activity:</span>
+            <strong id="metric-last-visit">Just now</strong>
+          </div>
+        </div>
+
+        <div class="modal-actions" style="margin-top:14px;">
+          <button type="button" id="admin-traffic-reset-btn" class="card-btn" style="color:var(--danger);" title="Clear real telemetry counters">Reset Real Telemetry</button>
+          <button type="button" id="admin-traffic-done-btn" class="btn-whatsapp-solid">Done / Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin="" defer></script>
+  <script src="./js/data.js"></script>
+  <script src="./js/hypermarkets_data.js"></script>
+  <script src="./js/cinemas_data.js"></script>
+  <script src="./js/daily_desk_data.js"></script>
+  <script src="./js/i18n.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>

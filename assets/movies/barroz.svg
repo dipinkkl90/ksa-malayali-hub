@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="100%" height="100%">
+  <defs>
+    <linearGradient id="barrozBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a0b2e"/>
+      <stop offset="45%" stop-color="#3b1566"/>
+      <stop offset="80%" stop-color="#140724"/>
+      <stop offset="100%" stop-color="#08020f"/>
+    </linearGradient>
+    <radialGradient id="treasureGlow" cx="0.5" cy="0.4" r="0.5">
+      <stop offset="0%" stop-color="#ffd700" stop-opacity="0.8"/>
+      <stop offset="40%" stop-color="#b8860b" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#08020f" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="royalGlow">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="600" height="900" fill="url(#barrozBg)"/>
+  <circle cx="300" cy="380" r="200" fill="url(#treasureGlow)"/>
+
+  <!-- Ancient Galleon & Treasure Chest Silhouette -->
+  <g transform="translate(180, 240) scale(1.0)" fill="#08020f">
+    <!-- 400 Year Old Guardian Silhouette with Beard and Antique Robe -->
+    <path d="M120,60 Q160,30 200,60 Q220,110 200,160 Q160,220 120,160 Z"/>
+    <circle cx="160" cy="50" r="25"/>
+    <path d="M140,80 Q160,160 180,80 Z" fill="#ffd700" opacity="0.3"/>
+    <!-- Treasure Chest Base -->
+    <rect x="40" y="240" width="160" height="90" rx="10" fill="#08020f"/>
+    <path d="M40,240 Q120,190 200,240 Z" fill="#b8860b" opacity="0.7"/>
+    <!-- Golden Coins & Jewels Radiance -->
+    <circle cx="120" cy="230" r="10" fill="#ffd700" filter="url(#royalGlow)"/>
+    <circle cx="140" cy="225" r="8" fill="#ffd700"/>
+    <circle cx="100" cy="235" r="8" fill="#ffd700"/>
+  </g>
+
+  <!-- Bottom Vignette -->
+  <rect y="600" width="600" height="300" fill="#08020f"/>
+
+  <!-- Badges Top -->
+  <g transform="translate(30, 40)">
+    <rect width="180" height="32" rx="16" fill="rgba(255,215,0,0.2)" stroke="#ffd700" stroke-width="1.5"/>
+    <text x="90" y="21" fill="#ffd700" font-family="'Montserrat', sans-serif" font-size="13" font-weight="bold" text-anchor="middle">👑 LALETTAN 3D SPECTACLE</text>
+  </g>
+  <g transform="translate(450, 40)">
+    <rect width="120" height="32" rx="16" fill="#7c3aed"/>
+    <text x="60" y="21" fill="#ffffff" font-family="'Montserrat', sans-serif" font-size="13" font-weight="bold" text-anchor="middle">⭐ 3D IMAX</text>
+  </g>
+
+  <!-- Title Block -->
+  <text x="300" y="700" fill="#ffd700" font-family="'Montserrat', sans-serif" font-size="54" font-weight="900" text-anchor="middle" filter="url(#royalGlow)" letter-spacing="12">BARROZ</text>
+  <text x="300" y="740" fill="#fef08a" font-family="'Manjari', 'Anek Malayalam', sans-serif" font-size="36" font-weight="900" text-anchor="middle">ബറോസ്</text>
+
+  <!-- Subtitle & Cast -->
+  <text x="300" y="780" fill="#ffffff" font-family="'Montserrat', sans-serif" font-size="15" font-weight="700" text-anchor="middle" letter-spacing="2">DIRECTED BY MOHANLAL · JIKU LYDUS</text>
+  <text x="300" y="810" fill="#cbd5e1" font-family="'Montserrat', sans-serif" font-size="14" text-anchor="middle">MOHANLAL · MAYA · CESAR LORENTE RATON · GURU SOMASUNDARAM</text>
+
+  <!-- Specs -->
+  <line x1="60" y1="835" x2="540" y2="835" stroke="#ffd700" stroke-width="1" opacity="0.3"/>
+  <text x="300" y="865" fill="#94a3b8" font-family="'Montserrat', sans-serif" font-size="13" font-weight="600" text-anchor="middle">U · 2H 18M · 3D FANTASY ADVENTURE · GUARDIAN OF D'GAMA TREASURE</text>
+</svg>

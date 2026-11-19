@@ -1,0 +1,17 @@
+{
+  "name": "KSA Malayali Hub — സൗദി മലയാളി ഹബ്",
+  "short_name": "KSA Malayali Hub",
+  "description": "The All-in-One Community Portal for Malayalis across 11 Saudi Arabian cities — Jeddah, Makkah, Madinah, Taif, Riyadh, Dammam, Buraidah, Tabuk, Al Jouf, Al Baha & Khamis Mushait. Curated Kerala Dining, Hypermarket Weekly Offers (LuLu, Nesto, Grand Hyper) & Mall Cinema Showtimes (VOX, Muvi). Powered by D&J (+44 7460 646263).",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f7f5ef",
+  "theme_color": "#03271e",
+  "icons": [
+    {
+      "src": "./assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
