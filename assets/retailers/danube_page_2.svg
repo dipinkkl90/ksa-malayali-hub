@@ -25,9 +25,9 @@
   <!-- Department Banner -->
   <rect x="14" y="62" width="272" height="68" rx="12" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
   <rect x="24" y="72" width="90" height="18" rx="9" fill="url(#goldBar)"/>
-  <text x="69" y="84" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="9" fill="#0f172a" text-anchor="middle">CHEESE & COLD CUTS</text>
+  <text x="69" y="84" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="9" fill="#0f172a" text-anchor="middle">CHEESE &amp; COLD CUTS</text>
   
-  <text x="24" y="105" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="16" fill="#ffffff">Premium Cheeses & Delicatessen</text>
+  <text x="24" y="105" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="16" fill="#ffffff">Premium Cheeses &amp; Delicatessen</text>
   <text x="24" y="122" font-family="'Noto Sans Arabic', Arial, sans-serif" font-weight="700" font-size="12" fill="rgba(255,255,255,0.9)">أجبان مستوردة ومأكولات باردة فاخرة</text>
   
   <!-- Products Section -->
