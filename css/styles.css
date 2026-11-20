@@ -4177,6 +4177,21 @@ html[lang="ml"] .sugg-info-card h2 {
   margin-bottom: 8px;
 }
 
+.live-currency-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
 .daily-live-pulse {
   width: 8px;
   height: 8px;

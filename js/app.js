@@ -1575,6 +1575,119 @@
   let rateSearchQuery = "";
   let expandedProviderIds = new Set(["anb-telemoney"]);
 
+  // Real-Time Free Currency API Integration (SAR to INR Live Auto-Update)
+  let liveCurrencySynced = false;
+  let liveCurrencyRate = null;
+  let baseProviderSpreads = null;
+
+  function initBaseProviderSpreads() {
+    if (baseProviderSpreads || !window.DAILY_DESK_DATA || !window.DAILY_DESK_DATA.remittance) return;
+    const baseMid = window.DAILY_DESK_DATA.remittance.mid_market_rate || 24.96;
+    baseProviderSpreads = (window.DAILY_DESK_DATA.remittance.providers || []).map((p) => {
+      const pSpread = p.rate - baseMid;
+      const channels = (p.channels || []).map((c) => ({
+        ...c,
+        spread: (typeof c.rate === "number" ? c.rate : parseFloat(c.rate) || p.rate) - baseMid,
+      }));
+      return {
+        id: p.id,
+        spread: pSpread,
+        channels: channels,
+      };
+    });
+  }
+
+  async function fetchLiveCurrencyRate() {
+    initBaseProviderSpreads();
+
+    // 1. Try Primary free API (Open Exchange Rates API - CORS & no auth)
+    try {
+      const res = await fetch("https://open.er-api.com/v6/latest/SAR", { cache: "no-cache" });
+      if (res.ok) {
+        const data = await res.json();
+        if (data && data.rates && typeof data.rates.INR === "number") {
+          applyLiveCurrencyRate(data.rates.INR, "OpenExchangeRates");
+          return;
+        }
+      }
+    } catch (e) {
+      console.warn("Primary currency API failed:", e);
+    }
+
+    // 2. Try Backup CDN API (jsdelivr fawazahmed0)
+    try {
+      const res = await fetch("https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/sar.json", { cache: "no-cache" });
+      if (res.ok) {
+        const data = await res.json();
+        if (data && data.sar && typeof data.sar.inr === "number") {
+          applyLiveCurrencyRate(data.sar.inr, "CurrencyAPI");
+          return;
+        }
+      }
+    } catch (e2) {
+      console.warn("Secondary currency API failed:", e2);
+    }
+  }
+
+  function applyLiveCurrencyRate(liveRate, providerName) {
+    if (!liveRate || isNaN(liveRate) || !window.DAILY_DESK_DATA || !window.DAILY_DESK_DATA.remittance) return;
+    liveCurrencySynced = true;
+    liveCurrencyRate = liveRate;
+
+    const desk = window.DAILY_DESK_DATA;
+    desk.remittance.mid_market_rate = Number(liveRate.toFixed(2));
+
+    // Update each bank/wallet provider rate according to its genuine market spread
+    if (baseProviderSpreads && desk.remittance.providers) {
+      desk.remittance.providers.forEach((p) => {
+        const meta = baseProviderSpreads.find((b) => b.id === p.id);
+        if (meta) {
+          p.rate = Number((liveRate + meta.spread).toFixed(2));
+          p.updated_date = "Live (" + new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }) + ")";
+          if (p.channels && meta.channels) {
+            p.channels.forEach((c, idx) => {
+              if (meta.channels[idx]) {
+                c.rate = Number((liveRate + meta.channels[idx].spread).toFixed(2));
+              }
+            });
+          }
+        }
+      });
+    }
+
+    // Update Mid-Market display in UI if present
+    const midEl = $("live-mid-market-display");
+    if (midEl) {
+      midEl.textContent = `1 SAR ≈ ₹${liveRate.toFixed(2)} INR`;
+    }
+
+    const badgeEl = $("live-currency-badge");
+    if (badgeEl) {
+      const timeStr = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+      badgeEl.innerHTML = `🟢 Live Realtime (${timeStr})`;
+      badgeEl.style.display = "inline-flex";
+    }
+
+    // Update Live Ticker Track item
+    if (desk.ticker && desk.ticker.length > 0) {
+      const sorted = [...(desk.remittance.providers || [])].sort((a, b) => b.rate - a.rate);
+      const topProviders = sorted.slice(0, 5).map((p) => `${p.name.split(" ")[0]} (₹${p.rate.toFixed(2)})`).join(", ");
+      desk.ticker[0] = `💵 തത്സമയ റിയാൽ നിരക്ക്: ${topProviders} [Live Realtime]`;
+      setupNewsTicker();
+    }
+
+    // Re-render remittance grid if active
+    if (state.view === "daily" || $("rate-table-body")) {
+      renderRemittanceGrid();
+    }
+  }
+
+  function initLiveCurrencySync() {
+    fetchLiveCurrencyRate();
+    // Auto-refresh every 5 minutes in background
+    setInterval(fetchLiveCurrencyRate, 300000);
+  }
+
   function renderDailyDesk() {
     renderRemittanceGrid();
     renderGoldGrid();
@@ -2833,6 +2946,7 @@
       $("ticker-open-btn").addEventListener("click", () => setView("daily", true));
     }
     setupNewsTicker();
+    initLiveCurrencySync();
 
     // Hypermarket Brand Filter Pills
     document.querySelectorAll(".hyper-brand-pill").forEach((pill) => {
