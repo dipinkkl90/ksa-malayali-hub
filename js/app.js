@@ -1746,6 +1746,23 @@
     const desk = window.DAILY_DESK_DATA;
     if (!desk || !desk.remittance) return;
 
+    const totalCount = (desk.remittance.providers || []).length;
+    const walletCount = (desk.remittance.providers || []).filter((p) => p.type === "wallet").length;
+    const bankCount = (desk.remittance.providers || []).filter((p) => p.type === "bank").length;
+
+    const allBtn = document.querySelector('.rate-filter-btn[data-type="all"]');
+    if (allBtn) {
+      allBtn.textContent = state.lang === "ml" ? `എല്ലാ ബാങ്കുകളും വാലറ്റുകളും (${totalCount})` : `All Banks & Wallets (${totalCount})`;
+    }
+    const walletBtn = document.querySelector('.rate-filter-btn[data-type="wallet"]');
+    if (walletBtn) {
+      walletBtn.textContent = state.lang === "ml" ? `⚡ ഡിജിറ്റൽ വാലറ്റുകൾ (${walletCount})` : `⚡ Digital Wallets (${walletCount})`;
+    }
+    const bankBtn = document.querySelector('.rate-filter-btn[data-type="bank"]');
+    if (bankBtn) {
+      bankBtn.textContent = state.lang === "ml" ? `🏦 ബാങ്കുകൾ & എക്സ്ചേഞ്ച് (${bankCount})` : `🏦 Banks & Exchanges (${bankCount})`;
+    }
+
     let providers = desk.remittance.providers || [];
     const amount = remitAmountCache;
 

@@ -77,9 +77,37 @@ window.DAILY_DESK_DATA = {
         ]
       },
       {
+        "id": "urpay",
+        "name": "urpay",
+        "name_ml": "യൂർപേ (urpay - Al Rajhi)",
+        "type": "wallet",
+        "rate": 25.48,
+        "fee_sar": 0,
+        "updated_date": "20 Nov 2026",
+        "is_best_rate": false,
+        "tag": "Zero Fee Wallet ⚡",
+        "tag_ml": "ഫ്രീ ഡിജിറ്റൽ ട്രാൻസ്ഫർ ⚡",
+        "brand_color": "#009688",
+        "app_url": "https://www.urpay.com.sa/",
+        "channels": [
+          {
+            "type_label": "Online Exchange Fee",
+            "name": "urpay India Digital Remit",
+            "fee": 0,
+            "rate": 24.88
+          },
+          {
+            "type_label": "Express Direct Remittance",
+            "name": "urpay Express Transfer",
+            "fee": 13,
+            "rate": 24.88
+          }
+        ]
+      },
+      {
         "id": "alrajhi",
-        "name": "Alrajhi Bank",
-        "name_ml": "അൽ രാജ്ഹി ബാങ്ക് (Alrajhi Bank)",
+        "name": "Tahweel Al Rajhi",
+        "name_ml": "തഹ്‌വീൽ അൽ രാജ്ഹി (Tahweel Al Rajhi)",
         "type": "bank",
         "rate": 25.46,
         "fee_sar": 15,
@@ -101,6 +129,106 @@ window.DAILY_DESK_DATA = {
             "name": "Alrajhi Direct India Transfer",
             "fee": 10,
             "rate": 25.46
+          }
+        ]
+      },
+      {
+        "id": "al-amoudi-exchange",
+        "name": "Al Amoudi Exchange (Jeddah)",
+        "name_ml": "അൽ അമൂദി എക്സ്ചേഞ്ച് (Al Amoudi - Balad / Jeddah)",
+        "type": "bank",
+        "rate": 25.4,
+        "fee_sar": 15.0,
+        "updated_date": "20 Nov 2026",
+        "is_best_rate": false,
+        "tag": "Heritage Exchange 🏢",
+        "tag_ml": "പ്രശസ്ത എക്സ്ചേഞ്ച് ഹൗസ് 🏢",
+        "brand_color": "#1a365d",
+        "app_url": "https://alamoudiexchange.com",
+        "channels": [
+          {
+            "type_label": "Branch Exchange Fee",
+            "name": "Al Amoudi Branch Transfer",
+            "fee": 15.0,
+            "rate": 25.4
+          }
+        ]
+      },
+      {
+        "id": "al-zamil-exchange",
+        "name": "Al Zamil Exchange",
+        "name_ml": "അൽ സാമിൽ എക്സ്ചേഞ്ച് (Al Zamil Exchange)",
+        "type": "bank",
+        "rate": 25.38,
+        "fee_sar": 15.0,
+        "updated_date": "20 Nov 2026",
+        "is_best_rate": false,
+        "tag": "Eastern & Riyadh",
+        "tag_ml": "കിഴക്കൻ പ്രവിശ്യ & റിയാദ്",
+        "brand_color": "#2c5282",
+        "app_url": "https://alzamil.com",
+        "channels": [
+          {
+            "type_label": "Branch Exchange Fee",
+            "name": "Al Zamil Counter Transfer",
+            "fee": 15.0,
+            "rate": 25.38
+          }
+        ]
+      },
+      {
+        "id": "western-union-direct",
+        "name": "Western Union KSA",
+        "name_ml": "വെസ്റ്റേൺ യൂണിയൻ സൗദി (Western Union)",
+        "type": "bank",
+        "rate": 25.35,
+        "fee_sar": 15.0,
+        "updated_date": "20 Nov 2026",
+        "is_best_rate": false,
+        "tag": "Global Network 🌍",
+        "tag_ml": "ഗ്ലോബൽ നെറ്റ്‌വർക്ക് 🌍",
+        "brand_color": "#ffde00",
+        "app_url": "https://www.westernunion.com/sa/",
+        "channels": [
+          {
+            "type_label": "Online Exchange Fee",
+            "name": "Western Union Online App",
+            "fee": 10.0,
+            "rate": 25.35
+          },
+          {
+            "type_label": "Branch Exchange Fee",
+            "name": "WU Branch Cash / Bank",
+            "fee": 15.0,
+            "rate": 25.28
+          }
+        ]
+      },
+      {
+        "id": "alinma-bank",
+        "name": "Alinma Bank (Alinma Express)",
+        "name_ml": "അലിൻമ ബാങ്ക് (Alinma Express)",
+        "type": "bank",
+        "rate": 25.32,
+        "fee_sar": 15.0,
+        "updated_date": "20 Nov 2026",
+        "is_best_rate": false,
+        "tag": "Instant Account Transfer",
+        "tag_ml": "തത്സമയ ബാങ്ക് ട്രാൻസ്ഫർ",
+        "brand_color": "#8b1834",
+        "app_url": "https://www.alinma.com",
+        "channels": [
+          {
+            "type_label": "Online Exchange Fee",
+            "name": "Alinma App Express",
+            "fee": 10.0,
+            "rate": 25.32
+          },
+          {
+            "type_label": "Branch Exchange Fee",
+            "name": "Alinma Branch Counter",
+            "fee": 15.0,
+            "rate": 25.28
           }
         ]
       },
@@ -133,6 +261,34 @@ window.DAILY_DESK_DATA = {
         ]
       },
       {
+        "id": "moneygram-ksa",
+        "name": "MoneyGram KSA",
+        "name_ml": "മണിഗ്രാം സൗദി (MoneyGram)",
+        "type": "bank",
+        "rate": 25.3,
+        "fee_sar": 15.0,
+        "updated_date": "20 Nov 2026",
+        "is_best_rate": false,
+        "tag": "Cash & Account",
+        "tag_ml": "ക്യാഷ് & അക്കൗണ്ട് ട്രാൻസ്ഫർ",
+        "brand_color": "#e31837",
+        "app_url": "https://www.moneygram.com/mgo/sa/en/",
+        "channels": [
+          {
+            "type_label": "Online Exchange Fee",
+            "name": "MoneyGram App Remit",
+            "fee": 10.0,
+            "rate": 25.3
+          },
+          {
+            "type_label": "Branch Exchange Fee",
+            "name": "MoneyGram Agent Counter",
+            "fee": 15.0,
+            "rate": 25.25
+          }
+        ]
+      },
+      {
         "id": "ersal",
         "name": "Ersal Money Transfer",
         "name_ml": "ഇർസാൽ (Ersal Money Transfer - Saudi Post)",
@@ -161,9 +317,65 @@ window.DAILY_DESK_DATA = {
         ]
       },
       {
+        "id": "sab-bank",
+        "name": "SAB (Saudi Awwal Bank)",
+        "name_ml": "എസ്.എ.ബി (Saudi Awwal Bank - SAB Express)",
+        "type": "bank",
+        "rate": 25.26,
+        "fee_sar": 15.0,
+        "updated_date": "20 Nov 2026",
+        "is_best_rate": false,
+        "tag": "SAB Direct Remit",
+        "tag_ml": "എസ്.എ.ബി ഡയറക്റ്റ് റീമിറ്റ്",
+        "brand_color": "#db0011",
+        "app_url": "https://www.sab.com",
+        "channels": [
+          {
+            "type_label": "Digital App Transfer",
+            "name": "SAB Online Mobile Remit",
+            "fee": 10.0,
+            "rate": 25.26
+          },
+          {
+            "type_label": "Branch Exchange Fee",
+            "name": "SAB Branch TT Counter",
+            "fee": 15.0,
+            "rate": 25.2
+          }
+        ]
+      },
+      {
+        "id": "saib-easypay",
+        "name": "SAIB EasyPay (Saudi Investment Bank)",
+        "name_ml": "എസ്.എ.ഐ.ബി ഈസിപേ (SAIB EasyPay)",
+        "type": "bank",
+        "rate": 25.25,
+        "fee_sar": 15.0,
+        "updated_date": "20 Nov 2026",
+        "is_best_rate": false,
+        "tag": "SAIB Remit Card",
+        "tag_ml": "എസ്.എ.ഐ.ബി കാർഡ് ട്രാൻസ്ഫർ",
+        "brand_color": "#174873",
+        "app_url": "https://www.saib.com.sa",
+        "channels": [
+          {
+            "type_label": "Digital App Transfer",
+            "name": "EasyPay Digital App",
+            "fee": 10.0,
+            "rate": 25.25
+          },
+          {
+            "type_label": "Branch Exchange Fee",
+            "name": "SAIB Branch Counter",
+            "fee": 15.0,
+            "rate": 25.2
+          }
+        ]
+      },
+      {
         "id": "quickpay",
-        "name": "QuickPay",
-        "name_ml": "ക്വിക്ക്പേ (QuickPay - SNB)",
+        "name": "SNB QuickPay",
+        "name_ml": "എസ്.എൻ.ബി ക്വിക്ക്പേ (SNB QuickPay)",
         "type": "bank",
         "rate": 25.24,
         "fee_sar": 15.35,
@@ -185,6 +397,34 @@ window.DAILY_DESK_DATA = {
             "name": "QuickPay Digital Express",
             "fee": 10,
             "rate": 25.24
+          }
+        ]
+      },
+      {
+        "id": "bsf-bank",
+        "name": "Banque Saudi Fransi (BSF)",
+        "name_ml": "ബാങ്ക് സൗദി ഫ്രാൻസി (BSF Fransi Remit)",
+        "type": "bank",
+        "rate": 25.22,
+        "fee_sar": 16.0,
+        "updated_date": "20 Nov 2026",
+        "is_best_rate": false,
+        "tag": "Fransi Remittance",
+        "tag_ml": "ഫ്രാൻസി റീമിറ്റൻസ്",
+        "brand_color": "#004b87",
+        "app_url": "https://www.alfransi.com.sa",
+        "channels": [
+          {
+            "type_label": "Digital App Transfer",
+            "name": "FransiMobile App",
+            "fee": 10.0,
+            "rate": 25.22
+          },
+          {
+            "type_label": "Branch Exchange Fee",
+            "name": "BSF Branch Remittance",
+            "fee": 16.0,
+            "rate": 25.18
           }
         ]
       },
@@ -217,6 +457,50 @@ window.DAILY_DESK_DATA = {
         ]
       },
       {
+        "id": "meem-gib",
+        "name": "meem Bank (GIB)",
+        "name_ml": "മീം ബാങ്ക് (meem Digital Banking - GIB)",
+        "type": "wallet",
+        "rate": 25.18,
+        "fee_sar": 10.0,
+        "updated_date": "20 Nov 2026",
+        "is_best_rate": false,
+        "tag": "Digital Bank",
+        "tag_ml": "ഡിജിറ്റൽ ബാങ്കിംഗ്",
+        "brand_color": "#e30613",
+        "app_url": "https://www.meem.com",
+        "channels": [
+          {
+            "type_label": "Digital App Transfer",
+            "name": "meem Mobile Remit",
+            "fee": 10.0,
+            "rate": 25.18
+          }
+        ]
+      },
+      {
+        "id": "tweeq-wallet",
+        "name": "Tweeq Wallet",
+        "name_ml": "ത്വീഖ് ഡിജിറ്റൽ വാലറ്റ് (Tweeq Wallet)",
+        "type": "wallet",
+        "rate": 25.15,
+        "fee_sar": 0.0,
+        "updated_date": "20 Nov 2026",
+        "is_best_rate": false,
+        "tag": "Zero Fee Promotion",
+        "tag_ml": "സീറോ ഫീസ് പ്രമോഷൻ",
+        "brand_color": "#6c2ebd",
+        "app_url": "https://tweeq.sa",
+        "channels": [
+          {
+            "type_label": "Online Exchange Fee",
+            "name": "Tweeq Digital Wallet Transfer",
+            "fee": 0.0,
+            "rate": 25.15
+          }
+        ]
+      },
+      {
         "id": "riyad-wu",
         "name": "Riyad Bank_Western Union",
         "name_ml": "റിയാദ് ബാങ്ക് വെസ്റ്റേൺ യൂണിയൻ",
@@ -241,6 +525,28 @@ window.DAILY_DESK_DATA = {
             "name": "Western Union Counter Cash",
             "fee": 15,
             "rate": 25.12
+          }
+        ]
+      },
+      {
+        "id": "careem-pay",
+        "name": "Careem Pay KSA",
+        "name_ml": "കരീം പേ (Careem Pay KSA)",
+        "type": "wallet",
+        "rate": 25.1,
+        "fee_sar": 0.0,
+        "updated_date": "20 Nov 2026",
+        "is_best_rate": false,
+        "tag": "In-App Remit",
+        "tag_ml": "ഇൻ-ആപ്പ് റീമിറ്റ്",
+        "brand_color": "#00e785",
+        "app_url": "https://www.careem.com/en-sa/careempay/",
+        "channels": [
+          {
+            "type_label": "Online Exchange Fee",
+            "name": "Careem Pay Direct to India",
+            "fee": 0.0,
+            "rate": 25.1
           }
         ]
       },
@@ -340,8 +646,8 @@ window.DAILY_DESK_DATA = {
       },
       {
         "id": "stcpay",
-        "name": "stcpay",
-        "name_ml": "എസ്ടിസി പേ (stc pay)",
+        "name": "stc pay (STC Bank)",
+        "name_ml": "എസ്ടിസി പേ (stc pay - STC Bank)",
         "type": "wallet",
         "rate": 24.89,
         "fee_sar": 15,
@@ -391,34 +697,6 @@ window.DAILY_DESK_DATA = {
             "name": "India Account Credit",
             "fee": 10,
             "rate": 24.89
-          }
-        ]
-      },
-      {
-        "id": "urpay",
-        "name": "urpay",
-        "name_ml": "യൂർപേ (urpay - Alinma Bank)",
-        "type": "wallet",
-        "rate": 25.48,
-        "fee_sar": 0,
-        "updated_date": "20 Nov 2026",
-        "is_best_rate": false,
-        "tag": "Zero Fee Wallet ⚡",
-        "tag_ml": "ഫ്രീ ഡിജിറ്റൽ ട്രാൻസ്ഫർ ⚡",
-        "brand_color": "#009688",
-        "app_url": "https://www.urpay.com.sa/",
-        "channels": [
-          {
-            "type_label": "Online Exchange Fee",
-            "name": "urpay India Digital Remit",
-            "fee": 0,
-            "rate": 24.88
-          },
-          {
-            "type_label": "Express Direct Remittance",
-            "name": "urpay Express Transfer",
-            "fee": 13,
-            "rate": 24.88
           }
         ]
       },
