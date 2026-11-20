@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="60%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <linearGradient id="duneGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b45309"/>
+      <stop offset="50%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="sunGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="800" height="500" fill="url(#skyGrad)"/>
+
+  <!-- Sun -->
+  <circle cx="650" cy="120" r="60" fill="url(#sunGrad)" opacity="0.9"/>
+  <circle cx="650" cy="120" r="90" fill="url(#sunGrad)" opacity="0.15"/>
+
+  <!-- Distant Mountains -->
+  <polygon points="50,340 180,220 320,340" fill="#1e293b" opacity="0.8"/>
+  <polygon points="260,340 420,180 580,340" fill="#334155" opacity="0.9"/>
+  <polygon points="520,340 680,210 820,340" fill="#1e293b" opacity="0.8"/>
+
+  <!-- Sand Dunes -->
+  <path d="M-50,380 Q150,280 400,350 T850,330 L850,500 L-50,500 Z" fill="url(#duneGrad)" opacity="0.9"/>
+  <path d="M-50,420 Q250,340 550,420 T850,390 L850,500 L-50,500 Z" fill="#92400e"/>
+
+  <!-- Palm Trees Silhouette -->
+  <g transform="translate(140, 310) scale(0.6)" fill="#0f172a">
+    <!-- Trunk -->
+    <path d="M45,150 Q48,70 52,0 Q56,70 59,150 Z"/>
+    <!-- Fronds -->
+    <path d="M52,0 Q20,-30 -30,-20 Q10,-10 52,0"/>
+    <path d="M52,0 Q-10,-50 -40,-70 Q10,-40 52,0"/>
+    <path d="M52,0 Q30,-70 50,-90 Q60,-40 52,0"/>
+    <path d="M52,0 Q90,-70 140,-50 Q80,-30 52,0"/>
+    <path d="M52,0 Q100,-30 130,-10 Q80,-5 52,0"/>
+  </g>
+
+  <!-- Compass / Pin Icon Badge -->
+  <circle cx="400" cy="200" r="48" fill="#0f172a" stroke="#f59e0b" stroke-width="3" opacity="0.95"/>
+  <path d="M400,165 L412,195 L400,235 L388,195 Z" fill="#ef4444"/>
+  <path d="M400,235 L412,195 L400,195 Z" fill="#94a3b8"/>
+  <circle cx="400" cy="195" r="5" fill="#f8fafc"/>
+
+  <!-- Text -->
+  <text x="400" y="275" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" fill="#f8fafc" text-anchor="middle">സൗദി വിനോദസഞ്ചാര കേന്ദ്രങ്ങൾ</text>
+  <text x="400" y="305" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#94a3b8" text-anchor="middle">Saudi Tourist Places &amp; Hidden Spots</text>
+</svg>

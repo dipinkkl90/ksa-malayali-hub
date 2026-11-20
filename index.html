@@ -353,7 +353,12 @@
         <button type="button" id="view-library-btn" class="view-btn" role="tab" aria-selected="false">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
           <span data-i18n="viewLibrary">E-Library</span>
-          <span class="view-tab-pill gold" id="library-tab-badge">13</span>
+          <span class="view-tab-pill gold" id="library-tab-badge">42</span>
+        </button>
+        <button type="button" id="view-tourism-btn" class="view-btn" role="tab" aria-selected="false">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+          <span data-i18n="viewTourism">സഞ്ചാരം &amp; ഹിഡൻ സ്പോട്ട്</span>
+          <span class="view-tab-pill emerald" id="tourism-tab-badge">25</span>
         </button>
         <button type="button" id="view-daily-btn" class="view-btn" role="tab" aria-selected="false">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
@@ -756,6 +761,57 @@
         </div>
       </div>
     </div>
+
+    <!-- Dedicated Saudi Tourist Places & Hidden Spots Section -->
+    <section id="tourism-section" class="tourism-section" style="display:none;" aria-label="Saudi Tourist Places and Hidden Spots">
+      <div class="tourism-hero-strip">
+        <div class="tourism-badge">
+          <span class="pulse-dot-green" aria-hidden="true"></span>
+          <span data-i18n="tourismLiveBadge">🇸🇦 സൗദി വിനോദസഞ്ചാര കേന്ദ്രങ്ങൾ · TOURIST PLACES &amp; HIDDEN GEMS</span>
+        </div>
+        <h2 class="tourism-title" data-i18n="tourismHeroTitle">സൗദിയിലെ ഒളിഞ്ഞിരിക്കുന്ന മനോഹര സ്ഥലങ്ങളും വിനോദസഞ്ചാര കേന്ദ്രങ്ങളും</h2>
+        <p class="tourism-desc" data-i18n="tourismHeroDesc">പ്രവാസികൾക്ക് കുടുംബസമേതവും ബാച്ചിലേഴ്‌സ് കൂട്ടായ്മകൾക്കും വാരാന്ത്യങ്ങളിൽ സന്ദർശിക്കാൻ പറ്റിയ 25-ലധികം വിസ്മയ കേന്ദ്രങ്ങൾ, ഹിഡൻ സ്പോട്ടുകൾ, യുനെസ്കോ പൈതൃക നഗരങ്ങൾ, ഗൂഗിൾ മാപ്പ് നാവിഗേഷൻ സഹിതം.</p>
+
+        <!-- Tourism Toolbar -->
+        <div class="tourism-toolbar">
+          <div class="tourism-search-box">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="tourism-search-input" placeholder="സ്ഥലത്തിന്റെ പേരോ പ്രവിശ്യയോ തിരയുക (Search Spot or Province)..." aria-label="Search Saudi Tourist Spots">
+          </div>
+
+          <!-- Region Filters -->
+          <div class="tourism-filter-group">
+            <span class="tourism-filter-label">📍 പ്രവിശ്യ തിരിക്കുക (Filter by Region):</span>
+            <div class="tourism-region-tabs" id="tourism-region-tabs" role="tablist">
+              <button type="button" class="tourism-tab-btn active" data-region="all">എല്ലാ പ്രവിശ്യകളും (All 25)</button>
+              <button type="button" class="tourism-tab-btn" data-region="riyadh">📍 റിയാദ് (Riyadh 5)</button>
+              <button type="button" class="tourism-tab-btn" data-region="jeddah_makkah">📍 ജിദ്ദ &amp; മക്ക &amp; തായിഫ് (5)</button>
+              <button type="button" class="tourism-tab-btn" data-region="eastern">📍 കിഴക്കൻ പ്രവിശ്യ (5)</button>
+              <button type="button" class="tourism-tab-btn" data-region="asir_south">📍 അസീർ &amp; സൗത്ത് (5)</button>
+              <button type="button" class="tourism-tab-btn" data-region="tabuk_alula">📍 തബൂക്ക് &amp; അൽ ഉല (5)</button>
+            </div>
+          </div>
+
+          <!-- Category / Type Filters -->
+          <div class="tourism-filter-group">
+            <span class="tourism-filter-label">🏷️ വിഭാഗം തിരിക്കുക (Filter by Type):</span>
+            <div class="tourism-category-tabs" id="tourism-category-tabs" role="tablist">
+              <button type="button" class="tourism-cat-btn active" data-cat="all">എല്ലാം (All)</button>
+              <button type="button" class="tourism-cat-btn" data-cat="hidden_gem">💎 ഒളിഞ്ഞിരിക്കുന്ന സ്ഥലങ്ങൾ (Hidden Gems 11)</button>
+              <button type="button" class="tourism-cat-btn" data-cat="heritage">🏛️ ചരിത്ര പൈതൃകം (UNESCO 5)</button>
+              <button type="button" class="tourism-cat-btn" data-cat="nature">🌴 പ്രകൃതി &amp; മരുപ്പച്ച (4)</button>
+              <button type="button" class="tourism-cat-btn" data-cat="adventure">⛰️ മലനിരകൾ &amp; സാഹസികത (3)</button>
+              <button type="button" class="tourism-cat-btn" data-cat="beach">🌊 ബീച്ചുകൾ &amp; ദ്വീപുകൾ (2)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tourism Places Cards Grid -->
+      <div id="tourism-places-grid" class="tourism-places-grid">
+        <!-- Dynamically rendered from window.SAUDI_TOURISM_DATA -->
+      </div>
+    </section>
 
     <!-- Pravasi Daily Live Desk (SAR to INR, Gold Rates, Saudi Visa/Labour, Kerala News) -->
     <section id="daily-desk-section" class="daily-desk-section" style="display:none;" aria-label="Pravasi Daily Live Desk">
@@ -1464,13 +1520,14 @@
 
   <!-- Scripts -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin="" defer></script>
-  <script src="./js/data.js?v=20261120_v14"></script>
-  <script src="./js/hypermarkets_data.js?v=20261120_v14"></script>
-  <script src="./js/cinemas_data.js?v=20261120_v14"></script>
-  <script src="./js/library_data.js?v=20261120_v14"></script>
-  <script src="./js/daily_desk_data.js?v=20261120_v14"></script>
-  <script src="./js/i18n.js?v=20261120_v14"></script>
-  <script src="./js/app.js?v=20261120_v14"></script>
+  <script src="./js/data.js?v=20261120_v15"></script>
+  <script src="./js/hypermarkets_data.js?v=20261120_v15"></script>
+  <script src="./js/cinemas_data.js?v=20261120_v15"></script>
+  <script src="./js/library_data.js?v=20261120_v15"></script>
+  <script src="./js/tourism_data.js?v=20261120_v15"></script>
+  <script src="./js/daily_desk_data.js?v=20261120_v15"></script>
+  <script src="./js/i18n.js?v=20261120_v15"></script>
+  <script src="./js/app.js?v=20261120_v15"></script>
 
   <!-- ClicFlyer-Style Interactive Digital Flyer Booklet Modal -->
   <div id="clicFlyerModal" class="clic-modal" aria-hidden="true" role="dialog" aria-label="Digital Flyer Booklet">

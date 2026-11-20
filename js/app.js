@@ -1890,6 +1890,179 @@
   };
 
   // ==========================================================================
+  // Saudi Tourist Places & Hidden Spots Showcase
+  // ==========================================================================
+  let activeTourismRegion = "all";
+  let activeTourismCategory = "all";
+  let tourismSearchQuery = "";
+
+  function setupTourismListeners() {
+    const searchInput = $("tourism-search-input");
+    if (searchInput && !searchInput.hasAttribute("data-listener")) {
+      searchInput.setAttribute("data-listener", "true");
+      searchInput.addEventListener("input", (e) => {
+        tourismSearchQuery = e.target.value.trim().toLowerCase();
+        renderTourism();
+      });
+    }
+
+    const regionTabs = $("tourism-region-tabs");
+    if (regionTabs && !regionTabs.hasAttribute("data-listener")) {
+      regionTabs.setAttribute("data-listener", "true");
+      regionTabs.addEventListener("click", (e) => {
+        const btn = e.target.closest(".tourism-tab-btn");
+        if (!btn) return;
+        regionTabs.querySelectorAll(".tourism-tab-btn").forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        activeTourismRegion = btn.dataset.region || "all";
+        renderTourism();
+      });
+    }
+
+    const catTabs = $("tourism-category-tabs");
+    if (catTabs && !catTabs.hasAttribute("data-listener")) {
+      catTabs.setAttribute("data-listener", "true");
+      catTabs.addEventListener("click", (e) => {
+        const btn = e.target.closest(".tourism-cat-btn");
+        if (!btn) return;
+        catTabs.querySelectorAll(".tourism-cat-btn").forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        activeTourismCategory = btn.dataset.cat || "all";
+        renderTourism();
+      });
+    }
+  }
+
+  function renderTourism() {
+    const grid = $("tourism-places-grid");
+    if (!grid) return;
+    setupTourismListeners();
+
+    let spots = window.SAUDI_TOURISM_DATA || [];
+
+    // Filter by Region
+    if (activeTourismRegion !== "all") {
+      spots = spots.filter((s) => s.region === activeTourismRegion);
+    }
+
+    // Filter by Category
+    if (activeTourismCategory !== "all") {
+      spots = spots.filter((s) => s.category === activeTourismCategory);
+    }
+
+    // Filter by Search
+    if (tourismSearchQuery) {
+      spots = spots.filter((s) => {
+        const nMl = (s.name_ml || "").toLowerCase();
+        const nEn = (s.name_en || "").toLowerCase();
+        const rMl = (s.region_label_ml || "").toLowerCase();
+        const rEn = (s.region_label_en || "").toLowerCase();
+        const dMl = (s.description_ml || "").toLowerCase();
+        const dist = (s.distance || "").toLowerCase();
+        return nMl.includes(tourismSearchQuery) || nEn.includes(tourismSearchQuery) ||
+               rMl.includes(tourismSearchQuery) || rEn.includes(tourismSearchQuery) ||
+               dMl.includes(tourismSearchQuery) || dist.includes(tourismSearchQuery);
+      });
+    }
+
+    if (!spots.length) {
+      grid.innerHTML = `
+        <div class="empty-state" style="grid-column: 1 / -1;">
+          <div class="empty-icon">🧭</div>
+          <h3>സ്ഥലങ്ങൾ കണ്ടെത്തിയില്ല</h3>
+          <p>ദയവായി വേറൊരു പേര് തിരയുകയോ ഫിൽട്ടറുകൾ മാറ്റി നൽകുകയോ ചെയ്യുക.</p>
+        </div>
+      `;
+      return;
+    }
+
+    grid.innerHTML = spots
+      .map((s) => {
+        const tagsHtml = (s.suitable_for || [])
+          .map((tag) => `<span class="tourism-chip">${escapeHtml(tag)}</span>`)
+          .join("");
+
+        const highlightsHtml = (s.highlights_ml || [])
+          .map((h) => `<li>${escapeHtml(h)}</li>`)
+          .join("");
+
+        const isHidden = s.category === "hidden_gem";
+        const catBadgeClass = isHidden ? "badge-gem" : "badge-standard";
+
+        return `
+          <article class="tourism-card">
+            <div class="tourism-card-media">
+              <img src="${escapeHtml(s.image)}" alt="${escapeHtml(s.name_en)}" loading="lazy" class="tourism-card-img" onerror="this.onerror=null; this.src='./assets/tourism_fallback.svg';">
+              <div class="tourism-media-overlay"></div>
+              <div class="tourism-badge-row">
+                <span class="tourism-badge-cat ${catBadgeClass}">${escapeHtml(s.category_label_ml)}</span>
+                <span class="tourism-badge-region">${escapeHtml(s.region_label_ml)}</span>
+              </div>
+            </div>
+
+            <div class="tourism-card-body">
+              <div class="tourism-card-head">
+                <h3 class="tourism-spot-title">${escapeHtml(s.name_ml)}</h3>
+                <span class="tourism-spot-sub">${escapeHtml(s.name_en)}</span>
+              </div>
+
+              <div class="tourism-meta-grid">
+                <div class="tourism-meta-item" title="Distance from major city">
+                  <span class="meta-icon">🚗</span>
+                  <span class="meta-text">${escapeHtml(s.distance)}</span>
+                </div>
+                <div class="tourism-meta-item" title="Best time to visit">
+                  <span class="meta-icon">🕒</span>
+                  <span class="meta-text">${escapeHtml(s.best_time)}</span>
+                </div>
+                <div class="tourism-meta-item" title="Entry fee or free">
+                  <span class="meta-icon">🎟️</span>
+                  <span class="meta-text">${escapeHtml(s.entry_fee)}</span>
+                </div>
+              </div>
+
+              <div class="tourism-chips-row">
+                ${tagsHtml}
+              </div>
+
+              <p class="tourism-spot-desc">${escapeHtml(s.description_ml)}</p>
+
+              ${highlightsHtml ? `
+                <div class="tourism-highlights-box">
+                  <div class="box-title">🌟 പ്രധാന സവിശേഷതകൾ (Highlights):</div>
+                  <ul class="highlights-list">
+                    ${highlightsHtml}
+                  </ul>
+                </div>
+              ` : ""}
+
+              ${s.tips_ml ? `
+                <div class="tourism-tips-box">
+                  <span class="tips-icon">💡</span>
+                  <div class="tips-content">
+                    <strong>പ്രവാസി യാത്രാ നിർദ്ദേശം (Travel Tips):</strong> ${escapeHtml(s.tips_ml)}
+                  </div>
+                </div>
+              ` : ""}
+
+              <div class="tourism-actions-row">
+                <a href="${escapeHtml(s.map_url)}" target="_blank" rel="noopener noreferrer" class="tourism-map-btn" title="Open Google Maps GPS Navigation">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+                    <line x1="8" y1="2" x2="8" y2="18"></line>
+                    <line x1="16" y1="6" x2="16" y2="22"></line>
+                  </svg>
+                  <span>📍 ഗൂഗിൾ മാപ്പ് നാവിഗേഷൻ (Open Google Maps)</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        `;
+      })
+      .join("");
+  }
+
+  // ==========================================================================
   // Pravasi Daily Live Desk (Remittance, Gold, Saudi Visa/Labour, Kerala News)
   // ==========================================================================
   let dailyNewsCategory = "all";
@@ -2336,6 +2509,7 @@
       ["hypers", "view-hypers-btn"],
       ["cinemas", "view-cinemas-btn"],
       ["library", "view-library-btn"],
+      ["tourism", "view-tourism-btn"],
       ["daily", "view-daily-btn"],
       ["reviews", "view-reviews-btn"],
       ["suggestions", "view-sugg-btn"],
@@ -2588,6 +2762,10 @@
       $("results-count").textContent = state.city
         ? t("cinemaCountText", { shown: cinemaList.length, total: scopedAll, city: tCity(state.city) })
         : t("cinemaCountAll", { shown: cinemaList.length });
+    } else if (state.view === "tourism") {
+      $("results-count").textContent = state.lang === "ml"
+        ? "സൗദി സഞ്ചാരം & ഒളിഞ്ഞിരിക്കുന്ന വിസ്മയ കേന്ദ്രങ്ങൾ (25 ലൊക്കേഷനുകൾ)"
+        : "Saudi Tourist Places & Hidden Spots (25 Locations)";
     } else if (state.view === "daily") {
       $("results-count").textContent = state.lang === "ml"
         ? "പ്രവാസി ലൈവ് ഡെസ്ക് · റിയാൽ നിരക്കുകൾ, സ്വർണ്ണവില, വിസ & വാർത്തകൾ"
@@ -2615,7 +2793,9 @@
     mapEl.classList.toggle("active", state.view === "map");
     if (hypersEl) hypersEl.classList.toggle("active", state.view === "hypers");
     if (cinemasEl) cinemasEl.classList.toggle("active", state.view === "cinemas");
+    const tourismEl = $("tourism-section");
     if (libraryEl) libraryEl.style.display = state.view === "library" ? "block" : "none";
+    if (tourismEl) tourismEl.style.display = state.view === "tourism" ? "block" : "none";
     if (dailyEl) dailyEl.style.display = state.view === "daily" ? "block" : "none";
     if (revEl) revEl.classList.toggle("active", state.view === "reviews");
     if (suggEl) suggEl.classList.toggle("active", state.view === "suggestions");
@@ -2630,6 +2810,8 @@
       renderCinemas();
     } else if (state.view === "library") {
       renderLibrary();
+    } else if (state.view === "tourism") {
+      renderTourism();
     } else if (state.view === "daily") {
       renderDailyDesk();
     }
@@ -3271,6 +3453,9 @@
     }
     if ($("view-library-btn")) {
       $("view-library-btn").addEventListener("click", () => setView("library", false));
+    }
+    if ($("view-tourism-btn")) {
+      $("view-tourism-btn").addEventListener("click", () => setView("tourism", false));
     }
     if ($("view-daily-btn")) {
       $("view-daily-btn").addEventListener("click", () => setView("daily", false));
