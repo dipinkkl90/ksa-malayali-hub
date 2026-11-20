@@ -1650,6 +1650,246 @@
   }
 
   // ==========================================================================
+  // Malayalam Pravasi E-Library & Digital Reader
+  // ==========================================================================
+  let activeLibraryCategory = "all";
+  let librarySearchQuery = "";
+  let readerCurrentFontSize = 18;
+  let readerCurrentTheme = "sepia"; // 'sepia', 'night', 'white'
+
+  function setupLibraryListeners() {
+    const searchInput = $("library-search-input");
+    if (searchInput && !searchInput.hasAttribute("data-listener")) {
+      searchInput.setAttribute("data-listener", "true");
+      searchInput.addEventListener("input", (e) => {
+        librarySearchQuery = e.target.value.trim().toLowerCase();
+        renderLibrary();
+      });
+    }
+
+    const tabsContainer = $("library-category-tabs");
+    if (tabsContainer && !tabsContainer.hasAttribute("data-listener")) {
+      tabsContainer.setAttribute("data-listener", "true");
+      tabsContainer.addEventListener("click", (e) => {
+        const btn = e.target.closest(".library-tab-btn");
+        if (!btn) return;
+        tabsContainer.querySelectorAll(".library-tab-btn").forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        activeLibraryCategory = btn.dataset.category || "all";
+        renderLibrary();
+      });
+    }
+
+    // Reader Modal Controls
+    const closeBtn = $("reader-close-btn");
+    if (closeBtn && !closeBtn.hasAttribute("data-listener")) {
+      closeBtn.setAttribute("data-listener", "true");
+      closeBtn.addEventListener("click", closeBookReader);
+    }
+
+    const modalEl = $("book-reader-modal");
+    if (modalEl && !modalEl.hasAttribute("data-listener")) {
+      modalEl.setAttribute("data-listener", "true");
+      modalEl.addEventListener("click", (e) => {
+        if (e.target === modalEl) closeBookReader();
+      });
+    }
+
+    const fontDec = $("reader-font-dec");
+    if (fontDec && !fontDec.hasAttribute("data-listener")) {
+      fontDec.setAttribute("data-listener", "true");
+      fontDec.addEventListener("click", () => {
+        readerCurrentFontSize = Math.max(14, readerCurrentFontSize - 2);
+        const bodyEl = $("reader-content-body");
+        if (bodyEl) bodyEl.style.fontSize = `${readerCurrentFontSize}px`;
+      });
+    }
+
+    const fontInc = $("reader-font-inc");
+    if (fontInc && !fontInc.hasAttribute("data-listener")) {
+      fontInc.setAttribute("data-listener", "true");
+      fontInc.addEventListener("click", () => {
+        readerCurrentFontSize = Math.min(26, readerCurrentFontSize + 2);
+        const bodyEl = $("reader-content-body");
+        if (bodyEl) bodyEl.style.fontSize = `${readerCurrentFontSize}px`;
+      });
+    }
+
+    const themeBtn = $("reader-theme-toggle");
+    if (themeBtn && !themeBtn.hasAttribute("data-listener")) {
+      themeBtn.setAttribute("data-listener", "true");
+      themeBtn.addEventListener("click", () => {
+        const box = $("book-reader-box");
+        if (!box) return;
+        if (readerCurrentTheme === "sepia") {
+          readerCurrentTheme = "night";
+          box.className = "book-reader-box theme-night";
+        } else if (readerCurrentTheme === "night") {
+          readerCurrentTheme = "white";
+          box.className = "book-reader-box theme-white";
+        } else {
+          readerCurrentTheme = "sepia";
+          box.className = "book-reader-box theme-sepia";
+        }
+      });
+    }
+
+    const printBtn = $("reader-print-btn");
+    if (printBtn && !printBtn.hasAttribute("data-listener")) {
+      printBtn.setAttribute("data-listener", "true");
+      printBtn.addEventListener("click", () => {
+        window.print();
+      });
+    }
+  }
+
+  function renderLibrary() {
+    const grid = $("library-books-grid");
+    if (!grid) return;
+    setupLibraryListeners();
+
+    let books = window.MALAYALAM_LIBRARY_DATA || [];
+
+    // Filter by Category
+    if (activeLibraryCategory !== "all") {
+      books = books.filter((b) => b.category === activeLibraryCategory);
+    }
+
+    // Filter by Search Query
+    if (librarySearchQuery) {
+      books = books.filter((b) => {
+        const tMl = (b.title || "").toLowerCase();
+        const tEn = (b.title_en || "").toLowerCase();
+        const aMl = (b.author || "").toLowerCase();
+        const aEn = (b.author_en || "").toLowerCase();
+        return tMl.includes(librarySearchQuery) || tEn.includes(librarySearchQuery) || aMl.includes(librarySearchQuery) || aEn.includes(librarySearchQuery);
+      });
+    }
+
+    if (!books.length) {
+      grid.innerHTML = `
+        <div class="empty-state" style="grid-column: 1 / -1;">
+          <div class="empty-icon">📚</div>
+          <h3>പുസ്തകങ്ങൾ കണ്ടെത്തിയില്ല</h3>
+          <p>ദയവായി വേറൊരു പേര് തിരയുകയോ 'All' കാറ്റഗറി ക്ലിക്ക് ചെയ്യുകയോ ചെയ്യുക.</p>
+        </div>
+      `;
+      return;
+    }
+
+    grid.innerHTML = books
+      .map((b) => {
+        return `
+          <article class="book-card">
+            <div class="book-cover-banner" style="background: linear-gradient(135deg, ${b.theme_color}cc, #0f172a);">
+              <div class="book-cover-top">
+                <span class="book-cat-pill">${escapeHtml(b.category_label)}</span>
+                <span class="book-icon-badge">${b.icon || "📖"}</span>
+              </div>
+              <div class="book-cover-title-group">
+                <h3>${escapeHtml(b.title)}</h3>
+                <span class="book-title-en">${escapeHtml(b.title_en)} · ${b.year}</span>
+              </div>
+            </div>
+
+            <div class="book-card-body">
+              <div class="book-author-meta">
+                <span>✍️ ${escapeHtml(b.author)}</span>
+              </div>
+              <div class="book-stats-row">
+                <span>⭐ ${b.rating.toFixed(1)}</span>
+                <span>📄 ${b.pages} പേജുകൾ</span>
+                <span>🔖 ${b.chapters_count || 1} ഭാഗങ്ങൾ</span>
+              </div>
+              <p class="book-summary-text">
+                ${escapeHtml(b.summary)}
+              </p>
+              <div class="book-actions-row">
+                <button type="button" class="book-read-btn" onclick="window.openBookReader('${b.id}')">
+                  <span>📖 വായിക്കുക</span>
+                </button>
+                <button type="button" class="book-pdf-btn" onclick="window.downloadBookPdf('${b.id}')">
+                  <span>📥 PDF / സേവ്</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        `;
+      })
+      .join("");
+  }
+
+  window.openBookReader = function(bookId) {
+    const books = window.MALAYALAM_LIBRARY_DATA || [];
+    const book = books.find((b) => b.id === bookId);
+    if (!book) return;
+
+    if ($("reader-book-title")) $("reader-book-title").textContent = book.title;
+    if ($("reader-book-author")) $("reader-book-author").textContent = `${book.author} · ${book.category_label} (${book.year})`;
+    
+    const bodyEl = $("reader-content-body");
+    if (bodyEl) {
+      bodyEl.style.fontSize = `${readerCurrentFontSize}px`;
+      bodyEl.textContent = book.full_content || book.summary;
+      bodyEl.scrollTop = 0;
+    }
+
+    const modal = $("book-reader-modal");
+    if (modal) {
+      modal.style.display = "flex";
+      document.body.style.overflow = "hidden";
+    }
+  };
+
+  function closeBookReader() {
+    const modal = $("book-reader-modal");
+    if (modal) {
+      modal.style.display = "none";
+      document.body.style.overflow = "";
+    }
+  }
+
+  window.downloadBookPdf = function(bookId) {
+    const books = window.MALAYALAM_LIBRARY_DATA || [];
+    const book = books.find((b) => b.id === bookId);
+    if (!book) return;
+
+    const printableWindow = window.open("", "_blank");
+    if (!printableWindow) {
+      showToast("പോപ്പ്-അപ്പ് അനുവദിക്കുക (Please allow pop-ups to read PDF)", "info");
+      return;
+    }
+
+    printableWindow.document.write(`
+      <!DOCTYPE html>
+      <html lang="ml">
+      <head>
+        <meta charset="utf-8">
+        <title>${book.title} - ${book.author} | KSA Malayali Hub</title>
+        <style>
+          body { font-family: 'Noto Sans Malayalam', sans-serif, serif; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.9; color: #111827; }
+          h1 { color: #854d0e; border-bottom: 2px solid #ca8a04; padding-bottom: 8px; margin-bottom: 4px; }
+          .meta { color: #6b7280; font-size: 0.95rem; margin-bottom: 28px; }
+          .content { font-size: 1.15rem; white-space: pre-line; text-align: justify; }
+          .footer { margin-top: 50px; font-size: 0.85rem; color: #9ca3af; border-top: 1px solid #e5e7eb; padding-top: 12px; }
+          @media print { body { margin: 0; padding: 0; } }
+        </style>
+      </head>
+      <body>
+        <h1>${book.title} (${book.title_en})</h1>
+        <div class="meta">എഴുതിയത്: <strong>${book.author}</strong> · ${book.category_label} (${book.year}) · KSA Malayali Hub Digital Library</div>
+        <div class="content">${book.full_content || book.summary}</div>
+        <div class="footer">സൗദി മലയാളി ഹബ് ഡിജിറ്റൽ വായനശാല · https://ksa-malayali-hub.vercel.app</div>
+        <script>
+          setTimeout(() => { window.print(); }, 500);
+        </script>
+      </body>
+      </html>
+    `);
+    printableWindow.document.close();
+  };
+
+  // ==========================================================================
   // Pravasi Daily Live Desk (Remittance, Gold, Saudi Visa/Labour, Kerala News)
   // ==========================================================================
   let dailyNewsCategory = "all";
@@ -2095,6 +2335,7 @@
       ["map", "view-map-btn"],
       ["hypers", "view-hypers-btn"],
       ["cinemas", "view-cinemas-btn"],
+      ["library", "view-library-btn"],
       ["daily", "view-daily-btn"],
       ["reviews", "view-reviews-btn"],
       ["suggestions", "view-sugg-btn"],
@@ -2365,6 +2606,7 @@
     const mapEl = $("map-section");
     const hypersEl = $("hypermarkets-section");
     const cinemasEl = $("cinemas-section");
+    const libraryEl = $("library-section");
     const dailyEl = $("daily-desk-section");
     const revEl = $("reviews-section");
     const suggEl = $("suggestions-section");
@@ -2373,6 +2615,7 @@
     mapEl.classList.toggle("active", state.view === "map");
     if (hypersEl) hypersEl.classList.toggle("active", state.view === "hypers");
     if (cinemasEl) cinemasEl.classList.toggle("active", state.view === "cinemas");
+    if (libraryEl) libraryEl.style.display = state.view === "library" ? "block" : "none";
     if (dailyEl) dailyEl.style.display = state.view === "daily" ? "block" : "none";
     if (revEl) revEl.classList.toggle("active", state.view === "reviews");
     if (suggEl) suggEl.classList.toggle("active", state.view === "suggestions");
@@ -2385,6 +2628,8 @@
       renderHypermarkets();
     } else if (state.view === "cinemas") {
       renderCinemas();
+    } else if (state.view === "library") {
+      renderLibrary();
     } else if (state.view === "daily") {
       renderDailyDesk();
     }
@@ -3024,6 +3269,9 @@
     if ($("view-cinemas-btn")) {
       $("view-cinemas-btn").addEventListener("click", () => setView("cinemas", false));
     }
+    if ($("view-library-btn")) {
+      $("view-library-btn").addEventListener("click", () => setView("library", false));
+    }
     if ($("view-daily-btn")) {
       $("view-daily-btn").addEventListener("click", () => setView("daily", false));
     }
@@ -3038,6 +3286,9 @@
     }
     if ($("hero-view-cinemas")) {
       $("hero-view-cinemas").addEventListener("click", () => setView("cinemas", true));
+    }
+    if ($("hero-view-library")) {
+      $("hero-view-library").addEventListener("click", () => setView("library", true));
     }
     if ($("hero-view-daily")) {
       $("hero-view-daily").addEventListener("click", () => setView("daily", true));

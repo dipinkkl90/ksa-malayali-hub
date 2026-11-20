@@ -170,6 +170,10 @@
             </svg>
             <span data-i18n="heroCinemasBtn">🎬 Movies &amp; OTT</span>
           </button>
+          <button type="button" id="hero-view-library" class="hero-cta-ghost hero-cta-library">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            <span data-i18n="heroLibraryBtn">📚 വായനശാല (E-Library)</span>
+          </button>
           <button type="button" id="hero-view-daily" class="hero-cta-ghost hero-cta-daily">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
             <span data-i18n="heroDailyBtn">💱 SAR Rate, Gold &amp; News</span>
@@ -345,6 +349,11 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line></svg>
           <span data-i18n="viewCinemas">Movies &amp; OTT</span>
           <span class="view-tab-pill gold" id="cinemas-tab-badge">19</span>
+        </button>
+        <button type="button" id="view-library-btn" class="view-btn" role="tab" aria-selected="false">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          <span data-i18n="viewLibrary">E-Library</span>
+          <span class="view-tab-pill gold" id="library-tab-badge">13</span>
         </button>
         <button type="button" id="view-daily-btn" class="view-btn" role="tab" aria-selected="false">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
@@ -691,6 +700,62 @@
       <!-- Cinemas Grid -->
       <div id="cinemas-grid" class="cinemas-grid"></div>
     </section>
+
+    <!-- Dedicated Pravasi Malayalam E-Library & Digital Literature Section -->
+    <section id="library-section" class="library-section" style="display:none;" aria-label="Malayalam Pravasi E-Library">
+      <div class="library-hero-strip">
+        <div class="library-badge">
+          <span class="pulse-dot-green" aria-hidden="true"></span>
+          <span data-i18n="libraryLiveBadge">പ്രവാസി ഡിജിറ്റൽ വായനശാല · MALAYALAM E-LIBRARY</span>
+        </div>
+        <h2 class="library-title" data-i18n="libraryHeroTitle">മലയാളം നോവലുകൾ, കഥകൾ, കവിതകൾ &amp; യാത്രാവിവരണം</h2>
+        <p class="library-desc" data-i18n="libraryHeroDesc">സൗദി പ്രവാസികൾക്കായി പ്രശസ്ത മലയാള സാഹിത്യ ക്ലാസിക്കുകൾ, ബഷീർ കഥകൾ, ആശാൻ കവിതകൾ, യാത്രാവിവരണങ്ങൾ, പ്രവാസി സ്മരണകൾ എന്നിവ ഓൺലൈനായി വായിക്കാനും PDF ആയി ഡൗൺലോഡ് ചെയ്യാനുമുള്ള സൗജന്യ ഡിജിറ്റൽ വായനശാല.</p>
+
+        <!-- Library Toolbar: Search & Category Pills -->
+        <div class="library-toolbar">
+          <div class="library-search-box">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="library-search-input" placeholder="പുസ്തകത്തിന്റെ പേരോ എഴുത്തുകാരനെയോ തിരയുക (Search Book or Author)..." aria-label="Search Malayalam Books">
+          </div>
+          
+          <div class="library-category-tabs" id="library-category-tabs" role="tablist">
+            <button type="button" class="library-tab-btn active" data-category="all">എല്ലാം (All 13)</button>
+            <button type="button" class="library-tab-btn" data-category="novels">📖 നോവലുകൾ (3)</button>
+            <button type="button" class="library-tab-btn" data-category="stories">✍️ ചെറുകഥകൾ (3)</button>
+            <button type="button" class="library-tab-btn" data-category="poetry">📜 കവിതകൾ (3)</button>
+            <button type="button" class="library-tab-btn" data-category="travel">🧭 യാത്രാവിവരണം (2)</button>
+            <button type="button" class="library-tab-btn" data-category="pravasi">🏜️ പ്രവാസി സാഹിത്യം (2)</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Books Grid -->
+      <div class="library-books-grid" id="library-books-grid">
+        <!-- Dynamically rendered from window.MALAYALAM_LIBRARY_DATA -->
+      </div>
+    </section>
+
+    <!-- Modal Digital Book Reader -->
+    <div id="book-reader-modal" class="book-reader-modal" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="reader-book-title">
+      <div class="book-reader-box theme-sepia" id="book-reader-box">
+        <div class="reader-header">
+          <div class="reader-title-group">
+            <h3 id="reader-book-title">ഇന്ദുലേഖ</h3>
+            <p id="reader-book-author">ഒ. ചന്തുമേനോൻ · 1889</p>
+          </div>
+          <div class="reader-controls">
+            <button type="button" class="reader-ctrl-btn" id="reader-font-dec" title="Decrease Font">A-</button>
+            <button type="button" class="reader-ctrl-btn" id="reader-font-inc" title="Increase Font">A+</button>
+            <button type="button" class="reader-ctrl-btn" id="reader-theme-toggle" title="Switch Theme">🎨 തീം</button>
+            <button type="button" class="reader-ctrl-btn" id="reader-print-btn" title="Download / Print PDF">📥 PDF</button>
+            <button type="button" class="reader-close-btn" id="reader-close-btn" aria-label="Close Reader">✕</button>
+          </div>
+        </div>
+        <div class="reader-content-body" id="reader-content-body">
+          <!-- Book content text -->
+        </div>
+      </div>
+    </div>
 
     <!-- Pravasi Daily Live Desk (SAR to INR, Gold Rates, Saudi Visa/Labour, Kerala News) -->
     <section id="daily-desk-section" class="daily-desk-section" style="display:none;" aria-label="Pravasi Daily Live Desk">
@@ -1399,12 +1464,13 @@
 
   <!-- Scripts -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin="" defer></script>
-  <script src="./js/data.js?v=20261120_v13"></script>
-  <script src="./js/hypermarkets_data.js?v=20261120_v13"></script>
-  <script src="./js/cinemas_data.js?v=20261120_v13"></script>
-  <script src="./js/daily_desk_data.js?v=20261120_v13"></script>
-  <script src="./js/i18n.js?v=20261120_v13"></script>
-  <script src="./js/app.js?v=20261120_v13"></script>
+  <script src="./js/data.js?v=20261120_v14"></script>
+  <script src="./js/hypermarkets_data.js?v=20261120_v14"></script>
+  <script src="./js/cinemas_data.js?v=20261120_v14"></script>
+  <script src="./js/library_data.js?v=20261120_v14"></script>
+  <script src="./js/daily_desk_data.js?v=20261120_v14"></script>
+  <script src="./js/i18n.js?v=20261120_v14"></script>
+  <script src="./js/app.js?v=20261120_v14"></script>
 
   <!-- ClicFlyer-Style Interactive Digital Flyer Booklet Modal -->
   <div id="clicFlyerModal" class="clic-modal" aria-hidden="true" role="dialog" aria-label="Digital Flyer Booklet">
