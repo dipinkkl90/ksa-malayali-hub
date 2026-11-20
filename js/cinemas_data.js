@@ -13,8 +13,8 @@ window.CINEMA_DATA = [
     area: "Al Andalus / Tahlia",
     full_address: "Jeddah Park Mall, Prince Mohammed Bin Abdulaziz (Tahlia) St, Jeddah, Saudi Arabia",
     maps_url: "https://www.google.com/maps/search/?api=1&query=VOX%20Cinemas%20Jeddah%20Park",
-    booking_url: "https://ksa.voxcinemas.com/movies/mollywood-times",
-    mollywood_url: "https://ksa.voxcinemas.com/movies/mollywood-times",
+    booking_url: "https://ksa.voxcinemas.com/",
+    mollywood_url: "https://ksa.voxcinemas.com/",
     languages: ["Malayalam", "Tamil", "Hindi", "English", "Arabic"],
     experiences: ["IMAX", "GOLD VIP", "KIDS", "Standard 2D"],
     phone: "+966 12 288 8800",
@@ -31,7 +31,7 @@ window.CINEMA_DATA = [
     full_address: "Town Square, Abdullah Sulayman St, Jeddah, Saudi Arabia",
     maps_url: "https://www.google.com/maps/search/?api=1&query=VOX%20Cinemas%20Town%20Square%20Jeddah",
     booking_url: "https://ksa.voxcinemas.com/",
-    mollywood_url: "https://ksa.voxcinemas.com/movies/mollywood-times",
+    mollywood_url: "https://ksa.voxcinemas.com/",
     languages: ["Malayalam", "Tamil", "Hindi", "English"],
     experiences: ["MAX", "Standard 2D", "Dolby Atmos"],
     phone: "+966 12 288 8800",
@@ -83,8 +83,8 @@ window.CINEMA_DATA = [
     area: "Al Aqiq / Northern Ring",
     full_address: "Riyadh Park, Northern Ring Branch Rd, Al Aqiq, Riyadh, Saudi Arabia",
     maps_url: "https://www.google.com/maps/search/?api=1&query=VOX%20Cinemas%20Riyadh%20Park",
-    booking_url: "https://ksa.voxcinemas.com/movies/mollywood-times",
-    mollywood_url: "https://ksa.voxcinemas.com/movies/mollywood-times",
+    booking_url: "https://ksa.voxcinemas.com/",
+    mollywood_url: "https://ksa.voxcinemas.com/",
     languages: ["Malayalam", "Tamil", "Hindi", "English", "Arabic"],
     experiences: ["IMAX with Laser", "GOLD VIP", "THEATRE", "Standard"],
     phone: "+966 11 288 8800",
@@ -101,7 +101,7 @@ window.CINEMA_DATA = [
     full_address: "Roshn Front, Airport Rd, King Khalid International Airport, Riyadh, Saudi Arabia",
     maps_url: "https://www.google.com/maps/search/?api=1&query=VOX%20Cinemas%20Riyadh%20Front",
     booking_url: "https://ksa.voxcinemas.com/",
-    mollywood_url: "https://ksa.voxcinemas.com/movies/mollywood-times",
+    mollywood_url: "https://ksa.voxcinemas.com/",
     languages: ["Malayalam", "Tamil", "Hindi", "English"],
     experiences: ["MAX", "VIP Lounge", "Standard 2D"],
     phone: "+966 11 288 8800",
@@ -151,8 +151,8 @@ window.CINEMA_DATA = [
     area: "Al Malqa / Al Khair",
     full_address: "Al Khair Rd, Al Malqa District, Riyadh, Saudi Arabia",
     maps_url: "https://www.google.com/maps/search/?api=1&query=AMC%20Cinemas%20Al%20Khair%20Riyadh",
-    booking_url: "https://www.amccinemas.com/",
-    mollywood_url: "https://www.amccinemas.com/",
+    booking_url: "https://www.muvicinemas.com/",
+    mollywood_url: "https://www.muvicinemas.com/",
     languages: ["Malayalam", "Hindi", "Tamil", "English"],
     experiences: ["AMC PRIME", "IMAX", "Luxury Recliner Seating"],
     phone: "+966 11 834 3434",
@@ -170,8 +170,8 @@ window.CINEMA_DATA = [
     area: "Al Faisaliyah",
     full_address: "West Avenue Mall, Omar Ibn Al Khattab St, Al Faisaliyah, Dammam, Saudi Arabia",
     maps_url: "https://www.google.com/maps/search/?api=1&query=VOX%20Cinemas%20West%20Avenue%20Mall%20Dammam",
-    booking_url: "https://ksa.voxcinemas.com/movies/mollywood-times",
-    mollywood_url: "https://ksa.voxcinemas.com/movies/mollywood-times",
+    booking_url: "https://ksa.voxcinemas.com/",
+    mollywood_url: "https://ksa.voxcinemas.com/",
     languages: ["Malayalam", "Tamil", "Hindi", "English", "Arabic"],
     experiences: ["MAX", "Standard 2D", "Kids Cinema"],
     phone: "+966 13 809 4444",
@@ -225,8 +225,8 @@ window.CINEMA_DATA = [
     area: "King Fahd District",
     full_address: "Tabuk Park Mall, King Fahd Rd, Tabuk 47914, Saudi Arabia",
     maps_url: "https://www.google.com/maps/search/?api=1&query=VOX%20Cinemas%20Tabuk%20Park%20Mall",
-    booking_url: "https://ksa.voxcinemas.com/movies/mollywood-times",
-    mollywood_url: "https://ksa.voxcinemas.com/movies/mollywood-times",
+    booking_url: "https://ksa.voxcinemas.com/",
+    mollywood_url: "https://ksa.voxcinemas.com/",
     languages: ["Malayalam", "Tamil", "Hindi", "English", "Arabic"],
     experiences: ["MAX with Laser", "KIDS Cinema", "Standard 2D"],
     phone: "+966 14 429 8800",
@@ -282,8 +282,8 @@ window.CINEMA_DATA = [
     area: "Central / Al Shoqiyah",
     full_address: "Makkah Province, Western Region, Saudi Arabia",
     maps_url: "https://www.google.com/maps/search/?api=1&query=Cinemas%20Makkah%20Saudi%20Arabia",
-    booking_url: "https://ksa.voxcinemas.com/movies/mollywood-times",
-    mollywood_url: "https://ksa.voxcinemas.com/movies/mollywood-times",
+    booking_url: "https://ksa.voxcinemas.com/",
+    mollywood_url: "https://ksa.voxcinemas.com/",
     languages: ["Malayalam", "Hindi", "English", "Arabic"],
     experiences: ["Standard 2D", "MAX"],
     phone: "+966 12 288 8800",
@@ -339,8 +339,8 @@ window.CINEMA_DATA = [
     area: "Town Center",
     full_address: "King Faisal Rd, Al Baha 65522, Saudi Arabia",
     maps_url: "https://www.google.com/maps/search/?api=1&query=Cinemas%20Al%20Baha%20Saudi%20Arabia",
-    booking_url: "https://ksa.voxcinemas.com/movies/mollywood-times",
-    mollywood_url: "https://ksa.voxcinemas.com/movies/mollywood-times",
+    booking_url: "https://ksa.voxcinemas.com/",
+    mollywood_url: "https://ksa.voxcinemas.com/",
     languages: ["Malayalam", "English", "Arabic"],
     experiences: ["Standard 2D"],
     phone: "+966 12 288 8800",
@@ -373,7 +373,7 @@ window.MALL_MOVIES_DATA = [
       "09:00 PM",
       "11:45 PM"
     ],
-    "booking_url": "https://ksa.voxcinemas.com/movies/mollywood-times",
+    "booking_url": "https://ksa.voxcinemas.com/",
     "muvi_url": "https://www.muvicinemas.com/"
   },
   {
@@ -399,7 +399,7 @@ window.MALL_MOVIES_DATA = [
       "09:30 PM",
       "12:15 AM"
     ],
-    "booking_url": "https://ksa.voxcinemas.com/movies/mollywood-times",
+    "booking_url": "https://ksa.voxcinemas.com/",
     "muvi_url": "https://www.muvicinemas.com/"
   },
   {
@@ -425,7 +425,7 @@ window.MALL_MOVIES_DATA = [
       "08:30 PM",
       "11:15 PM"
     ],
-    "booking_url": "https://ksa.voxcinemas.com/movies/mollywood-times",
+    "booking_url": "https://ksa.voxcinemas.com/",
     "muvi_url": "https://www.muvicinemas.com/"
   },
   {
@@ -451,7 +451,7 @@ window.MALL_MOVIES_DATA = [
       "08:15 PM",
       "11:00 PM"
     ],
-    "booking_url": "https://ksa.voxcinemas.com/movies/mollywood-times",
+    "booking_url": "https://ksa.voxcinemas.com/",
     "muvi_url": "https://www.muvicinemas.com/"
   },
   {
@@ -476,7 +476,7 @@ window.MALL_MOVIES_DATA = [
       "06:00 PM",
       "09:15 PM"
     ],
-    "booking_url": "https://ksa.voxcinemas.com/movies/mollywood-times",
+    "booking_url": "https://ksa.voxcinemas.com/",
     "muvi_url": "https://www.muvicinemas.com/"
   },
   {
@@ -501,7 +501,7 @@ window.MALL_MOVIES_DATA = [
       "07:15 PM",
       "10:00 PM"
     ],
-    "booking_url": "https://ksa.voxcinemas.com/movies/mollywood-times",
+    "booking_url": "https://ksa.voxcinemas.com/",
     "muvi_url": "https://www.muvicinemas.com/"
   },
   {
@@ -524,7 +524,7 @@ window.MALL_MOVIES_DATA = [
     "showtimes": [
       "Advance Booking Opening Soon"
     ],
-    "booking_url": "https://ksa.voxcinemas.com/movies/mollywood-times",
+    "booking_url": "https://ksa.voxcinemas.com/",
     "muvi_url": "https://www.muvicinemas.com/"
   },
   {
@@ -547,7 +547,7 @@ window.MALL_MOVIES_DATA = [
     "showtimes": [
       "Advance Booking Opening Soon"
     ],
-    "booking_url": "https://ksa.voxcinemas.com/movies/mollywood-times",
+    "booking_url": "https://ksa.voxcinemas.com/",
     "muvi_url": "https://www.muvicinemas.com/"
   }
 ];
