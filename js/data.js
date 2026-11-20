@@ -34,7 +34,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-holidays-restaurant-jeddah-shara-tawba-al-tawba-1.jpg"
+    "photo": "./assets/restaurants/kerala-restaurant-kerala-hotel-an-nuzhah-1.jpg"
   },
   {
     "restaurant_id": "JED-0002",
@@ -178,7 +178,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": "./assets/restaurants/kerala-restaurant-safa-indian-family-restaurant-al-samer-1.jpg"
   },
   {
     "restaurant_id": "JED-0006",
@@ -214,7 +214,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": "./assets/restaurants/kerala-restaurant-wafa-restaurent-1.jpg"
   },
   {
     "restaurant_id": "JED-0007",
@@ -250,7 +250,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": "./assets/restaurants/leen-kerala-restaurant-1.jpg"
   },
   {
     "restaurant_id": "JED-0008",
@@ -286,7 +286,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": "./assets/restaurants/kerala-restaurant-rahmath-restaurant-sharafiya-al-sharafeyah-1.jpg"
   },
   {
     "restaurant_id": "JED-0009",
@@ -358,7 +358,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-holidays-restaurant-jeddah-shara-tawba-al-tawba-1.jpg"
+    "photo": "./assets/restaurants/kerala-restaurant-kerala-kitchen-al-zahra-1.jpg"
   },
   {
     "restaurant_id": "JED-0011",
@@ -394,7 +394,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": "./assets/restaurants/kerala-restaurant-malabar-ameera-restaurant-al-safa-1.jpg"
   },
   {
     "restaurant_id": "JED-0012",
@@ -430,7 +430,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "https://magicpin.com/saudi-arabia/Jeddah/King-Abdulaziz-Road-Jeddah/Restaurant/Nahdah-Restaurant-For-Kerala-Foods/store/228026b",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": "./assets/restaurants/nahdah-restaurant-for-kerala-foods-an-nahdah-1.jpg"
   },
   {
     "restaurant_id": "JED-0013",
@@ -466,7 +466,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-holidays-restaurant-jeddah-shara-tawba-al-tawba-1.jpg"
+    "photo": "./assets/restaurants/al-aman-restaurant-kerala-hotel-1.jpg"
   },
   {
     "restaurant_id": "JED-0014",
@@ -538,7 +538,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": "./assets/restaurants/kerala-restaurant-kumar-restaurant-ar-rawdah-1.jpg"
   },
   {
     "restaurant_id": "JED-0016",
@@ -574,7 +574,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": "./assets/restaurants/kerala-restaurant-dalal-restaurant-al-muntazahat-1.jpg"
   },
   {
     "restaurant_id": "JED-0017",
@@ -611,7 +611,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": "./assets/restaurants/kerala-restaurant-quality-family-restaurent-1.jpg"
   },
   {
     "restaurant_id": "JED-0018",
@@ -683,7 +683,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-holidays-restaurant-jeddah-shara-tawba-al-tawba-1.jpg"
+    "photo": "./assets/restaurants/kerala-restaurant-hotel-kerala-an-nuzhah-1.jpg"
   },
   {
     "restaurant_id": "JED-0020",
@@ -719,7 +719,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": ""
   },
   {
     "restaurant_id": "JED-0021",
@@ -757,7 +757,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": "./assets/restaurants/kerala-restaurant-dhe-puttu-restaurant-jeddah-1.jpg"
   },
   {
     "restaurant_id": "JED-0022",
@@ -793,7 +793,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": "./assets/restaurants/kerala-restaurant-marhaba-restaurant-as-sarawat-1.jpg"
   },
   {
     "restaurant_id": "JED-0023",
@@ -830,7 +830,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "https://www.tripadvisor.com/Restaurant_Review-g295419-d14042806-Reviews-Koyikodan_Restaurant-Jeddah_Makkah_Province.html",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": "./assets/restaurants/kerala-restaurant-koyikodan-restaurant-1.jpg"
   },
   {
     "restaurant_id": "JED-0024",
@@ -866,7 +866,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": "./assets/restaurants/kerala-restaurant-baraka-indian-restaurant-al-khuyul-1.jpg"
   },
   {
     "restaurant_id": "JED-0025",
@@ -902,7 +902,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-hotel-kerala-an-nuzhah-1.jpg"
+    "photo": ""
   },
   {
     "restaurant_id": "JED-0026",
@@ -938,7 +938,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-holidays-restaurant-jeddah-shara-tawba-al-tawba-1.jpg"
+    "photo": ""
   },
   {
     "restaurant_id": "JED-0027",
@@ -974,7 +974,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": "./assets/restaurants/kerala-restaurant-makkani-restaurant-1.jpg"
   },
   {
     "restaurant_id": "JED-0028",
@@ -1010,7 +1010,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": "./assets/restaurants/mazan-fast-food-kerala-restaurant-saudi-arabia-1.jpg"
   },
   {
     "restaurant_id": "JED-0029",
@@ -1046,7 +1046,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": "./assets/restaurants/baraka-kerala-restaurant-palestine-street-mishrifah-1.jpg"
   },
   {
     "restaurant_id": "JED-0030",
@@ -1083,7 +1083,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "https://keralafoodnearme.com/jeddah/kerala-restaurant-malabar-restaurant-al-zahara-al-zahra",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": "./assets/restaurants/kerala-restaurant-malabar-restaurant-al-zahara-al-zahra-1.jpg"
   },
   {
     "restaurant_id": "JED-0031",
@@ -1119,7 +1119,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": "./assets/restaurants/kerala-restaurant-mra-restaurant-al-sharafeyah-1.jpg"
   },
   {
     "restaurant_id": "JED-0032",
@@ -1191,7 +1191,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": "./assets/restaurants/kerala-restaurant-village-restaurant-al-rehab-1.jpg"
   },
   {
     "restaurant_id": "JED-0034",
@@ -1227,7 +1227,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": "./assets/restaurants/kerala-restaurant-rahmath-restaurant-al-safa-1.jpg"
   },
   {
     "restaurant_id": "JED-0035",
@@ -1263,7 +1263,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": ""
   },
   {
     "restaurant_id": "JED-0036",
@@ -1299,7 +1299,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": "./assets/restaurants/indian-restaurant-kerala-al-ajwad-1.jpg"
   },
   {
     "restaurant_id": "JED-0037",
@@ -1335,7 +1335,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-kerala-hotel-al-faisaliyah-district-1.jpg"
+    "photo": "./assets/restaurants/kerala-restaurant-quality-kerala-hotel-al-wadi-1.jpg"
   },
   {
     "restaurant_id": "JED-0038",
@@ -1371,7 +1371,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": "./assets/restaurants/sham-kerala-restaurant-al-manar-district-1.jpg"
   },
   {
     "restaurant_id": "JED-0039",
@@ -1407,7 +1407,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": ""
   },
   {
     "restaurant_id": "JED-0040",
@@ -1443,7 +1443,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": "./assets/restaurants/kerala-restaurant-farza-family-restaurant-ar-rawdah-1.jpg"
   },
   {
     "restaurant_id": "JED-0041",
@@ -1479,7 +1479,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": "./assets/restaurants/kerala-restaurant-parivar-restaurant-al-jawharah-1.jpg"
   },
   {
     "restaurant_id": "JED-0042",
@@ -1515,7 +1515,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": "./assets/restaurants/al-safa-kerala-restaurant-1.jpg"
   },
   {
     "restaurant_id": "JED-0043",
@@ -1551,7 +1551,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": "./assets/restaurants/kerala-restaurant-kl10-restaurant-jeddah-al-sharafeyah-1.jpg"
   },
   {
     "restaurant_id": "JED-0044",
@@ -1587,7 +1587,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": "./assets/restaurants/kerala-restaurant-sapphire-family-restaurant-al-baghdadiyah-al-sharqiyah-1.jpg"
   },
   {
     "restaurant_id": "JED-0045",
@@ -1623,7 +1623,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": "./assets/restaurants/kerala-restaurant-paragon-indian-restaurant-al-sharafeyah-1.jpg"
   },
   {
     "restaurant_id": "JED-0046",
@@ -1695,7 +1695,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": "./assets/restaurants/palace-restaurant-for-kerala-foods-an-nahdah-1.jpg"
   },
   {
     "restaurant_id": "JED-0048",
@@ -1767,7 +1767,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-holidays-restaurant-jeddah-shara-tawba-al-tawba-1.jpg"
+    "photo": "./assets/restaurants/kerala-restaurant-as-safa-district-1.jpg"
   },
   {
     "restaurant_id": "JED-0050",
@@ -1803,7 +1803,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": ""
   },
   {
     "restaurant_id": "JED-0051",
@@ -1839,7 +1839,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": "./assets/restaurants/kerala-restaurant-delicia-restaurant-waleed-1.jpg"
   },
   {
     "restaurant_id": "JED-0052",
@@ -1876,7 +1876,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "https://maps.yango.com/en-sa/org/109325196961/",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": ""
   },
   {
     "restaurant_id": "JED-0053",
@@ -1913,7 +1913,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-makan-indian-restaurant-al-khalidiyyah-1.jpg"
+    "photo": ""
   },
   {
     "restaurant_id": "JED-0054",
@@ -1950,7 +1950,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-makan-indian-restaurant-al-khalidiyyah-1.jpg"
+    "photo": ""
   },
   {
     "restaurant_id": "JED-0055",
@@ -1986,7 +1986,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "https://yandex.com/maps/org/hotel_kerala/31089028276/",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-holidays-restaurant-jeddah-shara-tawba-al-tawba-1.jpg"
+    "photo": ""
   },
   {
     "restaurant_id": "JED-0056",
@@ -2022,7 +2022,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": "./assets/restaurants/kerala-restaurant-chennai-express-restaurant-1.jpg"
   },
   {
     "restaurant_id": "JED-0057",
@@ -2058,7 +2058,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": "./assets/restaurants/kerala-restaurant-chennai-darbar-restaurant-aziziyah-1.jpg"
   },
   {
     "restaurant_id": "JED-0058",
@@ -2094,7 +2094,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-11",
     "notes": "Rating from directory is distinct from independently listed rating; no coordinates inferred",
-    "photo": "./assets/restaurants/kerala-restaurant-holidays-restaurant-jeddah-shara-tawba-al-tawba-1.jpg"
+    "photo": "./assets/restaurants/kerala-restaurant-jeddah-restaurant-aziziyah-1.jpg"
   },
   {
     "restaurant_id": "MAK-0001",
@@ -2130,7 +2130,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://rahmathksa.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Popular Rahmath KSA branch near Third Ring Road with family seating"
+    "notes": "Popular Rahmath KSA branch near Third Ring Road with family seating",
+    "photo": ""
   },
   {
     "restaurant_id": "MAK-0002",
@@ -2166,7 +2167,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://rahmathksa.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Popular among Hajj & Umrah pilgrims staying in Aziziyah"
+    "notes": "Popular among Hajj & Umrah pilgrims staying in Aziziyah",
+    "photo": ""
   },
   {
     "restaurant_id": "MAK-0003",
@@ -2203,7 +2205,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://magicpin.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Listed in public directories for Malabar cuisine in Makkah"
+    "notes": "Listed in public directories for Malabar cuisine in Makkah",
+    "photo": ""
   },
   {
     "restaurant_id": "MAK-0004",
@@ -2238,7 +2241,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://hungerstation.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Active on Saudi delivery apps serving Malabar curries"
+    "notes": "Active on Saudi delivery apps serving Malabar curries",
+    "photo": ""
   },
   {
     "restaurant_id": "MAK-0005",
@@ -2273,7 +2277,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://www.google.com/maps/search/?api=1&query=Panoor+Restaurant+Al+Aziziyah+Makkah",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Named after Panoor (Kannur); popular with Malayalis in Aziziyah"
+    "notes": "Named after Panoor (Kannur); popular with Malayalis in Aziziyah",
+    "photo": ""
   },
   {
     "restaurant_id": "MAK-0006",
@@ -2309,7 +2314,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://alshamilfood.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Well-known Malayali dining spot in Kakiya, Makkah"
+    "notes": "Well-known Malayali dining spot in Kakiya, Makkah",
+    "photo": ""
   },
   {
     "restaurant_id": "MAK-0007",
@@ -2344,7 +2350,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://www.havehalalwilltravel.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Popular Indian family restaurant in Al Rabwah, Makkah"
+    "notes": "Popular Indian family restaurant in Al Rabwah, Makkah",
+    "photo": ""
   },
   {
     "restaurant_id": "MAD-0001",
@@ -2381,7 +2388,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://magicpin.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Exact Plus Code location (FJQ5+3QQ) in Al Anbariyah, Madinah"
+    "notes": "Exact Plus Code location (FJQ5+3QQ) in Al Anbariyah, Madinah",
+    "photo": ""
   },
   {
     "restaurant_id": "MAD-0002",
@@ -2417,7 +2425,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://wanderlog.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Popular South Indian / Kerala option in Masjid Ad Dar"
+    "notes": "Popular South Indian / Kerala option in Masjid Ad Dar",
+    "photo": ""
   },
   {
     "restaurant_id": "MAD-0003",
@@ -2452,7 +2461,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://wanderlog.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Walking distance to Al-Masjid an-Nabawi area"
+    "notes": "Walking distance to Al-Masjid an-Nabawi area",
+    "photo": ""
   },
   {
     "restaurant_id": "MAD-0004",
@@ -2488,7 +2498,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://magicpin.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Located on Qurban Road, Al Awali"
+    "notes": "Located on Qurban Road, Al Awali",
+    "photo": ""
   },
   {
     "restaurant_id": "MAD-0005",
@@ -2524,7 +2535,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://wanderlog.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Accessible from central Madinah"
+    "notes": "Accessible from central Madinah",
+    "photo": ""
   },
   {
     "restaurant_id": "MAD-0006",
@@ -2561,7 +2573,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://zaitoonksa.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Very convenient for families visiting Masjid an-Nabawi"
+    "notes": "Very convenient for families visiting Masjid an-Nabawi",
+    "photo": ""
   },
   {
     "restaurant_id": "TAI-0001",
@@ -2596,7 +2609,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://magicpin.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Also reachable on +966 55 625 8359; well-known Malayali hotel in central Taif"
+    "notes": "Also reachable on +966 55 625 8359; well-known Malayali hotel in central Taif",
+    "photo": ""
   },
   {
     "restaurant_id": "TAI-0002",
@@ -2633,7 +2647,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://magicpin.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Central Taif location along King Faisal Road"
+    "notes": "Central Taif location along King Faisal Road",
+    "photo": ""
   },
   {
     "restaurant_id": "TAI-0003",
@@ -2669,7 +2684,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://magicpin.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Popular stop along Al Hada mountain road in Taif"
+    "notes": "Popular stop along Al Hada mountain road in Taif",
+    "photo": ""
   },
   {
     "restaurant_id": "TAI-0004",
@@ -2705,7 +2721,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://magicpin.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Authentic North Kerala flavors in Taif Aziziyyah"
+    "notes": "Authentic North Kerala flavors in Taif Aziziyyah",
+    "photo": ""
   },
   {
     "restaurant_id": "TAI-0005",
@@ -2742,7 +2759,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://magicpin.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Locally known as KL10 / Malappuram-style eatery in Taif"
+    "notes": "Locally known as KL10 / Malappuram-style eatery in Taif",
+    "photo": ""
   },
   {
     "restaurant_id": "TAI-0006",
@@ -2778,7 +2796,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://magicpin.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Listed in public directories in Al Washha, Taif"
+    "notes": "Listed in public directories in Al Washha, Taif",
+    "photo": ""
   },
   {
     "restaurant_id": "DMM-0001",
@@ -2815,7 +2834,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://keralafoodatlas.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Top Dammam listing on Kerala Food Atlas"
+    "notes": "Top Dammam listing on Kerala Food Atlas",
+    "photo": ""
   },
   {
     "restaurant_id": "DMM-0002",
@@ -2853,7 +2873,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://malabarchef.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Popular family restaurant in Madinat Al Umal"
+    "notes": "Popular family restaurant in Madinat Al Umal",
+    "photo": ""
   },
   {
     "restaurant_id": "DMM-0003",
@@ -2889,7 +2910,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://myguidesaudiarabia.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Iconic Dammam Corniche Malabar restaurant"
+    "notes": "Iconic Dammam Corniche Malabar restaurant",
+    "photo": ""
   },
   {
     "restaurant_id": "DMM-0004",
@@ -2925,7 +2947,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://malabarrestaurant.co/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Official Malabar Restaurant Dammam branch"
+    "notes": "Official Malabar Restaurant Dammam branch",
+    "photo": ""
   },
   {
     "restaurant_id": "DMM-0005",
@@ -2962,7 +2985,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://maps.yango.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Popular Thalassery hotel in central As Suq, Dammam"
+    "notes": "Popular Thalassery hotel in central As Suq, Dammam",
+    "photo": ""
   },
   {
     "restaurant_id": "DMM-0006",
@@ -2997,7 +3021,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://yandex.com/maps/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Located in As Suq, Dammam"
+    "notes": "Located in As Suq, Dammam",
+    "photo": ""
   },
   {
     "restaurant_id": "DMM-0007",
@@ -3033,7 +3058,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://www.waze.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Available for dine-in and delivery in Dammam"
+    "notes": "Available for dine-in and delivery in Dammam",
+    "photo": ""
   },
   {
     "restaurant_id": "DMM-0008",
@@ -3070,7 +3096,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://wowinsaudi.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Popular Calicut dining spot in Al Badiyah"
+    "notes": "Popular Calicut dining spot in Al Badiyah",
+    "photo": ""
   },
   {
     "restaurant_id": "DMM-0009",
@@ -3106,7 +3133,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://evendo.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Convenient Lulu Mall Dammam dining location"
+    "notes": "Convenient Lulu Mall Dammam dining location",
+    "photo": ""
   },
   {
     "restaurant_id": "DMM-0010",
@@ -3142,7 +3170,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://wowinsaudi.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Well-known Dammam restaurant near Saudi Post, Al Adamah"
+    "notes": "Well-known Dammam restaurant near Saudi Post, Al Adamah",
+    "photo": ""
   },
   {
     "restaurant_id": "DMM-0011",
@@ -3179,7 +3208,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://wanderlog.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Opposite Ramez Shopping Center, near Hayat Plaza"
+    "notes": "Opposite Ramez Shopping Center, near Hayat Plaza",
+    "photo": ""
   },
   {
     "restaurant_id": "DMM-0012",
@@ -3214,7 +3244,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://hungerstation.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Also operates in Ar Rakah Al Janubiyah (Dammam/Khobar border)"
+    "notes": "Also operates in Ar Rakah Al Janubiyah (Dammam/Khobar border)",
+    "photo": ""
   },
   {
     "restaurant_id": "BUR-0001",
@@ -3251,7 +3282,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://textmap.city/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Popular Malayali eatery on Prince Sultan Rd in Buraidah"
+    "notes": "Popular Malayali eatery on Prince Sultan Rd in Buraidah",
+    "photo": ""
   },
   {
     "restaurant_id": "BUR-0002",
@@ -3287,7 +3319,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://yandex.com/maps/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Serving the Malayali community in southern Buraidah"
+    "notes": "Serving the Malayali community in southern Buraidah",
+    "photo": ""
   },
   {
     "restaurant_id": "BUR-0003",
@@ -3322,7 +3355,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://evendo.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Well-known local Kerala restaurant near King Fahad Hospital"
+    "notes": "Well-known local Kerala restaurant near King Fahad Hospital",
+    "photo": ""
   },
   {
     "restaurant_id": "BUR-0004",
@@ -3357,7 +3391,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://evendo.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Community-favorite Kerala hotel in Al Rabwah, Buraidah"
+    "notes": "Community-favorite Kerala hotel in Al Rabwah, Buraidah",
+    "photo": ""
   },
   {
     "restaurant_id": "BUR-0005",
@@ -3394,7 +3429,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://www.google.com/maps",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Family dining section with popular South Indian selections"
+    "notes": "Family dining section with popular South Indian selections",
+    "photo": ""
   },
   {
     "restaurant_id": "BUR-0006",
@@ -3430,7 +3466,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://restaurants-info.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Serving Al Bukayriyah and nearby Buraidah / Unaizah expats"
+    "notes": "Serving Al Bukayriyah and nearby Buraidah / Unaizah expats",
+    "photo": ""
   },
   {
     "restaurant_id": "TAB-0001",
@@ -3468,7 +3505,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://skip.menu/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Top dedicated Malabar & Kerala spot in Tabuk with family & bachelor sections"
+    "notes": "Top dedicated Malabar & Kerala spot in Tabuk with family & bachelor sections",
+    "photo": ""
   },
   {
     "restaurant_id": "TAB-0002",
@@ -3503,7 +3541,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://magicpin.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Dedicated South Indian eatery in Al Faisaliyah, Tabuk"
+    "notes": "Dedicated South Indian eatery in Al Faisaliyah, Tabuk",
+    "photo": ""
   },
   {
     "restaurant_id": "TAB-0003",
@@ -3538,7 +3577,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://ksa.directory/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Popular biryani & Indian curry option for expats in Tabuk"
+    "notes": "Popular biryani & Indian curry option for expats in Tabuk",
+    "photo": ""
   },
   {
     "restaurant_id": "TAB-0004",
@@ -3574,7 +3614,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://hungerstation.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Available for dine-in and delivery across Tabuk"
+    "notes": "Available for dine-in and delivery across Tabuk",
+    "photo": ""
   },
   {
     "restaurant_id": "JOU-0001",
@@ -3611,7 +3652,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://evendo.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Primary Malayali & Kerala food spot in Sakaka, Al Jouf"
+    "notes": "Primary Malayali & Kerala food spot in Sakaka, Al Jouf",
+    "photo": ""
   },
   {
     "restaurant_id": "JOU-0002",
@@ -3647,7 +3689,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://hungerstation.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Popular Indian restaurant option in Sakaka, Al Jouf"
+    "notes": "Popular Indian restaurant option in Sakaka, Al Jouf",
+    "photo": ""
   },
   {
     "restaurant_id": "BAH-0001",
@@ -3683,7 +3726,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://saudidir.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Known Indian eatery on King Faisal Road in Al Baha city"
+    "notes": "Known Indian eatery on King Faisal Road in Al Baha city",
+    "photo": ""
   },
   {
     "restaurant_id": "BAH-0002",
@@ -3719,7 +3763,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://evendo.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Central Al Baha location popular with South Indian expats"
+    "notes": "Central Al Baha location popular with South Indian expats",
+    "photo": ""
   },
   {
     "restaurant_id": "BAH-0003",
@@ -3755,7 +3800,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://hungerstation.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Serves Baljurashi and southern Al Baha province"
+    "notes": "Serves Baljurashi and southern Al Baha province",
+    "photo": ""
   },
   {
     "restaurant_id": "BAH-0004",
@@ -3790,7 +3836,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://yandex.com/maps/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Located along King Saud Road in Baljurashi, Al Baha"
+    "notes": "Located along King Saud Road in Baljurashi, Al Baha",
+    "photo": ""
   },
   {
     "restaurant_id": "KHM-0001",
@@ -3825,7 +3872,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://restaurantguru.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Well-known Malayali hotel in Al Khalidiyah, Khamis Mushait"
+    "notes": "Well-known Malayali hotel in Al Khalidiyah, Khamis Mushait",
+    "photo": ""
   },
   {
     "restaurant_id": "KHM-0002",
@@ -3862,7 +3910,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://magicpin.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Malayali family restaurant in Khamis Mushait"
+    "notes": "Malayali family restaurant in Khamis Mushait",
+    "photo": ""
   },
   {
     "restaurant_id": "KHM-0003",
@@ -3897,7 +3946,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://magicpin.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Popular Kerala family eatery in Ar Rawdah, Khamis Mushait"
+    "notes": "Popular Kerala family eatery in Ar Rawdah, Khamis Mushait",
+    "photo": ""
   },
   {
     "restaurant_id": "KHM-0004",
@@ -3932,7 +3982,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://restaurantguru.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Local Malayali spot near Harra signal / Wadi Road"
+    "notes": "Local Malayali spot near Harra signal / Wadi Road",
+    "photo": ""
   },
   {
     "restaurant_id": "KHM-0005",
@@ -3967,7 +4018,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://magicpin.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Formerly Chennai Restaurant; popular South Indian dining spot"
+    "notes": "Formerly Chennai Restaurant; popular South Indian dining spot",
+    "photo": ""
   },
   {
     "restaurant_id": "KHM-0006",
@@ -4003,7 +4055,8 @@ window.KSA_KERALA_FOODS = [
     "source_url": "https://yango.com/",
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
-    "notes": "Serving Malayali diners across Abha and Khamis Mushait"
+    "notes": "Serving Malayali diners across Abha and Khamis Mushait",
+    "photo": ""
   },
   {
     "restaurant_id": "JED-0059",
@@ -4041,7 +4094,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
     "notes": "Popular Kerala restaurant on Hira Street in Al Marwah with dine-in and parcel counter",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": ""
   },
   {
     "restaurant_id": "JED-0060",
@@ -4079,7 +4132,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
     "notes": "Famous Malayali eatery near Prince Mutaib Road serving evening thattukada snacks and meals",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": ""
   },
   {
     "restaurant_id": "JED-0061",
@@ -4118,7 +4171,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
     "notes": "Family-friendly Kerala restaurant conveniently located near Al Marwah Plaza / LuLu",
-    "photo": "./assets/restaurants/kerala-restaurant-restaurant-al-shefaa-1.jpg"
+    "photo": ""
   },
   {
     "restaurant_id": "JED-0062",
@@ -4156,7 +4209,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-18",
     "notes": "Authentic Kerala tea mess with fresh breakfast items and snacks in Al Marwah",
-    "photo": "./assets/restaurants/kerala-restaurant-makan-indian-restaurant-al-khalidiyyah-1.jpg"
+    "photo": ""
   },
   {
     "restaurant_id": "JED-0063",
@@ -4194,7 +4247,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-20",
     "notes": "Popular Sham Kerala Restaurant in Al Marwah recommended by local expats",
-    "photo": "./assets/restaurants/user_local_spots.jpg"
+    "photo": ""
   },
   {
     "restaurant_id": "JED-0064",
@@ -4231,7 +4284,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-20",
     "notes": "Variety Hotel / Restaurant in Al Marwah famous for traditional Kerala dining",
-    "photo": "./assets/restaurants/user_local_spots.jpg"
+    "photo": ""
   },
   {
     "restaurant_id": "JED-0065",
@@ -4268,7 +4321,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-20",
     "notes": "Verified from Google Maps listing on Hira Street",
-    "photo": "./assets/restaurants/user_local_spots.jpg"
+    "photo": ""
   },
   {
     "restaurant_id": "RUH-0001",
@@ -5487,7 +5540,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-20",
     "notes": "Listing in Central Riyadh, Riyadh with direct Google Maps and photo",
-    "photo": "./assets/restaurants/kerala-restaurant-kannur-saudi-arabia-1.jpg"
+    "photo": ""
   },
   {
     "restaurant_id": "RUH-0034",
@@ -5820,7 +5873,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-20",
     "notes": "Listing in 8232, Riyadh with direct Google Maps and photo",
-    "photo": "./assets/restaurants/kerala-restaurant-al-quds-1.jpg"
+    "photo": ""
   },
   {
     "restaurant_id": "RUH-0043",
@@ -5967,7 +6020,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-20",
     "notes": "Listing in Central Riyadh, Riyadh with direct Google Maps and photo",
-    "photo": "./assets/restaurants/al-rumman-kerala-indian-restaurant-al-muruj-1.jpg"
+    "photo": ""
   },
   {
     "restaurant_id": "RUH-0047",
@@ -6445,7 +6498,7 @@ window.KSA_KERALA_FOODS = [
     "secondary_source_url": "",
     "last_researched_utc": "2026-11-20",
     "notes": "Listing in Al Aziziyah, Riyadh with direct Google Maps and photo",
-    "photo": "./assets/restaurants/kerala-restaurant-al-aziziyah-1.jpg"
+    "photo": ""
   },
   {
     "restaurant_id": "RUH-0060",
