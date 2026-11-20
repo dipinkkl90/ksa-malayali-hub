@@ -168,116 +168,333 @@ window.FLYER_CATEGORIES = [
 // ============================================================================
 window.FLYER_CATALOGS = [
   {
-    id: "FLYER-LULU-01",
-    brand_key: "lulu",
-    brand: "LuLu Hypermarkets",
-    title: "LuLu Super Friday · Mega Savings Weekend",
-    title_ml: "ലൂലു സൂപ്പർ ഫ്രൈഡേ വാരാന്ത്യ ഓഫറുകൾ",
-    cover: "./assets/retailers/lulu_flyer_cover.svg",
-    valid_till: "26 Nov 2026",
-    days_left: 4,
-    views: "540K+",
-    pages_count: 85,
-    category: "grocery",
-    highlight: "Up to 70% OFF on Basmati Rice, Malabar Fish & Groceries",
-    official_url: "https://gcc.luluhypermarket.com/en-sa/deals/",
-    whatsapp_cta: "https://wa.me/447460646263?text=Hi%20D%26J!%20Please%20send%20me%20the%20LuLu%20Weekly%20PDF%20Flyer."
+    "id": "FLYER-LULU-01",
+    "brand_key": "lulu",
+    "brand": "LuLu Hypermarkets",
+    "title": "LuLu Super Friday · Mega Savings Weekend",
+    "title_ml": "ലൂലു സൂപ്പർ ഫ്രൈഡേ വാരാന്ത്യ ഓഫറുകൾ",
+    "cover": "./assets/retailers/lulu_page_1.svg",
+    "valid_till": "26 Nov 2026",
+    "days_left": 4,
+    "views": "540K+",
+    "pages_count": 8,
+    "full_catalog_pages": 85,
+    "category": "grocery",
+    "highlight": "Up to 70% OFF on Basmati Rice, Malabar Fish & Groceries",
+    "official_url": "https://gcc.luluhypermarket.com/en-sa/deals/",
+    "whatsapp_cta": "https://wa.me/447460646263?text=Hi%20D%26J!%20Please%20send%20me%20the%20LuLu%20Weekly%20PDF%20Flyer.",
+    "pages": [
+      {
+        "page_num": 1,
+        "title": "Mega Weekend Saver Deals",
+        "title_ml": "സൂപ്പർ ഫ്രൈഡേ മെഗാ ഓഫറുകൾ",
+        "badge": "● PAGE 1 OF 8 · MEGA SAVER HIGHLIGHTS",
+        "img": "./assets/retailers/lulu_page_1.svg"
+      },
+      {
+        "page_num": 2,
+        "title": "Fresh Fruits & Farm Produce",
+        "title_ml": "ഫ്രഷ് പച്ചക്കറികൾ & പഴങ്ങൾ",
+        "badge": "● PAGE 2 OF 8 · FRESH HARVEST MARKET",
+        "img": "./assets/retailers/lulu_page_2.svg"
+      },
+      {
+        "page_num": 3,
+        "title": "Fresh Butchery & Poultry",
+        "title_ml": "ഫ്രഷ് ഇറച്ചി & ചിക്കൻ ഓഫറുകൾ",
+        "badge": "● PAGE 3 OF 8 · BUTCHERY & MEAT SPECIAL",
+        "img": "./assets/retailers/lulu_page_3.svg"
+      },
+      {
+        "page_num": 4,
+        "title": "Malabar Fresh Fish Market",
+        "title_ml": "മലബാർ മീൻ മാർക്കറ്റ് സ്പെഷ്യൽ",
+        "badge": "● PAGE 4 OF 8 · SEAFOOD CATCH DEALS",
+        "img": "./assets/retailers/lulu_page_4.svg"
+      },
+      {
+        "page_num": 5,
+        "title": "Kerala Groceries & Pantry",
+        "title_ml": "കേരള പലചരക്ക് & മസാലക്കൂട്ടുകൾ",
+        "badge": "● PAGE 5 OF 8 · KERALA PANTRY SAVINGS",
+        "img": "./assets/retailers/lulu_page_5.svg"
+      },
+      {
+        "page_num": 6,
+        "title": "Dairy, Beverages & Breakfast",
+        "title_ml": "ഡയറി, പാൽ & പ്രഭാതഭക്ഷണങ്ങൾ",
+        "badge": "● PAGE 6 OF 8 · DAILY FRESH DAIRY & TEA",
+        "img": "./assets/retailers/lulu_page_6.svg"
+      },
+      {
+        "page_num": 7,
+        "title": "Detergents & Household Care",
+        "title_ml": "ഡിറ്റർജന്റുകൾ & ക്ലീനിംഗ് ഉൽപ്പന്നങ്ങൾ",
+        "badge": "● PAGE 7 OF 8 · HOME CARE & CLEANING",
+        "img": "./assets/retailers/lulu_page_7.svg"
+      },
+      {
+        "page_num": 8,
+        "title": "Electronics & Smart Living",
+        "title_ml": "സ്മാർട്ട് ടിവി & ഇലക്ട്രോണിക്സ്",
+        "badge": "● PAGE 8 OF 8 · SMART TECH WEEKEND",
+        "img": "./assets/retailers/lulu_page_8.svg"
+      }
+    ]
   },
   {
-    id: "FLYER-NESTO-01",
-    brand_key: "nesto",
-    brand: "Nesto Hypermarket",
-    title: "Nesto Midnight Fiesta · Half-Price Specials",
-    title_ml: "നെസ്റ്റോ മിഡ്‌നൈറ്റ് പകുതി വില ഓഫറുകൾ",
-    cover: "./assets/retailers/nesto_flyer_cover.svg",
-    valid_till: "27 Nov 2026",
-    days_left: 5,
-    views: "380K+",
-    pages_count: 48,
-    category: "meat_fish",
-    highlight: "Flat 50% OFF on Fresh Chicken, Malabar Ayala & Pantry",
-    official_url: "https://www.nestogroup.com/promotions/",
-    whatsapp_cta: "https://wa.me/447460646263?text=Hi%20D%26J!%20Please%20send%20me%20the%20Nesto%20Weekly%20PDF%20Flyer."
+    "id": "FLYER-NESTO-01",
+    "brand_key": "nesto",
+    "brand": "Nesto Hypermarket",
+    "title": "Nesto Midnight Fiesta · Half-Price Specials",
+    "title_ml": "നെസ്റ്റോ മിഡ്‌നൈറ്റ് പകുതി വില ഓഫറുകൾ",
+    "cover": "./assets/retailers/nesto_page_1.svg",
+    "valid_till": "27 Nov 2026",
+    "days_left": 5,
+    "views": "380K+",
+    "pages_count": 6,
+    "full_catalog_pages": 48,
+    "category": "meat_fish",
+    "highlight": "Flat 50% OFF on Fresh Chicken, Malabar Ayala & Pantry",
+    "official_url": "https://www.nestogroup.com/promotions/",
+    "whatsapp_cta": "https://wa.me/447460646263?text=Hi%20D%26J!%20Please%20send%20me%20the%20Nesto%20Weekly%20PDF%20Flyer.",
+    "pages": [
+      {
+        "page_num": 1,
+        "title": "Midnight Fiesta Special Deals",
+        "title_ml": "മിഡ്‌നൈറ്റ് ഫിയസ്റ്റ ഓഫറുകൾ",
+        "badge": "● PAGE 1 OF 6 · MIDNIGHT SAVER",
+        "img": "./assets/retailers/nesto_page_1.svg"
+      },
+      {
+        "page_num": 2,
+        "title": "Fresh Poultry & Meat Fiesta",
+        "title_ml": "ഫ്രഷ് ഇറച്ചി & ചിക്കൻ മേള",
+        "badge": "● PAGE 2 OF 6 · MEAT CARNIVAL",
+        "img": "./assets/retailers/nesto_page_2.svg"
+      },
+      {
+        "page_num": 3,
+        "title": "Fresh Malabar Catch Seafood",
+        "title_ml": "നാടൻ മീൻ & കടൽ വിഭവങ്ങൾ",
+        "badge": "● PAGE 3 OF 6 · FISHERMAN SPECIAL",
+        "img": "./assets/retailers/nesto_page_3.svg"
+      },
+      {
+        "page_num": 4,
+        "title": "Kerala Rice, Flour & Oils",
+        "title_ml": "കേരള മട്ടയരി & വെളിച്ചെണ്ണ",
+        "badge": "● PAGE 4 OF 6 · KERALA KITCHEN",
+        "img": "./assets/retailers/nesto_page_4.svg"
+      },
+      {
+        "page_num": 5,
+        "title": "Mega Home Saver & Detergents",
+        "title_ml": "വീട്ടുപകരണങ്ങൾ & ഡിറ്റർജന്റ്",
+        "badge": "● PAGE 5 OF 6 · SUPER CLEAN FEST",
+        "img": "./assets/retailers/nesto_page_5.svg"
+      },
+      {
+        "page_num": 6,
+        "title": "Electronics & Kitchen Appliances",
+        "title_ml": "ഇലക്ട്രോണിക്സ് & ഗൃഹോപകരണങ്ങൾ",
+        "badge": "● PAGE 6 OF 6 · SMART HOME DEALS",
+        "img": "./assets/retailers/nesto_page_6.svg"
+      }
+    ]
   },
   {
-    id: "FLYER-PANDA-01",
-    brand_key: "panda",
-    brand: "Hyper Panda",
-    title: "Panda Weekly Fresh Savings · Buy 1 Get 1 Free",
-    title_ml: "ഹൈപ്പർ ബنده ഒരെണ്ണം വാങ്ങിയാൽ ഒരെണ്ണം സൗജന്യം",
-    cover: "./assets/retailers/panda_flyer_cover.svg",
-    valid_till: "25 Nov 2026",
-    days_left: 3,
-    views: "420K+",
-    pages_count: 36,
-    category: "fruits",
-    highlight: "Fresh Farm Fruits, Cheeses & Dairy BOGO Free Fest",
-    official_url: "https://leaflet.panda.sa/",
-    whatsapp_cta: "https://wa.me/447460646263?text=Hi%20D%26J!%20Please%20send%20me%20the%20Panda%20Weekly%20PDF%20Flyer."
+    "id": "FLYER-PANDA-01",
+    "brand_key": "panda",
+    "brand": "Hyper Panda",
+    "title": "Panda Weekly Fresh Savings · Buy 1 Get 1 Free",
+    "title_ml": "ഹൈപ്പർ ബنده ഒരെണ്ണം വാങ്ങിയാൽ ഒരെണ്ണം സൗജന്യം",
+    "cover": "./assets/retailers/panda_page_1.svg",
+    "valid_till": "25 Nov 2026",
+    "days_left": 3,
+    "views": "420K+",
+    "pages_count": 4,
+    "full_catalog_pages": 36,
+    "category": "fruits",
+    "highlight": "Fresh Farm Fruits, Cheeses & Dairy BOGO Free Fest",
+    "official_url": "https://leaflet.panda.sa/",
+    "whatsapp_cta": "https://wa.me/447460646263?text=Hi%20D%26J!%20Please%20send%20me%20the%20Panda%20Weekly%20PDF%20Flyer.",
+    "pages": [
+      {
+        "page_num": 1,
+        "title": "Panda 1+1 Free Mega Festival",
+        "title_ml": "ബന്ദേ 1+1 ഫ്രീ മെഗാ ഓഫർ",
+        "badge": "● PAGE 1 OF 4 · BOGO FESTIVAL",
+        "img": "./assets/retailers/panda_page_1.svg"
+      },
+      {
+        "page_num": 2,
+        "title": "Fresh Farm Harvest & Produce",
+        "title_ml": "ഫ്രഷ് പച്ചക്കറികൾ & പഴങ്ങൾ",
+        "badge": "● PAGE 2 OF 4 · FRESH FARM",
+        "img": "./assets/retailers/panda_page_2.svg"
+      },
+      {
+        "page_num": 3,
+        "title": "Dairy, Cheese & Delicatessen",
+        "title_ml": "ഡയറി, പാൽ & ചീസ് ഓഫറുകൾ",
+        "badge": "● PAGE 3 OF 4 · DAIRY FEST",
+        "img": "./assets/retailers/panda_page_3.svg"
+      },
+      {
+        "page_num": 4,
+        "title": "Household & Daily Essentials",
+        "title_ml": "വീട്ടുപയോഗ സാധനങ്ങൾ",
+        "badge": "● PAGE 4 OF 4 · HOME ESSENTIALS",
+        "img": "./assets/retailers/panda_page_4.svg"
+      }
+    ]
   },
   {
-    id: "FLYER-CARREFOUR-01",
-    brand_key: "carrefour",
-    brand: "Carrefour Hyper",
-    title: "Carrefour Anniversary Mega Sale & Electronics",
-    title_ml: "കارفൂർ ആനിവേഴ്സറി മെഗാ ഇലക്ട്രോണിക്സ് മേള",
-    cover: "./assets/retailers/carrefour_flyer_cover.svg",
-    valid_till: "28 Nov 2026",
-    days_left: 6,
-    views: "310K+",
-    pages_count: 52,
-    category: "electronics",
-    highlight: "Smart TVs, Samsung Galaxy S24 Ultra & Household Essentials",
-    official_url: "https://www.carrefourksa.com/",
-    whatsapp_cta: "https://wa.me/447460646263?text=Hi%20D%26J!%20Please%20send%20me%20the%20Carrefour%20Weekly%20PDF%20Flyer."
+    "id": "FLYER-CARREFOUR-01",
+    "brand_key": "carrefour",
+    "brand": "Carrefour Hyper",
+    "title": "Carrefour Anniversary Mega Sale & Electronics",
+    "title_ml": "കارفൂർ ആനിവേഴ്സറി മെഗാ ഇലക്ട്രോണിക്സ് മേള",
+    "cover": "./assets/retailers/carrefour_page_1.svg",
+    "valid_till": "28 Nov 2026",
+    "days_left": 6,
+    "views": "310K+",
+    "pages_count": 3,
+    "full_catalog_pages": 52,
+    "category": "electronics",
+    "highlight": "Smart TVs, Samsung Galaxy S24 Ultra & Household Essentials",
+    "official_url": "https://www.carrefourksa.com/",
+    "whatsapp_cta": "https://wa.me/447460646263?text=Hi%20D%26J!%20Please%20send%20me%20the%20Carrefour%20Weekly%20PDF%20Flyer.",
+    "pages": [
+      {
+        "page_num": 1,
+        "title": "Anniversary Mega Sale Highlights",
+        "title_ml": "ആനിവേഴ്സറി മെഗാ സെയിൽ",
+        "badge": "● PAGE 1 OF 3 · ANNIVERSARY FEST",
+        "img": "./assets/retailers/carrefour_page_1.svg"
+      },
+      {
+        "page_num": 2,
+        "title": "Fresh Meat, Fish & Delicatessen",
+        "title_ml": "ഫ്രഷ് ഇറച്ചി, മീൻ & ഡെലി",
+        "badge": "● PAGE 2 OF 3 · FRESH GOURMET",
+        "img": "./assets/retailers/carrefour_page_2.svg"
+      },
+      {
+        "page_num": 3,
+        "title": "Smart TVs & Mobile Specials",
+        "title_ml": "സ്മാർട്ട് ടിവി & മൊബൈൽ ഓഫറുകൾ",
+        "badge": "● PAGE 3 OF 3 · TECH MEGA DEALS",
+        "img": "./assets/retailers/carrefour_page_3.svg"
+      }
+    ]
   },
   {
-    id: "FLYER-GRAND-01",
-    brand_key: "grand",
-    brand: "Grand Hypermarket",
-    title: "Grand Hyper Weekend Crazy Crash Deals",
-    title_ml: "ഗ്രാൻഡ് هايബർ വാരാന്ത്യ ക്രേസി ഓഫറുകൾ",
-    cover: "./assets/retailers/grand_flyer_cover.svg",
-    valid_till: "24 Nov 2026",
-    days_left: 2,
-    views: "190K+",
-    pages_count: 32,
-    category: "grocery",
-    highlight: "SAR 10 & 20 Super Deals on Onions, Spices & Tea",
-    official_url: "https://grandhypermarket.com/",
-    whatsapp_cta: "https://wa.me/447460646263?text=Hi%20D%26J!%20Please%20send%20me%20the%20Grand%20Hyper%20Weekly%20PDF%20Flyer."
+    "id": "FLYER-GRAND-01",
+    "brand_key": "grand",
+    "brand": "Grand Hypermarket",
+    "title": "Grand Hyper Weekend Crazy Crash Deals",
+    "title_ml": "ഗ്രാൻഡ് ഹൈപ്പർ വീക്കെൻഡ് ക്രേസി ക്രാഷ് ഓഫറുകൾ",
+    "cover": "./assets/retailers/grand_page_1.svg",
+    "valid_till": "25 Nov 2026",
+    "days_left": 3,
+    "views": "280K+",
+    "pages_count": 3,
+    "full_catalog_pages": 32,
+    "category": "grocery",
+    "highlight": "Kaima Rice, Sunflower Oil & Kerala Snacks Price Crash",
+    "official_url": "https://grandhyper.com/",
+    "whatsapp_cta": "https://wa.me/447460646263?text=Hi%20D%26J!%20Please%20send%20me%20the%20Grand%20Hyper%20Weekly%20PDF%20Flyer.",
+    "pages": [
+      {
+        "page_num": 1,
+        "title": "Crazy Crash Deals Weekend",
+        "title_ml": "ക്രേസി ക്രാഷ് ഓഫറുകൾ",
+        "badge": "● PAGE 1 OF 3 · CRAZY DEALS",
+        "img": "./assets/retailers/grand_page_1.svg"
+      },
+      {
+        "page_num": 2,
+        "title": "Malabar Fresh Fish & Meat",
+        "title_ml": "മലബാർ മീൻ & ഇറച്ചി വിഭവങ്ങൾ",
+        "badge": "● PAGE 2 OF 3 · MALABAR EXPRESS",
+        "img": "./assets/retailers/grand_page_2.svg"
+      },
+      {
+        "page_num": 3,
+        "title": "Kerala Spices, Snacks & Tea",
+        "title_ml": "കേരള പലഹാരങ്ങൾ & ചായപ്പൊടി",
+        "badge": "● PAGE 3 OF 3 · KERALA SPECIALS",
+        "img": "./assets/retailers/grand_page_3.svg"
+      }
+    ]
   },
   {
-    id: "FLYER-DANUBE-01",
-    brand_key: "danube",
-    brand: "Danube Supermarkets",
-    title: "Danube Gourmet Bakehouse & Fresh Market Deals",
-    title_ml: "ദാനൂബ് പ്രീമിയം ബേക്കറി & ഫ്രഷ് മാർക്കറ്റ് ഓഫർ",
-    cover: "./assets/retailers/danube_flyer_cover.svg",
-    valid_till: "29 Nov 2026",
-    days_left: 7,
-    views: "240K+",
-    pages_count: 40,
-    category: "bakery",
-    highlight: "Fresh Croissants, Imported Cheeses & Organic Produce",
-    official_url: "https://danube.sa/en",
-    whatsapp_cta: "https://wa.me/447460646263?text=Hi%20D%26J!%20Please%20send%20me%20the%20Danube%20Weekly%20PDF%20Flyer."
+    "id": "FLYER-DANUBE-01",
+    "brand_key": "danube",
+    "brand": "Danube Supermarkets",
+    "title": "Danube Gourmet Bakehouse & Fresh Market Deals",
+    "title_ml": "ഡാന്യൂബ് ഗൂർമേ ബേക്ക്‌ഹൗസ് & ഫ്രഷ് മാർക്കറ്റ് ഡീലുകൾ",
+    "cover": "./assets/retailers/danube_page_1.svg",
+    "valid_till": "26 Nov 2026",
+    "days_left": 4,
+    "views": "190K+",
+    "pages_count": 2,
+    "full_catalog_pages": 40,
+    "category": "bakery",
+    "highlight": "Artisan Pastries, Imported Italian Cheeses & Fresh Seafood",
+    "official_url": "https://danubeco.com/",
+    "whatsapp_cta": "https://wa.me/447460646263?text=Hi%20D%26J!%20Please%20send%20me%20the%20Danube%20Weekly%20PDF%20Flyer.",
+    "pages": [
+      {
+        "page_num": 1,
+        "title": "Gourmet Bakehouse & Weekly Picks",
+        "title_ml": "ബേക്ക്‌ഹൗസ് & വീക്ക്‌ലി പിക്ക്സ്",
+        "badge": "● PAGE 1 OF 2 · GOURMET SELECTION",
+        "img": "./assets/retailers/danube_page_1.svg"
+      },
+      {
+        "page_num": 2,
+        "title": "Premium Cheeses & Delicatessen",
+        "title_ml": "പ്രീമിയം ചീസ് & ഡെലികെറ്റസൻ",
+        "badge": "● PAGE 2 OF 2 · CHEESE & COLD CUTS",
+        "img": "./assets/retailers/danube_page_2.svg"
+      }
+    ]
   },
   {
-    id: "FLYER-CITYFLOWER-01",
-    brand_key: "cityflower",
-    brand: "City Flower Hyper",
-    title: "City Flower Super Value Bonanza & Apparel",
-    title_ml: "സിറ്റി ഫ്ലവർ സൂപ്പർ വാല്യൂ ബൊനാൻസ",
-    cover: "./assets/retailers/cityflower_flyer_cover.svg",
-    valid_till: "30 Nov 2026",
-    days_left: 8,
-    views: "160K+",
-    pages_count: 28,
-    category: "household",
-    highlight: "Everyday SAR 5 & 10 Specials, Kerala Lungis & Kitchenware",
-    official_url: "https://cityflowerretail.com/",
-    whatsapp_cta: "https://wa.me/447460646263?text=Hi%20D%26J!%20Please%20send%20me%20the%20City%20Flower%20Weekly%20PDF%20Flyer."
+    "id": "FLYER-CITYFLOWER-01",
+    "brand_key": "cityflower",
+    "brand": "City Flower Hyper",
+    "title": "City Flower Super Value Bonanza & Apparel",
+    "title_ml": "സിറ്റി ഫ്ലവർ സൂപ്പർ വാല്യൂ ബൊനാൻസ വസ്ത്രോത്സവം",
+    "cover": "./assets/retailers/cityflower_page_1.svg",
+    "valid_till": "28 Nov 2026",
+    "days_left": 6,
+    "views": "240K+",
+    "pages_count": 2,
+    "full_catalog_pages": 28,
+    "category": "apparel",
+    "highlight": "Pravasi Family Apparel, Blankets, Cookware & Footwear Mega Fest",
+    "official_url": "https://cityflowerretail.com/",
+    "whatsapp_cta": "https://wa.me/447460646263?text=Hi%20D%26J!%20Please%20send%20me%20the%20City%20Flower%20Weekly%20PDF%20Flyer.",
+    "pages": [
+      {
+        "page_num": 1,
+        "title": "Super Value Bonanza Deals",
+        "title_ml": "സൂപ്പർ വാല്യൂ ബൊനാൻസ ഡീലുകൾ",
+        "badge": "● PAGE 1 OF 2 · SUPER BONANZA",
+        "img": "./assets/retailers/cityflower_page_1.svg"
+      },
+      {
+        "page_num": 2,
+        "title": "Household & Kitchen Essentials",
+        "title_ml": "വീട്ടുപകരണങ്ങൾ & കിച്ചൻ ഐറ്റംസ്",
+        "badge": "● PAGE 2 OF 2 · HOME ESSENTIALS",
+        "img": "./assets/retailers/cityflower_page_2.svg"
+      }
+    ]
   }
 ];
 

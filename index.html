@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="./css/styles.css?v=20261120_v5">
+  <link rel="stylesheet" href="./css/styles.css?v=20261120_v6">
 </head>
 <body>
   <!-- Sticky Top Navigation -->
@@ -1368,12 +1368,12 @@
 
   <!-- Scripts -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin="" defer></script>
-  <script src="./js/data.js?v=20261120_v5"></script>
-  <script src="./js/hypermarkets_data.js?v=20261120_v5"></script>
-  <script src="./js/cinemas_data.js?v=20261120_v5"></script>
-  <script src="./js/daily_desk_data.js?v=20261120_v5"></script>
-  <script src="./js/i18n.js?v=20261120_v5"></script>
-  <script src="./js/app.js?v=20261120_v5"></script>
+  <script src="./js/data.js?v=20261120_v6"></script>
+  <script src="./js/hypermarkets_data.js?v=20261120_v6"></script>
+  <script src="./js/cinemas_data.js?v=20261120_v6"></script>
+  <script src="./js/daily_desk_data.js?v=20261120_v6"></script>
+  <script src="./js/i18n.js?v=20261120_v6"></script>
+  <script src="./js/app.js?v=20261120_v6"></script>
 
   <!-- ClicFlyer-Style Interactive Digital Flyer Booklet Modal -->
   <div id="clicFlyerModal" class="clic-modal" aria-hidden="true" role="dialog" aria-label="Digital Flyer Booklet">
@@ -1406,10 +1406,15 @@
         <button type="button" class="clic-flip-arrow next" id="clicFlipNext" aria-label="Next Page">›</button>
       </div>
       <div class="clic-modal-footer">
-        <span class="clic-modal-hint">👆 Use arrows to flip pages or tap below to open full promotions</span>
-        <a id="clicModalWaShare" href="#" target="_blank" rel="noopener noreferrer" class="clic-modal-wa-btn">
-          💬 Share on WhatsApp
-        </a>
+        <span class="clic-modal-hint">👆 Use arrows to flip between Fresh Meat, Fish, Produce, Groceries &amp; Electronics</span>
+        <div class="clic-modal-footer-btns">
+          <a id="clicModalFullFlyerBtn" href="https://gcc.luluhypermarket.com/en-sa/deals/" target="_blank" rel="noopener noreferrer" class="clic-modal-full-btn" title="Open complete official catalog on store website">
+            📄 Open Full Store Catalog (LuLu Deals) ↗
+          </a>
+          <a id="clicModalWaShare" href="#" target="_blank" rel="noopener noreferrer" class="clic-modal-wa-btn">
+            💬 Share on WhatsApp
+          </a>
+        </div>
       </div>
     </div>
   </div>

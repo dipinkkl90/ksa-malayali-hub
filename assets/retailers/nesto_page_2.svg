@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
+  <defs>
+    <linearGradient id="bgGrad_Nesto_2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#be123c"/>
+      <stop offset="100%" stop-color="#9f1239"/>
+    </linearGradient>
+    <linearGradient id="goldBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer Background -->
+  <rect width="100%" height="100%" fill="url(#bgGrad_Nesto_2)"/>
+  
+  <!-- Top Store Header Strip -->
+  <rect x="0" y="0" width="300" height="52" fill="#ffffff"/>
+  <text x="14" y="32" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="20" fill="#0056b3">Nesto</text>
+  <text x="75" y="32" font-family="'Noto Sans Arabic', Arial, sans-serif" font-weight="800" font-size="16" fill="#e11d48">نستو</text>
+  
+  <!-- Page Number Pill -->
+  <rect x="210" y="12" width="76" height="28" rx="14" fill="#0f172a"/>
+  <text x="248" y="30" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="11" fill="#38bdf8" text-anchor="middle">PAGE 2/6</text>
+  
+  <!-- Department Banner -->
+  <rect x="14" y="62" width="272" height="68" rx="12" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+  <rect x="24" y="72" width="90" height="18" rx="9" fill="url(#goldBar)"/>
+  <text x="69" y="84" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="9" fill="#0f172a" text-anchor="middle">MEAT CARNIVAL</text>
+  
+  <text x="24" y="105" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="16" fill="#ffffff">Fresh Poultry & Meat Fiesta</text>
+  <text x="24" y="122" font-family="'Noto Sans Arabic', Arial, sans-serif" font-weight="700" font-size="12" fill="rgba(255,255,255,0.9)">مهرجان اللحوم والدواجن الطازجة</text>
+  
+  <!-- Products Section -->
+  
+    <!-- Product Item 1 -->
+    <g transform="translate(14, 145)">
+      <rect width="272" height="68" rx="10" fill="#ffffff" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.12))"/>
+      
+      <!-- Icon/Tag Box -->
+      <rect x="8" y="8" width="52" height="52" rx="8" fill="#be123c" opacity="0.12"/>
+      <text x="34" y="40" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="24" text-anchor="middle">🍗</text>
+      
+      <!-- Product Details -->
+      <text x="68" y="24" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="700" font-size="12" fill="#1e293b">Fresh Saudi Whole Chicken </text>
+      <text x="68" y="40" font-family="'Noto Sans Arabic', Arial, sans-serif" font-size="10" fill="#64748b">دجاج سعودي طازج كامل ١ ك</text>
+      
+      <!-- Old Price -->
+      <text x="68" y="56" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="10" fill="#94a3b8" text-decoration="line-through">SAR 19.50</text>
+      
+      <!-- Offer Price Badge -->
+      <rect x="186" y="14" width="76" height="40" rx="8" fill="#e11d48"/>
+      <text x="224" y="32" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="14" fill="#ffffff" text-anchor="middle">SAR 14.95</text>
+      <text x="224" y="47" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="700" font-size="8" fill="#fef08a" text-anchor="middle">23% OFF</text>
+    </g>
+    <!-- Product Item 2 -->
+    <g transform="translate(14, 221)">
+      <rect width="272" height="68" rx="10" fill="#ffffff" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.12))"/>
+      
+      <!-- Icon/Tag Box -->
+      <rect x="8" y="8" width="52" height="52" rx="8" fill="#be123c" opacity="0.12"/>
+      <text x="34" y="40" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="24" text-anchor="middle">🥩</text>
+      
+      <!-- Product Details -->
+      <text x="68" y="24" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="700" font-size="12" fill="#1e293b">Pakistan Fresh Beef Bonele</text>
+      <text x="68" y="40" font-family="'Noto Sans Arabic', Arial, sans-serif" font-size="10" fill="#64748b">لحم بقري باكستاني طازج ب</text>
+      
+      <!-- Old Price -->
+      <text x="68" y="56" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="10" fill="#94a3b8" text-decoration="line-through">SAR 42.00</text>
+      
+      <!-- Offer Price Badge -->
+      <rect x="186" y="14" width="76" height="40" rx="8" fill="#e11d48"/>
+      <text x="224" y="32" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="14" fill="#ffffff" text-anchor="middle">SAR 29.95</text>
+      <text x="224" y="47" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="700" font-size="8" fill="#fef08a" text-anchor="middle">28% OFF</text>
+    </g>
+    <!-- Product Item 3 -->
+    <g transform="translate(14, 297)">
+      <rect width="272" height="68" rx="10" fill="#ffffff" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.12))"/>
+      
+      <!-- Icon/Tag Box -->
+      <rect x="8" y="8" width="52" height="52" rx="8" fill="#be123c" opacity="0.12"/>
+      <text x="34" y="40" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="24" text-anchor="middle">🍗</text>
+      
+      <!-- Product Details -->
+      <text x="68" y="24" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="700" font-size="12" fill="#1e293b">Fresh Chicken Drumsticks 9</text>
+      <text x="68" y="40" font-family="'Noto Sans Arabic', Arial, sans-serif" font-size="10" fill="#64748b">أفخاذ دجاج طازجة ٩٠٠ جم</text>
+      
+      <!-- Old Price -->
+      <text x="68" y="56" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="10" fill="#94a3b8" text-decoration="line-through">SAR 17.00</text>
+      
+      <!-- Offer Price Badge -->
+      <rect x="186" y="14" width="76" height="40" rx="8" fill="#e11d48"/>
+      <text x="224" y="32" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="14" fill="#ffffff" text-anchor="middle">SAR 11.95</text>
+      <text x="224" y="47" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="700" font-size="8" fill="#fef08a" text-anchor="middle">30% OFF</text>
+    </g>
+  
+  <!-- Footer Bar -->
+  <rect x="0" y="375" width="300" height="25" fill="#0f172a"/>
+  <text x="150" y="391" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="700" font-size="8.5" fill="#94a3b8" text-anchor="middle">OFFICIAL DIGITAL PROMOTIONS · PAGE 2 OF 6</text>
+</svg>

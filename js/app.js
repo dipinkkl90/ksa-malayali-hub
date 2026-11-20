@@ -1133,7 +1133,7 @@
         <div class="clic-flyer-cover-box" data-open-modal="${escapeHtml(flyer.id)}" role="button" tabindex="0" title="Click to open digital flyer booklet">
           <img src="${escapeHtml(flyer.cover)}" alt="${escapeHtml(flyer.title)}" class="clic-flyer-cover-img" loading="lazy">
           <span class="clic-flyer-views-pill">👁️ ${escapeHtml(flyer.views)} Views</span>
-          <span class="clic-flyer-pages-pill">📖 ${escapeHtml(flyer.pages_count)} Pages</span>
+          <span class="clic-flyer-pages-pill">📖 ${escapeHtml(flyer.pages_count)} Department Pages</span>
         </div>
         <div class="clic-flyer-content">
           <div class="clic-flyer-brand-row">
@@ -1284,17 +1284,42 @@
     const validityEl = $("clicModalValidity");
     const pageEl = $("clicModalPageIndicator");
     const imgEl = $("clicModalPageImg");
+    const liveBadge = $("clicModalLiveBadge");
     const officialBtn = $("clicModalOfficialBtn");
+    const fullFlyerBtn = $("clicModalFullFlyerBtn");
     const waShareBtn = $("clicModalWaShare");
+
+    const pages = currentModalFlyer.pages || [];
+    const totalPages = pages.length > 0 ? pages.length : (currentModalFlyer.pages_count || 1);
+    const firstPage = pages[0];
 
     if (titleEl) titleEl.textContent = flyer.title.toUpperCase();
     if (validityEl) validityEl.textContent = `VALID TILL ${flyer.valid_till.toUpperCase()} · ${flyer.days_left} DAYS LEFT`;
-    if (pageEl) pageEl.textContent = `Page ${currentModalPage} / ${flyer.pages_count}`;
-    if (imgEl) imgEl.src = flyer.cover;
-    if (officialBtn) officialBtn.href = flyer.official_url;
+    
+    if (pageEl) {
+      pageEl.textContent = firstPage 
+        ? `Page 1 / ${totalPages} · ${firstPage.title}`
+        : `Page 1 / ${totalPages}`;
+    }
+    if (imgEl) {
+      imgEl.src = firstPage ? firstPage.img : flyer.cover;
+      imgEl.alt = firstPage ? firstPage.title : flyer.title;
+    }
+    if (liveBadge && firstPage) {
+      liveBadge.textContent = firstPage.badge;
+    }
+    if (officialBtn) {
+      officialBtn.href = flyer.official_url;
+      officialBtn.innerHTML = `🌐 View Full ${flyer.full_catalog_pages || "Store"}-Page Catalog ↗`;
+      officialBtn.title = `Open official ${flyer.brand} deals on store portal`;
+    }
+    if (fullFlyerBtn) {
+      fullFlyerBtn.href = flyer.official_url;
+      fullFlyerBtn.innerHTML = `📄 Open Full ${flyer.full_catalog_pages || 85}-Page Catalog (${flyer.brand}) ↗`;
+    }
     if (waShareBtn) {
       waShareBtn.href = `https://api.whatsapp.com/send?text=${encodeURIComponent(
-        `Check out the latest ${flyer.brand} weekly flyer on KSA Malayali Hub: https://ksa-malayali-hub.vercel.app/`
+        `Check out the latest ${flyer.brand} weekly flyer on KSA Malayali Hub: https://dipinkkl90.github.io/ksa-malayali-hub/`
       )}`;
     }
 
@@ -1316,27 +1341,39 @@
 
   function flipClicFlyerModal(delta) {
     if (!currentModalFlyer) return;
-    const totalPages = currentModalFlyer.pages_count || 16;
+    const pages = currentModalFlyer.pages || [];
+    const totalPages = pages.length > 0 ? pages.length : (currentModalFlyer.pages_count || 1);
     currentModalPage += delta;
 
     if (currentModalPage < 1) currentModalPage = totalPages;
     if (currentModalPage > totalPages) currentModalPage = 1;
 
+    const pageObj = pages[currentModalPage - 1];
     const pageEl = $("clicModalPageIndicator");
     const imgEl = $("clicModalPageImg");
     const liveBadge = $("clicModalLiveBadge");
 
-    if (pageEl) pageEl.textContent = `Page ${currentModalPage} / ${totalPages}`;
-    if (liveBadge) liveBadge.textContent = `● PAGE ${currentModalPage} OF ${totalPages} · ${currentModalFlyer.brand.toUpperCase()}`;
+    if (pageEl) {
+      pageEl.textContent = pageObj 
+        ? `Page ${currentModalPage} / ${totalPages} · ${pageObj.title}`
+        : `Page ${currentModalPage} / ${totalPages}`;
+    }
+    if (liveBadge && pageObj) {
+      liveBadge.textContent = pageObj.badge;
+    }
 
-    // Smooth page flip animation
+    // Smooth page flip animation + Image switch!
     if (imgEl) {
-      imgEl.style.opacity = "0.4";
-      imgEl.style.transform = delta > 0 ? "translateX(10px)" : "translateX(-10px)";
+      imgEl.style.opacity = "0.2";
+      imgEl.style.transform = delta > 0 ? "translateX(16px)" : "translateX(-16px)";
       setTimeout(() => {
+        if (pageObj) {
+          imgEl.src = pageObj.img;
+          imgEl.alt = pageObj.title;
+        }
         imgEl.style.opacity = "1";
         imgEl.style.transform = "translateX(0)";
-      }, 150);
+      }, 120);
     }
   }
 
