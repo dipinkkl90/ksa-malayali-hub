@@ -9,7 +9,7 @@
     "full_address": "Prince Fawaz District, South Jeddah, Saudi Arabia",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=LuLu%20Hypermarket%20Amir%20Fawaz%20Jeddah",
     "phone": "+966 12 620 5455",
-    "offers_url": "https://www.luluhypermarket.com/en-sa/promotions",
+    "offers_url": "https://gcc.luluhypermarket.com/en-sa/deals/",
     "offers_whatsapp": "https://wa.me/966555122111?text=Hi%20LuLu%20Jeddah%20Offers",
     "specialties": [
       "Kerala Groceries",
@@ -32,7 +32,7 @@
     "full_address": "Al Jamia Plaza, Abdullah Sulayman St, Al Jamiah, Jeddah, Saudi Arabia",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=LuLu%20Hypermarket%20Al%20Jamia%20Jeddah",
     "phone": "+966 12 680 7700",
-    "offers_url": "https://www.luluhypermarket.com/en-sa/promotions",
+    "offers_url": "https://gcc.luluhypermarket.com/en-sa/deals/",
     "offers_whatsapp": "https://wa.me/966555122111?text=Hi%20LuLu%20Jeddah%20Offers",
     "specialties": [
       "Kerala Produce",
@@ -55,7 +55,7 @@
     "full_address": "Al Haramain Expressway, Al Marwah District, Jeddah, Saudi Arabia",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=LuLu%20Hypermarket%20Al%20Marwah%20Jeddah",
     "phone": "+966 12 654 3322",
-    "offers_url": "https://www.luluhypermarket.com/en-sa/promotions",
+    "offers_url": "https://gcc.luluhypermarket.com/en-sa/deals/",
     "offers_whatsapp": "https://wa.me/966555122111?text=Hi%20LuLu%20Jeddah%20Offers",
     "specialties": [
       "Huge Malayali Food Section",
@@ -134,6 +134,34 @@
     "rating": 4.2
   },
   {
+    "id": "HYPER-JED-07",
+    "brand": "Hyper Panda",
+    "brand_key": "panda",
+    "name": "HyperPanda — Al Marwah (Hira St Plaza)",
+    "name_ar": "هايبر بنده — حي المروة (مروة بلازا / شارع حراء)",
+    "city": "Jeddah",
+    "city_en": "Jeddah",
+    "district": "Al Marwah",
+    "district_ar": "حي المروة",
+    "area": "Al Marwah",
+    "mall": "Al Marwah Center / Hira Plaza",
+    "mall_ar": "مركز وسوق المروة بلازا",
+    "address": "Hira Street, Al Marwah District, Jeddah 23545, Saudi Arabia",
+    "latitude": 21.6215,
+    "longitude": 39.209,
+    "offers_url": "https://leaflet.panda.sa/",
+    "whatsapp": "https://wa.me/966920027707?text=Hi%20Panda%20Al%20Marwah%20Weekly%20Offers",
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Panda%20Supermarket%20Hira%20Street%20Al%20Marwah%20Jeddah",
+    "rating": 4.5,
+    "timings": "24 Hours / 7:00 AM – 2:00 AM",
+    "highlights": [
+      "Weekly Discounts",
+      "Fresh Produce & Dairy",
+      "Indian Spices & Groceries",
+      "Household & Electronics"
+    ]
+  },
+  {
     "id": "HYPER-RUH-01",
     "brand": "LuLu Hypermarket",
     "brand_key": "lulu",
@@ -143,7 +171,7 @@
     "full_address": "Riyadh Avenue Mall, King Faisal Rd, Al Murabba, Riyadh, Saudi Arabia",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=LuLu%20Hypermarket%20Riyadh%20Avenue%20Mall%20Murabba",
     "phone": "+966 11 405 9888",
-    "offers_url": "https://www.luluhypermarket.com/en-sa/promotions",
+    "offers_url": "https://gcc.luluhypermarket.com/en-sa/deals/",
     "offers_whatsapp": "https://wa.me/966555122111?text=Hi%20LuLu%20Riyadh%20Offers",
     "specialties": [
       "Massive Kerala Supermarket",
@@ -165,7 +193,7 @@
     "full_address": "Batha Commercial Center, Al Batha, Riyadh, Saudi Arabia",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=LuLu%20Hypermarket%20Al%20Batha%20Riyadh",
     "phone": "+966 11 286 5500",
-    "offers_url": "https://www.luluhypermarket.com/en-sa/promotions",
+    "offers_url": "https://gcc.luluhypermarket.com/en-sa/deals/",
     "offers_whatsapp": "https://wa.me/966555122111?text=Hi%20LuLu%20Riyadh%20Offers",
     "specialties": [
       "Heart of Pravasi Malayalis",
@@ -187,7 +215,7 @@
     "full_address": "Atyaf Mall, Imam Abdullah Ibn Saud Ibn Abdulaziz Rd, Al Yarmouk, Riyadh, Saudi Arabia",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=LuLu%20Hypermarket%20Atyaf%20Mall%20Yarmouk%20Riyadh",
     "phone": "+966 11 240 6600",
-    "offers_url": "https://www.luluhypermarket.com/en-sa/promotions",
+    "offers_url": "https://gcc.luluhypermarket.com/en-sa/deals/",
     "offers_whatsapp": "https://wa.me/966555122111?text=Hi%20LuLu%20Riyadh%20Offers",
     "specialties": [
       "Luxury Mall Hypermarket",
@@ -274,7 +302,7 @@
     "full_address": "Al Batha Commercial Area, Riyadh, Saudi Arabia",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=City%20Flower%20Hypermarket%20Batha%20Riyadh",
     "phone": "+966 11 409 1100",
-    "offers_url": "https://cityflowerksa.com/promotions/",
+    "offers_url": "https://cityflowerretail.com/",
     "offers_whatsapp": "https://wa.me/447460646263?text=Hi%20D%26J%20Techies!%20Send%20me%20City%20Flower%20Riyadh%20deals",
     "specialties": [
       "Value Supermarket",
@@ -340,7 +368,7 @@
     "full_address": "Al Ash Shati Al Sharqi, Corniche Rd, Dammam, Saudi Arabia",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=LuLu%20Hypermarket%20Ash%20Shati%20Dammam",
     "phone": "+966 13 809 4444",
-    "offers_url": "https://www.luluhypermarket.com/en-sa/promotions",
+    "offers_url": "https://gcc.luluhypermarket.com/en-sa/deals/",
     "offers_whatsapp": "https://wa.me/966555122111?text=Hi%20LuLu%20Dammam%20Offers",
     "specialties": [
       "Eastern Province Flagship",
@@ -362,7 +390,7 @@
     "full_address": "Ibn Khaldoun Mall, King Fahd Rd, Dammam, Saudi Arabia",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=LuLu%20Hypermarket%20Ibn%20Khaldoun%20Mall%20Dammam",
     "phone": "+966 13 841 8800",
-    "offers_url": "https://www.luluhypermarket.com/en-sa/promotions",
+    "offers_url": "https://gcc.luluhypermarket.com/en-sa/deals/",
     "offers_whatsapp": "https://wa.me/966555122111?text=Hi%20LuLu%20Dammam%20Offers",
     "specialties": [
       "Mall Shopping Destination",
@@ -428,7 +456,7 @@
     "full_address": "Opposite Telemoney / Near Seiko, 11th Street, Al Souq, Dammam, Saudi Arabia",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=City%20Flower%20Seiko%20Dammam",
     "phone": "+966 13 834 6611",
-    "offers_url": "https://cityflowerksa.com/promotions/",
+    "offers_url": "https://cityflowerretail.com/",
     "offers_whatsapp": "https://wa.me/447460646263?text=Hi%20D%26J%20Techies!%20Send%20me%20City%20Flower%20Dammam%20deals",
     "specialties": [
       "Household Essentials",
@@ -494,7 +522,7 @@
     "full_address": "Al Khubaib Commercial Center, Buraidah, Al Qassim, Saudi Arabia",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=City%20Flower%20Buraidah%20Al%20Qassim",
     "phone": "+966 16 325 4488",
-    "offers_url": "https://cityflowerksa.com/promotions/",
+    "offers_url": "https://cityflowerretail.com/",
     "offers_whatsapp": "https://wa.me/447460646263?text=Hi%20D%26J%20Techies!%20Send%20me%20City%20Flower%20Buraidah%20deals",
     "specialties": [
       "Pravasi Shopping Hub in Qassim",
@@ -516,7 +544,7 @@
     "full_address": "Tabuk Park Mall, King Fahd Road, Tabuk 47914, Saudi Arabia",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=LuLu%20Hypermarket%20Tabuk%20Park%20Mall",
     "phone": "+966 14 429 8800",
-    "offers_url": "https://www.luluhypermarket.com/en-sa/promotions",
+    "offers_url": "https://gcc.luluhypermarket.com/en-sa/deals/",
     "offers_whatsapp": "https://wa.me/966555122111?text=Hi%20LuLu%20Tabuk%20Offers",
     "specialties": [
       "Northwestern Flagship Mall",
@@ -582,7 +610,7 @@
     "full_address": "King Abdulaziz Rd, Asir Region, Saudi Arabia",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=City%20Flower%20Khamis%20Mushait%20Abha",
     "phone": "+966 17 228 3344",
-    "offers_url": "https://cityflowerksa.com/promotions/",
+    "offers_url": "https://cityflowerretail.com/",
     "offers_whatsapp": "https://wa.me/447460646263?text=Hi%20D%26J%20Techies!%20Send%20me%20City%20Flower%20Khamis%20deals",
     "specialties": [
       "Department Store & Household",
@@ -604,7 +632,7 @@
     "full_address": "Al Diyafa Mall, Al Hujoon St, Al Zaher, Makkah, Saudi Arabia",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=LuLu%20Hypermarket%20Al%20Diyafa%20Mall%20Makkah",
     "phone": "+966 12 549 7700",
-    "offers_url": "https://www.luluhypermarket.com/en-sa/promotions",
+    "offers_url": "https://gcc.luluhypermarket.com/en-sa/deals/",
     "offers_whatsapp": "https://wa.me/966555122111?text=Hi%20LuLu%20Makkah%20Offers",
     "specialties": [
       "Pilgrim & Expat Superstore",
@@ -626,7 +654,7 @@
     "full_address": "King Fahd Rd, Near Knowledge Economic City, Madinah, Saudi Arabia",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=LuLu%20Hypermarket%20King%20Fahd%20Road%20Madinah",
     "phone": "+966 14 845 9900",
-    "offers_url": "https://www.luluhypermarket.com/en-sa/promotions",
+    "offers_url": "https://gcc.luluhypermarket.com/en-sa/deals/",
     "offers_whatsapp": "https://wa.me/966555122111?text=Hi%20LuLu%20Madinah%20Offers",
     "specialties": [
       "Madinah Premier Expat Retailer",
@@ -648,7 +676,7 @@
     "full_address": "King Abdulaziz Road, Central Sakaka 72341, Al Jouf Region, Saudi Arabia",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=City%20Flower%20Sakaka%20Al%20Jouf",
     "phone": "+966 14 624 7722",
-    "offers_url": "https://cityflowerksa.com/promotions/",
+    "offers_url": "https://cityflowerretail.com/",
     "offers_whatsapp": "https://wa.me/447460646263?text=Hi%20D%26J%20Techies!%20Send%20me%20City%20Flower%20Al%20Jouf%20deals",
     "specialties": [
       "Al Jouf Pravasi Department Store",
@@ -669,7 +697,7 @@
     "full_address": "Taif Central Region, Makkah Province, Saudi Arabia",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=Hypermarkets%20Taif%20Saudi%20Arabia",
     "phone": "+966 12 733 4400",
-    "offers_url": "https://www.luluhypermarket.com/en-sa/promotions",
+    "offers_url": "https://gcc.luluhypermarket.com/en-sa/deals/",
     "offers_whatsapp": "https://wa.me/966555122111?text=Hi%20LuLu%20Taif%20Offers",
     "specialties": [
       "Taif Region Deliveries & Deals",

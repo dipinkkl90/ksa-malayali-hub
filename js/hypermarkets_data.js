@@ -11,7 +11,7 @@ window.RETAILER_BRANDS = [
     is_new: true,
     offers_count: "45+ Deals",
     flyer_id: "FLYER-LULU-01",
-    official_url: "https://www.luluhypermarket.com/en-sa/promotions",
+    official_url: "https://gcc.luluhypermarket.com/en-sa/deals/",
     whatsapp: "https://wa.me/966555122111?text=Hi%20LuLu%20KSA%20Weekly%20Offers"
   },
   {
@@ -35,7 +35,7 @@ window.RETAILER_BRANDS = [
     is_new: true,
     offers_count: "42+ Deals",
     flyer_id: "FLYER-PANDA-01",
-    official_url: "https://panda.com.sa/promotions",
+    official_url: "https://leaflet.panda.sa/",
     whatsapp: "https://wa.me/966920027707?text=Hi%20Panda%20KSA%20Weekly%20Offers"
   },
   {
@@ -47,7 +47,7 @@ window.RETAILER_BRANDS = [
     is_new: false,
     offers_count: "50+ Deals",
     flyer_id: "FLYER-CARREFOUR-01",
-    official_url: "https://www.carrefourksa.com/mafksa/en/promotions",
+    official_url: "https://www.carrefourksa.com/",
     whatsapp: "https://wa.me/966920000282?text=Hi%20Carrefour%20KSA%20Offers"
   },
   {
@@ -59,7 +59,7 @@ window.RETAILER_BRANDS = [
     is_new: true,
     offers_count: "30+ Deals",
     flyer_id: "FLYER-DANUBE-01",
-    official_url: "https://danube.sa/en/promotions",
+    official_url: "https://danube.sa/en",
     whatsapp: "https://wa.me/966920001002?text=Hi%20Danube%20KSA%20Weekly%20Offers"
   },
   {
@@ -71,7 +71,7 @@ window.RETAILER_BRANDS = [
     is_new: true,
     offers_count: "28+ Deals",
     flyer_id: "FLYER-BINDAWOOD-01",
-    official_url: "https://bindawood.com/promotions/",
+    official_url: "https://www.bindawoodholding.com/",
     whatsapp: "https://wa.me/966920022285?text=Hi%20BinDawood%20Weekly%20Deals"
   },
   {
@@ -83,7 +83,7 @@ window.RETAILER_BRANDS = [
     is_new: true,
     offers_count: "35+ Deals",
     flyer_id: "FLYER-OTHAIM-01",
-    official_url: "https://othaimmarkets.com/promotions",
+    official_url: "https://www.othaimmarkets.com/ar",
     whatsapp: "https://wa.me/966920000702?text=Hi%20Othaim%20Weekly%20Offers"
   },
   {
@@ -95,7 +95,7 @@ window.RETAILER_BRANDS = [
     is_new: true,
     offers_count: "25+ Deals",
     flyer_id: "FLYER-GRAND-01",
-    official_url: "https://www.grandhyper.com/ksa/",
+    official_url: "https://grandhypermarket.com/",
     whatsapp: "https://wa.me/966555144333?text=Hi%20Grand%20Hyper%20Weekly%20Offers"
   },
   {
@@ -107,7 +107,7 @@ window.RETAILER_BRANDS = [
     is_new: false,
     offers_count: "22+ Deals",
     flyer_id: "FLYER-CITYFLOWER-01",
-    official_url: "https://www.cityflower.com/promotions/",
+    official_url: "https://cityflowerretail.com/",
     whatsapp: "https://wa.me/966555166555?text=Hi%20City%20Flower%20Weekly%20Offers"
   },
   {
@@ -119,7 +119,7 @@ window.RETAILER_BRANDS = [
     is_new: true,
     offers_count: "20+ Deals",
     flyer_id: "FLYER-ALMADINA-01",
-    official_url: "https://almadinahyper.com/offers",
+    official_url: "https://www.facebook.com/almadinahypermarketksa/",
     whatsapp: "https://wa.me/966555177888?text=Hi%20Al%20Madina%20Weekly%20Offers"
   },
   {
@@ -131,7 +131,7 @@ window.RETAILER_BRANDS = [
     is_new: true,
     offers_count: "18+ Deals",
     flyer_id: "FLYER-FARM-01",
-    official_url: "https://farm.com.sa/promotions",
+    official_url: "https://farm.com.sa/",
     whatsapp: "https://wa.me/966920000888?text=Hi%20Farm%20Superstores%20Offers"
   },
   {
@@ -180,7 +180,7 @@ window.FLYER_CATALOGS = [
     pages_count: 85,
     category: "grocery",
     highlight: "Up to 70% OFF on Basmati Rice, Malabar Fish & Groceries",
-    official_url: "https://www.luluhypermarket.com/en-sa/promotions",
+    official_url: "https://gcc.luluhypermarket.com/en-sa/deals/",
     whatsapp_cta: "https://wa.me/447460646263?text=Hi%20D%26J!%20Please%20send%20me%20the%20LuLu%20Weekly%20PDF%20Flyer."
   },
   {
@@ -212,7 +212,7 @@ window.FLYER_CATALOGS = [
     pages_count: 36,
     category: "fruits",
     highlight: "Fresh Farm Fruits, Cheeses & Dairy BOGO Free Fest",
-    official_url: "https://panda.com.sa/promotions",
+    official_url: "https://leaflet.panda.sa/",
     whatsapp_cta: "https://wa.me/447460646263?text=Hi%20D%26J!%20Please%20send%20me%20the%20Panda%20Weekly%20PDF%20Flyer."
   },
   {
@@ -228,7 +228,7 @@ window.FLYER_CATALOGS = [
     pages_count: 52,
     category: "electronics",
     highlight: "Smart TVs, Samsung Galaxy S24 Ultra & Household Essentials",
-    official_url: "https://www.carrefourksa.com/mafksa/en/promotions",
+    official_url: "https://www.carrefourksa.com/",
     whatsapp_cta: "https://wa.me/447460646263?text=Hi%20D%26J!%20Please%20send%20me%20the%20Carrefour%20Weekly%20PDF%20Flyer."
   },
   {
@@ -244,7 +244,7 @@ window.FLYER_CATALOGS = [
     pages_count: 32,
     category: "grocery",
     highlight: "SAR 10 & 20 Super Deals on Onions, Spices & Tea",
-    official_url: "https://www.grandhyper.com/ksa/",
+    official_url: "https://grandhypermarket.com/",
     whatsapp_cta: "https://wa.me/447460646263?text=Hi%20D%26J!%20Please%20send%20me%20the%20Grand%20Hyper%20Weekly%20PDF%20Flyer."
   },
   {
@@ -260,7 +260,7 @@ window.FLYER_CATALOGS = [
     pages_count: 40,
     category: "bakery",
     highlight: "Fresh Croissants, Imported Cheeses & Organic Produce",
-    official_url: "https://danube.sa/en/promotions",
+    official_url: "https://danube.sa/en",
     whatsapp_cta: "https://wa.me/447460646263?text=Hi%20D%26J!%20Please%20send%20me%20the%20Danube%20Weekly%20PDF%20Flyer."
   },
   {
@@ -276,7 +276,7 @@ window.FLYER_CATALOGS = [
     pages_count: 28,
     category: "household",
     highlight: "Everyday SAR 5 & 10 Specials, Kerala Lungis & Kitchenware",
-    official_url: "https://www.cityflower.com/promotions/",
+    official_url: "https://cityflowerretail.com/",
     whatsapp_cta: "https://wa.me/447460646263?text=Hi%20D%26J!%20Please%20send%20me%20the%20City%20Flower%20Weekly%20PDF%20Flyer."
   }
 ];
@@ -297,7 +297,7 @@ window.HYPERMARKET_DATA = [
     full_address: "Prince Fawaz District, South Jeddah, Saudi Arabia",
     maps_url: "https://www.google.com/maps/search/?api=1&query=LuLu%20Hypermarket%20Amir%20Fawaz%20Jeddah",
     phone: "+966 12 620 5455",
-    offers_url: "https://www.luluhypermarket.com/en-sa/promotions",
+    offers_url: "https://gcc.luluhypermarket.com/en-sa/deals/",
     offers_whatsapp: "https://wa.me/966555122111?text=Hi%20LuLu%20Jeddah%20Offers",
     specialties: ["Kerala Groceries", "Fresh Malabar Fish", "Live Bakery & Snacks", "Hot Food Section", "Weekly Super Deals"],
     verified: true,
@@ -314,7 +314,7 @@ window.HYPERMARKET_DATA = [
     full_address: "Al Jamia Plaza, Abdullah Sulayman St, Al Jamiah, Jeddah, Saudi Arabia",
     maps_url: "https://www.google.com/maps/search/?api=1&query=LuLu%20Hypermarket%20Al%20Jamia%20Jeddah",
     phone: "+966 12 680 7700",
-    offers_url: "https://www.luluhypermarket.com/en-sa/promotions",
+    offers_url: "https://gcc.luluhypermarket.com/en-sa/deals/",
     offers_whatsapp: "https://wa.me/966555122111?text=Hi%20LuLu%20Jeddah%20Offers",
     specialties: ["Kerala Produce", "Indian Spices & Rice", "Hot Porotta & Curries", "Department Store", "Electronics"],
     verified: true,
@@ -331,7 +331,7 @@ window.HYPERMARKET_DATA = [
     full_address: "Al Haramain Expressway, Al Marwah District, Jeddah, Saudi Arabia",
     maps_url: "https://www.google.com/maps/search/?api=1&query=LuLu%20Hypermarket%20Al%20Marwah%20Jeddah",
     phone: "+966 12 654 3322",
-    offers_url: "https://www.luluhypermarket.com/en-sa/promotions",
+    offers_url: "https://gcc.luluhypermarket.com/en-sa/deals/",
     offers_whatsapp: "https://wa.me/966555122111?text=Hi%20LuLu%20Jeddah%20Offers",
     specialties: ["Huge Malayali Food Section", "Live Fresh Meat & Fish", "Kerala Banana & Vegetables", "Household Deals"],
     verified: true,
@@ -389,6 +389,24 @@ window.HYPERMARKET_DATA = [
     timing: "7:30 AM – 12:30 AM",
     rating: 4.2
   },
+  {
+    id: "HYPER-JED-07",
+    brand: "Hyper Panda",
+    brand_key: "panda",
+    name: "HyperPanda — Al Marwah (Hira St Plaza)",
+    city: "Jeddah",
+    area: "Al Marwah",
+    full_address: "Hira Street, Al Marwah District, Jeddah, Saudi Arabia",
+    maps_url: "https://www.google.com/maps/search/?api=1&query=Panda%20Supermarket%20Hira%20Street%20Al%20Marwah%20Jeddah",
+    phone: "+966 9200 27707",
+    offers_url: "https://leaflet.panda.sa/",
+    offers_whatsapp: "https://wa.me/966920027707?text=Hi%20Panda%20Al%20Marwah%20Weekly%20Offers",
+    specialties: ["Weekly Discounts", "Fresh Produce & Dairy", "Indian Spices & Groceries", "Bakery"],
+    verified: true,
+    timing: "24 Hours / 7:00 AM – 2:00 AM",
+    rating: 4.5
+  },
+
 
   // ===================== RIYADH =====================
   {
@@ -401,7 +419,7 @@ window.HYPERMARKET_DATA = [
     full_address: "Riyadh Avenue Mall, King Faisal Rd, Al Murabba, Riyadh, Saudi Arabia",
     maps_url: "https://www.google.com/maps/search/?api=1&query=LuLu%20Hypermarket%20Riyadh%20Avenue%20Mall%20Murabba",
     phone: "+966 11 405 9888",
-    offers_url: "https://www.luluhypermarket.com/en-sa/promotions",
+    offers_url: "https://gcc.luluhypermarket.com/en-sa/deals/",
     offers_whatsapp: "https://wa.me/966555122111?text=Hi%20LuLu%20Riyadh%20Offers",
     specialties: ["Massive Kerala Supermarket", "Hot Food Counters", "Fresh Malabar Beef & Fish", "Expat Department Store"],
     verified: true,
@@ -418,7 +436,7 @@ window.HYPERMARKET_DATA = [
     full_address: "Batha Commercial Center, Al Batha, Riyadh, Saudi Arabia",
     maps_url: "https://www.google.com/maps/search/?api=1&query=LuLu%20Hypermarket%20Al%20Batha%20Riyadh",
     phone: "+966 11 286 5500",
-    offers_url: "https://www.luluhypermarket.com/en-sa/promotions",
+    offers_url: "https://gcc.luluhypermarket.com/en-sa/deals/",
     offers_whatsapp: "https://wa.me/966555122111?text=Hi%20LuLu%20Riyadh%20Offers",
     specialties: ["Heart of Pravasi Malayalis", "Fresh Kerala Vegetables flown in", "Kerala Traditional Sweets", "Budget Deals"],
     verified: true,
@@ -435,7 +453,7 @@ window.HYPERMARKET_DATA = [
     full_address: "Atyaf Mall, Imam Abdullah Ibn Saud Ibn Abdulaziz Rd, Al Yarmouk, Riyadh, Saudi Arabia",
     maps_url: "https://www.google.com/maps/search/?api=1&query=LuLu%20Hypermarket%20Atyaf%20Mall%20Yarmouk%20Riyadh",
     phone: "+966 11 240 6600",
-    offers_url: "https://www.luluhypermarket.com/en-sa/promotions",
+    offers_url: "https://gcc.luluhypermarket.com/en-sa/deals/",
     offers_whatsapp: "https://wa.me/966555122111?text=Hi%20LuLu%20Riyadh%20Offers",
     specialties: ["Luxury Mall Hypermarket", "Organic & Kerala Spices", "Bakery & Deli", "Home Goods"],
     verified: true,
@@ -503,7 +521,7 @@ window.HYPERMARKET_DATA = [
     full_address: "Al Batha Commercial Area, Riyadh, Saudi Arabia",
     maps_url: "https://www.google.com/maps/search/?api=1&query=City%20Flower%20Hypermarket%20Batha%20Riyadh",
     phone: "+966 11 409 1100",
-    offers_url: "https://cityflowerksa.com/promotions/",
+    offers_url: "https://cityflowerretail.com/",
     offers_whatsapp: "https://wa.me/447460646263?text=Hi%20D%26J%20Techies!%20Send%20me%20City%20Flower%20Riyadh%20deals",
     specialties: ["Value Supermarket", "Household & Garments", "Kerala Grocery Essentials", "Weekend Price Drops"],
     verified: true,
@@ -556,7 +574,7 @@ window.HYPERMARKET_DATA = [
     full_address: "Al Ash Shati Al Sharqi, Corniche Rd, Dammam, Saudi Arabia",
     maps_url: "https://www.google.com/maps/search/?api=1&query=LuLu%20Hypermarket%20Ash%20Shati%20Dammam",
     phone: "+966 13 809 4444",
-    offers_url: "https://www.luluhypermarket.com/en-sa/promotions",
+    offers_url: "https://gcc.luluhypermarket.com/en-sa/deals/",
     offers_whatsapp: "https://wa.me/966555122111?text=Hi%20LuLu%20Dammam%20Offers",
     specialties: ["Eastern Province Flagship", "Complete Kerala Kitchen Essentials", "Hot Malayali Snacks", "Massive Fresh Counters"],
     verified: true,
@@ -573,7 +591,7 @@ window.HYPERMARKET_DATA = [
     full_address: "Ibn Khaldoun Mall, King Fahd Rd, Dammam, Saudi Arabia",
     maps_url: "https://www.google.com/maps/search/?api=1&query=LuLu%20Hypermarket%20Ibn%20Khaldoun%20Mall%20Dammam",
     phone: "+966 13 841 8800",
-    offers_url: "https://www.luluhypermarket.com/en-sa/promotions",
+    offers_url: "https://gcc.luluhypermarket.com/en-sa/deals/",
     offers_whatsapp: "https://wa.me/966555122111?text=Hi%20LuLu%20Dammam%20Offers",
     specialties: ["Mall Shopping Destination", "Direct Kerala Imports", "Fish & Seafood Special", "Household & Electronics"],
     verified: true,
@@ -624,7 +642,7 @@ window.HYPERMARKET_DATA = [
     full_address: "Opposite Telemoney / Near Seiko, 11th Street, Al Souq, Dammam, Saudi Arabia",
     maps_url: "https://www.google.com/maps/search/?api=1&query=City%20Flower%20Seiko%20Dammam",
     phone: "+966 13 834 6611",
-    offers_url: "https://cityflowerksa.com/promotions/",
+    offers_url: "https://cityflowerretail.com/",
     offers_whatsapp: "https://wa.me/447460646263?text=Hi%20D%26J%20Techies!%20Send%20me%20City%20Flower%20Dammam%20deals",
     specialties: ["Household Essentials", "Luggage & Travel Bags", "Daily Budget Supplies", "Seasonal Mega Discounts"],
     verified: true,
@@ -677,7 +695,7 @@ window.HYPERMARKET_DATA = [
     full_address: "Al Khubaib Commercial Center, Buraidah, Al Qassim, Saudi Arabia",
     maps_url: "https://www.google.com/maps/search/?api=1&query=City%20Flower%20Buraidah%20Al%20Qassim",
     phone: "+966 16 325 4488",
-    offers_url: "https://cityflowerksa.com/promotions/",
+    offers_url: "https://cityflowerretail.com/",
     offers_whatsapp: "https://wa.me/447460646263?text=Hi%20D%26J%20Techies!%20Send%20me%20City%20Flower%20Buraidah%20deals",
     specialties: ["Pravasi Shopping Hub in Qassim", "Garments, Home & Kitchen", "Super Saver Sales", "Luggage & Gifts"],
     verified: true,
@@ -696,7 +714,7 @@ window.HYPERMARKET_DATA = [
     full_address: "Tabuk Park Mall, King Fahd Road, Tabuk 47914, Saudi Arabia",
     maps_url: "https://www.google.com/maps/search/?api=1&query=LuLu%20Hypermarket%20Tabuk%20Park%20Mall",
     phone: "+966 14 429 8800",
-    offers_url: "https://www.luluhypermarket.com/en-sa/promotions",
+    offers_url: "https://gcc.luluhypermarket.com/en-sa/deals/",
     offers_whatsapp: "https://wa.me/966555122111?text=Hi%20LuLu%20Tabuk%20Offers",
     specialties: ["Northwestern Flagship Mall", "Full Kerala Food Section", "Fresh Produce & Fish", "Electronics & Household"],
     verified: true,
@@ -749,7 +767,7 @@ window.HYPERMARKET_DATA = [
     full_address: "King Abdulaziz Rd, Asir Region, Saudi Arabia",
     maps_url: "https://www.google.com/maps/search/?api=1&query=City%20Flower%20Khamis%20Mushait%20Abha",
     phone: "+966 17 228 3344",
-    offers_url: "https://cityflowerksa.com/promotions/",
+    offers_url: "https://cityflowerretail.com/",
     offers_whatsapp: "https://wa.me/447460646263?text=Hi%20D%26J%20Techies!%20Send%20me%20City%20Flower%20Khamis%20deals",
     specialties: ["Department Store & Household", "Discounted Kitchenware", "Expat Apparel", "Seasonal Mega Sales"],
     verified: true,
@@ -768,7 +786,7 @@ window.HYPERMARKET_DATA = [
     full_address: "Al Diyafa Mall, Al Hujoon St, Al Zaher, Makkah, Saudi Arabia",
     maps_url: "https://www.google.com/maps/search/?api=1&query=LuLu%20Hypermarket%20Al%20Diyafa%20Mall%20Makkah",
     phone: "+966 12 549 7700",
-    offers_url: "https://www.luluhypermarket.com/en-sa/promotions",
+    offers_url: "https://gcc.luluhypermarket.com/en-sa/deals/",
     offers_whatsapp: "https://wa.me/966555122111?text=Hi%20LuLu%20Makkah%20Offers",
     specialties: ["Pilgrim & Expat Superstore", "Kerala Ready-to-Eat Food", "Fresh Fruits & Nuts", "Daily Hot Food & Bakery"],
     verified: true,
@@ -787,7 +805,7 @@ window.HYPERMARKET_DATA = [
     full_address: "King Fahd Rd, Near Knowledge Economic City, Madinah, Saudi Arabia",
     maps_url: "https://www.google.com/maps/search/?api=1&query=LuLu%20Hypermarket%20King%20Fahd%20Road%20Madinah",
     phone: "+966 14 845 9900",
-    offers_url: "https://www.luluhypermarket.com/en-sa/promotions",
+    offers_url: "https://gcc.luluhypermarket.com/en-sa/deals/",
     offers_whatsapp: "https://wa.me/966555122111?text=Hi%20LuLu%20Madinah%20Offers",
     specialties: ["Madinah Premier Expat Retailer", "Full Range of South Indian Groceries", "Halwa, Snacks & Pickles", "Prayer Essentials"],
     verified: true,
@@ -806,7 +824,7 @@ window.HYPERMARKET_DATA = [
     full_address: "King Abdulaziz Road, Central Sakaka 72341, Al Jouf Region, Saudi Arabia",
     maps_url: "https://www.google.com/maps/search/?api=1&query=City%20Flower%20Sakaka%20Al%20Jouf",
     phone: "+966 14 624 7722",
-    offers_url: "https://cityflowerksa.com/promotions/",
+    offers_url: "https://cityflowerretail.com/",
     offers_whatsapp: "https://wa.me/447460646263?text=Hi%20D%26J%20Techies!%20Send%20me%20City%20Flower%20Al%20Jouf%20deals",
     specialties: ["Al Jouf Pravasi Department Store", "Household, Linens & Grocery Deals", "Seasonal Mega Discounts"],
     verified: true,
@@ -825,7 +843,7 @@ window.HYPERMARKET_DATA = [
     full_address: "Taif Central Region, Makkah Province, Saudi Arabia",
     maps_url: "https://www.google.com/maps/search/?api=1&query=Hypermarkets%20Taif%20Saudi%20Arabia",
     phone: "+966 12 733 4400",
-    offers_url: "https://www.luluhypermarket.com/en-sa/promotions",
+    offers_url: "https://gcc.luluhypermarket.com/en-sa/deals/",
     offers_whatsapp: "https://wa.me/966555122111?text=Hi%20LuLu%20Taif%20Offers",
     specialties: ["Taif Region Deliveries & Deals", "Weekly Digital Flyers", "Fresh Groceries & Indian Produce"],
     verified: true,
