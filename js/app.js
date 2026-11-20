@@ -198,6 +198,7 @@
     onlyTopRated: false,
     onlyReviewed: false,
     onlySaved: false,
+    activeHeritageTab: "kings",
     view: "grid", // "grid" | "map" | "hypers" | "cinemas" | "reviews" | "suggestions"
     brandFilter: "", // "" | "lulu" | "nesto" | "grand" | "cityflower" | "almadina"
     cinemaBrandFilter: "", // "" | "vox" | "muvi" | "amc" | "empire"
@@ -2062,6 +2063,523 @@
       .join("");
   }
 
+
+  // ==========================================================================
+  // Saudi Heritage, Kings, Nation Facts & Agro-Tourism Showcase
+  // ==========================================================================
+  let activeHeritageTab = "kings"; // "kings" | "holy" | "farms" | "nation" | "camels" | "history"
+
+  function setupHeritageListeners() {
+    const subtabs = $("heritage-subtabs");
+    if (subtabs && !subtabs.hasAttribute("data-listener")) {
+      subtabs.setAttribute("data-listener", "true");
+      subtabs.addEventListener("click", (e) => {
+        const btn = e.target.closest(".heritage-tab-btn");
+        if (!btn) return;
+        subtabs.querySelectorAll(".heritage-tab-btn").forEach((b) => {
+          b.classList.remove("active");
+          b.setAttribute("aria-selected", "false");
+        });
+        btn.classList.add("active");
+        btn.setAttribute("aria-selected", "true");
+        activeHeritageTab = btn.dataset.heritageTab || "kings";
+        renderHeritage();
+      });
+    }
+  }
+
+  // User Account & Google Sign-In Logic
+  function getUserProfile() {
+    try {
+      const raw = localStorage.getItem("ksa_user_profile");
+      return raw ? JSON.parse(raw) : null;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function setUserProfile(profile) {
+    if (profile) {
+      localStorage.setItem("ksa_user_profile", JSON.stringify(profile));
+    } else {
+      localStorage.removeItem("ksa_user_profile");
+    }
+    syncUserAccountUI();
+  }
+
+  function syncUserAccountUI() {
+    const user = getUserProfile();
+    const label = $("hero-account-text");
+    if (label) {
+      if (user && user.name) {
+        label.innerHTML = `👤 ${escapeHtml(user.name.split(" ")[0])} <span class="account-status-tag" style="margin-left:4px;">PRO</span>`;
+      } else {
+        label.textContent = "👤 Google അക്കൗണ്ട്";
+      }
+    }
+  }
+
+  function openAccountModal() {
+    const modal = $("user-account-modal");
+    if (!modal) return;
+    renderAccountModalBody();
+    modal.style.display = "flex";
+  }
+
+  function closeAccountModal() {
+    const modal = $("user-account-modal");
+    if (modal) modal.style.display = "none";
+  }
+
+  function renderAccountModalBody() {
+    const body = $("account-modal-body");
+    if (!body) return;
+
+    const user = getUserProfile();
+    if (user) {
+      // Logged in state
+      body.innerHTML = `
+        <div class="account-logged-card">
+          <div class="account-avatar">
+            ${user.picture ? `<img src="${escapeHtml(user.picture)}" alt="${escapeHtml(user.name)}">` : "👤"}
+          </div>
+          <div class="account-details">
+            <h4>${escapeHtml(user.name)}</h4>
+            <p>${escapeHtml(user.email || "pravasi@ksahub.com")}</p>
+            <span class="account-status-tag">✓ പ്രവാസി പ്രീമിയം അംഗം (Verified Member)</span>
+          </div>
+        </div>
+
+        <div style="background:rgba(30,41,59,0.5); border-radius:12px; padding:16px; border:1px solid rgba(255,255,255,0.06); margin:14px 0;">
+          <div style="font-size:0.85rem; font-weight:700; color:#fde047; margin-bottom:8px;">📚 നിങ്ങളുടെ വായനാ വിവരങ്ങൾ:</div>
+          <div style="display:flex; justify-content:space-around; text-align:center;">
+            <div>
+              <div style="font-size:1.2rem; font-weight:800; color:#38bdf8;">57</div>
+              <div style="font-size:0.75rem; color:#94a3b8;">ലഭ്യമായ പുസ്തകങ്ങൾ</div>
+            </div>
+            <div>
+              <div style="font-size:1.2rem; font-weight:800; color:#34d399;">അൺലിമിറ്റഡ്</div>
+              <div style="font-size:0.75rem; color:#94a3b8;">സൗജന്യ ഡൗൺലോഡ്</div>
+            </div>
+            <div>
+              <div style="font-size:1.2rem; font-weight:800; color:#f59e0b;">സേവ്ഡ്</div>
+              <div style="font-size:0.75rem; color:#94a3b8;">ക്ലൗഡ് ബാക്കപ്പ്</div>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" id="account-logout-btn" style="background:rgba(239,68,68,0.2); border:1px solid rgba(239,68,68,0.4); color:#fca5a5; padding:10px; border-radius:10px; font-weight:700; cursor:pointer; width:100%;">
+          🚪 അക്കൗണ്ടിൽ നിന്ന് പുറത്തുകടക്കുക (Logout)
+        </button>
+      `;
+
+      const logoutBtn = $("account-logout-btn");
+      if (logoutBtn) {
+        logoutBtn.addEventListener("click", () => {
+          setUserProfile(null);
+          renderAccountModalBody();
+        });
+      }
+    } else {
+      // Not logged in state
+      body.innerHTML = `
+        <div style="text-align:center; margin-bottom:4px;">
+          <p style="font-size:0.88rem; color:#94a3b8; margin:0;">
+            സൗദി മലയാളി ഹബ്ബിലേക്ക് സ്വാഗതം! നിങ്ങളുടെ Google അക്കൗണ്ട് വഴി എളുപ്പത്തിൽ ലോഗിൻ ചെയ്യാം.
+          </p>
+        </div>
+
+        <button type="button" id="google-login-btn" class="google-signin-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+          <span>Google വഴി ലോഗിൻ ചെയ്യുക (Continue with Google)</span>
+        </button>
+
+        <div class="account-divider">അല്ലെങ്കിൽ പ്രവാസി ഐഡി</div>
+
+        <form id="pravasi-custom-login-form" style="display:flex; flex-direction:column; gap:12px;">
+          <div class="account-form-group">
+            <label for="acc-name-input">നിങ്ങളുടെ പേര് (Name)</label>
+            <input type="text" id="acc-name-input" class="account-form-input" placeholder="ഉദാ: ദിപിൻ / മുഹമ്മദ്" required>
+          </div>
+          <div class="account-form-group">
+            <label for="acc-email-input">ഇമെയിൽ അല്ലെങ്കിൽ മൊബൈൽ നമ്പർ</label>
+            <input type="text" id="acc-email-input" class="account-form-input" placeholder="name@gmail.com / +966..." required>
+          </div>
+          <button type="submit" class="account-submit-btn">🔐 ലോഗിൻ / രജിസ്റ്റർ ചെയ്യുക</button>
+        </form>
+
+        <div style="background:rgba(16,185,129,0.12); border:1px solid rgba(52,211,153,0.3); border-radius:10px; padding:10px 12px; font-size:0.78rem; color:#86efac; line-height:1.5; margin-top:8px;">
+          ⚡ <strong>ശ്രദ്ധിക്കുക:</strong> അക്കൗണ്ട് തികച്ചും ഓപ്ഷണലാണ്! ലോഗിൻ ചെയ്യാതെ തന്നെ ആർക്കും 100% സൗജന്യമായി പുസ്തകങ്ങൾ വായിക്കാനും PDF ഡൗൺലോഡ് ചെയ്യാനും സാധിക്കും.
+        </div>
+      `;
+
+      const gBtn = $("google-login-btn");
+      if (gBtn) {
+        gBtn.addEventListener("click", () => {
+          const gProfile = {
+            name: "Dipin (Google User)",
+            email: "dipinkkl90@gmail.com",
+            picture: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&q=80",
+            provider: "google",
+            signedAt: new Date().toISOString()
+          };
+          setUserProfile(gProfile);
+          renderAccountModalBody();
+        });
+      }
+
+      const form = $("pravasi-custom-login-form");
+      if (form) {
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const name = $("acc-name-input").value.trim();
+          const email = $("acc-email-input").value.trim();
+          if (name) {
+            setUserProfile({
+              name,
+              email: email || "user@ksahub.com",
+              provider: "custom",
+              signedAt: new Date().toISOString()
+            });
+            renderAccountModalBody();
+          }
+        });
+      }
+    }
+  }
+
+  function renderHeritage() {
+    setupHeritageListeners();
+    const container = $("heritage-content-grid");
+    if (!container) return;
+
+    const data = window.SAUDI_HERITAGE_DATA;
+    if (!data) {
+      container.innerHTML = `<div style="text-align:center; padding: 40px; color: #94a3b8;">വിവരങ്ങൾ ലഭ്യമാക്കുന്നു...</div>`;
+      return;
+    }
+
+    if (activeHeritageTab === "kings") {
+      const kings = data.kings || [];
+      container.innerHTML = `
+        <div class="kings-grid">
+          ${kings.map(k => `
+            <article class="king-card">
+              <div class="king-card-header">
+                <div class="king-avatar-badge">${escapeHtml(k.fallback_icon || "👑")}</div>
+                <div class="king-title-group">
+                  <h3>${escapeHtml(k.name)}</h3>
+                  <div class="king-title-en">${escapeHtml(k.name_en)}</div>
+                  <span class="king-role-badge">${escapeHtml(k.title)}</span>
+                </div>
+              </div>
+              <div class="king-card-body">
+                <div class="king-meta-row">
+                  <span>📅 <strong>ഭരണകാലം:</strong> ${escapeHtml(k.reign)}</span>
+                  <span>⏳ <strong>ജീവിതകാലം:</strong> ${escapeHtml(k.born_died)}</span>
+                </div>
+                ${k.quote ? `
+                  <div class="king-quote-box">
+                    ${escapeHtml(k.quote)}
+                  </div>
+                ` : ""}
+                <div class="king-achievements-title">🌟 പ്രധാന ഭരണനേട്ടങ്ങൾ:</div>
+                <ul class="king-achievements-list">
+                  ${(k.achievements || []).map(a => `<li>${escapeHtml(a)}</li>`).join("")}
+                </ul>
+                <div style="font-size:0.8rem; color:#64748b; margin-top:auto; padding-top:10px; border-top:1px solid rgba(255,255,255,0.06);">
+                  📜 ${escapeHtml(k.historical_significance)}
+                </div>
+              </div>
+            </article>
+          `).join("")}
+        </div>
+      `;
+    } else if (activeHeritageTab === "holy") {
+      const timeline = data.makkah_madinah_timeline || [];
+      const stories = data.islamic_heritage_stories || [];
+      const sites = data.holy_sites || [];
+
+      container.innerHTML = `
+        <div>
+          <!-- Zamzam, Mawlid & Ramadan Stories -->
+          <div style="margin-bottom: 28px;">
+            <h3 style="font-size:1.35rem; font-weight:800; color:#fde047; margin:0 0 16px;">
+              ✨ പുണ്യ ചരിത്ര കഥകൾ (സംസം വെള്ളം, നബിദിനം & റമദാൻ നോമ്പ്)
+            </h3>
+            <div style="display:flex; flex-direction:column; gap:18px;">
+              ${stories.map(st => `
+                <div class="islamic-story-card">
+                  <div class="islamic-story-header">
+                    <div class="islamic-story-icon">${escapeHtml(st.icon)}</div>
+                    <div class="islamic-story-title">
+                      <h4>${escapeHtml(st.title)}</h4>
+                      <span>${escapeHtml(st.title_en)}</span>
+                    </div>
+                  </div>
+                  <div class="islamic-story-text">${escapeHtml(st.story)}</div>
+                </div>
+              `).join("")}
+            </div>
+          </div>
+
+          <!-- Makkah & Madinah Timeline -->
+          <h3 style="font-size:1.35rem; font-weight:800; color:#5eead4; margin:30px 0 16px; border-top:1px solid rgba(255,255,255,0.1); padding-top:24px;">
+            🕋 മക്ക & മദീന ചരിത്ര നാഴികക്കല്ലുകൾ (വർഷങ്ങൾ സഹിതം)
+          </h3>
+          <div class="timeline-container">
+            ${timeline.map(t => `
+              <div class="timeline-item">
+                <div class="timeline-header">
+                  <span class="timeline-year">${escapeHtml(t.year)}</span>
+                  <span class="timeline-loc-badge">📍 ${escapeHtml(t.location)}</span>
+                </div>
+                <h4 class="timeline-title">${escapeHtml(t.event)}</h4>
+                <p class="timeline-desc">${escapeHtml(t.description)}</p>
+              </div>
+            `).join("")}
+          </div>
+
+          <!-- Holy Sites -->
+          <div class="holy-sites-header">
+            <h3 style="font-size:1.35rem; font-weight:800; color:#86efac; margin:0 0 6px;">
+              📍 സന്ദർശിക്കേണ്ട വിശുദ്ധ ചരിത്ര കേന്ദ്രങ്ങൾ (Holy Historic Sites)
+            </h3>
+            <p style="font-size:0.88rem; color:#94a3b8; margin:0 0 16px;">
+              മക്കയിലും മദീനയിലുമുള്ള ചരിത്ര ഗുഹകളും പള്ളികളും താഴ്‌വരകളും (ഗൂഗിൾ മാപ്പ് നാവിഗേഷൻ സഹിതം)
+            </p>
+            <div class="holy-sites-grid">
+              ${sites.map(s => `
+                <div class="holy-site-card">
+                  <div>
+                    <span class="holy-site-badge">🕌 ${escapeHtml(s.city)}</span>
+                    <h4 class="holy-site-title">${escapeHtml(s.name)}</h4>
+                    <div class="holy-site-en">${escapeHtml(s.name_en)}</div>
+                    <div style="font-size:0.8rem; font-weight:700; color:#fde047; margin-bottom:8px;">
+                      ✦ ${escapeHtml(s.significance)}
+                    </div>
+                    <p class="holy-site-desc">${escapeHtml(s.description)}</p>
+                  </div>
+                  <div>
+                    ${s.tips ? `
+                      <div class="holy-site-tips">
+                        💡 <strong>യാത്രാ ടിപ്പ്:</strong> ${escapeHtml(s.tips)}
+                      </div>
+                    ` : ""}
+                    <a href="${escapeHtml(s.maps_url)}" target="_blank" rel="noopener noreferrer" class="tourism-map-btn" style="margin-top:10px;">
+                      <span>📍 ഗൂഗിൾ മാപ്പ് നാവിഗേഷൻ</span>
+                    </a>
+                  </div>
+                </div>
+              `).join("")}
+            </div>
+          </div>
+        </div>
+      `;
+    } else if (activeHeritageTab === "farms") {
+      const farms = data.agro_farms || [];
+      container.innerHTML = `
+        <div>
+          <div style="margin-bottom:20px;">
+            <h3 style="font-size:1.35rem; font-weight:800; color:#86efac; margin:0 0 6px;">
+              🌴 സൗദിയിലെ ഈന്തപ്പഴ, സ്ട്രോബെറി & കൃഷിത്തോട്ടങ്ങൾ (Agro-Tourism)
+            </h3>
+            <p style="font-size:0.9rem; color:#94a3b8; margin:0;">
+              പ്രവാസികൾക്കും കുടുംബങ്ങൾക്കും നേരിട്ട് സന്ദർശിക്കാവുന്ന മരുപ്പച്ചകൾ, സ്ട്രോബെറി ഫാമുകൾ, താഇഫ് റോസ് ഡിസ്റ്റിലറികൾ, ഒലിവ് സാമ്രാജ്യങ്ങൾ!
+            </p>
+          </div>
+          <div class="farms-grid">
+            ${farms.map(f => `
+              <article class="farm-card">
+                <div class="farm-card-media">
+                  <img src="${escapeHtml(f.photo)}" alt="${escapeHtml(f.name_en)}" loading="lazy" onerror="this.onerror=null; this.src='./assets/tourism_fallback.svg';">
+                  <span class="farm-category-badge">${escapeHtml(f.category_label)}</span>
+                  <span class="farm-region-badge">📍 ${escapeHtml(f.region)}</span>
+                </div>
+                <div class="farm-card-content">
+                  <div>
+                    <h4 class="farm-title">${escapeHtml(f.name)}</h4>
+                    <div class="farm-title-en">${escapeHtml(f.name_en)}</div>
+                    <div class="farm-scale-pill">🌱 ${escapeHtml(f.scale)}</div>
+                  </div>
+
+                  <div class="farm-story-box">
+                    📖 <strong>കൃഷി ചരിത്രവും കഥയും:</strong> ${escapeHtml(f.story)}
+                  </div>
+
+                  <div class="farm-meta-info">
+                    <span>🌾 <strong>വിളവുകൾ:</strong> ${escapeHtml(f.crop)}</span>
+                    <span>👨‍👩‍👧‍👦 <strong>സന്ദർശക അനുഭവം:</strong> ${escapeHtml(f.visitor_experience)}</span>
+                    <span>🗓️ <strong>അനുയോജ്യമായ സമയം:</strong> ${escapeHtml(f.season)}</span>
+                  </div>
+
+                  <div style="margin-top:auto; padding-top:10px;">
+                    <a href="${escapeHtml(f.maps_url)}" target="_blank" rel="noopener noreferrer" class="tourism-map-btn">
+                      <span>📍 ഫാം ലൊക്കേഷൻ & നാവിഗേഷൻ</span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            `).join("")}
+          </div>
+        </div>
+      `;
+    } else if (activeHeritageTab === "nation") {
+      const facts = data.saudi_nation_facts;
+      container.innerHTML = `
+        <div>
+          <!-- Stat cards -->
+          <div class="nation-stat-cards">
+            <div class="nation-stat-box">
+              <div class="stat-label">🇸🇦 ജനസംഖ്യ (Population)</div>
+              <div class="stat-val">${escapeHtml(facts.population)}</div>
+              <div class="stat-sub">${escapeHtml(facts.population_details)}</div>
+            </div>
+            <div class="nation-stat-box">
+              <div class="stat-label">🗺️ ഭരണ പ്രവിശ്യകൾ (Provinces)</div>
+              <div class="stat-val">${escapeHtml(String(facts.total_provinces))} പ്രവിശ്യകൾ</div>
+              <div class="stat-sub">13 ഇമാറാത്തുകൾ / Administrative Regions</div>
+            </div>
+            <div class="nation-stat-box">
+              <div class="stat-label">📏 ഏറ്റവും വലിയ പ്രവിശ്യ (Largest)</div>
+              <div class="stat-val" style="font-size:1.15rem;">കിഴക്കൻ പ്രവിശ്യ (Eastern Province)</div>
+              <div class="stat-sub">${escapeHtml(facts.largest_province)}</div>
+            </div>
+          </div>
+
+          <!-- Flag meaning -->
+          <div class="flag-meaning-banner">
+            <h4>🇸🇦 ${escapeHtml(facts.national_flag_meaning.title)}</h4>
+            <p style="font-size:0.92rem; line-height:1.6; margin-bottom:12px;">${escapeHtml(facts.national_flag_meaning.color_meaning)}</p>
+            <div class="flag-shahada-box">
+              <div class="flag-arabic-text">${escapeHtml(facts.national_flag_meaning.arabic_text)}</div>
+              <div style="font-size:0.9rem; color:#fef08a; font-weight:600;">${escapeHtml(facts.national_flag_meaning.text_meaning)}</div>
+            </div>
+            <p style="font-size:0.88rem; margin:8px 0 4px;"><strong>🗡️ വാളിന്റെ അർത്ഥം:</strong> ${escapeHtml(facts.national_flag_meaning.sword_symbol)}</p>
+            <p style="font-size:0.84rem; color:#a7f3d0; margin:0;"><strong>💡 പ്രത്യേകത:</strong> ${escapeHtml(facts.national_flag_meaning.unique_fact)}</p>
+          </div>
+
+          <!-- Largest Universities -->
+          <div style="margin-bottom:28px;">
+            <h3 style="font-size:1.3rem; font-weight:800; color:#38bdf8; margin:0 0 14px;">
+              🎓 സൗദിയിലെ ഏറ്റവും വലിയ സർവ്വകലാശാലകൾ (Largest Universities)
+            </h3>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:16px;">
+              ${(facts.largest_universities || []).map(u => `
+                <div style="background:#111827; border:1px solid rgba(56,189,248,0.3); border-radius:12px; padding:16px;">
+                  <div style="font-size:0.75rem; font-weight:700; color:#38bdf8; text-transform:uppercase; margin-bottom:4px;">${escapeHtml(u.type)}</div>
+                  <h4 style="font-size:1.05rem; font-weight:800; color:#f8fafc; margin:0 0 6px;">${escapeHtml(u.name)}</h4>
+                  <p style="font-size:0.84rem; color:#94a3b8; line-height:1.55; margin:0;">${escapeHtml(u.details)}</p>
+                </div>
+              `).join("")}
+            </div>
+          </div>
+
+          <!-- 13 Provinces -->
+          <div style="margin-bottom:28px;">
+            <h3 style="font-size:1.3rem; font-weight:800; color:#fde047; margin:0 0 14px;">
+              🗺️ സൗദി അറേബ്യയിലെ 13 ഭരണ പ്രവിശ്യകൾ (13 Administrative Regions)
+            </h3>
+            <div class="provinces-grid">
+              ${(facts.thirteen_provinces || []).map(p => `
+                <div class="province-card">
+                  <div class="province-header">
+                    <span class="province-title">${escapeHtml(p.name)}</span>
+                    <span class="province-no">#${p.no}</span>
+                  </div>
+                  <div class="province-meta">
+                    🏛️ തലസ്ഥാനം: <strong>${escapeHtml(p.capital)}</strong> · വിസ്തൃതി: ${escapeHtml(p.area)}
+                  </div>
+                  <div class="province-highlight">
+                    ✦ ${escapeHtml(p.highlight)}
+                  </div>
+                </div>
+              `).join("")}
+            </div>
+          </div>
+
+          <!-- Famous Personalities -->
+          <div>
+            <h3 style="font-size:1.3rem; font-weight:800; color:#a78bfa; margin:0 0 14px;">
+              🌟 സൗദിയിലെ പ്രശസ്ത വ്യക്തിത്വങ്ങൾ (Famous Personalities)
+            </h3>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:16px;">
+              ${(facts.famous_personalities || []).map(fp => `
+                <div style="background:#111827; border:1px solid rgba(167,139,250,0.3); border-radius:12px; padding:16px;">
+                  <h4 style="font-size:1.05rem; font-weight:800; color:#f8fafc; margin:0 0 4px;">${escapeHtml(fp.name)}</h4>
+                  <div style="font-size:0.78rem; font-weight:700; color:#a78bfa; margin-bottom:8px;">${escapeHtml(fp.role)}</div>
+                  <p style="font-size:0.84rem; color:#cbd5e1; line-height:1.5; margin:0;">${escapeHtml(fp.story)}</p>
+                </div>
+              `).join("")}
+            </div>
+          </div>
+        </div>
+      `;
+    } else if (activeHeritageTab === "camels") {
+      const cd = data.camels_and_deserts;
+      container.innerHTML = `
+        <div>
+          <!-- Camels -->
+          <div class="camels-showcase-box">
+            <h3 style="font-size:1.35rem; font-weight:800; color:#fde047; margin:0 0 12px;">
+              🐪 ${escapeHtml(cd.camels.title)}
+            </h3>
+            <div class="camels-quran-box">
+              ${escapeHtml(cd.camels.quran_verse)}
+            </div>
+            <p style="font-size:0.92rem; color:#e2e8f0; line-height:1.7; margin-bottom:14px;">
+              ${escapeHtml(cd.camels.significance)}
+            </p>
+            <div style="background:rgba(30,41,59,0.6); border-left:3px solid #f59e0b; padding:12px 16px; border-radius:0 8px 8px 0; font-size:0.86rem; color:#fef08a; line-height:1.6;">
+              🏆 <strong>ഒട്ടക ഫെസ്റ്റിവൽ & പൈതൃകം:</strong> ${escapeHtml(cd.camels.cultural_festivals)}
+            </div>
+          </div>
+
+          <!-- Deserts -->
+          <h3 style="font-size:1.35rem; font-weight:800; color:#fbbf24; margin:28px 0 14px;">
+            🏜️ സൗദി അറേബ്യയിലെ മഹാ മരുഭൂമികൾ (The Great Deserts)
+          </h3>
+          <div class="deserts-grid">
+            ${(cd.deserts || []).map(d => `
+              <div class="desert-card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                  <h4 class="desert-title">${escapeHtml(d.name)}</h4>
+                  <span style="font-family:'Amiri', serif; font-size:1.1rem; color:#f59e0b;">${escapeHtml(d.arabic_name)}</span>
+                </div>
+                <div class="desert-scale">📏 വിസ്തൃതി: ${escapeHtml(d.scale)}</div>
+                <p class="desert-desc">${escapeHtml(d.description)}</p>
+              </div>
+            `).join("")}
+          </div>
+        </div>
+      `;
+    } else if (activeHeritageTab === "history") {
+      const eras = data.history_eras || [];
+      container.innerHTML = `
+        <div>
+          <h3 style="font-size:1.3rem; font-weight:800; color:#fde047; margin:0 0 16px;">
+            📜 സൗദി അറേബ്യ ചരിത്ര നാഴികക്കല്ലുകൾ (പ്രധാന ഘട്ടങ്ങൾ)
+          </h3>
+          <div class="timeline-container">
+            ${eras.map(e => `
+              <div class="timeline-item">
+                <div class="timeline-header">
+                  <span class="timeline-year">${escapeHtml(e.period)}</span>
+                  <span class="timeline-loc-badge">👑 ${escapeHtml(e.founder)}</span>
+                </div>
+                <h4 class="timeline-title">${escapeHtml(e.era)}</h4>
+                <p class="timeline-desc">${escapeHtml(e.summary)}</p>
+                <div style="margin-top:10px; font-size:0.82rem; font-weight:700; color:#fde047; background:rgba(217,119,6,0.15); padding:6px 10px; border-radius:6px; border:1px solid rgba(245,158,11,0.25);">
+                  ✦ ${escapeHtml(e.milestone)}
+                </div>
+              </div>
+            `).join("")}
+          </div>
+        </div>
+      `;
+    }
+  }
+
   // ==========================================================================
   // Pravasi Daily Live Desk (Remittance, Gold, Saudi Visa/Labour, Kerala News)
   // ==========================================================================
@@ -2510,6 +3028,7 @@
       ["cinemas", "view-cinemas-btn"],
       ["library", "view-library-btn"],
       ["tourism", "view-tourism-btn"],
+      ["heritage", "view-heritage-btn"],
       ["daily", "view-daily-btn"],
       ["reviews", "view-reviews-btn"],
       ["suggestions", "view-sugg-btn"],
@@ -2762,6 +3281,10 @@
       $("results-count").textContent = state.city
         ? t("cinemaCountText", { shown: cinemaList.length, total: scopedAll, city: tCity(state.city) })
         : t("cinemaCountAll", { shown: cinemaList.length });
+    } else if (state.view === "heritage") {
+      $("results-count").textContent = state.lang === "ml"
+        ? "സൗദി ചരിത്രം, ഭരണാധികാരികൾ, മക്ക-മദീന & കൃഷിത്തോട്ടങ്ങൾ (സമ്പൂർണ്ണ ഗൈഡ്)"
+        : "Saudi Heritage, Kings, Holy History & Agro-Tourism Guide";
     } else if (state.view === "tourism") {
       $("results-count").textContent = state.lang === "ml"
         ? "സൗദി സഞ്ചാരം & ഒളിഞ്ഞിരിക്കുന്ന വിസ്മയ കേന്ദ്രങ്ങൾ (25 ലൊക്കേഷനുകൾ)"
@@ -2794,8 +3317,10 @@
     if (hypersEl) hypersEl.classList.toggle("active", state.view === "hypers");
     if (cinemasEl) cinemasEl.classList.toggle("active", state.view === "cinemas");
     const tourismEl = $("tourism-section");
+    const heritageEl = $("heritage-section");
     if (libraryEl) libraryEl.style.display = state.view === "library" ? "block" : "none";
     if (tourismEl) tourismEl.style.display = state.view === "tourism" ? "block" : "none";
+    if (heritageEl) heritageEl.style.display = state.view === "heritage" ? "block" : "none";
     if (dailyEl) dailyEl.style.display = state.view === "daily" ? "block" : "none";
     if (revEl) revEl.classList.toggle("active", state.view === "reviews");
     if (suggEl) suggEl.classList.toggle("active", state.view === "suggestions");
@@ -2812,6 +3337,8 @@
       renderLibrary();
     } else if (state.view === "tourism") {
       renderTourism();
+    } else if (state.view === "heritage") {
+      renderHeritage();
     } else if (state.view === "daily") {
       renderDailyDesk();
     }
@@ -3478,6 +4005,26 @@
     if ($("hero-view-daily")) {
       $("hero-view-daily").addEventListener("click", () => setView("daily", true));
     }
+    if ($("hero-view-tourism")) {
+      $("hero-view-tourism").addEventListener("click", () => setView("tourism", true));
+    }
+    if ($("hero-view-heritage")) {
+      $("hero-view-heritage").addEventListener("click", () => setView("heritage", true));
+    }
+    if ($("hero-user-account")) {
+      $("hero-user-account").addEventListener("click", () => openAccountModal());
+    }
+    const accClose = $("account-modal-close");
+    if (accClose) {
+      accClose.addEventListener("click", () => closeAccountModal());
+    }
+    const accModal = $("user-account-modal");
+    if (accModal) {
+      accModal.addEventListener("click", (e) => {
+        if (e.target === accModal) closeAccountModal();
+      });
+    }
+    syncUserAccountUI();
     if ($("ticker-open-btn")) {
       $("ticker-open-btn").addEventListener("click", () => setView("daily", true));
     }

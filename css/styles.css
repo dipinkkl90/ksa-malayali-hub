@@ -7280,3 +7280,1221 @@ html[lang="ml"] .sugg-info-card h2 {
   background: #059669;
   color: #ffffff;
 }
+
+
+/* ==========================================================================
+   Saudi Heritage, Kings & Agro-Tourism Guide Section Styles
+   ========================================================================== */
+.heritage-section {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding-bottom: 3rem;
+}
+
+.heritage-hero-strip {
+  background: radial-gradient(ellipse at top, rgba(217, 119, 6, 0.16) 0%, rgba(13, 148, 136, 0.1) 45%, rgba(15, 23, 42, 0.98) 100%);
+  border: 1px solid rgba(217, 119, 6, 0.35);
+  border-radius: 18px;
+  padding: 24px 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(251, 191, 36, 0.2);
+}
+
+.heritage-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(217, 119, 6, 0.2);
+  border: 1px solid rgba(251, 191, 36, 0.45);
+  padding: 5px 14px;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #fde047;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.pulse-dot-gold {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f59e0b;
+  box-shadow: 0 0 0 rgba(245, 158, 11, 0.7);
+  animation: pulseGold 2s infinite;
+}
+
+@keyframes pulseGold {
+  0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7); }
+  70% { box-shadow: 0 0 0 8px rgba(245, 158, 11, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+}
+
+.heritage-hero-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #f8fafc;
+  margin: 0 0 10px;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+.heritage-hero-desc {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  max-width: 850px;
+  line-height: 1.6;
+  margin: 0 0 20px;
+}
+
+/* Heritage Subtabs */
+.heritage-subtabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 18px;
+}
+
+.heritage-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  background: rgba(30, 41, 59, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #cbd5e1;
+  border-radius: 10px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.heritage-tab-btn:hover {
+  background: rgba(51, 65, 85, 0.8);
+  color: #ffffff;
+  border-color: rgba(251, 191, 36, 0.4);
+  transform: translateY(-1px);
+}
+
+.heritage-tab-btn.active {
+  background: linear-gradient(135deg, #b45309 0%, #d97706 100%);
+  color: #ffffff;
+  border-color: #fde047;
+  box-shadow: 0 4px 14px rgba(217, 119, 6, 0.35);
+  font-weight: 700;
+}
+
+.heritage-pill-badge {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 2px 7px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fef08a;
+}
+
+.heritage-tab-btn.active .heritage-pill-badge {
+  background: rgba(0, 0, 0, 0.45);
+  color: #ffffff;
+}
+
+/* Dynamic Content Grid */
+.heritage-content-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Kings Grid */
+.kings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 20px;
+}
+
+.king-card {
+  background: #111827;
+  border: 1px solid rgba(217, 119, 6, 0.25);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.king-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(251, 191, 36, 0.6);
+  box-shadow: 0 12px 30px rgba(217, 119, 6, 0.2);
+}
+
+.king-card-header {
+  padding: 18px 20px 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  background: linear-gradient(180deg, rgba(30, 41, 59, 0.5) 0%, rgba(17, 24, 39, 0) 100%);
+}
+
+.king-avatar-badge {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  background: rgba(217, 119, 6, 0.18);
+  border: 1px solid rgba(251, 191, 36, 0.35);
+  flex-shrink: 0;
+}
+
+.king-title-group h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #f8fafc;
+  margin: 0 0 4px;
+  line-height: 1.35;
+}
+
+.king-title-en {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.king-role-badge {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #fef08a;
+  background: rgba(217, 119, 6, 0.22);
+  padding: 2px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.king-card-body {
+  padding: 16px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.king-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.82rem;
+  color: #cbd5e1;
+  background: rgba(30, 41, 59, 0.4);
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.king-quote-box {
+  background: rgba(15, 23, 42, 0.7);
+  border-left: 3px solid #f59e0b;
+  padding: 10px 14px;
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+  font-size: 0.84rem;
+  color: #e2e8f0;
+  line-height: 1.5;
+}
+
+.king-achievements-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #fde047;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+
+.king-achievements-list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.king-achievements-list li {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.king-achievements-list li::before {
+  content: "✦";
+  color: #f59e0b;
+  font-weight: bold;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* Timeline Styles (Makkah & Madinah and History) */
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.timeline-container::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 6px;
+  width: 3px;
+  background: linear-gradient(180deg, #f59e0b 0%, #10b981 70%, #6366f1 100%);
+  border-radius: 9999px;
+}
+
+.timeline-item {
+  position: relative;
+  background: #111827;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 14px;
+  padding: 18px 22px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.timeline-item:hover {
+  transform: translateX(4px);
+  border-color: rgba(251, 191, 36, 0.45);
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 24px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #f59e0b;
+  border: 3px solid #0f172a;
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.5);
+}
+
+.timeline-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.timeline-year {
+  background: linear-gradient(135deg, #b45309 0%, #d97706 100%);
+  color: #ffffff;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.timeline-loc-badge {
+  background: rgba(13, 148, 136, 0.2);
+  color: #5eead4;
+  border: 1px solid rgba(20, 184, 166, 0.3);
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.timeline-title {
+  font-size: 1.12rem;
+  font-weight: 800;
+  color: #f8fafc;
+  margin: 0 0 6px;
+}
+
+.timeline-desc {
+  font-size: 0.88rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Holy Sites Grid */
+.holy-sites-header {
+  margin-top: 30px;
+  margin-bottom: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 24px;
+}
+
+.holy-sites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 18px;
+}
+
+.holy-site-card {
+  background: #111827;
+  border: 1px solid rgba(13, 148, 136, 0.3);
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  transition: all 0.25s ease;
+}
+
+.holy-site-card:hover {
+  border-color: #2dd4bf;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(13, 148, 136, 0.2);
+}
+
+.holy-site-badge {
+  display: inline-block;
+  background: rgba(13, 148, 136, 0.18);
+  color: #2dd4bf;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.holy-site-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #f8fafc;
+  margin: 4px 0 2px;
+}
+
+.holy-site-en {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  margin-bottom: 6px;
+}
+
+.holy-site-desc {
+  font-size: 0.84rem;
+  color: #cbd5e1;
+  line-height: 1.55;
+}
+
+.holy-site-tips {
+  background: rgba(15, 23, 42, 0.6);
+  border-left: 2px solid #2dd4bf;
+  padding: 8px 10px;
+  font-size: 0.78rem;
+  color: #94a3b8;
+  line-height: 1.45;
+  border-radius: 0 6px 6px 0;
+}
+
+/* Agro Farms Grid */
+.farms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 22px;
+}
+
+.farm-card {
+  background: #111827;
+  border: 1px solid rgba(34, 197, 94, 0.25);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.farm-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(74, 222, 128, 0.6);
+  box-shadow: 0 12px 30px rgba(34, 197, 94, 0.22);
+}
+
+.farm-card-media {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background: #0f172a;
+}
+
+.farm-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.farm-card:hover .farm-card-media img {
+  transform: scale(1.05);
+}
+
+.farm-category-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.farm-region-badge {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: rgba(16, 185, 129, 0.9);
+  color: #ffffff;
+  padding: 3px 9px;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.farm-card-content {
+  padding: 18px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.farm-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #f8fafc;
+  margin: 0 0 3px;
+  line-height: 1.35;
+}
+
+.farm-title-en {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-bottom: 4px;
+}
+
+.farm-scale-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #86efac;
+}
+
+.farm-story-box {
+  background: rgba(30, 41, 59, 0.5);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.84rem;
+  color: #cbd5e1;
+  line-height: 1.55;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.farm-meta-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.farm-meta-info span strong {
+  color: #f1f5f9;
+}
+
+/* Desert Farming Story Panels */
+.desert-story-wrapper {
+  background: #111827;
+  border: 1px solid rgba(217, 119, 6, 0.3);
+  border-radius: 18px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.desert-story-header h3 {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #fde047;
+  margin: 0 0 8px;
+}
+
+.desert-story-intro {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  line-height: 1.65;
+}
+
+.desert-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.desert-pillar-box {
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 16px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.desert-pillar-box:hover {
+  transform: translateY(-2px);
+  border-color: rgba(245, 158, 11, 0.4);
+}
+
+.desert-pillar-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #6ee7b7;
+  margin-bottom: 6px;
+}
+
+.desert-pillar-desc {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Optional Pravasi Reader ID Styling in Library */
+.reader-free-notice {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  color: #6ee7b7;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.reader-pass-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+}
+
+.reader-pass-strip label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #fde047;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.reader-pass-input {
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  width: 170px;
+}
+
+.reader-pass-input:focus {
+  outline: none;
+  border-color: #f59e0b;
+}
+
+.reader-pass-save-btn {
+  background: #059669;
+  border: none;
+  color: #ffffff;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.reader-pass-save-btn:hover {
+  background: #10b981;
+}
+
+.reader-pass-status {
+  font-size: 0.76rem;
+  color: #a7f3d0;
+  font-weight: 600;
+}
+
+
+/* ==========================================================================
+   Hero CTA Action Buttons - High Visibility & Glowing Animations
+   ========================================================================== */
+.hero-cta-tourism {
+  background: linear-gradient(135deg, rgba(5, 150, 105, 0.28) 0%, rgba(16, 185, 129, 0.18) 100%) !important;
+  border-color: rgba(52, 211, 153, 0.5) !important;
+  color: #a7f3d0 !important;
+  animation: heroPulseEmerald 3s infinite ease-in-out;
+}
+
+.hero-cta-tourism:hover {
+  background: linear-gradient(135deg, rgba(5, 150, 105, 0.45) 0%, rgba(16, 185, 129, 0.3) 100%) !important;
+  border-color: #34d399 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35);
+}
+
+.hero-cta-heritage {
+  background: linear-gradient(135deg, rgba(217, 119, 6, 0.28) 0%, rgba(245, 158, 11, 0.18) 100%) !important;
+  border-color: rgba(251, 191, 36, 0.5) !important;
+  color: #fef08a !important;
+  animation: heroPulseGold 3s infinite ease-in-out;
+}
+
+.hero-cta-heritage:hover {
+  background: linear-gradient(135deg, rgba(217, 119, 6, 0.45) 0%, rgba(245, 158, 11, 0.3) 100%) !important;
+  border-color: #fde047 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.35);
+}
+
+.hero-cta-account {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.22) 0%, rgba(99, 102, 241, 0.16) 100%) !important;
+  border-color: rgba(147, 197, 253, 0.45) !important;
+  color: #bfdbfe !important;
+}
+
+.hero-cta-account:hover {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.4) 0%, rgba(99, 102, 241, 0.3) 100%) !important;
+  border-color: #60a5fa !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.35);
+}
+
+@keyframes heroPulseGold {
+  0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4); transform: scale(1); }
+  50% { box-shadow: 0 0 16px 3px rgba(245, 158, 11, 0.55); transform: scale(1.02); }
+  100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4); transform: scale(1); }
+}
+
+@keyframes heroPulseEmerald {
+  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); transform: scale(1); }
+  50% { box-shadow: 0 0 16px 3px rgba(16, 185, 129, 0.55); transform: scale(1.02); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); transform: scale(1); }
+}
+
+.hero-pill-badge {
+  padding: 2px 7px;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  margin-left: 4px;
+}
+
+.hero-pill-badge.emerald {
+  background: #059669;
+  color: #ffffff;
+}
+
+.hero-pill-badge.gold {
+  background: #d97706;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   User Account Modal & Google Sign-In Styles
+   ========================================================================== */
+.user-account-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.account-modal-box {
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 480px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 30px rgba(59, 130, 246, 0.2);
+  animation: modalFadeIn 0.25s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.account-modal-header {
+  padding: 20px 24px;
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.account-modal-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #f8fafc;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+
+.account-modal-close {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #94a3b8;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: all 0.2s;
+}
+
+.account-modal-close:hover {
+  background: rgba(239, 68, 68, 0.2);
+  color: #f87171;
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+.account-modal-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.google-signin-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 18px;
+  background: #ffffff;
+  color: #1f2937;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.google-signin-btn:hover {
+  background: #f8fafc;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transform: translateY(-1px);
+}
+
+.account-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #64748b;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.account-divider::before,
+.account-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.account-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.account-form-group label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #cbd5e1;
+}
+
+.account-form-input {
+  background: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 10px 14px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  transition: border-color 0.2s;
+}
+
+.account-form-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
+}
+
+.account-submit-btn {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 11px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.account-submit-btn:hover {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  transform: translateY(-1px);
+}
+
+.account-logged-card {
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.account-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px solid #3b82f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  background: rgba(59, 130, 246, 0.15);
+  overflow: hidden;
+}
+
+.account-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.account-details h4 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #f8fafc;
+  margin: 0 0 4px;
+}
+
+.account-details p {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  margin: 0 0 6px;
+}
+
+.account-status-tag {
+  display: inline-block;
+  background: rgba(16, 185, 129, 0.2);
+  color: #6ee7b7;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   Saudi Nation Facts & Islamic Heritage Stories Styles
+   ========================================================================== */
+.islamic-story-card {
+  background: #111827;
+  border: 1px solid rgba(217, 119, 6, 0.35);
+  border-radius: 16px;
+  padding: 22px 26px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  margin-bottom: 20px;
+}
+
+.islamic-story-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 12px;
+}
+
+.islamic-story-icon {
+  font-size: 2.2rem;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(217, 119, 6, 0.15);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.islamic-story-title h4 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #fde047;
+  margin: 0 0 4px;
+}
+
+.islamic-story-title span {
+  font-size: 0.82rem;
+  color: #94a3b8;
+}
+
+.islamic-story-text {
+  font-size: 0.92rem;
+  color: #e2e8f0;
+  line-height: 1.8;
+  white-space: pre-line;
+}
+
+/* Nation Facts Grid */
+.nation-stat-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.nation-stat-box {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.9) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 18px 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+.nation-stat-box .stat-label {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.nation-stat-box .stat-val {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #f8fafc;
+  line-height: 1.3;
+}
+
+.nation-stat-box .stat-sub {
+  font-size: 0.78rem;
+  color: #cbd5e1;
+  margin-top: 4px;
+}
+
+/* Flag Meaning Banner */
+.flag-meaning-banner {
+  background: linear-gradient(135deg, #064e3b 0%, #065f46 60%, #047857 100%);
+  border: 2px solid #34d399;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(6, 95, 70, 0.35);
+}
+
+.flag-meaning-banner h4 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #fef08a;
+  margin: 0 0 12px;
+}
+
+.flag-shahada-box {
+  background: rgba(0, 0, 0, 0.35);
+  border-left: 4px solid #fde047;
+  padding: 14px 18px;
+  border-radius: 0 10px 10px 0;
+  margin: 14px 0;
+}
+
+.flag-arabic-text {
+  font-family: 'Amiri', 'Traditional Arabic', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+  direction: rtl;
+}
+
+/* 13 Provinces Grid */
+.provinces-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+}
+
+.province-card {
+  background: #111827;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 12px;
+  padding: 14px 16px;
+  transition: all 0.2s;
+}
+
+.province-card:hover {
+  border-color: #3b82f6;
+  transform: translateY(-2px);
+}
+
+.province-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.province-no {
+  background: rgba(59, 130, 246, 0.2);
+  color: #93c5fd;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 9999px;
+}
+
+.province-title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #f8fafc;
+}
+
+.province-meta {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  margin-bottom: 6px;
+}
+
+.province-highlight {
+  font-size: 0.8rem;
+  color: #cbd5e1;
+  line-height: 1.45;
+}
+
+/* Camels & Deserts Styling */
+.camels-showcase-box {
+  background: #111827;
+  border: 1px solid rgba(217, 119, 6, 0.3);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.camels-quran-box {
+  background: rgba(217, 119, 6, 0.12);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #fef08a;
+  margin-bottom: 14px;
+}
+
+.deserts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.desert-card {
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 18px;
+  transition: transform 0.2s;
+}
+
+.desert-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(245, 158, 11, 0.4);
+}
+
+.desert-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #fde047;
+  margin: 0 0 4px;
+}
+
+.desert-scale {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.desert-desc {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
