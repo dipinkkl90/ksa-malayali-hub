@@ -128,6 +128,8 @@
 
   let DATA = Array.isArray(window.KSA_KERALA_FOODS)
     ? [...window.KSA_KERALA_FOODS]
+    : Array.isArray(window.RESTAURANT_DATA)
+    ? [...window.RESTAURANT_DATA]
     : Array.isArray(window.JEDDAH_KERALA_FOODS)
     ? [...window.JEDDAH_KERALA_FOODS]
     : [];

@@ -1,5 +1,6 @@
 // Auto-generated KSA Malayali Hub master dataset
-window.RESTAURANT_DATA = [
+window.KSA_KERALA_FOODS = [
+
   {
     "restaurant_id": "JED-0001",
     "name": "Kerala Hotel",
@@ -6485,3 +6486,6 @@ window.RESTAURANT_DATA = [
     "photo": "https://pub-5c205c1fdcbd49e3997c808e1a223e49.r2.dev/malabar-village-family-restaurant-kerala-indian-kerala-al-fayha-1.jpg"
   }
 ];
+
+window.JEDDAH_KERALA_FOODS = window.KSA_KERALA_FOODS;
+window.RESTAURANT_DATA = window.KSA_KERALA_FOODS;
