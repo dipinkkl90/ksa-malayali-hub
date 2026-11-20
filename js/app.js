@@ -1467,6 +1467,7 @@
   }
 
   function renderCinemas() {
+    renderOttReleases();
     const grid = $("cinemas-grid");
     if (!grid) return;
     const scoped = getCityScopedCinemas();
@@ -1564,6 +1565,88 @@
     });
 
     grid.appendChild(frag);
+  }
+
+  // ==========================================================================
+  // Malayalam OTT Releases Showcase
+  // ==========================================================================
+  let activeOttPlatform = "all";
+
+  function setupOttFilterListeners() {
+    const filterContainer = $("ott-filter-tabs");
+    if (filterContainer && !filterContainer.hasAttribute("data-listener")) {
+      filterContainer.setAttribute("data-listener", "true");
+      filterContainer.addEventListener("click", (e) => {
+        const btn = e.target.closest(".ott-filter-btn");
+        if (!btn) return;
+        filterContainer.querySelectorAll(".ott-filter-btn").forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        activeOttPlatform = btn.dataset.platform || "all";
+        renderOttReleases();
+      });
+    }
+  }
+
+  function renderOttReleases() {
+    const grid = $("ott-movies-grid");
+    if (!grid) return;
+    setupOttFilterListeners();
+
+    let movies = window.MALAYALAM_OTT_DATA || [];
+    if (activeOttPlatform !== "all") {
+      movies = movies.filter((m) => m.platform_key === activeOttPlatform);
+    }
+
+    if (!movies.length) {
+      grid.innerHTML = `
+        <div class="empty-state" style="grid-column: 1 / -1;">
+          <div class="empty-icon">🍿</div>
+          <h3>സിനിമകൾ കണ്ടെത്തിയില്ല</h3>
+          <p>ദയവായി 'All OTT' ക്ലിക്ക് ചെയ്യുക.</p>
+        </div>
+      `;
+      return;
+    }
+
+    grid.innerHTML = movies
+      .map((m) => {
+        const isMl = state.lang === "ml";
+        const title = isMl && m.title_ml ? m.title_ml : m.title;
+        const subTitle = isMl ? m.title : (m.title_ml || "");
+        const status = isMl && m.status_ml ? m.status_ml : m.status;
+        const desc = isMl && m.desc_ml ? m.desc_ml : m.desc;
+        const rating = m.rating ? `⭐ ${m.rating.toFixed(1)}` : "⭐ 8.0";
+
+        return `
+          <article class="ott-movie-card">
+            <div class="ott-poster-wrap">
+              <img src="${escapeHtml(m.poster)}" alt="${escapeHtml(m.title)}" loading="lazy">
+              <span class="ott-rating-badge">${rating}</span>
+              <span class="ott-status-tag">${escapeHtml(status)}</span>
+            </div>
+            <div class="ott-card-body">
+              <h4 class="ott-movie-title">${escapeHtml(title)}</h4>
+              <div class="ott-movie-title-ml">${escapeHtml(subTitle)}</div>
+              <div class="ott-platform-pill ${m.platform_key}">
+                <span>📺 ${escapeHtml(m.platform)}</span>
+              </div>
+              <div class="ott-movie-meta">
+                <span>🎭 ${escapeHtml(m.genre)}</span> · <span>📅 ${escapeHtml(m.year)}</span>
+              </div>
+              <div class="ott-movie-cast">
+                <span>👥 ${escapeHtml(m.cast)}</span>
+              </div>
+              <p class="ott-movie-meta" style="font-size:0.82rem; color:#94a3b8; margin-bottom:14px; line-height:1.45;">
+                ${escapeHtml(desc)}
+              </p>
+              <a href="${escapeHtml(m.watch_url)}" target="_blank" rel="noopener noreferrer" class="ott-watch-btn">
+                <span>▶️ ${escapeHtml(m.platform)}-ൽ കാണുക ➔</span>
+              </a>
+            </div>
+          </article>
+        `;
+      })
+      .join("");
   }
 
   // ==========================================================================

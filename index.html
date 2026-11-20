@@ -168,7 +168,7 @@
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line>
             </svg>
-            <span data-i18n="heroCinemasBtn">🎬 Movies &amp; Theaters</span>
+            <span data-i18n="heroCinemasBtn">🎬 Movies &amp; OTT</span>
           </button>
           <button type="button" id="hero-view-daily" class="hero-cta-ghost hero-cta-daily">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
@@ -343,7 +343,7 @@
         </button>
         <button type="button" id="view-cinemas-btn" class="view-btn" role="tab" aria-selected="false">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line></svg>
-          <span data-i18n="viewCinemas">Movies &amp; Theaters</span>
+          <span data-i18n="viewCinemas">Movies &amp; OTT</span>
           <span class="view-tab-pill gold" id="cinemas-tab-badge">19</span>
         </button>
         <button type="button" id="view-daily-btn" class="view-btn" role="tab" aria-selected="false">
@@ -497,13 +497,16 @@
 
           <!-- Direct Movie Hub Quick-Links -->
           <div class="cinema-quick-links">
-            <a href="https://ksa.voxcinemas.com/movies/mollywood-times" target="_blank" rel="noopener noreferrer" class="cinema-quick-btn vox" title="Direct Malayalam Movie Releases on VOX Cinemas">
+            <a href="https://ksa.voxcinemas.com/" target="_blank" rel="noopener noreferrer" class="cinema-quick-btn vox" title="Direct Malayalam Movie Releases on VOX Cinemas">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line></svg>
-              <span>🎬 VOX Mollywood Times (മലയാള സിനിമകൾ)</span>
+              <span>🎬 VOX Cinemas KSA Portal</span>
             </a>
             <a href="https://www.muvicinemas.com/" target="_blank" rel="noopener noreferrer" class="cinema-quick-btn muvi" title="Direct Muvi Cinemas KSA Portal">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
               <span>🍿 Muvi Cinemas KSA Showtimes</span>
+            </a>
+            <a href="#ott-showcase-section" class="cinema-quick-btn ott" title="Latest Malayalam OTT Releases" style="background:linear-gradient(135deg, rgba(245, 158, 11, 0.25), rgba(217, 119, 6, 0.15)); border:1px solid rgba(245, 158, 11, 0.4); color:#fbbf24;">
+              <span>🍿 മലയാളം OTT റിലീസുകൾ (Now Streaming)</span>
             </a>
           </div>
         </div>
@@ -539,7 +542,7 @@
               <div class="chain-specs">
                 <span>⚡ IMAX 3D</span> · <span>🍽️ GOLD VIP</span> · <span>🔊 Dolby Atmos</span>
               </div>
-              <a href="https://ksa.voxcinemas.com/movies/mollywood-times" target="_blank" rel="noopener noreferrer" class="chain-book-btn vox">
+              <a href="https://ksa.voxcinemas.com/" target="_blank" rel="noopener noreferrer" class="chain-book-btn vox">
                 <span>🎬 VOX മലയാളം സിനിമകൾ കണ്ട് ബുക്ക് ചെയ്യുക ➔</span>
               </a>
             </div>
@@ -622,6 +625,34 @@
                 <span>🎫 Empire തത്സമയ ടിക്കറ്റുകൾ ബുക്ക് ചെയ്യുക ➔</span>
               </a>
             </div>
+          </div>
+        </div>
+
+        <!-- 🍿 Malayalam OTT Releases Showcase Section -->
+        <div id="ott-showcase-section" class="ott-showcase-section" aria-label="Malayalam OTT Releases">
+          <div class="ott-header-strip">
+            <div class="ott-title-wrap">
+              <div class="ott-badge">
+                <span class="pulse-dot-green" aria-hidden="true"></span>
+                <span>🍿 പ്രവാസി OTT ഡെസ്ക് · MALAYALAM OTT RELEASES</span>
+              </div>
+              <h3 class="ott-section-title">ഏറ്റവും പുതിയ മലയാളം OTT സിനിമകൾ (Now Streaming)</h3>
+              <p class="ott-section-desc">സൗദി പ്രവാസികൾക്കായി Hotstar, Netflix, Prime Video, SonyLIV എന്നിവയിൽ ഇപ്പോൾ കാണാവുന്ന ഏറ്റവും പുതിയ സൂപ്പർഹിറ്റ് സിനിമകളും ഒഫീഷ്യൽ സ്ട്രീമിംഗ് ലിങ്കുകളും.</p>
+            </div>
+            
+            <!-- OTT Platform Filter Pills -->
+            <div class="ott-filter-tabs" id="ott-filter-tabs" role="tablist" aria-label="Filter by OTT platform">
+              <button type="button" class="ott-filter-btn active" data-platform="all">All OTT (12)</button>
+              <button type="button" class="ott-filter-btn" data-platform="hotstar">Disney+ Hotstar (6)</button>
+              <button type="button" class="ott-filter-btn" data-platform="sonyliv">SonyLIV (3)</button>
+              <button type="button" class="ott-filter-btn" data-platform="prime">Prime Video (2)</button>
+              <button type="button" class="ott-filter-btn" data-platform="netflix">Netflix (1)</button>
+            </div>
+          </div>
+
+          <!-- OTT Movies Grid -->
+          <div class="ott-movies-grid" id="ott-movies-grid">
+            <!-- Dynamically populated from window.MALAYALAM_OTT_DATA -->
           </div>
         </div>
 
@@ -1368,12 +1399,12 @@
 
   <!-- Scripts -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin="" defer></script>
-  <script src="./js/data.js?v=20261120_v12"></script>
-  <script src="./js/hypermarkets_data.js?v=20261120_v12"></script>
-  <script src="./js/cinemas_data.js?v=20261120_v12"></script>
-  <script src="./js/daily_desk_data.js?v=20261120_v12"></script>
-  <script src="./js/i18n.js?v=20261120_v12"></script>
-  <script src="./js/app.js?v=20261120_v12"></script>
+  <script src="./js/data.js?v=20261120_v13"></script>
+  <script src="./js/hypermarkets_data.js?v=20261120_v13"></script>
+  <script src="./js/cinemas_data.js?v=20261120_v13"></script>
+  <script src="./js/daily_desk_data.js?v=20261120_v13"></script>
+  <script src="./js/i18n.js?v=20261120_v13"></script>
+  <script src="./js/app.js?v=20261120_v13"></script>
 
   <!-- ClicFlyer-Style Interactive Digital Flyer Booklet Modal -->
   <div id="clicFlyerModal" class="clic-modal" aria-hidden="true" role="dialog" aria-label="Digital Flyer Booklet">
