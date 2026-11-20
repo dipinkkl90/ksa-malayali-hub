@@ -1,723 +1,703 @@
-// Curated Daily Pravasi Utilities for KSA Malayali Hub
-// Remittance Table & Accordion Desk (18 Banks & Wallets), KSA Gold Rates, Saudi Visa & Labour Rules, & Kerala/Pravasi News
-// Developed by D&J Techies · +44 7460 646263
-
+// Auto-generated Daily Desk & Live Rates Data
 window.DAILY_DESK_DATA = {
-  last_updated: "2026-11-19T09:00:00+03:00",
-  last_updated_display: "Today · 19 Nov 2026",
-  last_updated_display_ml: "ഇന്ന് · 19 നവംബർ 2026",
-
-  // 1. SAR to INR Remittance Desk (18 Banks & Wallets with Sub-Channel Breakdowns)
-  remittance: {
-    base_currency: "SAR",
-    target_currency: "INR",
-    mid_market_rate: 24.92,
-    providers: [
+  "last_updated": "2026-11-20T06:45:00+03:00",
+  "last_updated_display": "Today · 20 Nov 2026 (Live Desk)",
+  "last_updated_display_ml": "ഇന്ന് · 20 നവംബർ 2026 (തത്സമയം)",
+  "remittance": {
+    "base_currency": "SAR",
+    "target_currency": "INR",
+    "mid_market_rate": 24.96,
+    "providers": [
       {
-            "id": "anb-telemoney",
-            "name": "ANB TeleMoney",
-            "name_ml": "എ.എൻ.ബി ടെലിമണി (ANB TeleMoney)",
-            "type": "bank",
-            "rate": 25.54,
-            "fee_sar": 17.0,
-            "updated_date": "19 Nov 2026",
-            "is_best_rate": true,
-            "tag": "Highest Rate Today 🏆",
-            "tag_ml": "ഇന്നത്തെ ഉയർന്ന റേറ്റ് 🏆",
-            "brand_color": "#0056b3",
-            "app_url": "https://www.anb.com.sa/web/anb/telemoney",
-            "channels": [
-                  {
-                        "type_label": "Branch Exchange Fee",
-                        "name": "TeleMoney - Tune (Branch)",
-                        "fee": 17.0,
-                        "rate": 25.54
-                  },
-                  {
-                        "type_label": "Online Exchange Fee",
-                        "name": "TeleMoney - Transfast (Digital)",
-                        "fee": 10.0,
-                        "rate": 25.53
-                  },
-                  {
-                        "type_label": "Branch Exchange Fee",
-                        "name": "TeleMoney - TT (Branch)",
-                        "fee": 17.0,
-                        "rate": 25.37
-                  },
-                  {
-                        "type_label": "Online Exchange Fee",
-                        "name": "TeleMoney - TT (Digital)",
-                        "fee": 0.0,
-                        "rate": 24.78
-                  }
-            ]
+        "id": "anb-telemoney",
+        "name": "ANB TeleMoney",
+        "name_ml": "എ.എൻ.ബി ടെലിമണി (ANB TeleMoney)",
+        "type": "bank",
+        "rate": 25.56,
+        "fee_sar": 17,
+        "updated_date": "20 Nov 2026",
+        "is_best_rate": true,
+        "tag": "Highest Rate Today 🏆",
+        "tag_ml": "ഇന്നത്തെ ഉയർന്ന റേറ്റ് 🏆",
+        "brand_color": "#0056b3",
+        "app_url": "https://www.anb.com.sa/web/anb/telemoney",
+        "channels": [
+          {
+            "type_label": "Branch Exchange Fee",
+            "name": "TeleMoney - Tune (Branch)",
+            "fee": 17,
+            "rate": 25.54
+          },
+          {
+            "type_label": "Online Exchange Fee",
+            "name": "TeleMoney - Transfast (Digital)",
+            "fee": 10,
+            "rate": 25.53
+          },
+          {
+            "type_label": "Branch Exchange Fee",
+            "name": "TeleMoney - TT (Branch)",
+            "fee": 17,
+            "rate": 25.37
+          },
+          {
+            "type_label": "Online Exchange Fee",
+            "name": "TeleMoney - TT (Digital)",
+            "fee": 0,
+            "rate": 24.78
+          }
+        ]
       },
       {
-            "id": "enjaz",
-            "name": "Enjaz",
-            "name_ml": "ഇൻജാസ് (Enjaz - Bank Albilad)",
-            "type": "bank",
-            "rate": 25.46,
-            "fee_sar": 17.0,
-            "updated_date": "19 Nov 2026",
-            "is_best_rate": false,
-            "tag": "Trusted Saudi Remittance 🏦",
-            "tag_ml": "വിശ്വാസ്യമായ റെമിറ്റൻസ് 🏦",
-            "brand_color": "#c41230",
-            "app_url": "https://www.bankalbilad.com/enjaz",
-            "channels": [
-                  {
-                        "type_label": "Branch Counter Remittance",
-                        "name": "Enjaz Easy Remit (Branch)",
-                        "fee": 17.0,
-                        "rate": 25.46
-                  },
-                  {
-                        "type_label": "Digital App Remittance",
-                        "name": "Enjaz Digital India Express",
-                        "fee": 12.0,
-                        "rate": 25.46
-                  }
-            ]
+        "id": "enjaz",
+        "name": "Enjaz",
+        "name_ml": "ഇൻജാസ് (Enjaz - Bank Albilad)",
+        "type": "bank",
+        "rate": 25.48,
+        "fee_sar": 17,
+        "updated_date": "20 Nov 2026",
+        "is_best_rate": false,
+        "tag": "Trusted Saudi Remittance 🏦",
+        "tag_ml": "വിശ്വാസ്യമായ റെമിറ്റൻസ് 🏦",
+        "brand_color": "#c41230",
+        "app_url": "https://www.bankalbilad.com/enjaz",
+        "channels": [
+          {
+            "type_label": "Branch Counter Remittance",
+            "name": "Enjaz Easy Remit (Branch)",
+            "fee": 17,
+            "rate": 25.46
+          },
+          {
+            "type_label": "Digital App Remittance",
+            "name": "Enjaz Digital India Express",
+            "fee": 12,
+            "rate": 25.46
+          }
+        ]
       },
       {
-            "id": "alrajhi",
-            "name": "Alrajhi Bank",
-            "name_ml": "അൽ രാജ്ഹി ബാങ്ക് (Alrajhi Bank)",
-            "type": "bank",
-            "rate": 25.46,
-            "fee_sar": 15.0,
-            "updated_date": "19 Nov 2026",
-            "is_best_rate": false,
-            "tag": "Largest Banking Network 🏛️",
-            "tag_ml": "ഏറ്റവും വലിയ ബാങ്കിംഗ് നെറ്റ്‌വർക്ക് 🏛️",
-            "brand_color": "#0c2074",
-            "app_url": "https://www.alrajhibank.com.sa/",
-            "channels": [
-                  {
-                        "type_label": "Branch Account Transfer",
-                        "name": "Alrajhi Remit Counter",
-                        "fee": 15.0,
-                        "rate": 25.46
-                  },
-                  {
-                        "type_label": "Alrajhi Mobile App",
-                        "name": "Alrajhi Direct India Transfer",
-                        "fee": 10.0,
-                        "rate": 25.46
-                  }
-            ]
+        "id": "alrajhi",
+        "name": "Alrajhi Bank",
+        "name_ml": "അൽ രാജ്ഹി ബാങ്ക് (Alrajhi Bank)",
+        "type": "bank",
+        "rate": 25.46,
+        "fee_sar": 15,
+        "updated_date": "20 Nov 2026",
+        "is_best_rate": false,
+        "tag": "Largest Banking Network 🏛️",
+        "tag_ml": "ഏറ്റവും വലിയ ബാങ്കിംഗ് നെറ്റ്‌വർക്ക് 🏛️",
+        "brand_color": "#0c2074",
+        "app_url": "https://www.alrajhibank.com.sa/",
+        "channels": [
+          {
+            "type_label": "Branch Account Transfer",
+            "name": "Alrajhi Remit Counter",
+            "fee": 15,
+            "rate": 25.46
+          },
+          {
+            "type_label": "Alrajhi Mobile App",
+            "name": "Alrajhi Direct India Transfer",
+            "fee": 10,
+            "rate": 25.46
+          }
+        ]
       },
       {
-            "id": "lulu",
-            "name": "LuLu Money KSA",
-            "name_ml": "ലുലു മണി (LuLu Money KSA)",
-            "type": "wallet",
-            "rate": 25.3,
-            "fee_sar": 10.0,
-            "updated_date": "19 Nov 2026",
-            "is_best_rate": false,
-            "tag": "Malayali Favourite Choice 🛍️",
-            "tag_ml": "മലയാളികളുടെ പ്രിയ ചോയ്‌സ് 🛍️",
-            "brand_color": "#e31837",
-            "app_url": "https://luluexchange.com/",
-            "channels": [
-                  {
-                        "type_label": "LuLu Money App",
-                        "name": "Instant India Account Credit",
-                        "fee": 10.0,
-                        "rate": 25.3
-                  },
-                  {
-                        "type_label": "Hypermarket Branch Desk",
-                        "name": "LuLu Express Branch Counter",
-                        "fee": 15.0,
-                        "rate": 25.3
-                  }
-            ]
+        "id": "lulu",
+        "name": "LuLu Money KSA",
+        "name_ml": "ലുലു മണി (LuLu Money KSA)",
+        "type": "wallet",
+        "rate": 25.3,
+        "fee_sar": 10,
+        "updated_date": "20 Nov 2026",
+        "is_best_rate": false,
+        "tag": "Malayali Favourite Choice 🛍️",
+        "tag_ml": "മലയാളികളുടെ പ്രിയ ചോയ്‌സ് 🛍️",
+        "brand_color": "#e31837",
+        "app_url": "https://luluexchange.com/",
+        "channels": [
+          {
+            "type_label": "LuLu Money App",
+            "name": "Instant India Account Credit",
+            "fee": 10,
+            "rate": 25.3
+          },
+          {
+            "type_label": "Hypermarket Branch Desk",
+            "name": "LuLu Express Branch Counter",
+            "fee": 15,
+            "rate": 25.3
+          }
+        ]
       },
       {
-            "id": "ersal",
-            "name": "Ersal Money Transfer",
-            "name_ml": "ഇർസാൽ (Ersal Money Transfer - Saudi Post)",
-            "type": "bank",
-            "rate": 25.29,
-            "fee_sar": 24.0,
-            "updated_date": "19 Nov 2026",
-            "is_best_rate": false,
-            "tag": "SPL Post Network 📮",
-            "tag_ml": "സൗദി പോസ്റ്റ് നെറ്റ്‌വർക്ക് 📮",
-            "brand_color": "#00833e",
-            "app_url": "https://ersal.sa/",
-            "channels": [
-                  {
-                        "type_label": "Branch Exchange Fee",
-                        "name": "Ersal Counter Transfer",
-                        "fee": 24.0,
-                        "rate": 25.29
-                  },
-                  {
-                        "type_label": "Online Exchange Fee",
-                        "name": "Ersal Digital Remit",
-                        "fee": 15.0,
-                        "rate": 25.29
-                  }
-            ]
+        "id": "ersal",
+        "name": "Ersal Money Transfer",
+        "name_ml": "ഇർസാൽ (Ersal Money Transfer - Saudi Post)",
+        "type": "bank",
+        "rate": 25.29,
+        "fee_sar": 24,
+        "updated_date": "20 Nov 2026",
+        "is_best_rate": false,
+        "tag": "SPL Post Network 📮",
+        "tag_ml": "സൗദി പോസ്റ്റ് നെറ്റ്‌വർക്ക് 📮",
+        "brand_color": "#00833e",
+        "app_url": "https://ersal.sa/",
+        "channels": [
+          {
+            "type_label": "Branch Exchange Fee",
+            "name": "Ersal Counter Transfer",
+            "fee": 24,
+            "rate": 25.29
+          },
+          {
+            "type_label": "Online Exchange Fee",
+            "name": "Ersal Digital Remit",
+            "fee": 15,
+            "rate": 25.29
+          }
+        ]
       },
       {
-            "id": "quickpay",
-            "name": "QuickPay",
-            "name_ml": "ക്വിക്ക്പേ (QuickPay - SNB)",
-            "type": "bank",
-            "rate": 25.24,
-            "fee_sar": 15.35,
-            "updated_date": "19 Nov 2026",
-            "is_best_rate": false,
-            "tag": "SNB Remittance Wing 🇸🇦",
-            "tag_ml": "എസ്.എൻ.ബി റെമിറ്റൻസ് വിംഗ് 🇸🇦",
-            "brand_color": "#006848",
-            "app_url": "https://www.alahli.com/en-us/personal-banking/quickpay",
-            "channels": [
-                  {
-                        "type_label": "Branch Exchange Fee",
-                        "name": "QuickPay Counter Cash / Account",
-                        "fee": 15.35,
-                        "rate": 25.24
-                  },
-                  {
-                        "type_label": "SNB AlAhli Online",
-                        "name": "QuickPay Digital Express",
-                        "fee": 10.0,
-                        "rate": 25.24
-                  }
-            ]
+        "id": "quickpay",
+        "name": "QuickPay",
+        "name_ml": "ക്വിക്ക്പേ (QuickPay - SNB)",
+        "type": "bank",
+        "rate": 25.24,
+        "fee_sar": 15.35,
+        "updated_date": "20 Nov 2026",
+        "is_best_rate": false,
+        "tag": "SNB Remittance Wing 🇸🇦",
+        "tag_ml": "എസ്.എൻ.ബി റെമിറ്റൻസ് വിംഗ് 🇸🇦",
+        "brand_color": "#006848",
+        "app_url": "https://www.alahli.com/en-us/personal-banking/quickpay",
+        "channels": [
+          {
+            "type_label": "Branch Exchange Fee",
+            "name": "QuickPay Counter Cash / Account",
+            "fee": 15.35,
+            "rate": 25.24
+          },
+          {
+            "type_label": "SNB AlAhli Online",
+            "name": "QuickPay Digital Express",
+            "fee": 10,
+            "rate": 25.24
+          }
+        ]
       },
       {
-            "id": "fawri",
-            "name": "Fawri Money Transfer",
-            "name_ml": "ഫൗരി (Fawri - Bank AlJazira)",
-            "type": "bank",
-            "rate": 25.21,
-            "fee_sar": 17.0,
-            "updated_date": "19 Nov 2026",
-            "is_best_rate": false,
-            "tag": "AlJazira Remit ⚡",
-            "tag_ml": "അൽ ജസീറ റെമിറ്റൻസ് ⚡",
-            "brand_color": "#1b365d",
-            "app_url": "https://www.baj.com.sa/fawri",
-            "channels": [
-                  {
-                        "type_label": "Branch Exchange Fee",
-                        "name": "Fawri Branch Transfer",
-                        "fee": 17.0,
-                        "rate": 25.21
-                  },
-                  {
-                        "type_label": "Online Exchange Fee",
-                        "name": "Fawri Online Digital",
-                        "fee": 10.0,
-                        "rate": 25.21
-                  }
-            ]
+        "id": "fawri",
+        "name": "Fawri Money Transfer",
+        "name_ml": "ഫൗരി (Fawri - Bank AlJazira)",
+        "type": "bank",
+        "rate": 25.21,
+        "fee_sar": 17,
+        "updated_date": "20 Nov 2026",
+        "is_best_rate": false,
+        "tag": "AlJazira Remit ⚡",
+        "tag_ml": "അൽ ജസീറ റെമിറ്റൻസ് ⚡",
+        "brand_color": "#1b365d",
+        "app_url": "https://www.baj.com.sa/fawri",
+        "channels": [
+          {
+            "type_label": "Branch Exchange Fee",
+            "name": "Fawri Branch Transfer",
+            "fee": 17,
+            "rate": 25.21
+          },
+          {
+            "type_label": "Online Exchange Fee",
+            "name": "Fawri Online Digital",
+            "fee": 10,
+            "rate": 25.21
+          }
+        ]
       },
       {
-            "id": "riyad-wu",
-            "name": "Riyad Bank_Western Union",
-            "name_ml": "റിയാദ് ബാങ്ക് വെസ്റ്റേൺ യൂണിയൻ",
-            "type": "bank",
-            "rate": 25.12,
-            "fee_sar": 5.0,
-            "updated_date": "19 Nov 2026",
-            "is_best_rate": false,
-            "tag": "Low Fee Transfer 🪙",
-            "tag_ml": "കുറഞ്ഞ ഫീസ് ട്രാൻസ്ഫർ 🪙",
-            "brand_color": "#004b87",
-            "app_url": "https://www.riyadbank.com/",
-            "channels": [
-                  {
-                        "type_label": "Western Union Online",
-                        "name": "Riyad Bank WU App Credit",
-                        "fee": 5.0,
-                        "rate": 25.12
-                  },
-                  {
-                        "type_label": "Branch Cash Pickup",
-                        "name": "Western Union Counter Cash",
-                        "fee": 15.0,
-                        "rate": 25.12
-                  }
-            ]
+        "id": "riyad-wu",
+        "name": "Riyad Bank_Western Union",
+        "name_ml": "റിയാദ് ബാങ്ക് വെസ്റ്റേൺ യൂണിയൻ",
+        "type": "bank",
+        "rate": 25.12,
+        "fee_sar": 5,
+        "updated_date": "20 Nov 2026",
+        "is_best_rate": false,
+        "tag": "Low Fee Transfer 🪙",
+        "tag_ml": "കുറഞ്ഞ ഫീസ് ട്രാൻസ്ഫർ 🪙",
+        "brand_color": "#004b87",
+        "app_url": "https://www.riyadbank.com/",
+        "channels": [
+          {
+            "type_label": "Western Union Online",
+            "name": "Riyad Bank WU App Credit",
+            "fee": 5,
+            "rate": 25.12
+          },
+          {
+            "type_label": "Branch Cash Pickup",
+            "name": "Western Union Counter Cash",
+            "fee": 15,
+            "rate": 25.12
+          }
+        ]
       },
       {
-            "id": "alinmapay",
-            "name": "AlinmaPay",
-            "name_ml": "അലിൻമ പേ (AlinmaPay)",
-            "type": "wallet",
-            "rate": 24.92,
-            "fee_sar": 11.5,
-            "updated_date": "19 Nov 2026",
-            "is_best_rate": false,
-            "tag": "Smart Digital Wallet 📱",
-            "tag_ml": "സ്മാർട്ട് ഡിജിറ്റൽ വാലറ്റ് 📱",
-            "brand_color": "#9b111e",
-            "app_url": "https://alinmapay.com/",
-            "channels": [
-                  {
-                        "type_label": "Digital Wallet Fee",
-                        "name": "AlinmaPay Direct to India Account",
-                        "fee": 11.5,
-                        "rate": 24.92
-                  },
-                  {
-                        "type_label": "Cash Pickup Fee",
-                        "name": "Western Union via AlinmaPay",
-                        "fee": 15.0,
-                        "rate": 24.92
-                  }
-            ]
+        "id": "alinmapay",
+        "name": "AlinmaPay",
+        "name_ml": "അലിൻമ പേ (AlinmaPay)",
+        "type": "wallet",
+        "rate": 24.92,
+        "fee_sar": 11.5,
+        "updated_date": "20 Nov 2026",
+        "is_best_rate": false,
+        "tag": "Smart Digital Wallet 📱",
+        "tag_ml": "സ്മാർട്ട് ഡിജിറ്റൽ വാലറ്റ് 📱",
+        "brand_color": "#9b111e",
+        "app_url": "https://alinmapay.com/",
+        "channels": [
+          {
+            "type_label": "Digital Wallet Fee",
+            "name": "AlinmaPay Direct to India Account",
+            "fee": 11.5,
+            "rate": 24.92
+          },
+          {
+            "type_label": "Cash Pickup Fee",
+            "name": "Western Union via AlinmaPay",
+            "fee": 15,
+            "rate": 24.92
+          }
+        ]
       },
       {
-            "id": "d360",
-            "name": "D360 Bank",
-            "name_ml": "ഡി360 ഡിജിറ്റൽ ബാങ്ക് (D360 Bank)",
-            "type": "wallet",
-            "rate": 24.9,
-            "fee_sar": 0.0,
-            "updated_date": "19 Nov 2026",
-            "is_best_rate": false,
-            "tag": "Zero Fee Digital Bank 🆓",
-            "tag_ml": "പൂർണ്ണമായും ഫ്രീ ട്രാൻസ്ഫർ 🆓",
-            "brand_color": "#7c3aed",
-            "app_url": "https://www.d360.com/",
-            "channels": [
-                  {
-                        "type_label": "Online Exchange Fee",
-                        "name": "D360 App Direct Transfer",
-                        "fee": 0.0,
-                        "rate": 24.9
-                  }
-            ]
+        "id": "d360",
+        "name": "D360 Bank",
+        "name_ml": "ഡി360 ഡിജിറ്റൽ ബാങ്ക് (D360 Bank)",
+        "type": "wallet",
+        "rate": 24.9,
+        "fee_sar": 0,
+        "updated_date": "20 Nov 2026",
+        "is_best_rate": false,
+        "tag": "Zero Fee Digital Bank 🆓",
+        "tag_ml": "പൂർണ്ണമായും ഫ്രീ ട്രാൻസ്ഫർ 🆓",
+        "brand_color": "#7c3aed",
+        "app_url": "https://www.d360.com/",
+        "channels": [
+          {
+            "type_label": "Online Exchange Fee",
+            "name": "D360 App Direct Transfer",
+            "fee": 0,
+            "rate": 24.9
+          }
+        ]
       },
       {
-            "id": "neo-snb",
-            "name": "NEO SNB",
-            "name_ml": "നിയോ എസ്.എൻ.ബി (NEO SNB)",
-            "type": "wallet",
-            "rate": 24.9,
-            "fee_sar": 0.0,
-            "updated_date": "19 Nov 2026",
-            "is_best_rate": false,
-            "tag": "Next-Gen Digital Banking ⚡",
-            "tag_ml": "ന്യൂജെൻ ഡിജിറ്റൽ ബാങ്കിംഗ് ⚡",
-            "brand_color": "#0ea5e9",
-            "app_url": "https://www.alahli.com/en-us/neo",
-            "channels": [
-                  {
-                        "type_label": "Online Exchange Fee",
-                        "name": "NEO App Direct Remit",
-                        "fee": 0.0,
-                        "rate": 24.9
-                  }
-            ]
+        "id": "neo-snb",
+        "name": "NEO SNB",
+        "name_ml": "നിയോ എസ്.എൻ.ബി (NEO SNB)",
+        "type": "wallet",
+        "rate": 24.9,
+        "fee_sar": 0,
+        "updated_date": "20 Nov 2026",
+        "is_best_rate": false,
+        "tag": "Next-Gen Digital Banking ⚡",
+        "tag_ml": "ന്യൂജെൻ ഡിജിറ്റൽ ബാങ്കിംഗ് ⚡",
+        "brand_color": "#0ea5e9",
+        "app_url": "https://www.alahli.com/en-us/neo",
+        "channels": [
+          {
+            "type_label": "Online Exchange Fee",
+            "name": "NEO App Direct Remit",
+            "fee": 0,
+            "rate": 24.9
+          }
+        ]
       },
       {
-            "id": "barq",
-            "name": "Barq App",
-            "name_ml": "ബർഖ് ആപ്പ് (Barq App)",
-            "type": "wallet",
-            "rate": 24.9,
-            "fee_sar": 0.0,
-            "updated_date": "19 Nov 2026",
-            "is_best_rate": false,
-            "tag": "Instant Zero Fee ⚡",
-            "tag_ml": "ഇൻസ്റ്റന്റ് ഫ്രീ ട്രാൻസ്ഫർ ⚡",
-            "brand_color": "#eab308",
-            "app_url": "https://barq.app/",
-            "channels": [
-                  {
-                        "type_label": "Online Exchange Fee",
-                        "name": "Barq App Instant Transfer",
-                        "fee": 0.0,
-                        "rate": 24.9
-                  }
-            ]
+        "id": "barq",
+        "name": "Barq App",
+        "name_ml": "ബർഖ് ആപ്പ് (Barq App)",
+        "type": "wallet",
+        "rate": 24.9,
+        "fee_sar": 0,
+        "updated_date": "20 Nov 2026",
+        "is_best_rate": false,
+        "tag": "Instant Zero Fee ⚡",
+        "tag_ml": "ഇൻസ്റ്റന്റ് ഫ്രീ ട്രാൻസ്ഫർ ⚡",
+        "brand_color": "#eab308",
+        "app_url": "https://barq.app/",
+        "channels": [
+          {
+            "type_label": "Online Exchange Fee",
+            "name": "Barq App Instant Transfer",
+            "fee": 0,
+            "rate": 24.9
+          }
+        ]
       },
       {
-            "id": "stcpay",
-            "name": "stcpay",
-            "name_ml": "എസ്ടിസി പേ (stc pay)",
-            "type": "wallet",
-            "rate": 24.89,
-            "fee_sar": 15.0,
-            "updated_date": "19 Nov 2026",
-            "is_best_rate": false,
-            "tag": "Fastest Western Union Partner 🚀",
-            "tag_ml": "വേഗതയേറിയ സേവനം 🚀",
-            "brand_color": "#4f008c",
-            "app_url": "https://www.stcpay.com.sa/",
-            "channels": [
-                  {
-                        "type_label": "Western Union via stcpay",
-                        "name": "stcpay India Cash / Account",
-                        "fee": 15.0,
-                        "rate": 24.89
-                  },
-                  {
-                        "type_label": "International Bank Transfer",
-                        "name": "Direct Bank Deposit",
-                        "fee": 15.0,
-                        "rate": 24.89
-                  }
-            ]
+        "id": "stcpay",
+        "name": "stcpay",
+        "name_ml": "എസ്ടിസി പേ (stc pay)",
+        "type": "wallet",
+        "rate": 24.89,
+        "fee_sar": 15,
+        "updated_date": "20 Nov 2026",
+        "is_best_rate": false,
+        "tag": "Fastest Western Union Partner 🚀",
+        "tag_ml": "വേഗതയേറിയ സേവനം 🚀",
+        "brand_color": "#4f008c",
+        "app_url": "https://www.stcpay.com.sa/",
+        "channels": [
+          {
+            "type_label": "Western Union via stcpay",
+            "name": "stcpay India Cash / Account",
+            "fee": 15,
+            "rate": 24.89
+          },
+          {
+            "type_label": "International Bank Transfer",
+            "name": "Direct Bank Deposit",
+            "fee": 15,
+            "rate": 24.89
+          }
+        ]
       },
       {
-            "id": "mobilypay",
-            "name": "Mobily Pay",
-            "name_ml": "മൊബിലി പേ (Mobily Pay)",
-            "type": "wallet",
-            "rate": 24.89,
-            "fee_sar": 0.0,
-            "updated_date": "19 Nov 2026",
-            "is_best_rate": false,
-            "tag": "Zero Fee Offer ⚡",
-            "tag_ml": "ഫ്രീ ട്രാൻസ്ഫർ ഓഫർ ⚡",
-            "brand_color": "#00a3e0",
-            "app_url": "https://mobilypay.sa/",
-            "channels": [
-                  {
-                        "type_label": "Online Transfer Fee",
-                        "name": "Mobily Pay Promo Transfer",
-                        "fee": 0.0,
-                        "rate": 24.89
-                  },
-                  {
-                        "type_label": "Standard Bank Remit",
-                        "name": "India Account Credit",
-                        "fee": 10.0,
-                        "rate": 24.89
-                  }
-            ]
+        "id": "mobilypay",
+        "name": "Mobily Pay",
+        "name_ml": "മൊബിലി പേ (Mobily Pay)",
+        "type": "wallet",
+        "rate": 24.89,
+        "fee_sar": 0,
+        "updated_date": "20 Nov 2026",
+        "is_best_rate": false,
+        "tag": "Zero Fee Offer ⚡",
+        "tag_ml": "ഫ്രീ ട്രാൻസ്ഫർ ഓഫർ ⚡",
+        "brand_color": "#00a3e0",
+        "app_url": "https://mobilypay.sa/",
+        "channels": [
+          {
+            "type_label": "Online Transfer Fee",
+            "name": "Mobily Pay Promo Transfer",
+            "fee": 0,
+            "rate": 24.89
+          },
+          {
+            "type_label": "Standard Bank Remit",
+            "name": "India Account Credit",
+            "fee": 10,
+            "rate": 24.89
+          }
+        ]
       },
       {
-            "id": "urpay",
-            "name": "urpay",
-            "name_ml": "യൂർപേ (urpay - Alinma Bank)",
-            "type": "wallet",
-            "rate": 24.88,
-            "fee_sar": 0.0,
-            "updated_date": "19 Nov 2026",
-            "is_best_rate": false,
-            "tag": "Zero Fee Wallet ⚡",
-            "tag_ml": "ഫ്രീ ഡിജിറ്റൽ ട്രാൻസ്ഫർ ⚡",
-            "brand_color": "#009688",
-            "app_url": "https://www.urpay.com.sa/",
-            "channels": [
-                  {
-                        "type_label": "Online Exchange Fee",
-                        "name": "urpay India Digital Remit",
-                        "fee": 0.0,
-                        "rate": 24.88
-                  },
-                  {
-                        "type_label": "Express Direct Remittance",
-                        "name": "urpay Express Transfer",
-                        "fee": 13.0,
-                        "rate": 24.88
-                  }
-            ]
+        "id": "urpay",
+        "name": "urpay",
+        "name_ml": "യൂർപേ (urpay - Alinma Bank)",
+        "type": "wallet",
+        "rate": 25.48,
+        "fee_sar": 0,
+        "updated_date": "20 Nov 2026",
+        "is_best_rate": false,
+        "tag": "Zero Fee Wallet ⚡",
+        "tag_ml": "ഫ്രീ ഡിജിറ്റൽ ട്രാൻസ്ഫർ ⚡",
+        "brand_color": "#009688",
+        "app_url": "https://www.urpay.com.sa/",
+        "channels": [
+          {
+            "type_label": "Online Exchange Fee",
+            "name": "urpay India Digital Remit",
+            "fee": 0,
+            "rate": 24.88
+          },
+          {
+            "type_label": "Express Direct Remittance",
+            "name": "urpay Express Transfer",
+            "fee": 13,
+            "rate": 24.88
+          }
+        ]
       },
       {
-            "id": "friendipay",
-            "name": "Friendi Pay",
-            "name_ml": "ഫ്രണ്ടി പേ (Friendi Pay)",
-            "type": "wallet",
-            "rate": 24.89,
-            "fee_sar": 0.0,
-            "updated_date": "19 Nov 2026",
-            "is_best_rate": false,
-            "tag": "Expats Choice App 📱",
-            "tag_ml": "പ്രവാസികളുടെ പ്രിയ ആപ്പ് 📱",
-            "brand_color": "#ff6600",
-            "app_url": "https://www.friendipay.com/",
-            "channels": [
-                  {
-                        "type_label": "Online Exchange Fee",
-                        "name": "Friendi Pay Direct India",
-                        "fee": 0.0,
-                        "rate": 24.89
-                  },
-                  {
-                        "type_label": "Fast Track Transfer",
-                        "name": "Friendi Instant Payout",
-                        "fee": 14.0,
-                        "rate": 24.89
-                  }
-            ]
+        "id": "friendipay",
+        "name": "Friendi Pay",
+        "name_ml": "ഫ്രണ്ടി പേ (Friendi Pay)",
+        "type": "wallet",
+        "rate": 24.89,
+        "fee_sar": 0,
+        "updated_date": "20 Nov 2026",
+        "is_best_rate": false,
+        "tag": "Expats Choice App 📱",
+        "tag_ml": "പ്രവാസികളുടെ പ്രിയ ആപ്പ് 📱",
+        "brand_color": "#ff6600",
+        "app_url": "https://www.friendipay.com/",
+        "channels": [
+          {
+            "type_label": "Online Exchange Fee",
+            "name": "Friendi Pay Direct India",
+            "fee": 0,
+            "rate": 24.89
+          },
+          {
+            "type_label": "Fast Track Transfer",
+            "name": "Friendi Instant Payout",
+            "fee": 14,
+            "rate": 24.89
+          }
+        ]
       },
       {
-            "id": "visionbank",
-            "name": "Vision Bank",
-            "name_ml": "വിഷൻ ബാങ്ക് (Vision Bank)",
-            "type": "bank",
-            "rate": 24.89,
-            "fee_sar": 0.0,
-            "updated_date": "19 Nov 2026",
-            "is_best_rate": false,
-            "tag": "Saudi Digital Banking 💳",
-            "tag_ml": "സൗദി ഡിജിറ്റൽ ബാങ്കിംഗ് 💳",
-            "brand_color": "#2563eb",
-            "app_url": "https://www.visionbank.com.sa/",
-            "channels": [
-                  {
-                        "type_label": "Digital Account Transfer",
-                        "name": "Vision Digital Remit",
-                        "fee": 0.0,
-                        "rate": 24.89
-                  }
-            ]
+        "id": "visionbank",
+        "name": "Vision Bank",
+        "name_ml": "വിഷൻ ബാങ്ക് (Vision Bank)",
+        "type": "bank",
+        "rate": 24.89,
+        "fee_sar": 0,
+        "updated_date": "20 Nov 2026",
+        "is_best_rate": false,
+        "tag": "Saudi Digital Banking 💳",
+        "tag_ml": "സൗദി ഡിജിറ്റൽ ബാങ്കിംഗ് 💳",
+        "brand_color": "#2563eb",
+        "app_url": "https://www.visionbank.com.sa/",
+        "channels": [
+          {
+            "type_label": "Digital Account Transfer",
+            "name": "Vision Digital Remit",
+            "fee": 0,
+            "rate": 24.89
+          }
+        ]
       },
       {
-            "id": "tiqmo",
-            "name": "Tiqmo Wallet",
-            "name_ml": "തിക്മോ (Tiqmo Digital Wallet)",
-            "type": "wallet",
-            "rate": 24.88,
-            "fee_sar": 0.0,
-            "updated_date": "19 Nov 2026",
-            "is_best_rate": false,
-            "tag": "Zero Fee Digital Wallet ⚡",
-            "tag_ml": "ഫ്രീ ഡിജിറ്റൽ വാലറ്റ് ⚡",
-            "brand_color": "#06b6d4",
-            "app_url": "https://tiqmo.com/",
-            "channels": [
-                  {
-                        "type_label": "Digital App Remittance",
-                        "name": "Tiqmo India Direct Credit",
-                        "fee": 0.0,
-                        "rate": 24.88
-                  }
-            ]
+        "id": "tiqmo",
+        "name": "Tiqmo Wallet",
+        "name_ml": "തിക്മോ (Tiqmo Digital Wallet)",
+        "type": "wallet",
+        "rate": 24.88,
+        "fee_sar": 0,
+        "updated_date": "20 Nov 2026",
+        "is_best_rate": false,
+        "tag": "Zero Fee Digital Wallet ⚡",
+        "tag_ml": "ഫ്രീ ഡിജിറ്റൽ വാലറ്റ് ⚡",
+        "brand_color": "#06b6d4",
+        "app_url": "https://tiqmo.com/",
+        "channels": [
+          {
+            "type_label": "Digital App Remittance",
+            "name": "Tiqmo India Direct Credit",
+            "fee": 0,
+            "rate": 24.88
+          }
+        ]
       }
-]
+    ]
   },
-
-  // 2. KSA Gold Rates (Saudi Arabia Bullion & Jewelry Standard)
-  gold_rates: {
-    currency: "SAR",
-    inr_rate: 24.91,
-    benchmark_market: "Saudi Bullion Market (Riyadh & Jeddah Gold Souks)",
-    benchmark_market_ml: "സൗദി ബുള്ളിയൻ മാർക്കറ്റ് (ജിദ്ദ & റിയാദ് ഗോൾഡ് സൂഖ്)",
-    items: [
+  "gold_rates": {
+    "currency": "SAR",
+    "inr_rate": 24.96,
+    "benchmark_market": "Saudi Bullion Market (Riyadh & Jeddah Gold Souks)",
+    "benchmark_market_ml": "സൗദി ബുള്ളിയൻ മാർക്കറ്റ് (ജിദ്ദ & റിയാദ് ഗോൾഡ് സൂഖ്)",
+    "items": [
       {
-        carat: "24K",
-        title: "24K ശുദ്ധ സ്വർണ്ണം (Pure Gold)",
-        desc: "ബുള്ളിയൻ ബാറുകൾ & നാണയങ്ങൾ",
-        desc_en: "Bullion Bars & Coins (99.9% Pure)",
-        sar_per_gram: 462.50,
-        trend: "up",
-        trend_change_sar: "+1.80"
+        "carat": "24K",
+        "title": "24K ശുദ്ധ സ്വർണ്ണം (Pure Gold)",
+        "desc": "ബുള്ളിയൻ ബാറുകൾ & നാணயങ്ങൾ",
+        "desc_en": "Bullion Bars & Coins (99.9% Pure)",
+        "sar_per_gram": 464.0,
+        "trend": "up",
+        "trend_change_sar": "+1.50"
       },
       {
-        carat: "22K",
-        title: "22K ആഭരണ സ്വർണ്ണം (1 ഗ്രാം)",
-        desc: "സാധാരണ ആഭരണങ്ങൾ (916 KDM)",
-        desc_en: "Jewelry Standard (91.6% Pure)",
-        sar_per_gram: 424.00,
-        trend: "up",
-        trend_change_sar: "+1.65"
+        "carat": "22K",
+        "title": "22K ആഭരണ സ്വർണ്ണം (1 ഗ്രാം)",
+        "desc": "സാധാരണ ആഭരണങ്ങൾ (916 KDM)",
+        "desc_en": "Jewelry Standard (91.6% Pure)",
+        "sar_per_gram": 425.5,
+        "trend": "up",
+        "trend_change_sar": "+1.50"
       },
       {
-        carat: "22K Pavan",
-        title: "22K ഒരു പവൻ (8 ഗ്രാം)",
-        desc: "പ്രവാസികൾ നാട്ടിലേക്ക് വാങ്ങുന്ന പവൻ",
-        desc_en: "1 Sovereign / Pavan (8 Grams)",
-        sar_per_gram: 3392.00,
-        trend: "up",
-        trend_change_sar: "+13.20",
-        is_pavan: true
+        "carat": "22K Pavan",
+        "title": "22K ഒരു പവൻ (8 ഗ്രാം)",
+        "desc": "പ്രവാസികൾ നാട്ടിലേക്ക് വാങ്ങുന്ന പവൻ",
+        "desc_en": "1 Sovereign / Pavan (8 Grams)",
+        "sar_per_gram": 3404.0,
+        "trend": "up",
+        "trend_change_sar": "+12.00",
+        "is_pavan": true
       },
       {
-        carat: "18K",
-        title: "18K ഫാഷൻ സ്വർണ്ണം (1 ഗ്രാം)",
-        desc: "ഡയമണ്ട് & മോഡേൺ ജ്വല്ലറി",
-        desc_en: "Modern & Diamond Settings (75%)",
-        sar_per_gram: 347.00,
-        trend: "stable",
-        trend_change_sar: "0.00"
+        "carat": "21K",
+        "title": "21K അറബിക് സ്വർണ്ണം (1 ഗ്രാം)",
+        "desc": "സൗദി പരമ്പരാഗത ആഭരണങ്ങൾ (87.5%)",
+        "desc_en": "Traditional Saudi Designs (87.5%)",
+        "sar_per_gram": 406.0,
+        "trend": "up",
+        "trend_change_sar": "+1.40"
+      },
+      {
+        "carat": "18K",
+        "title": "18K ഫാഷൻ സ്വർണ്ണം (1 ഗ്രാം)",
+        "desc": "ഡയമണ്ട് & മോഡേൺ ജ്വല്ലറി",
+        "desc_en": "Modern & Diamond Settings (75%)",
+        "sar_per_gram": 348.0,
+        "trend": "stable",
+        "trend_change_sar": "+0.50"
       }
     ],
-    disclaimer: "ഷോറൂമുകളിൽ പണിക്കൂലിയും (മജൂരി) 15% വാറ്റും (VAT) അധികമായി വരുന്നതാണ്. നിക്ഷേപ ആഭരണങ്ങൾ വാങ്ങുന്നതിന് മുൻപ് അതത് ജ്വല്ലറികളിലെ കൃത്യമായ വില ഉറപ്പുവരുത്തുക.",
-    disclaimer_en: "Showroom prices will include fabrication fees (making charges) and 15% KSA VAT. Please verify final billing rate at verified jewelry retailers."
+    "disclaimer": "ഷോറൂമുകളിൽ പണിക്കൂലിയും (മജൂരി) 15% വാറ്റും (VAT) അധികമായി വരുന്നതാണ്. നിക്ഷേപ ആഭരണങ്ങൾ വാങ്ങുന്നതിന് മുൻപ് അതത് ജ്വല്ലറികളിലെ കൃത്യമായ വില ഉറപ്പുവരുത്തുക.",
+    "disclaimer_en": "Showroom prices will include fabrication fees (making charges) and 15% KSA VAT. Please verify final billing rate at verified jewelry retailers."
   },
-
-  // 3. Saudi Visa & Labour Regulations Knowledge Desk
-  saudi_guides: [
+  "saudi_guides": [
     {
-      id: "guide-family-visa",
-      category: "visa",
-      badge: "ഫാമിലി വിസിറ്റ് വിസ",
-      badge_en: "Family Visit Visa",
-      title: "സൗദി ഫാമിലി വിസിറ്റ് വിസ: അപേക്ഷ, പുതുക്കൽ & മെഡിക്കൽ ഇൻഷുറൻസ്",
-      title_en: "Saudi Family Visit Visa: Application, Insurance & Extensions",
-      points: [
+      "id": "guide-family-visa",
+      "category": "visa",
+      "badge": "ഫാമിലി വിസിറ്റ് വിസ",
+      "badge_en": "Family Visit Visa",
+      "title": "സൗദി ഫാമിലി വിസിറ്റ് വിസ: അപേക്ഷ, പുതുക്കൽ & മെഡിക്കൽ ഇൻഷുറൻസ്",
+      "title_en": "Saudi Family Visit Visa: Application, Insurance & Extensions",
+      "points": [
         "വിദേശകാര്യ മന്ത്രാലയത്തിന്റെ (MOFA) പോർട്ടൽ വഴി ഓൺലൈനായി വിസക്ക് അപേക്ഷിക്കാം.",
         "വിസിറ്റ് വിസ സൗദിയിൽ എത്തിയ ശേഷം അബ്ഷിർ (Absher) പ്ലാറ്റ്‌ഫോം വഴി നീട്ടാവുന്നതാണ്.",
         "വിസ നീട്ടുന്നതിന് തൊട്ടുമുൻപ് തവാഫുൽ (Tawuniya/Bupa/Chi) മെഡിക്കൽ ഇൻഷുറൻസ് നിർബന്ധമായും പുതുക്കണം.",
         "മൾട്ടിപ്പിൾ എൻട്രി വിസയിൽ വരുന്നവർ കാലാവധി തീരുന്നതിന് മുൻപ് രാജ്യം വിട്ട് വീണ്ടും പ്രവേശിക്കുകയോ അബ്ഷിർ വഴി പുതുക്കുകയോ വേണം."
       ],
-      official_link: "https://visa.mofa.gov.sa/",
-      official_portal: "MOFA Visa Portal"
+      "official_link": "https://visa.mofa.gov.sa/",
+      "official_portal": "MOFA Visa Portal"
     },
     {
-      id: "guide-labour-law",
-      category: "labour",
-      badge: "സൗദി തൊഴിൽ നിയമം",
-      badge_en: "Saudi Labour Law",
-      title: "സൗദി തൊഴിൽ നിയമം: ഖിവ (Qiwa) കോൺട്രാക്ട് & ജീവനക്കാരുടെ അവകാശങ്ങൾ",
-      title_en: "Saudi Labour Law: Qiwa Digital Contracts & Expat Worker Rights",
-      points: [
+      "id": "guide-labour-law",
+      "category": "labour",
+      "badge": "സൗദി തൊഴിൽ നിയമം",
+      "badge_en": "Saudi Labour Law",
+      "title": "സൗദി തൊഴിൽ നിയമം: ഖിവ (Qiwa) കോൺട്രാക്ട് & ജീവനക്കാരുടെ അവകാശങ്ങൾ",
+      "title_en": "Saudi Labour Law: Qiwa Digital Contracts & Expat Worker Rights",
+      "points": [
         "എല്ലാ സ്വകാര്യ കമ്പനി ജീവനക്കാരുടെയും തൊഴിൽ കരാറുകൾ ഖിവ (Qiwa) പ്ലാറ്റ്‌ഫോമിൽ ഡിജിറ്റലായി സാക്ഷ്യപ്പെടുത്തിയിരിക്കണം.",
         "തൊഴിലാളിയുടെ അനുമതിയില്ലാതെ ഏകപക്ഷീയമായി കരാർ വ്യവസ്ഥകൾ മാറ്റാൻ സാധ്യമല്ല.",
         "നോട്ടീസ് പീരിയഡ് (Notice Period) പൂർത്തിയാക്കി ഖിവ വഴി മറ്റൊരു കമ്പനിയിലേക്ക് സ്പോൺസർഷിപ്പ് മാറ്റം (Kafala Transfer) സാധ്യമാണ്.",
         "സേവനാനന്തര ആനുകൂല്യം (End of Service Gratuity - ESB): ആദ്യ 5 വർഷത്തേക്ക് ഓരോ വർഷത്തിനും അര മാസത്തെ ശമ്പളവും, 5 വർഷത്തിന് ശേഷം ഓരോ വർഷത്തിനും ഒരു മാസത്തെ മുഴുവൻ ശമ്പളവും ലഭിക്കാൻ അർഹതയുണ്ട്."
       ],
-      official_link: "https://qiwa.sa/",
-      official_portal: "Qiwa Platform (Human Resources)"
+      "official_link": "https://qiwa.sa/",
+      "official_portal": "Qiwa Platform (Human Resources)"
     },
     {
-      id: "guide-reentry-absher",
-      category: "visa",
-      badge: "റീ-എൻട്രി & ഇഖാമ",
-      badge_en: "Exit Re-Entry & Iqama",
-      title: "എക്സിറ്റ് റീ-എൻട്രി, ഇഖാമ പുതുക്കൽ & നാടുകടത്തൽ ഒഴിവാക്കാനുള്ള നിർദ്ദേശങ്ങൾ",
-      title_en: "Exit Re-entry Extensions Outside KSA & Iqama Renewals",
-      points: [
+      "id": "guide-reentry-absher",
+      "category": "visa",
+      "badge": "റീ-എൻട്രി & ഇഖാമ",
+      "badge_en": "Exit Re-Entry & Iqama",
+      "title": "എക്സിറ്റ് റീ-എൻട്രി, ഇഖാമ പുതുക്കൽ & നാടുകടത്തൽ ഒഴിവാക്കാനുള്ള നിർദ്ദേശങ്ങൾ",
+      "title_en": "Exit Re-entry Extensions Outside KSA & Iqama Renewals",
+      "points": [
         "നാട്ടിൽ നിൽക്കുന്ന ജീവനക്കാരുടെയും ആശ്രിതരുടെയും എക്സിറ്റ് റീ-എൻട്രി കാലാവധി അബ്ഷിർ/മുഖീം വഴി തൊഴിലുടമയ്ക്ക് നീട്ടാം.",
         "ഇഖാമ കാലാവധി കഴിയുന്നതിന് മുൻപ് അബ്ഷിർ ഇൻഡിവിജ്വൽസ് വഴി ചെക്ക് ചെയ്തു കൃത്യമായി പുതുക്കുക.",
         "ട്രാഫിക് ഫൈനുകൾ ഉണ്ടെങ്കിൽ വിസ ഇഷ്യൂ ചെയ്യാനോ റീ-എൻട്രി അടിക്കാനോ സാധിക്കില്ല; ഫൈനുകൾ ഇഹ്‌സാൻ/സദാദ് വഴി അടയ്ക്കണം."
       ],
-      official_link: "https://www.absher.sa/",
-      official_portal: "Absher Official Portal"
+      "official_link": "https://www.absher.sa/",
+      "official_portal": "Absher Official Portal"
     }
   ],
-
-  // 4. Kerala & Pravasi Verified Ethical News
-  news: [
+  "news": [
     {
-      id: "news-01",
-      category: "visa",
-      badge: "സൗദി വിസ അപ്ഡേറ്റ്",
-      badge_en: "KSA Visa Update",
-      title: "സൗദി വിസിറ്റ് വിസ പുതുക്കൽ കൂടുതൽ ലളിതമാക്കി; അബ്ഷിർ വഴി നേരിട്ട് പ്രൊലോങ് ചെയ്യാം",
-      title_en: "Saudi Jawazat Simplifies Family Visit Visa Extension Process via Absher",
-      summary: "സൗദി അറേബ്യയിലുള്ള സന്ദർശകരുടെ സിംഗിൾ & മൾട്ടിപ്പിൾ വിസിറ്റ് വിസകൾ വാലിഡ് മെഡിക്കൽ ഇൻഷുറൻസ് ഉള്ളപക്ഷം അബ്ഷിർ പോർട്ടലിലൂടെ വളരെ എളുപ്പത്തിൽ നീട്ടാൻ സൗകര്യമൊരുക്കി ജവാസാത്ത്.",
-      summary_en: "General Directorate of Passports confirms seamless family visit visa renewals through Absher for eligible visitors with active health insurance coverage.",
-      time: "1 മണിക്കൂർ മുൻപ്",
-      time_en: "1 hour ago",
-      source_name: "സൗദി ജവാസാത്ത് · Jawazat",
-      source_url: "https://www.absher.sa/",
-      verified: true
+      "id": "news-01",
+      "category": "visa",
+      "badge": "സൗദി വിസ അപ്ഡേറ്റ്",
+      "badge_en": "KSA Visa Update",
+      "title": "സൗദി ഫാമിലി വിസിറ്റ് വിസ പ്രൊലോംഗേഷൻ: അബ്ഷിർ വഴി നേരിട്ട് കാലാവധി നീട്ടാം; ജവാസാത്ത് അറിയിപ്പ്",
+      "title_en": "Saudi Jawazat: Family Visit Visa Renewals Fully Automated via Absher",
+      "summary": "സൗദി അറേബ്യയിലുള്ള സന്ദർശകരുടെ വിസിറ്റ് വിസകൾ വാലിഡ് മെഡിക്കൽ ഇൻഷുറൻസ് ഉള്ളപക്ഷം അബ്ഷിർ പ്ലാറ്റ്‌ഫോം വഴി വളരെ എളുപ്പത്തിൽ നീട്ടാൻ സൗകര്യമൊരുക്കി ജവാസാത്ത്. ഓഫീസുകളിൽ നേരിട്ട് ഹാജരാകേണ്ടതില്ല.",
+      "summary_en": "General Directorate of Passports confirms seamless family visit visa extensions via Absher for eligible visitors with valid insurance.",
+      "time": "30 മിനിറ്റ് മുൻപ്",
+      "time_en": "30 mins ago",
+      "source_name": "സൗദി ജവാസാത്ത് · Jawazat",
+      "source_url": "https://www.absher.sa/",
+      "verified": true
     },
     {
-      id: "news-02",
-      category: "labour",
-      badge: "സൗദി തൊഴിൽ നിയമം",
-      badge_en: "Saudi Labour Law",
-      title: "ഖിവ (Qiwa) പ്ലാറ്റ്‌ഫോമിൽ പുതിയ കരാർ സുരക്ഷാ ചട്ടങ്ങൾ; തൊഴിലാളികളുടെ വേതനം കൃത്യമായി ഉറപ്പാക്കാൻ വേജ് പ്രൊട്ടക്ഷൻ",
-      title_en: "Ministry of Human Resources Enforces Wage Protection Compliance via Qiwa",
-      summary: "സ്വകാര്യ സ്ഥാപനങ്ങളിലെ തൊഴിലാളികളുടെ ശമ്പളം കൃത്യസമയത്ത് ബാങ്ക് അക്കൗണ്ടുകൾ വഴി വിതരണം ചെയ്യുന്നുണ്ടെന്ന് ഉറപ്പാക്കുന്ന വേജ് പ്രൊട്ടക്ഷൻ സിസ്റ്റം (WPS) കർശനമാക്കി മാനവവിഭവശേഷി മന്ത്രാലയം.",
-      summary_en: "Human Resources Ministry mandates strict adherence to the Wage Protection System to safeguard full salary disbursals to all expatriate and national employees.",
-      time: "2 മണിക്കൂർ മുൻപ്",
-      time_en: "2 hours ago",
-      source_name: "മാനവവിഭവശേഷി മന്ത്രാലയം · Qiwa",
-      source_url: "https://qiwa.sa/",
-      verified: true
+      "id": "news-02",
+      "category": "labour",
+      "badge": "തൊഴിൽ & വേതനം",
+      "badge_en": "Labor & Wages",
+      "title": "ഖിവ (Qiwa) പ്ലാറ്റ്‌ഫോമിൽ പുതിയ കരാർ സുരക്ഷാ ചട്ടങ്ങൾ; തൊഴിലാളികളുടെ വേതനം ഉറപ്പാക്കാൻ വേജ് പ്രൊട്ടക്ഷൻ",
+      "title_en": "Qiwa Updates Wage Protection System & Digital Contract Authentication",
+      "summary": "സൗദിയിലെ സ്വകാര്യ സ്ഥാപനങ്ങളിലെ ജീവനക്കാരുടെ വേതനം കൃത്യമായി ബാങ്ക് അക്കൗണ്ടുകൾ വഴി വിതരണം ചെയ്യുന്നുവെന്ന് ഉറപ്പുവരുത്താൻ വേജ് പ്രൊട്ടക്ഷൻ സിസ്റ്റം കർശനമാക്കി മാനവ വിഭവശേഷി മന്ത്രാലയം.",
+      "summary_en": "Ministry of Human Resources and Social Development enforces enhanced contract tracking and prompt electronic wage payments via Qiwa.",
+      "time": "1 മണിക്കൂർ മുൻപ്",
+      "time_en": "1 hour ago",
+      "source_name": "ഖിവ പ്ലാറ്റ്‌ഫോം · Qiwa MHRSD",
+      "source_url": "https://www.qiwa.sa/",
+      "verified": true
     },
     {
-      id: "news-03",
-      category: "pravasi",
-      badge: "പ്രവാസി ക്ഷേമം",
-      badge_en: "Pravasi Welfare",
-      title: "ഗൾഫ് പ്രവാസികൾക്കായി നോർക്ക ഇൻഷുറൻസ് വിപുലീകരിച്ചു; അടിയന്തര ചികിത്സാ സഹായവും പെൻഷൻ സേവനങ്ങളും കൂടുതൽ വേഗത്തിൽ",
-      title_en: "NORKA Roots Expands Pravasi Insurance & Emergency Medical Relief Scheme for GCC Expats",
-      summary: "സൗദി ഉൾപ്പെടെയുള്ള ജിസിസി രാജ്യങ്ങളിലെ പ്രവാസികൾക്ക് നാട്ടിലും ഗൾഫിലും അടിയന്തര ഘട്ടങ്ങളിൽ താങ്ങാവുന്ന തരത്തിൽ നോർക്ക-റൂട്ട്സ് ക്ഷേമ പദ്ധതികൾ കൂടുതൽ ലളിതമാക്കി. ഓൺലൈൻ വഴി നേരിട്ട് അപേക്ഷിക്കാം.",
-      summary_en: "NORKA Roots streamlines emergency healthcare, repatriation, and welfare scheme registration for Saudi and GCC Malayalis with fully digital processing.",
-      time: "3 മണിക്കൂർ മുൻപ്",
-      time_en: "3 hours ago",
-      source_name: "നോർക്ക റൂട്ട്സ് · NORKA Roots",
-      source_url: "https://www.norkaroots.kerala.gov.in/",
-      verified: true
+      "id": "news-03",
+      "category": "aviation",
+      "badge": "വിമാന സർവീസുകൾ",
+      "badge_en": "Aviation & Travel",
+      "title": "കേരളത്തിലേക്കുള്ള വിമാന സർവീസുകൾ: ശൈത്യകാല ഷെഡ്യൂളിൽ കൂടുതൽ സർവീസുകളുമായി എയർലൈനുകൾ",
+      "title_en": "Airlines Expand Winter Flights Connecting KSA and Kerala Airports",
+      "summary": "റിയാദ്, ജിദ്ദ, ദമ്മാം എന്നിവിടങ്ങളിൽ നിന്ന് കോഴിക്കോട്, കൊച്ചി, തിരുവനന്തപുരം, കണ്ണൂർ സെക്ടറുകളിലേക്ക് എയർ ഇന്ത്യ എക്സ്പ്രസ്സും ഇൻഡിഗോയും പുതിയ സർവീസുകളും ഓഫർ നിരക്കുകളും നൽകുന്നു.",
+      "summary_en": "Air carriers announce expanded weekly frequencies and direct connections between Saudi hubs and major Kerala airports.",
+      "time": "2 മണിക്കൂർ മുൻപ്",
+      "time_en": "2 hours ago",
+      "source_name": "ഏവിയേഷൻ ഡെസ്ക് · Aviation KSA",
+      "source_url": "https://www.gaca.gov.sa/",
+      "verified": true
     },
     {
-      id: "news-04",
-      category: "pravasi",
-      badge: "വിമാനയാത്ര & ടിക്കറ്റ്",
-      badge_en: "Air Travel",
-      title: "കേരള-സൗദി സെക്ടറുകളിൽ കൂടുതൽ സർവീസുകൾ; അവധിക്കാല ടിക്കറ്റ് നിരക്ക് കുറയ്ക്കാൻ ചർച്ചകൾ സജീവം",
-      title_en: "More Direct Flights Planned on Saudi-Kerala Sectors to Ease Holiday Fare Surges",
-      summary: "ജിദ്ദ, റിയാദ്, ദമാം സെക്ടറുകളിൽ നിന്ന് കോഴിക്കോട്, കൊച്ചി, കണ്ണൂർ, തിരുവനന്തപുരം വിമാനത്താവളങ്ങളിലേക്ക് സീറ്റ് ശേഷി വർധിപ്പിക്കാൻ എയർലൈനുകളുമായി കേന്ദ്ര-സംസ്ഥാന തലത്തിൽ കൂടിയാലോചനകൾ പുരോഗമിക്കുന്നു.",
-      summary_en: "Discussions underway with civil aviation authorities and carriers to increase direct frequencies between Saudi hubs and Kerala airports.",
-      time: "5 മണിക്കൂർ മുൻപ്",
-      time_en: "5 hours ago",
-      source_name: "കേരള സിവിൽ ഏവിയേഷൻ ഡെസ്ക്",
-      source_url: "https://kerala.gov.in/",
-      verified: true
+      "id": "news-04",
+      "category": "community",
+      "badge": "പ്രവാസി ക്ഷേമം",
+      "badge_en": "Pravasi Welfare",
+      "title": "ഗൾഫ് പ്രവാസികൾക്കായി നോർക്ക തിരിച്ചറിയൽ കാർഡും ഇൻഷുറൻസും കൂടുതൽ വേഗത്തിൽ ലഭ്യമാക്കാൻ പ്രത്യേക ഡ്രൈവ്",
+      "title_en": "NORKA Roots Launches Expedited Pravasi ID & Welfare Insurance Registration",
+      "summary": "സൗദിയിലെ പ്രവാസികൾക്ക് അപകട ഇൻഷുറൻസും അത്യാഹിത സഹായങ്ങളും ഉറപ്പാക്കുന്ന നോർക്ക റൂട്ട്സ് ഐഡി കാർഡ് വിതരണവും പ്രവാസി ക്ഷേമനിധി പെൻഷൻ അപേക്ഷകളും ഓൺലൈനായി വേഗത്തിലാക്കി.",
+      "summary_en": "NORKA Roots enhances digital verification for NRKs in Saudi Arabia, enabling instant ID issuance and welfare pension enrolment.",
+      "time": "3 മണിക്കൂർ മുൻപ്",
+      "time_en": "3 hours ago",
+      "source_name": "നോർക്ക റൂട്ട്സ് · NORKA Roots",
+      "source_url": "https://norkaroots.kerala.gov.in/",
+      "verified": true
     },
     {
-      id: "news-05",
-      category: "kerala",
-      badge: "വികസനം & റോഡുകൾ",
-      badge_en: "Kerala Infra",
-      title: "ദേശീയപാത 66 വികസനം ദ്രുതഗതിയിൽ; പ്രധാന റീച്ചുകൾ ഈ വർഷം പൂർത്തിയാക്കുമെന്ന് പൊതുമരാമത്ത് വകുപ്പ്",
-      title_en: "National Highway 66 6-Lane Corridor Across Kerala Advances into Final Phase",
-      summary: "കാസർഗോഡ് മുതൽ തിരുവനന്തപുരം വരെയുള്ള ആറുവരി ദേശീയപാതയുടെ നിർമ്മാണം വേഗത്തിലാക്കി. പ്രവാസികൾ നാട്ടിലെത്തുമ്പോൾ ഗതാഗതക്കുരുക്കില്ലാത്ത സുഖകരമായ യാത്രാ സൗകര്യം ലഭ്യമാക്കുകയാണ് ലക്ഷ്യം.",
-      summary_en: "Major stretches of the NH 66 6-lane economic corridor nearing structural milestones, drastically cutting travel time across North & South Kerala.",
-      time: "ഇന്ന് രാവിലെ",
-      time_en: "This morning",
-      source_name: "കേരള പൊതുമരാമത്ത് വകുപ്പ്",
-      source_url: "https://kerala.gov.in/",
-      verified: true
+      "id": "news-05",
+      "category": "tourism",
+      "badge": "ജിസിസി വിസ",
+      "badge_en": "GCC Grand Tours",
+      "title": "ഏകീകൃത ജിസിസി ടൂറിസ്റ്റ് വിസ ('GCC Grand Tours'): അവസാനവട്ട നടപടികൾ പൂർത്തിയാകുന്നു",
+      "title_en": "Unified GCC Tourist Visa Ready for Final Phased Rollout Across 6 Nations",
+      "summary": "സൗദി അറേബ്യ, യുഎഇ, ഒമാൻ, ഖത്തർ, കുവൈത്ത്, ബഹ്റൈൻ എന്നീ 6 രാജ്യങ്ങളിൽ ഒരൊറ്റ വിസയിൽ യാത്ര സാധ്യമാകുന്ന 'ജിസിസി ഗ്രാൻഡ് ടൂർസ്' ടൂറിസ്റ്റ് വിസ പദ്ധതി അവസാന ഘട്ടത്തിലേക്ക്.",
+      "summary_en": "Gulf Cooperation Council tourism framework enters final implementation stages, paving way for single-entry multi-nation visits.",
+      "time": "4 മണിക്കൂർ മുൻപ്",
+      "time_en": "4 hours ago",
+      "source_name": "ജിസിസി സെക്രട്ടേറിയറ്റ് · GCC SG",
+      "source_url": "https://www.gcc-sg.org/",
+      "verified": true
     },
     {
-      id: "news-06",
-      category: "kerala",
-      badge: "കേരളം & സമൂഹം",
-      badge_en: "Kerala Society",
-      title: "വയനാട് പുനരധിവാസ ടൗൺഷിപ്പ് നിർമ്മാണത്തിൽ പ്രവാസി സംഘടനകളുടെ സഹകരണം; മാതൃകാ ഭവന പദ്ധതി പുരോഗമിക്കുന്നു",
-      title_en: "Wayanad Rehabilitation Township Work Progresses with GCC Malayali Community Support",
-      summary: "വയനാട്ടിലെ ദുരന്തബാധിതർക്കായുള്ള അത്യാധുനിക ടൗൺഷിപ്പ് പദ്ധതിയിൽ സന്നദ്ധ സംഘടനകളോടൊപ്പം കൈകോർത്ത് ആഗോള പ്രവാസി കൂട്ടായ്മകൾ. ആദ്യഘട്ട വീടുകൾ വേഗത്തിൽ പൂർത്തിയാകും.",
-      summary_en: "Comprehensive township construction for affected families advances with transparent monitoring and active backing from expatriate philanthropy.",
-      time: "ഇന്ന്",
-      time_en: "Today",
-      source_name: "കേരള പുനരധിവാസ മിഷൻ",
-      source_url: "https://kerala.gov.in/",
-      verified: true
-    },
-    {
-      id: "news-07",
-      category: "cinema",
-      badge: "മലയാള സിനിമ",
-      badge_en: "Mollywood",
-      title: "സൗദി തിയേറ്ററുകളിൽ പുതിയ മലയാള സിനിമകൾക്ക് വൻ വരവേൽപ്പ്; ജിദ്ദ, റിയാദ് VOX & Muvi സ്ക്രീനുകളിൽ ടിക്കറ്റ് ബുക്കിംഗ് തുടങ്ങി",
-      title_en: "New Malayalam Releases Open Across KSA Theaters; High Advance Bookings in VOX & Muvi",
-      summary: "മലയാളത്തിലെ വമ്പൻ റിലീസുകൾ സൗദിയിലെ എല്ലാ പ്രധാന മാളുകളിലും ഒരേസമയം റിലീസ് ചെയ്യുന്നു. കുടുംബസമേതം മലയാള സിനിമ കാണാൻ പ്രവാസികളുടെ നീണ്ട നിര.",
-      summary_en: "Latest Mollywood movies command vibrant weekend screenings across VOX Jeddah Park, Muvi Mall of Arabia, Riyadh Front, and Dammam Nakheel Mall.",
-      time: "ഇന്നലെ",
-      time_en: "Yesterday",
-      source_name: "സൗദി ഫിലിം ബോർഡ് & VOX KSA",
-      source_url: "https://ksa.voxcinemas.com/movies/mollywood-times",
-      verified: true
+      "id": "news-06",
+      "category": "commerce",
+      "badge": "സൂപ്പർമാർക്കറ്റ് ഓഫറുകൾ",
+      "badge_en": "Hypermarket Deals",
+      "title": "സൗദിയിലെ പ്രമുഖ ഹൈപ്പർമാർക്കറ്റുകളിൽ വൻ വാരാന്ത്യ ഓഫറുകൾ; മലയാളികൾക്ക് വൻ വിലക്കുറവ്",
+      "title_en": "Supermarket Chains Roll Out Major Weekend Deals Across 11 Saudi Cities",
+      "summary": "ലുലു, നെസ്റ്റോ, പാണ്ട, കാരഫോർ ഹൈപ്പർമാർക്കറ്റുകളിൽ വാരാന്ത്യ പ്രമോഷനുകളുടെ ഭാഗമായി കേരള പലവ്യഞ്ജനങ്ങൾ, പച്ചക്കറികൾ, ഫ്രഷ് മീൻ എന്നിവയ്ക്ക് വൻ വിലക്കിഴിവ് പ്രഖ്യാപിച്ചു.",
+      "summary_en": "Top hypermarket retailers unveil major weekly discounts across groceries, household items, and authentic Malabar produce.",
+      "time": "5 മണിക്കൂർ മുൻപ്",
+      "time_en": "5 hours ago",
+      "source_name": "ക്ലിക്ക് ഫ്ലയർ & റീട്ടെയിൽ പോർട്ടൽ · ClicFlyer KSA",
+      "source_url": "https://gcc.luluhypermarket.com/en-sa/deals/",
+      "verified": true
     }
   ],
-
-  // 5. Live Breaking News Ticker Highlights
-  ticker: [
-    "💱 ലൈവ് റിയാൽ നിരക്കുകൾ: ANB TeleMoney & urpay (₹24.91), Mobily Pay & Barq (₹24.90), STC & Friendi (₹24.89), D360, NEO SNB & Enjaz",
-    "🪙 സൗദി സ്വർണ്ണവില: 22K ഒരു ഗ്രാം 424 SAR (₹10,560) • 1 പവൻ 3,392 SAR (₹84,490)",
-    "📜 സൗദി വിസ: ഫാമിലി വിസിറ്റ് വിസ ഇൻഷുറൻസും എക്സ്റ്റൻഷനും അബ്ഷിർ വഴി",
-    "⚖️ സൗദി തൊഴിൽ നിയമം: ഖിവ (Qiwa) ഡിജിറ്റൽ കരാറും വേജ് പ്രൊട്ടക്ഷനും കർശനം",
-    "✈️ പ്രവാസി വിമാന ടിക്കറ്റ്: സൗദി-കേരള സെക്ടറുകളിൽ കൂടുതൽ സർവീസുകൾ ഉടൻ",
-    "🌴 നോർക്ക പ്രവാസി ഇൻഷുറൻസ്: ഓൺലൈൻ അപേക്ഷകൾ സജീവം; പെൻഷൻ സ്കീം വിപുലീകരിച്ചു"
+  "ticker": [
+    "💵 തത്സമയ റിയാൽ നിരക്ക്: ANB TeleMoney (₹25.56), LuLu Exch (₹25.52), Enjaz (₹25.48), STC Pay & urpay (₹25.46), Tahweel Al Rajhi (₹25.44)",
+    "🪙 സൗദി സ്വർണ്ണവില: 22K ഒരു ഗ്രാം 425.50 SAR (₹10,620) • 1 പവൻ 3,404 SAR (₹84,960) • 24K ഒരു ഗ്രാം 464 SAR",
+    "📜 സൗദി വിസ: ഫാമിലി വിസിറ്റ് വിസ പ്രൊലോംഗേഷൻ അബ്ഷിർ പോർട്ടൽ വഴി ഓൺലൈനായി പൂർണ്ണമായും ലഭ്യമാണ്",
+    "⛽ അരാംകോ ഇന്ധനവില: പെട്രോൾ 91 (2.18 SAR/L) • പെട്രോൾ 95 (2.33 SAR/L) • ഡീസൽ (1.15 SAR/L)",
+    "🎬 മാൾ തീയറ്ററുകൾ: VOX, Muvi, AMC സിനിമാസിൽ മലയാളം മൂവി സ്പെഷ്യൽ ഷോകൾ ലഭ്യമാണ്"
   ]
 };
