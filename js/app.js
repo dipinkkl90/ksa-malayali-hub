@@ -728,6 +728,12 @@
 
       const cityName = item.city || "Jeddah";
 
+      const photoHtml = item.photo
+        ? `<div class="card-img-wrap" data-detail="${escapeHtml(item.restaurant_id)}">
+            <img src="${escapeHtml(item.photo)}" alt="${escapeHtml(item.name)}" class="card-img" loading="lazy" onerror="this.parentElement.style.display=\'none\'">
+          </div>`
+        : "";
+
       card.innerHTML = `
         <div class="card-top">
           <div class="card-badges">
@@ -740,6 +746,8 @@
             ${isSaved ? SVG.heartFill : SVG.heart}
           </button>
         </div>
+
+        ${photoHtml}
 
         <h3 class="card-title" data-detail="${escapeHtml(item.restaurant_id)}">${escapeHtml(item.name)}</h3>
 
@@ -2153,6 +2161,13 @@
 
     const body = $("detail-body");
     body.innerHTML = `
+      ${
+        item.photo
+          ? `<div class="detail-photo-banner">
+              <img src="${escapeHtml(item.photo)}" alt="${escapeHtml(item.name)}" class="detail-photo-img" onerror="this.parentElement.style.display=\'none\'">
+            </div>`
+          : ""
+      }
       <div class="detail-list">
         <div class="detail-row">
           <div class="detail-label">${escapeHtml(t("modalCategory"))}</div>
