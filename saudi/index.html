@@ -13,11 +13,11 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="Malayali Hub">
-  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="../assets/icon-192.png">
-  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
-  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./assets/icon-192.png">
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="manifest" href="./manifest.webmanifest">
   
 
   <!-- Open Graph -->
@@ -34,7 +34,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Malayalam:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="../css/styles.css?v=20261121_v19">
+  <link rel="stylesheet" href="./css/styles.css?v=20261121_v19">
 </head>
 <body>
 
@@ -42,7 +42,7 @@
   <nav class="topbar" aria-label="Main navigation">
     <div class="container topbar-inner">
       <a href="/" class="brand-lockup">
-        <img src="../assets/favicon.svg" alt="KSA Malayali Hub Logo" class="brand-icon">
+        <img src="./assets/favicon.svg" alt="KSA Malayali Hub Logo" class="brand-icon">
         <div class="brand-text">
           <span class="brand-name">KSA Malayali Hub</span>
           <span class="brand-dev-tag">
@@ -133,6 +133,12 @@
 
       <!-- Quick Section Jump Navigation Pills -->
       <div class="saudi-quick-pills">
+        <a href="#saudi-prayer-calendar-section" class="saudi-pill-link" style="border-color:var(--brand); background:rgba(4,120,87,0.15); font-weight:800;">
+          <span>🕌 നമസ്കാര സമയവും ഹിജ്രിയും</span>
+        </a>
+        <a href="#haramain-train-section" class="saudi-pill-link" style="border-color:var(--gold); background:rgba(217,119,6,0.15); font-weight:800;">
+          <span>🚄 ഹറമൈൻ ട്രെയിൻ</span>
+        </a>
         <a href="#saudi-hotels-section" class="saudi-pill-link">
           <span>🍲 മലയാളി ഹോട്ടലുകൾ (120+)</span>
         </a>
@@ -157,6 +163,58 @@
 
   <!-- Main Content Body -->
   <main>
+
+    <!-- SECTION 0: Live Saudi Prayer Times & Hijri Calendar (നമസ്കാര സമയവും ഹിജ്രി കലണ്ടറും) -->
+    <section id="saudi-prayer-calendar-section" class="health-section" aria-labelledby="prayer-cal-title">
+      <div class="container">
+        <div class="prayer-times-widget">
+          <div class="prayer-widget-head">
+            <div class="prayer-head-title-group">
+              <h3 id="prayer-cal-title">🕌 സൗദി തത്സമയ നമസ്കാര സമയവും ഹിജ്രി കലണ്ടറും</h3>
+              <p>ഉമ്മുൽ ഖുറാ സർവ്വകലാശാല മക്ക (Umm Al-Qura) ഔദ്യോഗിക മാനദണ്ഡ പ്രകാരമുള്ള കൃത്യമായ സമയം</p>
+            </div>
+            <div class="prayer-city-select-wrap">
+              <span class="prayer-city-select-label">നഗരം:</span>
+              <select class="prayer-city-select" aria-label="Select Saudi City for Prayer Times">
+                <!-- Populated dynamically by js/prayer_calendar.js -->
+              </select>
+            </div>
+          </div>
+
+          <!-- Next Prayer Countdown Banner -->
+          <div class="prayer-countdown-banner">
+            <div class="countdown-inner">
+              <span class="countdown-pulse-dot" aria-hidden="true"></span>
+              <span class="countdown-text">തത്സമയ നമസ്കാര സമയം കണക്കാക്കുന്നു...</span>
+            </div>
+          </div>
+
+          <!-- Prayer Times Grid (6 Prayers) -->
+          <div class="prayer-grid">
+            <!-- Dynamically populated by js/prayer_calendar.js -->
+          </div>
+
+          <!-- Hijri Calendar & Date Converter Row -->
+          <div class="calendar-converter-row">
+            <!-- Today's Hijri Date Card -->
+            <div class="hijri-today-display">
+              <!-- Dynamically populated by js/prayer_calendar.js -->
+            </div>
+
+            <!-- Gregorian to Hijri Converter -->
+            <div class="date-convert-box">
+              <h4>📅 ഇംഗ്ലീഷ് ➔ ഹിജ്‌രി തീയതി മാറ്റാം (Date Converter)</h4>
+              <p>ഇഖാമ കാലാവധി, കരാർ തീയതികൾ എന്നിവ കൃത്യമായി അറിയാൻ ഇംഗ്ലീഷ് തീയതി തിരഞ്ഞെടുക്കുക:</p>
+              <div class="date-convert-form">
+                <input type="date" id="convert-gregorian-date" class="date-input-field" aria-label="Select Gregorian Date">
+                <button type="button" id="btn-convert-date" class="btn-convert-date">പരിവർത്തനം ചെയ്യുക</button>
+              </div>
+              <div id="convert-result-box"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- SECTION 1: Saudi Kerala Hotels & Restaurants Directory -->
     <section id="saudi-hotels-section" class="health-section">
@@ -251,6 +309,124 @@
         <!-- Holy Stories Container -->
         <div id="saudi-holy-stories-container">
           <!-- Populated dynamically by js/saudi_page.js from window.SAUDI_HERITAGE_DATA.islamic_heritage_stories -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: Haramain High-Speed Train Guide (ഹറമൈൻ ട്രെയിൻ ഗൈഡ്) -->
+    <section id="haramain-train-section" class="health-section" aria-labelledby="haramain-title">
+      <div class="container">
+        <div class="haramain-guide-card">
+          <div class="haramain-head">
+            <div class="haramain-head-icon">🚄</div>
+            <div>
+              <h3 id="haramain-title">ഹറമൈൻ ഹൈ-സ്പീഡ് ട്രെയിൻ സമഗ്ര ഗൈഡ് (Haramain Train)</h3>
+              <p>മക്ക, ജിദ്ദ, വിമാനത്താവളം, റാബിഗ്, മദീന എന്നീ 5 പ്രധാന നഗരങ്ങളെ ബന്ധിപ്പിക്കുന്ന മണിക്കൂറിൽ 300 കി.മീ വേഗതയുള്ള സൗദി ബുള്ളറ്റ് ട്രെയിൻ.</p>
+            </div>
+          </div>
+
+          <!-- 5 Stations Route Timeline -->
+          <div class="haramain-route-timeline">
+            <div class="haramain-station-card">
+              <span class="haramain-station-num">1</span>
+              <div class="haramain-station-name">മക്ക സ്റ്റേഷൻ</div>
+              <div class="haramain-station-sub">അൽ-റുസൈഫ (Makkah Al-Rusaifah)</div>
+            </div>
+            <div class="haramain-station-card">
+              <span class="haramain-station-num">2</span>
+              <div class="haramain-station-name">ജിദ്ദ സെൻട്രൽ</div>
+              <div class="haramain-station-sub">അൽ-സുലൈമാനിയ്യ (Al-Sulaymaniyah)</div>
+            </div>
+            <div class="haramain-station-card">
+              <span class="haramain-station-num">3</span>
+              <div class="haramain-station-name">ജിദ്ദ എയർപോർട്ട്</div>
+              <div class="haramain-station-sub">ടെർമിനൽ 1 (KAIA Airport Station)</div>
+            </div>
+            <div class="haramain-station-card">
+              <span class="haramain-station-num">4</span>
+              <div class="haramain-station-name">KAEC റാബിഗ്</div>
+              <div class="haramain-station-sub">കിംഗ് അബ്ദുള്ള ഇക്കണോമിക് സിറ്റി</div>
+            </div>
+            <div class="haramain-station-card">
+              <span class="haramain-station-num">5</span>
+              <div class="haramain-station-name">മദീന സ്റ്റേഷൻ</div>
+              <div class="haramain-station-sub">അൽ-ഹദ്റ (Madinah Station)</div>
+            </div>
+          </div>
+
+          <!-- Travel Times Highlight Grid -->
+          <div class="haramain-times-grid">
+            <div class="haramain-time-item">
+              <span class="haramain-time-route">✈️ ജിദ്ദ എയർപോർട്ട് ➔ മക്ക</span>
+              <span class="haramain-time-duration">~54 മിനിറ്റ്</span>
+            </div>
+            <div class="haramain-time-item">
+              <span class="haramain-time-route">🏙️ ജിദ്ദ സെൻട്രൽ ➔ മക്ക</span>
+              <span class="haramain-time-duration">~21 മിനിറ്റ്</span>
+            </div>
+            <div class="haramain-time-item">
+              <span class="haramain-time-route">🕌 ജിദ്ദ സെൻട്രൽ ➔ മദീന</span>
+              <span class="haramain-time-duration">~1 മണിക്കൂർ 48 മിനിറ്റ്</span>
+            </div>
+            <div class="haramain-time-item">
+              <span class="haramain-time-route">🕋 മക്ക ➔ മദീന</span>
+              <span class="haramain-time-duration">~2 മണിക്കൂർ 15 മിനിറ്റ്</span>
+            </div>
+          </div>
+
+          <!-- Classes Comparison -->
+          <div class="haramain-classes-grid">
+            <div class="haramain-class-card economy">
+              <div class="haramain-class-header">
+                <span class="haramain-class-title">💺 ഇക്കോണമി ക്ലാസ് (Economy)</span>
+                <span class="haramain-class-fare">~40 - 150 SAR</span>
+              </div>
+              <ul>
+                <li><strong>2 + 2 സീറ്റിംഗ്:</strong> ഹെഡ്‌റെസ്റ്റും ഫുട്‌റെസ്റ്റും ഉള്ള സുഖപ്രദമായ സീറ്റുകൾ.</li>
+                <li><strong>ചാർജിംഗ് &amp; വൈഫൈ:</strong> എല്ലാ സീറ്റുകളിലും മൊബൈൽ/ലാപ്‌ടോപ്പ് പവർ സോക്കറ്റുകൾ, സൗജന്യ വൈഫൈ.</li>
+                <li><strong>ഫുഡ് കാറ്ററിംഗ്:</strong> സ്നാക്സും കാപ്പിയും വാങ്ങാവുന്ന കഫേ കാർ (Cafeteria Coach) സർവീസ്.</li>
+                <li><strong>കുറഞ്ഞ നിരക്ക്:</strong> ഉംറ തീർത്ഥാടകർക്കും സാധാരണ യാത്രക്കാർക്കും ഏറ്റവും ലാഭകരം.</li>
+              </ul>
+            </div>
+
+            <div class="haramain-class-card business">
+              <div class="haramain-class-header">
+                <span class="haramain-class-title">👑 ബിസിനസ്സ് ക്ലാസ് (Business)</span>
+                <span class="haramain-class-fare">~75 - 350 SAR</span>
+              </div>
+              <ul>
+                <li><strong>2 + 1 വിഐപി ലെതർ സീറ്റിംഗ്:</strong> വലിയ റിക്ലൈനർ സീറ്റുകൾ, കൂടുതൽ ലെഗ് സ്പേസ്.</li>
+                <li><strong>പ്രീമിയം ലൗഞ്ച് പ്രവേശനം:</strong> മക്ക, മദീന, ജിദ്ദ സ്റ്റേഷനുകളിൽ സൗജന്യ വിഐപി ലൗഞ്ച് (സ്നാക്സ്, ഈന്തപ്പഴം, അറബിക് കോഫി).</li>
+                <li><strong>കോംപ്ലിമെന്ററി ഭക്ഷണം:</strong> യാത്രയ്ക്കിടയിൽ നേരിട്ട് സീറ്റിൽ വിളമ്പുന്ന ഹോട്ട് മീൽ അല്ലെങ്കിൽ പ്രീമിയം സ്നാക് ബോക്സ്.</li>
+                <li><strong>മുൻഗണനാ ബോർഡിംഗ്:</strong> പ്രത്യേക പ്രവേശന കവാടവും ഫാസ്റ്റ് ട്രാക്ക് സുരക്ഷാ പരിശോധനയും.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Baggage Allowance Box -->
+          <div class="haramain-baggage-box">
+            <span class="haramain-baggage-icon">🧳</span>
+            <div class="haramain-baggage-text">
+              <h4>അനുവദനീയമായ ലഗേജ് പരിധി (Baggage Rules)</h4>
+              <p>ഒരു യാത്രക്കാരന് <strong>1 വലിയ ബാഗ് (പരമാവധി 25 കിലോഗ്രാം, വലിപ്പം 65x55x35 cm വരെ)</strong> കൂടാതെ 1 കൈസഞ്ചി (Hand Luggage / ബാക്ക്പാക്ക്) എന്നിവ സൗജന്യമായി കൊണ്ടുപോകാം. അനുവദിച്ച അളവിലും തൂക്കത്തിലും കൂടുതലുള്ള ലഗേജുകൾക്ക് പ്രത്യേക ഫീസ് ഈടാക്കുകയോ തടയപ്പെടുകയോ ചെയ്യാം.</p>
+            </div>
+          </div>
+
+          <!-- 3-Step Malayalam Booking Instructions & Action Button -->
+          <div class="haramain-booking-actions">
+            <div class="court-step-card" style="margin-bottom:12px;">
+              <h4 style="margin:0 0 6px;">📱 ടിക്കറ്റ് ബുക്ക് ചെയ്യേണ്ട 3 ലളിതമായ ഘട്ടങ്ങൾ:</h4>
+              <ol style="margin:0; padding-left:20px; font-size:0.88rem; color:var(--text-secondary); line-height:1.6;">
+                <li>താഴെയുള്ള ഔദ്യോഗിക ഹറമൈൻ പോർട്ടൽ ലിങ്ക് (<code style="background:var(--surface); padding:2px 6px; border-radius:4px;">sar.hhr.sa</code>) തുറക്കുക.</li>
+                <li>പുറപ്പെടുന്ന സ്റ്റേഷൻ (Departure), എത്തുന്ന സ്റ്റേഷൻ (Arrival), തീയതി, ക്ലാസ് (Economy/Business) എന്നിവ തിരഞ്ഞെടുക്കുക.</li>
+                <li>യാത്രക്കാരുടെ ഇഖാമ/പാസ്‌പോർട്ട് വിവരങ്ങൾ നൽകി Mada, Apple Pay അല്ലെങ്കിൽ ക്രെഡിറ്റ് കാർഡ് വഴി സുരക്ഷിതമായി ടിക്കറ്റ് എടുക്കാം.</li>
+              </ol>
+            </div>
+
+            <a href="https://sar.hhr.sa/" target="_blank" rel="noopener noreferrer" class="btn-haramain-portal">
+              <span>🌐 ഹറമൈൻ ട്രെയിൻ ലൈവ് സമയങ്ങളും ഔദ്യോഗിക ടിക്കറ്റ് ബുക്കിംഗും (sar.hhr.sa) ➔</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -363,11 +539,12 @@
   </nav>
 
   <!-- Master Data & Engine Scripts -->
-  <script src="../js/data.js?v=20261121_v19"></script>
-  <script src="../js/saudi_heritage_data.js?v=20261121_v19"></script>
-  <script src="../js/tourism_data.js?v=20261121_v19"></script>
-  <script src="../js/saudi_page.js?v=20261121_v19"></script>
+  <script src="./js/data.js?v=20261121_v19"></script>
+  <script src="./js/saudi_heritage_data.js?v=20261121_v19"></script>
+  <script src="./js/tourism_data.js?v=20261121_v19"></script>
+  <script src="./js/saudi_page.js?v=20261121_v19"></script>
+  <script src="./js/prayer_calendar.js?v=20261121_v20"></script>
   <!-- PWA Offline & Install Controller -->
-  <script src="../js/pwa.js" defer></script>
+  <script src="./js/pwa.js" defer></script>
 </body>
 </html>

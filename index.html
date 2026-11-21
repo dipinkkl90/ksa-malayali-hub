@@ -216,6 +216,10 @@
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
             <span data-i18n="heroDailyBtn">റിയാൽ റേറ്റ് &amp; സ്വർണ്ണം</span>
           </button>
+          <a href="/saudi#saudi-prayer-calendar-section" class="hero-cta-ghost" style="border-color:var(--brand); background:rgba(4,120,87,0.14); color:var(--text); text-decoration:none;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/><path d="M12 6v6l4 2"/></svg>
+            <span>🕌 നമസ്കാര സമയം</span>
+          </a>
           <button type="button" id="hero-view-tourism" class="hero-cta-ghost hero-cta-tourism">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
             <span data-i18n="heroTourismBtn">🧭 സഞ്ചാരം &amp; ഹിഡൻ സ്പോട്ട്</span>
@@ -924,10 +928,53 @@
 
         <!-- Quick Sub-Nav Navigation Anchors -->
         <div class="daily-subnav">
+          <a href="#prayer-section" class="daily-subnav-btn">🕌 നമസ്കാര സമയം &amp; ഹിജ്‌രി</a>
           <a href="#remit-section" class="daily-subnav-btn">💱 റിയാൽ റേറ്റ് കാൽക്കുലേറ്റർ</a>
           <a href="#gold-section" class="daily-subnav-btn">🪙 സൗദി സ്വർണ്ണവില</a>
           <a href="#visa-section" class="daily-subnav-btn">📜 വിസ &amp; തൊഴിൽ നിയമങ്ങൾ</a>
           <a href="#news-section" class="daily-subnav-btn">📰 കേരള &amp; പ്രവാസി വാർത്തകൾ</a>
+        </div>
+      </div>
+
+      <!-- 0. Live Saudi Prayer Times & Hijri Calendar Widget -->
+      <div id="prayer-section" class="daily-module-card prayer-times-widget" style="padding:22px; margin-bottom:24px;">
+        <div class="prayer-widget-head">
+          <div class="prayer-head-title-group">
+            <h3>🕌 സൗദി തത്സമയ നമസ്കാര സമയവും ഹിജ്രി കലണ്ടറും</h3>
+            <p>ഉമ്മുൽ ഖുറാ സർവ്വകലാശാല മക്ക (Umm Al-Qura) ഔദ്യോഗിക മാനദണ്ഡ പ്രകാരമുള്ള കൃത്യമായ സമയം</p>
+          </div>
+          <div class="prayer-city-select-wrap">
+            <span class="prayer-city-select-label">നഗരം:</span>
+            <select class="prayer-city-select" aria-label="Select Saudi City for Prayer Times">
+              <!-- Populated dynamically by js/prayer_calendar.js -->
+            </select>
+          </div>
+        </div>
+
+        <div class="prayer-countdown-banner">
+          <div class="countdown-inner">
+            <span class="countdown-pulse-dot" aria-hidden="true"></span>
+            <span class="countdown-text">തത്സമയ നമസ്കാര സമയം കണക്കാക്കുന്നു...</span>
+          </div>
+        </div>
+
+        <div class="prayer-grid">
+          <!-- Dynamically populated by js/prayer_calendar.js -->
+        </div>
+
+        <div class="calendar-converter-row">
+          <div class="hijri-today-display">
+            <!-- Dynamically populated by js/prayer_calendar.js -->
+          </div>
+          <div class="date-convert-box">
+            <h4>📅 ഇംഗ്ലീഷ് ➔ ഹിജ്‌രി തീയതി മാറ്റാം (Date Converter)</h4>
+            <p>ഇഖാമ കാലാവധി, കരാർ തീയതികൾ എന്നിവ കൃത്യമായി അറിയാൻ ഇംഗ്ലീഷ് തീയതി തിരഞ്ഞെടുക്കുക:</p>
+            <div class="date-convert-form">
+              <input type="date" id="convert-gregorian-date" class="date-input-field" aria-label="Select Gregorian Date">
+              <button type="button" id="btn-convert-date" class="btn-convert-date">പരിവർത്തനം ചെയ്യുക</button>
+            </div>
+            <div id="convert-result-box"></div>
+          </div>
         </div>
       </div>
 
@@ -1595,6 +1642,7 @@
   <script src="./js/tourism_data.js?v=20261120_v16"></script>
   <script src="./js/saudi_heritage_data.js?v=20261120_v16"></script>
   <script src="./js/daily_desk_data.js?v=20261120_v16"></script>
+  <script src="./js/prayer_calendar.js?v=20261121_v20"></script>
   <script src="./js/i18n.js?v=20261120_v16"></script>
   <script src="./js/app.js?v=20261120_v16"></script>
 

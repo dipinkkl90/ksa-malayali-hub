@@ -13,11 +13,11 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="Malayali Hub">
-  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="../assets/icon-192.png">
-  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
-  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./assets/icon-192.png">
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="manifest" href="./manifest.webmanifest">
   
 
   <!-- Open Graph -->
@@ -34,7 +34,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Malayalam:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="../css/styles.css?v=20261121_v19">
+  <link rel="stylesheet" href="./css/styles.css?v=20261121_v19">
 </head>
 <body>
 
@@ -42,7 +42,7 @@
   <nav class="topbar" aria-label="Main navigation">
     <div class="container topbar-inner">
       <a href="/" class="brand-lockup">
-        <img src="../assets/favicon.svg" alt="KSA Malayali Hub Logo" class="brand-icon">
+        <img src="./assets/favicon.svg" alt="KSA Malayali Hub Logo" class="brand-icon">
         <div class="brand-text">
           <span class="brand-name">KSA Malayali Hub</span>
           <span class="brand-dev-tag">
@@ -144,6 +144,9 @@
         </a>
         <a href="#phrasebook-section" class="health-pill-link">
           <span>🗣️ അറബിക് ഭാഷാ സഹായി</span>
+        </a>
+        <a href="#voice-translator-section" class="health-pill-link" style="border-color:var(--brand); background:rgba(4,120,87,0.18); font-weight:800; color:var(--text);">
+          <span>🎙️ വോയ്സ് ട്രാൻസ്ലേറ്റർ</span>
         </a>
       </div>
     </div>
@@ -388,6 +391,96 @@
       </div>
     </section>
 
+    <!-- SECTION 5: Malayalam ↔ Arabic Live Voice Translator -->
+    <section id="voice-translator-section" class="health-section" aria-labelledby="translator-title">
+      <div class="container">
+        <div class="voice-translator-box">
+          <div class="trans-head">
+            <div class="trans-head-icon">🎙️</div>
+            <div>
+              <h2 id="translator-title" style="margin:0 0 4px; font-size:1.4rem; font-weight:800; color:var(--text);">മലയാളം ↔ അറബിക് വോയ്സ് ട്രാൻസ്ലേറ്റർ (Voice Translator)</h2>
+              <p style="margin:0; font-size:0.9rem; color:var(--text-secondary);">ഡോക്ടർമാർ, ഫാർമസിസ്റ്റുകൾ, നഴ്സുമാർ എന്നിവരുമായി സംസാരിക്കാൻ — മൊബൈലിൽ സംസാരിക്കുകയോ ടൈപ്പ് ചെയ്യുകയോ ചെയ്യാം.</p>
+            </div>
+          </div>
+
+          <!-- Mode Switcher -->
+          <div class="trans-mode-switcher">
+            <button type="button" id="mode-ml-to-ar" class="trans-mode-pill active">
+              🗣️ മലയാളം ➔ അറബിക് (Malayalam to Arabic)
+            </button>
+            <button type="button" id="mode-ar-to-ml" class="trans-mode-pill">
+              🗣️ അറബിക് ➔ മലയാളം (Arabic to Malayalam)
+            </button>
+          </div>
+
+          <!-- Input & Output Boxes -->
+          <div class="trans-io-container">
+            <!-- Input Area -->
+            <div class="trans-input-box">
+              <div class="trans-box-head">
+                <span>നിങ്ങൾ പറയുന്നത് / ടൈപ്പ് ചെയ്യുന്നത്:</span>
+                <button type="button" id="trans-btn-speak-source" class="trans-audio-action-btn" title="കേൾക്കുക">
+                  🔊 കേൾക്കുക
+                </button>
+              </div>
+              <textarea id="trans-input-text" class="trans-textarea" placeholder="ഇവിടെ മലയാളത്തിൽ ടൈപ്പ് ചെയ്യുക അല്ലെങ്കിൽ മൈക്ക് അമർത്തി സംസാരിക്കുക..."></textarea>
+            </div>
+
+            <!-- Output Area -->
+            <div class="trans-output-box">
+              <div class="trans-box-head">
+                <span>വിവർത്തനം (Translation):</span>
+                <div style="display:flex; gap:6px;">
+                  <button type="button" id="trans-btn-speak-target" class="trans-audio-action-btn" title="അറബിക് ഉച്ചാരണം കേൾപ്പിക്കുക" disabled>
+                    🔊 അറബിക് കേൾപ്പിക്കുക
+                  </button>
+                  <button type="button" id="trans-btn-copy" class="trans-audio-action-btn" title="കോപ്പി ചെയ്യുക" disabled>
+                    📋 കോപ്പി
+                  </button>
+                </div>
+              </div>
+              <div id="trans-output-text" class="trans-output-text" dir="rtl">
+                <span class="trans-placeholder">വിവർത്തനം ഇവിടെ തെളിയും...</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mic & Actions Row -->
+          <div class="trans-controls-row">
+            <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+              <button type="button" id="trans-btn-mic" class="trans-mic-btn">
+                <span>🎤 സംസാരിക്കുക (Tap to Speak)</span>
+              </button>
+              <button type="button" id="trans-btn-submit" class="trans-btn-submit">
+                🔄 വിവർത്തനം ചെയ്യുക
+              </button>
+              <span id="trans-loading" style="display:none; font-size:0.88rem; color:var(--brand); font-weight:700;">
+                ⏳ വിവർത്തനം ചെയ്യുന്നു...
+              </span>
+            </div>
+            <div id="trans-mic-status" style="font-size:0.84rem; color:var(--text-secondary);">
+              മൈക്രോഫോൺ അമർത്തി സംസാരിക്കുക (Tap Mic to Speak)
+            </div>
+          </div>
+
+          <!-- Quick Phrases Chips -->
+          <div class="trans-chips-section">
+            <div class="trans-chips-label">⚡ ആശുപത്രിയിലെ അടിയന്തിര വാക്യങ്ങൾ (One-Tap Translate):</div>
+            <div id="trans-quick-chips" class="trans-chips-grid">
+              <!-- Dynamically populated by js/translator.js -->
+            </div>
+          </div>
+
+          <!-- 1-Tap Google Translate Fallback -->
+          <div class="trans-google-fallback-wrap">
+            <a id="trans-btn-google" href="https://translate.google.com/?sl=ml&tl=ar&op=translate" target="_blank" rel="noopener noreferrer" class="btn-open-google-direct">
+              🌐 Google Translate-ൽ നേരിട്ട് തുറക്കുക ➔
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- Site Footer -->
@@ -442,9 +535,10 @@
   </nav>
 
   <!-- Scripts -->
-  <script src="../js/health_data.js?v=20261121_v18"></script>
-  <script src="../js/health.js?v=20261121_v18"></script>
+  <script src="./js/health_data.js?v=20261121_v18"></script>
+  <script src="./js/health.js?v=20261121_v18"></script>
+  <script src="./js/translator.js?v=20261121_v20"></script>
   <!-- PWA Offline & Install Controller -->
-  <script src="../js/pwa.js" defer></script>
+  <script src="./js/pwa.js" defer></script>
 </body>
 </html>

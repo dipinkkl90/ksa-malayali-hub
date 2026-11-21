@@ -138,6 +138,7 @@
         <a href="#eosb-calculator" class="sub-nav-pill" style="background:var(--surface); border:1px solid var(--border);">🧮 ഗ്രാറ്റുവിറ്റി</a>
         <a href="#status-checks" class="sub-nav-pill" style="background:var(--surface); border:1px solid var(--border);">🔍 സ്റ്റാറ്റസ് ചെക്ക്</a>
         <a href="#legal-and-courts" class="sub-nav-pill" style="background:linear-gradient(135deg, rgba(4,120,87,0.18) 0%, rgba(217,119,6,0.18) 100%); border:1px solid var(--gold-border); font-weight:800; color:var(--text);">⚖️ ലീഗൽ &amp; കോടതികൾ</a>
+        <a href="#voice-translator-section" class="sub-nav-pill" style="background:var(--surface); border:1px solid var(--border);">🎙️ വോയ്സ് ട്രാൻസ്ലേറ്റർ</a>
         <a href="#norka-and-scams" class="sub-nav-pill" style="background:var(--surface); border:1px solid var(--border);">🛡️ നോർക്ക &amp; സുരക്ഷ</a>
       </div>
     </header>
@@ -815,6 +816,94 @@
       </div>
     </section>
 
+    <!-- SECTION F: Malayalam ↔ Arabic Voice Translator for Workers -->
+    <section id="voice-translator-section" class="sahayi-section" aria-labelledby="translator-title">
+      <div class="voice-translator-box" style="margin-bottom:0;">
+        <div class="trans-head">
+          <div class="trans-head-icon">🎙️</div>
+          <div>
+            <h2 id="translator-title" style="margin:0 0 4px; font-size:1.4rem; font-weight:800; color:var(--text);">തൊഴിലാളി വോയ്സ് ട്രാൻസ്ലേറ്റർ (Voice Translator)</h2>
+            <p style="margin:0; font-size:0.9rem; color:var(--text-secondary);">പോലീസ്, ട്രാഫിക് ഉദ്യോഗസ്ഥർ, സ്പോൺസർ, തൊഴിൽ മന്ത്രാലയ ഓഫീസർമാർ എന്നിവരുമായി സംസാരിക്കാൻ — മൊബൈലിൽ സംസാരിക്കുകയോ ടൈപ്പ് ചെയ്യുകയോ ചെയ്യാം.</p>
+          </div>
+        </div>
+
+        <!-- Mode Switcher -->
+        <div class="trans-mode-switcher">
+          <button type="button" id="mode-ml-to-ar" class="trans-mode-pill active">
+            🗣️ മലയാളം ➔ അറബിക് (Malayalam to Arabic)
+          </button>
+          <button type="button" id="mode-ar-to-ml" class="trans-mode-pill">
+            🗣️ അറബിക് ➔ മലയാളം (Arabic to Malayalam)
+          </button>
+        </div>
+
+        <!-- Input & Output Boxes -->
+        <div class="trans-io-container">
+          <!-- Input Area -->
+          <div class="trans-input-box">
+            <div class="trans-box-head">
+              <span>നിങ്ങൾ പറയുന്നത് / ടൈപ്പ് ചെയ്യുന്നത്:</span>
+              <button type="button" id="trans-btn-speak-source" class="trans-audio-action-btn" title="കേൾക്കുക">
+                🔊 കേൾക്കുക
+              </button>
+            </div>
+            <textarea id="trans-input-text" class="trans-textarea" placeholder="ഇവിടെ മലയാളത്തിൽ ടൈപ്പ് ചെയ്യുക അല്ലെങ്കിൽ മൈക്ക് അമർത്തി സംസാരിക്കുക..."></textarea>
+          </div>
+
+          <!-- Output Area -->
+          <div class="trans-output-box">
+            <div class="trans-box-head">
+              <span>വിവർത്തനം (Translation):</span>
+              <div style="display:flex; gap:6px;">
+                <button type="button" id="trans-btn-speak-target" class="trans-audio-action-btn" title="അറബിക് ഉച്ചാരണം കേൾപ്പിക്കുക" disabled>
+                  🔊 അറബിക് കേൾപ്പിക്കുക
+                </button>
+                <button type="button" id="trans-btn-copy" class="trans-audio-action-btn" title="കോപ്പി ചെയ്യുക" disabled>
+                  📋 കോപ്പി
+                </button>
+              </div>
+            </div>
+            <div id="trans-output-text" class="trans-output-text" dir="rtl">
+              <span class="trans-placeholder">വിവർത്തനം ഇവിടെ തെളിയും...</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mic & Actions Row -->
+        <div class="trans-controls-row">
+          <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+            <button type="button" id="trans-btn-mic" class="trans-mic-btn">
+              <span>🎤 സംസാരിക്കുക (Tap to Speak)</span>
+            </button>
+            <button type="button" id="trans-btn-submit" class="trans-btn-submit">
+              🔄 വിവർത്തനം ചെയ്യുക
+            </button>
+            <span id="trans-loading" style="display:none; font-size:0.88rem; color:var(--brand); font-weight:700;">
+              ⏳ വിവർത്തനം ചെയ്യുന്നു...
+            </span>
+          </div>
+          <div id="trans-mic-status" style="font-size:0.84rem; color:var(--text-secondary);">
+            മൈക്രോഫോൺ അമർത്തി സംസാരിക്കുക (Tap Mic to Speak)
+          </div>
+        </div>
+
+        <!-- Quick Phrases Chips -->
+        <div class="trans-chips-section">
+          <div class="trans-chips-label">⚡ അടിയന്തിര ഘട്ടങ്ങളിലെ സ്ഥിരം വാക്യങ്ങൾ (One-Tap Quick Translate):</div>
+          <div id="trans-quick-chips" class="trans-chips-grid">
+            <!-- Dynamically populated by js/translator.js -->
+          </div>
+        </div>
+
+        <!-- 1-Tap Google Translate Fallback -->
+        <div class="trans-google-fallback-wrap">
+          <a id="trans-btn-google" href="https://translate.google.com/?sl=ml&tl=ar&op=translate" target="_blank" rel="noopener noreferrer" class="btn-open-google-direct">
+            🌐 Google Translate-ൽ നേരിട്ട് തുറക്കുക ➔
+          </a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- Site Footer -->
@@ -893,6 +982,7 @@
 
   <!-- Interactive JavaScript Engine -->
   <script src="./js/sahayi.js?v=20261121_v17"></script>
+  <script src="./js/translator.js?v=20261121_v20"></script>
   <!-- PWA Offline & Install Controller -->
   <script src="./js/pwa.js" defer></script>
 </body>
