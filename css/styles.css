@@ -9317,3 +9317,878 @@ html[lang="ml"] .sugg-info-card h2 {
     display: none !important;
   }
 }
+
+
+/* ==========================================================================
+   HEALTH & LANGUAGE PORTAL (ആരോഗ്യം & ഭാഷ) STYLES — v18
+   ========================================================================== */
+
+.health-hero {
+  padding: 40px 0 24px;
+  background: radial-gradient(circle at 50% 0%, rgba(5, 150, 105, 0.18) 0%, rgba(7, 27, 18, 0) 70%);
+  text-align: center;
+}
+
+.health-hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.health-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(16, 185, 129, 0.14);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #6ee7b7;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+}
+
+.health-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 14px;
+  line-height: 1.25;
+}
+
+.health-subtitle {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  color: #94a3b8;
+  max-width: 720px;
+  margin: 0 auto 24px;
+  line-height: 1.6;
+}
+
+.health-quick-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.health-pill-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #e2e8f0;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.health-pill-link:hover {
+  background: rgba(16, 185, 129, 0.2);
+  border-color: rgba(16, 185, 129, 0.4);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Section Common Container */
+.health-section {
+  padding: 40px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Insurance Card & CHI Portal */
+.insurance-card {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 20px;
+  padding: 28px 24px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+  margin-bottom: 24px;
+}
+
+.insurance-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.insurance-card-icon {
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+.insurance-card-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 6px;
+}
+
+.insurance-card-desc {
+  font-size: 0.92rem;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.insurance-steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 20px 0 24px;
+}
+
+.insurance-step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 12px 16px;
+  border-radius: 12px;
+}
+
+.insurance-step-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #059669;
+  color: #ffffff;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.insurance-step-text {
+  font-size: 0.92rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+.chi-portal-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px 24px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  border: 1px solid #34d399;
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(5, 150, 105, 0.35);
+  transition: all 0.2s ease;
+  min-height: 52px;
+}
+
+.chi-portal-action-btn:hover {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(16, 185, 129, 0.45);
+}
+
+/* NPHIES Tip Box */
+.nphies-tip-box {
+  background: rgba(30, 41, 59, 0.85);
+  border: 1px solid rgba(245, 158, 11, 0.45);
+  border-left: 4px solid #f59e0b;
+  border-radius: 16px;
+  padding: 20px 22px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.nphies-tip-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.nphies-badge {
+  background: rgba(212, 175, 55, 0.2);
+  color: #fde047;
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+.nphies-tip-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #fde047;
+  margin: 0;
+}
+
+.nphies-tip-desc {
+  font-size: 0.94rem;
+  color: #f8fafc;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.nphies-tip-desc strong {
+  color: #fde047;
+}
+
+/* Insurance Provider Network Finders */
+.providers-box {
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.providers-box-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 6px;
+}
+
+.providers-box-sub {
+  font-size: 0.88rem;
+  color: #94a3b8;
+  margin: 0 0 20px;
+}
+
+.providers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.provider-btn-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 14px 18px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  min-height: 52px;
+}
+
+.provider-btn-card:hover {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.4);
+  transform: translateY(-2px);
+}
+
+.provider-name-block strong {
+  display: block;
+  color: #ffffff;
+  font-size: 0.95rem;
+  margin-bottom: 2px;
+}
+
+.provider-name-block span {
+  font-size: 0.82rem;
+  color: #94a3b8;
+}
+
+.provider-arrow {
+  color: #34d399;
+  font-size: 1.1rem;
+}
+
+/* Polyclinics Section & City Filter Tabs */
+.clinic-warning-banner {
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  border-radius: 14px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  font-size: 0.92rem;
+  color: #fde047;
+  line-height: 1.5;
+}
+
+.clinic-warning-banner strong {
+  color: #fef08a;
+}
+
+.city-tabs-scroll-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 24px;
+  padding-bottom: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(16, 185, 129, 0.4) transparent;
+}
+
+.city-tabs-scroll-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+
+.city-tabs-scroll-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(16, 185, 129, 0.4);
+  border-radius: 9999px;
+}
+
+.city-tabs-container {
+  display: inline-flex;
+  gap: 8px;
+  min-width: max-content;
+  padding: 2px;
+}
+
+.city-tab-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #cbd5e1;
+  padding: 10px 18px;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  min-height: 44px;
+}
+
+.city-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.city-tab-btn.active {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  border-color: #34d399;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.4);
+}
+
+.clinics-current-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.clinics-current-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+}
+
+.clinics-current-count {
+  font-size: 0.85rem;
+  color: #34d399;
+  font-weight: 700;
+}
+
+.clinics-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 18px;
+  margin-bottom: 32px;
+}
+
+.clinic-card {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+}
+
+.clinic-card:hover {
+  border-color: rgba(52, 211, 153, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+}
+
+.clinic-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.clinic-city-pill {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 9999px;
+  padding: 3px 10px;
+  font-size: 0.76rem;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.clinic-tag-abeer {
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: #fde047;
+  border-radius: 9999px;
+  padding: 3px 10px;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.clinic-tag-general {
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #6ee7b7;
+  border-radius: 9999px;
+  padding: 3px 10px;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.clinic-name-ml {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 4px;
+  line-height: 1.35;
+}
+
+.clinic-name-en {
+  font-size: 0.88rem;
+  color: #94a3b8;
+  margin-bottom: 10px;
+}
+
+.clinic-area-loc {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.84rem;
+  color: #cbd5e1;
+  margin-bottom: 12px;
+}
+
+.clinic-note {
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 3px solid #34d399;
+  padding: 8px 12px;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.84rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin: 0 0 16px;
+}
+
+.clinic-actions-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.clinic-map-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(59, 130, 246, 0.15);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  color: #93c5fd;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  min-height: 46px;
+}
+
+.clinic-map-btn:hover {
+  background: rgba(59, 130, 246, 0.25);
+  color: #ffffff;
+}
+
+.clinic-call-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #6ee7b7;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  min-height: 46px;
+}
+
+.clinic-call-btn:hover {
+  background: rgba(16, 185, 129, 0.25);
+  color: #ffffff;
+}
+
+/* Suggest a Clinic Bottom CTA Card */
+.clinic-suggest-cta {
+  background: radial-gradient(circle at 100% 100%, rgba(5, 150, 105, 0.2) 0%, rgba(15, 23, 42, 0.8) 70%);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  border-radius: 20px;
+  padding: 28px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.clinic-suggest-text h4 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 6px;
+}
+
+.clinic-suggest-text p {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.clinic-suggest-wa-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #25d366;
+  color: #0b2612;
+  font-weight: 800;
+  padding: 12px 22px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  min-height: 48px;
+  flex-shrink: 0;
+}
+
+.clinic-suggest-wa-btn:hover {
+  background: #20ba5a;
+  transform: translateY(-2px);
+}
+
+/* Customs Checklist Cards */
+.customs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.customs-card {
+  border-radius: 16px;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.65);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.customs-card.banned {
+  border-left: 4px solid #ef4444;
+  background: rgba(239, 68, 68, 0.04);
+}
+
+.customs-card.allowed {
+  border-left: 4px solid #10b981;
+  background: rgba(16, 185, 129, 0.04);
+}
+
+.customs-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.customs-badge-red {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #fca5a5;
+  font-size: 0.8rem;
+  font-weight: 800;
+  background: rgba(239, 68, 68, 0.15);
+  padding: 4px 10px;
+  border-radius: 9999px;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.customs-badge-green {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #6ee7b7;
+  font-size: 0.8rem;
+  font-weight: 800;
+  background: rgba(16, 185, 129, 0.15);
+  padding: 4px 10px;
+  border-radius: 9999px;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.customs-risk-tag {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.customs-risk-tag.critical {
+  background: #dc2626;
+  color: #ffffff;
+}
+
+.customs-risk-tag.high {
+  background: #d97706;
+  color: #ffffff;
+}
+
+.customs-risk-tag.safe {
+  background: #059669;
+  color: #ffffff;
+}
+
+.customs-item-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+
+.customs-item-desc {
+  font-size: 0.88rem;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.55;
+}
+
+.customs-advisory-box {
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 16px;
+  padding: 18px 20px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.customs-advisory-icon {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.customs-advisory-text h4 {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fde047;
+  margin: 0 0 6px;
+}
+
+.customs-advisory-text p {
+  font-size: 0.88rem;
+  color: #cbd5e1;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Daily Arabic-Malayalam Phrasebook */
+.phrase-tabs-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 24px;
+  padding-bottom: 8px;
+}
+
+.phrase-tabs-container {
+  display: inline-flex;
+  gap: 8px;
+  min-width: max-content;
+}
+
+.phrase-tab-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #cbd5e1;
+  padding: 10px 18px;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  min-height: 44px;
+}
+
+.phrase-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.phrase-tab-btn.active {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  border-color: #34d399;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.4);
+}
+
+.phrases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 16px;
+}
+
+.phrase-card {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease;
+}
+
+.phrase-card:hover {
+  border-color: rgba(52, 211, 153, 0.35);
+  transform: translateY(-2px);
+}
+
+.phrase-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.phrase-index {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #64748b;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.phrase-speak-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #6ee7b7;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 36px;
+}
+
+.phrase-speak-btn:hover {
+  background: rgba(16, 185, 129, 0.25);
+  color: #ffffff;
+}
+
+.phrase-speak-btn.speaking {
+  background: #059669;
+  color: #ffffff;
+  animation: pulse-speak 1s infinite alternate;
+}
+
+@keyframes pulse-speak {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.06); box-shadow: 0 0 12px rgba(16, 185, 129, 0.6); }
+}
+
+.phrase-ar-box {
+  font-family: 'Playfair Display', 'Amiri', 'Traditional Arabic', serif;
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #fde047;
+  line-height: 1.4;
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.phrase-ml-phonetic {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.phrase-ml-phonetic .label {
+  display: block;
+  font-size: 0.76rem;
+  color: #94a3b8;
+  margin-bottom: 2px;
+}
+
+.phrase-ml-phonetic .text {
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.phrase-en-phonetic {
+  font-size: 0.84rem;
+  color: #94a3b8;
+  margin-bottom: 12px;
+}
+
+.phrase-en-phonetic em {
+  color: #cbd5e1;
+  font-style: normal;
+}
+
+.phrase-ml-meaning {
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.meaning-icon {
+  color: #34d399;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.meaning-text {
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: #6ee7b7;
+  line-height: 1.4;
+}
