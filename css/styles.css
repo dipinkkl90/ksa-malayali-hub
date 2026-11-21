@@ -4,74 +4,74 @@
    ========================================================================== */
 
 :root {
-  /* Warm Alabaster & Kasavu Ivory Canvas */
-  --bg: #f7f5ef;
-  --surface: #ffffff;
-  --surface-soft: #f1efe7;
-  --surface-hover: #fcfbf8;
-  --text: #0d1f1b;
-  --text-secondary: #435752;
-  --text-muted: #6e7f7a;
-  --border: rgba(15, 42, 34, 0.1);
-  --border-strong: rgba(15, 42, 34, 0.18);
+  /* Clean Cohesive Canvas (#F8FAFC & Pure White #FFFFFF) */
+  --bg: #F8FAFC;
+  --surface: #FFFFFF;
+  --surface-soft: #F1F5F9;
+  --surface-hover: #F8FAFC;
+  --text: #0F172A;
+  --text-secondary: #334155;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --border-strong: #CBD5E1;
 
-  /* Royal Emerald & Kasavu Gold Accents */
-  --brand: #054434;
-  --brand-deep: #03271e;
-  --brand-mid: #08634c;
-  --brand-light: #10b981;
-  --brand-tint: rgba(5, 68, 52, 0.08);
+  /* Primary Deep Emerald Green (#047857) & Accent Warm Gold (#D97706) */
+  --brand: #047857;
+  --brand-deep: #064E3B;
+  --brand-mid: #059669;
+  --brand-light: #10B981;
+  --brand-tint: rgba(4, 120, 87, 0.08);
 
-  --gold: #b08222;
-  --gold-bright: #d4af37;
-  --gold-champagne: #f3dc98;
-  --gold-light: rgba(212, 175, 55, 0.12);
-  --gold-border: rgba(212, 175, 55, 0.36);
+  --gold: #D97706;
+  --gold-bright: #F59E0B;
+  --gold-champagne: #FDE68A;
+  --gold-light: rgba(217, 119, 6, 0.12);
+  --gold-border: rgba(217, 119, 6, 0.32);
 
-  --whatsapp: #16a34a;
-  --whatsapp-dark: #15803d;
-  --danger: #dc2626;
+  --whatsapp: #16A34A;
+  --whatsapp-dark: #15803D;
+  --danger: #DC2626;
 
-  --shadow-sm: 0 2px 8px rgba(3, 39, 30, 0.04);
-  --shadow-md: 0 12px 32px rgba(3, 39, 30, 0.08);
-  --shadow-lg: 0 24px 56px rgba(3, 39, 30, 0.16);
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.08), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.03);
 
-  --radius-sm: 10px;
-  --radius-md: 16px;
-  --radius-lg: 22px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
   --radius-pill: 999px;
 
-  --font-serif: "Playfair Display", "Noto Sans Malayalam", Georgia, serif;
-  --font-sans: "Plus Jakarta Sans", "Noto Sans Malayalam", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --transition: 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+  --font-serif: "Noto Sans Malayalam", "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", "Noto Sans Malayalam", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --transition: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 [data-theme="dark"] {
-  --bg: #07120f;
-  --surface: #0d1d19;
-  --surface-soft: #132822;
-  --surface-hover: #163029;
-  --text: #f1f5f3;
-  --text-secondary: #a8bfb8;
-  --text-muted: #7b968e;
-  --border: rgba(212, 175, 55, 0.14);
-  --border-strong: rgba(212, 175, 55, 0.26);
+  --bg: #0B1315;
+  --surface: #111D20;
+  --surface-soft: #16262A;
+  --surface-hover: #1C3035;
+  --text: #F8FAFC;
+  --text-secondary: #CBD5E1;
+  --text-muted: #94A3B8;
+  --border: #1E293B;
+  --border-strong: #334155;
 
-  --brand: #10b981;
-  --brand-deep: #041c15;
+  --brand: #10B981;
+  --brand-deep: #064E3B;
   --brand-mid: #059669;
-  --brand-light: #34d399;
+  --brand-light: #34D399;
   --brand-tint: rgba(16, 185, 129, 0.12);
 
-  --gold: #e8c56b;
-  --gold-bright: #e8c56b;
-  --gold-champagne: #f8e5ac;
-  --gold-light: rgba(232, 197, 107, 0.12);
-  --gold-border: rgba(232, 197, 107, 0.32);
+  --gold: #F59E0B;
+  --gold-bright: #FBBF24;
+  --gold-champagne: #FDE68A;
+  --gold-light: rgba(245, 158, 11, 0.14);
+  --gold-border: rgba(245, 158, 11, 0.35);
 
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
-  --shadow-md: 0 14px 36px rgba(0, 0, 0, 0.5);
-  --shadow-lg: 0 26px 60px rgba(0, 0, 0, 0.72);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
 }
 
 *,
@@ -465,6 +465,7 @@ html[lang="ml"] .hero h1 {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  min-height: 44px;
   padding: 10px 18px;
   border-radius: var(--radius-pill);
   background: rgba(255, 255, 255, 0.14);
@@ -486,6 +487,7 @@ html[lang="ml"] .hero h1 {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  min-height: 44px;
   padding: 10px 18px;
   border-radius: var(--radius-pill);
   background: transparent;
@@ -506,8 +508,15 @@ html[lang="ml"] .hero h1 {
 /* Luxury Glass Stat Cards */
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 14px;
+}
+
+@media (max-width: 900px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
 }
 
 .stat-card {
@@ -10191,4 +10200,400 @@ html[lang="ml"] .sugg-info-card h2 {
   font-weight: 700;
   color: #6ee7b7;
   line-height: 1.4;
+}
+
+
+/* ==========================================================================
+   SAUDI GUIDE & HOTELS PAGE (/saudi) STYLES — v19
+   ========================================================================== */
+
+.saudi-hero {
+  padding: 40px 0 24px;
+  background: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.15) 0%, rgba(7, 27, 18, 0) 70%);
+  text-align: center;
+}
+
+.saudi-hero-inner {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.saudi-page-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(212, 175, 55, 0.14);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  color: #fde047;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.saudi-page-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 14px;
+  line-height: 1.25;
+}
+
+.saudi-page-subtitle {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  color: #94a3b8;
+  max-width: 760px;
+  margin: 0 auto 24px;
+  line-height: 1.6;
+}
+
+.saudi-quick-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.saudi-pill-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #e2e8f0;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.saudi-pill-link:hover {
+  background: rgba(212, 175, 55, 0.2);
+  border-color: rgba(212, 175, 55, 0.4);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Hotel Search and Filter Controls */
+.hotel-controls-wrapper {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.hotel-search-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 10px 16px;
+  margin-bottom: 16px;
+}
+
+.hotel-search-box input {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 0.95rem;
+  width: 100%;
+  outline: none;
+}
+
+.hotel-search-box input::placeholder {
+  color: #94a3b8;
+}
+
+.hotel-city-tabs-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 6px;
+}
+
+.hotel-city-tabs-container {
+  display: inline-flex;
+  gap: 8px;
+  min-width: max-content;
+}
+
+.hotel-city-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #cbd5e1;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  min-height: 40px;
+}
+
+.hotel-city-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.hotel-city-btn.active {
+  background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+  border-color: #fde047;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(217, 119, 6, 0.4);
+}
+
+/* Saudi Hotels Grid */
+.saudi-hotels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 18px;
+  margin-bottom: 32px;
+}
+
+.saudi-hotel-card {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+}
+
+.saudi-hotel-card:hover {
+  border-color: rgba(212, 175, 55, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+}
+
+.saudi-hotel-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.saudi-hotel-city-badge {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 3px 10px;
+  border-radius: 9999px;
+  font-weight: 600;
+}
+
+.saudi-hotel-rating {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #fde047;
+  background: rgba(245, 158, 11, 0.15);
+  padding: 3px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.saudi-hotel-name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 10px;
+  line-height: 1.35;
+}
+
+.saudi-hotel-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.saudi-hotel-tag {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  color: #6ee7b7;
+  font-size: 0.74rem;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.saudi-hotel-dishes {
+  font-size: 0.84rem;
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  line-height: 1.4;
+}
+
+.saudi-hotel-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.saudi-btn-map {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: rgba(59, 130, 246, 0.15);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  color: #93c5fd;
+  padding: 9px 12px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  min-height: 42px;
+}
+
+.saudi-btn-map:hover {
+  background: rgba(59, 130, 246, 0.25);
+  color: #ffffff;
+}
+
+.saudi-btn-call {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #6ee7b7;
+  padding: 9px 14px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  min-height: 42px;
+}
+
+.saudi-btn-call:hover {
+  background: rgba(16, 185, 129, 0.25);
+  color: #ffffff;
+}
+
+.saudi-btn-share {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(37, 211, 102, 0.15);
+  border: 1px solid rgba(37, 211, 102, 0.3);
+  color: #25d366;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.saudi-btn-share:hover {
+  background: #25d366;
+  color: #ffffff;
+}
+
+.islamic-story-card {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 18px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.islamic-story-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.islamic-story-icon {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.islamic-story-title h4 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #fde047;
+  margin: 0 0 2px;
+}
+
+.islamic-story-title span {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.islamic-story-text {
+  font-size: 0.94rem;
+  color: #cbd5e1;
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+
+.islamic-highlights-box {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 0.88rem;
+  color: #94a3b8;
+}
+
+.islamic-highlights-box strong {
+  color: #fde047;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.islamic-highlights-box ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.islamic-highlights-box li {
+  margin-bottom: 4px;
+  color: #e2e8f0;
+}
+
+.facts-stat-card {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.facts-stat-icon {
+  font-size: 1.8rem;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.facts-stat-label {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.facts-stat-val {
+  color: #ffffff;
 }
