@@ -12831,3 +12831,516 @@ html[lang="ml"] .sugg-info-card h2 {
   background: #2563eb;
   color: #ffffff;
 }
+
+/* ==========================================================================
+   Saudi Vision 2030 & FIFA World Cup 2034 Stadiums Section Styles
+   ========================================================================== */
+.vision-fifa-tabs-wrap {
+  display: flex;
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: 5px;
+  gap: 8px;
+  margin-bottom: 24px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.vision-fifa-tabs-wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.vision-tab-btn {
+  flex: 1 1 0;
+  min-width: 220px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: var(--radius-pill);
+  border: none;
+  background: transparent;
+  font-size: 0.96rem;
+  font-weight: 800;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: var(--transition);
+  min-height: 48px;
+  white-space: nowrap;
+}
+
+.vision-tab-btn:hover:not(.active) {
+  background: rgba(4, 120, 87, 0.08);
+  color: var(--brand);
+}
+
+.vision-tab-btn.active {
+  background: var(--brand);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(4, 120, 87, 0.35);
+}
+
+[data-theme="dark"] .vision-tab-btn.active {
+  background: var(--brand);
+  color: #ffffff;
+}
+
+/* Vision 2030 Overview Card */
+.vision-overview-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-bottom: 26px;
+  box-shadow: var(--shadow-sm);
+  border-left: 5px solid var(--gold);
+}
+
+.vision-overview-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.vision-crown-icon {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.vision-overview-head h3 {
+  margin: 0 0 6px;
+  font-size: 1.28rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.vision-overview-head p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.vision-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+}
+
+.vision-pillar-box {
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pillar-icon {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.vision-pillar-box h4 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--brand-deep);
+}
+
+[data-theme="dark"] .vision-pillar-box h4 {
+  color: var(--gold-bright);
+}
+
+.vision-pillar-box p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+/* Mega Projects Grid */
+.mega-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 20px;
+}
+
+.mega-project-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.mega-project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--brand);
+}
+
+.mega-project-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.mega-project-icon {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.mega-project-tag {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(217, 119, 6, 0.12);
+  color: #b45309;
+  border: 1px solid rgba(217, 119, 6, 0.25);
+  font-size: 0.76rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 999px;
+  width: fit-content;
+  margin-bottom: 4px;
+}
+
+[data-theme="dark"] .mega-project-tag {
+  color: var(--gold-bright);
+}
+
+.mega-project-titles h3 {
+  margin: 0 0 2px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.mega-project-sub {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.mega-project-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.mega-badge-location,
+.mega-badge-invest {
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+
+.mega-badge-invest {
+  color: #047857;
+  font-weight: 800;
+}
+
+[data-theme="dark"] .mega-badge-invest {
+  color: #34d399;
+}
+
+.mega-project-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0 0 16px;
+}
+
+.mega-subprojects-title {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.mega-subprojects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.mega-subproject-item {
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-size: 0.84rem;
+}
+
+.mega-subproject-item strong {
+  display: block;
+  color: var(--text);
+  margin-bottom: 3px;
+}
+
+.mega-subproject-item p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* FIFA 2034 Intro Strip & City Filters */
+.fifa-intro-strip {
+  background: linear-gradient(135deg, rgba(4, 120, 87, 0.12) 0%, rgba(217, 119, 6, 0.12) 100%);
+  border: 1px solid rgba(4, 120, 87, 0.25);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  margin-bottom: 22px;
+}
+
+.fifa-badge-gold {
+  display: inline-block;
+  background: #d97706;
+  color: #ffffff;
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0.8px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+
+.fifa-intro-left h3 {
+  margin: 0 0 6px;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.fifa-intro-left p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Stadium Filter Pills */
+.stadium-filters-wrapper {
+  margin-bottom: 24px;
+}
+
+.stadium-filters-container {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 4px 2px;
+}
+
+.stadium-filters-container::-webkit-scrollbar {
+  display: none;
+}
+
+.stadium-filter-pill {
+  flex-shrink: 0;
+  white-space: nowrap;
+  padding: 9px 18px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-secondary);
+  font-size: 0.86rem;
+  font-weight: 800;
+  cursor: pointer;
+  min-height: 44px;
+  transition: var(--transition);
+}
+
+.stadium-filter-pill:hover:not(.active) {
+  border-color: var(--brand);
+  color: var(--brand);
+  background: var(--surface-soft);
+}
+
+.stadium-filter-pill.active {
+  background: #047857;
+  color: #ffffff;
+  border-color: #047857;
+  box-shadow: 0 2px 8px rgba(4, 120, 87, 0.3);
+}
+
+/* Stadiums Grid */
+.fifa-stadiums-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.stadium-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.stadium-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--brand);
+}
+
+.stadium-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.stadium-city-pill {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #047857;
+  background: rgba(4, 120, 87, 0.1);
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(4, 120, 87, 0.2);
+}
+
+[data-theme="dark"] .stadium-city-pill {
+  color: #34d399;
+}
+
+.status-badge-new {
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: #065f46;
+  background: #d1fae5;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid #86efac;
+}
+
+.status-badge-renovated {
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: #92400e;
+  background: #fef3c7;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid #fde68a;
+}
+
+[data-theme="dark"] .status-badge-new {
+  background: rgba(16, 185, 129, 0.15);
+  color: #6ee7b7;
+  border-color: rgba(16, 185, 129, 0.35);
+}
+
+[data-theme="dark"] .status-badge-renovated {
+  background: rgba(217, 119, 6, 0.15);
+  color: #fde047;
+  border-color: rgba(217, 119, 6, 0.35);
+}
+
+.stadium-name-ml {
+  margin: 0 0 2px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.stadium-name-en {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.stadium-capacity-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: var(--surface-soft);
+  border-radius: var(--radius-sm);
+  margin-bottom: 12px;
+  font-size: 0.88rem;
+}
+
+.capacity-icon {
+  font-size: 1.1rem;
+}
+
+.capacity-label {
+  color: var(--text-secondary);
+}
+
+.capacity-value {
+  color: #d97706;
+  font-weight: 900;
+  margin-left: auto;
+}
+
+[data-theme="dark"] .capacity-value {
+  color: var(--gold-bright);
+}
+
+.stadium-highlight-box {
+  background: rgba(4, 120, 87, 0.05);
+  border-left: 3px solid var(--brand);
+  padding: 8px 12px;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.stadium-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0 0 16px;
+  flex-grow: 1;
+}
+
+.btn-stadium-maps {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: var(--radius-pill);
+  background: rgba(37, 99, 235, 0.1);
+  border: 1px solid rgba(37, 99, 235, 0.3);
+  color: #2563eb;
+  font-size: 0.88rem;
+  font-weight: 800;
+  text-decoration: none;
+  min-height: 44px;
+  transition: var(--transition);
+  margin-top: auto;
+}
+
+.btn-stadium-maps:hover {
+  background: #2563eb;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
