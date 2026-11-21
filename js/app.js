@@ -1320,7 +1320,7 @@
     }
     if (waShareBtn) {
       waShareBtn.href = `https://api.whatsapp.com/send?text=${encodeURIComponent(
-        `Check out the latest ${flyer.brand} weekly flyer on KSA Malayali Hub: https://dipinkkl90.github.io/ksa-malayali-hub/`
+        `Check out the latest ${flyer.brand} weekly flyer on KSA Malayali Hub: https://ksa-malayali-hub.vercel.app/`
       )}`;
     }
 
