@@ -9903,72 +9903,85 @@ html[lang="ml"] .sugg-info-card h2 {
   transform: translateY(-2px);
 }
 
-/* Customs Checklist Cards */
+/* Customs Checklist Cards - High-Contrast & Legible in Light & Dark */
 .customs-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 16px;
+  gap: 18px;
   margin-bottom: 24px;
 }
 
 .customs-card {
   border-radius: 16px;
-  padding: 20px;
-  background: rgba(15, 23, 42, 0.65);
+  padding: 22px;
+  background: #ffffff;
   display: flex;
   flex-direction: column;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+  transition: all 0.2s ease;
+}
+
+.customs-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.09);
 }
 
 .customs-card.banned {
-  border-left: 4px solid #ef4444;
-  background: rgba(239, 68, 68, 0.04);
+  border-left: 5px solid #dc2626;
+  background: #fff5f5;
+  border-top-color: #fee2e2;
+  border-right-color: #fee2e2;
+  border-bottom-color: #fee2e2;
 }
 
 .customs-card.allowed {
-  border-left: 4px solid #10b981;
-  background: rgba(16, 185, 129, 0.04);
+  border-left: 5px solid #059669;
+  background: #f0fdf4;
+  border-top-color: #d1fae5;
+  border-right-color: #d1fae5;
+  border-bottom-color: #d1fae5;
 }
 
 .customs-card-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .customs-badge-red {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: #fca5a5;
-  font-size: 0.8rem;
+  color: #991b1b;
+  font-size: 0.82rem;
   font-weight: 800;
-  background: rgba(239, 68, 68, 0.15);
-  padding: 4px 10px;
+  background: #fee2e2;
+  padding: 5px 12px;
   border-radius: 9999px;
-  border: 1px solid rgba(239, 68, 68, 0.3);
+  border: 1px solid #fca5a5;
 }
 
 .customs-badge-green {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: #6ee7b7;
-  font-size: 0.8rem;
+  color: #065f46;
+  font-size: 0.82rem;
   font-weight: 800;
-  background: rgba(16, 185, 129, 0.15);
-  padding: 4px 10px;
+  background: #d1fae5;
+  padding: 5px 12px;
   border-radius: 9999px;
-  border: 1px solid rgba(16, 185, 129, 0.3);
+  border: 1px solid #86efac;
 }
 
 .customs-risk-tag {
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.5px;
-  padding: 2px 8px;
-  border-radius: 4px;
+  padding: 3px 9px;
+  border-radius: 6px;
 }
 
 .customs-risk-tag.critical {
@@ -9987,47 +10000,118 @@ html[lang="ml"] .sugg-info-card h2 {
 }
 
 .customs-item-title {
-  font-size: 1.05rem;
+  font-size: 1.12rem;
   font-weight: 800;
-  color: #ffffff;
-  margin: 0 0 8px;
-  line-height: 1.4;
+  color: #0f172a;
+  margin: 0 0 10px;
+  line-height: 1.45;
+}
+
+.customs-card.banned .customs-item-title {
+  color: #991b1b;
+}
+
+.customs-card.allowed .customs-item-title {
+  color: #065f46;
 }
 
 .customs-item-desc {
-  font-size: 0.88rem;
-  color: #94a3b8;
+  font-size: 0.92rem;
+  color: #334155;
   margin: 0;
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
 .customs-advisory-box {
-  background: rgba(212, 175, 55, 0.08);
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-left: 5px solid #d97706;
   border-radius: 16px;
-  padding: 18px 20px;
+  padding: 20px 22px;
   display: flex;
-  gap: 14px;
+  gap: 16px;
   align-items: flex-start;
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.08);
 }
 
 .customs-advisory-icon {
-  font-size: 1.8rem;
+  font-size: 2rem;
   line-height: 1;
 }
 
 .customs-advisory-text h4 {
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 800;
-  color: #fde047;
+  color: #92400e;
   margin: 0 0 6px;
 }
 
 .customs-advisory-text p {
-  font-size: 0.88rem;
-  color: #cbd5e1;
+  font-size: 0.92rem;
+  color: #78350f;
   margin: 0;
-  line-height: 1.6;
+  line-height: 1.65;
+}
+
+/* Dark Mode Overrides for Customs Cards */
+[data-theme="dark"] .customs-card {
+  background: #111d20;
+  border-color: #1e293b;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .customs-card.banned {
+  background: rgba(220, 38, 38, 0.12);
+  border-color: rgba(239, 68, 68, 0.35);
+  border-left: 5px solid #ef4444;
+}
+
+[data-theme="dark"] .customs-card.allowed {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.35);
+  border-left: 5px solid #10b981;
+}
+
+[data-theme="dark"] .customs-item-title {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .customs-card.banned .customs-item-title {
+  color: #fca5a5;
+}
+
+[data-theme="dark"] .customs-card.allowed .customs-item-title {
+  color: #86efac;
+}
+
+[data-theme="dark"] .customs-item-desc {
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .customs-badge-red {
+  color: #fca5a5;
+  background: rgba(239, 68, 68, 0.25);
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+[data-theme="dark"] .customs-badge-green {
+  color: #6ee7b7;
+  background: rgba(16, 185, 129, 0.25);
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
+[data-theme="dark"] .customs-advisory-box {
+  background: rgba(217, 119, 6, 0.12);
+  border-color: rgba(245, 158, 11, 0.35);
+  border-left: 5px solid #f59e0b;
+}
+
+[data-theme="dark"] .customs-advisory-text h4 {
+  color: #fde047;
+}
+
+[data-theme="dark"] .customs-advisory-text p {
+  color: #e2e8f0;
 }
 
 /* Daily Arabic-Malayalam Phrasebook */
@@ -11403,4 +11487,340 @@ html[lang="ml"] .sugg-info-card h2 {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(4px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
+   Pravasi Legal Aid, Advocates & Saudi Labor Courts Section
+   ========================================================================== */
+.legal-intro-banner {
+  background: linear-gradient(135deg, rgba(4, 120, 87, 0.08) 0%, rgba(217, 119, 6, 0.08) 100%);
+  border: 1px solid rgba(4, 120, 87, 0.25);
+  border-left: 5px solid var(--brand);
+  border-radius: var(--radius-md);
+  padding: 18px 22px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.legal-intro-icon {
+  font-size: 2.2rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.legal-intro-text h3 {
+  margin: 0 0 4px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.legal-intro-text p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.legal-helplines-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.legal-helpline-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.legal-helpline-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--brand-light);
+}
+
+.legal-helpline-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.legal-helpline-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  background: rgba(4, 120, 87, 0.1);
+  color: var(--brand);
+}
+
+.legal-helpline-icon-wrap.gold {
+  background: rgba(217, 119, 6, 0.12);
+  color: var(--gold);
+}
+
+.legal-helpline-icon-wrap.blue {
+  background: rgba(37, 99, 235, 0.1);
+  color: #2563eb;
+}
+
+.legal-helpline-info h4 {
+  margin: 0 0 4px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.35;
+}
+
+.legal-helpline-info p {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.legal-call-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 11px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+  background: var(--brand);
+  color: #ffffff !important;
+  transition: var(--transition);
+  min-height: 44px;
+}
+
+.legal-call-btn:hover {
+  background: var(--brand-deep);
+  transform: translateY(-1px);
+}
+
+.legal-call-btn.gold {
+  background: #d97706;
+}
+
+.legal-call-btn.gold:hover {
+  background: #b45309;
+}
+
+.legal-call-btn.blue {
+  background: #2563eb;
+}
+
+.legal-call-btn.blue:hover {
+  background: #1d4ed8;
+}
+
+/* 4-Step Court Process */
+.court-process-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-bottom: 30px;
+  box-shadow: var(--shadow-sm);
+}
+
+.court-process-head {
+  margin-bottom: 20px;
+}
+
+.court-process-head h3 {
+  margin: 0 0 6px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.court-process-head p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.court-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.court-step-card {
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.court-step-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  background: var(--brand);
+  color: #ffffff;
+  width: fit-content;
+  margin-bottom: 10px;
+}
+
+.court-step-card h4 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.35;
+}
+
+.court-step-card p {
+  margin: 0 0 10px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  flex-grow: 1;
+}
+
+.court-step-note {
+  background: rgba(217, 119, 6, 0.1);
+  border-left: 3px solid var(--gold);
+  padding: 6px 10px;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.8rem;
+  color: var(--text);
+  margin-top: auto;
+}
+
+/* Advocates & Power of Attorney Warning Box */
+.advocate-guidelines-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.advocate-guide-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 22px;
+  box-shadow: var(--shadow-sm);
+}
+
+.advocate-guide-card.warning {
+  border-left: 5px solid #dc2626;
+  background: #fff8f8;
+}
+
+[data-theme="dark"] .advocate-guide-card.warning {
+  background: rgba(220, 38, 38, 0.08);
+  border-color: rgba(239, 68, 68, 0.3);
+  border-left: 5px solid #ef4444;
+}
+
+.advocate-guide-card h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.advocate-guide-card.warning h4 {
+  color: #991b1b;
+}
+
+[data-theme="dark"] .advocate-guide-card.warning h4 {
+  color: #fca5a5;
+}
+
+.advocate-guide-card ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.advocate-guide-card li {
+  margin-bottom: 8px;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.advocate-guide-card li strong {
+  color: var(--text);
+}
+
+/* Official Legal Links Grid */
+.legal-portals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+}
+
+.legal-portal-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  text-decoration: none;
+  transition: var(--transition);
+  min-height: 54px;
+}
+
+.legal-portal-btn:hover {
+  border-color: var(--brand);
+  background: var(--surface-soft);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.legal-portal-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.legal-portal-info strong {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.legal-portal-info span {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.legal-portal-arrow {
+  color: var(--brand);
+  font-weight: 800;
+  font-size: 1.1rem;
 }

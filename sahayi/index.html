@@ -13,11 +13,11 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="Malayali Hub">
-  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="../assets/icon-192.png">
-  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
-  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./assets/icon-192.png">
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="manifest" href="./manifest.webmanifest">
   
 
   <!-- Open Graph -->
@@ -34,7 +34,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Malayalam:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="../css/styles.css?v=20261121_v17">
+  <link rel="stylesheet" href="./css/styles.css?v=20261121_v19">
 </head>
 <body>
 
@@ -42,7 +42,7 @@
   <nav class="topbar" aria-label="Main navigation">
     <div class="container topbar-inner">
       <a href="/" class="brand-lockup">
-        <img src="../assets/favicon.svg" alt="KSA Malayali Hub Logo" class="brand-icon">
+        <img src="./assets/favicon.svg" alt="KSA Malayali Hub Logo" class="brand-icon">
         <div class="brand-text">
           <span class="brand-name">KSA Malayali Hub</span>
           <span class="brand-dev-tag">
@@ -91,6 +91,10 @@
             <span class="sub-nav-icon">✈️</span>
             <span>ഫ്ലൈറ്റ് &amp; യാത്ര</span>
           </a>
+          <a href="/sahayi#legal-and-courts" class="sub-nav-pill" data-sub="legal">
+            <span class="sub-nav-icon">⚖️</span>
+            <span>ലീഗൽ &amp; കോടതികൾ</span>
+          </a>
           <a href="/norka" class="sub-nav-pill" data-sub="norka">
             <span class="sub-nav-icon">🏛️</span>
             <span>നോർക്ക &amp; ക്ഷേമനിധി</span>
@@ -126,6 +130,15 @@
       </p>
           <div class="sahayi-update-badge" style="display:inline-flex;align-items:center;gap:6px;font-size:0.8rem;color:var(--text-secondary);background:var(--surface);padding:6px 14px;border-radius:999px;border:1px solid var(--border);margin-top:12px;">
         <span>🗓️ <strong>Last Verified:</strong> Saudi Labor Articles 84 &amp; 85 (November 2026) · ഔദ്യോഗിക നിയമപ്രകാരം</span>
+      </div>
+
+      <!-- Quick Section Jump Navigation -->
+      <div class="sahayi-hero-quick-jumps" style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-top:18px;">
+        <a href="#emergency-helplines" class="sub-nav-pill" style="background:var(--surface); border:1px solid var(--border);">🚨 എമർജൻസി</a>
+        <a href="#eosb-calculator" class="sub-nav-pill" style="background:var(--surface); border:1px solid var(--border);">🧮 ഗ്രാറ്റുവിറ്റി</a>
+        <a href="#status-checks" class="sub-nav-pill" style="background:var(--surface); border:1px solid var(--border);">🔍 സ്റ്റാറ്റസ് ചെക്ക്</a>
+        <a href="#legal-and-courts" class="sub-nav-pill" style="background:linear-gradient(135deg, rgba(4,120,87,0.18) 0%, rgba(217,119,6,0.18) 100%); border:1px solid var(--gold-border); font-weight:800; color:var(--text);">⚖️ ലീഗൽ &amp; കോടതികൾ</a>
+        <a href="#norka-and-scams" class="sub-nav-pill" style="background:var(--surface); border:1px solid var(--border);">🛡️ നോർക്ക &amp; സുരക്ഷ</a>
       </div>
     </header>
 
@@ -520,7 +533,196 @@
       </div>
     </section>
 
-    <!-- SECTION D: NORKA Welfare & Job Scam Checklist -->
+    <!-- SECTION D: Pravasi Legal Aid, Advocates & Saudi Labor Courts -->
+    <section class="sahayi-section" id="legal-and-courts" aria-labelledby="sec-legal-title">
+      <div class="sahayi-section-head">
+        <span class="sahayi-section-icon">⚖️</span>
+        <div>
+          <h2 id="sec-legal-title" class="sahayi-section-title">പ്രവാസി ലീഗൽ ഹെൽപ്പ്‌ലൈൻ, അഡ്വക്കേറ്റുകൾ &amp; കോടതികൾ</h2>
+          <p class="sahayi-section-desc">തൊഴിൽ തർക്കങ്ങൾ, ശമ്പള കുടിശ്ശിക, ലേബർ കോടതി കേസുകൾ, സൗജന്യ എംബസി നിയമസഹായം &amp; അഡ്വക്കറ്റ് മാർഗ്ഗനിർദ്ദേശങ്ങൾ</p>
+        </div>
+      </div>
+
+      <!-- Quick Intro Advisory -->
+      <div class="legal-intro-banner">
+        <span class="legal-intro-icon">🛡️</span>
+        <div class="legal-intro-text">
+          <h3>തൊഴിലാളി അവകാശങ്ങൾ സൗദി നിയമപ്രകാരം സംരക്ഷിക്കപ്പെട്ടതാണ്</h3>
+          <p>ശമ്പളം ലഭിക്കാതിരിക്കുകയോ, അന്യായമായി പിരിച്ചുവിടുകയോ, ഇഖാമ പുതുക്കാതിരിക്കുകയോ ചെയ്താൽ ഭയപ്പെടേണ്ടതില്ല. സൗദി തൊഴിൽ നിയമപ്രകാരം തൊഴിലാളിക്ക് കേസ് ഫയൽ ചെയ്യാനും സൗജന്യ പരിഭാഷകനെ ആവശ്യപ്പെടാനും പൂർണ്ണ അവകാശമുണ്ട്.</p>
+        </div>
+      </div>
+
+      <!-- Part 1: One-Tap Direct Legal Helplines -->
+      <div class="legal-helplines-grid">
+        <!-- 1. MHRSD Labor Complaint Helpline 19911 -->
+        <article class="legal-helpline-card">
+          <div>
+            <div class="legal-helpline-header">
+              <div class="legal-helpline-icon-wrap">⚖️</div>
+              <div class="legal-helpline-info">
+                <h4>ലേബർ മിനിസ്ട്രി ഹെൽപ്പ്‌ലൈൻ (MHRSD)</h4>
+                <p>തൊഴിൽ തർക്കങ്ങൾ, ശമ്പളം മുടങ്ങൽ, കരാർ ലംഘനങ്ങൾ. മലയാളത്തിൽ സംസാരിക്കാൻ സൗകര്യം.</p>
+              </div>
+            </div>
+          </div>
+          <a href="tel:19911" class="legal-call-btn">
+            <span>📞 19911 ഡയൽ ചെയ്യുക (Toll-Free)</span>
+          </a>
+        </article>
+
+        <!-- 2. Ministry of Justice (Najiz) 1950 -->
+        <article class="legal-helpline-card">
+          <div>
+            <div class="legal-helpline-header">
+              <div class="legal-helpline-icon-wrap gold">🏛️</div>
+              <div class="legal-helpline-info">
+                <h4>സൗദി നീതിന്യായ മന്ത്രാലയം (Najiz)</h4>
+                <p>കോടതി വിചാരണ തീയതികൾ, കേസുകളുടെ സ്റ്റാറ്റസ്, തൻഫീദ് എക്സിക്യൂഷൻ ഓർഡറുകൾ അറിയാൻ (24/7).</p>
+              </div>
+            </div>
+          </div>
+          <a href="tel:1950" class="legal-call-btn gold">
+            <span>📞 1950 ഡയൽ ചെയ്യുക (നജീസ്)</span>
+          </a>
+        </article>
+
+        <!-- 3. Indian Embassy Riyadh Legal Wing -->
+        <article class="legal-helpline-card">
+          <div>
+            <div class="legal-helpline-header">
+              <div class="legal-helpline-icon-wrap blue">🇮🇳</div>
+              <div class="legal-helpline-info">
+                <h4>ഇന്ത്യൻ എംബസി റിയാദ് ലീഗൽ വിംഗ്</h4>
+                <p>എംബസി എംപാനൽഡ് വക്കീലന്മാരുടെ സൗജന്യ നിയമോപദേശം &amp; ജയിൽ/ലേബർ കേസ് സഹായം (24/7).</p>
+              </div>
+            </div>
+          </div>
+          <a href="tel:8002471234" class="legal-call-btn blue">
+            <span>📞 800 247 1234 (ടോൾഫ്രീ)</span>
+          </a>
+        </article>
+
+        <!-- 4. Indian Consulate Jeddah Legal Section -->
+        <article class="legal-helpline-card">
+          <div>
+            <div class="legal-helpline-header">
+              <div class="legal-helpline-icon-wrap blue">🏢</div>
+              <div class="legal-helpline-info">
+                <h4>ഇന്ത്യൻ കോൺസുലേറ്റ് ജിദ്ദ ലീഗൽ സെൽ</h4>
+                <p>മക്ക, ജിദ്ദ, മദീന, തബൂക്ക് തൊഴിലാളികൾക്കുള്ള ലീഗൽ കൗൺസിലിംഗ് &amp; കോടതി മാർഗ്ഗനിർദ്ദേശം.</p>
+              </div>
+            </div>
+          </div>
+          <a href="tel:8002440003" class="legal-call-btn blue">
+            <span>📞 800 244 0003 (ടോൾഫ്രീ)</span>
+          </a>
+        </article>
+      </div>
+
+      <!-- Part 2: 4-Step Saudi Labor Court Process -->
+      <div class="court-process-box">
+        <div class="court-process-head">
+          <h3>📌 സൗദിയിൽ ലേബർ കേസ് നടത്തുന്ന 4 ലളിതമായ ഘട്ടങ്ങൾ</h3>
+          <p>ശമ്പളമോ ഗ്രാറ്റുവിറ്റിയോ കമ്പനി തരാതിരുന്നാൽ ഈ 4 ഘട്ടങ്ങളിലൂടെ കോടതി വഴി പണം ഈടാക്കാം:</p>
+        </div>
+
+        <div class="court-steps-grid">
+          <!-- Step 1 -->
+          <div class="court-step-card">
+            <span class="court-step-badge">ഘട്ടം 1 · നിർബന്ധിതം</span>
+            <h4>തസ്‌വിയ വുദ്ദിയ്യ (സൗഹൃദ ഒത്തുതീർപ്പ്)</h4>
+            <p>കോടതിയിൽ പോകുന്നതിന് മുൻപ് ഖിവ (Qiwa) പോർട്ടലിലെ <strong>تسوية ودية (Amicable Settlement)</strong> വഴി ഓൺലൈനായി പരാതി നൽകണം. 21 ദിവസത്തിനകം മന്ത്രാലയം നിയോഗിച്ച മധ്യസ്ഥൻ വഴി തൊഴിലാളിയും സ്പോൺസറും തമ്മിൽ ഓൺലൈൻ ചർച്ച നടത്തും.</p>
+            <div class="court-step-note">💡 ഖിവ വഴി ഓൺലൈനായി വീട്ടിലിരുന്ന് ഫയൽ ചെയ്യാം.</div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="court-step-card">
+            <span class="court-step-badge">ഘട്ടം 2 · ലേബർ കോടതി</span>
+            <h4>മഹ്കമത്തുൽ അമാൽ (Labor Court Referral)</h4>
+            <p>21 ദിവസത്തിനകം സ്പോൺസർ ഹാജരായില്ലെങ്കിലോ ഒത്തുതീർപ്പിൽ എത്താതിരുന്നാലോ, കേസ് തനിയെ നീതിന്യായ മന്ത്രാലയത്തിന്റെ <strong>നജീസിലേക്ക് (Najiz)</strong> കൈമാറപ്പെടും. കോടതി ഫയൽ നമ്പർ SMS ആയി ലഭിക്കും.</p>
+            <div class="court-step-note">💡 തൊഴിലാളികൾക്ക് കോടതി ഫീസ് പൂർണ്ണമായും സൗജന്യമാണ്.</div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="court-step-card">
+            <span class="court-step-badge">ഘട്ടം 3 · കോടതി വിചാരണ</span>
+            <h4>ഓൺലൈൻ കോടതി സെഷൻ (Virtual Hearing)</h4>
+            <p>നജീസ് ആപ്പ് വഴി മൊബൈലിലൂടെ നേരിട്ട് ജഡ്ജിയുടെ മുൻപാകെ ഓൺലൈനായി ഹാജരാകാം. <strong>അറബിക് അറിയാത്ത പ്രവാസികൾക്ക് സൗജന്യ മലയാളം/ഇംഗ്ലീഷ് പരിഭാഷകനെ (Court-appointed sworn translator)</strong> കോടതി നൽകും.</p>
+            <div class="court-step-note">💡 നിങ്ങളുടെ തൊഴിൽ കരാറും ബാങ്ക് സ്റ്റേറ്റ്‌മെന്റും സൂക്ഷിക്കുക.</div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="court-step-card">
+            <span class="court-step-badge">ഘട്ടം 4 · വിധി നടപ്പാക്കൽ</span>
+            <h4>മഹ്കമത്തുത്തൻഫീദ് (Execution Court)</h4>
+            <p>കോടതി തൊഴിലാളിക്ക് അനുകൂലമായി വിധി (Hukm) പുറപ്പെടുവിച്ചിട്ടും കമ്പനി പണം നൽകാതിരുന്നാൽ, നജീസിൽ തൻഫീദ് എക്സിക്യൂഷൻ ഫയൽ ചെയ്യാം. കോടതി കമ്പനിയുടെ ബാങ്ക് അക്കൗണ്ടുകൾ മരവിപ്പിച്ച് തുക ഈടാക്കിത്തരും.</p>
+            <div class="court-step-note">💡 നിയമപരമായ അന്തിമ ഘട്ടം, പണം നേരിട്ട് അക്കൗണ്ടിലെത്തും.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Part 3: Advocates & Power of Attorney Caution -->
+      <div class="advocate-guidelines-grid">
+        <!-- Card 1: Authorized Advocates -->
+        <div class="advocate-guide-card">
+          <h4>👨‍⚖️ അഡ്വക്കേറ്റുകളെ എങ്ങനെ തിരഞ്ഞെടുക്കാം?</h4>
+          <ul>
+            <li><strong>ലൈസൻസ് ഉള്ള വക്കീലന്മാർ മാത്രം:</strong> സൗദി നീതിന്യായ മന്ത്രാലയത്തിൽ (MOJ) രജിസ്റ്റർ ചെയ്ത ലൈസൻസുള്ള സൗദി അഡ്വക്കേറ്റുകൾക്ക് മാത്രമേ കോടതിയിൽ ഹാജരാകാൻ അധികാരമുള്ളൂ.</li>
+            <li><strong>എംബസി എംപാനൽഡ് അഡ്വക്കേറ്റുകൾ:</strong> ഇന്ത്യൻ എംബസിയും കോൺസുലേറ്റും സൗജന്യ നിയമോപദേശത്തിനായി നിയോഗിച്ച സൗദി/ഇന്ത്യൻ അഭിഭാഷകരുടെ സഹായം തേടാം.</li>
+            <li><strong>വ്യാജ ഇടനിലക്കാരെ സൂക്ഷിക്കുക:</strong> 'കേസ് ജയിപ്പിച്ചു തരാം' എന്ന് പറഞ്ഞ് വരുന്ന അനധികൃത ദല്ലാളുമാർക്കോ സബ്-ഏജന്റുമാർക്കോ പണം നൽകരുത്.</li>
+            <li><strong>ഔദ്യോഗിക ഡയറക്ടറി:</strong> നീതിന്യായ മന്ത്രാലയത്തിന്റെ വെബ്‌സൈറ്റിലൂടെ വക്കീലിന്റെ ലൈസൻസ് നമ്പർ ഓൺലൈനായി പരിശോധിക്കാം.</li>
+          </ul>
+        </div>
+
+        <!-- Card 2: Power of Attorney Warning -->
+        <div class="advocate-guide-card warning">
+          <h4>⚠️ വക്കാലത്ത് (وکالة - Power of Attorney) നൽകുമ്പോൾ ജാഗ്രത!</h4>
+          <ul>
+            <li><strong>നജീസ് വഴി മാത്രം:</strong> വക്കാലത്ത് (Power of Attorney) നിർബന്ധമായും ഔദ്യോഗിക <strong>നജീസ് (Najiz) പോർട്ടൽ</strong> വഴി മാത്രം നൽകുക.</li>
+            <li><strong>വെള്ളക്കടലാസിൽ ഒപ്പുവെക്കരുത്:</strong> കാര്യമറിയാതെ ഒപ്പിടുന്ന അറബിക് പേപ്പറുകൾ വലിയ നിയമക്കുരുക്കുകളിലേക്ക് നയിക്കും. ഒരിക്കലും ഒപ്പിട്ടു നൽകരുത്.</li>
+            <li><strong>ജനറൽ വക്കാലത്ത് നൽകരുത്:</strong> നിങ്ങളുടെ സ്വത്തോ ബാങ്ക് അക്കൗണ്ടോ ഉപയോഗിക്കാൻ അധികാരമുള്ള ജനറൽ പവർ ഓഫ് അറ്റോർണി നൽകരുത്.</li>
+            <li><strong>കേസിന് മാത്രമുള്ള വക്കാലത്ത്:</strong> ആ നിർദ്ദിഷ്ട ലേബർ കേസ് നടത്താൻ മാത്രമുള്ള 'സ്പെസിഫിക് വക്കാലത്ത്' (وكالة خاصة بالدعوى فقط) മാത്രം നൽകുക.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Part 4: Official Legal Portals -->
+      <div class="legal-portals-grid">
+        <a href="https://auth.qiwa.sa/" target="_blank" rel="noopener noreferrer" class="legal-portal-btn">
+          <div class="legal-portal-info">
+            <strong>ഖിവ തസ്‌വിയ വുദ്ദിയ്യ (Qiwa)</strong>
+            <span>Amicable Labor Settlement Portal</span>
+          </div>
+          <span class="legal-portal-arrow">➔</span>
+        </a>
+
+        <a href="https://najiz.sa/" target="_blank" rel="noopener noreferrer" class="legal-portal-btn">
+          <div class="legal-portal-info">
+            <strong>നജീസ് പോർട്ടൽ (Najiz MOJ)</strong>
+            <span>Saudi Courts &amp; Virtual Hearings</span>
+          </div>
+          <span class="legal-portal-arrow">➔</span>
+        </a>
+
+        <a href="https://www.moj.gov.sa/ar/e-services/Pages/LawyersInquiry.aspx" target="_blank" rel="noopener noreferrer" class="legal-portal-btn">
+          <div class="legal-portal-info">
+            <strong>അംഗീകൃത അഡ്വക്കറ്റ് ലിസ്റ്റ് (MOJ)</strong>
+            <span>Saudi Licensed Lawyers Directory</span>
+          </div>
+          <span class="legal-portal-arrow">➔</span>
+        </a>
+
+        <a href="https://www.madad.gov.in/" target="_blank" rel="noopener noreferrer" class="legal-portal-btn">
+          <div class="legal-portal-info">
+            <strong>മദദ് എംബസി പോർട്ടൽ (MADAD)</strong>
+            <span>Indian Consular Grievance Redressal</span>
+          </div>
+          <span class="legal-portal-arrow">➔</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- SECTION E: NORKA Welfare & Job Scam Checklist -->
     <section class="sahayi-section" id="norka-and-scams" aria-labelledby="sec-d-title">
       <div class="sahayi-section-head">
         <span class="sahayi-section-icon">🛡️</span>
@@ -690,8 +892,8 @@
   </nav>
 
   <!-- Interactive JavaScript Engine -->
-  <script src="../js/sahayi.js?v=20261121_v17"></script>
+  <script src="./js/sahayi.js?v=20261121_v17"></script>
   <!-- PWA Offline & Install Controller -->
-  <script src="../js/pwa.js" defer></script>
+  <script src="./js/pwa.js" defer></script>
 </body>
 </html>
