@@ -977,6 +977,7 @@ html[lang="ml"] .hero h1 {
   flex-wrap: wrap;
   gap: 12px;
   margin-bottom: 18px;
+  width: 100%;
 }
 
 .results-count {
@@ -988,24 +989,39 @@ html[lang="ml"] .hero h1 {
 
 .view-switcher {
   display: inline-flex;
+  align-items: center;
   background: var(--surface);
   border: 1px solid var(--border-strong);
   border-radius: var(--radius-pill);
   padding: 4px;
   box-shadow: var(--shadow-sm);
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  flex-wrap: nowrap;
+  gap: 4px;
+}
+
+.view-switcher::-webkit-scrollbar {
+  display: none;
 }
 
 .view-btn {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  padding: 7px 15px;
+  padding: 8px 16px;
   border-radius: var(--radius-pill);
   border: none;
   background: transparent;
   color: var(--text-secondary);
-  font-size: 0.83rem;
+  font-size: 0.84rem;
   font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
+  min-height: 42px;
+  line-height: 1;
   cursor: pointer;
   transition: var(--transition);
 }
@@ -10002,17 +10018,17 @@ html[lang="ml"] .sugg-info-card h2 {
 .customs-item-title {
   font-size: 1.12rem;
   font-weight: 800;
-  color: #0f172a;
+  color: #0f172a !important;
   margin: 0 0 10px;
   line-height: 1.45;
 }
 
 .customs-card.banned .customs-item-title {
-  color: #991b1b;
+  color: #991b1b !important;
 }
 
 .customs-card.allowed .customs-item-title {
-  color: #065f46;
+  color: #065f46 !important;
 }
 
 .customs-item-desc {
@@ -12463,7 +12479,133 @@ html[lang="ml"] .sugg-info-card h2 {
   color: var(--text-secondary);
 }
 
-/* Mode Switcher */
+/* 3-Language Pair Switcher & Action Bar */
+.trans-pair-switcher {
+  display: flex;
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: 5px;
+  gap: 6px;
+  margin-bottom: 14px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.trans-pair-switcher::-webkit-scrollbar {
+  display: none;
+}
+
+.trans-pair-pill {
+  flex: 1 1 0;
+  min-width: 140px;
+  border: none;
+  background: transparent;
+  padding: 10px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: center;
+  min-height: 46px;
+  white-space: nowrap;
+}
+
+.trans-pair-pill:hover:not(.active) {
+  background: rgba(4, 120, 87, 0.08);
+  color: var(--brand);
+}
+
+.trans-pair-pill.active {
+  background: var(--brand);
+  color: #ffffff;
+  box-shadow: 0 3px 10px rgba(4, 120, 87, 0.35);
+}
+
+/* Direction Bar with Swap & Clear */
+.trans-dir-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+  padding: 10px 16px;
+  background: rgba(4, 120, 87, 0.05);
+  border: 1px solid rgba(4, 120, 87, 0.18);
+  border-radius: var(--radius-md);
+}
+
+.trans-dir-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trans-dir-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--brand-deep);
+}
+
+[data-theme="dark"] .trans-dir-badge {
+  color: var(--gold-bright);
+}
+
+.trans-dir-arrow {
+  color: var(--gold);
+  font-size: 1.15rem;
+  font-weight: 900;
+}
+
+.trans-dir-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.trans-action-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-size: 0.86rem;
+  font-weight: 800;
+  color: var(--text);
+  cursor: pointer;
+  min-height: 40px;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.trans-action-pill:hover {
+  background: var(--surface-soft);
+  border-color: var(--brand);
+  color: var(--brand);
+  transform: translateY(-1px);
+}
+
+.trans-action-pill.danger:hover {
+  border-color: #dc2626;
+  color: #dc2626;
+  background: #fef2f2;
+}
+
+[data-theme="dark"] .trans-action-pill.danger:hover {
+  background: rgba(220, 38, 38, 0.15);
+}
+
+/* Legacy Mode Switcher Compatibility */
 .trans-mode-switcher {
   display: flex;
   background: var(--surface-soft);

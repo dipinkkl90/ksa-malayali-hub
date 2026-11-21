@@ -3984,6 +3984,9 @@
     if ($("view-tourism-btn")) {
       $("view-tourism-btn").addEventListener("click", () => setView("tourism", false));
     }
+    if ($("view-heritage-btn")) {
+      $("view-heritage-btn").addEventListener("click", () => setView("heritage", false));
+    }
     if ($("view-daily-btn")) {
       $("view-daily-btn").addEventListener("click", () => setView("daily", false));
     }

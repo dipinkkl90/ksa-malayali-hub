@@ -34,7 +34,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Malayalam:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="./css/styles.css?v=20261121_v19">
+  <link rel="stylesheet" href="./css/styles.css?v=20261121_v24">
 </head>
 <body>
 
@@ -816,25 +816,47 @@
       </div>
     </section>
 
-    <!-- SECTION F: Malayalam ↔ Arabic Voice Translator for Workers -->
+    <!-- SECTION F: 3-Language Worker Voice Translator (Malayalam ⇄ Arabic, English, Hindi) -->
     <section id="voice-translator-section" class="sahayi-section" aria-labelledby="translator-title">
       <div class="voice-translator-box" style="margin-bottom:0;">
         <div class="trans-head">
           <div class="trans-head-icon">🎙️</div>
           <div>
-            <h2 id="translator-title" style="margin:0 0 4px; font-size:1.4rem; font-weight:800; color:var(--text);">തൊഴിലാളി വോയ്സ് ട്രാൻസ്ലേറ്റർ (Voice Translator)</h2>
-            <p style="margin:0; font-size:0.9rem; color:var(--text-secondary);">പോലീസ്, ട്രാഫിക് ഉദ്യോഗസ്ഥർ, സ്പോൺസർ, തൊഴിൽ മന്ത്രാലയ ഓഫീസർമാർ എന്നിവരുമായി സംസാരിക്കാൻ — മൊബൈലിൽ സംസാരിക്കുകയോ ടൈപ്പ് ചെയ്യുകയോ ചെയ്യാം.</p>
+            <h2 id="translator-title" style="margin:0 0 4px; font-size:1.4rem; font-weight:800; color:var(--text);">തൊഴിലാളി വോയ്സ് ട്രാൻസ്ലേറ്റർ (3-Language Voice Translator)</h2>
+            <p style="margin:0; font-size:0.9rem; color:var(--text-secondary);">പോലീസ്, ട്രാഫിക് ഉദ്യോഗസ്ഥർ, സ്പോൺസർ, തൊഴിൽ മന്ത്രാലയ ഓഫീസർമാർ, സഹപ്രവർത്തകർ എന്നിവരുമായി സംസാരിക്കാൻ — മൊബൈലിൽ സംസാരിക്കുകയോ ടൈപ്പ് ചെയ്യുകയോ ചെയ്യാം.</p>
           </div>
         </div>
 
-        <!-- Mode Switcher -->
-        <div class="trans-mode-switcher">
-          <button type="button" id="mode-ml-to-ar" class="trans-mode-pill active">
-            🗣️ മലയാളം ➔ അറബിക് (Malayalam to Arabic)
+        <!-- 3 Language Pairs Selector -->
+        <div class="trans-pair-switcher" role="tablist" aria-label="Select translation language pair">
+          <button type="button" class="trans-pair-pill active" data-pair="ml-ar">
+            🇸🇦 മലയാളം ⇄ അറബിക്
           </button>
-          <button type="button" id="mode-ar-to-ml" class="trans-mode-pill">
-            🗣️ അറബിക് ➔ മലയാളം (Arabic to Malayalam)
+          <button type="button" class="trans-pair-pill" data-pair="ml-en">
+            🇬🇧 മലയാളം ⇄ ഇംഗ്ലീഷ്
           </button>
+          <button type="button" class="trans-pair-pill" data-pair="ml-hi">
+            🇮🇳 മലയാളം ⇄ ഹിന്ദി
+          </button>
+        </div>
+
+        <!-- Direction & Action Bar -->
+        <div class="trans-dir-bar">
+          <div class="trans-dir-info">
+            <span class="trans-dir-badge">
+              <span id="trans-src-badge">മലയാളം</span>
+              <span class="trans-dir-arrow">➔</span>
+              <span id="trans-tgt-badge">അറബിക്</span>
+            </span>
+          </div>
+          <div class="trans-dir-actions">
+            <button type="button" id="trans-btn-swap" class="trans-action-pill" title="സംസാരിക്കുന്ന ദിശ മാറ്റുക">
+              <span>⇄ ദിശ മാറ്റുക (Swap)</span>
+            </button>
+            <button type="button" id="trans-btn-clear" class="trans-action-pill danger" title="എല്ലാം മായ്ക്കുക">
+              <span>🗑️ ക്ലിയർ</span>
+            </button>
+          </div>
         </div>
 
         <!-- Input & Output Boxes -->
@@ -842,20 +864,20 @@
           <!-- Input Area -->
           <div class="trans-input-box">
             <div class="trans-box-head">
-              <span>നിങ്ങൾ പറയുന്നത് / ടൈപ്പ് ചെയ്യുന്നത്:</span>
+              <span id="trans-input-label">നിങ്ങൾ പറയുന്നത് (<strong style="color:var(--brand);">മലയാളം</strong>):</span>
               <button type="button" id="trans-btn-speak-source" class="trans-audio-action-btn" title="കേൾക്കുക">
                 🔊 കേൾക്കുക
               </button>
             </div>
-            <textarea id="trans-input-text" class="trans-textarea" placeholder="ഇവിടെ മലയാളത്തിൽ ടൈപ്പ് ചെയ്യുക അല്ലെങ്കിൽ മൈക്ക് അമർത്തി സംസാരിക്കുക..."></textarea>
+            <textarea id="trans-input-text" class="trans-textarea" placeholder="ഇവിടെ മലയാളത്തിൽ സംസാരിക്കുക അല്ലെങ്കിൽ ടൈപ്പ് ചെയ്യുക..."></textarea>
           </div>
 
           <!-- Output Area -->
           <div class="trans-output-box">
             <div class="trans-box-head">
-              <span>വിവർത്തനം (Translation):</span>
+              <span id="trans-output-label">വിവർത്തനം (<strong style="color:var(--gold);">അറബിക്</strong>):</span>
               <div style="display:flex; gap:6px;">
-                <button type="button" id="trans-btn-speak-target" class="trans-audio-action-btn" title="അറബിക് ഉച്ചാരണം കേൾപ്പിക്കുക" disabled>
+                <button type="button" id="trans-btn-speak-target" class="trans-audio-action-btn" title="ഉച്ചാരണം കേൾപ്പിക്കുക" disabled>
                   🔊 അറബിക് കേൾപ്പിക്കുക
                 </button>
                 <button type="button" id="trans-btn-copy" class="trans-audio-action-btn" title="കോപ്പി ചെയ്യുക" disabled>
@@ -883,13 +905,13 @@
             </span>
           </div>
           <div id="trans-mic-status" style="font-size:0.84rem; color:var(--text-secondary);">
-            മൈക്രോഫോൺ അമർത്തി സംസാരിക്കുക (Tap Mic to Speak)
+            മൈക്രോഫോൺ അമർത്തി സംസാരിക്കുക (മലയാളം · Tap Mic to Speak)
           </div>
         </div>
 
         <!-- Quick Phrases Chips -->
         <div class="trans-chips-section">
-          <div class="trans-chips-label">⚡ അടിയന്തിര ഘട്ടങ്ങളിലെ സ്ഥിരം വാക്യങ്ങൾ (One-Tap Quick Translate):</div>
+          <div class="trans-chips-label">⚡ പ്രധാന നിത്യോപയോഗ വാക്യങ്ങൾ (One-Tap Quick Translate):</div>
           <div id="trans-quick-chips" class="trans-chips-grid">
             <!-- Dynamically populated by js/translator.js -->
           </div>
@@ -982,7 +1004,7 @@
 
   <!-- Interactive JavaScript Engine -->
   <script src="./js/sahayi.js?v=20261121_v17"></script>
-  <script src="./js/translator.js?v=20261121_v20"></script>
+  <script src="./js/translator.js?v=20261121_v24"></script>
   <!-- PWA Offline & Install Controller -->
   <script src="./js/pwa.js" defer></script>
 </body>
