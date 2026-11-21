@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="ml" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>നോർക്ക &amp; പ്രവാസി ക്ഷേമനിധി · NORKA Roots &amp; Pravasi Welfare | KSA Malayali Hub</title>
+  <meta name="description" content="നോർക്ക റൂട്ട്സ് പ്രവാസി ഐഡി കാർഡ്, സാന്ത്വന ധനസഹായം, ഇൻഷുറൻസ് പരിരക്ഷ, ഒപ്പം കേരള പ്രവാസി ക്ഷേമനിധി പെൻഷൻ, രജിസ്ട്രേഷൻ &amp; അംശാദായ വിവരങ്ങൾ. മലയാളികൾക്കായി KSA Malayali Hub.">
+
+  <!-- Progressive Web App (PWA) & iOS Support -->
+  <meta name="theme-color" content="#047857">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Malayali Hub">
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./assets/icon-192.png">
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="manifest" href="./manifest.webmanifest">
+
+  <!-- Google Fonts: Inter + Noto Sans Malayalam -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Malayalam:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="./css/styles.css?v=20261121_v20">
+</head>
+<body>
+  <!-- Sticky Top Navigation -->
+  <nav class="topbar" aria-label="Main navigation">
+    <div class="container topbar-inner">
+      <a href="/" class="brand-lockup">
+        <img src="./assets/favicon.svg" alt="KSA Malayali Hub Logo" class="brand-icon">
+        <div class="brand-text">
+          <span class="brand-name">KSA Malayali Hub</span>
+          <span class="brand-dev-tag">
+            <span class="brand-dev-dot" aria-hidden="true"></span>
+            By D&amp;J · +44 7460 646263
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <div class="topbar-nav-links">
+        <a href="/" class="topbar-nav-link">
+          <span class="nav-icon">🏠</span>
+          <span>ഹോം</span>
+        </a>
+        <a href="/sahayi" class="topbar-nav-link">
+          <span class="nav-icon">🆘</span>
+          <span>സഹായി</span>
+        </a>
+        <a href="/health" class="topbar-nav-link">
+          <span class="nav-icon">🏥</span>
+          <span>ആരോഗ്യം</span>
+        </a>
+        <a href="/saudi" class="topbar-nav-link">
+          <span class="nav-icon">🕋</span>
+          <span>സൗദി</span>
+        </a>
+      </div>
+
+      <div class="topbar-actions">
+        <a href="https://wa.me/447460646263?text=Hi%20D%26J%2C%20suggesting%20a%20spot" target="_blank" rel="noopener noreferrer" class="nav-btn nav-btn-accent" title="Suggest a Spot">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <span class="nav-btn-label-hide-sm">നിർദ്ദേശിക്കുക</span>
+        </a>
+        <button type="button" id="theme-toggle" class="nav-btn nav-btn-icon" aria-label="Toggle dark mode">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Secondary Quick-Access Sub-Navbar -->
+    <div class="sub-navbar" aria-label="Quick Access Sub Navigation">
+      <div class="container sub-navbar-inner">
+        <div class="sub-nav-scroll-wrapper">
+          <a href="/#hypers" class="sub-nav-pill" data-sub="offers">
+            <span class="sub-nav-icon">🛍️</span>
+            <span>മാൾ ഓഫറുകൾ</span>
+          </a>
+          <a href="/travel" class="sub-nav-pill" data-sub="travel">
+            <span class="sub-nav-icon">✈️</span>
+            <span>ഫ്ലൈറ്റ് &amp; യാത്ര</span>
+          </a>
+          <a href="/norka" class="sub-nav-pill active" data-sub="norka">
+            <span class="sub-nav-icon">🏛️</span>
+            <span>നോർക്ക &amp; ക്ഷേമനിധി</span>
+          </a>
+          <a href="/explore?tab=library" class="sub-nav-pill" data-sub="library">
+            <span class="sub-nav-icon">📚</span>
+            <span>ഇ-ലൈബ്രറി</span>
+          </a>
+          <a href="/explore?tab=tourism" class="sub-nav-pill" data-sub="tourism">
+            <span class="sub-nav-icon">🗺️</span>
+            <span>ടൂറിസം &amp; ഹിഡൻ സ്പോട്ട്</span>
+          </a>
+          <a href="/explore?tab=heritage" class="sub-nav-pill" data-sub="heritage">
+            <span class="sub-nav-icon">🌴</span>
+            <span>പൈതൃകവും കൃഷിയും</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- NORKA Hero Banner -->
+  <header class="norka-hero">
+    <div class="container">
+      <div class="page-badge-pill">
+        <span>🏛️ പ്രവാസി ക്ഷേമം &amp; സുരക്ഷ · NORKA &amp; WELFARE BOARD</span>
+      </div>
+      <h1 class="page-hero-title">നോർക്ക റൂട്ട്സ് &amp; പ്രവാസി ക്ഷേമനിധി</h1>
+      <p class="page-hero-desc">
+        കേരള സർക്കാരിന്റെ നോർക്ക ഐഡി കാർഡ്, 2 ലക്ഷം രൂപയുടെ ഇൻഷുറൻസ് പരിരക്ഷ, സാന്ത്വന ധനസഹായം, പ്രവാസി ക്ഷേമനിധി പെൻഷൻ രജിസ്ട്രേഷൻ &amp; പ്രതിമാസ അംശാദായ വിവരങ്ങൾ ഒറ്റനോട്ടത്തിൽ.
+      </p>
+
+      <div class="update-badge" style="display:inline-flex;align-items:center;gap:6px;font-size:0.8rem;color:var(--text-secondary);background:var(--surface);padding:6px 14px;border-radius:999px;border:1px solid var(--border);">
+        <span>🗓️ <strong>Last Verified:</strong> NORKA Roots &amp; Kerala Pravasi Welfare Board (November 2026)</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container" style="padding-top:20px; padding-bottom:70px;">
+
+    <!-- SECTION 1: NORKA Roots Services -->
+    <section class="utility-section" id="norka-services">
+      <div class="utility-section-head">
+        <span class="utility-section-icon">🏛️</span>
+        <div>
+          <h2 class="utility-section-title">നോർക്ക റൂട്ട്സ് സേവനങ്ങൾ (NORKA Roots)</h2>
+          <p class="utility-section-desc">കേരള സർക്കാരിന്റെ പ്രവാസികാര്യ വകുപ്പായ നോർക്ക റൂട്ട്സ് വഴി പ്രവാസികൾക്ക് ലഭിക്കുന്ന പ്രധാന ആനുകൂല്യങ്ങളും ഔദ്യോഗിക ലിങ്കുകളും</p>
+        </div>
+      </div>
+
+      <div class="norka-grid">
+        <!-- Feature 1: Pravasi ID Card -->
+        <div class="norka-feature-card">
+          <div>
+            <span class="norka-card-badge">🛡️ സമഗ്ര ഇൻഷുറൻസ് പരിരക്ഷ</span>
+            <h3 class="norka-card-title">പ്രവാസി തിരിച്ചറിയൽ കാർഡ് (Pravasi ID Card)</h3>
+            <p class="norka-card-desc">
+              വിദേശത്തുള്ള പ്രവാസികൾക്ക് അപകട മരണ/അംഗവൈകല്യത്തിന് <strong>₹2,00,000 രൂപയുടെ</strong> ഇൻഷുറൻസ് പരിരക്ഷ നൽകുന്ന ഔദ്യോഗിക കാർഡ് (ന്യൂ ഇന്ത്യ അഷ്വറൻസ് കമ്പനി വഴി).
+            </p>
+            <ul class="norka-bullet-list">
+              <li><strong>ഇൻഷുറൻസ് കവറേജ്:</strong> ₹2 ലക്ഷം (അപകട മരണം / പൂർണ്ണ അംഗവൈകല്യം), ₹50,000 വരെ ആശുപത്രി ചികിത്സാ ചെലവ്.</li>
+              <li><strong>ഫീസ്:</strong> 3 വർഷത്തെ കാലാവധിക്ക് വെറും <strong>₹315 രൂപ</strong> മാത്രം.</li>
+              <li><strong>ആർക്കൊക്കെ അപേക്ഷിക്കാം:</strong> സാധുതയുള്ള പാസ്‌പോർട്ടും സൗദി ഇഖാമ/വർക്ക് വിസയുമുള്ള 18 വയസ്സ് പൂർത്തിയായ പ്രവാസികൾക്ക്.</li>
+              <li><strong>ആവശ്യമായ രേഖകൾ:</strong> പാസ്‌പോർട്ട് കോപ്പി, വിസ/ഇഖാമ കോപ്പി, പാസ്‌പോർട്ട് സൈസ് ഫോട്ടോ.</li>
+            </ul>
+          </div>
+          <a href="https://norkaroots.org/pravasi-id-card" target="_blank" rel="noopener noreferrer" class="btn-norka-action">
+            <span>നോർക്ക ഐഡി കാർഡിന് അപേക്ഷിക്കുക ↗</span>
+          </a>
+        </div>
+
+        <!-- Feature 2: Santhwana Scheme -->
+        <div class="norka-feature-card">
+          <div>
+            <span class="norka-card-badge" style="background:rgba(2,132,199,0.12); color:#0284c7; border-color:rgba(2,132,199,0.3);">❤️ അടിയന്തിര ധനസഹായം</span>
+            <h3 class="norka-card-title">സാന്ത്വന ധനസഹായ പദ്ധതി (Santhwana Scheme)</h3>
+            <p class="norka-card-desc">
+              വിദേശത്തോ അല്ലെങ്കിൽ നാട്ടിൽ തിരിച്ചെത്തിയ ശേഷമോ സാമ്പത്തിക പരാധീനത അനുഭവിക്കുന്ന പ്രവാസികൾക്കും അവരുടെ കുടുംബങ്ങൾക്കും നൽകുന്ന ധനസഹായം.
+            </p>
+            <ul class="norka-bullet-list">
+              <li><strong>ചികിത്സാ സഹായം:</strong> ക്യാൻസർ, ഹൃദ്രോഗം, പക്ഷാഘാതം, കിഡ്നി രോഗം, കോവിഡ് അനന്തര സങ്കീർണ്ണതകൾ എന്നിവയ്ക്ക് <strong>₹50,000 വരെ</strong>.</li>
+              <li><strong>മരണാനന്തര സഹായം:</strong> പ്രവാസി മരണപ്പെട്ടാൽ ആശ്രിത കുടുംബത്തിന് <strong>₹1,00,000 രൂപ</strong> വരെ ധനസഹായം.</li>
+              <li><strong>വിവാഹ സഹായം:</strong> പെൺമക്കളുടെ വിവാഹത്തിന് <strong>₹15,000 രൂപ</strong>.</li>
+              <li><strong>അംഗവൈകല്യ സഹായം:</strong> ശാരീരിക ബുദ്ധിമുട്ടുകൾക്ക് കൃത്രിമ അവയവങ്ങൾ വാങ്ങാൻ <strong>₹10,000 രൂപ</strong> വരെ.</li>
+            </ul>
+          </div>
+          <a href="https://norkaroots.org/santhwana" target="_blank" rel="noopener noreferrer" class="btn-norka-action" style="background:#0284c7;">
+            <span>സാന്ത്വന പദ്ധതി വിവരങ്ങൾ ↗</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- NORKA Global Contact Centre 24x7 -->
+      <div style="background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:20px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:14px; margin-top:20px;">
+        <div>
+          <strong style="color:var(--text); font-size:1rem;">📞 നോർക്ക ഗ്ലോബൽ കോൺടാക്ട് സെന്റർ (24x7 ഹെൽപ്‌ലൈൻ):</strong>
+          <span style="color:var(--text-secondary); font-size:0.86rem; display:block; margin-top:3px;">ഏതൊരു നിയമ സഹായത്തിനും മരണ വിവരങ്ങൾ അറിയിക്കാനും 24 മണിക്കൂറും വിളിക്കാം</span>
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a href="tel:18004253939" class="airport-action-btn" style="margin:0; background:#047857; color:#ffffff;">
+            <span>📞 1800 425 3939 (Toll Free India)</span>
+          </a>
+          <a href="tel:+918802012345" class="airport-action-btn" style="margin:0; background:var(--surface-soft);">
+            <span>📞 +91 880 20 12345 (Overseas)</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Kerala Pravasi Welfare Fund Board -->
+    <section class="utility-section" id="pravasi-kshemanidhi" style="border-bottom:none;">
+      <div class="utility-section-head">
+        <span class="utility-section-icon">👵</span>
+        <div>
+          <h2 class="utility-section-title">കേരള പ്രവാസി ക്ഷേമനിധി (Kerala Pravasi Welfare Fund)</h2>
+          <p class="utility-section-desc">60 വയസ്സ് തികയുമ്പോൾ ആജീവനാന്ത പെൻഷനും കുടുംബ പെൻഷനും ഉറപ്പാക്കുന്ന പ്രവാസി ക്ഷേമനിധി ബോർഡ് പദ്ധതി</p>
+        </div>
+      </div>
+
+      <!-- Main Membership & Pension Card -->
+      <div style="background:linear-gradient(135deg, rgba(4,120,87,0.08) 0%, rgba(217,119,6,0.08) 100%); border:1px solid rgba(4,120,87,0.25); border-radius:18px; padding:24px; margin-bottom:24px;">
+        <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px;">
+          <div>
+            <span style="background:#047857; color:#ffffff; font-size:0.78rem; font-weight:800; padding:4px 10px; border-radius:6px;">പ്രവാസി ക്ഷേമനിധി ബോർഡ്</span>
+            <h3 style="font-size:1.3rem; font-weight:800; color:var(--text); margin:8px 0 4px;">പ്രവാസി പെൻഷൻ &amp; അംശാദായം</h3>
+            <p style="font-size:0.9rem; color:var(--text-secondary); margin:0;">വിദേശത്തുള്ള തൊഴിലാളികൾക്ക് റിട്ടയർമെന്റ് കാലത്ത് സുരക്ഷിതമായ വരുമാനം</p>
+          </div>
+          <a href="https://www.pravasikerala.org/" target="_blank" rel="noopener noreferrer" class="btn-norka-action">
+            <span>ക്ഷേമനിധി ഔദ്യോഗിക പോർട്ടൽ ↗</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Membership Types Grid -->
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(290px, 1fr)); gap:18px; margin-bottom:24px;">
+        <div style="background:var(--surface); border:1px solid var(--border); border-top:4px solid #047857; border-radius:16px; padding:20px; box-shadow:var(--shadow-sm);">
+          <span style="background:rgba(4,120,87,0.12); color:#047857; font-size:0.78rem; font-weight:800; padding:3px 10px; border-radius:999px;">വിഭാഗം 1A (വിദേശത്തുള്ളവർ)</span>
+          <h4 style="font-size:1.15rem; font-weight:800; color:var(--text); margin:10px 0 6px;">സൗദിയിലുള്ള പ്രവാസികൾ</h4>
+          <p style="font-size:0.88rem; color:var(--text-secondary); margin:0 0 12px; line-height:1.5;">സാധുതയുള്ള സൗദി തൊഴിൽ വിസയോ ഇഖാമയോ ഉള്ള 18 മുതൽ 60 വയസ്സ് വരെയുള്ള പ്രവാസികൾക്ക് അംഗമാകാം.</p>
+          <div style="background:var(--surface-soft); padding:10px 14px; border-radius:10px; margin-bottom:14px;">
+            <strong style="color:var(--text); font-size:0.92rem;">പ്രതിമാസ അംശാദായം:</strong>
+            <span style="color:#047857; font-size:1.1rem; font-weight:800; display:block;">₹350 രൂപ / മാസം</span>
+          </div>
+          <a href="https://www.pravasikerala.org/membership-registration" target="_blank" rel="noopener noreferrer" class="airport-action-btn" style="width:100%; margin:0;">
+            <span>ഫോം 1A രജിസ്ട്രേഷൻ ↗</span>
+          </a>
+        </div>
+
+        <div style="background:var(--surface); border:1px solid var(--border); border-top:4px solid #d97706; border-radius:16px; padding:20px; box-shadow:var(--shadow-sm);">
+          <span style="background:rgba(217,119,6,0.12); color:#d97706; font-size:0.78rem; font-weight:800; padding:3px 10px; border-radius:999px;">വിഭാഗം 2A (തിരിച്ചെത്തിയവർ)</span>
+          <h4 style="font-size:1.15rem; font-weight:800; color:var(--text); margin:10px 0 6px;">നാട്ടിൽ തിരിച്ചെത്തിയ പ്രവാസികൾ</h4>
+          <p style="font-size:0.88rem; color:var(--text-secondary); margin:0 0 12px; line-height:1.5;">വിദേശത്ത് കുറഞ്ഞത് 2 വർഷം ജോലി ചെയ്ത് ഇപ്പോൾ നാട്ടിൽ സ്ഥിരതാമസമാക്കിയ പ്രവാസികൾക്ക് അംഗമാകാം.</p>
+          <div style="background:var(--surface-soft); padding:10px 14px; border-radius:10px; margin-bottom:14px;">
+            <strong style="color:var(--text); font-size:0.92rem;">പ്രതിമാസ അംശാദായം:</strong>
+            <span style="color:#d97706; font-size:1.1rem; font-weight:800; display:block;">₹200 രൂപ / മാസം</span>
+          </div>
+          <a href="https://www.pravasikerala.org/membership-registration" target="_blank" rel="noopener noreferrer" class="airport-action-btn" style="width:100%; margin:0;">
+            <span>ഫോം 2A രജിസ്ട്രേഷൻ ↗</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Pension & Benefits List Card -->
+      <div style="background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:24px;">
+        <h4 style="font-size:1.1rem; font-weight:800; color:var(--text); margin:0 0 12px;">🌟 ക്ഷേമനിധി അംഗങ്ങൾക്ക് ലഭിക്കുന്ന പ്രധാന ആനുകൂല്യങ്ങൾ:</h4>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:14px;">
+          <div style="background:var(--surface-soft); padding:14px; border-radius:10px; border:1px solid var(--border);">
+            <strong style="color:#047857; font-size:0.92rem;">👵 ആജീവനാന്ത പ്രതിമാസ പെൻഷൻ:</strong>
+            <p style="margin:4px 0 0; font-size:0.85rem; color:var(--text-secondary);">കുറഞ്ഞത് 5 വർഷം കൃത്യമായി അംശാദായം അടച്ച് 60 വയസ്സ് തികയുമ്പോൾ മാസം തോറും പെൻഷൻ അക്കൗണ്ടിലെത്തും.</p>
+          </div>
+
+          <div style="background:var(--surface-soft); padding:14px; border-radius:10px; border:1px solid var(--border);">
+            <strong style="color:#047857; font-size:0.92rem;">👨‍👩‍👦 കുടുംബ പെൻഷൻ:</strong>
+            <p style="margin:4px 0 0; font-size:0.85rem; color:var(--text-secondary);">പെൻഷൻ ലഭിച്ചുകൊണ്ടിരിക്കുന്ന അംഗം മരണപ്പെട്ടാൽ നിയമപരമായ ജീവിതപങ്കാളിക്ക് 50% കുടുംബ പെൻഷൻ ലഭിക്കും.</p>
+          </div>
+
+          <div style="background:var(--surface-soft); padding:14px; border-radius:10px; border:1px solid var(--border);">
+            <strong style="color:#047857; font-size:0.92rem;">🏥 ചികിത്സാ സഹായം:</strong>
+            <p style="margin:4px 0 0; font-size:0.85rem; color:var(--text-secondary);">ഗുരുതര രോഗങ്ങൾക്ക് ചികിത്സ തേടുന്ന അംഗങ്ങൾക്ക് ക്ഷേമനിധി ബോർഡ് വഴി പ്രത്യേക ചികിത്സാ ആനുകൂല്യം.</p>
+          </div>
+
+          <div style="background:var(--surface-soft); padding:14px; border-radius:10px; border:1px solid var(--border);">
+            <strong style="color:#047857; font-size:0.92rem;">👰 വിവാഹ &amp; പ്രസവാനുകൂല്യം:</strong>
+            <p style="margin:4px 0 0; font-size:0.85rem; color:var(--text-secondary);">അംഗങ്ങളുടെ പെൺമക്കളുടെ വിവാഹ ധനസഹായവും വനിതാ അംഗങ്ങൾക്ക് പ്രസവ ആനുകൂല്യങ്ങളും ലഭിക്കും.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:18px; padding-top:14px; border-top:1px solid var(--border); font-size:0.86rem; color:var(--text-muted);">
+          💡 <strong>പ്രവാസികൾ ശ്രദ്ധിക്കുക:</strong> അംശാദായം അടയ്ക്കാൻ വൈകിയാൽ അംഗത്വം റദ്ദാകാതിരിക്കാൻ സർക്കാർ നടത്തുന്ന പ്രത്യേക <strong>'പ്രവാസി അദാലത്തുകൾ'</strong> വഴി പിഴയില്ലാതെ കുടിശ്ശിക തീർത്ത് അക്കൗണ്ട് പുനരുജ്ജീവിപ്പിക്കാവുന്നതാണ്.
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Sticky Bottom Navigation Bar (Mobile-Only) -->
+  <nav class="mobile-bottom-nav" aria-label="Mobile Navigation">
+    <a href="/" class="bottom-nav-item">
+      <span class="bottom-nav-icon">🏠</span>
+      <span class="bottom-nav-label">ഹോം</span>
+    </a>
+    <a href="/sahayi" class="bottom-nav-item">
+      <span class="bottom-nav-icon">🆘</span>
+      <span class="bottom-nav-label">സഹായി</span>
+    </a>
+    <a href="/health" class="bottom-nav-item">
+      <span class="bottom-nav-icon">🏥</span>
+      <span class="bottom-nav-label">ആരോഗ്യം</span>
+    </a>
+    <a href="/saudi" class="bottom-nav-item">
+      <span class="bottom-nav-icon">🕋</span>
+      <span class="bottom-nav-label">സൗദി</span>
+    </a>
+  </nav>
+
+  <!-- Footer -->
+  <footer style="background:#031f18; color:#cbd5e1; padding:32px 0 90px; border-top:1px solid rgba(212,175,55,0.2); text-align:center;">
+    <div class="container">
+      <p style="margin:0 0 8px; font-weight:700; color:#ffffff;">KSA Malayali Hub · സൗദി മലയാളി ഹബ്</p>
+      <p style="margin:0 0 16px; font-size:0.84rem; color:#94a3b8;">Crafted with pride for the Malayali Diaspora across Saudi Arabia · By D&amp;J (+44 7460 646263)</p>
+      <div style="display:flex; justify-content:center; gap:16px; font-size:0.84rem;">
+        <a href="/" style="color:#fde047;">ഹോം</a>
+        <a href="/travel" style="color:#fde047;">യാത്ര</a>
+        <a href="/norka" style="color:#fde047;">നോർക്ക</a>
+        <a href="/explore" style="color:#fde047;">എക്സ്പ്ലോർ</a>
+        <a href="/about" style="color:#fde047;">ഡിസ്ക്ലെയിമർ</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Theme Toggle & PWA Controller -->
+  <script src="./js/pwa.js" defer></script>
+  <script>
+    const themeBtn = document.getElementById('theme-toggle');
+    if (themeBtn) {
+      themeBtn.addEventListener('click', () => {
+        const cur = document.documentElement.getAttribute('data-theme') || 'light';
+        const next = cur === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('jkf_theme', next);
+      });
+      const savedTheme = localStorage.getItem('jkf_theme');
+      if (savedTheme) document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+  </script>
+</body>
+</html>

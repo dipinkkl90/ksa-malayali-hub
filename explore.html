@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="ml" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ഇ-ലൈബ്രറി, ടൂറിസം &amp; കൃഷി · Explore Hub | KSA Malayali Hub</title>
+  <meta name="description" content="സൗദി തൊഴിൽ നിയമം &amp; ദല്ല ലൈസൻസ് PDF ഗൈഡുകൾ, മലയാളം ഇ-ലൈബ്രറി, സൗദിയിലെ 25+ വീക്കെൻഡ് ടൂറിസം സ്പോട്ടുകൾ, ഒപ്പം സൗദി പൈതൃകവും പ്രവാസി കൃഷി സഹായിയും. KSA Malayali Hub.">
+
+  <!-- Progressive Web App (PWA) & iOS Support -->
+  <meta name="theme-color" content="#047857">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Malayali Hub">
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./assets/icon-192.png">
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="manifest" href="./manifest.webmanifest">
+
+  <!-- Google Fonts: Inter + Noto Sans Malayalam -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Malayalam:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="./css/styles.css?v=20261121_v20">
+</head>
+<body>
+  <!-- Sticky Top Navigation -->
+  <nav class="topbar" aria-label="Main navigation">
+    <div class="container topbar-inner">
+      <a href="/" class="brand-lockup">
+        <img src="./assets/favicon.svg" alt="KSA Malayali Hub Logo" class="brand-icon">
+        <div class="brand-text">
+          <span class="brand-name">KSA Malayali Hub</span>
+          <span class="brand-dev-tag">
+            <span class="brand-dev-dot" aria-hidden="true"></span>
+            By D&amp;J · +44 7460 646263
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <div class="topbar-nav-links">
+        <a href="/" class="topbar-nav-link">
+          <span class="nav-icon">🏠</span>
+          <span>ഹോം</span>
+        </a>
+        <a href="/sahayi" class="topbar-nav-link">
+          <span class="nav-icon">🆘</span>
+          <span>സഹായി</span>
+        </a>
+        <a href="/health" class="topbar-nav-link">
+          <span class="nav-icon">🏥</span>
+          <span>ആരോഗ്യം</span>
+        </a>
+        <a href="/saudi" class="topbar-nav-link">
+          <span class="nav-icon">🕋</span>
+          <span>സൗദി</span>
+        </a>
+      </div>
+
+      <div class="topbar-actions">
+        <a href="https://wa.me/447460646263?text=Hi%20D%26J%2C%20suggesting%20a%20spot" target="_blank" rel="noopener noreferrer" class="nav-btn nav-btn-accent" title="Suggest a Spot">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <span class="nav-btn-label-hide-sm">നിർദ്ദേശിക്കുക</span>
+        </a>
+        <button type="button" id="theme-toggle" class="nav-btn nav-btn-icon" aria-label="Toggle dark mode">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Secondary Quick-Access Sub-Navbar -->
+    <div class="sub-navbar" aria-label="Quick Access Sub Navigation">
+      <div class="container sub-navbar-inner">
+        <div class="sub-nav-scroll-wrapper">
+          <a href="/#hypers" class="sub-nav-pill" data-sub="offers">
+            <span class="sub-nav-icon">🛍️</span>
+            <span>മാൾ ഓഫറുകൾ</span>
+          </a>
+          <a href="/travel" class="sub-nav-pill" data-sub="travel">
+            <span class="sub-nav-icon">✈️</span>
+            <span>ഫ്ലൈറ്റ് &amp; യാത്ര</span>
+          </a>
+          <a href="/norka" class="sub-nav-pill" data-sub="norka">
+            <span class="sub-nav-icon">🏛️</span>
+            <span>നോർക്ക &amp; ക്ഷേമനിധി</span>
+          </a>
+          <a href="/explore?tab=library" class="sub-nav-pill active" data-sub="library">
+            <span class="sub-nav-icon">📚</span>
+            <span>ഇ-ലൈബ്രറി</span>
+          </a>
+          <a href="/explore?tab=tourism" class="sub-nav-pill" data-sub="tourism">
+            <span class="sub-nav-icon">🗺️</span>
+            <span>ടൂറിസം &amp; ഹിഡൻ സ്പോട്ട്</span>
+          </a>
+          <a href="/explore?tab=heritage" class="sub-nav-pill" data-sub="heritage">
+            <span class="sub-nav-icon">🌴</span>
+            <span>പൈതൃകവും കൃഷിയും</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Explore Hero Banner -->
+  <header class="explore-hero">
+    <div class="container">
+      <div class="page-badge-pill">
+        <span>🌐 എക്സ്പ്ലോർ ഹബ് · EXPLORE, READ &amp; DISCOVER</span>
+      </div>
+      <h1 class="page-hero-title">ഇ-ലൈബ്രറി, ടൂറിസം &amp; പൈതൃകം</h1>
+      <p class="page-hero-desc">
+        തൊഴിൽ നിയമം &amp; ദല്ല ലൈസൻസ് PDF ഗൈഡുകൾ, ഡിജിറ്റൽ മലയാളം വായനശാല, സൗദിയിലെ മനോഹരമായ വീക്കെൻഡ് ഹിഡൻ സ്പോട്ടുകൾ, ഒപ്പം പൈതൃക ചരിത്രവും പ്രവാസി കൃഷി സഹായിയും.
+      </p>
+
+      <div class="update-badge" style="display:inline-flex;align-items:center;gap:6px;font-size:0.8rem;color:var(--text-secondary);background:var(--surface);padding:6px 14px;border-radius:999px;border:1px solid var(--border);">
+        <span>🗓️ <strong>Last Verified:</strong> Saudi Heritage &amp; Tourism Directory (November 2026)</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Explore Container -->
+  <main class="container" style="padding-top:24px; padding-bottom:70px;">
+
+    <!-- 3-Tab Navigation Bar -->
+    <div class="explore-tabs-nav" role="tablist" aria-label="Explore Sections">
+      <button type="button" class="explore-tab-btn active" data-tab="library" role="tab" aria-selected="true" id="tab-btn-library">
+        <span>📚 1. ഇ-ലൈബ്രറി &amp; PDF ഗൈഡുകൾ</span>
+      </button>
+      <button type="button" class="explore-tab-btn" data-tab="tourism" role="tab" aria-selected="false" id="tab-btn-tourism">
+        <span>🗺️ 2. ടൂറിസം &amp; ഹിഡൻ സ്പോട്ട് (25)</span>
+      </button>
+      <button type="button" class="explore-tab-btn" data-tab="heritage" role="tab" aria-selected="false" id="tab-btn-heritage">
+        <span>🌴 3. പൈതൃകവും കൃഷിയും</span>
+      </button>
+    </div>
+
+    <!-- =========================================================================
+         TAB 1: ഇ-ലൈബ്രറി & ഉപകാരപ്രദമായ PDF ഗൈഡുകൾ
+         ========================================================================= -->
+    <div class="explore-tab-pane active" id="tab-library" role="tabpanel" aria-labelledby="tab-btn-library">
+
+      <!-- Section Head -->
+      <div class="utility-section-head" style="margin-bottom:20px;">
+        <span class="utility-section-icon">📑</span>
+        <div>
+          <h2 class="utility-section-title">പ്രവാസികൾക്ക് ഉപകാരപ്രദമായ ഔദ്യോഗിക ഗൈഡുകൾ</h2>
+          <p class="utility-section-desc">സൗദി തൊഴിൽ നിയമം, ദല്ല ഡ്രൈവിംഗ് ലൈസൻസ് ടെസ്റ്റ് ചോദ്യങ്ങൾ, സ്പോക്കൺ അറബിക് &amp; നോർക്ക ഹാൻഡ്ബുക്ക്</p>
+        </div>
+      </div>
+
+      <!-- 4 Core Utility PDF Guide Cards -->
+      <div class="pdf-guide-grid">
+        <!-- PDF 1: Labor Law Summary -->
+        <div class="pdf-guide-card">
+          <div>
+            <span style="background:rgba(4,120,87,0.1); color:#047857; font-size:0.75rem; font-weight:800; padding:3px 10px; border-radius:6px;">തൊഴിൽ നിയമം</span>
+            <h3 class="pdf-guide-title" style="margin-top:8px;">സൗദി തൊഴിൽ നിയമ സംഗ്രഹം (Labor Law Summary)</h3>
+            <p class="pdf-guide-desc">
+              ആർട്ടിക്കിൾ 84 &amp; 85 പ്രകാരമുള്ള സർവീസ് ആനുകൂല്യം (Gratuity), പ്രൊബേഷൻ കാലയളവ് (90-180 ദിവസം), പ്രതിവാര പ്രവൃത്തി സമയം (48 മണിക്കൂർ), വാർഷിക അവധി (21-30 ദിവസം), ഒപ്പം പാസ്‌പോർട്ട് തൊഴിലാളിയുടെ കൈവശം സൂക്ഷിക്കാനുള്ള നിയമപരമായ അവകാശങ്ങൾ.
+            </p>
+          </div>
+          <div style="display:flex; gap:10px;">
+            <a href="/sahayi" class="pdf-guide-btn" style="flex:1;">
+              <span>🔢 ഗ്രാറ്റുവിറ്റി കാൽക്കുലേറ്റർ ↗</span>
+            </a>
+            <a href="https://hrsd.gov.sa/sites/default/files/2023-01/Saudi%20Labor%20Law.pdf" target="_blank" rel="noopener noreferrer" class="pdf-guide-btn" style="flex:1; background:#047857; color:#fff; border-color:#047857;">
+              <span>📄 ഔദ്യോഗിക PDF ↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- PDF 2: Dallah Driving License Test -->
+        <div class="pdf-guide-card" style="border-left-color:#d97706;">
+          <div>
+            <span style="background:rgba(217,119,6,0.1); color:#d97706; font-size:0.75rem; font-weight:800; padding:3px 10px; border-radius:6px;">ഡ്രൈവിംഗ് ലൈസൻസ്</span>
+            <h3 class="pdf-guide-title" style="margin-top:8px;">ദല്ല കമ്പ്യൂട്ടർ ടെസ്റ്റ് പ്രാക്ടീസ് (Dallah Exam)</h3>
+            <p class="pdf-guide-desc">
+              സൗദി ഡ്രൈവിംഗ് ലൈസൻസ് കമ്പ്യൂട്ടർ തിയറി പരീക്ഷയിൽ ചോദിക്കുന്ന പ്രധാന റോഡ് ട്രാഫിക് ചിഹ്നങ്ങൾ (നിർബന്ധിത സൈനുകൾ, മുന്നറിയിപ്പ് ചിഹ്നങ്ങൾ, ഇൻഫർമേറ്റീവ് ബോർഡുകൾ), റൗണ്ട് എബൗട്ട് നിയമങ്ങൾ, പിഴ തുകകൾ എന്നിവ മലയാളം വിശദീകരണത്തോടെ.
+            </p>
+          </div>
+          <a href="https://dallahauto.com/" target="_blank" rel="noopener noreferrer" class="pdf-guide-btn" style="background:#d97706; color:#fff; border-color:#d97706;">
+            <span>🚗 ദല്ല പരീക്ഷാ സഹായി &amp; സൈനുകൾ ↗</span>
+          </a>
+        </div>
+
+        <!-- PDF 3: Basic Spoken Arabic Guide -->
+        <div class="pdf-guide-card" style="border-left-color:#0284c7;">
+          <div>
+            <span style="background:rgba(2,132,199,0.1); color:#0284c7; font-size:0.75rem; font-weight:800; padding:3px 10px; border-radius:6px;">ഭാഷാ സഹായി</span>
+            <h3 class="pdf-guide-title" style="margin-top:8px;">നിത്യജീവിത സ്പോക്കൺ അറബിക് (Spoken Arabic)</h3>
+            <p class="pdf-guide-desc">
+              കടകളിൽ സാധനങ്ങൾ വാങ്ങുമ്പോൾ, ജോലിസ്ഥലത്ത് സ്പോൺസറുമായി സംസാരിക്കുമ്പോൾ, ടാക്സി വിളിക്കുമ്പോൾ, ആശുപത്രിയിൽ ഡോക്ടറോട് സംസാരിക്കുമ്പോൾ സാധാരണക്കാർക്ക് നിത്യേന ഉപകരിക്കുന്ന 50+ അവശ്യ അറബിക് വാക്യങ്ങളും മലയാളം ഉച്ചാരണവും.
+            </p>
+          </div>
+          <a href="/health#phrasebook-section" class="pdf-guide-btn" style="background:#0284c7; color:#fff; border-color:#0284c7;">
+            <span>🗣️ അറബിക് ഭാഷാ സഹായി തുറക്കുക ↗</span>
+          </a>
+        </div>
+
+        <!-- PDF 4: NORKA Welfare Handbook -->
+        <div class="pdf-guide-card" style="border-left-color:#7c3aed;">
+          <div>
+            <span style="background:rgba(124,58,237,0.1); color:#7c3aed; font-size:0.75rem; font-weight:800; padding:3px 10px; border-radius:6px;">നോർക്ക &amp; ക്ഷേമം</span>
+            <h3 class="pdf-guide-title" style="margin-top:8px;">പ്രവാസി ക്ഷേമനിധി &amp; നോർക്ക ഹാൻഡ്ബുക്ക്</h3>
+            <p class="pdf-guide-desc">
+              കേരള സർക്കാർ പ്രവാസികൾക്കായി നടപ്പിലാക്കുന്ന പ്രവാസി പെൻഷൻ പദ്ധതി, ഇൻഷുറൻസ് കാർഡ്, സാന്ത്വന ധനസഹായം, പ്രവാസികൾ നാട്ടിൽ തിരിച്ചെത്തുമ്പോൾ തുടങ്ങാവുന്ന സ്വയംതൊഴിൽ വായ്പാ പദ്ധതികൾ (NDPREM) എന്നിവയുടെ സമ്പൂർണ്ണ ഗൈഡ്.
+            </p>
+          </div>
+          <a href="/norka" class="pdf-guide-btn" style="background:#7c3aed; color:#fff; border-color:#7c3aed;">
+            <span>🏛️ നോർക്ക സമ്പൂർണ്ണ വിവരങ്ങൾ ↗</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Digital Library Section (Powered by window.LIBRARY_DATA) -->
+      <div style="border-top:1px solid var(--border); padding-top:34px; margin-top:20px;">
+        <div class="utility-section-head">
+          <span class="utility-section-icon">📚</span>
+          <div>
+            <h2 class="utility-section-title">മലയാളം ഡിജിറ്റൽ വായനശാല (Malayalam E-Library)</h2>
+            <p class="utility-section-desc">ക്ലാസിക് നോവലുകൾ, പ്രവാസി കഥകൾ, കവിതകൾ &amp; ചരിത്ര പുസ്തകങ്ങൾ മൊബൈലിൽ നേരിട്ട് വായിക്കാം</p>
+          </div>
+        </div>
+
+        <!-- Search & Filter Controls -->
+        <div style="display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between; margin-bottom:20px;">
+          <input type="text" id="library-search" placeholder="🔍 പുസ്തകത്തിന്റെ പേരോ എഴുത്തുകാരനെയോ തിരയുക..." style="flex:1; min-width:240px; padding:12px 18px; border-radius:999px; border:1px solid var(--border); background:var(--surface); color:var(--text); font-size:0.9rem; outline:none;">
+          <div style="display:flex; gap:8px; overflow-x:auto; padding:4px 0;">
+            <button type="button" class="sub-nav-pill active library-cat-btn" data-cat="all">എല്ലാം</button>
+            <button type="button" class="sub-nav-pill library-cat-btn" data-cat="novels">നോവലുകൾ</button>
+            <button type="button" class="sub-nav-pill library-cat-btn" data-cat="stories">ചെറുകഥകൾ</button>
+            <button type="button" class="sub-nav-pill library-cat-btn" data-cat="poetry">കവിതകൾ</button>
+            <button type="button" class="sub-nav-pill library-cat-btn" data-cat="history">ചരിത്രം</button>
+          </div>
+        </div>
+
+        <!-- Books Dynamic Grid -->
+        <div id="library-books-grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(290px, 1fr)); gap:18px;">
+          <!-- Populated dynamically via js/explore.js -->
+        </div>
+      </div>
+
+    </div>
+
+    <!-- =========================================================================
+         TAB 2: ടൂറിസം & ഹിഡൻ സ്പോട്ട് (25 Curated Spots)
+         ========================================================================= -->
+    <div class="explore-tab-pane" id="tab-tourism" role="tabpanel" aria-labelledby="tab-btn-tourism">
+
+      <div class="utility-section-head" style="margin-bottom:20px;">
+        <span class="utility-section-icon">🧭</span>
+        <div>
+          <h2 class="utility-section-title">സൗദിയിലെ 25 വിസ്മയ ടൂറിസം &amp; ഹിഡൻ സ്പോട്ടുകൾ</h2>
+          <p class="utility-section-desc">പ്രവാസികൾക്ക് വാരാന്ത്യ അവധി ദിവസങ്ങളിൽ കുടുംബത്തോടൊപ്പമോ ബാച്ചിലർ സുഹൃത്തുക്കളോടൊപ്പമോ പോയി വരാവുന്ന പ്രകൃതി രമണീയമായ സ്ഥലങ്ങൾ</p>
+        </div>
+      </div>
+
+      <!-- Region Filter Pills -->
+      <div style="display:flex; gap:8px; overflow-x:auto; padding:4px 0 18px; margin-bottom:12px;">
+        <button type="button" class="sub-nav-pill active tourism-reg-btn" data-reg="all">എല്ലാ സ്പോട്ടുകളും (25)</button>
+        <button type="button" class="sub-nav-pill tourism-reg-btn" data-reg="riyadh">🏛️ റിയാദ്</button>
+        <button type="button" class="sub-nav-pill tourism-reg-btn" data-reg="west">🌊 ജിദ്ദ &amp; പടിഞ്ഞാറ്</button>
+        <button type="button" class="sub-nav-pill tourism-reg-btn" data-reg="south">⛰️ താഇഫ്, അബഹ &amp; തെക്ക്</button>
+        <button type="button" class="sub-nav-pill tourism-reg-btn" data-reg="east">🏖️ കിഴക്കൻ പ്രവിശ്യ</button>
+      </div>
+
+      <!-- Tourism Spots Dynamic Grid -->
+      <div id="tourism-spots-grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:22px;">
+        <!-- Populated dynamically via js/explore.js from window.SAUDI_TOURISM_DATA -->
+      </div>
+
+    </div>
+
+    <!-- =========================================================================
+         TAB 3: പൈതൃകവും കൃഷിയും (Heritage & Agriculture)
+         ========================================================================= -->
+    <div class="explore-tab-pane" id="tab-heritage" role="tabpanel" aria-labelledby="tab-btn-heritage">
+
+      <!-- Sub-section A: Saudi Historic Heritage Sites -->
+      <div class="utility-section-head" style="margin-bottom:20px;">
+        <span class="utility-section-icon">🏛️</span>
+        <div>
+          <h2 class="utility-section-title">സൗദി അറേബ്യയുടെ യുനെസ്കോ പൈതൃക കേന്ദ്രങ്ങൾ</h2>
+          <p class="utility-section-desc">ആയിരക്കണക്കിന് വർഷങ്ങളുടെ ചരിത്രം ഉറങ്ങുന്ന പുരാതന നഗരങ്ങളും കോട്ടകളും പൈതൃക സ്മാരകങ്ങളും</p>
+        </div>
+      </div>
+
+      <div class="agri-card-grid">
+        <div class="agri-card">
+          <div class="agri-card-header">
+            <span class="agri-card-icon">🏰</span>
+            <h3 class="agri-card-title">ഹിസ്റ്റോറിക് ജിദ്ദ (അൽ-ബലദ്)</h3>
+          </div>
+          <p class="agri-card-body">
+            യുനെസ്കോയുടെ ലോക പൈതൃക പട്ടികയിലുള്ള ജിദ്ദയിലെ ചരിത്ര നഗരം. നൂറ്റാണ്ടുകൾ പഴക്കമുള്ള റോഷൻ തടി ജനലുകളും പവിഴപ്പുറ്റ് ശിലകൾ കൊണ്ട് പണിത ബഹുനില മൺഭവനങ്ങളും ഇവിടുത്തെ പ്രധാന ആകർഷണമാണ്. മക്കയിലേക്കുള്ള പുരാതന തീർത്ഥാടക തുറമുഖമായിരുന്നു അൽ-ബലദ്.
+          </p>
+        </div>
+
+        <div class="agri-card">
+          <div class="agri-card-header">
+            <span class="agri-card-icon">👑</span>
+            <h3 class="agri-card-title">ദിരിയ്യ &amp; അത്-തുറൈഫ് (റിയാദ്)</h3>
+          </div>
+          <p class="agri-card-body">
+            സൗദി രാജകുടുംബത്തിന്റെ പ്രഥമ ആസ്ഥാനവും ആദ്യ സൗദി ഭരണകൂടത്തിന്റെ തലസ്ഥാനവും. നജ്ദി വാസ്തുവിദ്യയിൽ മണ്ണ് കൊണ്ട് നിർമ്മിച്ച അതിമനോഹരമായ കൊട്ടാരങ്ങളും പള്ളികളും മ്യൂസിയങ്ങളും പുനരുദ്ധരിച്ച് ഇന്ന് ലോകോത്തര പൈതൃക കേന്ദ്രമാക്കി മാറ്റിയിരിക്കുന്നു.
+          </p>
+        </div>
+
+        <div class="agri-card">
+          <div class="agri-card-header">
+            <span class="agri-card-icon">🗿</span>
+            <h3 class="agri-card-title">ഹെഗ്ര / മദായിൻ സാലിഹ് (അൽ-ഉല)</h3>
+          </div>
+          <p class="agri-card-body">
+            സൗദി അറേബ്യയിൽ യുനെസ്കോ ആദ്യമായി അംഗീകരിച്ച ലോക പൈതൃക കേന്ദ്രം. ബി.സി ഒന്നാം നൂറ്റാണ്ടിൽ നബതിയൻ സംസ്കാരം കൂറ്റൻ മണൽക്കല്ലുകളിൽ കൊത്തിവെച്ച നൂറിലധികം അതിശയകരമായ ശവകുടീരങ്ങളും കൊത്തുപണികളും ഇവിടെ സ്ഥിതി ചെയ്യുന്നു.
+          </p>
+        </div>
+      </div>
+
+      <!-- Sub-section B: Saudi Agricultural Wonders -->
+      <div style="border-top:1px solid var(--border); padding-top:34px; margin-top:30px;">
+        <div class="utility-section-head" style="margin-bottom:20px;">
+          <span class="utility-section-icon">🌴</span>
+          <div>
+            <h2 class="utility-section-title">സൗദി അറേബ്യൻ കൃഷി വിസ്മയം</h2>
+            <p class="utility-section-desc">മരുഭൂമിയെ ഹരിതാഭമാക്കുന്ന ഈന്തപ്പഴ തോട്ടങ്ങളും റോസ് വാട്ടർ കൃഷിയും ആധുനിക സർക്കിൾ ഇറിഗേഷനും</p>
+          </div>
+        </div>
+
+        <div class="agri-card-grid">
+          <div class="agri-card" style="border-left:4px solid #047857;">
+            <div class="agri-card-header">
+              <span class="agri-card-icon">🌴</span>
+              <h3 class="agri-card-title">അൽ-അഹ്സ &amp; ഖസീം ഈന്തപ്പഴ തോട്ടങ്ങൾ</h3>
+            </div>
+            <p class="agri-card-body">
+              ലോകത്തിലെ ഏറ്റവും വലിയ ഈന്തപ്പന തോട്ടമുള്ള മരുപ്പച്ചയാണ് അൽ-അഹ്സ (30 ലക്ഷത്തിലധികം ഈന്തപ്പനകൾ). ഖസീം ഈന്തപ്പഴ മാർക്കറ്റ് ലോകത്തിലെ ഏറ്റവും വലിയ ഡേറ്റ്സ് ഫെസ്റ്റിവലാണ്. <strong>സുഖരി, ഖലാസ്, അജ്വ, സഗായ്, മജ്ദൂൽ</strong> തുടങ്ങിയ പ്രീമിയം ഇനങ്ങൾ ഇവിടെ ഉൽപ്പാദിപ്പിക്കുന്നു.
+            </p>
+          </div>
+
+          <div class="agri-card" style="border-left:4px solid #d97706;">
+            <div class="agri-card-header">
+              <span class="agri-card-icon">🌹</span>
+              <h3 class="agri-card-title">താഇഫിലെ റോസ് വാട്ടർ കൃഷി</h3>
+            </div>
+            <p class="agri-card-body">
+              താഇഫിലെ തണുത്ത മലനിരകളിൽ വിരിയുന്ന ദമാസ്ക് റോസാപ്പൂക്കളിൽ നിന്ന് പരമ്പരാഗത രീതിയിൽ വാറ്റിയെടുക്കുന്ന സൗദി റോസ് വാട്ടറും അത്തറും ലോകപ്രശസ്തമാണ്. വിശുദ്ധ കഅ്ബ കഴുകാൻ ഉപയോഗിക്കുന്നത് താഇഫിലെ ഈ സുഗന്ധ റോസ് വാട്ടറാണ്.
+            </p>
+          </div>
+
+          <div class="agri-card" style="border-left:4px solid #0284c7;">
+            <div class="agri-card-header">
+              <span class="agri-card-icon">🌾</span>
+              <h3 class="agri-card-title">വാദി ദവാസിറിലെ സർക്കിൾ ഇറിഗേഷൻ</h3>
+            </div>
+            <p class="agri-card-body">
+              വിമാനത്തിൽ നിന്ന് നോക്കുമ്പോൾ മരുഭൂമിയിൽ പച്ച നിറത്തിലുള്ള വട്ടങ്ങളായി കാണപ്പെടുന്ന പിവറ്റ് ഇറിഗേഷൻ ഫാമിംഗ്. ഭൂഗർഭ ജലം ഉപയോഗിച്ച് ഗോതമ്പ്, കാലിത്തീറ്റ, തണ്ണിമത്തൻ എന്നിവ വലിയ തോതിൽ മരുഭൂമിയിൽ കൃഷി ചെയ്യുന്നു.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sub-section C: Kerala Returnee Farming Guide -->
+      <div style="border-top:1px solid var(--border); padding-top:34px; margin-top:30px;">
+        <div class="utility-section-head" style="margin-bottom:20px;">
+          <span class="utility-section-icon">🌱</span>
+          <div>
+            <h2 class="utility-section-title">നാട്ടിൽ തിരിച്ചെത്തുന്ന പ്രവാസികൾക്കുള്ള കൃഷി സഹായി</h2>
+            <p class="utility-section-desc">പ്രവാസ ജീവിതത്തിന് ശേഷം നാട്ടിൽ വരുമാനവും മാനസിക സന്തോഷവും നൽകുന്ന മട്ടുപ്പാവ് കൃഷിയും ആധുനിക കൃഷി രീതികളും</p>
+          </div>
+        </div>
+
+        <div class="agri-card-grid">
+          <div class="agri-card">
+            <div class="agri-card-header">
+              <span class="agri-card-icon">🪴</span>
+              <h3 class="agri-card-title">മട്ടുപ്പാവ് പച്ചക്കറി കൃഷി (Terrace Farming)</h3>
+            </div>
+            <p class="agri-card-body">
+              വീടിന്റെ ടെറസ്സിൽ ഗ്രോബാഗുകളിൽ ചകിരിച്ചോറും ചാണകപ്പൊടിയും കലർത്തി വിഷരഹിത പച്ചക്കറികൾ ഉൽപ്പാദിപ്പിക്കാം. <strong>തക്കാളി, വെണ്ട, പച്ചമുളക്, വഴുതന, പയർ</strong> എന്നിവ എളുപ്പത്തിൽ കൃഷി ചെയ്യാം. ഓട്ടോമാറ്റിക് തുള്ളിനന (Drip Irrigation) വഴി വെള്ളവും സമയവും ലാഭിക്കാം.
+            </p>
+          </div>
+
+          <div class="agri-card">
+            <div class="agri-card-header">
+              <span class="agri-card-icon">🏡</span>
+              <h3 class="agri-card-title">പോളിഹൗസ് &amp; ഹൈഡ്രോപോണിക്സ്</h3>
+            </div>
+            <p class="agri-card-body">
+              കുറഞ്ഞ സ്ഥലത്ത് വർഷം മുഴുവൻ ഉയർന്ന ഗുണമേന്മയുള്ള പച്ചക്കറികൾ ഉൽപ്പാദിപ്പിക്കാൻ പോളിഹൗസ് കൃഷി അനുയോജ്യമാണ്. മണ്ണില്ലാതെ വെള്ളത്തിൽ വളർത്തുന്ന ഹൈഡ്രോപോണിക്സ് സാലഡ് വെള്ളരി, ചീര എന്നിവ കൃഷി ചെയ്യാൻ പ്രവാസി സംരംഭകർക്ക് മികച്ച അവസരമൊരുക്കുന്നു.
+            </p>
+          </div>
+
+          <div class="agri-card">
+            <div class="agri-card-header">
+              <span class="agri-card-icon">💰</span>
+              <h3 class="agri-card-title">കൃഷിഭവൻ സബ്‌സിഡികളും ലോണുകളും</h3>
+            </div>
+            <p class="agri-card-body">
+              ഓരോ പഞ്ചായത്തിലെയും കൃഷിഭവൻ വഴി വിത്തുകൾ, ഗ്രോബാഗുകൾ, തുള്ളിനന ഉപകരണങ്ങൾ എന്നിവയ്ക്ക് 50% മുതൽ 75% വരെ സർക്കാർ സബ്‌സിഡി ലഭ്യമാണ്. കൂടാതെ നോർക്ക-കനറ ബാങ്ക് സ്വയംതൊഴിൽ വായ്പാ പദ്ധതി (NDPREM) വഴി കാർഷിക സംരംഭങ്ങൾക്ക് സബ്‌സിഡിയോടെയുള്ള ലോണുകൾ ലഭിക്കും.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Sticky Bottom Navigation Bar (Mobile-Only) -->
+  <nav class="mobile-bottom-nav" aria-label="Mobile Navigation">
+    <a href="/" class="bottom-nav-item">
+      <span class="bottom-nav-icon">🏠</span>
+      <span class="bottom-nav-label">ഹോം</span>
+    </a>
+    <a href="/sahayi" class="bottom-nav-item">
+      <span class="bottom-nav-icon">🆘</span>
+      <span class="bottom-nav-label">സഹായി</span>
+    </a>
+    <a href="/health" class="bottom-nav-item">
+      <span class="bottom-nav-icon">🏥</span>
+      <span class="bottom-nav-label">ആരോഗ്യം</span>
+    </a>
+    <a href="/saudi" class="bottom-nav-item">
+      <span class="bottom-nav-icon">🕋</span>
+      <span class="bottom-nav-label">സൗദി</span>
+    </a>
+  </nav>
+
+  <!-- Footer -->
+  <footer style="background:#031f18; color:#cbd5e1; padding:32px 0 90px; border-top:1px solid rgba(212,175,55,0.2); text-align:center;">
+    <div class="container">
+      <p style="margin:0 0 8px; font-weight:700; color:#ffffff;">KSA Malayali Hub · സൗദി മലയാളി ഹബ്</p>
+      <p style="margin:0 0 16px; font-size:0.84rem; color:#94a3b8;">Crafted with pride for the Malayali Diaspora across Saudi Arabia · By D&amp;J (+44 7460 646263)</p>
+      <div style="display:flex; justify-content:center; gap:16px; font-size:0.84rem;">
+        <a href="/" style="color:#fde047;">ഹോം</a>
+        <a href="/travel" style="color:#fde047;">യാത്ര</a>
+        <a href="/norka" style="color:#fde047;">നോർക്ക</a>
+        <a href="/explore" style="color:#fde047;">എക്സ്പ്ലോർ</a>
+        <a href="/about" style="color:#fde047;">ഡിസ്ക്ലെയിമർ</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./js/library_data.js"></script>
+  <script src="./js/tourism_data.js"></script>
+  <script src="./js/explore.js"></script>
+  <script src="./js/pwa.js" defer></script>
+  <script>
+    const themeBtn = document.getElementById('theme-toggle');
+    if (themeBtn) {
+      themeBtn.addEventListener('click', () => {
+        const cur = document.documentElement.getAttribute('data-theme') || 'light';
+        const next = cur === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('jkf_theme', next);
+      });
+      const savedTheme = localStorage.getItem('jkf_theme');
+      if (savedTheme) document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+  </script>
+</body>
+</html>
