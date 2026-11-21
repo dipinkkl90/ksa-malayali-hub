@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="./css/styles.css?v=20261120_v8">
+  <link rel="stylesheet" href="./css/styles.css?v=20261121_v17">
 </head>
 <body>
   <!-- Sticky Top Navigation -->
@@ -43,6 +43,26 @@
           </span>
         </div>
       </a>
+
+      <!-- Desktop Navigation Links -->
+      <div class="topbar-nav-links">
+        <a href="/" class="topbar-nav-link active">
+          <span class="nav-icon">🏠</span>
+          <span>ഹോം</span>
+        </a>
+        <a href="/sahayi" class="topbar-nav-link">
+          <span class="nav-icon">🆘</span>
+          <span>സഹായി</span>
+        </a>
+        <a href="/health" class="topbar-nav-link">
+          <span class="nav-icon">🏥</span>
+          <span>ആരോഗ്യം</span>
+        </a>
+        <a href="/saudi" class="topbar-nav-link">
+          <span class="nav-icon">🕋</span>
+          <span>സൗദി</span>
+        </a>
+      </div>
 
       <div class="topbar-actions">
         <div class="topbar-live-visits" title="Real-time Pravasi Directory Visits">
@@ -228,9 +248,6 @@
             </div>
           </div>
           <div class="stat-label" data-i18n="statVisits">Pravasi Community Visits</div>
-          <div id="admin-visits-pill" class="admin-visits-insight" style="display:none;">
-            <span>🔒 Admin: Real Sessions: <strong id="admin-hero-real-visits">1</strong> (<span id="admin-hero-real-views">1</span> Hits) · Public Baseline: 1.3K+</span>
-          </div>
         </div>
       </div>
     </div>
@@ -1308,10 +1325,9 @@
         <p class="footer-disclaimer" data-i18n="footerDisclaimer">
           Curated lifestyle &amp; community hub for Malayalis across 11 Saudi cities — Jeddah, Makkah, Madinah, Taif, Riyadh, Dammam, Buraidah, Tabuk, Al Jouf, Al Baha &amp; Khamis Mushait. Powered by D&amp;J.
         </p>
-        <button type="button" id="open-admin-login" class="footer-admin-btn" title="D&amp;J Administrator Access">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-          <span data-i18n="adminPortalLink">Admin Portal</span>
-        </button>
+        <a href="/about" class="footer-about-link">
+          <span>ℹ️ കുറിച്ച് &amp; ഡിസ്ക്ലെയിമർ (About &amp; Disclaimer)</span>
+        </a>
       </div>
     </div>
   </footer>
@@ -1663,5 +1679,44 @@
     </div>
   </div>
 
+  <!-- Mobile Sticky Bottom Navigation Bar -->
+  <nav class="mobile-bottom-nav" aria-label="Mobile Navigation">
+    <a href="/" class="bottom-nav-item active">
+      <span class="bottom-nav-icon">🏠</span>
+      <span class="bottom-nav-label">ഹോം</span>
+    </a>
+    <a href="/sahayi" class="bottom-nav-item">
+      <span class="bottom-nav-icon">🆘</span>
+      <span class="bottom-nav-label">സഹായി</span>
+    </a>
+    <a href="/health" class="bottom-nav-item">
+      <span class="bottom-nav-icon">🏥</span>
+      <span class="bottom-nav-label">ആരോഗ്യം</span>
+    </a>
+    <a href="/saudi" class="bottom-nav-item">
+      <span class="bottom-nav-icon">🕋</span>
+      <span class="bottom-nav-label">സൗദി</span>
+    </a>
+  </nav>
+
+  <script>
+    (function() {
+      const path = window.location.pathname;
+      const isGitHub = window.location.hostname.includes("github.io");
+      const repoMatch = path.match(/^(\/[^\/]+)\//);
+      const prefix = isGitHub && repoMatch ? repoMatch[1] : "";
+      if (prefix) {
+        document.querySelectorAll("a[href^='/']").forEach(a => {
+          const href = a.getAttribute("href");
+          if (!href.startsWith(prefix) && href !== "#") {
+            let target = prefix + href;
+            if (href !== "/" && !target.endsWith(".html") && !target.endsWith("/")) target += ".html";
+            else if (href === "/") target = prefix + "/";
+            a.setAttribute("href", target);
+          }
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
