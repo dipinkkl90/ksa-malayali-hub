@@ -1,17 +1,62 @@
 {
-  "name": "KSA Malayali Hub — സൗദി മലയാളി ഹബ്",
-  "short_name": "KSA Malayali Hub",
-  "description": "The All-in-One Community Portal for Malayalis across 11 Saudi Arabian cities — Jeddah, Makkah, Madinah, Taif, Riyadh, Dammam, Buraidah, Tabuk, Al Jouf, Al Baha & Khamis Mushait. Curated Kerala Dining, Hypermarket Weekly Offers (LuLu, Nesto, Grand Hyper) & Mall Cinema Showtimes (VOX, Muvi). Powered by D&J (+44 7460 646263).",
-  "start_url": "./index.html",
+  "name": "KSA Malayali Hub - സൗദി മലയാളി ഹബ്",
+  "short_name": "Malayali Hub",
+  "description": "സൗദി അറേബ്യയിലെ 11 നഗരങ്ങളിലെ മലയാളികൾക്കായുള്ള സമഗ്ര കമ്മ്യൂണിറ്റി പോർട്ടൽ · നാടൻ ഭക്ഷണശാലകൾ, ഹൈപ്പർമാർക്കറ്റ് ഓഫറുകൾ, റിയാൽ റേറ്റ്, സിനിമകൾ, അടിയന്തിര ഹെൽപ്‌ലൈനുകൾ, ഇഖാമ-വിസ ഗൈഡുകൾ.",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "background_color": "#f7f5ef",
-  "theme_color": "#03271e",
+  "orientation": "portrait-primary",
+  "background_color": "#F8FAFC",
+  "theme_color": "#047857",
+  "lang": "ml",
+  "categories": ["lifestyle", "travel", "utilities", "food"],
   "icons": [
+    {
+      "src": "./assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
     {
       "src": "./assets/favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
-      "purpose": "any maskable"
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "പ്രവാസി സഹായി",
+      "short_name": "സഹായി",
+      "description": "അടിയന്തിര നമ്പറുകൾ & സർവീസ് ആനുകൂല്യ കാൽക്കുലേറ്റർ",
+      "url": "/sahayi",
+      "icons": [{ "src": "./assets/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "ആരോഗ്യം & ഭാഷ",
+      "short_name": "ആരോഗ്യം",
+      "description": "ഇൻഷുറൻസ് പരിശോധന & ക്ലിനിക്കുകൾ",
+      "url": "/health",
+      "icons": [{ "src": "./assets/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "സൗദി ഗൈഡ്",
+      "short_name": "സൗദി",
+      "description": "ഹോട്ടലുകൾ, ചരിത്രം & ടൂറിസം",
+      "url": "/saudi",
+      "icons": [{ "src": "./assets/icon-192.png", "sizes": "192x192" }]
     }
   ]
 }

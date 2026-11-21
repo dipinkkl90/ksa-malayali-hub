@@ -5,7 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>KSA Malayali Hub · സൗദി മലയാളി ഹബ് | By D&amp;J (+44 7460 646263)</title>
   <meta name="description" content="KSA Malayali Hub — The All-in-One Community Portal for Malayalis across 11 Saudi Cities. Curated Kerala Dining, Live Supermarket Weekly Offers (LuLu, Nesto, Grand Hyper) &amp; Mall Cinema Showtimes (VOX, Muvi). Powered by D&amp;J (+44 7460 646263).">
-  <meta name="theme-color" content="#03271e">
+
+  <!-- Progressive Web App (PWA) & iOS Support -->
+  <meta name="theme-color" content="#047857">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Malayali Hub">
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./assets/icon-192.png">
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="manifest" href="./manifest.webmanifest">
+  
 
   <!-- Open Graph / WhatsApp Preview -->
   <meta property="og:title" content="KSA Malayali Hub · സൗദി മലയാളി ഹബ് | റിയാൽ റേറ്റ് · സ്വർണ്ണം · ഹോട്ടലുകൾ · ഓഫറുകൾ · വിസ · സിനിമ | D&amp;J">
@@ -15,8 +26,8 @@
   <meta property="og:image" content="https://ksa-malayali-hub.vercel.app/assets/favicon.svg">
   <link rel="canonical" href="https://ksa-malayali-hub.vercel.app/">
 
-  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
-  <link rel="manifest" href="./manifest.webmanifest">
+  
+  
 
   <!-- Google Fonts: Playfair Display + Plus Jakarta Sans + Noto Sans Malayalam -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1651,5 +1662,7 @@
       }
     })();
   </script>
+  <!-- PWA Offline & Install Controller -->
+  <script src="./js/pwa.js" defer></script>
 </body>
 </html>
