@@ -1,7 +1,7 @@
-// KSA Malayali Hub — Progressive Web App Service Worker (v1.0)
+// KSA Malayali Hub — Progressive Web App Service Worker (v3.0)
 // High-performance Offline Cache & Dynamic Resilience
-const CACHE_VERSION = "ksa-malayali-hub-v2";
-const DYNAMIC_CACHE = "ksa-malayali-dynamic-v1";
+const CACHE_VERSION = "ksa-malayali-hub-v3";
+const DYNAMIC_CACHE = "ksa-malayali-dynamic-v2";
 
 const CORE_ASSETS = [
   "/",
@@ -122,23 +122,23 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // 2. Navigation Requests (HTML Pages)
+  // 2. Navigation Requests (HTML Pages): Network-First for real-time freshness, Cache fallback when offline
   if (req.mode === "navigate") {
     event.respondWith(
-      caches.match(req).then((cached) => {
-        // Return cached page immediately for speed, fetch update in background
-        const networkFetch = fetch(req)
-          .then((networkRes) => {
-            if (networkRes && networkRes.status === 200) {
-              const clone = networkRes.clone();
-              caches.open(CACHE_VERSION).then((cache) => cache.put(req, clone));
-            }
-            return networkRes;
-          })
-          .catch(() => cached || caches.match("/index.html"));
-
-        return cached || networkFetch;
-      })
+      fetch(req)
+        .then((networkRes) => {
+          if (networkRes && networkRes.status === 200) {
+            const clone = networkRes.clone();
+            caches.open(CACHE_VERSION).then((cache) => cache.put(req, clone));
+          }
+          return networkRes;
+        })
+        .catch(() => {
+          return caches.match(req).then((cached) => {
+            if (cached) return cached;
+            return caches.match("/index.html");
+          });
+        })
     );
     return;
   }

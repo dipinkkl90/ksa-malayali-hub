@@ -17,7 +17,10 @@
       const swPath = window.location.pathname.includes("/sahayi/") ||
                      window.location.pathname.includes("/health/") ||
                      window.location.pathname.includes("/saudi/") ||
-                     window.location.pathname.includes("/about/")
+                     window.location.pathname.includes("/about/") ||
+                     window.location.pathname.includes("/travel/") ||
+                     window.location.pathname.includes("/norka/") ||
+                     window.location.pathname.includes("/explore/")
                      ? "/sw.js"
                      : "./sw.js";
 
@@ -25,6 +28,7 @@
         .register(swPath)
         .then((reg) => {
           console.log("[PWA] Service Worker registered with scope:", reg.scope);
+          try { reg.update(); } catch (e) {}
 
           // Check for worker updates
           reg.addEventListener("updatefound", () => {
