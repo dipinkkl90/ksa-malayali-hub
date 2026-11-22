@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="./css/styles.css?v=20261121_v24">
+  <link rel="stylesheet" href="./css/styles.css?v=20261122_v27">
 </head>
 <body>
   <!-- Sticky Top Navigation -->
@@ -1374,10 +1374,10 @@
             <span class="features-trust-badge">✅ 100% VERIFIED WORKING FEATURES</span>
           </div>
           <h2 id="working-features-title" class="features-title">
-            സൗദി മലയാളി ഹബ്ബിൽ ലഭ്യമായ എല്ലാ സൗകര്യങ്ങളും
+            സൗദി മലയാളി ഹബ്ബിൽ ലഭ്യമായ എല്ലാ സൗകര്യങ്ങളും (All Features at a Glance)
           </h2>
           <p class="features-subtitle">
-            സൗദി പ്രവാസികളുടെ ദൈനംദിന ജീവിതത്തിനും ജോലിക്കും യാത്രയ്ക്കും അത്യാവശ്യമായ 22-ലധികം ഡിജിറ്റൽ സൗകര്യങ്ങൾ — പൂർണ്ണമായും സൗജന്യമായി.
+            സൗദി പ്രവാസികളുടെ ദൈനംദിന ജീവിതത്തിനും ജോലിക്കും യാത്രയ്ക്കും അത്യാവശ്യമായ 29+ സൗകര്യങ്ങൾ — 100% സൗജന്യമായി. താഴെയുള്ള ഏതൊരു സൗകര്യത്തിലും ക്ലിക്ക് ചെയ്താൽ നേരിട്ട് ആ പേജിലേക്ക് / ടൂളിലേക്ക് പോകാം.
           </p>
 
           <!-- Top Action Buttons -->
@@ -1391,184 +1391,403 @@
           </div>
         </div>
 
-        <!-- 22 Point-by-Point Verified Features Grid -->
-        <div class="features-grid-list">
+        <!-- 5 Structured Category Cards Grid with Direct Clickable Navigation -->
+        <div class="features-categories-grid">
 
-          <div class="feature-item-card">
-            <span class="feature-num-badge">1</span>
-            <div class="feature-item-content">
-              <h3>🍲 സൗദിയിലെ മലയാളി ഹോട്ടലുകൾ (11 നഗരങ്ങൾ)</h3>
-              <p>170+ മലയാളി റെസ്റ്റോറന്റുകൾ, തനത് വിഭവങ്ങൾ, ലൊക്കേഷൻ മാപ്പ്, വാട്സാപ്പ് & ഡയറക്ട് കോളിംഗ്.</p>
+          <!-- Category 1: ഭക്ഷണം, ഓഫറുകൾ & വിനോദം -->
+          <div class="feature-category-card">
+            <div class="category-card-header">
+              <div class="category-icon-title">
+                <span class="category-icon">🍽️</span>
+                <div>
+                  <h3 class="category-title-ml">ഭക്ഷണം, ഓഫറുകൾ & വിനോദം</h3>
+                  <div class="category-title-en">Food, Mall Offers & Entertainment</div>
+                </div>
+              </div>
+              <span class="category-count-pill">4 സൗകര്യങ്ങൾ</span>
+            </div>
+            <div class="category-links-list">
+              <a href="#cards-grid" class="feature-dir-link" onclick="document.getElementById('view-grid-btn').click();">
+                <div class="dir-link-left">
+                  <span class="dir-link-icon">🍲</span>
+                  <div class="dir-link-text">
+                    <strong>സൗദിയിലെ മലയാളി ഹോട്ടലുകൾ (11 നഗരങ്ങൾ)</strong>
+                    <span>174+ മലയാളി റെസ്റ്റോറന്റുകൾ, തനത് വിഭവങ്ങൾ, മാപ്പ് & ഫോൺ നമ്പറുകൾ</span>
+                  </div>
+                </div>
+                <span class="dir-link-arrow">↗</span>
+              </a>
+
+              <a href="#hypers-section" class="feature-dir-link" onclick="document.getElementById('view-hypers-btn').click();">
+                <div class="dir-link-left">
+                  <span class="dir-link-icon">🛍️</span>
+                  <div class="dir-link-text">
+                    <strong>സൂപ്പർമാർക്കറ്റ് & മാൾ ഓഫറുകൾ</strong>
+                    <span>ലുലു, നെസ്റ്റോ, പാണ്ട, ഗ്രാൻഡ് ഹൈപ്പർ പ്രൊമോഷൻ ഫ്ലയറുകൾ</span>
+                  </div>
+                </div>
+                <span class="dir-link-arrow">↗</span>
+              </a>
+
+              <a href="#daily-section" class="feature-dir-link" onclick="document.getElementById('view-daily-btn').click();">
+                <div class="dir-link-left">
+                  <span class="dir-link-icon">💱</span>
+                  <div class="dir-link-text">
+                    <strong>ലൈവ് റിയാൽ & സ്വർണ്ണ നിരക്കുകൾ</strong>
+                    <span>തത്സമയ കറൻസി കാൽക്കുലേറ്റർ, 24K/22K സ്വർണ്ണ വില, 29 ബാങ്ക് IBAN ചെക്കർ</span>
+                  </div>
+                </div>
+                <span class="dir-link-arrow">↗</span>
+              </a>
+
+              <a href="#cinemas-section" class="feature-dir-link" onclick="document.getElementById('view-cinemas-btn').click();">
+                <div class="dir-link-left">
+                  <span class="dir-link-icon">🎬</span>
+                  <div class="dir-link-text">
+                    <strong>സിനിമകൾ (VOX & Muvi) & OTT റിലീസുകൾ</strong>
+                    <span>സൗദി തിയേറ്റർ ടൈമിംഗുകളും പുതിയ മലയാളം OTT റിലീസുകളും</span>
+                  </div>
+                </div>
+                <span class="dir-link-arrow">↗</span>
+              </a>
             </div>
           </div>
 
-          <div class="feature-item-card">
-            <span class="feature-num-badge">2</span>
-            <div class="feature-item-content">
-              <h3>🛍️ സൂപ്പർമാർക്കറ്റ് & മാൾ ഓഫറുകൾ</h3>
-              <p>ലുലു, നെസ്റ്റോ, പാണ്ട, ഗ്രാൻഡ് ഹൈപ്പർ വീക്ക്‌ലി പ്രൊമോഷൻ ഫ്ലയറുകൾ & ഓഫർ കാറ്റലോഗുകൾ.</p>
+          <!-- Category 2: പ്രവാസി സഹായി -->
+          <div class="feature-category-card">
+            <div class="category-card-header">
+              <div class="category-icon-title">
+                <span class="category-icon">🆘</span>
+                <div>
+                  <h3 class="category-title-ml">പ്രവാസി സഹായി & നിയമ സഹായം</h3>
+                  <div class="category-title-en">Pravasi Sahayi, EOSB & Legal Aid</div>
+                </div>
+              </div>
+              <span class="category-count-pill">6 സൗകര്യങ്ങൾ</span>
+            </div>
+            <div class="category-links-list">
+              <a href="/sahayi.html#emergency-section" class="feature-dir-link">
+                <div class="dir-link-left">
+                  <span class="dir-link-icon">🚨</span>
+                  <div class="dir-link-text">
+                    <strong>24/7 പ്രവാസി എമർജൻസി ഹെൽപ്പ്‌ലൈനുകൾ</strong>
+                    <span>911 ഏകീകൃത എമർജൻസി, പോലീസ് (999), ആംബുലൻസ് (997), എംബസി ഹെൽപ്പ്‌ലൈൻ</span>
+                  </div>
+                </div>
+                <span class="dir-link-arrow">↗</span>
+              </a>
+
+              <a href="/sahayi.html#eosb-calc-section" class="feature-dir-link">
+                <div class="dir-link-left">
+                  <span class="dir-link-icon">💰</span>
+                  <div class="dir-link-text">
+                    <strong>സൗദി സർവീസ് ആനുകൂല്യ (EOSB) കാൽക്കുലേറ്റർ</strong>
+                    <span>സൗദി ലേബർ ലോ ആർട്ടിക്കിൾ 84 & 85 പ്രകാരമുള്ള ഗ്രാറ്റുവിറ്റി കൃത്യമായി കണക്കാക്കാം</span>
+                  </div>
+                </div>
+                <span class="dir-link-arrow">↗</span>
+              </a>
+
+              <a href="/sahayi.html#status-check-section" class="feature-dir-link">
+                <div class="dir-link-left">
+                  <span class="dir-link-icon">📄</span>
+                  <div class="dir-link-text">
+                    <strong>ഇഖാമ, ഹുറൂബ്, ഖിവ & ഫൈൻ സ്റ്റാറ്റസ് ഗൈഡ്</strong>
+                    <span>അബ്ഷീർ, ഖിവ (Qiwa), MOCI ഔദ്യോഗിക പോർട്ടലുകൾ പരിശോധിക്കാനുള്ള നിർദ്ദേശങ്ങൾ</span>
+                  </div>
+                </div>
+                <span class="dir-link-arrow">↗</span>
+              </a>
+
+              <a href="/sahayi.html#legal-aid-section" class="feature-dir-link">
+                <div class="dir-link-left">
+                  <span class="dir-link-icon">⚖️</span>
+                  <div class="dir-link-text">
+                    <strong>പ്രവാസി ലീഗൽ എയ്ഡ് & കോടതി നടപടികൾ</strong>
+                    <span>ലേബർ കോർട്ട് പരാതികൾ, വേതന സംരക്ഷണം (WPS), വക്കാലത്ത് സുപ്രധാന ജാഗ്രതകൾ</span>
+                  </div>
+                </div>
+                <span class="dir-link-arrow">↗</span>
+              </a>
+
+              <a href="/norka.html" class="feature-dir-link">
+                <div class="dir-link-left">
+                  <span class="dir-link-icon">🏛️</span>
+                  <div class="dir-link-text">
+                    <strong>നോർക്ക റൂട്ട്സ് & പ്രവാസി ക്ഷേമനിധി ഗൈഡ്</strong>
+                    <span>നോർക്ക ഐഡി കാർഡ്, ക്ഷേമനിധി പെൻഷൻ, സാന്ത്വന സഹായം, ഇൻഷുറൻസ് വിവരങ്ങൾ</span>
+                  </div>
+                </div>
+                <span class="dir-link-arrow">↗</span>
+              </a>
+
+              <a href="/sahayi.html#scam-checker-section" class="feature-dir-link">
+                <div class="dir-link-left">
+                  <span class="dir-link-icon">🛡️</span>
+                  <div class="dir-link-text">
+                    <strong>സൗദി ഓൺലൈൻ തട്ടിപ്പ് ജാഗ്രത (Scam Checker)</strong>
+                    <span>വ്യാജ വിസ, ഫേക്ക് കോളിംഗ്, ഫിഷിംഗ് തട്ടിപ്പുകൾ മുൻകൂട്ടി തിരിച്ചറിയാനുള്ള ടൂൾ</span>
+                  </div>
+                </div>
+                <span class="dir-link-arrow">↗</span>
+              </a>
             </div>
           </div>
 
-          <div class="feature-item-card">
-            <span class="feature-num-badge">3</span>
-            <div class="feature-item-content">
-              <h3>💱 ലൈവ് റിയാൽ & സ്വർണ്ണ നിരക്കുകൾ</h3>
-              <p>തത്സമയ കറൻസി കാൽക്കുലേറ്റർ, 24K/22K സ്വർണ്ണ വില, 29 സൗദി ബാങ്കുകളുടെ ഐബാൻ (IBAN) ചെക്കർ.</p>
+          <!-- Category 3: ആരോഗ്യം, ഇൻഷുറൻസ് & സിം -->
+          <div class="feature-category-card">
+            <div class="category-card-header">
+              <div class="category-icon-title">
+                <span class="category-icon">🏥</span>
+                <div>
+                  <h3 class="category-title-ml">ആരോഗ്യം, ഇൻഷുറൻസ് & സിം</h3>
+                  <div class="category-title-en">Health, Insurance & Saudi SIM Codes</div>
+                </div>
+              </div>
+              <span class="category-count-pill">4 സൗകര്യങ്ങൾ</span>
+            </div>
+            <div class="category-links-list">
+              <a href="/health.html#insurance-section" class="feature-dir-link">
+                <div class="dir-link-left">
+                  <span class="dir-link-icon">🛡️</span>
+                  <div class="dir-link-text">
+                    <strong>CHI ഇൻഷുറൻസ് വാലിഡിറ്റി പരിശോധന</strong>
+                    <span>ഇഖാമ നമ്പർ വഴി ഹെൽത്ത് ഇൻഷുറൻസ് പരിശോധനയും NPHIES പ്രൊവൈഡർ നെറ്റ്‌വർക്കും</span>
+                  </div>
+                </div>
+                <span class="dir-link-arrow">↗</span>
+              </a>
+
+              <a href="/health.html#clinics-section" class="feature-dir-link">
+                <div class="dir-link-left">
+                  <span class="dir-link-icon">🏥</span>
+                  <div class="dir-link-text">
+                    <strong>11 നഗരങ്ങളിലെ മലയാളി പോളിക്ലിനിക്കുകൾ</strong>
+                    <span>മലയാളി ഡോക്ടർമാരും ജീവനക്കാരുമുള്ള 48+ ക്ലിനിക്കുകൾ, ഫോൺ & ഗൂഗിൾ മാപ്പ്</span>
+                  </div>
+                </div>
+                <span class="dir-link-arrow">↗</span>
+              </a>
+
+              <a href="/health.html#customs-section" class="feature-dir-link">
+                <div class="dir-link-left">
+                  <span class="dir-link-icon">✈️</span>
+                  <div class="dir-link-text">
+                    <strong>യാത്രാ മരുന്ന് നിരോധന ലിസ്റ്റ് (Banned Medicines)</strong>
+                    <span>കസകസ്, ട്രമഡോൾ, നാടൻ മരുന്നുകൾ എന്നിവയ്ക്കുള്ള എയർപോർട്ട് കസ്റ്റംസ് പരിശോധന</span>
+                  </div>
+                </div>
+                <span class="dir-link-arrow">↗</span>
+              </a>
+
+              <a href="/sahayi.html#sim-codes-section" class="feature-dir-link">
+                <div class="dir-link-left">
+                  <span class="dir-link-icon">📱</span>
+                  <div class="dir-link-text">
+                    <strong>സൗദി സിം കാർഡ് ബാലൻസ് & ഓഫർ കോഡുകൾ</strong>
+                    <span>STC, Mobily, Zain, Virgin, Friendi, Lebara ഡയൽ കോഡുകൾ</span>
+                  </div>
+                </div>
+                <span class="dir-link-arrow">↗</span>
+              </a>
             </div>
           </div>
 
-          <div class="feature-item-card">
-            <span class="feature-num-badge">4</span>
-            <div class="feature-item-content">
-              <h3>🎬 സിനിമകൾ & ഒടിടി റിലീസുകൾ</h3>
-              <p>വോക്സ് (VOX), മുവി (Muvi), എഎംസി (AMC) സിനിമാ ടൈമിംഗുകളും പുതിയ മലയാളം OTT റിലീസുകളും.</p>
+          <!-- Category 4: ഭാഷ & വിജ്ഞാനം -->
+          <div class="feature-category-card">
+            <div class="category-card-header">
+              <div class="category-icon-title">
+                <span class="category-icon">🗣️</span>
+                <div>
+                  <h3 class="category-title-ml">ഭാഷ & ഡിജിറ്റൽ വിജ്ഞാനം</h3>
+                  <div class="category-title-en">Voice Translator, Dictionary & E-Library</div>
+                </div>
+              </div>
+              <span class="category-count-pill">4 സൗകര്യങ്ങൾ</span>
+            </div>
+            <div class="category-links-list">
+              <a href="/health.html#voice-translator-section" class="feature-dir-link">
+                <div class="dir-link-left">
+                  <span class="dir-link-icon">🎙️</span>
+                  <div class="dir-link-text">
+                    <strong>3-ഭാഷാ വോയ്സ് ട്രാൻസ്ലേറ്റർ (Voice Translator)</strong>
+                    <span>മലയാളം ⇄ അറബിക്, ഇംഗ്ലീഷ്, ഹിന്ദി; മൈക്കിലൂടെ സംസാരിക്കാനും കേൾപ്പിക്കാനും</span>
+                  </div>
+                </div>
+                <span class="dir-link-arrow">↗</span>
+              </a>
+
+              <a href="/health.html#phrases-section" class="feature-dir-link">
+                <div class="dir-link-left">
+                  <span class="dir-link-icon">📖</span>
+                  <div class="dir-link-text">
+                    <strong>4-ഭാഷാ പ്രവാസി പോക്കറ്റ് ഡിക്ഷണറി</strong>
+                    <span>മലയാളം, അറബിക്, ഇംഗ്ലീഷ്, ഹിന്ദി വാക്കുകളും ശബ്ദ ഉച്ചാരണവും തിരയാവുന്ന നിഘണ്ടു</span>
+                  </div>
+                </div>
+                <span class="dir-link-arrow">↗</span>
+              </a>
+
+              <a href="/explore.html?tab=library" class="feature-dir-link">
+                <div class="dir-link-left">
+                  <span class="dir-link-icon">📚</span>
+                  <div class="dir-link-text">
+                    <strong>മലയാളം ഡിജിറ്റൽ ഇ-ലൈബ്രറി (E-Library)</strong>
+                    <span>ബഷീർ, എം.ടി ക്ലാസിക്കുകൾ, പ്രവാസി ഗൈഡുകൾ, സമ്പൂർണ്ണ PDF ഡൗൺലോഡ് & വായന</span>
+                  </div>
+                </div>
+                <span class="dir-link-arrow">↗</span>
+              </a>
+
+              <a href="javascript:void(0)" class="feature-dir-link" onclick="window.openSearchModal && window.openSearchModal()">
+                <div class="dir-link-left">
+                  <span class="dir-link-icon">🔍</span>
+                  <div class="dir-link-text">
+                    <strong>സൈറ്റ്-വൈഡ് തത്സമയ ലൈവ് സെർച്ച് (Instant Search)</strong>
+                    <span>1 അക്ഷരം ടൈപ്പ് ചെയ്യുമ്പോൾ തന്നെ ഹോട്ടലുകൾ, സർവീസുകൾ, ടൂളുകൾ കണ്ടെത്താം</span>
+                  </div>
+                </div>
+                <span class="dir-link-arrow">↗</span>
+              </a>
             </div>
           </div>
 
-          <div class="feature-item-card">
-            <span class="feature-num-badge">5</span>
-            <div class="feature-item-content">
-              <h3>🆘 24/7 പ്രവാസി എമർജൻസി ഹെൽപ്പ്‌ലൈനുകൾ</h3>
-              <p>911 ഏകീകൃത എമർജൻസി, പോലീസ് (999), ആംബുലൻസ് (997), ഇന്ത്യൻ എംബസി & കോൺസുലേറ്റ് നമ്പറുകൾ (1-ടാപ്പ് കോളിംഗ്).</p>
+          <!-- Category 5: യാത്ര & സൗദി ഗൈഡ് -->
+          <div class="feature-category-card" style="grid-column: 1 / -1;">
+            <div class="category-card-header">
+              <div class="category-icon-title">
+                <span class="category-icon">✈️</span>
+                <div>
+                  <h3 class="category-title-ml">യാത്ര & സൗദി സമഗ്ര ഗൈഡ്</h3>
+                  <div class="category-title-en">Travel, Haramain Train, Prayer Times, Vision 2030 & Tourism</div>
+                </div>
+              </div>
+              <span class="category-count-pill">11 സൗകര്യങ്ങൾ</span>
+            </div>
+            <div class="category-links-grid-2col">
+              <a href="/travel.html#flight-timings-section" class="feature-dir-link">
+                <div class="dir-link-left">
+                  <span class="dir-link-icon">🛫</span>
+                  <div class="dir-link-text">
+                    <strong>ലൈവ് ഫ്ലൈറ്റ് ടൈമിംഗ് & എയർപോർട്ട് സ്റ്റാറ്റസ്</strong>
+                    <span>ജിദ്ദ, റിയാദ്, ദമ്മാം, മദീന, കൊച്ചി ലൈവ് ഫ്ലൈറ്റ് അറൈവൽ/ഡിപ്പാർച്ചർ</span>
+                  </div>
+                </div>
+                <span class="dir-link-arrow">↗</span>
+              </a>
+
+              <a href="/saudi.html#haramain-train-section" class="feature-dir-link">
+                <div class="dir-link-left">
+                  <span class="dir-link-icon">🚄</span>
+                  <div class="dir-link-text">
+                    <strong>ഹറമൈൻ ഹൈ-സ്പീഡ് ട്രെയിൻ സമഗ്ര ഗൈഡ്</strong>
+                    <span>മക്ക, ജിദ്ദ എയർപോർട്ട്, മദീന ട്രെയിൻ ഷെഡ്യൂൾ, ലഗേജ് & ഔദ്യോഗിക ബുക്കിംഗ്</span>
+                  </div>
+                </div>
+                <span class="dir-link-arrow">↗</span>
+              </a>
+
+              <a href="/travel.html#saudi-buses-section" class="feature-dir-link">
+                <div class="dir-link-left">
+                  <span class="dir-link-icon">🚌</span>
+                  <div class="dir-link-text">
+                    <strong>സൗദി ബസ് സർവീസുകൾ (SAPTCO / Northwest / Darb)</strong>
+                    <span>ഇൻറർ-സിറ്റി എക്സ്പ്രസ്സ് ബസ് റൂട്ടുകൾ, ടിക്കറ്റ് നിരക്കുകൾ & ഓൺലൈൻ ബുക്കിംഗ്</span>
+                  </div>
+                </div>
+                <span class="dir-link-arrow">↗</span>
+              </a>
+
+              <a href="/travel.html#kerala-transit-section" class="feature-dir-link">
+                <div class="dir-link-left">
+                  <span class="dir-link-icon">🚂</span>
+                  <div class="dir-link-text">
+                    <strong>കേരള ട്രെയിൻ & KSRTC ബുക്കിംഗ് ഗൈഡ്</strong>
+                    <span>നാട്ടിലെത്തുമ്പോൾ ഉപയോഗിക്കാവുന്ന ട്രെയിൻ, കെ.എസ്.ആർ.ടി.സി സ്വിഫ്റ്റ് ബുക്കിംഗ്</span>
+                  </div>
+                </div>
+                <span class="dir-link-arrow">↗</span>
+              </a>
+
+              <a href="/saudi.html#prayer-times-section" class="feature-dir-link">
+                <div class="dir-link-left">
+                  <span class="dir-link-icon">🕌</span>
+                  <div class="dir-link-text">
+                    <strong>11 നഗരങ്ങളിലെ ലൈവ് നമസ്കാര സമയം (Prayer Times)</strong>
+                    <span>കൃത്യമായ ദൈനംദിന നമസ്കാര സമയങ്ങൾ, അടുത്ത നമസ്കാര കൗണ്ട്ഡൗൺ & അദാൻ സമയം</span>
+                  </div>
+                </div>
+                <span class="dir-link-arrow">↗</span>
+              </a>
+
+              <a href="/saudi.html#calendar-converter-section" class="feature-dir-link">
+                <div class="dir-link-left">
+                  <span class="dir-link-icon">📅</span>
+                  <div class="dir-link-text">
+                    <strong>ഹിജ്‌രി - ഗ്രിഗോറിയൻ കലണ്ടർ & ഡേറ്റ് കൺവെർട്ടർ</strong>
+                    <span>ഉമ്മുൽ ഖുറാ കലണ്ടർ പ്രകാരം ഇംഗ്ലീഷ് തീയതി ഹിജ്‌രിയിലേക്ക് മാറ്റാനുള്ള ടൂൾ</span>
+                  </div>
+                </div>
+                <span class="dir-link-arrow">↗</span>
+              </a>
+
+              <a href="/saudi.html#umrah-section" class="feature-dir-link">
+                <div class="dir-link-left">
+                  <span class="dir-link-icon">🕋</span>
+                  <div class="dir-link-text">
+                    <strong>ഉംറ & സിയാറത്ത് സമഗ്ര ഗൈഡ് (Nusuk)</strong>
+                    <span>നുസുക് ആപ്പ് പെർമിറ്റ്, ഉംറ നിർവ്വഹണ ഘട്ടങ്ങൾ & മക്ക-മദീന സന്ദർശന സ്ഥലങ്ങൾ</span>
+                  </div>
+                </div>
+                <span class="dir-link-arrow">↗</span>
+              </a>
+
+              <a href="/saudi.html#vision-fifa-section" class="feature-dir-link">
+                <div class="dir-link-left">
+                  <span class="dir-link-icon">🚀</span>
+                  <div class="dir-link-text">
+                    <strong>സൗദി വിഷൻ 2030 മെഗാ പ്രോജക്ടുകൾ</strong>
+                    <span>നിയോം (The Line), ഖിദ്ദിയ, റെഡ് സീ, ദിരിയ, ന്യൂ മുറബ്ബ, റിയാദ് മെട്രോ</span>
+                  </div>
+                </div>
+                <span class="dir-link-arrow">↗</span>
+              </a>
+
+              <a href="/saudi.html#vision-fifa-section" class="feature-dir-link">
+                <div class="dir-link-left">
+                  <span class="dir-link-icon">⚽</span>
+                  <div class="dir-link-text">
+                    <strong>ഫിഫ വേൾഡ് കപ്പ് 2034 (15 സ്റ്റേഡിയങ്ങൾ)</strong>
+                    <span>റിയാദ്, ജിദ്ദ, ഖോബാർ, അബഹ, നിയോം സ്റ്റേഡിയങ്ങൾ, കപ്പാസിറ്റി & ഗൂഗിൾ മാപ്പ്സ്</span>
+                  </div>
+                </div>
+                <span class="dir-link-arrow">↗</span>
+              </a>
+
+              <a href="/explore.html?tab=tourism" class="feature-dir-link">
+                <div class="dir-link-left">
+                  <span class="dir-link-icon">🧭</span>
+                  <div class="dir-link-text">
+                    <strong>സഞ്ചാരം & ഹിഡൻ സ്പോട്ടുകൾ (25 കേന്ദ്രങ്ങൾ)</strong>
+                    <span>സൗദിയിലെ പ്രകൃതിദത്ത വിസ്മയങ്ങൾ, മലനിരകൾ, ബീച്ചുകൾ & മാപ്പ് റൂട്ടുകൾ</span>
+                  </div>
+                </div>
+                <span class="dir-link-arrow">↗</span>
+              </a>
+
+              <a href="/explore.html?tab=heritage" class="feature-dir-link">
+                <div class="dir-link-left">
+                  <span class="dir-link-icon">🌴</span>
+                  <div class="dir-link-text">
+                    <strong>സൗദി പൈതൃകം & കൃഷി (ഡേറ്റ് ഫാം & ഒട്ടകം)</strong>
+                    <span>ചരിത്രപരമായ പൈതൃക കേന്ദ്രങ്ങൾ, ഈന്തപ്പന തോട്ടങ്ങൾ, ഒട്ടക സംസ്കാരം & 13 പ്രവിശ്യകൾ</span>
+                  </div>
+                </div>
+                <span class="dir-link-arrow">↗</span>
+              </a>
             </div>
           </div>
 
-          <div class="feature-item-card">
-            <span class="feature-num-badge">6</span>
-            <div class="feature-item-content">
-              <h3>💰 സൗദി സർവീസ് ആനുകൂല്യ (EOSB) കാൽക്കുലേറ്റർ</h3>
-              <p>സൗദി ലേബർ ലോ ആർട്ടിക്കിൾ 84 & 85 പ്രകാരമുള്ള ഗ്രാറ്റുവിറ്റി തുക മലയാളത്തിൽ തത്സമയം കണക്കാക്കാം.</p>
-            </div>
-          </div>
-
-          <div class="feature-item-card">
-            <span class="feature-num-badge">7</span>
-            <div class="feature-item-content">
-              <h3>📄 ഇഖാമ & ഹുറൂബ് സ്റ്റാറ്റസ് ചെക്കർ</h3>
-              <p>അബ്ഷീർ, ഖിവ (Qiwa), MOCI ഔദ്യോഗിക പോർട്ടലുകൾ പരിശോധിക്കാനുള്ള ഗൈഡും ഡയറക്ട് ലിങ്കുകളും.</p>
-            </div>
-          </div>
-
-          <div class="feature-item-card">
-            <span class="feature-num-badge">8</span>
-            <div class="feature-item-content">
-              <h3>⚖️ പ്രവാസി ലീഗൽ എയ്ഡ് & കോടതി നടപടികൾ</h3>
-              <p>സൗദി തൊഴിൽ കോടതി (Labor Court), ശമ്പള സംരക്ഷണം (WPS), പവർ ഓഫ് അറ്റോർണി സുപ്രധാന ജാഗ്രതകൾ.</p>
-            </div>
-          </div>
-
-          <div class="feature-item-card">
-            <span class="feature-num-badge">9</span>
-            <div class="feature-item-content">
-              <h3>🏛️ നോർക്ക റൂട്ട്സ് & പ്രവാസി ക്ഷേമനിധി ഗൈഡ്</h3>
-              <p>പ്രവാസി ഐഡി കാർഡ്, ക്ഷേമനിധി പെൻഷൻ, സാന്ത്വന ധനസഹായം, പ്രവാസി ഇൻഷുറൻസ് വിവരങ്ങൾ.</p>
-            </div>
-          </div>
-
-          <div class="feature-item-card">
-            <span class="feature-num-badge">10</span>
-            <div class="feature-item-content">
-              <h3>🛡️ സൗദി ഓൺലൈൻ തട്ടിപ്പ് ജാഗ്രത (Scam Checker)</h3>
-              <p>വ്യാജ വിസ, ഫേക്ക് കോളിംഗ്, ക്രിപ്റ്റോ തട്ടിപ്പുകൾ മുൻകൂട്ടി തിരിച്ചറിയാനുള്ള ടൂൾ.</p>
-            </div>
-          </div>
-
-          <div class="feature-item-card">
-            <span class="feature-num-badge">11</span>
-            <div class="feature-item-content">
-              <h3>🏥 CHI ഇൻഷുറൻസ് & 11-നഗര പോളിക്ലിനിക്കുകൾ</h3>
-              <p>ഇഖാമ നമ്പർ വഴി ഹെൽത്ത് ഇൻഷുറൻസ് പരിശോധന, 48+ മലയാളി-സൗഹൃദ ക്ലിനിക്കുകളുടെ വിവരങ്ങൾ.</p>
-            </div>
-          </div>
-
-          <div class="feature-item-card">
-            <span class="feature-num-badge">12</span>
-            <div class="feature-item-content">
-              <h3>✈️ യാത്രാ മരുന്ന് നിരോധന ലിസ്റ്റ്</h3>
-              <p>കസകസ്, ട്രമഡോൾ, വ്യാജ നാടൻ മരുന്നുകൾ എന്നിവയ്ക്കുള്ള സൗദി കസ്റ്റംസ് പരിശോധനാ മാനദണ്ഡങ്ങൾ.</p>
-            </div>
-          </div>
-
-          <div class="feature-item-card">
-            <span class="feature-num-badge">13</span>
-            <div class="feature-item-content">
-              <h3>📱 സൗദി സിം കാർഡ് ബാലൻസ് & ഓഫർ കോഡുകൾ</h3>
-              <p>STC, Mobily, Zain, Virgin, Salam, Red Bull ബാലൻസ് പരിശോധനാ നമ്പറുകൾ.</p>
-            </div>
-          </div>
-
-          <div class="feature-item-card">
-            <span class="feature-num-badge">14</span>
-            <div class="feature-item-content">
-              <h3>🎙️ 3-ഭാഷാ തൊഴിലാളി വോയ്സ് ട്രാൻസ്ലേറ്റർ</h3>
-              <p>മലയാളം ⇄ അറബിക്, മലയാളം ⇄ ഇംഗ്ലീഷ്, മലയാളം ⇄ ഹിന്ദി; സംസാരിക്കാനും കേൾപ്പിക്കാനും മൈക്കും സ്പീക്കറും.</p>
-            </div>
-          </div>
-
-          <div class="feature-item-card">
-            <span class="feature-num-badge">15</span>
-            <div class="feature-item-content">
-              <h3>📖 4-ഭാഷാ പ്രവാസി ഡിക്ഷണറി</h3>
-              <p>മലയാളം, അറബിക്, ഇംഗ്ലീഷ്, ഹിന്ദി വാക്കുകളും ഉച്ചാരണവും തിരയാവുന്ന പോക്കറ്റ് നിഘണ്ടു.</p>
-            </div>
-          </div>
-
-          <div class="feature-item-card">
-            <span class="feature-num-badge">16</span>
-            <div class="feature-item-content">
-              <h3>🛫 ലൈവ് ഫ്ലൈറ്റ് സ്റ്റാറ്റസ് & യാത്രാ ബുക്കിംഗ്</h3>
-              <p>ജിദ്ദ, റിയാദ്, ദമ്മാം, കൊച്ചി ഫ്ലൈറ്റുകൾ, ഹറമൈൻ ട്രെയിൻ ഗൈഡ്, SAPTCO ബസ്, KSRTC സ്വിഫ്റ്റ്, IRCTC ട്രെയിൻ ബുക്കിംഗ്.</p>
-            </div>
-          </div>
-
-          <div class="feature-item-card">
-            <span class="feature-num-badge">17</span>
-            <div class="feature-item-content">
-              <h3>🕌 ലൈവ് സൗദി നമസ്കാര സമയം & ഹിജ്‌രി കലണ്ടർ</h3>
-              <p>11 നഗരങ്ങളിലെ കൃത്യമായ നമസ്കാര സമയങ്ങൾ, അടുത്ത നമസ്കാര കൗണ്ട്ഡൗൺ, ഉമ്മുൽ ഖുറാ ഹിജ്‌രി-ഇംഗ്ലീഷ് തീയതി കൺവെർട്ടർ.</p>
-            </div>
-          </div>
-
-          <div class="feature-item-card">
-            <span class="feature-num-badge">18</span>
-            <div class="feature-item-content">
-              <h3>🕋 ഉംറ & സിയാറത്ത് സമഗ്ര ഗൈഡ്</h3>
-              <p>നുസുക് (Nusuk) ആപ്പ് ഗൈഡ്, ഉംറ നിർവ്വഹണ ഘട്ടങ്ങൾ, മക്ക-മദീന ചരിത്ര സ്മാരകങ്ങൾ.</p>
-            </div>
-          </div>
-
-          <div class="feature-item-card">
-            <span class="feature-num-badge">19</span>
-            <div class="feature-item-content">
-              <h3>🚀 സൗദി വിഷൻ 2030 മെഗാ പ്രോജക്ടുകൾ</h3>
-              <p>നിയോം (ദി ലൈൻ, ട്രൊജീന, ഒക്സാഗൺ), ഖിദ്ദിയ, റെഡ് സീ, ദിരിയ, ന്യൂ മുറബ്ബ (ദി മുഖാബ്), റിയാദ് മെട്രോ.</p>
-            </div>
-          </div>
-
-          <div class="feature-item-card">
-            <span class="feature-num-badge">20</span>
-            <div class="feature-item-content">
-              <h3>⚽ ഫിഫ വേൾഡ് കപ്പ് 2034 (15 സ്റ്റേഡിയങ്ങൾ)</h3>
-              <p>റിയാദ് (8), ജിദ്ദ (4), അൽ-ഖോബാർ (1), അബഹ (1), നിയോം (1) സ്റ്റേഡിയങ്ങൾ, സീറ്റിംഗ് കപ്പാസിറ്റി & ഗൂഗിൾ മാപ്പ്സ് ലൊക്കേഷൻ.</p>
-            </div>
-          </div>
-
-          <div class="feature-item-card">
-            <span class="feature-num-badge">21</span>
-            <div class="feature-item-content">
-              <h3>📚 മലയാളം ഡിജിറ്റൽ ഇ-ലൈബ്രറി</h3>
-              <p>ബഷീർ, എം.ടി, മാധവിക്കുട്ടി ക്ലാസിക്കുകൾ, പ്രവാസി കഥകൾ, ഡിജിറ്റൽ റീഡർ, ഡൗൺലോഡ് & ഷെയർ.</p>
-            </div>
-          </div>
-
-          <div class="feature-item-card">
-            <span class="feature-num-badge">22</span>
-            <div class="feature-item-content">
-              <h3>🌴 സഞ്ചാരം, പൈതൃകം & കാർഷിക തോട്ടങ്ങൾ</h3>
-              <p>സൗദിയിലെ മറഞ്ഞിരിക്കുന്ന വിനോദസഞ്ചാര കേന്ദ്രങ്ങൾ, കാർഷിക തോട്ടങ്ങൾ, 13 പ്രവിശ്യകളുടെ ചരിത്രം.</p>
-            </div>
-          </div>
         </div>
 
         <!-- Bottom Action Buttons Bar -->
@@ -1846,29 +2065,7 @@
       </div>
     </div>
   </div>
-<div class="traffic-public-notice">
-          <div class="traffic-public-badge">Public Display Baseline: 1.3K+</div>
-          <p>Public visitors see the curated community baseline of <strong>1.3K+ Pravasi Visits</strong>, while this portal gives Admin the 100% accurate real-world visitor telemetry.</p>
-        </div>
 
-        <div class="traffic-meta-box">
-          <div class="traffic-meta-row">
-            <span>First Recorded Hit:</span>
-            <strong id="metric-first-visit">—</strong>
-          </div>
-          <div class="traffic-meta-row">
-            <span>Latest Session Activity:</span>
-            <strong id="metric-last-visit">Just now</strong>
-          </div>
-        </div>
-
-        <div class="modal-actions" style="margin-top:14px;">
-          <button type="button" id="admin-traffic-reset-btn" class="card-btn" style="color:var(--danger);" title="Clear real telemetry counters">Reset Real Telemetry</button>
-          <button type="button" id="admin-traffic-done-btn" class="btn-whatsapp-solid">Done / Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- Toast Notification -->
   <div id="toast" class="toast" role="status" aria-live="polite"></div>

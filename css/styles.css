@@ -10745,15 +10745,15 @@ html[lang="ml"] .sugg-info-card h2 {
   flex-shrink: 0;
 }
 
-/* PWA Install Banner */
+/* PWA Install Banner - Guaranteed Zero Overlap with Floating WhatsApp & Navigation */
 .pwa-install-banner {
-  position: fixed;
-  bottom: 80px;
-  left: 16px;
-  right: 16px;
-  max-width: 480px;
-  margin: 0 auto;
-  z-index: 85;
+  position: fixed !important;
+  left: 20px !important;
+  right: auto !important;
+  bottom: 24px !important;
+  max-width: 420px !important;
+  width: auto !important;
+  z-index: 140 !important;
   background: #064e3b;
   border: 1.5px solid #f59e0b;
   border-radius: 16px;
@@ -10770,17 +10770,18 @@ html[lang="ml"] .sugg-info-card h2 {
 }
 
 .pwa-install-banner.show {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  pointer-events: auto !important;
 }
 
-@media (min-width: 769px) {
+@media (max-width: 768px) {
   .pwa-install-banner {
-    left: auto;
-    right: 24px;
-    bottom: 24px;
-    width: 420px;
+    left: 14px !important;
+    right: 14px !important;
+    bottom: calc(140px + env(safe-area-inset-bottom, 0px)) !important;
+    max-width: none !important;
+    width: auto !important;
   }
 }
 
@@ -13442,68 +13443,206 @@ html[lang="ml"] .sugg-info-card h2 {
   transform: translateY(-2px);
 }
 
-/* Features Grid */
-.features-grid-list {
+/* 5-Category Working Features Directory Grid */
+.features-categories-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
   margin-bottom: 30px;
 }
 
-.feature-item-card {
+@media (max-width: 900px) {
+  .features-categories-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.feature-category-card {
   background: var(--surface-soft);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  padding: 16px 18px;
+  padding: 22px 20px;
   display: flex;
-  align-items: flex-start;
-  gap: 14px;
+  flex-direction: column;
   transition: var(--transition);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
 }
 
-.feature-item-card:hover {
-  border-color: var(--brand);
-  transform: translateY(-1px);
-  background: var(--surface);
+.feature-category-card:hover {
+  border-color: rgba(4, 120, 87, 0.4);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
 }
 
-.feature-num-badge {
-  display: inline-flex;
+[data-theme="dark"] .feature-category-card {
+  background: #111d20;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .feature-category-card:hover {
+  border-color: var(--gold-border);
+}
+
+.category-card-header {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: rgba(4, 120, 87, 0.12);
-  color: var(--brand);
-  font-size: 0.8rem;
-  font-weight: 900;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.category-icon-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.category-icon {
+  font-size: 1.8rem;
+  line-height: 1;
   flex-shrink: 0;
-  margin-top: 2px;
 }
 
-[data-theme="dark"] .feature-num-badge {
-  background: rgba(217, 119, 6, 0.15);
-  color: var(--gold-bright);
-}
-
-.feature-item-content {
-  flex-grow: 1;
-}
-
-.feature-item-content h3 {
-  margin: 0 0 4px;
-  font-size: 1rem;
+.category-title-ml {
+  font-size: 1.15rem;
   font-weight: 800;
   color: var(--text);
-  line-height: 1.4;
+  margin: 0 0 2px;
+  line-height: 1.35;
 }
 
-.feature-item-content p {
-  margin: 0;
-  font-size: 0.86rem;
-  color: var(--text-secondary);
-  line-height: 1.55;
+.category-title-en {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.category-count-pill {
+  font-size: 0.74rem;
+  font-weight: 800;
+  background: rgba(4, 120, 87, 0.1);
+  color: var(--brand);
+  border: 1px solid rgba(4, 120, 87, 0.25);
+  padding: 4px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+[data-theme="dark"] .category-count-pill {
+  background: rgba(245, 158, 11, 0.15);
+  color: var(--gold-bright);
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.category-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.category-links-grid-2col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+@media (max-width: 680px) {
+  .category-links-grid-2col {
+    grid-template-columns: 1fr;
+  }
+}
+
+.feature-dir-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--text);
+  min-height: 52px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.feature-dir-link:hover {
+  background: rgba(4, 120, 87, 0.05);
+  border-color: var(--brand);
+  transform: translateX(3px);
+}
+
+[data-theme="dark"] .feature-dir-link {
+  background: rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 255, 255, 0.06);
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .feature-dir-link:hover {
+  background: rgba(16, 185, 129, 0.1);
+  border-color: var(--brand-light);
+  transform: translateX(3px);
+}
+
+.dir-link-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.dir-link-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.dir-link-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.dir-link-text strong {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.35;
+}
+
+[data-theme="dark"] .dir-link-text strong {
+  color: #f8fafc;
+}
+
+.dir-link-text span {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  line-height: 1.35;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dir-link-arrow {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--brand);
+  opacity: 0.6;
+  flex-shrink: 0;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.feature-dir-link:hover .dir-link-arrow {
+  opacity: 1;
+  transform: translate(2px, -2px);
+}
+
+[data-theme="dark"] .dir-link-arrow {
+  color: var(--gold-bright);
 }
 
 .features-footer-bar {
@@ -13519,9 +13658,6 @@ html[lang="ml"] .sugg-info-card h2 {
 @media (max-width: 640px) {
   .working-features-card {
     padding: 22px 16px;
-  }
-  .features-grid-list {
-    grid-template-columns: 1fr;
   }
   .btn-features-action {
     width: 100%;
@@ -14112,3 +14248,155 @@ html[lang="ml"] .sugg-info-card h2 {
   background: #059669 !important;
   transform: translateY(-1px);
 }
+
+
+/* Additional Global Contrast & Layout Protections */
+.view-btn {
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+.view-btn span {
+  white-space: nowrap !important;
+}
+
+.view-tab-pill {
+  white-space: nowrap !important;
+}
+
+.health-title {
+  color: #047857 !important;
+}
+
+[data-theme="dark"] .health-title {
+  color: #5eead4 !important;
+}
+
+.health-subtitle {
+  color: #334155 !important;
+}
+
+[data-theme="dark"] .health-subtitle {
+  color: #cbd5e1 !important;
+}
+
+.clinic-suggest-cta {
+  background: linear-gradient(135deg, #064e3b 0%, #047857 100%) !important;
+  border: 1px solid rgba(245, 158, 11, 0.4) !important;
+  border-radius: 16px !important;
+  padding: 24px !important;
+  color: #ffffff !important;
+}
+
+.clinic-suggest-cta .clinic-suggest-text h4 {
+  color: #fde047 !important;
+  font-size: 1.15rem !important;
+  font-weight: 800 !important;
+  margin: 0 0 6px !important;
+}
+
+.clinic-suggest-cta .clinic-suggest-text p {
+  color: #f8fafc !important;
+  font-size: 0.92rem !important;
+  line-height: 1.55 !important;
+  margin: 0 !important;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* CRITICAL CONTRAST & ACCESSIBILITY FIXES (LIGHT & DARK MODES)              */
+/* -------------------------------------------------------------------------- */
+
+/* Health Hero Badge */
+.health-badge {
+  background: #d1fae5 !important;
+  border: 1px solid #86efac !important;
+  color: #065f46 !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="dark"] .health-badge {
+  background: rgba(16, 185, 129, 0.14) !important;
+  border-color: rgba(16, 185, 129, 0.35) !important;
+  color: #6ee7b7 !important;
+}
+
+/* Health Quick Section Jump Pills */
+.health-pill-link {
+  background: #ffffff !important;
+  border: 1.5px solid #cbd5e1 !important;
+  color: #0f172a !important;
+  font-weight: 700 !important;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08) !important;
+}
+
+.health-pill-link:hover {
+  background: #ecfdf5 !important;
+  border-color: #047857 !important;
+  color: #047857 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(4, 120, 87, 0.15) !important;
+}
+
+[data-theme="dark"] .health-pill-link {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  color: #f8fafc !important;
+  box-shadow: none !important;
+}
+
+[data-theme="dark"] .health-pill-link:hover {
+  background: rgba(16, 185, 129, 0.2) !important;
+  border-color: rgba(16, 185, 129, 0.4) !important;
+  color: #ffffff !important;
+}
+
+/* 11 Cities & Phrasebook Filter Tabs */
+.city-tab-btn,
+.phrase-tab-btn {
+  background: #ffffff !important;
+  border: 1.5px solid #cbd5e1 !important;
+  color: #1e293b !important;
+  font-weight: 700 !important;
+  box-shadow: 0 2px 5px rgba(15, 23, 42, 0.05) !important;
+  white-space: nowrap !important;
+}
+
+.city-tab-btn:hover,
+.phrase-tab-btn:hover {
+  background: #f1f5f9 !important;
+  border-color: #94a3b8 !important;
+  color: #0f172a !important;
+}
+
+.city-tab-btn.active,
+.phrase-tab-btn.active {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
+  border-color: #047857 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.35) !important;
+}
+
+[data-theme="dark"] .city-tab-btn,
+[data-theme="dark"] .phrase-tab-btn {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #cbd5e1 !important;
+  box-shadow: none !important;
+}
+
+[data-theme="dark"] .city-tab-btn:hover,
+[data-theme="dark"] .phrase-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .city-tab-btn.active,
+[data-theme="dark"] .phrase-tab-btn.active {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
+  border-color: #34d399 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.45) !important;
+}
+
