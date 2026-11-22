@@ -240,12 +240,202 @@
     }
   }
 
-  // 5. Initialize on DOMContentLoaded
+
+  // 5. Saudi Telecom & SIM Card Balance & Offer Codes Controller
+  const SAUDI_SIM_PROVIDERS = [
+    {
+      id: "stc",
+      name: "STC (Sawa)",
+      nameMl: "എസ്.ടി.സി (സവാ)",
+      badge: "Saudi Telecom Company",
+      codes: [
+        { label: "പ്രധാന ബാലൻസ് (Main Balance)", code: "*166#", tel: "*166%23", desc: "അക്കൗണ്ട് ബാലൻസും വാലിഡിറ്റിയും അറിയാൻ" },
+        { label: "ഡാറ്റ ബാലൻസ് (Data Balance)", code: "*166*9#", tel: "*166*9%23", desc: "ശേഷിക്കുന്ന നെറ്റ് ഡാറ്റയും എംബിയും അറിയാൻ" },
+        { label: "സ്വന്തം നമ്പർ (Know Your Number)", code: "*150#", tel: "*150%23", desc: "നിങ്ങളുടെ സിം നമ്പർ സ്ക്രീനിൽ കാണാൻ" },
+        { label: "റീചാർജ് കാർഡ് (Recharge)", code: "*155*RechargeCode#", tel: "*155%23", desc: "*155* കൂപ്പൺ നമ്പർ # എന്ന് ഡയൽ ചെയ്യുക" },
+        { label: "കസ്റ്റമർ കെയർ (Customer Care)", code: "900", tel: "900", desc: "STC 24/7 സൗജന്യ കസ്റ്റമർ സപ്പോർട്ട്" }
+      ]
+    },
+    {
+      id: "mobily",
+      name: "Mobily",
+      nameMl: "മൊബീലി (Mobily)",
+      badge: "Etihad Etisalat",
+      codes: [
+        { label: "പ്രധാന ബാലൻസ് (Main Balance)", code: "*1411#", tel: "*1411%23", desc: "പ്രധാന വോയ്സ് ബാലൻസും കാലാവധിയും" },
+        { label: "ഡാറ്റ ബാലൻസ് (Data Balance)", code: "*1411*2#", tel: "*1411*2%23", desc: "നെറ്റ് ഡാറ്റ എംബി ബാലൻസ് അറിയാൻ" },
+        { label: "സ്വന്തം നമ്പർ (Know Your Number)", code: "*222#", tel: "*222%23", desc: "നിങ്ങളുടെ മൊബീലി സിം നമ്പർ അറിയാൻ" },
+        { label: "റീചാർജ് കാർഡ് (Recharge)", code: "*1400*RechargeCode#", tel: "*1400%23", desc: "*1400* കൂപ്പൺ നമ്പർ # എന്ന് ഡയൽ ചെയ്യുക" },
+        { label: "കസ്റ്റമർ കെയർ (Customer Care)", code: "1100", tel: "1100", desc: "മൊബീലി 24/7 കസ്റ്റമർ കെയർ നമ്പർ" }
+      ]
+    },
+    {
+      id: "zain",
+      name: "Zain KSA",
+      nameMl: "സെയ്ൻ (Zain)",
+      badge: "Zain Telecom",
+      codes: [
+        { label: "പ്രധാന ബാലൻസ് (Main Balance)", code: "*142#", tel: "*142%23", desc: "പ്രധാന ബാലൻസും വാലിഡിറ്റിയും" },
+        { label: "ഡാറ്റ ബാലൻസ് (Data Balance)", code: "*142#", tel: "*142%23", desc: "ഡാറ്റ അറിയാൻ *142# അല്ലെങ്കിൽ 'BC' എന്ന് 959 ലേക്ക് SMS ചെയ്യുക" },
+        { label: "സ്വന്തം നമ്പർ (Know Your Number)", code: "*144#", tel: "*144%23", desc: "സെയ്ൻ സിം നമ്പർ സ്ക്രീനിൽ ലഭിക്കാൻ" },
+        { label: "റീചാർജ് കാർഡ് (Recharge)", code: "*141*RechargeCode#", tel: "*141%23", desc: "*141* റീചാർജ് കോഡ് # എന്ന് ഡയൽ ചെയ്യുക" },
+        { label: "കസ്റ്റമർ കെയർ (Customer Care)", code: "959", tel: "959", desc: "സെയ്ൻ 24/7 കസ്റ്റമർ സർവീസ് നമ്പർ" }
+      ]
+    },
+    {
+      id: "virgin",
+      name: "Virgin Mobile",
+      nameMl: "വേർജിൻ (Virgin)",
+      badge: "Virgin Mobile KSA",
+      codes: [
+        { label: "പ്രധാന ബാലൻസ് (Main Balance)", code: "*102#", tel: "*102%23", desc: "പ്രധാന അക്കൗണ്ട് ബാലൻസ് അറിയാൻ" },
+        { label: "ഡാറ്റ ബാലൻസ് (Data Balance)", code: "*104#", tel: "*104%23", desc: "ഇന്റർനെറ്റ് ഡാറ്റ ശേഷിപ്പ് അറിയാൻ" },
+        { label: "സ്വന്തം നമ്പർ (Know Your Number)", code: "*115#", tel: "*115%23", desc: "നിങ്ങളുടെ വേർജിൻ നമ്പർ അറിയാൻ" },
+        { label: "റീചാർജ് കാർഡ് (Recharge)", code: "*101*RechargeCode#", tel: "*101%23", desc: "*101* റീചാർജ് കോഡ് # എന്ന് ഡയൽ ചെയ്യുക" },
+        { label: "കസ്റ്റമർ കെയർ (Customer Care)", code: "1789", tel: "1789", desc: "വേർജിൻ കസ്റ്റമർ കെയർ ഹെൽപ്പ്‌ലൈൻ" }
+      ]
+    },
+    {
+      id: "friendi",
+      name: "FRiENDi Mobile",
+      nameMl: "ഫ്രെണ്ടി (Friendi)",
+      badge: "Virgin Mobile Middle East",
+      codes: [
+        { label: "പ്രധാന ബാലൻസ് (Main Balance)", code: "*102#", tel: "*102%23", desc: "ഫ്രെണ്ടി മെയിൻ ബാലൻസ് അറിയാൻ" },
+        { label: "ഡാറ്റ ബാലൻസ് (Data Balance)", code: "*108#", tel: "*108%23", desc: "ഇന്റർനെറ്റ് ബണ്ടിൽ ബാലൻസ് പരിശോധിക്കാൻ" },
+        { label: "സ്വന്തം നമ്പർ (Know Your Number)", code: "*110#", tel: "*110%23", desc: "നിങ്ങളുടെ ഫ്രെണ്ടി മൊബൈൽ നമ്പർ അറിയാൻ" },
+        { label: "റീചാർജ് കാർഡ് (Recharge)", code: "*101*RechargeCode#", tel: "*101%23", desc: "*101* റീചാർജ് കോഡ് # ഡയൽ ചെയ്യുക" },
+        { label: "കസ്റ്റമർ കെയർ (Customer Care)", code: "166000", tel: "166000", desc: "ഫ്രെണ്ടി കസ്റ്റമർ സർവീസ് നമ്പർ" }
+      ]
+    },
+    {
+      id: "lebara",
+      name: "Lebara Mobile",
+      nameMl: "ലെബാര (Lebara)",
+      badge: "Lebara KSA",
+      codes: [
+        { label: "പ്രധാന ബാലൻസ് (Main Balance)", code: "*110#", tel: "*110%23", desc: "ലെബാര മെയിൻ അക്കൗണ്ട് ബാലൻസ്" },
+        { label: "ഡാറ്റ ബാലൻസ് (Data Balance)", code: "*110#", tel: "*110%23", desc: "ഡാറ്റ ബാലൻസ് പരിശോധിക്കാൻ (അല്ലെങ്കിൽ Lebara ആപ്പ്)" },
+        { label: "സ്വന്തം നമ്പർ (Know Your Number)", code: "*000#", tel: "*000%23", desc: "ലെബാര സിം നമ്പർ സ്ക്രീനിൽ കാണാൻ" },
+        { label: "റീചാർജ് കാർഡ് (Recharge)", code: "*111*RechargeCode#", tel: "*111%23", desc: "*111* റീചാർജ് കൂപ്പൺ നമ്പർ # ഡയൽ ചെയ്യുക" },
+        { label: "കസ്റ്റമർ കെയർ (Customer Care)", code: "1755", tel: "1755", desc: "ലെബാര കസ്റ്റമർ സപ്പോർട്ട് ഹെൽപ്പ്‌ലൈൻ" }
+      ]
+    }
+  ];
+
+  function showSimToast(msg) {
+    const existing = document.getElementById("pwa-toast");
+    if (existing) existing.remove();
+    const toast = document.createElement("div");
+    toast.id = "pwa-toast";
+    toast.className = "pwa-toast show";
+    toast.textContent = msg;
+    document.body.appendChild(toast);
+    setTimeout(() => {
+      toast.classList.remove("show");
+      setTimeout(() => toast.remove(), 300);
+    }, 2500);
+  }
+
+  function initSimCodes() {
+    const container = document.getElementById("sim-cards-grid-container");
+    const tabsContainer = document.getElementById("sim-provider-tabs");
+    if (!container) return;
+
+    function renderSimCards(filterId = "all") {
+      const providersToRender = filterId === "all" 
+        ? SAUDI_SIM_PROVIDERS 
+        : SAUDI_SIM_PROVIDERS.filter(p => p.id === filterId);
+
+      container.innerHTML = providersToRender.map(p => `
+        <div class="sim-provider-card" id="sim-card-${p.id}">
+          <div class="sim-provider-header">
+            <div class="sim-provider-title">
+              <h3>${p.nameMl}</h3>
+              <span>${p.name} · ${p.badge}</span>
+            </div>
+            <span class="sim-provider-badge">📶 4G/5G ലൈവ്</span>
+          </div>
+          <div class="sim-codes-list">
+            ${p.codes.map(c => `
+              <div class="sim-code-row">
+                <div class="sim-code-info">
+                  <strong>${c.label}</strong>
+                  <span>${c.desc}</span>
+                </div>
+                <div class="sim-code-dial-wrap">
+                  <span class="sim-code-val">${c.code}</span>
+                  <a href="tel:${c.tel}" class="btn-sim-dial" title="ഫോണിൽ ഉടൻ ഡയൽ ചെയ്യുക">📞 ഡയൽ ചെയ്യുക</a>
+                  <button type="button" class="btn-sim-copy" data-code="${c.code}" title="കോഡ് കോപ്പി ചെയ്യുക">📋 കോപ്പി</button>
+                </div>
+              </div>
+            `).join("")}
+          </div>
+        </div>
+      `).join("");
+    }
+
+    renderSimCards("all");
+
+    if (tabsContainer) {
+      tabsContainer.addEventListener("click", (e) => {
+        const btn = e.target.closest(".sim-tab-btn");
+        if (!btn) return;
+        tabsContainer.querySelectorAll(".sim-tab-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        const prov = btn.getAttribute("data-provider") || "all";
+        renderSimCards(prov);
+      });
+    }
+
+    // Copy action delegation
+    container.addEventListener("click", (e) => {
+      const copyBtn = e.target.closest(".btn-sim-copy");
+      if (!copyBtn) return;
+      const code = copyBtn.getAttribute("data-code");
+      if (!code) return;
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(code).then(() => {
+          showSimToast(`കോഡ് കോപ്പി ചെയ്തു: ${code} ✅`);
+        }).catch(() => {
+          fallbackCopyText(code);
+        });
+      } else {
+        fallbackCopyText(code);
+      }
+    });
+
+    function fallbackCopyText(text) {
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand("copy");
+        showSimToast(`കോഡ് കോപ്പി ചെയ്തു: ${text} ✅`);
+      } catch (e) {
+        showSimToast(`കോഡ്: ${text}`);
+      }
+      document.body.removeChild(ta);
+    }
+
+    // Auto smooth-scroll to #sim-codes-section if in hash
+    if (window.location.hash === "#sim-codes-section") {
+      setTimeout(() => {
+        const sec = document.getElementById("sim-codes-section");
+        if (sec) sec.scrollIntoView({ behavior: "smooth" });
+      }, 350);
+    }
+  }
+
+  // 6. Initialize on DOMContentLoaded
   document.addEventListener("DOMContentLoaded", () => {
     normalizeLinks();
     initClinics();
     initCustoms();
     initPhrasebook();
+    initSimCodes();
   });
 
 })();

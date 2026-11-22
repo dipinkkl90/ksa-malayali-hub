@@ -137,7 +137,7 @@
       title: "സൗദി സിം കാർഡ് ബാലൻസ് & ഓഫർ കോഡുകൾ",
       titleEn: "Saudi SIM Card Balance & USSD Codes",
       subtitle: "STC, Mobily, Zain, Virgin, Salam, Red Bull ബാലൻസ് ചെക്കർ",
-      url: "/sahayi#sim-codes-section",
+      url: "/health#sim-codes-section",
       keywords: ["sim", "stc", "mobily", "zain", "virgin", "salam", "red bull", "ussd", "balance", "സിം", "ബാലൻസ്"]
     },
     {
