@@ -14605,3 +14605,51 @@ html[lang="ml"] .sugg-info-card h2 {
   }
 }
 
+
+
+/* D&J Techies Origin Story Blockquote */
+.about-dj-quote {
+  margin: 18px 0 24px;
+  padding: 16px 20px;
+  background: rgba(217, 119, 6, 0.06);
+  border-left: 4px solid #d97706 !important;
+  border-radius: 0 14px 14px 0;
+  font-family: 'Noto Sans Malayalam', sans-serif;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+[data-theme="dark"] .about-dj-quote {
+  background: rgba(245, 158, 11, 0.08);
+  border-left-color: #f59e0b !important;
+}
+
+.about-dj-quote-text {
+  margin: 0 0 8px 0;
+  font-family: 'Noto Sans Malayalam', sans-serif;
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.75;
+  color: #1e293b;
+  font-style: italic;
+}
+
+[data-theme="dark"] .about-dj-quote-text {
+  color: #f1f5f9;
+}
+
+.about-dj-quote-author {
+  display: block;
+  font-family: 'Noto Sans Malayalam', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #047857;
+  letter-spacing: 0.02em;
+  font-style: normal;
+}
+
+[data-theme="dark"] .about-dj-quote-author {
+  color: #34d399;
+}
+/* END D&J Quote */
+
