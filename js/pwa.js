@@ -249,6 +249,38 @@
     }, duration);
   }
 
+  
+  // 6. Global PWA Install & Offline Guide Trigger
+  window.triggerPWAInstall = function() {
+    const isStandalone =
+      window.matchMedia("(display-mode: standalone)").matches ||
+      window.navigator.standalone === true;
+
+    if (isStandalone) {
+      showToast("✅ സൗദി മലയാളി ഹബ് നിങ്ങളുടെ ഫോണിൽ ഇതിനകം ഇൻസ്റ്റാൾ ചെയ്തിട്ടുണ്ട്! ഹോം സ്ക്രീനിൽ നിന്ന് നേരിട്ട് തുറക്കാം.", 4500);
+      return;
+    }
+
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then((choice) => {
+        if (choice && choice.outcome === "accepted") {
+          console.log("[PWA] User accepted installation from directory card");
+        }
+        deferredPrompt = null;
+        hideInstallBanner();
+      });
+      return;
+    }
+
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    if (isIOS) {
+      showToast("📲 iPhone-ൽ ആപ്പ് ആക്കാൻ: Safari താഴെ Share ബട്ടൺ അമർത്തി 'Add to Home Screen' തിരഞ്ഞെടുക്കുക.", 5500);
+    } else {
+      showToast("📲 ഫോണിൽ ഇൻസ്റ്റാൾ ചെയ്യാൻ: ബ്രൗസർ മെനുവിൽ (⋮) ക്ലിക്ക് ചെയ്ത് 'Install app' അല്ലെങ്കിൽ 'Add to Home screen' നൽകുക.", 5500);
+    }
+  };
+
   // Initialize all PWA components
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", () => {
