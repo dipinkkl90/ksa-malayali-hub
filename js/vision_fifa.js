@@ -424,7 +424,7 @@
   }
 
   function initVisionFIFA() {
-    const section = document.getElementById("saudi-vision-fifa-section");
+    const section = document.getElementById("worldcup-2034") || document.getElementById("saudi-vision-fifa-section");
     if (!section) return;
 
     let activeTab = "vision"; // "vision" or "fifa"
@@ -473,7 +473,7 @@
       `).join("");
     }
 
-    // 2. Render FIFA 2034 Stadiums
+    // 2. Render FIFA 2034 Stadiums (All 15 Stadiums across 5 Cities)
     function renderStadiums() {
       if (!stadiumsContainer) return;
 
@@ -491,7 +491,7 @@
         const statusBadgeClass = isNew ? "status-badge-new" : "status-badge-renovated";
 
         return `
-          <div class="stadium-card">
+          <div class="stadium-card" id="${stadium.id}">
             <div class="stadium-card-head">
               <div class="stadium-city-pill">📍 ${stadium.cityMl}</div>
               <span class="${statusBadgeClass}">
@@ -538,6 +538,8 @@
       }
     }
 
+    window.switchVisionFifaTab = setTab;
+
     if (btnTabVision) btnTabVision.addEventListener("click", () => setTab("vision"));
     if (btnTabFIFA) btnTabFIFA.addEventListener("click", () => setTab("fifa"));
 
@@ -553,10 +555,56 @@
       });
     }
 
+    // 5. Hash navigation and jump pills
+    function handleHash() {
+      const hash = (window.location.hash || "").toLowerCase();
+      if (hash.includes("worldcup") || hash.includes("fifa") || hash.includes("stadium")) {
+        setTab("fifa");
+        setTimeout(() => {
+          section.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 120);
+      } else if (hash.includes("vision")) {
+        setTab("vision");
+        setTimeout(() => {
+          section.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 120);
+      }
+    }
+
+    window.addEventListener("hashchange", handleHash);
+
+    // Attach click listeners to all jump pills
+    document.querySelectorAll('a[href*="worldcup-2034"], a[href*="fifa"]').forEach(link => {
+      link.addEventListener("click", () => {
+        setTab("fifa");
+        setTimeout(() => {
+          section.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 80);
+      });
+    });
+
+    document.querySelectorAll('a[href*="vision"]').forEach(link => {
+      link.addEventListener("click", () => {
+        setTab("vision");
+        setTimeout(() => {
+          section.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 80);
+      });
+    });
+
     // Initial Render
     renderVisionProjects();
     renderStadiums();
-    setTab("vision");
+
+    const initialHash = (window.location.hash || "").toLowerCase();
+    if (initialHash.includes("worldcup") || initialHash.includes("fifa") || initialHash.includes("stadium")) {
+      setTab("fifa");
+      setTimeout(() => {
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 150);
+    } else {
+      setTab("vision");
+    }
   }
 
   if (document.readyState === "loading") {
