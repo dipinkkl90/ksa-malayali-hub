@@ -39,6 +39,90 @@
   let currentHotelCity = "all";
   let searchKeyword = "";
 
+  // 6–8 Curated, lightweight Kerala food cover photos (local assets with remote CDN fallback)
+  const HOTEL_FOOD_COVERS = {
+    biriyani: {
+      local: "./assets/food_covers/biriyani.jpg",
+      remote: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&h=320&q=80",
+      alt: "Kerala Malabar Biriyani"
+    },
+    porotta: {
+      local: "./assets/food_covers/porotta.jpg",
+      remote: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&h=320&q=80",
+      alt: "Kerala Porotta & Curry"
+    },
+    beef: {
+      local: "./assets/food_covers/beef_roast.jpg",
+      remote: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&h=320&q=80",
+      alt: "Kerala Beef Roast & Thattukada dishes"
+    },
+    sadya: {
+      local: "./assets/food_covers/sadya.jpg",
+      remote: "https://images.unsplash.com/photo-1610057099431-d73a1c9d2f2f?auto=format&fit=crop&w=600&h=320&q=80",
+      alt: "Kerala Sadya & Vegetarian Meals"
+    },
+    mandi: {
+      local: "./assets/food_covers/mandi.jpg",
+      remote: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&h=320&q=80",
+      alt: "Arabic Mandi & Charcoal Grill"
+    },
+    bakery: {
+      local: "./assets/food_covers/tea_snacks.jpg",
+      remote: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&h=320&q=80",
+      alt: "Kerala Chai, Snacks & Bakery"
+    },
+    default: {
+      local: "./assets/food_covers/kerala_platter.jpg",
+      remote: "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=600&h=320&q=80",
+      alt: "Authentic Kerala Cuisine Platter"
+    }
+  };
+
+  function getHotelFoodCover(item) {
+    const name = (item.name || item.restaurant_name || "").toLowerCase();
+    const tags = Array.isArray(item.tags) ? item.tags.join(" ").toLowerCase() : (item.tags || "").toLowerCase();
+    const cat = (item.category || "").toLowerCase();
+    const dishes = Array.isArray(item.popular_dishes) ? item.popular_dishes.join(" ").toLowerCase() : "";
+    const evidence = (item.kerala_food_evidence || "").toLowerCase();
+    const text = (name + " " + tags + " " + cat + " " + dishes + " " + evidence).toLowerCase();
+
+    // 1. Bakery / Tea / Cafeteria
+    if (/(chai|tea|bakery|bake|bakes|cafeteria|cafe|coffee|snacks|snack|juice|cool bar|coolbar|shake)/i.test(name) ||
+        /(bakery|tea|snacks|juice|coolbar)/i.test(tags)) {
+      return HOTEL_FOOD_COVERS.bakery;
+    }
+
+    // 2. Mandi / Grill / Broast
+    if (/(mandi|mandhi|madhbi|kabsa|grill|barbecue|bbq|broast|broasted|shawarma|alfaham|al-faham|charcoal|tikka|sheesh)/i.test(name) ||
+        /(mandi|grill|broast|shawarma|alfaham)/i.test(tags)) {
+      return HOTEL_FOOD_COVERS.mandi;
+    }
+
+    // 3. Sadya / Veg / Mess
+    if (/(sadya|sadhya|veg|vegetarian|mess|meals|thali|brahmin|nadan meals)/i.test(name) ||
+        /(meals|veg|vegetarian|sadya)/i.test(tags)) {
+      return HOTEL_FOOD_COVERS.sadya;
+    }
+
+    // 4. Porotta / Thattukada / Beef spots
+    if (/(porotta|parotta|paratha|thattukada|beef|puttu|appam|dosa|chilly|curry|roast|fry)/i.test(name) ||
+        /(porotta|puttu|beef|thattukada)/i.test(tags)) {
+      if (/beef|roast|fry/i.test(name + " " + tags)) {
+        return HOTEL_FOOD_COVERS.beef;
+      }
+      return HOTEL_FOOD_COVERS.porotta;
+    }
+
+    // 5. Biriyani / Malabar spots
+    if (/(biriyani|biryani|malabar|thalassery|dum|kuzhimanthi)/i.test(name) ||
+        /(biriyani|malabar|thalassery)/i.test(tags)) {
+      return HOTEL_FOOD_COVERS.biriyani;
+    }
+
+    // 6. Default fallback
+    return HOTEL_FOOD_COVERS.default;
+  }
+
   function initHotels() {
     const cityButtons = document.querySelectorAll(".hotel-city-btn");
     const searchInput = document.getElementById("saudi-hotel-search");
@@ -64,6 +148,9 @@
     }
 
     renderHotels();
+
+    
+  
 
     function renderHotels() {
       const allHotels = window.KSA_KERALA_FOODS || [];
@@ -115,45 +202,65 @@
         const waText = encodeURIComponent(`Hi! Check out this Kerala restaurant in ${city}: ${rawName} (${area}). Found on KSA Malayali Hub: https://ksa-malayali-hub.vercel.app/saudi`);
         const waShareUrl = `https://wa.me/?text=${waText}`;
 
+        const cover = getHotelFoodCover(item);
+        const coverLocal = cover.local;
+        const coverRemote = cover.remote;
+        const coverAlt = escapeHtml(cover.alt + " - " + rawName);
+
         return `
           <article class="saudi-hotel-card">
-            <div class="saudi-hotel-card-header">
-              <div class="saudi-hotel-city-badge">📍 ${city} · ${area}</div>
-              <div class="saudi-hotel-rating">★ ${rating.toFixed(1)}</div>
-            </div>
-
-            <h3 class="saudi-hotel-name">${name}</h3>
-            
-            <div class="saudi-hotel-tags">
-              ${tags.slice(0, 3).map(t => `<span class="saudi-hotel-tag">${escapeHtml(t.trim())}</span>`).join("")}
-            </div>
-
-            ${dishes.length > 0 ? `
-              <div class="saudi-hotel-dishes">
-                <span>🍲 <strong>പ്രശസ്ത വിഭവങ്ങൾ:</strong> ${escapeHtml(dishes.slice(0, 3).join(", "))}</span>
+            <div class="saudi-hotel-cover-wrap">
+              <img 
+                src="${coverLocal}" 
+                alt="${coverAlt}" 
+                class="saudi-hotel-cover-img" 
+                loading="lazy" 
+                decoding="async"
+                onerror="this.onerror=null; this.src='${coverRemote}'; this.onerror=function(){this.parentElement.classList.add('has-fallback'); this.style.display='none';};"
+              />
+              <div class="saudi-hotel-cover-fallback" aria-hidden="true">
+                <span class="saudi-hotel-fallback-icon">🍽️</span>
               </div>
-            ` : ""}
+              <div class="saudi-hotel-cover-overlay">
+                <div class="saudi-hotel-city-badge">📍 ${city}${area ? ` · ${area}` : ''}</div>
+                <div class="saudi-hotel-rating">⭐ ${rating.toFixed(1)}</div>
+              </div>
+            </div>
 
-            <div class="saudi-hotel-actions">
-              <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" class="saudi-btn-map" title="Open Google Maps Directions">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg>
-                <span>Google Maps ↗</span>
-              </a>
+            <div class="saudi-hotel-content">
+              <h3 class="saudi-hotel-name">${name}</h3>
+              
+              <div class="saudi-hotel-tags">
+                ${tags.slice(0, 3).map(t => `<span class="saudi-hotel-tag">${escapeHtml(t.trim())}</span>`).join("")}
+              </div>
 
-              ${phone ? `
-                <a href="tel:${phone}" class="saudi-btn-call" title="Call Hotel">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                  <span>വിളിക്കുക</span>
+              ${dishes.length > 0 ? `
+                <div class="saudi-hotel-dishes">
+                  <span>🍲 <strong>പ്രശസ്ത വിഭവങ്ങൾ:</strong> ${escapeHtml(dishes.slice(0, 3).join(", "))}</span>
+                </div>
+              ` : ""}
+
+              <div class="saudi-hotel-actions">
+                <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" class="saudi-btn-map" title="Open Google Maps Directions">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg>
+                  <span>Google Maps ↗</span>
                 </a>
-              ` : `
-                <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" class="saudi-btn-call" title="View Phone on Google Maps">
-                  <span>ഫോൺ നമ്പർ ↗</span>
-                </a>
-              `}
 
-              <a href="${waShareUrl}" target="_blank" rel="noopener noreferrer" class="saudi-btn-share" title="Share on WhatsApp">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12.03 2C6.5 2 2 6.48 2 12c0 1.77.46 3.5 1.34 5.02L2 22l5.13-1.34A9.96 9.96 0 0 0 12.03 22C17.55 22 22 17.52 22 12S17.55 2 12.03 2zm5.82 14.17c-.24.68-1.42 1.3-1.97 1.38-.52.08-1.18.11-1.9-.12-.44-.14-1-.33-1.72-.64-3.02-1.31-4.99-4.38-5.14-4.58-.15-.2-1.23-1.64-1.23-3.13s.78-2.22 1.06-2.52c.28-.3.61-.38.81-.38h.59c.19 0 .44-.07.69.53.25.61.85 2.09.92 2.24.08.15.13.33.03.53-.1.2-.15.33-.3.5-.15.18-.32.4-.45.54-.15.15-.31.32-.13.62.18.3.79 1.31 1.7 2.12 1.17 1.04 2.15 1.37 2.46 1.52.3.15.48.13.66-.08.18-.2.76-.89.96-1.19.2-.3.41-.25.69-.15.28.1 1.78.84 2.08.99.3.15.51.23.58.36.08.13.08.76-.16 1.44z"/></svg>
-              </a>
+                ${phone ? `
+                  <a href="tel:${phone}" class="saudi-btn-call" title="Call Hotel">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <span>വിളിക്കുക</span>
+                  </a>
+                ` : `
+                  <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" class="saudi-btn-call" title="View Phone on Google Maps">
+                    <span>ഫോൺ നമ്പർ ↗</span>
+                  </a>
+                `}
+
+                <a href="${waShareUrl}" target="_blank" rel="noopener noreferrer" class="saudi-btn-share" title="Share on WhatsApp">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12.03 2C6.5 2 2 6.48 2 12c0 1.77.46 3.5 1.34 5.02L2 22l5.13-1.34A9.96 9.96 0 0 0 12.03 22C17.55 22 22 17.52 22 12S17.55 2 12.03 2zm5.82 14.17c-.24.68-1.42 1.3-1.97 1.38-.52.08-1.18.11-1.9-.12-.44-.14-1-.33-1.72-.64-3.02-1.31-4.99-4.38-5.14-4.58-.15-.2-1.23-1.64-1.23-3.13s.78-2.22 1.06-2.52c.28-.3.61-.38.81-.38h.59c.19 0 .44-.07.69.53.25.61.85 2.09.92 2.24.08.15.13.33.03.53-.1.2-.15.33-.3.5-.15.18-.32.4-.45.54-.15.15-.31.32-.13.62.18.3.79 1.31 1.7 2.12 1.17 1.04 2.15 1.37 2.46 1.52.3.15.48.13.66-.08.18-.2.76-.89.96-1.19.2-.3.41-.25.69-.15.28.1 1.78.84 2.08.99.3.15.51.23.58.36.08.13.08.76-.16 1.44z"/></svg>
+                </a>
+              </div>
             </div>
           </article>
         `;
