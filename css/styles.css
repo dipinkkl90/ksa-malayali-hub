@@ -14730,3 +14730,85 @@ html[lang="ml"] .sugg-info-card h2 {
 }
 /* END D&J Quote */
 
+/* ==========================================================================
+   Digambaran (ദിഗംബരൻ) AI Assistant & Kusruthi Chodhyangal Styles
+   ========================================================================== */
+.digambaran-float-btn {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 150;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #064e3b 0%, #022c22 100%);
+  color: #fde68a;
+  border: 1.5px solid rgba(245, 158, 11, 0.45);
+  border-radius: 9999px;
+  padding: 8px 16px 8px 10px;
+  font-family: var(--font-sans, "Inter", "Noto Sans Malayalam", sans-serif);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, border-color 0.2s ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.digambaran-float-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  border-color: #f59e0b;
+  box-shadow: 0 14px 32px rgba(245, 158, 11, 0.25), 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+.digambaran-float-btn:active {
+  transform: scale(0.96);
+}
+.digambaran-float-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #f59e0b 0%, #b45309 100%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+.digambaran-float-copy {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+  text-align: left;
+}
+.digambaran-float-copy small {
+  font-size: 0.65rem;
+  color: #6ee7b7;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.digambaran-float-copy strong {
+  font-size: 0.85rem;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+@media (max-width: 768px) {
+  .digambaran-float-btn {
+    left: 12px;
+    bottom: calc(76px + env(safe-area-inset-bottom, 0px)) !important;
+    padding: 6px 12px 6px 8px;
+  }
+  .digambaran-float-avatar {
+    width: 28px;
+    height: 28px;
+    font-size: 1rem;
+  }
+  .digambaran-float-copy strong {
+    font-size: 0.78rem;
+  }
+  .digambaran-float-copy small {
+    font-size: 0.6rem;
+  }
+}
+

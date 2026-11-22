@@ -9,6 +9,10 @@
 
   // Common Manglish to Malayalam & English keyword synonym dictionary
   const MANGLISH_MAP = {
+    "digambaran": ["ദിഗംബരൻ", "digambaran", "ai", "chatbot", "സഹായി"],
+    "riddle": ["കുസൃതിച്ചോദ്യം", "കുസൃതി", "riddle", "joke", "തമാശ"],
+    "kusruthi": ["കുസൃതിച്ചോദ്യം", "കുസൃതി", "riddle", "kusruthi"],
+    "joke": ["തമാശ", "കുസൃതി", "joke", "riddle"],
     "iqama": ["ഇഖാമ", "iqama", "id card", "residence"],
     "ikama": ["ഇഖാമ", "iqama"],
     "huroob": ["ഹുറൂബ്", "huroob", "absconding"],
@@ -81,6 +85,17 @@
 
   // Base Tools & Services Dataset
   const BASE_TOOLS = [
+    {
+      id: "tool-digambaran",
+      category: "tools",
+      categoryLabel: "🛠️ ടൂളുകൾ & സഹായി",
+      icon: "🧙‍♂️",
+      title: "ദിഗംബരൻ AI സഹായി & കുസൃതിച്ചോദ്യങ്ങൾ",
+      titleEn: "Digambaran AI Assistant & Riddles",
+      subtitle: "100% ഓഫ്‌ലൈൻ AI ചാറ്റ്ബോട്ട് & 18+ രസകരമായ കുസൃതിച്ചോദ്യങ്ങൾ",
+      url: "javascript:window.openDigambaran()",
+      keywords: ["digambaran", "ai", "bot", "chatbot", "riddle", "joke", "kusruthi", "ദിഗംബരൻ", "കുസൃതി", "തമാശ", "ചോദ്യം", "സഹായി"]
+    },
     {
       id: "tool-eosb",
       category: "tools",
