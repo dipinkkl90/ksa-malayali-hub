@@ -68,6 +68,14 @@
       </div>
 
       <div class="topbar-actions">
+        <!-- Site-Wide Instant Search Button -->
+        <button type="button" id="site-search-btn" class="nav-btn nav-btn-search" aria-label="Search KSA Malayali Hub" title="തിരയുക (Search)">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span class="search-btn-label">തിരയുക</span>
+        </button>
         <a href="https://wa.me/447460646263?text=Hi%20D%26J!" target="_blank" rel="noopener noreferrer" class="nav-btn nav-btn-accent" style="text-decoration:none;">
           <span>💬 കോൺടാക്റ്റ്</span>
         </a>
@@ -225,5 +233,8 @@
   </script>
   <!-- PWA Offline & Install Controller -->
   <script src="../js/pwa.js" defer></script>
+  <script src="./js/html2pdf.bundle.min.js"></script>
+  <script src="./js/pdf_generator.js?v=20261122_v25"></script>
+  <script src="./js/site_search.js?v=20261122_v25"></script>
 </body>
 </html>

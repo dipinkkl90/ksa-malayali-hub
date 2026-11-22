@@ -1,7 +1,7 @@
 // KSA Malayali Hub — Progressive Web App Service Worker (v4.0)
 // High-performance Offline Cache & Dynamic Resilience
-const CACHE_VERSION = "ksa-malayali-hub-v6";
-const DYNAMIC_CACHE = "ksa-malayali-dynamic-v5";
+const CACHE_VERSION = "ksa-malayali-hub-v7";
+const DYNAMIC_CACHE = "ksa-malayali-dynamic-v6";
 
 const CORE_ASSETS = [
   "/",
@@ -31,6 +31,10 @@ const CORE_ASSETS = [
   "/js/prayer_calendar.js",
   "/js/translator.js",
   "/js/vision_fifa.js",
+  "/js/site_search.js",
+  "/js/pdf_generator.js",
+  "/js/html2pdf.bundle.min.js",
+  "/js/features_summary.js",
   "/css/styles.css",
   "/js/app.js",
   "/js/data.js",

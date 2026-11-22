@@ -1739,7 +1739,11 @@
     if (printBtn && !printBtn.hasAttribute("data-listener")) {
       printBtn.setAttribute("data-listener", "true");
       printBtn.addEventListener("click", () => {
-        window.print();
+        if (window.currentActiveReadingBookId && typeof window.downloadBookPdf === "function") {
+          window.downloadBookPdf(window.currentActiveReadingBookId);
+        } else {
+          window.print();
+        }
       });
     }
   }
@@ -1821,6 +1825,7 @@
   }
 
   window.openBookReader = function(bookId) {
+    window.currentActiveReadingBookId = bookId;
     const books = window.MALAYALAM_LIBRARY_DATA || [];
     const book = books.find((b) => b.id === bookId);
     if (!book) return;
@@ -1851,6 +1856,9 @@
   }
 
   window.downloadBookPdf = function(bookId) {
+    if (typeof window.realDownloadBookPdf === "function") {
+      return window.realDownloadBookPdf(bookId);
+    }
     const books = window.MALAYALAM_LIBRARY_DATA || [];
     const book = books.find((b) => b.id === bookId);
     if (!book) return;

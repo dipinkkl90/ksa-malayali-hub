@@ -61,6 +61,14 @@
       </div>
 
       <div class="topbar-actions">
+        <!-- Site-Wide Instant Search Button -->
+        <button type="button" id="site-search-btn" class="nav-btn nav-btn-search" aria-label="Search KSA Malayali Hub" title="തിരയുക (Search)">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span class="search-btn-label">തിരയുക</span>
+        </button>
         <a href="https://wa.me/447460646263?text=Hi%20D%26J%2C%20suggesting%20a%20spot" target="_blank" rel="noopener noreferrer" class="nav-btn nav-btn-accent" title="Suggest a Spot">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
@@ -169,6 +177,32 @@
           <h2 class="utility-section-title">പ്രവാസികൾക്ക് ഉപകാരപ്രദമായ ഔദ്യോഗിക ഗൈഡുകൾ</h2>
           <p class="utility-section-desc">സൗദി തൊഴിൽ നിയമം, ദല്ല ഡ്രൈവിംഗ് ലൈസൻസ് ടെസ്റ്റ് ചോദ്യങ്ങൾ, സ്പോക്കൺ അറബിക് &amp; നോർക്ക ഹാൻഡ്ബുക്ക്</p>
         </div>
+
+      <!-- Pravasi Full PDF Downloads Banner -->
+      <div class="pravasi-pdf-banner-card" style="margin-bottom: 24px;">
+        <div class="pdf-banner-header">
+          <span class="pdf-banner-badge">📄 സൗജന്യ ഡിജിറ്റൽ ഗൈഡുകൾ (OFFLINE PDF)</span>
+          <h2 id="pdf-banner-title">സൗദി പ്രവാസി സമ്പൂർണ്ണ PDF ഡൗൺലോഡുകൾ</h2>
+          <p>ഇന്റർനെറ്റ് ഇല്ലാതെയും മൊബൈലിൽ സൂക്ഷിച്ചു വെക്കാൻ കഴിയുന്ന സമ്പൂർണ്ണ മലയാളം റെഫറൻസ് ഗൈഡുകൾ — 1-ക്ലിക്കിൽ ഡൗൺലോഡ് ചെയ്യാം.</p>
+        </div>
+        <div class="pdf-banner-actions">
+          <button type="button" class="btn-pdf-download btn-pdf-primary" onclick="window.downloadFullPravasiGuidePdf()">
+            <span class="pdf-btn-icon">⬇️</span>
+            <div class="pdf-btn-text">
+              <strong>സൗദി പ്രവാസി സമ്പൂർണ്ണ ഗൈഡ് (PDF)</strong>
+              <small>എമർജൻസി, തൊഴിൽ നിയമം, ഇഖാമ, മരുന്നുകൾ, സിം കോഡുകൾ</small>
+            </div>
+          </button>
+          <button type="button" class="btn-pdf-download btn-pdf-accent" onclick="window.downloadFullDictionaryPdf()">
+            <span class="pdf-btn-icon">📖</span>
+            <div class="pdf-btn-text">
+              <strong>അറബിക്-മലയാളം നിത്യോപയോഗ ഡിക്ഷണറി (PDF)</strong>
+              <small>ആശുപത്രി, കടകൾ, ജോലി, യാത്ര സംഭാഷണങ്ങൾ &amp; ഉച്ചാരണം</small>
+            </div>
+          </button>
+        </div>
+      </div>
+
       </div>
 
       <!-- 4 Core Utility PDF Guide Cards -->
@@ -483,5 +517,8 @@
       if (savedTheme) document.documentElement.setAttribute('data-theme', savedTheme);
     }
   </script>
+  <script src="./js/html2pdf.bundle.min.js"></script>
+  <script src="./js/pdf_generator.js?v=20261122_v25"></script>
+  <script src="./js/site_search.js?v=20261122_v25"></script>
 </body>
 </html>

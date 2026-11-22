@@ -73,6 +73,14 @@
       </div>
 
       <div class="topbar-actions">
+        <!-- Site-Wide Instant Search Button -->
+        <button type="button" id="site-search-btn" class="nav-btn nav-btn-search" aria-label="Search KSA Malayali Hub" title="തിരയുക (Search)">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span class="search-btn-label">തിരയുക</span>
+        </button>
         <a href="/" class="nav-btn" style="text-decoration:none;">
           <span>← ഹോം പേജ്</span>
         </a>
@@ -155,7 +163,37 @@
       </div>
     </header>
 
-    <!-- SECTION A: One-Tap Emergency Helplines -->
+    
+    <!-- Pravasi Full PDF Downloads Banner -->
+    <section class="pravasi-pdf-banner-section" aria-labelledby="pdf-banner-title">
+      <div class="container">
+        <div class="pravasi-pdf-banner-card">
+          <div class="pdf-banner-header">
+            <span class="pdf-banner-badge">📄 സൗജന്യ ഡിജിറ്റൽ ഗൈഡുകൾ (OFFLINE PDF)</span>
+            <h2 id="pdf-banner-title">സൗദി പ്രവാസി സമ്പൂർണ്ണ PDF ഡൗൺലോഡുകൾ</h2>
+            <p>ഇന്റർനെറ്റ് ഇല്ലാതെയും മൊബൈലിൽ സൂക്ഷിച്ചു വെക്കാൻ കഴിയുന്ന സമ്പൂർണ്ണ മലയാളം റെഫറൻസ് ഗൈഡുകൾ — 1-ക്ലിക്കിൽ ഡൗൺലോഡ് ചെയ്യാം.</p>
+          </div>
+          <div class="pdf-banner-actions">
+            <button type="button" class="btn-pdf-download btn-pdf-primary" onclick="window.downloadFullPravasiGuidePdf()">
+              <span class="pdf-btn-icon">⬇️</span>
+              <div class="pdf-btn-text">
+                <strong>സൗദി പ്രവാസി സമ്പൂർണ്ണ ഗൈഡ് (PDF)</strong>
+                <small>എമർജൻസി, തൊഴിൽ നിയമം, ഇഖാമ, മരുന്നുകൾ, സിം കോഡുകൾ</small>
+              </div>
+            </button>
+            <button type="button" class="btn-pdf-download btn-pdf-accent" onclick="window.downloadFullDictionaryPdf()">
+              <span class="pdf-btn-icon">📖</span>
+              <div class="pdf-btn-text">
+                <strong>അറബിക്-മലയാളം നിത്യോപയോഗ ഡിക്ഷണറി (PDF)</strong>
+                <small>ആശുപത്രി, കടകൾ, ജോലി, യാത്ര സംഭാഷണങ്ങൾ &amp; ഉച്ചാരണം</small>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- SECTION A: One-Tap Emergency Helplines -->
     <section class="sahayi-section" id="emergency-helplines" aria-labelledby="sec-a-title">
       <div class="sahayi-section-head">
         <span class="sahayi-section-icon">🚨</span>
@@ -1018,6 +1056,9 @@
   <script src="./js/sahayi.js?v=20261121_v17"></script>
   <script src="./js/translator.js?v=20261121_v24"></script>
   <!-- PWA Offline & Install Controller -->
+  <script src="./js/html2pdf.bundle.min.js"></script>
+  <script src="./js/pdf_generator.js?v=20261122_v25"></script>
+  <script src="./js/site_search.js?v=20261122_v25"></script>
   <script src="./js/pwa.js" defer></script>
 </body>
 </html>

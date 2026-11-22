@@ -1,6 +1,7 @@
 /**
  * KSA Malayali Hub — Explorer Hub Controller (/explore)
  * Handles 3 Tabs: E-Library, Tourism & Hidden Spots, Heritage & Agriculture
+ * Enhanced with Real Full PDF Downloads and Direct Book Opening
  */
 
 (function () {
@@ -50,7 +51,7 @@
   const initialTab = initialParams.get("tab") || window.location.hash.replace("#", "") || "library";
   switchTab(initialTab);
 
-  // 2. Tab 1: Render Digital Books from window.LIBRARY_DATA
+  // 2. Tab 1: Render Digital Books from window.MALAYALAM_LIBRARY_DATA
   function initLibrary() {
     const booksContainer = document.getElementById("library-books-grid");
     const searchInput = document.getElementById("library-search");
@@ -96,9 +97,14 @@
             <p style="font-size:0.84rem; color:var(--text-muted); margin:0 0 10px;">${book.author} (${book.year || ""})</p>
             <p style="font-size:0.86rem; color:var(--text-secondary); line-height:1.5; margin:0 0 16px; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;">${book.summary || ""}</p>
           </div>
-          <button type="button" class="airport-action-btn view-book-btn" data-id="${book.id}" style="width:100%; margin:0;">
-            <span>📖 വായിക്കുക / വിവരങ്ങൾ ↗</span>
-          </button>
+          <div style="display:flex; gap:8px; margin-top:10px;">
+            <button type="button" class="airport-action-btn view-book-btn" data-id="${book.id}" style="flex:1; margin:0;">
+              <span>📖 വായിക്കുക</span>
+            </button>
+            <button type="button" class="airport-action-btn pdf-book-btn" data-id="${book.id}" style="flex:1; margin:0; background:linear-gradient(135deg,#047857,#065f46); color:#fff; border-color:#047857;">
+              <span>⬇️ PDF</span>
+            </button>
+          </div>
         </div>
       `
         )
@@ -110,6 +116,16 @@
           const bookId = btn.getAttribute("data-id");
           const found = books.find((b) => b.id === bookId);
           if (found) openBookModal(found);
+        });
+      });
+
+      // Add event listeners for PDF download
+      booksContainer.querySelectorAll(".pdf-book-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const bookId = btn.getAttribute("data-id");
+          if (typeof window.downloadBookPdf === "function") {
+            window.downloadBookPdf(bookId);
+          }
         });
       });
     }
@@ -131,26 +147,43 @@
     });
 
     renderBooks();
+
+    // Auto open if book query parameter provided
+    const bookParam = initialParams.get("book");
+    if (bookParam) {
+      const targetBook = books.find((b) => b.id === bookParam);
+      if (targetBook) {
+        setTimeout(() => openBookModal(targetBook), 300);
+      }
+    }
   }
 
   // Book Reader Modal
+  let currentActiveBook = null;
+
   function openBookModal(book) {
+    currentActiveBook = book;
     let modal = document.getElementById("book-modal");
     if (!modal) {
       modal = document.createElement("div");
       modal.id = "book-modal";
       modal.className = "modal-backdrop";
       modal.innerHTML = `
-        <div class="modal-card" style="max-width:680px; max-height:85vh; display:flex; flex-direction:column;">
+        <div class="modal-card" style="max-width:720px; max-height:85vh; display:flex; flex-direction:column;">
           <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border); padding-bottom:14px; margin-bottom:14px;">
             <div>
               <span id="bm-badge" style="background:#047857; color:#fff; font-size:0.75rem; font-weight:800; padding:2px 8px; border-radius:6px;"></span>
               <h3 id="bm-title" style="font-size:1.35rem; font-weight:800; color:var(--text); margin:6px 0 2px;"></h3>
               <p id="bm-author" style="font-size:0.86rem; color:var(--text-muted); margin:0;"></p>
             </div>
-            <button type="button" id="bm-close" class="modal-close-btn" aria-label="Close">✕</button>
+            <div style="display:flex; align-items:center; gap:8px;">
+              <button type="button" id="bm-download-btn" class="reader-pdf-download-btn" title="Download Complete PDF">
+                <span>⬇️ ഫുൾ PDF</span>
+              </button>
+              <button type="button" id="bm-close" class="modal-close-btn" aria-label="Close">✕</button>
+            </div>
           </div>
-          <div id="bm-body" style="overflow-y:auto; line-height:1.7; font-size:0.95rem; color:var(--text-secondary); white-space:pre-line; padding-right:8px;"></div>
+          <div id="bm-body" style="overflow-y:auto; line-height:1.8; font-size:0.96rem; color:var(--text); white-space:pre-line; padding-right:8px;"></div>
         </div>
       `;
       document.body.appendChild(modal);
@@ -158,6 +191,12 @@
       modal.querySelector("#bm-close").addEventListener("click", () => {
         modal.classList.remove("open");
         document.body.style.overflow = "";
+      });
+
+      modal.querySelector("#bm-download-btn").addEventListener("click", () => {
+        if (currentActiveBook && typeof window.downloadBookPdf === "function") {
+          window.downloadBookPdf(currentActiveBook.id);
+        }
       });
 
       modal.addEventListener("click", (e) => {

@@ -1,6 +1,6 @@
 // KSA Malayali Hub — Health & Language Data (ആരോഗ്യം & ഭാഷ)
 
-const HEALTH_DATA = {
+var HEALTH_DATA = (typeof window !== "undefined" && window.HEALTH_DATA) ? window.HEALTH_DATA : {
   // 1. Insurance Providers Directory
   insuranceProviders: [
     { name: "Bupa Arabia", nameMl: "ബൂപ അറേബ്യ", link: "https://bupa.com.sa/", badge: "Market Leader" },
@@ -785,3 +785,5 @@ const HEALTH_DATA = {
 if (typeof module !== "undefined" && module.exports) {
   module.exports = HEALTH_DATA;
 }
+
+if (typeof window !== "undefined") { window.HEALTH_DATA = HEALTH_DATA; }
