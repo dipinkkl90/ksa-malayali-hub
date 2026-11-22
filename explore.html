@@ -23,7 +23,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Malayalam:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="./css/styles.css?v=20261122_v33">
+  <link rel="stylesheet" href="./css/styles.css?v=20261122_v34">
 </head>
 <body>
   <!-- Sticky Top Navigation -->
@@ -285,19 +285,28 @@
 
         <!-- Search & Filter Controls -->
         <div style="display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between; margin-bottom:20px;">
-          <input type="text" id="library-search" placeholder="🔍 പുസ്തകത്തിന്റെ പേരോ എഴുത്തുകാരനെയോ തിരയുക..." style="flex:1; min-width:240px; padding:12px 18px; border-radius:999px; border:1px solid var(--border); background:var(--surface); color:var(--text); font-size:0.9rem; outline:none;">
-          <div style="display:flex; gap:8px; overflow-x:auto; padding:4px 0;">
-            <button type="button" class="sub-nav-pill active library-cat-btn" data-cat="all">എല്ലാം</button>
-            <button type="button" class="sub-nav-pill library-cat-btn" data-cat="novels">നോവലുകൾ</button>
-            <button type="button" class="sub-nav-pill library-cat-btn" data-cat="stories">ചെറുകഥകൾ</button>
-            <button type="button" class="sub-nav-pill library-cat-btn" data-cat="poetry">കവിതകൾ</button>
-            <button type="button" class="sub-nav-pill library-cat-btn" data-cat="history">ചരിത്രം</button>
+          <input type="text" id="library-search" placeholder="പുസ്തകത്തിന്റെ പേരോ എഴുത്തുകാരനോ തിരയുക..." aria-label="Search Malayalam Books" style="flex:1; min-width:240px; padding:12px 18px; border-radius:999px; border:1px solid var(--border); background:var(--surface); color:var(--text); font-size:0.9rem; outline:none; transition:border-color 0.2s ease;">
+          <div id="library-category-tabs" style="display:flex; gap:8px; overflow-x:auto; padding:4px 0; -webkit-overflow-scrolling:touch;">
+            <button type="button" class="sub-nav-pill active library-cat-btn" data-cat="all">എല്ലാം (100)</button>
+            <button type="button" class="sub-nav-pill library-cat-btn" data-cat="pravasi">പ്രവാസി ഗൈഡുകൾ (10)</button>
+            <button type="button" class="sub-nav-pill library-cat-btn" data-cat="novels">നോവലുകൾ (12)</button>
+            <button type="button" class="sub-nav-pill library-cat-btn" data-cat="stories">കഥകൾ &amp; ഹാസ്യം (15)</button>
+            <button type="button" class="sub-nav-pill library-cat-btn" data-cat="poetry">കവിതകൾ (30)</button>
+            <button type="button" class="sub-nav-pill library-cat-btn" data-cat="classics">ക്ലാസിക്കുകൾ &amp; മാപ്പിളപ്പാട്ട് (20)</button>
+            <button type="button" class="sub-nav-pill library-cat-btn" data-cat="history">ചരിത്രം &amp; യാത്ര (13)</button>
           </div>
         </div>
 
         <!-- Books Dynamic Grid -->
         <div id="library-books-grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(290px, 1fr)); gap:18px;">
           <!-- Populated dynamically via js/explore.js -->
+        </div>
+
+        <!-- Load More Container -->
+        <div id="library-load-more-wrap" style="text-align:center; margin-top:28px;">
+          <button type="button" id="library-load-more-btn" class="nav-btn nav-btn-primary" style="padding:12px 28px; font-weight:700; border-radius:999px; cursor:pointer;">
+            <span>കൂടുതൽ കാണുക (Load More) ⬇️</span>
+          </button>
         </div>
       </div>
 
@@ -508,7 +517,7 @@
   <script src="./js/tourism_data.js"></script>
   <script src="./js/explore.js"></script>
   <script src="./js/html2pdf.bundle.min.js"></script>
-  <script src="./js/pdf_generator.js?v=20261122_v25"></script>
+  <script src="./js/pdf_generator.js?v=20261122_v34"></script>
   <script src="./js/site_search.js?v=20261122_v25"></script>
   <script src="./js/pwa.js" defer></script>
   <script>

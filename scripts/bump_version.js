@@ -7,10 +7,10 @@ const rootDir = path.join(__dirname, '..');
 const swPath = path.join(rootDir, 'sw.js');
 if (fs.existsSync(swPath)) {
   let sw = fs.readFileSync(swPath, 'utf8');
-  sw = sw.replace(/const CACHE_VERSION = "ksa-malayali-hub-v\d+";/, 'const CACHE_VERSION = "ksa-malayali-hub-v15";');
-  sw = sw.replace(/const DYNAMIC_CACHE = "ksa-malayali-dynamic-v\d+";/, 'const DYNAMIC_CACHE = "ksa-malayali-dynamic-v14";');
+  sw = sw.replace(/const CACHE_VERSION = "ksa-malayali-hub-v\d+";/, 'const CACHE_VERSION = "ksa-malayali-hub-v16";');
+  sw = sw.replace(/const DYNAMIC_CACHE = "ksa-malayali-dynamic-v\d+";/, 'const DYNAMIC_CACHE = "ksa-malayali-dynamic-v15";');
   fs.writeFileSync(swPath, sw, 'utf8');
-  console.log('sw.js cache version bumped to v15');
+  console.log('sw.js cache version bumped to v16');
 }
 
 // 2. Update styles.css and js query versions in all HTML files
@@ -33,10 +33,16 @@ const htmlFiles = walk(rootDir);
 htmlFiles.forEach(file => {
   let content = fs.readFileSync(file, 'utf8');
   if (content.includes('styles.css?v=')) {
-    content = content.replace(/styles\.css\?v=[^"'\s>]+/g, 'styles.css?v=20261122_v33');
+    content = content.replace(/styles\.css\?v=[^"'\s>]+/g, 'styles.css?v=20261122_v34');
   }
-  if (content.includes('saudi_page.js?v=')) {
-    content = content.replace(/saudi_page\.js\?v=[^"'\s>]+/g, 'saudi_page.js?v=20261122_v33');
+  if (content.includes('explore.js?v=')) {
+    content = content.replace(/explore\.js\?v=[^"'\s>]+/g, 'explore.js?v=20261122_v34');
+  }
+  if (content.includes('library_data.js?v=')) {
+    content = content.replace(/library_data\.js\?v=[^"'\s>]+/g, 'library_data.js?v=20261122_v34');
+  }
+  if (content.includes('pdf_generator.js?v=')) {
+    content = content.replace(/pdf_generator\.js\?v=[^"'\s>]+/g, 'pdf_generator.js?v=20261122_v34');
   }
   fs.writeFileSync(file, content, 'utf8');
   console.log('Bumped asset versions in', path.relative(rootDir, file));

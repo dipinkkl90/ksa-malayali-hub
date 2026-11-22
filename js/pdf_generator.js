@@ -422,66 +422,120 @@
     }, 150);
   };
 
-  // 3. GENERATE: E-Library Full Book PDF
-  window.realDownloadBookPdf = window.downloadBookPdf = function (bookId) {
-    const books = window.MALAYALAM_LIBRARY_DATA || [];
-    const book = books.find((b) => b.id === bookId);
+  // 3. GENERATE: E-Library Full Book PDF (Light-Mode Print-Ready & Non-Blank Guarantee)
+  window.realDownloadBookPdf = window.downloadBookPdf = async function (bookId) {
+    const books = window.MALAYALAM_LIBRARY_DATA || window.LIBRARY_DATA || [];
+    const book = books.find((b) => String(b.id) === String(bookId));
     if (!book) {
       showToast("പുസ്തകം കണ്ടെത്താനായില്ല.", "error");
       return;
     }
 
-    showPdfSpinner(`'${book.title}' PDF തയ്യാറാക്കുന്നു...`, `${book.author} രചിച്ച പൂർണ്ണ ഗ്രന്ഥം ഡിജിറ്റലായി രൂപപ്പെടുത്തുന്നു...`);
+    showPdfSpinner(`'${book.title}' PDF തയ്യാറാക്കുന്നു...`, `${book.author} രചിച്ച കൃതി ഡിജിറ്റലായി രൂപപ്പെടുത്തുന്നു. ദയവായി അല്പം കാത്തിരിക്കൂ...`);
+
+    try {
+      // Ensure Malayalam and web fonts are fully loaded before rendering
+      if (document.fonts && document.fonts.ready) {
+        await document.fonts.ready;
+      }
+    } catch (e) {
+      console.warn("Fonts ready check:", e);
+    }
 
     setTimeout(() => {
       const container = document.createElement("div");
-      container.className = "pdf-render-wrapper";
+      container.className = "pdf-render-wrapper light-pdf-document";
+      // Force strict light-mode print styles with white background and dark text (#111827)
+      container.style.cssText = "position: fixed; left: 0; top: 0; width: 794px; background: #ffffff !important; color: #111827 !important; z-index: -9999; padding: 24px 28px; box-sizing: border-box; font-family: 'Noto Sans Malayalam', 'Inter', sans-serif;";
+
       const cleanContent = (book.full_content || book.summary || "")
         .split("\n\n")
-        .map(p => `<p style="margin: 0 0 14px; line-height: 1.85; text-align: justify;">${p.replace(/\n/g, "<br>")}</p>`)
+        .map(p => `<p style="margin: 0 0 14px; line-height: 1.85; text-align: justify; color: #1f2937 !important;">${p.replace(/\n/g, "<br>")}</p>`)
         .join("");
 
       container.innerHTML = `
-        <div style="font-family: 'Noto Sans Malayalam', 'Inter', sans-serif; color: #0f172a; background: #ffffff; padding: 14px; line-height: 1.8; font-size: 13px;">
-          <!-- Book Header Banner -->
-          <div style="background: linear-gradient(135deg, ${book.theme_color || '#854d0e'} 0%, #0f172a 100%); color: #ffffff; padding: 24px; border-radius: 12px; margin-bottom: 24px; text-align: center;">
-            <span style="display: inline-block; background: rgba(255,255,255,0.2); padding: 3px 12px; border-radius: 999px; font-size: 11px; font-weight: 700; margin-bottom: 8px;">
-              ${book.category_label || "മലയാള സാഹിത്യം"}
-            </span>
-            <h1 style="margin: 0 0 6px; font-size: 26px; font-weight: 800; color: #fef08a;">${book.title}</h1>
-            <div style="font-size: 13px; color: #e2e8f0; margin-bottom: 12px;">${book.title_en || ""} · ${book.year || ""}</div>
-            <div style="font-size: 14px; font-weight: 700; color: #f8fafc;">✍️ രചന: ${book.author} (${book.author_en || ""})</div>
-            <div style="font-size: 11px; color: #cbd5e1; margin-top: 8px;">
-              ⭐ റേറ്റിംഗ്: ${book.rating ? book.rating.toFixed(1) : "4.8"} / 5.0 · 📄 ${book.pages || "200+"} പേജുകൾ · 🔖 ${book.chapters_count || 1} ഭാഗങ്ങൾ
+        <div style="font-family: 'Noto Sans Malayalam', 'Inter', sans-serif; color: #111827 !important; background: #ffffff !important; line-height: 1.8; font-size: 13.5px;">
+          <!-- Header Banner -->
+          <div style="background: linear-gradient(135deg, #047857 0%, #064e3b 100%) !important; color: #ffffff !important; padding: 22px 24px; border-radius: 12px; margin-bottom: 22px; text-align: center; border: 2px solid #d97706;">
+            <div style="display: inline-block; background: rgba(255,255,255,0.2) !important; color: #ffffff !important; padding: 3px 12px; border-radius: 999px; font-size: 11px; font-weight: 700; margin-bottom: 8px;">
+              ${book.category_label || "മലയാള സാഹിത്യം"} · ${book.yearOrType || ""}
+            </div>
+            <h1 style="margin: 0 0 6px; font-size: 26px; font-weight: 800; color: #fef08a !important;">${book.title}</h1>
+            <div style="font-size: 14px; font-weight: 700; color: #f8fafc !important; margin-bottom: 6px;">✍️ രചന: ${book.author} ${book.author_en ? `(${book.author_en})` : ""}</div>
+            <div style="font-size: 11px; color: #cbd5e1 !important;">
+              ⭐ ${book.rating ? book.rating.toFixed(1) : "5.0"} / 5.0 · 📄 ${book.pages || "200+"} പേജുകൾ · 🏷️ ബുക്ക് #${book.id}
             </div>
           </div>
 
           <!-- Summary Box -->
-          <div style="background: #f8fafc; border-left: 4px solid #047857; padding: 12px 16px; border-radius: 0 8px 8px 0; margin-bottom: 24px; font-size: 12.5px;">
-            <div style="font-weight: 800; color: #047857; margin-bottom: 4px;">📖 സംഗ്രഹം (Synopsis):</div>
-            <p style="margin: 0; color: #334155; line-height: 1.7;">${book.summary}</p>
+          <div style="background: #f8fafc !important; border-left: 4px solid #047857 !important; padding: 14px 18px; border-radius: 0 8px 8px 0; margin-bottom: 22px; font-size: 13px;">
+            <div style="font-weight: 800; color: #047857 !important; margin-bottom: 4px;">📖 സംഗ്രഹം (Synopsis):</div>
+            <p style="margin: 0; color: #374151 !important; line-height: 1.75;">${book.summary}</p>
           </div>
 
-          <!-- Full Content / Chapters -->
-          <div style="margin-bottom: 30px;">
-            <div style="font-size: 16px; font-weight: 800; color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; margin-bottom: 16px;">
-              ഗ്രന്ഥ ഉള്ളടക്കം (Full Book Content)
+          <!-- Full Content / Excerpt -->
+          <div style="margin-bottom: 28px;">
+            <div style="font-size: 16px; font-weight: 800; color: #111827 !important; border-bottom: 2px solid #e5e7eb !important; padding-bottom: 8px; margin-bottom: 16px;">
+              ${book.id > 90 ? "സമ്പൂർണ്ണ ഗൈഡ് വിവരങ്ങൾ (Full Guide)" : "ഗ്രന്ഥ വിവരണം & പ്രാരംഭ ഭാഗങ്ങൾ (Book Overview)"}
             </div>
-            <div style="font-size: 13px; color: #1e293b;">
+            <div style="font-size: 13.5px; color: #1f2937 !important;">
               ${cleanContent}
             </div>
+            ${book.id <= 90 ? `
+              <div style="margin-top: 18px; padding: 12px; background: #ecfdf5 !important; border-radius: 8px; border: 1px dashed #059669 !important; text-align: center; font-size: 12px; color: #065f46 !important;">
+                ഈ കൃതിയുടെ പൂർണ്ണ ഭാഗങ്ങൾ മലയാളം വിക്കിഗ്രന്ഥശാലയിൽ വായിക്കാം: <strong>${book.readUrl}</strong>
+              </div>
+            ` : ""}
           </div>
 
-          <!-- Book Footer -->
-          <div style="text-align: center; border-top: 2px solid #e2e8f0; padding-top: 14px; font-size: 11px; color: #64748b; page-break-inside: avoid;">
-            <p style="margin: 0 0 4px; font-weight: 700; color: #047857;">KSA MALAYALI HUB — MALAYALAM DIGITAL E-LIBRARY</p>
-            <p style="margin: 0;">സൗജന്യ ഓൺലൈൻ വായനശാല: <strong>https://ksa-malayali-hub.vercel.app/explore?tab=library</strong></p>
+          <!-- Footer -->
+          <div style="text-align: center; border-top: 2px solid #e5e7eb !important; padding-top: 14px; font-size: 11px; color: #6b7280 !important; page-break-inside: avoid;">
+            <p style="margin: 0 0 4px; font-weight: 700; color: #047857 !important;">KSA MALAYALI HUB — 100-BOOK MALAYALAM E-LIBRARY</p>
+            <p style="margin: 0; color: #6b7280 !important;">സൗജന്യ ഓൺലൈൻ വായനശാല: <strong>https://ksa-malayali-hub.vercel.app/explore?tab=library</strong></p>
           </div>
         </div>
       `;
 
+      document.body.appendChild(container);
+
       const safeFilename = `${(book.title_en || book.title).replace(/[^a-zA-Z0-9]/g, "_")}_KSA_Malayali_Hub.pdf`;
-      renderElementToPdf(container, safeFilename, book.title);
-    }, 150);
+
+      const opt = {
+        margin: [8, 8, 8, 8],
+        filename: safeFilename,
+        image: { type: "jpeg", quality: 0.98 },
+        html2canvas: {
+          scale: 2,
+          useCORS: true,
+          letterRendering: true,
+          logging: false,
+          backgroundColor: "#ffffff"
+        },
+        jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+        pagebreak: { mode: ["css", "legacy", "avoid-all"] }
+      };
+
+      if (typeof window.html2pdf === "function") {
+        window.html2pdf()
+          .set(opt)
+          .from(container)
+          .save()
+          .then(() => {
+            container.remove();
+            hidePdfSpinner();
+            showToast(`'${book.title}' PDF വിജയകരമായി ഡൗൺലോഡ് ചെയ്തു! ✅`);
+          })
+          .catch((err) => {
+            console.error("html2pdf generation error:", err);
+            container.remove();
+            hidePdfSpinner();
+            showToast("PDF ഡൗൺലോഡ് ചെയ്യുന്നതിൽ തടസ്സം നേരിട്ടു. പ്രിന്റ് ഓപ്ഷൻ തുറക്കുന്നു...", "info");
+            window.print();
+          });
+      } else {
+        container.remove();
+        renderElementToPdf(container, safeFilename, book.title);
+      }
+    }, 200);
   };
 })();

@@ -7,6 +7,16 @@
 (function () {
   "use strict";
 
+  function escapeHtml(str) {
+    if (str === null || str === undefined) return "";
+    return String(str)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
+
   // Elements
   const tabBtns = document.querySelectorAll(".explore-tab-btn");
   const tabPanes = document.querySelectorAll(".explore-tab-pane");
@@ -56,52 +66,66 @@
     const booksContainer = document.getElementById("library-books-grid");
     const searchInput = document.getElementById("library-search");
     const categoryBtns = document.querySelectorAll(".library-cat-btn");
-    const books = window.LIBRARY_DATA || window.MALAYALAM_LIBRARY_DATA || [];
+    const loadMoreWrap = document.getElementById("library-load-more-wrap");
+    const loadMoreBtn = document.getElementById("library-load-more-btn");
+    const books = window.MALAYALAM_LIBRARY_DATA || window.LIBRARY_DATA || [];
 
     if (!booksContainer) return;
 
     let activeCategory = "all";
     let searchQuery = "";
+    const PAGE_SIZE = 20;
+    let currentLimit = PAGE_SIZE;
 
     function renderBooks() {
       const filtered = books.filter((b) => {
         const matchesCat = activeCategory === "all" || b.category === activeCategory;
-        const matchesSearch =
-          searchQuery === "" ||
-          (b.title && b.title.toLowerCase().includes(searchQuery)) ||
-          (b.author && b.author.toLowerCase().includes(searchQuery)) ||
-          (b.title_en && b.title_en.toLowerCase().includes(searchQuery));
-        return matchesCat && matchesSearch;
+        if (!matchesCat) return false;
+        if (!searchQuery) return true;
+
+        const q = searchQuery;
+        const t = (b.title || "").toLowerCase();
+        const a = (b.author || "").toLowerCase();
+        const te = (b.title_en || "").toLowerCase();
+        const ae = (b.author_en || "").toLowerCase();
+        const cat = (b.category_label || "").toLowerCase();
+        const id = String(b.id);
+
+        return t.includes(q) || a.includes(q) || te.includes(q) || ae.includes(q) || cat.includes(q) || id === q;
       });
 
       if (filtered.length === 0) {
         booksContainer.innerHTML = `
-          <div style="grid-column:1/-1; text-align:center; padding:40px 20px; background:var(--surface); border-radius:14px; border:1px solid var(--border);">
-            <span style="font-size:2.5rem;">📖</span>
-            <p style="color:var(--text-secondary); margin-top:10px; font-weight:600;">പുസ്തകങ്ങൾ കണ്ടെത്താനായില്ല. മറ്റൊരു വാക്ക് തിരഞ്ഞു നോക്കൂ.</p>
+          <div style="grid-column:1/-1; text-align:center; padding:48px 20px; background:var(--surface); border-radius:16px; border:1px solid var(--border);">
+            <span style="font-size:2.8rem; display:block; margin-bottom:12px;">🔍</span>
+            <h4 style="color:var(--text); font-size:1.15rem; font-weight:800; margin:0 0 8px;">പുസ്തകങ്ങൾ കണ്ടെത്താനായില്ല</h4>
+            <p style="color:var(--text-secondary); font-size:0.9rem; margin:0;">മറ്റൊരു വാക്കോ എഴുത്തുകാരന്റെ പേരോ തിരഞ്ഞു നോക്കൂ.</p>
           </div>
         `;
+        if (loadMoreWrap) loadMoreWrap.style.display = "none";
         return;
       }
 
-      booksContainer.innerHTML = filtered
+      const visibleBooks = filtered.slice(0, currentLimit);
+
+      booksContainer.innerHTML = visibleBooks
         .map(
           (book) => `
-        <div class="library-card" style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-md); padding:20px; box-shadow:var(--shadow-sm); display:flex; flex-direction:column; justify-content:space-between;">
+        <div class="library-card" style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-md); padding:20px; box-shadow:var(--shadow-sm); display:flex; flex-direction:column; justify-content:space-between; transition:all 0.2s ease;">
           <div>
-            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
-              <span style="background:rgba(4,120,87,0.1); color:#047857; font-size:0.75rem; font-weight:800; padding:3px 10px; border-radius:999px;">${book.category_label || "വായന"}</span>
-              <span style="font-size:0.8rem; color:var(--text-muted); font-weight:700;">⭐ ${book.rating || "4.8"}</span>
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px;">
+              <span style="background:rgba(4,120,87,0.12); color:#047857; font-size:0.75rem; font-weight:800; padding:3px 10px; border-radius:999px; border:1px solid rgba(4,120,87,0.25);">${escapeHtml(book.category_label || "വായന")}</span>
+              <span style="font-size:0.78rem; color:var(--text-muted); font-weight:700; background:rgba(255,255,255,0.06); padding:2px 8px; border-radius:6px;">#${book.id}</span>
             </div>
-            <h4 style="font-size:1.15rem; font-weight:800; color:var(--text); margin:4px 0;">${book.title}</h4>
-            <p style="font-size:0.84rem; color:var(--text-muted); margin:0 0 10px;">${book.author} (${book.year || ""})</p>
-            <p style="font-size:0.86rem; color:var(--text-secondary); line-height:1.5; margin:0 0 16px; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;">${book.summary || ""}</p>
+            <h4 style="font-size:1.18rem; font-weight:800; color:var(--text); margin:4px 0 6px; line-height:1.35;">${escapeHtml(book.title)}</h4>
+            <p style="font-size:0.86rem; color:var(--text-muted); margin:0 0 10px; font-weight:600;">✍️ ${escapeHtml(book.author)} <span style="opacity:0.85;">(${escapeHtml(book.yearOrType || "")})</span></p>
+            <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.6; margin:0 0 16px; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;">${escapeHtml(book.summary || "")}</p>
           </div>
           <div style="display:flex; gap:8px; margin-top:10px;">
-            <button type="button" class="airport-action-btn view-book-btn" data-id="${book.id}" style="flex:1; margin:0;">
-              <span>📖 വായിക്കുക</span>
+            <button type="button" class="airport-action-btn view-book-btn" data-id="${book.id}" style="flex:1; margin:0; padding:10px 12px; font-size:0.85rem; font-weight:700;">
+              <span>📖 വായിക്കാം</span>
             </button>
-            <button type="button" class="airport-action-btn pdf-book-btn" data-id="${book.id}" style="flex:1; margin:0; background:linear-gradient(135deg,#047857,#065f46); color:#fff; border-color:#047857;">
+            <button type="button" class="airport-action-btn pdf-book-btn" data-id="${book.id}" style="flex:1; margin:0; padding:10px 12px; font-size:0.85rem; font-weight:700; background:linear-gradient(135deg,#047857,#065f46); color:#fff; border-color:#047857;">
               <span>⬇️ PDF</span>
             </button>
           </div>
@@ -110,11 +134,22 @@
         )
         .join("");
 
+      // Update Load More button
+      if (loadMoreWrap && loadMoreBtn) {
+        if (currentLimit < filtered.length) {
+          loadMoreWrap.style.display = "block";
+          const remaining = filtered.length - currentLimit;
+          loadMoreBtn.querySelector("span").textContent = `കൂടുതൽ കാണുക (${remaining} പുസ്തകങ്ങൾ ബാക്കി) ⬇️`;
+        } else {
+          loadMoreWrap.style.display = "none";
+        }
+      }
+
       // Add event listeners for reading modal
       booksContainer.querySelectorAll(".view-book-btn").forEach((btn) => {
         btn.addEventListener("click", () => {
           const bookId = btn.getAttribute("data-id");
-          const found = books.find((b) => b.id === bookId);
+          const found = books.find((b) => String(b.id) === String(bookId));
           if (found) openBookModal(found);
         });
       });
@@ -130,9 +165,17 @@
       });
     }
 
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener("click", () => {
+        currentLimit += PAGE_SIZE;
+        renderBooks();
+      });
+    }
+
     if (searchInput) {
       searchInput.addEventListener("input", (e) => {
         searchQuery = e.target.value.trim().toLowerCase();
+        currentLimit = PAGE_SIZE; // Reset limit when searching
         renderBooks();
       });
     }
@@ -142,6 +185,7 @@
         categoryBtns.forEach((b) => b.classList.remove("active"));
         btn.classList.add("active");
         activeCategory = btn.getAttribute("data-cat");
+        currentLimit = PAGE_SIZE; // Reset limit when changing category
         renderBooks();
       });
     });
@@ -151,7 +195,7 @@
     // Auto open if book query parameter provided
     const bookParam = initialParams.get("book");
     if (bookParam) {
-      const targetBook = books.find((b) => b.id === bookParam);
+      const targetBook = books.find((b) => String(b.id) === String(bookParam));
       if (targetBook) {
         setTimeout(() => openBookModal(targetBook), 300);
       }
@@ -169,21 +213,35 @@
       modal.id = "book-modal";
       modal.className = "modal-backdrop";
       modal.innerHTML = `
-        <div class="modal-card" style="max-width:720px; max-height:85vh; display:flex; flex-direction:column;">
-          <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border); padding-bottom:14px; margin-bottom:14px;">
+        <div class="modal-card" style="max-width:760px; max-height:88vh; display:flex; flex-direction:column; position:relative; overflow:hidden; border-radius:18px;">
+          <!-- Modal Header -->
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; border-bottom:1px solid var(--border); padding:16px 20px; flex-shrink:0;">
             <div>
-              <span id="bm-badge" style="background:#047857; color:#fff; font-size:0.75rem; font-weight:800; padding:2px 8px; border-radius:6px;"></span>
-              <h3 id="bm-title" style="font-size:1.35rem; font-weight:800; color:var(--text); margin:6px 0 2px;"></h3>
-              <p id="bm-author" style="font-size:0.86rem; color:var(--text-muted); margin:0;"></p>
+              <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+                <span id="bm-badge" style="background:#047857; color:#fff; font-size:0.75rem; font-weight:800; padding:3px 10px; border-radius:6px;"></span>
+                <span id="bm-year" style="font-size:0.8rem; color:var(--text-muted); font-weight:700;"></span>
+              </div>
+              <h3 id="bm-title" style="font-size:1.35rem; font-weight:800; color:var(--text); margin:0 0 4px; line-height:1.3;"></h3>
+              <p id="bm-author" style="font-size:0.88rem; color:var(--text-secondary); margin:0; font-weight:600;"></p>
             </div>
-            <div style="display:flex; align-items:center; gap:8px;">
-              <button type="button" id="bm-download-btn" class="reader-pdf-download-btn" title="Download Complete PDF">
-                <span>⬇️ ഫുൾ PDF</span>
-              </button>
-              <button type="button" id="bm-close" class="modal-close-btn" aria-label="Close">✕</button>
-            </div>
+            <button type="button" id="bm-close" class="modal-close-btn" aria-label="Close" style="width:36px; height:36px; border-radius:50%; border:1px solid var(--border); background:var(--surface); color:var(--text); font-size:1.1rem; cursor:pointer; display:flex; align-items:center; justify-content:center; flex-shrink:0;">✕</button>
           </div>
-          <div id="bm-body" style="overflow-y:auto; line-height:1.8; font-size:0.96rem; color:var(--text); white-space:pre-line; padding-right:8px;"></div>
+
+          <!-- Modal Body (Scrollable) -->
+          <div id="bm-body" style="overflow-y:auto; line-height:1.85; font-size:0.96rem; color:var(--text); padding:20px; flex-grow:1;"></div>
+
+          <!-- Sticky Bottom Bar with 3 working buttons -->
+          <div style="position:sticky; bottom:0; left:0; right:0; background:var(--surface); border-top:1px solid var(--border); padding:12px 18px; display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between; align-items:center; z-index:10; box-shadow:0 -4px 12px rgba(0,0,0,0.06);">
+            <a id="bm-read-btn" href="#" target="_blank" rel="noopener noreferrer" class="airport-action-btn" style="flex:1; min-width:140px; margin:0; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; gap:6px; background:rgba(4,120,87,0.1); color:#047857; border:1px solid rgba(4,120,87,0.3); font-weight:700; padding:10px 14px; border-radius:10px;">
+              <span>📖 മുഴുവൻ വായിക്കാം ↗</span>
+            </a>
+            <button type="button" id="bm-download-btn" class="airport-action-btn" style="flex:1; min-width:140px; margin:0; display:inline-flex; align-items:center; justify-content:center; gap:6px; background:linear-gradient(135deg,#047857,#065f46); color:#fff; border:1px solid #047857; font-weight:700; padding:10px 14px; border-radius:10px;">
+              <span>⬇️ PDF ഡൗൺലോഡ്</span>
+            </button>
+            <a id="bm-share-btn" href="#" target="_blank" rel="noopener noreferrer" class="airport-action-btn" style="flex:1; min-width:140px; margin:0; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; gap:6px; background:#25d366; color:#ffffff; border:1px solid #22c55e; font-weight:700; padding:10px 14px; border-radius:10px;">
+              <span>📤 WhatsApp ഷെയർ</span>
+            </a>
+          </div>
         </div>
       `;
       document.body.appendChild(modal);
@@ -207,10 +265,54 @@
       });
     }
 
-    modal.querySelector("#bm-badge").textContent = book.category_label || "വായന";
+    modal.querySelector("#bm-badge").textContent = `${book.category_label || "വായന"} · #${book.id}`;
+    modal.querySelector("#bm-year").textContent = book.yearOrType || "";
     modal.querySelector("#bm-title").textContent = book.title;
-    modal.querySelector("#bm-author").textContent = `${book.author} · ${book.pages || "200+"} പേജുകൾ · ${book.year || ""}`;
-    modal.querySelector("#bm-body").textContent = book.full_content || book.summary;
+    modal.querySelector("#bm-author").textContent = `✍️ ${book.author} · 📄 ${book.pages || "200+"} പേജുകൾ · ⭐ ${book.rating ? book.rating.toFixed(1) : "5.0"}`;
+
+    const isPravasi = book.category === "pravasi" || book.id > 90;
+    const bodyEl = modal.querySelector("#bm-body");
+    const readBtn = modal.querySelector("#bm-read-btn");
+    const shareBtn = modal.querySelector("#bm-share-btn");
+
+    if (isPravasi) {
+      bodyEl.innerHTML = `
+        <div style="background:rgba(4,120,87,0.08); border-left:4px solid #047857; padding:14px 18px; border-radius:0 10px 10px 0; margin-bottom:18px;">
+          <strong style="color:#047857; display:block; margin-bottom:4px;">📘 ഒറിജിനൽ പ്രവാസി ഗൈഡ്:</strong>
+          <span style="color:var(--text); font-size:0.92rem;">${escapeHtml(book.summary)}</span>
+        </div>
+        <div style="white-space:pre-line; color:var(--text); font-size:0.96rem; line-height:1.85;">${escapeHtml(book.full_content)}</div>
+      `;
+      readBtn.removeAttribute("href");
+      readBtn.removeAttribute("target");
+      readBtn.querySelector("span").textContent = "📖 മുഴുവൻ ഗൈഡ് (ഇവിടെ വായിക്കാം)";
+      readBtn.onclick = (e) => {
+        e.preventDefault();
+        bodyEl.scrollTo({ top: 0, behavior: "smooth" });
+      };
+    } else {
+      bodyEl.innerHTML = `
+        <div style="background:rgba(217,119,6,0.08); border-left:4px solid #d97706; padding:14px 18px; border-radius:0 10px 10px 0; margin-bottom:18px;">
+          <strong style="color:#d97706; display:block; margin-bottom:4px;">📖 സംഗ്രഹം (Synopsis):</strong>
+          <span style="color:var(--text); font-size:0.92rem;">${escapeHtml(book.summary)}</span>
+        </div>
+        <div style="white-space:pre-line; color:var(--text); font-size:0.96rem; line-height:1.85; margin-bottom:20px;">${escapeHtml(book.full_content)}</div>
+        <div style="text-align:center; padding:16px 20px; background:var(--surface); border:1px dashed var(--border); border-radius:12px; margin-top:16px;">
+          <p style="margin:0 0 10px; font-weight:700; color:var(--text);">ഈ ക്ലാസിക് കൃതി പകർപ്പവകാശ മുക്തമായി (Public Domain) മലയാളം വിക്കിഗ്രന്ഥശാലയിൽ പൂർണ്ണമായി വായിക്കാം:</p>
+          <a href="${book.readUrl}" target="_blank" rel="noopener noreferrer" class="nav-btn nav-btn-primary" style="display:inline-flex; align-items:center; gap:8px; text-decoration:none; padding:10px 22px; border-radius:999px;">
+            <span>📖 വിക്കിഗ്രന്ഥശാലയിൽ പൂർണ്ണ ഗ്രന്ഥം വായിക്കുക ↗</span>
+          </a>
+        </div>
+      `;
+      readBtn.setAttribute("href", book.readUrl);
+      readBtn.setAttribute("target", "_blank");
+      readBtn.setAttribute("rel", "noopener noreferrer");
+      readBtn.querySelector("span").textContent = "📖 മുഴുവൻ വായിക്കാം ↗";
+      readBtn.onclick = null;
+    }
+
+    const shareText = encodeURIComponent(`📚 മലയാളം ഇ-ലൈബ്രറിയിൽ '${book.title}' (${book.author}) വായിക്കൂ!\n\nസൗദി മലയാളി ഹബ്ബിൽ സൗജന്യമായി ലഭ്യമാണ്: https://ksa-malayali-hub.vercel.app/explore?tab=library&book=${book.id}`);
+    shareBtn.setAttribute("href", `https://wa.me/?text=${shareText}`);
 
     modal.classList.add("open");
     document.body.style.overflow = "hidden";
