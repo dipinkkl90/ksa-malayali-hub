@@ -1658,19 +1658,46 @@
   let readerCurrentFontSize = 18;
   let readerCurrentTheme = "sepia"; // 'sepia', 'night', 'white'
 
+  const HOME_LIBRARY_CATEGORIES = [
+    { id: "all", label: "എല്ലാം" },
+    { id: "pravasi", label: "🏜️ പ്രവാസി ഗൈഡുകൾ" },
+    { id: "novels", label: "📖 നോവലുകൾ" },
+    { id: "stories", label: "✍️ കഥകൾ & ഹാസ്യം" },
+    { id: "poetry", label: "📜 കവിതകൾ" },
+    { id: "classics", label: "🏺 ക്ലാസിക്കുകൾ & മാപ്പിളപ്പാട്ട്" },
+    { id: "history", label: "🧭 ചരിത്രം & യാത്ര" }
+  ];
+
   function setupLibraryListeners() {
     const searchInput = $("library-search-input");
     if (searchInput && !searchInput.hasAttribute("data-listener")) {
       searchInput.setAttribute("data-listener", "true");
-      searchInput.addEventListener("input", (e) => {
-        librarySearchQuery = e.target.value.trim().toLowerCase();
-        renderLibrary();
+      ["input", "change", "keyup"].forEach((evt) => {
+        searchInput.addEventListener(evt, (e) => {
+          librarySearchQuery = e.target.value.trim().toLowerCase();
+          renderLibrary();
+        });
       });
     }
 
     const tabsContainer = $("library-category-tabs");
     if (tabsContainer && !tabsContainer.hasAttribute("data-listener")) {
       tabsContainer.setAttribute("data-listener", "true");
+      const books = window.MALAYALAM_LIBRARY_DATA || window.LIBRARY_DATA || [];
+      const counts = { all: books.length };
+      books.forEach((b) => {
+        counts[b.category] = (counts[b.category] || 0) + 1;
+      });
+
+      const badge = $("library-tab-badge");
+      if (badge) badge.textContent = String(books.length);
+
+      tabsContainer.innerHTML = HOME_LIBRARY_CATEGORIES.map((cat) => {
+        const count = counts[cat.id] || 0;
+        const isActive = activeLibraryCategory === cat.id ? "active" : "";
+        return `<button type="button" class="library-tab-btn ${isActive}" data-category="${cat.id}">${cat.label} (${count})</button>`;
+      }).join("");
+
       tabsContainer.addEventListener("click", (e) => {
         const btn = e.target.closest(".library-tab-btn");
         if (!btn) return;
@@ -1688,11 +1715,22 @@
       closeBtn.addEventListener("click", closeBookReader);
     }
 
+    const footerCloseBtn = $("reader-footer-close-btn");
+    if (footerCloseBtn && !footerCloseBtn.hasAttribute("data-listener")) {
+      footerCloseBtn.setAttribute("data-listener", "true");
+      footerCloseBtn.addEventListener("click", closeBookReader);
+    }
+
     const modalEl = $("book-reader-modal");
     if (modalEl && !modalEl.hasAttribute("data-listener")) {
       modalEl.setAttribute("data-listener", "true");
       modalEl.addEventListener("click", (e) => {
         if (e.target === modalEl) closeBookReader();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modalEl.style.display === "flex") {
+          closeBookReader();
+        }
       });
     }
 
@@ -1746,6 +1784,16 @@
         }
       });
     }
+
+    const footerDownloadBtn = $("reader-footer-download-btn");
+    if (footerDownloadBtn && !footerDownloadBtn.hasAttribute("data-listener")) {
+      footerDownloadBtn.setAttribute("data-listener", "true");
+      footerDownloadBtn.addEventListener("click", () => {
+        if (window.currentActiveReadingBookId && typeof window.downloadBookPdf === "function") {
+          window.downloadBookPdf(window.currentActiveReadingBookId);
+        }
+      });
+    }
   }
 
   function renderLibrary() {
@@ -1753,21 +1801,29 @@
     if (!grid) return;
     setupLibraryListeners();
 
-    let books = window.MALAYALAM_LIBRARY_DATA || [];
+    let books = window.MALAYALAM_LIBRARY_DATA || window.LIBRARY_DATA || [];
 
     // Filter by Category
     if (activeLibraryCategory !== "all") {
-      books = books.filter((b) => b.category === activeLibraryCategory);
+      books = books.filter((b) => {
+        if (b.category === activeLibraryCategory) return true;
+        if (activeLibraryCategory === "travel" && b.category === "history") return true;
+        return false;
+      });
     }
 
     // Filter by Search Query
     if (librarySearchQuery) {
       books = books.filter((b) => {
         const tMl = (b.title || "").toLowerCase();
-        const tEn = (b.title_en || "").toLowerCase();
+        const tEn = (b.englishTitle || b.title_en || "").toLowerCase();
         const aMl = (b.author || "").toLowerCase();
         const aEn = (b.author_en || "").toLowerCase();
-        return tMl.includes(librarySearchQuery) || tEn.includes(librarySearchQuery) || aMl.includes(librarySearchQuery) || aEn.includes(librarySearchQuery);
+        const sm = (b.summary || "").toLowerCase();
+        const cat = (b.category_label || "").toLowerCase();
+        const id = String(b.id);
+        const q = librarySearchQuery;
+        return tMl.includes(q) || tEn.includes(q) || aMl.includes(q) || aEn.includes(q) || sm.includes(q) || cat.includes(q) || id === q;
       });
     }
 
@@ -1784,16 +1840,24 @@
 
     grid.innerHTML = books
       .map((b) => {
+        const engTitle = b.englishTitle || b.title_en || "";
+        const yr = b.year || (b.yearOrType ? (b.yearOrType.match(/\b\d{4}\b/) ? b.yearOrType.match(/\b\d{4}\b/)[0] : "") : "");
+        const metaParts = [engTitle, yr].filter(Boolean);
+        const metaYear = metaParts.length ? metaParts.join(" · ") : "";
+        const ratingStr = typeof b.rating === "number" ? b.rating.toFixed(1) : "4.8";
+        const pagesStr = b.pages || 180;
+        const catLabel = b.category_label || "വായന";
+
         return `
-          <article class="book-card">
-            <div class="book-cover-banner" style="background: linear-gradient(135deg, ${b.theme_color}cc, #0f172a);">
+          <article class="book-card" data-book-id="${b.id}" style="cursor:pointer;" tabindex="0">
+            <div class="book-cover-banner" style="background: linear-gradient(135deg, #047857cc, #0f172a);">
               <div class="book-cover-top">
-                <span class="book-cat-pill">${escapeHtml(b.category_label)}</span>
-                <span class="book-icon-badge">${b.icon || "📖"}</span>
+                <span class="book-cat-pill">${escapeHtml(catLabel)}</span>
+                <span class="book-icon-badge">📖</span>
               </div>
               <div class="book-cover-title-group">
                 <h3>${escapeHtml(b.title)}</h3>
-                <span class="book-title-en">${escapeHtml(b.title_en)} · ${b.year}</span>
+                ${metaYear ? `<span class="book-title-en">${escapeHtml(metaYear)}</span>` : ""}
               </div>
             </div>
 
@@ -1802,18 +1866,18 @@
                 <span>✍️ ${escapeHtml(b.author)}</span>
               </div>
               <div class="book-stats-row">
-                <span>⭐ ${b.rating.toFixed(1)}</span>
-                <span>📄 ${b.pages} പേജുകൾ</span>
-                <span>🔖 ${b.chapters_count || 1} ഭാഗങ്ങൾ</span>
+                <span>⭐ ${ratingStr}</span>
+                <span>📄 ${pagesStr} പേജുകൾ</span>
+                <span>🏷️ #${b.id}</span>
               </div>
               <p class="book-summary-text">
-                ${escapeHtml(b.summary)}
+                ${escapeHtml(b.summary || "")}
               </p>
               <div class="book-actions-row">
-                <button type="button" class="book-read-btn" onclick="window.openBookReader('${b.id}')">
+                <button type="button" class="book-read-btn" onclick="event.stopPropagation(); window.openBookReader('${b.id}')">
                   <span>📖 വായിക്കുക</span>
                 </button>
-                <button type="button" class="book-pdf-btn" onclick="window.downloadBookPdf('${b.id}')">
+                <button type="button" class="book-pdf-btn" onclick="event.stopPropagation(); window.downloadBookPdf('${b.id}')">
                   <span>📥 PDF / സേവ്</span>
                 </button>
               </div>
@@ -1822,22 +1886,65 @@
         `;
       })
       .join("");
+
+    // Whole card click handler
+    grid.querySelectorAll(".book-card").forEach((card) => {
+      card.addEventListener("click", (e) => {
+        if (e.target.closest(".book-pdf-btn")) return;
+        const id = card.getAttribute("data-book-id");
+        if (id) window.openBookReader(id);
+      });
+      card.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          if (e.target.closest(".book-pdf-btn")) return;
+          e.preventDefault();
+          const id = card.getAttribute("data-book-id");
+          if (id) window.openBookReader(id);
+        }
+      });
+    });
   }
 
   window.openBookReader = function(bookId) {
     window.currentActiveReadingBookId = bookId;
-    const books = window.MALAYALAM_LIBRARY_DATA || [];
-    const book = books.find((b) => b.id === bookId);
+    const books = window.MALAYALAM_LIBRARY_DATA || window.LIBRARY_DATA || [];
+    const book = books.find((b) => String(b.id) === String(bookId));
     if (!book) return;
 
     if ($("reader-book-title")) $("reader-book-title").textContent = book.title;
-    if ($("reader-book-author")) $("reader-book-author").textContent = `${book.author} · ${book.category_label} (${book.year})`;
+    const eng = book.englishTitle || book.title_en || "";
+    const yr = book.year || (b => b.yearOrType ? (b.yearOrType.match(/\b\d{4}\b/) ? b.yearOrType.match(/\b\d{4}\b/)[0] : "") : "")(book);
+    const metaStr = [eng, yr].filter(Boolean).join(" · ");
+    if ($("reader-book-author")) {
+      $("reader-book-author").textContent = `✍️ ${book.author}${metaStr ? ` (${metaStr})` : ""} · ${book.category_label || "വായന"}`;
+    }
     
     const bodyEl = $("reader-content-body");
     if (bodyEl) {
       bodyEl.style.fontSize = `${readerCurrentFontSize}px`;
       bodyEl.textContent = book.full_content || book.summary;
       bodyEl.scrollTop = 0;
+    }
+
+    // Configure 3 working modal buttons
+    const wikisourceBtn = $("reader-wikisource-btn");
+    if (wikisourceBtn) {
+      if (book.id > 90) {
+        wikisourceBtn.removeAttribute("href");
+        wikisourceBtn.removeAttribute("target");
+        wikisourceBtn.removeAttribute("rel");
+        wikisourceBtn.querySelector("span").textContent = "📖 മുഴുവൻ ഗൈഡ് (ഇവിടെ വായിക്കാം)";
+        wikisourceBtn.onclick = (e) => {
+          e.preventDefault();
+          if (bodyEl) bodyEl.scrollTo({ top: 0, behavior: "smooth" });
+        };
+      } else {
+        wikisourceBtn.setAttribute("href", book.readUrl || "https://ml.wikisource.org");
+        wikisourceBtn.setAttribute("target", "_blank");
+        wikisourceBtn.setAttribute("rel", "noopener noreferrer");
+        wikisourceBtn.querySelector("span").textContent = "📖 മുഴുവൻ വായിക്കാം ↗";
+        wikisourceBtn.onclick = null;
+      }
     }
 
     const modal = $("book-reader-modal");

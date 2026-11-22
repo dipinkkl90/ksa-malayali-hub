@@ -61,14 +61,14 @@
   const initialTab = initialParams.get("tab") || window.location.hash.replace("#", "") || "library";
   switchTab(initialTab);
 
-  // 2. Tab 1: Render Digital Books from window.MALAYALAM_LIBRARY_DATA
+    // 2. Tab 1: Render Digital Books from window.MALAYALAM_LIBRARY_DATA
   function initLibrary() {
     const booksContainer = document.getElementById("library-books-grid");
     const searchInput = document.getElementById("library-search");
-    const categoryBtns = document.querySelectorAll(".library-cat-btn");
+    const tabsContainer = document.getElementById("library-category-tabs");
     const loadMoreWrap = document.getElementById("library-load-more-wrap");
     const loadMoreBtn = document.getElementById("library-load-more-btn");
-    const books = window.MALAYALAM_LIBRARY_DATA || window.LIBRARY_DATA || [];
+    const books = window.MALAYALAM_LIBRARY_DATA || window.LIBRARY_DATA || window.LIBRARY_BOOKS || [];
 
     if (!booksContainer) return;
 
@@ -77,21 +77,57 @@
     const PAGE_SIZE = 20;
     let currentLimit = PAGE_SIZE;
 
+    const CATEGORIES = [
+      { id: "all", label: "എല്ലാം" },
+      { id: "pravasi", label: "പ്രവാസി ഗൈഡുകൾ" },
+      { id: "novels", label: "നോവലുകൾ" },
+      { id: "stories", label: "കഥകൾ & ഹാസ്യം" },
+      { id: "poetry", label: "കവിതകൾ" },
+      { id: "classics", label: "ക്ലാസിക്കുകൾ & മാപ്പിളപ്പാട്ട്" },
+      { id: "history", label: "ചരിത്രം & യാത്ര" }
+    ];
+
+    function renderCategoryTabs() {
+      if (!tabsContainer) return;
+      const counts = { all: books.length };
+      books.forEach((b) => {
+        counts[b.category] = (counts[b.category] || 0) + 1;
+      });
+
+      tabsContainer.innerHTML = CATEGORIES.map((cat) => {
+        const count = counts[cat.id] || 0;
+        const isActive = activeCategory === cat.id ? "active" : "";
+        return `<button type="button" class="sub-nav-pill library-cat-btn ${isActive}" data-cat="${cat.id}">${cat.label} (${count})</button>`;
+      }).join("");
+
+      tabsContainer.querySelectorAll(".library-cat-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          tabsContainer.querySelectorAll(".library-cat-btn").forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          activeCategory = btn.getAttribute("data-cat") || "all";
+          currentLimit = PAGE_SIZE;
+          renderBooks();
+        });
+      });
+    }
+
     function renderBooks() {
       const filtered = books.filter((b) => {
-        const matchesCat = activeCategory === "all" || b.category === activeCategory;
+        let matchesCat = activeCategory === "all" || b.category === activeCategory;
+        if (activeCategory === "travel" && b.category === "history") matchesCat = true;
         if (!matchesCat) return false;
         if (!searchQuery) return true;
 
         const q = searchQuery;
         const t = (b.title || "").toLowerCase();
         const a = (b.author || "").toLowerCase();
-        const te = (b.title_en || "").toLowerCase();
+        const te = (b.englishTitle || b.title_en || "").toLowerCase();
         const ae = (b.author_en || "").toLowerCase();
         const cat = (b.category_label || "").toLowerCase();
+        const sm = (b.summary || "").toLowerCase();
         const id = String(b.id);
 
-        return t.includes(q) || a.includes(q) || te.includes(q) || ae.includes(q) || cat.includes(q) || id === q;
+        return t.includes(q) || a.includes(q) || te.includes(q) || ae.includes(q) || cat.includes(q) || sm.includes(q) || id === q;
       });
 
       if (filtered.length === 0) {
@@ -109,29 +145,34 @@
       const visibleBooks = filtered.slice(0, currentLimit);
 
       booksContainer.innerHTML = visibleBooks
-        .map(
-          (book) => `
-        <div class="library-card" style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-md); padding:20px; box-shadow:var(--shadow-sm); display:flex; flex-direction:column; justify-content:space-between; transition:all 0.2s ease;">
-          <div>
-            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px;">
-              <span style="background:rgba(4,120,87,0.12); color:#047857; font-size:0.75rem; font-weight:800; padding:3px 10px; border-radius:999px; border:1px solid rgba(4,120,87,0.25);">${escapeHtml(book.category_label || "വായന")}</span>
-              <span style="font-size:0.78rem; color:var(--text-muted); font-weight:700; background:rgba(255,255,255,0.06); padding:2px 8px; border-radius:6px;">#${book.id}</span>
+        .map((book) => {
+          const eng = book.englishTitle || book.title_en || "";
+          const yr = book.year || (book.yearOrType ? (book.yearOrType.match(/\b\d{4}\b/) ? book.yearOrType.match(/\b\d{4}\b/)[0] : "") : "");
+          const metaParts = [eng, yr].filter(Boolean);
+          const metaStr = metaParts.length ? `<span style="opacity:0.85;">(${escapeHtml(metaParts.join(" · "))})</span>` : "";
+
+          return `
+            <div class="library-card" data-book-id="${book.id}" role="button" tabindex="0" style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-md); padding:20px; box-shadow:var(--shadow-sm); display:flex; flex-direction:column; justify-content:space-between; transition:transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease; cursor:pointer;">
+              <div>
+                <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px;">
+                  <span style="background:rgba(4,120,87,0.12); color:#047857; font-size:0.75rem; font-weight:800; padding:3px 10px; border-radius:999px; border:1px solid rgba(4,120,87,0.25);">${escapeHtml(book.category_label || "വായന")}</span>
+                  <span style="font-size:0.78rem; color:var(--text-muted); font-weight:700; background:rgba(255,255,255,0.06); padding:2px 8px; border-radius:6px;">#${book.id}</span>
+                </div>
+                <h4 style="font-size:1.18rem; font-weight:800; color:var(--text); margin:4px 0 6px; line-height:1.35;">${escapeHtml(book.title)}</h4>
+                <p style="font-size:0.86rem; color:var(--text-muted); margin:0 0 10px; font-weight:600;">✍️ ${escapeHtml(book.author)} ${metaStr}</p>
+                <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.6; margin:0 0 16px; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;">${escapeHtml(book.summary || "")}</p>
+              </div>
+              <div style="display:flex; gap:8px; margin-top:10px;">
+                <button type="button" class="airport-action-btn view-book-btn" data-id="${book.id}" style="flex:1; margin:0; padding:10px 12px; font-size:0.85rem; font-weight:700;">
+                  <span>📖 വായിക്കാം</span>
+                </button>
+                <button type="button" class="airport-action-btn pdf-book-btn" data-id="${book.id}" style="flex:1; margin:0; padding:10px 12px; font-size:0.85rem; font-weight:700; background:linear-gradient(135deg,#047857,#065f46); color:#fff; border-color:#047857;">
+                  <span>⬇️ PDF</span>
+                </button>
+              </div>
             </div>
-            <h4 style="font-size:1.18rem; font-weight:800; color:var(--text); margin:4px 0 6px; line-height:1.35;">${escapeHtml(book.title)}</h4>
-            <p style="font-size:0.86rem; color:var(--text-muted); margin:0 0 10px; font-weight:600;">✍️ ${escapeHtml(book.author)} <span style="opacity:0.85;">(${escapeHtml(book.yearOrType || "")})</span></p>
-            <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.6; margin:0 0 16px; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;">${escapeHtml(book.summary || "")}</p>
-          </div>
-          <div style="display:flex; gap:8px; margin-top:10px;">
-            <button type="button" class="airport-action-btn view-book-btn" data-id="${book.id}" style="flex:1; margin:0; padding:10px 12px; font-size:0.85rem; font-weight:700;">
-              <span>📖 വായിക്കാം</span>
-            </button>
-            <button type="button" class="airport-action-btn pdf-book-btn" data-id="${book.id}" style="flex:1; margin:0; padding:10px 12px; font-size:0.85rem; font-weight:700; background:linear-gradient(135deg,#047857,#065f46); color:#fff; border-color:#047857;">
-              <span>⬇️ PDF</span>
-            </button>
-          </div>
-        </div>
-      `
-        )
+          `;
+        })
         .join("");
 
       // Update Load More button
@@ -145,18 +186,39 @@
         }
       }
 
-      // Add event listeners for reading modal
+      // Add event listeners for whole card clicks
+      booksContainer.querySelectorAll(".library-card").forEach((card) => {
+        card.addEventListener("click", (e) => {
+          if (e.target.closest(".pdf-book-btn")) return;
+          const bookId = card.getAttribute("data-book-id");
+          const found = books.find((b) => String(b.id) === String(bookId));
+          if (found) openBookModal(found);
+        });
+        card.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            if (e.target.closest(".pdf-book-btn")) return;
+            e.preventDefault();
+            const bookId = card.getAttribute("data-book-id");
+            const found = books.find((b) => String(b.id) === String(bookId));
+            if (found) openBookModal(found);
+          }
+        });
+      });
+
+      // Add event listeners for reading modal button
       booksContainer.querySelectorAll(".view-book-btn").forEach((btn) => {
-        btn.addEventListener("click", () => {
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
           const bookId = btn.getAttribute("data-id");
           const found = books.find((b) => String(b.id) === String(bookId));
           if (found) openBookModal(found);
         });
       });
 
-      // Add event listeners for PDF download
+      // Add event listeners for PDF download button
       booksContainer.querySelectorAll(".pdf-book-btn").forEach((btn) => {
-        btn.addEventListener("click", () => {
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
           const bookId = btn.getAttribute("data-id");
           if (typeof window.downloadBookPdf === "function") {
             window.downloadBookPdf(bookId);
@@ -173,23 +235,16 @@
     }
 
     if (searchInput) {
-      searchInput.addEventListener("input", (e) => {
-        searchQuery = e.target.value.trim().toLowerCase();
-        currentLimit = PAGE_SIZE; // Reset limit when searching
-        renderBooks();
+      ["input", "change", "keyup"].forEach((evt) => {
+        searchInput.addEventListener(evt, (e) => {
+          searchQuery = e.target.value.trim().toLowerCase();
+          currentLimit = PAGE_SIZE;
+          renderBooks();
+        });
       });
     }
 
-    categoryBtns.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        categoryBtns.forEach((b) => b.classList.remove("active"));
-        btn.classList.add("active");
-        activeCategory = btn.getAttribute("data-cat");
-        currentLimit = PAGE_SIZE; // Reset limit when changing category
-        renderBooks();
-      });
-    });
-
+    renderCategoryTabs();
     renderBooks();
 
     // Auto open if book query parameter provided
@@ -235,21 +290,24 @@
             <a id="bm-read-btn" href="#" target="_blank" rel="noopener noreferrer" class="airport-action-btn" style="flex:1; min-width:140px; margin:0; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; gap:6px; background:rgba(4,120,87,0.1); color:#047857; border:1px solid rgba(4,120,87,0.3); font-weight:700; padding:10px 14px; border-radius:10px;">
               <span>📖 മുഴുവൻ വായിക്കാം ↗</span>
             </a>
-            <button type="button" id="bm-download-btn" class="airport-action-btn" style="flex:1; min-width:140px; margin:0; display:inline-flex; align-items:center; justify-content:center; gap:6px; background:linear-gradient(135deg,#047857,#065f46); color:#fff; border:1px solid #047857; font-weight:700; padding:10px 14px; border-radius:10px;">
+            <button type="button" id="bm-download-btn" class="airport-action-btn" style="flex:1; min-width:140px; margin:0; display:inline-flex; align-items:center; justify-content:center; gap:6px; background:linear-gradient(135deg,#047857,#065f46); color:#fff; border:1px solid #047857; font-weight:700; padding:10px 14px; border-radius:10px; cursor:pointer;">
               <span>⬇️ PDF ഡൗൺലോഡ്</span>
             </button>
-            <a id="bm-share-btn" href="#" target="_blank" rel="noopener noreferrer" class="airport-action-btn" style="flex:1; min-width:140px; margin:0; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; gap:6px; background:#25d366; color:#ffffff; border:1px solid #22c55e; font-weight:700; padding:10px 14px; border-radius:10px;">
-              <span>📤 WhatsApp ഷെയർ</span>
-            </a>
+            <button type="button" id="bm-bottom-close-btn" class="airport-action-btn" style="flex:1; min-width:110px; margin:0; display:inline-flex; align-items:center; justify-content:center; gap:6px; background:var(--surface); color:var(--text); border:1px solid var(--border); font-weight:700; padding:10px 14px; border-radius:10px; cursor:pointer;">
+              <span>✕ അടയ്ക്കുക</span>
+            </button>
           </div>
         </div>
       `;
       document.body.appendChild(modal);
 
-      modal.querySelector("#bm-close").addEventListener("click", () => {
+      function closeModal() {
         modal.classList.remove("open");
         document.body.style.overflow = "";
-      });
+      }
+
+      modal.querySelector("#bm-close").addEventListener("click", closeModal);
+      modal.querySelector("#bm-bottom-close-btn").addEventListener("click", closeModal);
 
       modal.querySelector("#bm-download-btn").addEventListener("click", () => {
         if (currentActiveBook && typeof window.downloadBookPdf === "function") {
@@ -259,32 +317,39 @@
 
       modal.addEventListener("click", (e) => {
         if (e.target === modal) {
-          modal.classList.remove("open");
-          document.body.style.overflow = "";
+          closeModal();
+        }
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modal.classList.contains("open")) {
+          closeModal();
         }
       });
     }
 
+    const eng = book.englishTitle || book.title_en || "";
+    const yr = book.year || (book.yearOrType ? (book.yearOrType.match(/\b\d{4}\b/) ? book.yearOrType.match(/\b\d{4}\b/)[0] : "") : "");
     modal.querySelector("#bm-badge").textContent = `${book.category_label || "വായന"} · #${book.id}`;
-    modal.querySelector("#bm-year").textContent = book.yearOrType || "";
-    modal.querySelector("#bm-title").textContent = book.title;
-    modal.querySelector("#bm-author").textContent = `✍️ ${book.author} · 📄 ${book.pages || "200+"} പേജുകൾ · ⭐ ${book.rating ? book.rating.toFixed(1) : "5.0"}`;
+    modal.querySelector("#bm-year").textContent = yr ? yr : (book.yearOrType || "");
+    modal.querySelector("#bm-title").textContent = book.title || "";
+    modal.querySelector("#bm-author").textContent = `✍️ ${book.author || ""}${eng ? ` (${eng})` : ""} · 📄 ${book.pages || "180"} പേജുകൾ · ⭐ ${typeof book.rating === "number" ? book.rating.toFixed(1) : "4.8"}`;
 
     const isPravasi = book.category === "pravasi" || book.id > 90;
     const bodyEl = modal.querySelector("#bm-body");
     const readBtn = modal.querySelector("#bm-read-btn");
-    const shareBtn = modal.querySelector("#bm-share-btn");
 
     if (isPravasi) {
       bodyEl.innerHTML = `
         <div style="background:rgba(4,120,87,0.08); border-left:4px solid #047857; padding:14px 18px; border-radius:0 10px 10px 0; margin-bottom:18px;">
           <strong style="color:#047857; display:block; margin-bottom:4px;">📘 ഒറിജിനൽ പ്രവാസി ഗൈഡ്:</strong>
-          <span style="color:var(--text); font-size:0.92rem;">${escapeHtml(book.summary)}</span>
+          <span style="color:var(--text); font-size:0.92rem;">${escapeHtml(book.summary || "")}</span>
         </div>
-        <div style="white-space:pre-line; color:var(--text); font-size:0.96rem; line-height:1.85;">${escapeHtml(book.full_content)}</div>
+        <div style="white-space:pre-line; color:var(--text); font-size:0.96rem; line-height:1.85;">${escapeHtml(book.full_content || book.summary || "")}</div>
       `;
       readBtn.removeAttribute("href");
       readBtn.removeAttribute("target");
+      readBtn.removeAttribute("rel");
       readBtn.querySelector("span").textContent = "📖 മുഴുവൻ ഗൈഡ് (ഇവിടെ വായിക്കാം)";
       readBtn.onclick = (e) => {
         e.preventDefault();
@@ -294,9 +359,9 @@
       bodyEl.innerHTML = `
         <div style="background:rgba(217,119,6,0.08); border-left:4px solid #d97706; padding:14px 18px; border-radius:0 10px 10px 0; margin-bottom:18px;">
           <strong style="color:#d97706; display:block; margin-bottom:4px;">📖 സംഗ്രഹം (Synopsis):</strong>
-          <span style="color:var(--text); font-size:0.92rem;">${escapeHtml(book.summary)}</span>
+          <span style="color:var(--text); font-size:0.92rem;">${escapeHtml(book.summary || "")}</span>
         </div>
-        <div style="white-space:pre-line; color:var(--text); font-size:0.96rem; line-height:1.85; margin-bottom:20px;">${escapeHtml(book.full_content)}</div>
+        <div style="white-space:pre-line; color:var(--text); font-size:0.96rem; line-height:1.85; margin-bottom:20px;">${escapeHtml(book.full_content || book.summary || "")}</div>
         <div style="text-align:center; padding:16px 20px; background:var(--surface); border:1px dashed var(--border); border-radius:12px; margin-top:16px;">
           <p style="margin:0 0 10px; font-weight:700; color:var(--text);">ഈ ക്ലാസിക് കൃതി പകർപ്പവകാശ മുക്തമായി (Public Domain) മലയാളം വിക്കിഗ്രന്ഥശാലയിൽ പൂർണ്ണമായി വായിക്കാം:</p>
           <a href="${book.readUrl}" target="_blank" rel="noopener noreferrer" class="nav-btn nav-btn-primary" style="display:inline-flex; align-items:center; gap:8px; text-decoration:none; padding:10px 22px; border-radius:999px;">
@@ -304,15 +369,12 @@
           </a>
         </div>
       `;
-      readBtn.setAttribute("href", book.readUrl);
+      readBtn.setAttribute("href", book.readUrl || "https://ml.wikisource.org");
       readBtn.setAttribute("target", "_blank");
       readBtn.setAttribute("rel", "noopener noreferrer");
       readBtn.querySelector("span").textContent = "📖 മുഴുവൻ വായിക്കാം ↗";
       readBtn.onclick = null;
     }
-
-    const shareText = encodeURIComponent(`📚 മലയാളം ഇ-ലൈബ്രറിയിൽ '${book.title}' (${book.author}) വായിക്കൂ!\n\nസൗദി മലയാളി ഹബ്ബിൽ സൗജന്യമായി ലഭ്യമാണ്: https://ksa-malayali-hub.vercel.app/explore?tab=library&book=${book.id}`);
-    shareBtn.setAttribute("href", `https://wa.me/?text=${shareText}`);
 
     modal.classList.add("open");
     document.body.style.overflow = "hidden";
