@@ -7,8 +7,8 @@ const rootDir = path.join(__dirname, '..');
 const swPath = path.join(rootDir, 'sw.js');
 if (fs.existsSync(swPath)) {
   let sw = fs.readFileSync(swPath, 'utf8');
-  sw = sw.replace(/const CACHE_VERSION = "ksa-malayali-hub-v\d+";/, 'const CACHE_VERSION = "ksa-malayali-hub-v10";');
-  sw = sw.replace(/const DYNAMIC_CACHE = "ksa-malayali-dynamic-v\d+";/, 'const DYNAMIC_CACHE = "ksa-malayali-dynamic-v9";');
+  sw = sw.replace(/const CACHE_VERSION = "ksa-malayali-hub-v\d+";/, 'const CACHE_VERSION = "ksa-malayali-hub-v11";');
+  sw = sw.replace(/const DYNAMIC_CACHE = "ksa-malayali-dynamic-v\d+";/, 'const DYNAMIC_CACHE = "ksa-malayali-dynamic-v10";');
   fs.writeFileSync(swPath, sw, 'utf8');
   console.log('sw.js cache version bumped to v10');
 }
@@ -33,7 +33,7 @@ const htmlFiles = walk(rootDir);
 htmlFiles.forEach(file => {
   let content = fs.readFileSync(file, 'utf8');
   if (content.includes('styles.css?v=')) {
-    content = content.replace(/styles\.css\?v=[^"'\s>]+/g, 'styles.css?v=20261122_v28');
+    content = content.replace(/styles\.css\?v=[^"'\s>]+/g, 'styles.css?v=20261122_v29');
     fs.writeFileSync(file, content, 'utf8');
     console.log('Bumped CSS version in', path.relative(rootDir, file));
   }
