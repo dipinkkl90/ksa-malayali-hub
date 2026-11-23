@@ -630,6 +630,105 @@
         }
       }
 
+      /* Floating Speech Bubble Callout */
+      .digambaran-speech-bubble {
+        position: fixed;
+        right: 24px;
+        bottom: 84px;
+        z-index: 151;
+        max-width: 220px;
+        background: #ffffff;
+        color: #064e3b;
+        border: 1.5px solid #059669;
+        border-radius: 14px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25), 0 0 16px rgba(5, 150, 105, 0.2);
+        padding: 9px 12px;
+        font-family: var(--font-sans, "Inter", "Noto Sans Malayalam", sans-serif);
+        font-size: 0.78rem;
+        line-height: 1.38;
+        font-weight: 600;
+        cursor: pointer;
+        opacity: 0;
+        transform: translateY(8px) scale(0.96);
+        pointer-events: none;
+        transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .digambaran-speech-bubble.visible {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        pointer-events: auto;
+      }
+      .digambaran-speech-bubble:hover {
+        transform: translateY(-2px) scale(1.02);
+        border-color: #f59e0b;
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(245, 158, 11, 0.25);
+      }
+      .diga-bubble-content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 8px;
+      }
+      .diga-bubble-text {
+        flex: 1;
+        color: #064e3b;
+        font-weight: 700;
+      }
+      .diga-bubble-close {
+        background: rgba(0, 0, 0, 0.06);
+        border: none;
+        color: #64748b;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.65rem;
+        cursor: pointer;
+        flex-shrink: 0;
+        padding: 0;
+        transition: background 0.15s, color 0.15s;
+      }
+      .diga-bubble-close:hover {
+        background: rgba(239, 68, 68, 0.2);
+        color: #dc2626;
+      }
+      .diga-bubble-arrow {
+        position: absolute;
+        bottom: -7px;
+        right: 32px;
+        width: 12px;
+        height: 12px;
+        background: #ffffff;
+        border-right: 1.5px solid #059669;
+        border-bottom: 1.5px solid #059669;
+        transform: rotate(45deg);
+      }
+      .digambaran-speech-bubble:hover .diga-bubble-arrow {
+        border-color: #f59e0b;
+      }
+
+      @media (max-width: 768px) {
+        .digambaran-speech-bubble {
+          right: 16px !important;
+          left: auto !important;
+          bottom: calc(10.6rem + env(safe-area-inset-bottom, 0px)) !important;
+          max-width: 215px;
+          padding: 8px 10px;
+          font-size: 0.74rem;
+        }
+        body.pwa-banner-visible .digambaran-speech-bubble,
+        body:has(#pwa-install-banner:not([style*="display: none"])) .digambaran-speech-bubble {
+          bottom: calc(13.2rem + env(safe-area-inset-bottom, 0px)) !important;
+        }
+        .diga-bubble-arrow {
+          right: 28px;
+        }
+      }
+
       /* Backdrop */
       .digambaran-backdrop {
         position: fixed;
@@ -1220,6 +1319,21 @@
   function injectDigambaranDOM() {
     if (document.getElementById("digambaran-float-btn")) return;
 
+    // 1b. Floating Speech Bubble (Tooltip Callout)
+    const bubble = document.createElement("div");
+    bubble.id = "digambaran-speech-bubble";
+    bubble.className = "digambaran-speech-bubble";
+    bubble.setAttribute("role", "tooltip");
+    bubble.setAttribute("aria-live", "polite");
+    bubble.innerHTML = `
+      <div class="diga-bubble-content">
+        <span class="diga-bubble-text" id="diga-bubble-text">👋 നിങ്ങളെ സഹായിക്കാനുള്ള AI ആണ് ഞാൻ! എന്ത് സഹായം വേണം?</span>
+        <button type="button" class="diga-bubble-close" id="diga-bubble-close" title="ക്ലോസ് ചെയ്യുക" aria-label="Dismiss">✕</button>
+      </div>
+      <div class="diga-bubble-arrow" aria-hidden="true"></div>
+    `;
+    document.body.appendChild(bubble);
+
     // 1. Floating Button
     const floatBtn = document.createElement("button");
     floatBtn.id = "digambaran-float-btn";
@@ -1307,10 +1421,66 @@
     document.body.appendChild(win);
 
     bindEvents();
+    initSpeechBubbleLifecycle();
+  }
+
+  // Rotating Speech Bubble Callout Logic
+  const BUBBLE_MESSAGES = [
+    "👋 നിങ്ങളെ സഹായിക്കാനുള്ള AI ആണ് ഞാൻ! എന്ത് സഹായം വേണം?",
+    "😈 ഇഖാമ, റിയാൽ റേറ്റ്, ഹോട്ടലുകൾ — എന്നോട് ചോദിക്കൂ!",
+    "😜 ബോറടിക്കുന്നോ? 100 കുസൃതിച്ചോദ്യങ്ങളുണ്ട്, കളിക്കാം!"
+  ];
+
+  let bubbleInterval = null;
+  let bubbleHideTimer = null;
+  let currentBubbleIdx = 0;
+
+  function showSpeechBubble() {
+    if (sessionStorage.getItem("digambaran_bubble_dismissed") === "true") return;
+    if (isModalOpen) return;
+
+    const bubble = document.getElementById("digambaran-speech-bubble");
+    const textEl = document.getElementById("diga-bubble-text");
+    if (!bubble || !textEl) return;
+
+    textEl.textContent = BUBBLE_MESSAGES[currentBubbleIdx];
+    currentBubbleIdx = (currentBubbleIdx + 1) % BUBBLE_MESSAGES.length;
+
+    bubble.classList.add("visible");
+
+    clearTimeout(bubbleHideTimer);
+    bubbleHideTimer = setTimeout(() => {
+      hideSpeechBubble();
+    }, 6000);
+  }
+
+  function hideSpeechBubble() {
+    const bubble = document.getElementById("digambaran-speech-bubble");
+    if (bubble) bubble.classList.remove("visible");
+    clearTimeout(bubbleHideTimer);
+  }
+
+  function dismissSpeechBubblePermanently() {
+    sessionStorage.setItem("digambaran_bubble_dismissed", "true");
+    hideSpeechBubble();
+    if (bubbleInterval) clearInterval(bubbleInterval);
+  }
+
+  function initSpeechBubbleLifecycle() {
+    // Initial show after 3 seconds
+    setTimeout(() => {
+      showSpeechBubble();
+    }, 3000);
+
+    // Periodic check every 30 seconds
+    bubbleInterval = setInterval(() => {
+      showSpeechBubble();
+    }, 30000);
   }
 
   // Open & Close Chat Window
   function openDigambaran() {
+    hideSpeechBubble();
     injectDigambaranDOM();
     const win = document.getElementById("digambaran-window");
     const backdrop = document.getElementById("digambaran-backdrop");
@@ -1913,6 +2083,8 @@
   // Bind Event Listeners
   function bindEvents() {
     const floatBtn = document.getElementById("digambaran-float-btn");
+    const speechBubble = document.getElementById("digambaran-speech-bubble");
+    const bubbleClose = document.getElementById("diga-bubble-close");
     const backdrop = document.getElementById("digambaran-backdrop");
     const btnClose = document.getElementById("digambaran-btn-close");
     const btnClear = document.getElementById("digambaran-btn-clear");
@@ -1920,6 +2092,23 @@
     const input = document.getElementById("digambaran-input");
     const chipsContainer = document.getElementById("digambaran-chips");
     const messages = document.getElementById("digambaran-messages");
+
+    // Speech bubble click & dismiss listeners
+    if (speechBubble) {
+      speechBubble.addEventListener("click", (e) => {
+        if (e.target.closest("#diga-bubble-close")) return;
+        hideSpeechBubble();
+        openDigambaran();
+      });
+    }
+
+    if (bubbleClose) {
+      bubbleClose.addEventListener("click", (e) => {
+        e.stopPropagation();
+        e.preventDefault();
+        dismissSpeechBubblePermanently();
+      });
+    }
 
     if (floatBtn) {
       floatBtn.addEventListener("click", () => {
