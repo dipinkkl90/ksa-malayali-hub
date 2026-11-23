@@ -114,6 +114,13 @@
       if (resRatioDesc) resRatioDesc.textContent = ratioExplanation;
 
       resultBox.style.display = "flex";
+
+      if (window.HubLogger && !calculateEosb._logTimer && salary > 0) {
+        calculateEosb._logTimer = setTimeout(() => {
+          window.HubLogger.logEvent("EOSB_CALC", "സർവീസ് ആനുകൂല്യം (EOSB) കണക്കുകൂട്ടി", `ശമ്പളം: ${salary} SAR · ${totalYears.toFixed(1)} വർഷം · ആകെ: ${Math.round(finalEosb)} SAR`);
+          calculateEosb._logTimer = null;
+        }, 800);
+      }
     }
 
     // Run initial calc

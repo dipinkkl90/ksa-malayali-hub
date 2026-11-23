@@ -669,147 +669,94 @@
     return `https://wa.me/?text=${encodeURIComponent(lines.join("\n"))}`;
   }
 
-  // Render Grid Cards
+  // Render Grid Cards (Replaced duplicate 174+ dump with sleek luxury summary card linking to dedicated hotels page)
   function renderCards(items) {
     const grid = $("cards-grid");
-    grid.innerHTML = "";
+    if (!grid) return;
 
-    if (!items.length) {
-      grid.innerHTML = `
-        <div class="empty-state">
-          <div class="empty-icon">🍛</div>
-          <h3>${escapeHtml(t("emptyTitle"))}</h3>
-          <p>${escapeHtml(t("emptyDesc"))}</p>
-          <div class="empty-actions">
-            <button type="button" class="card-btn card-btn-primary" id="empty-reset-btn" style="flex:0 0 auto;padding:10px 18px;">
-              ${escapeHtml(t("emptyReset", { total: DATA.length }))}
-            </button>
-            <button type="button" class="card-btn" id="empty-suggest-btn" style="flex:0 0 auto;padding:10px 18px;">
-              ➕ ${escapeHtml(t("emptySuggest"))}
-            </button>
-          </div>
-        </div>
-      `;
-      $("empty-reset-btn").addEventListener("click", resetFilters);
-      $("empty-suggest-btn").addEventListener("click", openSubmitModal);
-      return;
+    const totalCount = (items && items.length) ? items.length : (DATA ? DATA.length : 174);
+    const countDisplay = $("results-count");
+    if (countDisplay) {
+      countDisplay.textContent = `174+ മലയാളി ഹോട്ടലുകൾ (11 നഗരങ്ങൾ) · വെരിഫൈഡ് ലിസ്റ്റിംഗ്`;
     }
 
-    const frag = document.createDocumentFragment();
-
-    items.forEach((item) => {
-      const isSaved = state.savedIds.has(item.restaurant_id);
-      const card = document.createElement("article");
-      card.className = "card";
-
-      const ratingHtml =
-        item.rating !== null
-          ? `<span class="rating-pill" title="Business listing rating">${SVG.star} ${item.rating.toFixed(1)}${
-              item.review_count ? ` (${item.review_count.toLocaleString()})` : ""
-            }</span>`
-          : item.directory_rating !== null
-          ? `<span class="rating-pill dir" title="Directory rating">${SVG.star} ${item.directory_rating.toFixed(1)} · ${escapeHtml(
-              t("ratingDirectory")
-            )}</span>`
-          : "";
-
-      const distHtml =
-        typeof item._distKm === "number" && item._distKm < 1500
-          ? `<span class="distance-badge">${SVG.nav} ${escapeHtml(t("kmAway", { km: item._distKm.toFixed(1) }))}</span>`
-          : "";
-
-      const tagsHtml = (item.tags || [])
-        .slice(0, 3)
-        .map((tg) => `<span class="mini-tag">${escapeHtml(tg)}</span>`)
-        .join("");
-
-      const callBtnHtml = item.phone_e164
-        ? `<a class="card-btn card-btn-call" href="tel:${escapeHtml(item.phone_e164.replace(/\s+/g, ""))}">${SVG.phone} ${escapeHtml(
-            t("btnCall")
-          )}</a>`
-        : "";
-
-      const cityName = item.city || "Jeddah";
-
-      const photoHtml = item.photo
-        ? `<div class="card-img-wrap" data-detail="${escapeHtml(item.restaurant_id)}">
-            <img src="${escapeHtml(item.photo)}" alt="${escapeHtml(item.name)}" class="card-img" loading="lazy" onerror="this.parentElement.style.display=\'none\'">
-          </div>`
-        : "";
-
-      card.innerHTML = `
-        <div class="card-top">
-          <div class="card-badges">
-            <span class="cat-badge ${getCategoryClass(item.category)}">${escapeHtml(tCategory(item.category))}</span>
-            ${ratingHtml}
+    grid.innerHTML = `
+      <div class="hotels-home-summary-card">
+        <div class="hotels-summary-header">
+          <div class="hotels-summary-badges">
+            <span class="hotels-pill-gold">🍛 കേരള രുചികൾ സൗദിയിൽ</span>
+            <span class="hotels-pill-emerald">${totalCount}+ വെരിഫൈഡ് ഹോട്ടലുകൾ</span>
           </div>
-          <button type="button" class="fav-btn ${isSaved ? "saved" : ""}" data-fav="${escapeHtml(
-        item.restaurant_id
-      )}" aria-label="Save restaurant" title="Save restaurant">
-            ${isSaved ? SVG.heartFill : SVG.heart}
+          <h2 class="hotels-summary-heading">സൗദിയിലെ മലയാളി ഹോട്ടലുകൾ &amp; റസ്റ്റോറന്റുകൾ</h2>
+          <p class="hotels-summary-sub">
+            ജിദ്ദ, റിയാദ്, ദമ്മാം, മക്ക, മദീന, തായിഫ് ഉൾപ്പെടെ 11 പ്രധാന സൗദി നഗരങ്ങളിലെ തനത് കേരള ഭക്ഷണശാലകൾ, മലബാർ ദം ബിരിയാണി, പൊറോട്ട, തട്ടുകട വിഭവങ്ങൾ, ഗൂഗിൾ മാപ്പ് നാവിഗേഷൻ, നേരിട്ട് വിളിക്കാനുള്ള ഫോൺ നമ്പറുകൾ എന്നിവ സമഗ്രമായി പരിശോധിക്കാം.
+          </p>
+        </div>
+
+        <div class="hotels-summary-stats-grid">
+          <div class="city-stat-card">
+            <div class="city-stat-dot">📍</div>
+            <div class="city-stat-info">
+              <strong>ജിദ്ദ (Jeddah)</strong>
+              <span>80+ കേരള ഹോട്ടലുകൾ</span>
+            </div>
+          </div>
+          <div class="city-stat-card">
+            <div class="city-stat-dot">📍</div>
+            <div class="city-stat-info">
+              <strong>റിയാദ് (Riyadh)</strong>
+              <span>35+ കേരള ഹോട്ടലുകൾ</span>
+            </div>
+          </div>
+          <div class="city-stat-card">
+            <div class="city-stat-dot">📍</div>
+            <div class="city-stat-info">
+              <strong>ദമ്മാം &amp; ഖോബാർ</strong>
+              <span>20+ കേരള ഹോട്ടലുകൾ</span>
+            </div>
+          </div>
+          <div class="city-stat-card">
+            <div class="city-stat-dot">📍</div>
+            <div class="city-stat-info">
+              <strong>മക്ക &amp; മദീന</strong>
+              <span>15+ കേരള ഹോട്ടലുകൾ</span>
+            </div>
+          </div>
+          <div class="city-stat-card">
+            <div class="city-stat-dot">📍</div>
+            <div class="city-stat-info">
+              <strong>തായിഫ് &amp; തെക്കൻ പ്രവിശ്യ</strong>
+              <span>12+ കേരള ഹോട്ടലുകൾ</span>
+            </div>
+          </div>
+          <div class="city-stat-card">
+            <div class="city-stat-dot">📍</div>
+            <div class="city-stat-info">
+              <strong>ഖസീം, തബൂക്ക് &amp; മറ്റ് നഗരങ്ങൾ</strong>
+              <span>12+ കേരള ഹോട്ടലുകൾ</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hotels-summary-cta-row">
+          <a href="/saudi#saudi-hotels-section" class="hotels-cta-primary">
+            <span>🍲 174+ മലയാളി ഹോട്ടലുകൾ കാണുക (Explore All Hotels ↗)</span>
+          </a>
+          <button type="button" id="hotels-summary-map-btn" class="hotels-cta-secondary">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg>
+            <span>മാപ്പിൽ കാണുക (Interactive Map)</span>
           </button>
         </div>
+      </div>
+    `;
 
-        ${photoHtml}
-
-        <h3 class="card-title" data-detail="${escapeHtml(item.restaurant_id)}">${escapeHtml(item.name)}</h3>
-
-        <div class="card-area-row">
-          <span class="card-area-text">${SVG.pin} ${escapeHtml(item.area)}</span>
-          <span class="city-pill-badge">${escapeHtml(tCity(cityName))}</span>
-          ${distHtml}
-        </div>
-
-        <p class="card-address">${escapeHtml(item.full_address)}</p>
-
-        <div class="card-tags">
-          ${tagsHtml}
-          <span class="mini-tag">${
-            item.coord_precision === "plus_code" ? "Exact Plus Code" : `${escapeHtml(tCity(cityName))} · KSA`
-          }</span>
-        </div>
-
-        <div class="card-meta-footer">
-          <a class="card-btn card-btn-primary" href="${escapeHtml(item.maps_search_url)}" target="_blank" rel="noopener noreferrer">
-            ${SVG.nav} ${escapeHtml(t("btnMaps"))}
-          </a>
-          ${callBtnHtml}
-          <button type="button" class="card-btn" data-detail="${escapeHtml(item.restaurant_id)}">
-            ${SVG.info} ${escapeHtml(t("btnDetails"))}
-          </button>
-          <a class="card-btn card-btn-icon" href="${escapeHtml(
-            buildShareRestaurantWhatsAppUrl(item)
-          )}" target="_blank" rel="noopener noreferrer" title="${escapeHtml(t("btnShare"))}" aria-label="${escapeHtml(
-        t("btnShare")
-      )}">
-            ${SVG.share}
-          </a>
-        </div>
-        ${
-          state.isAdmin
-            ? `<div class="card-admin-strip">
-                <button type="button" class="card-admin-btn" data-admin-edit="${escapeHtml(item.restaurant_id)}">Edit</button>
-                <button type="button" class="card-admin-btn delete" data-admin-del="${escapeHtml(item.restaurant_id)}">Delete</button>
-              </div>`
-            : ""
-        }
-      `;
-
-      card.querySelector("[data-fav]").addEventListener("click", () => toggleSaved(item.restaurant_id));
-      card.querySelectorAll("[data-detail]").forEach((btn) => {
-        btn.addEventListener("click", () => openDetailModal(item.restaurant_id));
+    const mapBtn = $("hotels-summary-map-btn");
+    if (mapBtn) {
+      mapBtn.addEventListener("click", () => {
+        const viewMap = $("view-map-btn");
+        if (viewMap) viewMap.click();
       });
-      if (state.isAdmin) {
-        const editBtn = card.querySelector("[data-admin-edit]");
-        const delBtn = card.querySelector("[data-admin-del]");
-        if (editBtn) editBtn.addEventListener("click", () => openAdminEditorModal(item.restaurant_id));
-        if (delBtn) delBtn.addEventListener("click", () => handleAdminDelete(item.restaurant_id));
-      }
-
-      frag.appendChild(card);
-    });
-
-    grid.appendChild(frag);
+    }
   }
 
   // Render Interactive Leaflet Map

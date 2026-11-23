@@ -53,6 +53,9 @@
 
   // Render HTML element to PDF via html2pdf or fallback to print window
   function renderElementToPdf(element, filename, title) {
+    if (window.HubLogger) {
+      window.HubLogger.logEvent("PDF_DOWNLOAD", `PDF ഡൗൺലോഡ്: ${title || filename}`, `ഫയൽ: ${filename}`);
+    }
     if (typeof window.html2pdf !== "function") {
       // Fallback: print window
       hidePdfSpinner();

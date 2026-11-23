@@ -493,6 +493,31 @@
   }
 
   // Inject CSS Styles for Digambaran & Riddle Game
+  
+  // Cute SVG Mascot for Digambaran (2 tiny gold horns, cute smile, tiny fangs & curling tail)
+  const MASCOT_SVG = `
+    <svg width="24" height="24" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="digambaran-mascot-svg">
+      <path d="M10 13 C8 6 12 5 13 8 C14 10 13 14 13 14 Z" fill="#F59E0B" stroke="#D97706" stroke-width="1" />
+      <path d="M26 13 C28 6 24 5 23 8 C22 10 23 14 23 14 Z" fill="#F59E0B" stroke="#D97706" stroke-width="1" />
+      <circle cx="18" cy="19" r="11" fill="url(#digaHeadGrad)" stroke="#10B981" stroke-width="1.8" />
+      <ellipse cx="14" cy="18" rx="2" ry="2.6" fill="#FEF08A" />
+      <circle cx="14.8" cy="17.2" r="0.8" fill="#064E3B" />
+      <ellipse cx="22" cy="18" rx="2" ry="2.6" fill="#FEF08A" />
+      <circle cx="21.2" cy="17.2" r="0.8" fill="#064E3B" />
+      <path d="M14.5 23.5 Q18 27.5 21.5 23.5" stroke="#FEF08A" stroke-width="1.8" stroke-linecap="round" fill="none" />
+      <polygon points="16,23.5 17,25.5 17.5,23.5" fill="#FFFFFF" />
+      <polygon points="20,23.5 19,25.5 18.5,23.5" fill="#FFFFFF" />
+      <path d="M28 24 Q35 25 33 30 Q31 34 26 29" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" fill="none" />
+      <polygon points="24,28 26,32 23,31" fill="#F59E0B" />
+      <defs>
+        <linearGradient id="digaHeadGrad" x1="10" y1="10" x2="26" y2="28" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#059669" />
+          <stop offset="100%" stop-color="#022c22" />
+        </linearGradient>
+      </defs>
+    </svg>
+  `;
+
   function injectStyles() {
     if (document.getElementById("digambaran-styles")) return;
     const style = document.createElement("style");
@@ -501,8 +526,9 @@
       /* Digambaran Floating Trigger Button */
       .digambaran-float-btn {
         position: fixed;
-        left: 20px;
-        bottom: 20px;
+        right: 24px;
+        bottom: 24px;
+        left: auto;
         z-index: 150;
         display: inline-flex;
         align-items: center;
@@ -560,11 +586,36 @@
       }
 
       /* Mobile adjustment for Floating Trigger */
+      /* D&J WhatsApp header button */
+      .digambaran-wa-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: rgba(37, 211, 102, 0.15);
+        color: #25d366;
+        border: 1px solid rgba(37, 211, 102, 0.4);
+        padding: 5px 10px;
+        border-radius: 999px;
+        font-size: 0.74rem;
+        font-weight: 700;
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+      .digambaran-wa-btn:hover {
+        background: #25d366;
+        color: #ffffff;
+      }
+
       @media (max-width: 768px) {
         .digambaran-float-btn {
-          left: 12px;
-          bottom: calc(76px + env(safe-area-inset-bottom, 0px)) !important;
+          right: 16px !important;
+          left: auto !important;
+          bottom: calc(7rem + env(safe-area-inset-bottom, 0px)) !important;
           padding: 6px 12px 6px 8px;
+        }
+        body.pwa-banner-visible .digambaran-float-btn,
+        body:has(#pwa-install-banner:not([style*="display: none"])) .digambaran-float-btn {
+          bottom: calc(9.5rem + env(safe-area-inset-bottom, 0px)) !important;
         }
         .digambaran-float-avatar {
           width: 28px;
@@ -1177,7 +1228,7 @@
     floatBtn.setAttribute("aria-label", "ദിഗംബരൻ AI സഹായിയുമായി ചാറ്റ് ചെയ്യുക");
     floatBtn.setAttribute("title", "ദിഗംബരൻ · പ്രവാസി AI സഹായി & കുസൃതിച്ചോദ്യങ്ങൾ");
     floatBtn.innerHTML = `
-      <span class="digambaran-float-avatar" aria-hidden="true">🧙‍♂️</span>
+      <span class="digambaran-float-avatar" aria-hidden="true">${MASCOT_SVG}</span>
       <span class="digambaran-float-copy">
         <small>പ്രവാസി AI</small>
         <strong>ദിഗംബരൻ</strong>
@@ -1201,13 +1252,17 @@
     win.innerHTML = `
       <div class="digambaran-header">
         <div class="digambaran-header-info">
-          <div class="digambaran-header-avatar">🧙‍♂️</div>
+          <div class="digambaran-header-avatar">${MASCOT_SVG}</div>
           <div class="digambaran-header-text">
             <h3>ദിഗംബരൻ <span style="font-size:0.75rem; color:#f59e0b; font-weight:600;">(AI സഹായി)</span></h3>
             <p><span class="digambaran-status-dot"></span> 100% ഓഫ്‌ലൈൻ &amp; ഇൻസ്റ്റന്റ്</p>
           </div>
         </div>
         <div class="digambaran-header-actions">
+          <a href="https://wa.me/447460646263?text=Hi%20D%26J!%20Need%20support%20from%20KSA%20Malayali%20Hub." target="_blank" rel="noopener noreferrer" class="digambaran-wa-btn" title="D&J WhatsApp Support (+44 7460 646263)">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12.03 2C6.5 2 2 6.48 2 12c0 1.77.46 3.5 1.34 5.02L2 22l5.13-1.34A9.96 9.96 0 0 0 12.03 22C17.55 22 22 17.52 22 12S17.55 2 12.03 2zm5.82 14.17c-.24.68-1.42 1.3-1.97 1.38-.52.08-1.18.11-1.9-.12-.44-.14-1-.33-1.72-.64-3.02-1.31-4.99-4.38-5.14-4.58-.15-.2-1.23-1.64-1.23-3.13s.78-2.22 1.06-2.52c.28-.3.61-.38.81-.38h.59c.19 0 .44-.07.69.53.25.61.85 2.09.92 2.24.08.15.13.33.03.53-.1.2-.15.33-.3.5-.15.18-.32.4-.45.54-.15.15-.31.32-.13.62.18.3.79 1.31 1.7 2.12 1.17 1.04 2.15 1.37 2.46 1.52.3.15.48.13.66-.08.18-.2.76-.89.96-1.19.2-.3.41-.25.69-.15.28.1 1.78.84 2.08.99.3.15.51.23.58.36.08.13.08.76-.16 1.44z"/></svg>
+            <span>D&amp;J വാട്സാപ്പ്</span>
+          </a>
           <button type="button" id="digambaran-btn-clear" class="digambaran-btn-icon" title="ചാറ്റ് റീസെറ്റ് ചെയ്യുക" aria-label="Clear Chat">↺</button>
           <button type="button" id="digambaran-btn-close" class="digambaran-btn-icon" title="ക്ലോസ് ചെയ്യുക" aria-label="Close Chat">✕</button>
         </div>
@@ -1216,9 +1271,9 @@
       <div class="digambaran-body" id="digambaran-messages">
         <!-- Initial Welcome Message -->
         <div class="digambaran-msg bot">
-          <div class="digambaran-msg-avatar">🧙‍♂️</div>
+          <div class="digambaran-msg-avatar">${MASCOT_SVG}</div>
           <div class="digambaran-bubble">
-            <strong>നമസ്കാരം മച്ചാനെ! ഞാൻ ദിഗംബരൻ 🧙‍♂️</strong><br>
+            <strong>നമസ്കാരം മച്ചാനെ! ഞാൻ ദിഗംബരൻ</strong><br>
             സൗദിയിലെ മലയാളി ഹോട്ടലുകൾ, ലൈവ് റിയാൽ നിരക്ക്, ഹൈപ്പർമാർക്കറ്റ് ഓഫറുകൾ, ഇഖാമ, എമർജൻസി അല്ലെങ്കിൽ ബോറടിക്കുമ്പോൾ ഒരു കുസൃതിച്ചോദ്യം... എന്ത് വേണമെങ്കിലും ചോദിച്ചോളൂ!
           </div>
         </div>
@@ -1227,6 +1282,7 @@
       <!-- Quick Reply Chips -->
       <div class="digambaran-chips-container" id="digambaran-chips">
         <button type="button" class="digambaran-chip chip-highlight" data-query="കുസൃതിച്ചോദ്യം">😜 കുസൃതിച്ചോദ്യം</button>
+        <a href="https://wa.me/447460646263?text=Hi%20D%26J!%20Need%20support%20from%20KSA%20Malayali%20Hub." target="_blank" rel="noopener noreferrer" class="digambaran-chip chip-wa" style="text-decoration:none; background:rgba(37,211,102,0.12); color:#25d366; border-color:rgba(37,211,102,0.35);">💬 D&amp;J (+44 7460 646263)</a>
         <button type="button" class="digambaran-chip" data-query="ഹോട്ടൽ">🍲 മലയാളി ഹോട്ടൽ</button>
         <button type="button" class="digambaran-chip" data-query="റിയാൽ">💱 റിയാൽ നിരക്ക്</button>
         <button type="button" class="digambaran-chip" data-query="ഓഫർ">🛍️ ഓഫറുകൾ</button>
@@ -1306,7 +1362,7 @@
     }
 
     msg.innerHTML = `
-      <div class="digambaran-msg-avatar">🧙‍♂️</div>
+      <div class="digambaran-msg-avatar">${MASCOT_SVG}</div>
       <div class="digambaran-bubble">
         ${htmlContent}
         ${extraPlayfulHtml}
@@ -1335,6 +1391,10 @@
     const riddle = available[Math.floor(Math.random() * available.length)] || KUSRUTHI_RIDDLES[0];
     askedRiddleIds.push(riddle.id);
     currentActiveRiddle = riddle;
+
+    if (window.HubLogger) {
+      window.HubLogger.logEvent("RIDDLE_GAME", `കുസൃതിച്ചോദ്യം തുടങ്ങി (#${riddle.id})`, `ചോദ്യം: ${riddle.question.slice(0, 40)}...`);
+    }
 
     // Shuffle 3 options
     const shuffledOptions = shuffleArray(riddle.options);
@@ -1387,6 +1447,13 @@
 
     if (isCorrect) {
       gameScore++;
+    }
+
+    if (window.HubLogger) {
+      window.HubLogger.logEvent("RIDDLE_GAME", isCorrect ? `കുസൃതിച്ചോദ്യം ശരിയുത്തരം (#${riddle.id})` : `കുസൃതിച്ചോദ്യം തെറ്റി (#${riddle.id})`, `സ്കോർ: ${gameScore} / ${gameTotal} · ഉത്തരം: ${riddle.answer}`);
+    }
+
+    if (isCorrect) {
       const randomPraise = PRAISE_POOL[Math.floor(Math.random() * PRAISE_POOL.length)];
       const html = `
         <div class="riddle-praise-card">
@@ -1842,7 +1909,7 @@
         if (messages) {
           messages.innerHTML = `
             <div class="digambaran-msg bot">
-              <div class="digambaran-msg-avatar">🧙‍♂️</div>
+              <div class="digambaran-msg-avatar">${MASCOT_SVG}</div>
               <div class="digambaran-bubble">
                 <strong>ചാറ്റ് റീസെറ്റ് ചെയ്തു മച്ചാനെ! 🧙‍♂️</strong><br>
                 സൗദി ഹോട്ടലുകൾ, റിയാൽ നിരക്ക്, ഓഫറുകൾ, ഇഖാമ, എമർജൻസി അല്ലെങ്കിൽ ഒരു കുസൃതിച്ചോദ്യം... എന്ത് വേണമെങ്കിലും ചോദിച്ചോളൂ!
