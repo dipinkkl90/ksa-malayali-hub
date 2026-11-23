@@ -1,0 +1,24 @@
+{
+  "name": "ksa_jeddah_keralafoods-main",
+  "version": "1.0.0",
+  "description": "**Developed by D&J Techies** · WhatsApp Concierge & Listings: **+44 7460 646263**",
+  "main": "sw.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dipinkkl90/ksa-malayali-hub.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/dipinkkl90/ksa-malayali-hub/issues"
+  },
+  "homepage": "https://github.com/dipinkkl90/ksa-malayali-hub#readme",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.119.2"
+  }
+}
