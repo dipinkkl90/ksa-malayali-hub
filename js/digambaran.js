@@ -1568,7 +1568,37 @@
       }
     }
 
-    // 2. Riddle / Joke keywords check to START riddle game
+    // 2. Secret Easter Egg: Owner / Creator / Founder queries
+    const isOwnerQuery =
+      q.includes("owner") ||
+      q.includes("creator") ||
+      q.includes("founder") ||
+      q.includes("admin") ||
+      q.includes("developer") ||
+      q.includes("who made") ||
+      q.includes("dipin") ||
+      q.includes("jihad") ||
+      q.includes("d&j") ||
+      /\bdj\b/i.test(q) ||
+      q.includes("ഓണർ") ||
+      q.includes("ഉടമ") ||
+      q.includes("ഉണ്ടാക്കിയത്") ||
+      q.includes("ദിപിൻ") ||
+      q.includes("ജിഹാദ്") ||
+      q.includes("ആരാണിത്");
+
+    if (isOwnerQuery) {
+      setTimeout(() => {
+        const easterEggHtml = `
+          ശ്ശ്... 🤫 ഈ സൈറ്റിന്റെ ഓണർമാരായ ദിപിനും ജിഹാദും <strong>'Devil's Advocates'</strong> ആണ്! 😈 കൂടുതൽ എനിക്ക് പറയാൻ അനുവാദമില്ല... എന്റെ പണി പോകും! 🤐<br>
+          <a href="${getSafeLink('/about')}" class="digambaran-link-btn" style="margin-top:8px; display:inline-flex; align-items:center; gap:6px;">ℹ️ ഞങ്ങളുടെ കഥ വായിക്കാം ↗</a>
+        `;
+        appendBotMessage(easterEggHtml, false);
+      }, 200);
+      return;
+    }
+
+    // 3. Riddle / Joke keywords check to START riddle game
     const isRiddleQuery =
       q.includes("joke") ||
       q.includes("riddle") ||
