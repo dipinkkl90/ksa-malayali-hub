@@ -39,7 +39,7 @@
   let currentHotelCity = "all";
   let searchKeyword = "";
 
-    // 10 Curated, distinct, high-contrast Kerala & Arabian food cover photos
+    // 12 Curated, authentic, high-contrast Kerala & Arabian food cover photos
   const HOTEL_FOOD_PHOTOS = [
     {
       key: "biriyani",
@@ -48,28 +48,22 @@
       alt: "തലശ്ശേരി മലബാർ ദം ബിരിയാണി (Malabar Biriyani)"
     },
     {
+      key: "sadya",
+      local: "./assets/food_covers/sadya.jpg",
+      remote: "https://images.unsplash.com/photo-1610057099431-d73a1c9d2f2f?auto=format&fit=crop&w=600&h=320&q=80",
+      alt: "പരമ്പരാഗത വാഴയില കേരള സദ്യ & ഊണ് (Kerala Sadya / Meals)"
+    },
+    {
       key: "porotta",
       local: "./assets/food_covers/porotta.jpg",
       remote: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&h=320&q=80",
       alt: "നല്ല ചൂടൻ കേരള പൊറോട്ടയും കറിയും (Porotta & Curry)"
     },
     {
-      key: "sadya",
-      local: "./assets/food_covers/sadya.jpg",
-      remote: "https://images.unsplash.com/photo-1610057099431-d73a1c9d2f2f?auto=format&fit=crop&w=600&h=320&q=80",
-      alt: "പരമ്പരാഗത കേരള സദ്യ & ഊണ് (Kerala Sadya / Meals)"
-    },
-    {
-      key: "mandi",
-      local: "./assets/food_covers/mandi.jpg",
-      remote: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&h=320&q=80",
-      alt: "അറേബ്യൻ ചിക്കൻ മന്തി & റൈസ് (Chicken Mandi)"
-    },
-    {
-      key: "fish",
-      local: "./assets/food_covers/fish_fry.jpg",
-      remote: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=600&h=320&q=80",
-      alt: "നാടൻ മീൻ പൊള്ളിച്ചതും കറിയും (Fish Fry & Curry)"
+      key: "platter",
+      local: "./assets/food_covers/kerala_platter.jpg",
+      remote: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&h=320&q=80",
+      alt: "കേരള ഫാമിലി പ്ലാറ്റർ & സ്പെഷ്യലുകൾ (Kerala Platter / Family Dining)"
     },
     {
       key: "dosa",
@@ -84,86 +78,124 @@
       alt: "കേരള അപ്പവും ഇടിയപ്പവും സ്റ്റ്യൂവും (Appam & Stew)"
     },
     {
+      key: "fish",
+      local: "./assets/food_covers/fish_fry.jpg",
+      remote: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=600&h=320&q=80",
+      alt: "നാടൻ മീൻ പൊള്ളിച്ചതും കറിയും (Fish Fry & Curry)"
+    },
+    {
       key: "shawarma",
       local: "./assets/food_covers/shawarma.jpg",
       remote: "https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=600&h=320&q=80",
       alt: "അറേബ്യൻ ഷവർമ്മ & ചാർക്കോൾ അൽഫഹം (Shawarma & Grill)"
     },
     {
-      key: "bakery",
+      key: "tea_snacks",
       local: "./assets/food_covers/tea_snacks.jpg",
       remote: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=600&h=320&q=80",
-      alt: "നാടൻ സുലൈമാനി & തട്ടുകട പലഹാരങ്ങൾ (Kerala Snacks & Chai)"
+      alt: "നാടൻ സുലൈമാനി & തട്ടുകട പലഹാരങ്ങൾ (Kerala Tea & Snacks)"
     },
     {
-      key: "chicken_curry",
+      key: "mandi",
+      local: "./assets/food_covers/mandi.jpg",
+      remote: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&h=320&q=80",
+      alt: "അറേബ്യൻ ചിക്കൻ മന്തി & റൈസ് (Chicken Mandi)"
+    },
+    {
+      key: "beef_roast",
       local: "./assets/food_covers/beef_roast.jpg",
-      remote: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&h=320&q=80",
-      alt: "നാടൻ ചിക്കൻ കറി & ബീഫ് റോസ്റ്റ് (Chicken Curry / Beef)"
+      remote: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=600&h=320&q=80",
+      alt: "നാടൻ ബീഫ് റോസ്റ്റ് & ചിക്കൻ കറി (Kerala Beef Roast & Curry)"
+    },
+    {
+      key: "bakery",
+      local: "./assets/food_covers/bakery.jpg",
+      remote: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&h=320&q=80",
+      alt: "കേരള ബേക്കറിയും കൂൾ ബാറും (Kerala Bakery & Cafe)"
     }
   ];
 
-  function getHotelFoodCover(item, index) {
+  function getHotelFoodCover(item, index, prevPhotoKey) {
     const name = (item.name || item.restaurant_name || "").toLowerCase();
     const tags = Array.isArray(item.tags) ? item.tags.join(" ").toLowerCase() : (item.tags || "").toLowerCase();
-    const cat = (item.category || "").toLowerCase();
     const dishes = Array.isArray(item.popular_dishes) ? item.popular_dishes.join(" ").toLowerCase() : "";
-    const evidence = (item.kerala_food_evidence || "").toLowerCase();
-    const text = (name + " " + tags + " " + cat + " " + dishes + " " + evidence).toLowerCase();
+    const text = (name + " " + tags + " " + dishes).toLowerCase();
 
-    // 1. Biriyani / Malabar spots
-    if (/(biriyani|biryani|malabar|thalassery|dum biriyani)/i.test(text)) {
-      return HOTEL_FOOD_PHOTOS[0];
+    let matchedKey = null;
+
+    // 1. Biriyani spots (specific to Biriyani, Dum Biriyani, Thalassery)
+    if (/(biriyani|biryani|dum biriyani|thalassery biriyani)/i.test(text)) {
+      matchedKey = "biriyani";
     }
-
-    // 2. Porotta / Beef spots
-    if (/(porotta|parotta|paratha|beef|beef roast|thattukada)/i.test(text)) {
-      return HOTEL_FOOD_PHOTOS[1];
+    // 2. Family Dining / Multi-dish Platter
+    else if (/(family dining|platter|family restaurant|family section)/i.test(text)) {
+      matchedKey = "platter";
     }
-
-    // 3. Sadya / Meals / Veg spots
-    if (/(sadya|sadhya|veg|vegetarian|mess|meals|thali|brahmin|nadan meals)/i.test(text)) {
-      return HOTEL_FOOD_PHOTOS[2];
+    // 3. Specific Sadya / Meals / Veg / Oonu spots
+    else if (/(sadya|sadhya|veg|vegetarian|meals|thali|oonu|nadan meals|kerala meals)/i.test(text)) {
+      matchedKey = "sadya";
     }
-
-    // 4. Mandi / Kabsa spots
-    if (/(mandi|mandhi|madhbi|kabsa|bukhari|kuzhimanthi)/i.test(text)) {
-      return HOTEL_FOOD_PHOTOS[3];
+    // 4. Porotta / Parotta spots
+    else if (/(porotta|parotta|paratha|kothu porotta)/i.test(text)) {
+      matchedKey = "porotta";
     }
-
-    // 5. Fish / Seafood spots
-    if (/(fish|meen|seafood|chemmeen|mathi|ayala|karimeen|fish fry)/i.test(text)) {
-      return HOTEL_FOOD_PHOTOS[4];
+    // 5. Dosa / Ghee Roast
+    else if (/(dosa|masala dosa|ghee roast|thattu dosa|idli)/i.test(text)) {
+      matchedKey = "dosa";
     }
-
-    // 6. Dosa / Ghee Roast
-    if (/(dosa|masala dosa|ghee roast|thattu dosa)/i.test(text)) {
-      return HOTEL_FOOD_PHOTOS[5];
+    // 6. Appam / Stew / Puttu / Idiyappam / Breakfast
+    else if (/(appam|puttu|idiyappam|stew|breakfast|vellayappam)/i.test(text)) {
+      matchedKey = "appam";
     }
-
-    // 7. Appam / Stew / Puttu / Idiyappam
-    if (/(appam|puttu|idiyappam|stew|breakfast|vellayappam)/i.test(text)) {
-      return HOTEL_FOOD_PHOTOS[6];
+    // 7. Fish / Seafood
+    else if (/(fish|meen|seafood|chemmeen|mathi|ayala|karimeen|fish fry|fish curry)/i.test(text)) {
+      matchedKey = "fish";
     }
-
     // 8. Shawarma / Grill / Charcoal / Al Faham
-    if (/(shawarma|grill|bbq|broast|broasted|alfaham|al-faham|charcoal|tikka|sheesh)/i.test(text)) {
-      return HOTEL_FOOD_PHOTOS[7];
+    else if (/(shawarma|grill|bbq|broast|broasted|alfaham|al-faham|charcoal|tikka|sheesh)/i.test(text)) {
+      matchedKey = "shawarma";
+    }
+    // 9. Tea & Snacks / Thattukada / Sulaimani
+    else if (/(chai|tea|sulaimani|snacks|snack|thattukada|pazham pori|samosa)/i.test(text)) {
+      matchedKey = "tea_snacks";
+    }
+    // 10. Mandi / Kabsa
+    else if (/(mandi|mandhi|madhbi|kabsa|bukhari|kuzhimanthi)/i.test(text)) {
+      matchedKey = "mandi";
+    }
+    // 11. Beef Roast / Chicken Curry
+    else if (/(beef|beef roast|beef fry|chicken fry|chicken curry|roast)/i.test(text)) {
+      matchedKey = "beef_roast";
+    }
+    // 12. Bakery / Cafe / Cool Bar
+    else if (/(bakery|bake|bakes|cafeteria|cafe|coffee|juice|cool bar|shake)/i.test(text)) {
+      matchedKey = "bakery";
+    }
+    // 13. General "Kerala Cuisine" or "South Indian" - rotate through authentic South Indian staples starting at sadya
+    else if (/(kerala cuisine|south indian)/i.test(text)) {
+      const keralaStaples = ["sadya", "porotta", "dosa", "appam", "platter", "fish", "biriyani", "beef_roast"];
+      const stapleIdx = (typeof index === "number" ? Math.abs(index) : 0) % keralaStaples.length;
+      matchedKey = keralaStaples[stapleIdx];
     }
 
-    // 9. Bakery / Chai / Tea / Cafeteria / Snacks
-    if (/(chai|tea|bakery|bake|bakes|cafeteria|cafe|coffee|snacks|snack|juice|cool bar|coolbar|shake|pazham pori)/i.test(text)) {
-      return HOTEL_FOOD_PHOTOS[8];
+    // Fallback: rotate deterministically through all 12 photos based on index
+    if (!matchedKey) {
+      const fallbackIdx = (typeof index === "number" ? Math.abs(index) : 0) % HOTEL_FOOD_PHOTOS.length;
+      matchedKey = HOTEL_FOOD_PHOTOS[fallbackIdx].key;
     }
 
-    // 10. Chicken / Curry spots
-    if (/(chicken curry|curry|gravy|chutney|masala|roast)/i.test(text)) {
-      return HOTEL_FOOD_PHOTOS[9];
+    // Anti-Repetition Guard: Ensure no two adjacent cards show the exact same image
+    if (prevPhotoKey && matchedKey === prevPhotoKey) {
+      const curIdx = HOTEL_FOOD_PHOTOS.findIndex(p => p.key === matchedKey);
+      const safeIdx = typeof index === "number" ? Math.abs(index) : 0;
+      const nextIdx = (curIdx + 1 + (safeIdx % 5)) % HOTEL_FOOD_PHOTOS.length;
+      matchedKey = HOTEL_FOOD_PHOTOS[nextIdx].key;
+      if (matchedKey === prevPhotoKey) {
+        matchedKey = HOTEL_FOOD_PHOTOS[(nextIdx + 1) % HOTEL_FOOD_PHOTOS.length].key;
+      }
     }
 
-    // Deterministic rotation through all 10 photos for all other hotels (like "Kerala Cuisine", "Family Dining", etc.)
-    const safeIdx = typeof index === "number" ? Math.abs(index) : 0;
-    return HOTEL_FOOD_PHOTOS[safeIdx % HOTEL_FOOD_PHOTOS.length];
+    return HOTEL_FOOD_PHOTOS.find(p => p.key === matchedKey) || HOTEL_FOOD_PHOTOS[0];
   }
 
   function initHotels() {
@@ -231,6 +263,7 @@
         return;
       }
 
+      let prevPhotoKey = "";
       grid.innerHTML = filtered.map((item, index) => {
         const rawName = item.name || item.restaurant_name || "Kerala Restaurant";
         const name = escapeHtml(rawName);
@@ -245,7 +278,8 @@
         const waText = encodeURIComponent(`Hi! Check out this Kerala restaurant in ${city}: ${rawName} (${area}). Found on KSA Malayali Hub: https://ksa-malayali-hub.vercel.app/saudi`);
         const waShareUrl = `https://wa.me/?text=${waText}`;
 
-        const cover = getHotelFoodCover(item, index);
+        const cover = getHotelFoodCover(item, index, prevPhotoKey);
+        prevPhotoKey = cover.key;
         const coverLocal = cover.local;
         const coverRemote = cover.remote;
         const coverAlt = escapeHtml(cover.alt + " - " + rawName);
@@ -290,12 +324,13 @@
                 </a>
 
                 ${phone ? `
-                  <a href="tel:${phone}" class="saudi-btn-call" title="Call Hotel">
+                  <a href="tel:${phone.replace(/\s+/g, '')}" class="saudi-btn-call" title="Call Hotel (${escapeHtml(phone)})">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                     <span>വിളിക്കുക</span>
                   </a>
                 ` : `
-                  <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" class="saudi-btn-call" title="View Phone on Google Maps">
+                  <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" class="saudi-btn-call saudi-btn-call-alt" title="View Phone / Info on Google Maps">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                     <span>ഫോൺ നമ്പർ ↗</span>
                   </a>
                 `}

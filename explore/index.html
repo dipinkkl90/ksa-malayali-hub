@@ -11,11 +11,11 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="Malayali Hub">
-  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="../assets/icon-192.png">
-  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
-  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./assets/icon-192.png">
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="manifest" href="./manifest.webmanifest">
 
   <!-- Google Fonts: Inter + Noto Sans Malayalam -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,14 +23,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Malayalam:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="../css/styles.css?v=20261123_v44">
+  <link rel="stylesheet" href="./css/styles.css?v=20261123_v49">
 </head>
 <body>
   <!-- Sticky Top Navigation -->
   <nav class="topbar" aria-label="Main navigation">
     <div class="container topbar-inner">
       <a href="/" class="brand-lockup">
-        <img src="../assets/favicon.svg" alt="KSA Malayali Hub Logo" class="brand-icon">
+        <img src="./assets/favicon.svg" alt="KSA Malayali Hub Logo" class="brand-icon">
         <div class="brand-text">
           <span class="brand-name">KSA Malayali Hub</span>
           <span class="brand-dev-tag">
@@ -299,7 +299,7 @@
 
         <!-- Books Dynamic Grid -->
         <div id="library-books-grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(290px, 1fr)); gap:18px;">
-          <!-- Populated dynamically via js/explore.js?v=20261123_v44 -->
+          <!-- Populated dynamically via js/explore.js?v=20261123_v49 -->
         </div>
 
         <!-- Load More Container -->
@@ -336,7 +336,7 @@
 
       <!-- Tourism Spots Dynamic Grid -->
       <div id="tourism-spots-grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:22px;">
-        <!-- Populated dynamically via js/explore.js?v=20261123_v44 from window.SAUDI_TOURISM_DATA -->
+        <!-- Populated dynamically via js/explore.js?v=20261123_v49 from window.SAUDI_TOURISM_DATA -->
       </div>
 
     </div>
@@ -513,10 +513,14 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="../js/library_data.js?v=20261123_v44"></script>
-  <script src="../js/tourism_data.js"></script>
-  <script src="../js/explore.js?v=20261123_v44"></script>
-  <script src="../js/pwa.js" defer></script>
+  <script src="./js/library_data.js?v=20261123_v49"></script>
+  <script src="./js/tourism_data.js"></script>
+  <script src="./js/explore.js?v=20261123_v49"></script>
+  <script src="./js/html2pdf.bundle.min.js"></script>
+  <script src="./js/pdf_generator.js?v=20261123_v49"></script>
+  <script src="./js/site_search.js?v=20261123_v49"></script>
+  <script src="./js/digambaran.js?v=20261123_v49" defer></script>
+  <script src="./js/pwa.js" defer></script>
   <script>
     const themeBtn = document.getElementById('theme-toggle');
     if (themeBtn) {
@@ -530,11 +534,7 @@
       if (savedTheme) document.documentElement.setAttribute('data-theme', savedTheme);
     }
   </script>
-  <script src="/js/html2pdf.bundle.min.js"></script>
-  <script src="/js/pdf_generator.js?v=20261123_v44"></script>
-  <script src="/js/site_search.js?v=20261123_v44"></script>
-  <script src="/js/digambaran.js?v=20261123_v44" defer></script>
-  <script src="/js/supabase.js?v=20261123_v44"></script>
-  <script src="/js/admin.js?v=20261123_v44" defer></script>
+  <script src="/js/supabase.js?v=20261123_v49"></script>
+  <script src="/js/admin.js?v=20261123_v49" defer></script>
 </body>
 </html>
