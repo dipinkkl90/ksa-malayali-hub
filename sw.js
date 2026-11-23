@@ -56,7 +56,17 @@ const CORE_ASSETS = [
   "/assets/icon-192.png",
   "/assets/icon-512.png",
   "/assets/icon-maskable-512.png",
-  "/assets/apple-touch-icon.png"
+  "/assets/apple-touch-icon.png",
+  "/assets/food_covers/biriyani.jpg",
+  "/assets/food_covers/porotta.jpg",
+  "/assets/food_covers/sadya.jpg",
+  "/assets/food_covers/mandi.jpg",
+  "/assets/food_covers/fish_fry.jpg",
+  "/assets/food_covers/dosa.jpg",
+  "/assets/food_covers/appam.jpg",
+  "/assets/food_covers/shawarma.jpg",
+  "/assets/food_covers/tea_snacks.jpg",
+  "/assets/food_covers/beef_roast.jpg",
 ];
 
 // Install: Cache all core assets

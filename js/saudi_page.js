@@ -39,46 +39,71 @@
   let currentHotelCity = "all";
   let searchKeyword = "";
 
-  // 6–8 Curated, lightweight Kerala food cover photos (local assets with remote CDN fallback)
-  const HOTEL_FOOD_COVERS = {
-    biriyani: {
+    // 10 Curated, distinct, high-contrast Kerala & Arabian food cover photos
+  const HOTEL_FOOD_PHOTOS = [
+    {
+      key: "biriyani",
       local: "./assets/food_covers/biriyani.jpg",
       remote: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&h=320&q=80",
-      alt: "Kerala Malabar Biriyani"
+      alt: "തലശ്ശേരി മലബാർ ദം ബിരിയാണി (Malabar Biriyani)"
     },
-    porotta: {
+    {
+      key: "porotta",
       local: "./assets/food_covers/porotta.jpg",
       remote: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&h=320&q=80",
-      alt: "Kerala Porotta & Curry"
+      alt: "നല്ല ചൂടൻ കേരള പൊറോട്ടയും കറിയും (Porotta & Curry)"
     },
-    beef: {
-      local: "./assets/food_covers/beef_roast.jpg",
-      remote: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&h=320&q=80",
-      alt: "Kerala Beef Roast & Thattukada dishes"
-    },
-    sadya: {
+    {
+      key: "sadya",
       local: "./assets/food_covers/sadya.jpg",
       remote: "https://images.unsplash.com/photo-1610057099431-d73a1c9d2f2f?auto=format&fit=crop&w=600&h=320&q=80",
-      alt: "Kerala Sadya & Vegetarian Meals"
+      alt: "പരമ്പരാഗത കേരള സദ്യ & ഊണ് (Kerala Sadya / Meals)"
     },
-    mandi: {
+    {
+      key: "mandi",
       local: "./assets/food_covers/mandi.jpg",
       remote: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&h=320&q=80",
-      alt: "Arabic Mandi & Charcoal Grill"
+      alt: "അറേബ്യൻ ചിക്കൻ മന്തി & റൈസ് (Chicken Mandi)"
     },
-    bakery: {
-      local: "./assets/food_covers/tea_snacks.jpg",
-      remote: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&h=320&q=80",
-      alt: "Kerala Chai, Snacks & Bakery"
+    {
+      key: "fish",
+      local: "./assets/food_covers/fish_fry.jpg",
+      remote: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=600&h=320&q=80",
+      alt: "നാടൻ മീൻ പൊള്ളിച്ചതും കറിയും (Fish Fry & Curry)"
     },
-    default: {
-      local: "./assets/food_covers/kerala_platter.jpg",
+    {
+      key: "dosa",
+      local: "./assets/food_covers/dosa.jpg",
       remote: "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=600&h=320&q=80",
-      alt: "Authentic Kerala Cuisine Platter"
+      alt: "നെയ്യ് റോസ്റ്റ് & മസാല ദോശ (Masala Dosa)"
+    },
+    {
+      key: "appam",
+      local: "./assets/food_covers/appam.jpg",
+      remote: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&h=320&q=80",
+      alt: "കേരള അപ്പവും ഇടിയപ്പവും സ്റ്റ്യൂവും (Appam & Stew)"
+    },
+    {
+      key: "shawarma",
+      local: "./assets/food_covers/shawarma.jpg",
+      remote: "https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=600&h=320&q=80",
+      alt: "അറേബ്യൻ ഷവർമ്മ & ചാർക്കോൾ അൽഫഹം (Shawarma & Grill)"
+    },
+    {
+      key: "bakery",
+      local: "./assets/food_covers/tea_snacks.jpg",
+      remote: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=600&h=320&q=80",
+      alt: "നാടൻ സുലൈമാനി & തട്ടുകട പലഹാരങ്ങൾ (Kerala Snacks & Chai)"
+    },
+    {
+      key: "chicken_curry",
+      local: "./assets/food_covers/beef_roast.jpg",
+      remote: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&h=320&q=80",
+      alt: "നാടൻ ചിക്കൻ കറി & ബീഫ് റോസ്റ്റ് (Chicken Curry / Beef)"
     }
-  };
+  ];
 
-  function getHotelFoodCover(item) {
+  function getHotelFoodCover(item, index) {
     const name = (item.name || item.restaurant_name || "").toLowerCase();
     const tags = Array.isArray(item.tags) ? item.tags.join(" ").toLowerCase() : (item.tags || "").toLowerCase();
     const cat = (item.category || "").toLowerCase();
@@ -86,41 +111,59 @@
     const evidence = (item.kerala_food_evidence || "").toLowerCase();
     const text = (name + " " + tags + " " + cat + " " + dishes + " " + evidence).toLowerCase();
 
-    // 1. Bakery / Tea / Cafeteria
-    if (/(chai|tea|bakery|bake|bakes|cafeteria|cafe|coffee|snacks|snack|juice|cool bar|coolbar|shake)/i.test(name) ||
-        /(bakery|tea|snacks|juice|coolbar)/i.test(tags)) {
-      return HOTEL_FOOD_COVERS.bakery;
+    // 1. Biriyani / Malabar spots
+    if (/(biriyani|biryani|malabar|thalassery|dum biriyani)/i.test(text)) {
+      return HOTEL_FOOD_PHOTOS[0];
     }
 
-    // 2. Mandi / Grill / Broast
-    if (/(mandi|mandhi|madhbi|kabsa|grill|barbecue|bbq|broast|broasted|shawarma|alfaham|al-faham|charcoal|tikka|sheesh)/i.test(name) ||
-        /(mandi|grill|broast|shawarma|alfaham)/i.test(tags)) {
-      return HOTEL_FOOD_COVERS.mandi;
+    // 2. Porotta / Beef spots
+    if (/(porotta|parotta|paratha|beef|beef roast|thattukada)/i.test(text)) {
+      return HOTEL_FOOD_PHOTOS[1];
     }
 
-    // 3. Sadya / Veg / Mess
-    if (/(sadya|sadhya|veg|vegetarian|mess|meals|thali|brahmin|nadan meals)/i.test(name) ||
-        /(meals|veg|vegetarian|sadya)/i.test(tags)) {
-      return HOTEL_FOOD_COVERS.sadya;
+    // 3. Sadya / Meals / Veg spots
+    if (/(sadya|sadhya|veg|vegetarian|mess|meals|thali|brahmin|nadan meals)/i.test(text)) {
+      return HOTEL_FOOD_PHOTOS[2];
     }
 
-    // 4. Porotta / Thattukada / Beef spots
-    if (/(porotta|parotta|paratha|thattukada|beef|puttu|appam|dosa|chilly|curry|roast|fry)/i.test(name) ||
-        /(porotta|puttu|beef|thattukada)/i.test(tags)) {
-      if (/beef|roast|fry/i.test(name + " " + tags)) {
-        return HOTEL_FOOD_COVERS.beef;
-      }
-      return HOTEL_FOOD_COVERS.porotta;
+    // 4. Mandi / Kabsa spots
+    if (/(mandi|mandhi|madhbi|kabsa|bukhari|kuzhimanthi)/i.test(text)) {
+      return HOTEL_FOOD_PHOTOS[3];
     }
 
-    // 5. Biriyani / Malabar spots
-    if (/(biriyani|biryani|malabar|thalassery|dum|kuzhimanthi)/i.test(name) ||
-        /(biriyani|malabar|thalassery)/i.test(tags)) {
-      return HOTEL_FOOD_COVERS.biriyani;
+    // 5. Fish / Seafood spots
+    if (/(fish|meen|seafood|chemmeen|mathi|ayala|karimeen|fish fry)/i.test(text)) {
+      return HOTEL_FOOD_PHOTOS[4];
     }
 
-    // 6. Default fallback
-    return HOTEL_FOOD_COVERS.default;
+    // 6. Dosa / Ghee Roast
+    if (/(dosa|masala dosa|ghee roast|thattu dosa)/i.test(text)) {
+      return HOTEL_FOOD_PHOTOS[5];
+    }
+
+    // 7. Appam / Stew / Puttu / Idiyappam
+    if (/(appam|puttu|idiyappam|stew|breakfast|vellayappam)/i.test(text)) {
+      return HOTEL_FOOD_PHOTOS[6];
+    }
+
+    // 8. Shawarma / Grill / Charcoal / Al Faham
+    if (/(shawarma|grill|bbq|broast|broasted|alfaham|al-faham|charcoal|tikka|sheesh)/i.test(text)) {
+      return HOTEL_FOOD_PHOTOS[7];
+    }
+
+    // 9. Bakery / Chai / Tea / Cafeteria / Snacks
+    if (/(chai|tea|bakery|bake|bakes|cafeteria|cafe|coffee|snacks|snack|juice|cool bar|coolbar|shake|pazham pori)/i.test(text)) {
+      return HOTEL_FOOD_PHOTOS[8];
+    }
+
+    // 10. Chicken / Curry spots
+    if (/(chicken curry|curry|gravy|chutney|masala|roast)/i.test(text)) {
+      return HOTEL_FOOD_PHOTOS[9];
+    }
+
+    // Deterministic rotation through all 10 photos for all other hotels (like "Kerala Cuisine", "Family Dining", etc.)
+    const safeIdx = typeof index === "number" ? Math.abs(index) : 0;
+    return HOTEL_FOOD_PHOTOS[safeIdx % HOTEL_FOOD_PHOTOS.length];
   }
 
   function initHotels() {
@@ -188,7 +231,7 @@
         return;
       }
 
-      grid.innerHTML = filtered.map(item => {
+      grid.innerHTML = filtered.map((item, index) => {
         const rawName = item.name || item.restaurant_name || "Kerala Restaurant";
         const name = escapeHtml(rawName);
         const city = escapeHtml(item.city || "Jeddah");
@@ -202,7 +245,7 @@
         const waText = encodeURIComponent(`Hi! Check out this Kerala restaurant in ${city}: ${rawName} (${area}). Found on KSA Malayali Hub: https://ksa-malayali-hub.vercel.app/saudi`);
         const waShareUrl = `https://wa.me/?text=${waText}`;
 
-        const cover = getHotelFoodCover(item);
+        const cover = getHotelFoodCover(item, index);
         const coverLocal = cover.local;
         const coverRemote = cover.remote;
         const coverAlt = escapeHtml(cover.alt + " - " + rawName);
