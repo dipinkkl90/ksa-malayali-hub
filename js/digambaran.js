@@ -1739,29 +1739,35 @@
     }
 
     // 2. Secret Easter Egg: Owner / Creator / Founder queries
-    const isOwnerQuery =
-      q.includes("owner") ||
-      q.includes("creator") ||
-      q.includes("founder") ||
-      q.includes("admin") ||
-      q.includes("developer") ||
-      q.includes("who made") ||
-      q.includes("dipin") ||
-      q.includes("jihad") ||
-      q.includes("d&j") ||
-      /\bdj\b/i.test(q) ||
-      q.includes("ഓണർ") ||
-      q.includes("ഉടമ") ||
-      q.includes("ഉണ്ടാക്കിയത്") ||
-      q.includes("ദിപിൻ") ||
-      q.includes("ജിഹാദ്") ||
-      q.includes("ആരാണിത്");
+    const ownerKeywords = [
+      "owner",
+      "creator",
+      "founder",
+      "admin",
+      "developer",
+      "who made",
+      "dipin",
+      "jihad",
+      "d&j",
+      "dj",
+      "ഓണർ",
+      "ഉടമ",
+      "ഉണ്ടാക്കിയത്",
+      "ദിപിൻ",
+      "ജിഹാദ്",
+      "ആരാണിത്"
+    ];
 
-    if (isOwnerQuery) {
+    if (ownerKeywords.some(keyword => keyword === "dj" ? /\bdj\b/i.test(q) : (q.includes(keyword.toLowerCase()) || query.includes(keyword)))) {
       setTimeout(() => {
+        const botReply = "ശ്ശ്... 🤫 അവരുടെ പേരോ ഒരു ഒറ്റ അക്ഷരം പോലുമോ പുറത്തുപറയാൻ എനിക്ക് അനുവാദമില്ല! 🤐 പറഞ്ഞാൽ എന്റെ ശമ്പളം കട്ട് ആകും... അവർ 'Devil\'s Advocates' ആണ്! 😈 കൂടുതൽ ഒന്നും ചോദിക്കല്ലേ പ്ലീസ്! 😬";
         const easterEggHtml = `
-          ശ്ശ്... 🤫 ഈ സൈറ്റിന്റെ ഓണർമാരായ ദിപിനും ജിഹാദും <strong>'Devil's Advocates'</strong> ആണ്! 😈 കൂടുതൽ എനിക്ക് പറയാൻ അനുവാദമില്ല... എന്റെ പണി പോകും! 🤐<br>
-          <a href="${getSafeLink('/about')}" class="digambaran-link-btn" style="margin-top:8px; display:inline-flex; align-items:center; gap:6px;">ℹ️ ഞങ്ങളുടെ കഥ വായിക്കാം ↗</a>
+          <div class="bot-message">
+            <p style="margin:0 0 8px 0; line-height:1.5;">${botReply}</p>
+            <a href="${getSafeLink('/about')}" class="about-btn" style="display:inline-block; margin-top:8px; padding:6px 12px; background:#15803d; color:#fff; border-radius:6px; text-decoration:none; font-size:13px;">
+              ℹ️ ഞങ്ങളുടെ കഥ വായിക്കാം ↗
+            </a>
+          </div>
         `;
         appendBotMessage(easterEggHtml, false);
       }, 200);
