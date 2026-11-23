@@ -1821,12 +1821,12 @@
                 ${escapeHtml(b.summary || "")}
               </p>
               <div class="book-actions-row">
-                <button type="button" class="book-read-btn" onclick="event.stopPropagation(); window.openBookReader('${b.id}')">
-                  <span>📖 വായിക്കുക</span>
-                </button>
-                <button type="button" class="book-pdf-btn" onclick="event.stopPropagation(); window.downloadBookPdf('${b.id}')">
-                  <span>📥 PDF / സേവ്</span>
-                </button>
+                <a href="${b.readUrl || 'https://ml.wikisource.org'}" ${b.category === 'pravasi' || b.id > 90 ? '' : 'target="_blank" rel="noopener noreferrer"'} class="book-read-btn" style="text-decoration:none; display:inline-flex; align-items:center; justify-content:center; gap:6px;">
+                  <span>${b.category === 'pravasi' || b.id > 90 ? '📖 ഗൈഡ് ↗' : '📖 വായിക്കാം ↗'}</span>
+                </a>
+                <a href="${b.archiveUrl || 'https://archive.org/search.php?query=' + encodeURIComponent((b.englishTitle || b.title) + ' malayalam')}" target="_blank" rel="noopener noreferrer" class="book-pdf-btn" style="text-decoration:none; display:inline-flex; align-items:center; justify-content:center; gap:6px;">
+                  <span>🏛️ ആർക്കൈവ് ↗</span>
+                </a>
               </div>
             </div>
           </article>
@@ -1837,14 +1837,13 @@
     // Whole card click handler
     grid.querySelectorAll(".book-card").forEach((card) => {
       card.addEventListener("click", (e) => {
-        if (e.target.closest(".book-pdf-btn")) return;
+        if (e.target.closest("a") || e.target.closest(".book-actions-row")) return;
         const id = card.getAttribute("data-book-id");
         if (id) window.openBookReader(id);
       });
       card.addEventListener("keydown", (e) => {
         if (e.key === "Enter" || e.key === " ") {
-          if (e.target.closest(".book-pdf-btn")) return;
-          e.preventDefault();
+          if (e.target.closest("a") || e.target.closest(".book-actions-row")) return;
           const id = card.getAttribute("data-book-id");
           if (id) window.openBookReader(id);
         }

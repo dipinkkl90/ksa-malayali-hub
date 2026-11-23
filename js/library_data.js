@@ -17,7 +17,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.9,
     "summary": "മലയാളത്തിലെ ലക്ഷണമൊത്ത ആദ്യത്തെ സാമൂഹിക നോവൽ. ആധുനിക ഇംഗ്ലീഷ് വിദ്യാഭ്യാസം നേടിയ ഇന്ദുലേഖയുടെയും മാധവന്റെയും പ്രണയത്തിലൂടെ ഫ്യൂഡൽ ജീർണ്ണതകൾക്കെതിരെ വിരൽചൂണ്ടിയ വിപ്ലവാത്മക കൃതി.",
     "full_content": "ഇന്ദുലേഖ (ഒ. ചന്തുമേനോൻ — 1889)\n\nമലയാള നോവൽ സാഹിത്യ ചരിത്രത്തിലെ ആദ്യത്തെ ലക്ഷണമൊത്ത നാഴികക്കല്ലാണ് ഒ. ചന്തുമേനോൻ രചിച്ച 'ഇന്ദുലേഖ'. 1889-ൽ പ്രസിദ്ധീകരിച്ച ഈ കൃതി അന്നത്തെ കേരളീയ നായർ സമുദായത്തിലെയും ഫ്യൂഡൽ വ്യവസ്ഥയിലെയും അനാചാരങ്ങളെയും സംബന്ധ സമ്പ്രദായത്തെയും അതിനിശിതമായി ചോദ്യം ചെയ്തു.\n\nഇംഗ്ലീഷും സംസ്കൃതവും അഭ്യസിച്ച സ്വതന്ത്ര ചിന്താഗതിയുള്ള ആധുനിക മലയാളി സ്ത്രീയുടെ ആദ്യ പ്രതീകമാണ് ഇന്ദുലേഖ. അവളുടെ കാമുകനായ മാധവൻ ആധുനിക വിദ്യാഭ്യാസത്തിന്റെ മേന്മകളും ഉദാരവീക്ഷണവുമുള്ള ചെറുപ്പക്കാരനാണ്. സമ്പത്തിന്റെയും ആഢ്യത്വത്തിന്റെയും അഹങ്കാരവുമായി ഇന്ദുലേഖയെ സ്വന്തമാക്കാൻ വരുന്ന സൂരിനമ്പൂതിരിപ്പാടിന്റെ കാപട്യങ്ങളെ ഇന്ദുലേഖ തന്റേടത്തോടെ നിഷ്പ്രഭമാക്കുന്ന രംഗങ്ങൾ നോവലിന്റെ മുഖ്യ ആകർഷണമാണ്.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%87%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%81%E0%B4%B2%E0%B5%87%E0%B4%96"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%87%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%81%E0%B4%B2%E0%B5%87%E0%B4%96",
+    "archiveUrl": "https://archive.org/search.php?query=Indulekha%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 2,
@@ -34,7 +36,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.7,
     "summary": "കോടതി വ്യവഹാരങ്ങളുടെയും കുടുംബബന്ധങ്ങളുടെയും പശ്ചാത്തലത്തിൽ ചന്തുമേനോൻ രചിച്ച രണ്ടാമത്തെ നോവൽ. നിയമരംഗത്തെ ജീർണ്ണതകളെയും മനുഷ്യന്റെ അത്യാഗ്രഹങ്ങളെയും ഫലിതത്തിലൂടെ തുറന്നുകാട്ടുന്നു.",
     "full_content": "ശാരദ (ഒ. ചന്തുമേനോൻ — 1892)\n\nഒ. ചന്തുമേനോന്റെ അകാല വിയോഗം കാരണം പൂർത്തിയാക്കാൻ കഴിയാതെപോയ രണ്ടാമത്തെ നോവലാണ് 'ശാരദ'. ഒരു ബാരിസ്റ്ററും മുൻസിഫുമായിരുന്ന ചന്തുമേനോൻ കോടതികളുടെയും അഭിഭാഷകരുടെയും ഇടപാടുകാരന്റെയും യഥാർത്ഥ സ്വഭാവം നോവലിൽ അത്യന്തം തന്മയത്വത്തോടെ വരച്ചുകാട്ടുന്നു.\n\nനായർ തറവാടുകളിലെ ഭാഗംവെപ്പും സ്വത്തുതർക്കങ്ങളും മൂലം മനുഷ്യബന്ധങ്ങൾക്കുണ്ടാകുന്ന അപചയം നോവലിൽ തെളിയുന്നു.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B6%E0%B4%BE%E0%B4%B0%E0%B4%A6"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B6%E0%B4%BE%E0%B4%B0%E0%B4%A6",
+    "archiveUrl": "https://archive.org/search.php?query=Sarada%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 3,
@@ -51,7 +55,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.6,
     "summary": "മലയാളത്തിലെ ആദ്യ നോവലായി ചരിത്രകാരന്മാർ വിശേഷിപ്പിക്കുന്ന കൃതി. കുന്ദലത എന്ന രാജകുമാരിയുടെ കഥയും ധാർമ്മിക മൂല്യങ്ങളുടെ വിജയവും നോവൽ പശ്ചാത്തലമാക്കുന്നു.",
     "full_content": "കുന്ദലത (അപ്പു നെടുങ്ങാടി — 1887)\n\n1887-ൽ കോഴിക്കോട്ടുനിന്ന് പ്രസിദ്ധീകരിച്ച കുന്ദലത മലയാള സാഹിത്യത്തിലെ നോവൽ പ്രസ്ഥാനത്തിന്റെ ആരംഭമായി കണക്കാക്കപ്പെടുന്നു. കലിംഗ രാജ്യത്തെ രാജകുമാരിയായ കുന്ദലതയുടെയും താരാനാഥന്റെയും ജീവിതകഥയാണ് ഇതിവൃത്തം.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%95%E0%B5%81%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B4%B2%E0%B4%A4"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%95%E0%B5%81%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B4%B2%E0%B4%A4",
+    "archiveUrl": "https://archive.org/search.php?query=Kundalatha%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 4,
@@ -68,7 +74,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.9,
     "summary": "തിരുവിതാംകൂറിന്റെ ചരിത്രത്തെ ആസ്പദമാക്കി സി.വി. രാമൻപിള്ള രചിച്ച ചരിത്ര നോവൽത്രയത്തിലെ ആദ്യ കൃതി. യുവരാജാവായ മാർത്താണ്ഡവർമ്മയും എട്ടുവീട്ടിൽ പിള്ളമാരും അനന്തപത്മനാഭനും കഥാപാത്രങ്ങളാകുന്നു.",
     "full_content": "മാർത്താണ്ഡവർമ്മ (സി. വി. രാമൻപിള്ള — 1891)\n\nവേണാട്ടു രാജ്യത്തെ ആഭ്യന്തര കലാപങ്ങളുടെയും എട്ടുവീട്ടിൽ പിള്ളമാരുടെ കുതന്ത്രങ്ങളുടെയും നടുവിൽ നിന്ന് വീരനായകനായ മാർത്താണ്ഡവർമ്മ രാജ്യം പിടിച്ചടക്കുന്ന വീരഗാഥ. അനന്തപത്മനാഭന്റെ പരാക്രമങ്ങളും സുഭദ്രയുടെ രാഷ്ട്രീയ ബുദ്ധിസാമർത്ഥ്യവും മലയാള സാഹിത്യത്തിലെ അനശ്വര മുഹൂർത്തങ്ങളാണ്.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AE%E0%B4%BE%E0%B5%BC%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B4%BE%E0%B4%A3%E0%B5%8D%E0%B4%A1%E0%B4%B5%E0%B5%BC%E0%B4%AE%E0%B5%8D%E0%B4%AE"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AE%E0%B4%BE%E0%B5%BC%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B4%BE%E0%B4%A3%E0%B5%8D%E0%B4%A1%E0%B4%B5%E0%B5%BC%E0%B4%AE%E0%B5%8D%E0%B4%AE",
+    "archiveUrl": "https://archive.org/search.php?query=Marthanda%20Varma%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 5,
@@ -85,7 +93,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.8,
     "summary": "കാർത്തിക തിരുനാൾ രാമവർമ്മ (ധർമ്മരാജാവ്) മഹാരാജാവിന്റെ ഭരണകാലത്തെ തിരുവിതാംകൂർ രാഷ്ട്രീയവും ഗൂഢാലോചനകളും ചർച്ച ചെയ്യുന്ന സി.വിയുടെ ക്ലാസിക് ചരിത്ര നോവൽ.",
     "full_content": "ധർമ്മരാജ (സി. വി. രാമൻപിള്ള — 1913)\n\nമാർത്താണ്ഡവർമ്മയ്ക്ക് ശേഷമുള്ള വേണാടിന്റെ ചരിത്രമാണ് ധർമ്മരാജ. കാർത്തിക തിരുനാൾ മഹാരാജാവിന്റെ നീതിനിഷ്ഠയും കേശവപിള്ളയുടെ (പിന്നീട് രാജാ കേശവദാസ്) ഉദയവും അനിഴം തിരുനാളിന്റെ കാലത്തെ ശേഷിപ്പുകളായ ശത്രുക്കളുടെ പ്രതികാരദാഹവും ചേർന്നതാണ് ഇതിവൃത്തം.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%A7%E0%B5%BC%E0%B4%AE%E0%B5%8D%E0%B4%AE%E0%B4%B0%E0%B4%BE%E0%B4%9C"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%A7%E0%B5%BC%E0%B4%AE%E0%B5%8D%E0%B4%AE%E0%B4%B0%E0%B4%BE%E0%B4%9C",
+    "archiveUrl": "https://archive.org/search.php?query=Dharmaraja%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 6,
@@ -102,7 +112,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.8,
     "summary": "ടിപ്പു സുൽത്താന്റെ തിരുവിതാംകൂർ ആക്രമണവും ദിവാൻ രാജാ കേശവദാസിന്റെ നയതന്ത്ര പ്രതിരോധവും പ്രമേയമാക്കിയ സി.വിയുടെ വിഖ്യാത നോവൽത്രയത്തിലെ അവസാന കൃതി.",
     "full_content": "രാമരാജബഹദൂർ (സി. വി. രാമൻപിള്ള — 1918)\n\nടിപ്പു സുൽത്താന്റെ പടയോട്ടത്തിന്റെ പശ്ചാത്തലത്തിൽ രചിക്കപ്പെട്ട മലയാളത്തിലെ ഏറ്റവും ഗഹനമായ ചരിത്ര നോവൽ. കേശവദാസിന്റെ രാഷ്ട്രതന്ത്രജ്ഞതയും രാജ്യസ്നേഹവും നോവലിലുടനീളം തിളങ്ങിനിൽക്കുന്നു.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B0%E0%B4%BE%E0%B4%AE%E0%B4%B0%E0%B4%BE%E0%B4%9C%E0%B4%AC%E0%B4%B9%E0%B4%A6%E0%B5%82%E0%B5%BC"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B0%E0%B4%BE%E0%B4%AE%E0%B4%B0%E0%B4%BE%E0%B4%9C%E0%B4%AC%E0%B4%B9%E0%B4%A6%E0%B5%82%E0%B5%BC",
+    "archiveUrl": "https://archive.org/search.php?query=Ramarajabahadur%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 7,
@@ -119,7 +131,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.6,
     "summary": "ചരിത്ര നോവലുകൾക്ക് പുറമെ സി.വി. രചിച്ച പ്രണയവും കുടുംബജീവിതവും നർമ്മവും ഇടകലർന്ന ഒരേയൊരു സമ്പൂർണ്ണ സാമൂഹിക നോവൽ.",
     "full_content": "പ്രേമാമൃതം (സി. വി. രാമൻപിള്ള — 1914)\n\nപ്രണയത്തിന്റെയും കുടുംബകലഹങ്ങളുടെയും മനുഷ്യ മനസ്സിന്റെ സങ്കീർണ്ണതകളുടെയും ആവിഷ്കാരമാണ് പ്രേമാമൃതം.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B5%87%E0%B4%AE%E0%B4%BE%E0%B4%AE%E0%B5%83%E0%B4%A4%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B5%87%E0%B4%AE%E0%B4%BE%E0%B4%AE%E0%B5%83%E0%B4%A4%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Premamrutham%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 8,
@@ -136,7 +150,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.8,
     "summary": "ബ്രിട്ടീഷ് ഈസ്റ്റ് ഇന്ത്യാ കമ്പനിക്കെതിരെ വയനാടൻ കാടുകളിൽ ധീരമായി പോരാടി വീരമൃത്യു വരിച്ച പഴശ്ശിരാജയുടെ സാഹസികമായ സ്വാതന്ത്ര്യസമര പോരാട്ടകഥ.",
     "full_content": "കേരളസിംഹം (സർദാർ കെ. എം. പണിക്കർ — 1941)\n\nകേരളത്തിലെ പ്രഥമ സ്വാതന്ത്ര്യസമര പോരാളിയായ പഴശ്ശി കേരളവർമ്മ രാജാവിന്റെ ഐതിഹാസിക ചരിത്രം പറയുന്ന പ്രശസ്ത ചരിത്ര നോവൽ. കുറിച്യപ്പടയുടെ അമ്പും വില്ലും കൊണ്ട് ബ്രിട്ടീഷ് പീരങ്കികളെ വിറപ്പിച്ച വയനാടൻ കാടുകളിലെ പോരാട്ടങ്ങൾ കൃതിയിൽ ഉജ്ജ്വലമായി ആവിഷ്കരിച്ചിരിക്കുന്നു.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%95%E0%B5%87%E0%B4%B0%E0%B4%B3%E0%B4%B8%E0%B4%BF%E0%B4%82%E0%B4%B9%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%95%E0%B5%87%E0%B4%B0%E0%B4%B3%E0%B4%B8%E0%B4%BF%E0%B4%82%E0%B4%B9%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Keralasimham%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 9,
@@ -153,7 +169,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.5,
     "summary": "ശ്രീമതി കോളിൻസ് ഇംഗ്ലീഷിലെഴുതി റിച്ചാർഡ് കോളിൻസ് മലയാളത്തിലേക്ക് മൊഴിമാറ്റം ചെയ്ത, മലയാളത്തിലെ ആദ്യകാല നോവൽ രൂപങ്ങളിലൊന്ന്. ക്രിസ്തീയ സന്മാർഗ്ഗമൂല്യങ്ങൾ പ്രതിപാദിക്കുന്നു.",
     "full_content": "ഘാതകവധം (റിച്ചാർഡ് കോളിൻസ് — 1877)\n\nക്രിസ്തുമത പ്രചാരകനായ റിച്ചാർഡ് കോളിൻസ് കോട്ടയം സി.എം.എസ് പ്രസ്സിൽ നിന്നും പ്രസിദ്ധീകരിച്ച നോവൽ. കൊലപാതകവും കുറ്റാന്വേഷണവും മാനസാന്തരവും പ്രമേയമാക്കിയ ആദ്യകാല രചന.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%98%E0%B4%BE%E0%B4%A4%E0%B4%95%E0%B4%B5%E0%B4%A7%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%98%E0%B4%BE%E0%B4%A4%E0%B4%95%E0%B4%B5%E0%B4%A7%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Ghatakavadham%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 10,
@@ -170,7 +188,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.5,
     "summary": "ഹിന്ദു-ക്രിസ്തീയ മതതത്വങ്ങളെയും സാമൂഹികാചാരങ്ങളെയും സംവാദരൂപത്തിൽ അവതരിപ്പിച്ച മലയാളത്തിലെ ആദ്യകാല സംഭാഷണ നോവൽ.",
     "full_content": "പുല്ലേലിക്കുഞ്ചു (ആർച്ച്ഡീക്കൻ കോശി — 1882)\n\nപത്തൊൻപതാം നൂറ്റാണ്ടിലെ തിരുവിതാംകൂറിലെ ജാതിവ്യവസ്ഥ, അന്ധവിശ്വാസങ്ങൾ എന്നിവയെ സംവാദങ്ങളിലൂടെ അപഗ്രഥിക്കുന്ന ആർച്ച്ഡീക്കൻ കോശിയുടെ ശ്രദ്ധേയ കൃതി.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AA%E0%B5%81%E0%B4%B2%E0%B5%8D%E0%B4%B2%E0%B5%87%E0%B4%B2%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%9E%E0%B5%8D%E0%B4%9A%E0%B5%81"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AA%E0%B5%81%E0%B4%B2%E0%B5%8D%E0%B4%B2%E0%B5%87%E0%B4%B2%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%9E%E0%B5%8D%E0%B4%9A%E0%B5%81",
+    "archiveUrl": "https://archive.org/search.php?query=Pullelikunju%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 11,
@@ -187,7 +207,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.6,
     "summary": "ഇന്ദുലേഖയ്ക്ക് തൊട്ടുപിന്നാലെ മലബാറിലെ സാമൂഹികാന്തരീക്ഷത്തെയും നായർ സ്ത്രീകളുടെ ജീവിതത്തെയും പശ്ചാത്തലമാക്കി രചിച്ച ആദ്യകാല നോവൽ.",
     "full_content": "മീനാക്ഷി (ചെറുവലത്തു ചാത്തുനായർ — 1890)\n\nസ്ത്രീവിദ്യാഭ്യാസത്തിന്റെയും സാമൂഹിക പരിഷ്കരണത്തിന്റെയും പ്രാധാന്യം വിളിച്ചോതിയ ആദ്യകാല മലയാള നോവലുകളിൽ ഒന്നാണ് മീനാക്ഷി.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AE%E0%B5%80%E0%B4%A8%E0%B4%BE%E0%B4%95%E0%B5%8D%E0%B4%B7%E0%B4%BF"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AE%E0%B5%80%E0%B4%A8%E0%B4%BE%E0%B4%95%E0%B5%8D%E0%B4%B7%E0%B4%BF",
+    "archiveUrl": "https://archive.org/search.php?query=Meenakshi%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 12,
@@ -204,7 +226,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.5,
     "summary": "കൊച്ചി രാജ്യത്തെ കുടുംബജീവിതവും പ്രണയവും പ്രമേയമാക്കി കോമാട്ടിൽ പാടുമേനോൻ രചിച്ച ചരിത്രപ്രാധാന്യമുള്ള നോവൽ.",
     "full_content": "ലക്ഷ്മീകേശവം (കോമാട്ടിൽ പാടുമേനോൻ — 1892)\n\nപത്തൊൻപതാം നൂറ്റാണ്ടിന്റെ അവസാനത്തിൽ കൊച്ചി രാജ്യത്തെ പശ്ചാത്തലമാക്കി എഴുതപ്പെട്ട നോവൽ. ലക്ഷ്മിയുടെയും കേശവന്റെയും ജീവിത പരീക്ഷണങ്ങളാണ് ഇതിവൃത്തം.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B2%E0%B4%95%E0%B5%8D%E0%B4%B7%E0%B5%8D%E0%B4%AE%E0%B5%80%E0%B4%95%E0%B5%87%E0%B4%B6%E0%B4%B5%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B2%E0%B4%95%E0%B5%8D%E0%B4%B7%E0%B5%8D%E0%B4%AE%E0%B5%80%E0%B4%95%E0%B5%87%E0%B4%B6%E0%B4%B5%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Lakshmikeshavam%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 13,
@@ -221,7 +245,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 5,
     "summary": "കേരളത്തിലെ നാട്ടുരാജാക്കന്മാർ, ക്ഷേത്രങ്ങൾ, മാന്ത്രികർ, ആനകൾ, വീരയോദ്ധാക്കൾ എന്നിവരെക്കുറിച്ചുള്ള ജനകീയ ഐതിഹ്യങ്ങളുടെയും ചരിത്രകഥകളുടെയും വിസ്മയകരമായ സമാഹാരം.",
     "full_content": "ഐതിഹ്യമാല (കൊട്ടാരത്തിൽ ശങ്കുണ്ണി — 1909)\n\nഎട്ടു ഭാഗങ്ങളിലായി 126 ഐതിഹ്യകഥകൾ ഉൾക്കൊള്ളുന്ന മലയാളത്തിലെ ഏറ്റവും വിപുലമായ പൈതൃക സമാഹാരമാണ് ഐതിഹ്യമാല. പറയിപെറ്റ പന്തിരുകുലം, കായംകുളം കൊച്ചുണ്ണി, പാഴൂർ പടിപ്പുര, ചെമ്പകശ്ശേരി രാജാവ് തുടങ്ങി കേരളത്തിന്റെ നാടോടി പാരമ്പര്യവും സംസ്കാരവും ഈ കൃതിയിൽ ജീവസ്സുറ്റതായി നിലനിൽക്കുന്നു.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%90%E0%B4%A4%E0%B4%BF%E0%B4%B9%E0%B5%8D%E0%B4%AF%E0%B4%AE%E0%B4%BE%E0%B4%B2"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%90%E0%B4%A4%E0%B4%BF%E0%B4%B9%E0%B5%8D%E0%B4%AF%E0%B4%AE%E0%B4%BE%E0%B4%B2",
+    "archiveUrl": "https://archive.org/search.php?query=Aithihyamala%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 14,
@@ -238,7 +264,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.8,
     "summary": "മലയാളത്തിലെ ആദ്യത്തെ ലക്ഷണമൊത്ത ചെറുകഥ. ഇക്കിണ്ടക്കുറുപ്പ് എന്ന കളളന്റെ മാനസിക വ്യാപാരങ്ങളും മോഷ്ടിക്കാനുള്ള ജന്മവാസനയും നർമ്മത്തിൽ ചാലിച്ച് അവതരിപ്പിക്കുന്നു.",
     "full_content": "വാസനാവികൃതി (വേങ്ങയിൽ കുഞ്ഞിരാമൻ നായനാർ — 1891)\n\n1891-ൽ 'വിദ്യാവിനോദിനി' മാസികയിൽ കേസരി എന്ന തൂലികാനാമത്തിൽ പ്രസിദ്ധീകരിച്ച മലയാളത്തിലെ ഒന്നാമത്തെ ചെറുകഥ. ഇക്കിണ്ടക്കുറുപ്പിന്റെ മോഷണവാസനയും കോടതി ശിക്ഷയും ഫലിതത്തിലൂടെ നായനാർ വരച്ചുകാട്ടുന്നു.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B5%E0%B4%BE%E0%B4%B8%E0%B4%A8%E0%B4%BE%E0%B4%B5%E0%B4%BF%E0%B4%95%E0%B5%83%E0%B4%A4%E0%B4%BF"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B5%E0%B4%BE%E0%B4%B8%E0%B4%A8%E0%B4%BE%E0%B4%B5%E0%B4%BF%E0%B4%95%E0%B5%83%E0%B4%A4%E0%B4%BF",
+    "archiveUrl": "https://archive.org/search.php?query=Vasanavikrithi%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 15,
@@ -255,7 +283,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.6,
     "summary": "വേങ്ങയിൽ കുഞ്ഞിരാമൻ നായനാരുടെ നിശിതമായ സാമൂഹിക ആക്ഷേപഹാസ്യവും കഥാചാതുര്യവും നിറഞ്ഞ പ്രശസ്തമായ ചെറുകഥ.",
     "full_content": "ദ്വാരക (വേങ്ങയിൽ കുഞ്ഞിരാമൻ നായനാർ)\n\nമലയാള ചെറുകഥാ പ്രസ്ഥാനത്തിന്റെ പ്രാരംഭദശയിലെ പ്രതിഭ തെളിയിക്കുന്ന നർമ്മപ്രധാനമായ രചന.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%A6%E0%B5%8D%E0%B4%B5%E0%B4%BE%E0%B4%B0%E0%B4%95"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%A6%E0%B5%8D%E0%B4%B5%E0%B4%BE%E0%B4%B0%E0%B4%95",
+    "archiveUrl": "https://archive.org/search.php?query=Dwaraka%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 16,
@@ -272,7 +302,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.7,
     "summary": "മലയാളത്തിലെ ആദ്യത്തെ അപസർപ്പക (ഡിറ്റക്ടീവ്) ചെറുകഥയായി പരിഗണിക്കപ്പെടുന്ന ഉദ്വേഗഭരിതമായ കുറ്റാന്വേഷണ രചന.",
     "full_content": "മേനോക്കിയെ കൊന്നതാര്? (വേങ്ങയിൽ കുഞ്ഞിരാമൻ നായനാർ)\n\nമലബാറിലെ ഒരു കൊലപാതകത്തെയും അന്വേഷണത്തെയും പശ്ചാത്തലമാക്കിയ ആദ്യകാല ഡിറ്റക്ടീവ് ചെറുകഥ.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AE%E0%B5%87%E0%B4%A8%E0%B5%8B%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%BF%E0%B4%AF%E0%B5%86%20%E0%B4%95%E0%B5%8A%E0%B4%A8%E0%B5%8D%E0%B4%A8%E0%B4%A4%E0%B4%BE%E0%B4%B0%E0%B5%8D%3F"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AE%E0%B5%87%E0%B4%A8%E0%B5%8B%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%BF%E0%B4%AF%E0%B5%86%20%E0%B4%95%E0%B5%8A%E0%B4%A8%E0%B5%8D%E0%B4%A8%E0%B4%A4%E0%B4%BE%E0%B4%B0%E0%B5%8D%3F",
+    "archiveUrl": "https://archive.org/search.php?query=Menokkye%20Konnatharu%3F%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 17,
@@ -289,7 +321,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.8,
     "summary": "മലയാള ഹാസ്യസാഹിത്യത്തിലെ അനശ്വര രചന. നിത്യജീവിതത്തിലെ വൈരുദ്ധ്യങ്ങളെയും കാപട്യങ്ങളെയും ആഴത്തിലുള്ള ചിന്തയോടും ചിരിയോടും കൂടി ഇ.വി. അപഗ്രഥിക്കുന്നു.",
     "full_content": "ചിരിയും ചിന്തയും (ഇ. വി. കൃഷ്ണപിള്ള)\n\nമലയാളത്തിലെ പ്രമുഖ നാടകകൃത്തും ഫലിതസാമ്രാട്ടുമായ ഇ.വി. കൃഷ്ണപിള്ളയുടെ ഹാസ്യപ്രബന്ധങ്ങളുടെ ശ്രേഷ്ഠ സമാഹാരം.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%9A%E0%B4%BF%E0%B4%B0%E0%B4%BF%E0%B4%AF%E0%B5%81%E0%B4%82%20%E0%B4%9A%E0%B4%BF%E0%B4%A8%E0%B5%8D%E0%B4%A4%E0%B4%AF%E0%B5%81%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%9A%E0%B4%BF%E0%B4%B0%E0%B4%BF%E0%B4%AF%E0%B5%81%E0%B4%82%20%E0%B4%9A%E0%B4%BF%E0%B4%A8%E0%B5%8D%E0%B4%A4%E0%B4%AF%E0%B5%81%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Chiriyum%20Chinthayum%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 18,
@@ -306,7 +340,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.7,
     "summary": "സാമൂഹിക നാടകങ്ങളിലൂടെയും പ്രഹസനങ്ങളിലൂടെയും മലയാളികളെ പൊട്ടിച്ചിരിപ്പിച്ച ഇ.വിയുടെ പ്രശസ്തമായ ഹാസ്യസമാഹാരം.",
     "full_content": "കേളീസൗധം (ഇ. വി. കൃഷ്ണപിള്ള)\n\nഹാസ്യവും പരിഹാസവും ഇടകലർന്ന നാടകീയ മുഹൂർത്തങ്ങൾ സമ്മാനിക്കുന്ന ഇ.വിയുടെ രചന.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%95%E0%B5%87%E0%B4%B3%E0%B5%80%E0%B4%B8%E0%B5%97%E0%B4%A7%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%95%E0%B5%87%E0%B4%B3%E0%B5%80%E0%B4%B8%E0%B5%97%E0%B4%A7%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Kelisoudham%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 19,
@@ -323,7 +359,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.8,
     "summary": "ഇ.വി. കൃഷ്ണപിള്ളയുടെ ആത്മകഥാംശമുള്ള അനുഭവക്കുറിപ്പുകൾ. തിരുവിതാംകൂറിലെ സാംസ്കാരിക-സാഹിത്യ ലോകത്തെ അത്യപൂർവ്വ ഓർമ്മകൾ ഇതിൽ പ്രതിഫലിക്കുന്നു.",
     "full_content": "ജീവിതസ്മരണകൾ (ഇ. വി. കൃഷ്ണപിള്ള)\n\nചിരിപ്പിക്കുന്ന അനുഭവങ്ങളും കണ്ണുനിറയ്ക്കുന്ന യാഥാർത്ഥ്യങ്ങളും ചേർത്തുവെച്ച ഇ.വിയുടെ ഹൃദ്യമായ ജീവചരിത്രക്കുറിപ്പുകൾ.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%9C%E0%B5%80%E0%B4%B5%E0%B4%BF%E0%B4%A4%E0%B4%B8%E0%B5%8D%E0%B4%AE%E0%B4%B0%E0%B4%A3%E0%B4%95%E0%B5%BE"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%9C%E0%B5%80%E0%B4%B5%E0%B4%BF%E0%B4%A4%E0%B4%B8%E0%B5%8D%E0%B4%AE%E0%B4%B0%E0%B4%A3%E0%B4%95%E0%B5%BE",
+    "archiveUrl": "https://archive.org/search.php?query=Jeevithasmaranakal%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 20,
@@ -340,7 +378,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.9,
     "summary": "മലയാളത്തിലെ ഏക്കാലത്തെയും മികച്ച ആക്ഷേപഹാസ്യകാരനായ സഞ്ജയന്റെ ഗദ്യ-ഹാസ്യ പ്രബന്ധങ്ങളുടെ വിപുലമായ സമാഹാരം.",
     "full_content": "സഞ്ജയൻ കൃതികൾ (എം. ആർ. നായർ — സഞ്ജയൻ)\n\nസഞ്ജയന്റെ തൂലിക മൂർച്ചയേറിയ വാളായിരുന്നു. കപട സദാചാരത്തെയും രാഷ്ട്രീയ കാപട്യങ്ങളെയും സാഹിത്യ വങ്കത്തരങ്ങളെയും നർമ്മശരങ്ങൾ കൊണ്ട് അദ്ദേഹം നേരിട്ടു.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B8%E0%B4%9E%E0%B5%8D%E0%B4%9C%E0%B4%AF%E0%B5%BB%20%E0%B4%95%E0%B5%83%E0%B4%A4%E0%B4%BF%E0%B4%95%E0%B5%BE"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B8%E0%B4%9E%E0%B5%8D%E0%B4%9C%E0%B4%AF%E0%B5%BB%20%E0%B4%95%E0%B5%83%E0%B4%A4%E0%B4%BF%E0%B4%95%E0%B5%BE",
+    "archiveUrl": "https://archive.org/search.php?query=Sanjayan%20Krithikal%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 21,
@@ -357,7 +397,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.8,
     "summary": "സഞ്ജയന്റെ ഫലിതവും ആക്ഷേപഹാസ്യവും നിറഞ്ഞ പദ്യകൃതികളുടെയും ലഘുകവിതകളുടെയും സമാഹാരം.",
     "full_content": "ഹാസ്യാഞ്ജലി (സഞ്ജയൻ)\n\nമലയാളത്തിലെ ഫലിതകവിതകളിൽ മുൻപന്തിയിൽ നിൽക്കുന്ന സഞ്ജയന്റെ ഹാസ്യകവിതാ സമാഹാരം.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B9%E0%B4%BE%E0%B4%B8%E0%B5%8D%E0%B4%AF%E0%B4%BE%E0%B4%9E%E0%B5%8D%E0%B4%9C%E0%B4%B2%E0%B4%BF"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B9%E0%B4%BE%E0%B4%B8%E0%B5%8D%E0%B4%AF%E0%B4%BE%E0%B4%9E%E0%B5%8D%E0%B4%9C%E0%B4%B2%E0%B4%BF",
+    "archiveUrl": "https://archive.org/search.php?query=Hasyanjali%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 22,
@@ -374,7 +416,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.7,
     "summary": "ഷേക്സ്പിയറുടെ പ്രസിദ്ധമായ ഒഥല്ലോ നാടകത്തിന് സഞ്ജയൻ തയ്യാറാക്കിയ മനോഹരമായ മലയാള പരിഭാഷ.",
     "full_content": "ഒഥല്ലോ (സഞ്ജയൻ വിവർത്തനം)\n\nഷേക്സ്പിയർ ദുരന്തനാടകത്തിന്റെ ഗാംഭീര്യവും ഭാഷാശുദ്ധിയും നിലനിർത്തിക്കൊണ്ടുള്ള ഉജ്ജ്വല വിവർത്തനം.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%92%E0%B4%A5%E0%B4%B2%E0%B5%8D%E0%B4%B2%E0%B5%8B%20%E0%B4%B5%E0%B4%BF%E0%B4%B5%E0%B5%BC%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B4%A8%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%92%E0%B4%A5%E0%B4%B2%E0%B5%8D%E0%B4%B2%E0%B5%8B%20%E0%B4%B5%E0%B4%BF%E0%B4%B5%E0%B5%BC%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B4%A8%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Othello%20Translation%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 23,
@@ -391,7 +435,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.6,
     "summary": "ആദ്യകാല ചെറുകഥാകൃത്തും ശ്രീനാരായണഗുരുവിന്റെ ആദ്യ ജീവചരിത്രകാരനുമായ മൂർക്കോത്ത് കുമാരന്റെ ചെറുകഥാ സമാഹാരം.",
     "full_content": "കഥാമാലിക (മൂർക്കോത്ത് കുമാരൻ)\n\nജീവിതയാഥാർത്ഥ്യങ്ങളെയും മാനുഷിക വികാരങ്ങളെയും ഹൃദയസ്പർശിയായി ചിത്രീകരിക്കുന്ന കഥകൾ.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%95%E0%B4%A5%E0%B4%BE%E0%B4%AE%E0%B4%BE%E0%B4%B2%E0%B4%BF%E0%B4%95"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%95%E0%B4%A5%E0%B4%BE%E0%B4%AE%E0%B4%BE%E0%B4%B2%E0%B4%BF%E0%B4%95",
+    "archiveUrl": "https://archive.org/search.php?query=Kathamalika%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 24,
@@ -408,7 +454,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.6,
     "summary": "സാധാരണക്കാരുടെ ജീവിതവും നിഷ്കളങ്കതയും പ്രമേയമാക്കിയ മൂർക്കോത്ത് കുമാരന്റെ പ്രശസ്തമായ ചെറുകഥ.",
     "full_content": "അമ്പുനായർ (മൂർക്കോത്ത് കുമാരൻ)\n\nഗ്രാമീണ കേരളത്തിന്റെ നിഷ്കളങ്കമായ ജീവിതവും നാട്ടുനന്മകളും വരച്ചുകാട്ടുന്ന കഥ.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%85%E0%B4%AE%E0%B5%8D%E0%B4%AA%E0%B5%81%E0%B4%A8%E0%B4%BE%E0%B4%AF%E0%B5%BC"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%85%E0%B4%AE%E0%B5%8D%E0%B4%AA%E0%B5%81%E0%B4%A8%E0%B4%BE%E0%B4%AF%E0%B5%BC",
+    "archiveUrl": "https://archive.org/search.php?query=Ambu%20Nair%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 25,
@@ -425,7 +473,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.5,
     "summary": "മലയാള ചെറുകഥാ സാഹിത്യത്തിലെ പയനിയർമാരിൽ ഒരാളായ കെ. സുകുമാരന്റെ പ്രശസ്ത ചെറുകഥാ സമാഹാരം.",
     "full_content": "വാസന്തി (കെ. സുകുമാരൻ)\n\nകഥാപാത്രങ്ങളുടെ മാനസിക വ്യാപാരങ്ങളെ സൂക്ഷ്മമായി പരിശോധിക്കുന്ന കഥകൾ.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B5%E0%B4%BE%E0%B4%B8%E0%B4%A8%E0%B5%8D%E0%B4%A4%E0%B4%BF"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B5%E0%B4%BE%E0%B4%B8%E0%B4%A8%E0%B5%8D%E0%B4%A4%E0%B4%BF",
+    "archiveUrl": "https://archive.org/search.php?query=Vasanthi%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 26,
@@ -442,7 +492,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.9,
     "summary": "വിഷ്ണുശർമ്മന്റെ പഞ്ചതന്ത്രം കഥകളെ കുഞ്ചൻ നമ്പ്യാർ കിളിപ്പാട്ട് വൃത്തത്തിൽ മലയാളികൾക്കായി പുനരവതരിപ്പിച്ച വിഖ്യാത കൃതി.",
     "full_content": "പഞ്ചതന്ത്രം കിളിപ്പാട്ട് (കുഞ്ചൻ നമ്പ്യാർ)\n\nമിത്രഭേദം, മിത്രപ്രാപ്തി, കാകോലൂകീയം, ലബ്ധപ്രണാശം, അപരീക്ഷിതകാരിത്വം എന്നീ അഞ്ച് തന്ത്രങ്ങളിലൂടെ ജീവിതമൂല്യങ്ങളും ബുദ്ധിസാമർത്ഥ്യവും പകർന്നുനൽകുന്ന കിളിപ്പാട്ട്.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AA%E0%B4%9E%E0%B5%8D%E0%B4%9A%E0%B4%A4%E0%B4%A8%E0%B5%8D%E0%B4%A4%E0%B5%8D%E0%B4%B0%E0%B4%82%20%E0%B4%95%E0%B4%BF%E0%B4%B3%E0%B4%BF%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B4%BE%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B5%8D"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AA%E0%B4%9E%E0%B5%8D%E0%B4%9A%E0%B4%A4%E0%B4%A8%E0%B5%8D%E0%B4%A4%E0%B5%8D%E0%B4%B0%E0%B4%82%20%E0%B4%95%E0%B4%BF%E0%B4%B3%E0%B4%BF%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B4%BE%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B5%8D",
+    "archiveUrl": "https://archive.org/search.php?query=Panchathanthram%20Kilippattu%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 27,
@@ -459,7 +511,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.8,
     "summary": "വിക്രമാദിത്യ മഹാരാജാവിന്റെയും ഭട്ടിയുടെയും വേതാളത്തിന്റെയും അത്ഭുതകരമായ സാഹസിക നീതി കഥകൾ.",
     "full_content": "വിക്രമാദിത്യകഥകൾ (പരമ്പരാഗത നാടോടിക്കഥകൾ)\n\nവേതാളകഥകളും സിംഹാസന ദ്വാത്രിംശികയും ഉൾപ്പെടുന്ന ഭാരതീയ പൈതൃകത്തിന്റെ അവിഭാജ്യമായ കഥാസഞ്ചയം.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B5%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%B0%E0%B4%AE%E0%B4%BE%E0%B4%A6%E0%B4%BF%E0%B4%A4%E0%B5%8D%E0%B4%AF%E0%B4%95%E0%B4%A5%E0%B4%95%E0%B5%BE"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B5%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%B0%E0%B4%AE%E0%B4%BE%E0%B4%A6%E0%B4%BF%E0%B4%A4%E0%B5%8D%E0%B4%AF%E0%B4%95%E0%B4%A5%E0%B4%95%E0%B5%BE",
+    "archiveUrl": "https://archive.org/search.php?query=Vikramaditya%20Kathakal%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 28,
@@ -476,7 +530,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 5,
     "summary": "മലയാള റൊമാന്റിക് കാവ്യ പ്രസ്ഥാനത്തിന് തുടക്കം കുറിച്ച മാസ്റ്റർപീസ് ഖണ്ഡകാവ്യം. വീണുപോയ പൂവിന്റെ ജനനം മുതൽ മരണം വരെയുള്ള ജീവിതത്തിലൂടെ മനുഷ്യന്റെ നശ്വരതയെ ആശാൻ ചിന്തോദ്ദീപകമായി വരച്ചുകാട്ടുന്നു.",
     "full_content": "വീണപൂവ് (കുമാരനാശാൻ — 1907)\n\n\"ഹാ, പുഷ്പമേ, അധികതുംഗപദത്തിലെത്ര\nശോഭിച്ചിരുന്നിതൊരു രാജ്ഞികണക്കയേ നീ!\"\n\nമലയാള കാവ്യലോകത്ത് ഒരു പുതിയ യുഗത്തിന് നാന്ദികുറിച്ച കൃതിയാണ് വീണപൂവ്. ഒരു പൂവിന്റെ ജനനം, യൗവ്വനം, പതനം എന്നിവയിലൂടെ പ്രകൃതിനിയമത്തെയും മനുഷ്യജീവിതത്തിന്റെ ക്ഷണികതയെയും ദാർശനിക ഗാംഭീര്യത്തോടെ ആശാൻ അവതരിപ്പിക്കുന്നു.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B5%E0%B5%80%E0%B4%A3%E0%B4%AA%E0%B5%82%E0%B4%B5%E0%B5%8D"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B5%E0%B5%80%E0%B4%A3%E0%B4%AA%E0%B5%82%E0%B4%B5%E0%B5%8D",
+    "archiveUrl": "https://archive.org/search.php?query=Veena%20Poovu%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 29,
@@ -493,7 +549,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.9,
     "summary": "\"സ്നേഹമാണഖിലസാരമൂഴിയിൽ\" എന്ന അനശ്വര സന്ദേശം ലോകത്തിന് സമ്മാനിച്ച ആശാന്റെ അതിപ്രശസ്തമായ കാവ്യം.",
     "full_content": "നളിനി അഥവാ ഒരു സ്നേഹം (കുമാരനാശാൻ — 1911)\n\nദിവ്യപ്രണയത്തിന്റെ ഉദാത്തമായ ഭാവം ആവിഷ്കരിച്ച കാവ്യം. ദിവാകരനും നളിനിയും തമ്മിലുള്ള നിർമ്മലമായ സ്നേഹബന്ധം ലൗകിക പരിധികളെ അതിലംഘിക്കുന്നു.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%A8%E0%B4%B3%E0%B4%BF%E0%B4%A8%E0%B4%BF"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%A8%E0%B4%B3%E0%B4%BF%E0%B4%A8%E0%B4%BF",
+    "archiveUrl": "https://archive.org/search.php?query=Nalini%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 30,
@@ -510,7 +568,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.8,
     "summary": "പേർഷ്യൻ പ്രണയകാവ്യമായ ലൈലാ-മജ്നുവിനെ ഉപജീവിച്ച് മദനനും ലീലയും തമ്മിലുള്ള തീവ്രമായ പ്രണയദുരന്തം അവതരിപ്പിച്ച കൃതി.",
     "full_content": "ലീല (കുമാരനാശാൻ — 1914)\n\nതീവ്രാനുരാഗത്തിന്റെയും വേർപാടിന്റെയും നോവുന്ന കാവ്യഭാഷ്യം.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B2%E0%B5%80%E0%B4%B2"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B2%E0%B5%80%E0%B4%B2",
+    "archiveUrl": "https://archive.org/search.php?query=Leela%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 31,
@@ -527,7 +587,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.8,
     "summary": "തന്റെ ഉറ്റമിത്രവും ഗുരുതുല്യനുമായിരുന്ന എ.ആർ. രാജരാജവർമ്മയുടെ നിര്യാണത്തിൽ അതീവ ദുഃഖിതനായി ആശാൻ രചിച്ച ഗഹനമായ ദാർശനിക വിലാപകാവ്യം.",
     "full_content": "പ്രരോദനം (കുമാരനാശാൻ — 1919)\n\nജീവിതം, മരണം, ആത്മാവ്, പ്രപഞ്ചം എന്നിവയെക്കുറിച്ചുള്ള ഉപനിഷദ് തത്വങ്ങൾ ഇഴചേർത്ത വിലാപകാവ്യം.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%B0%E0%B5%8B%E0%B4%A6%E0%B4%A8%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%B0%E0%B5%8B%E0%B4%A6%E0%B4%A8%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Prorodanam%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 32,
@@ -544,7 +606,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 5,
     "summary": "വാൽമീകി രാമായണത്തിലെ സീതാപരിത്യാഗത്തെ സ്ത്രീപക്ഷ വീക്ഷണകോണിൽ നിന്ന് ചോദ്യം ചെയ്ത ആശാന്റെ ഏറ്റവും കരുത്തുറ്റ കാവ്യശില്പം.",
     "full_content": "ചിന്താവിഷ്ടയായ സീത (കുമാരനാശാൻ — 1919)\n\nവാൽമീകിയുടെ ആശ്രമത്തിൽ ഏകാന്തയായി ഇരിക്കുന്ന സീതാദേവി തന്റെ ഭൂതകാലത്തെയും ശ്രീരാമന്റെ കർമ്മങ്ങളെയും രാജധർമ്മത്തിന്റെ പേരിൽ നേരിട്ട നീതികേടുകളെയും വിചാരണ ചെയ്യുന്ന ഉജ്ജ്വല കൃതി.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%9A%E0%B4%BF%E0%B4%A8%E0%B5%8D%E0%B4%A4%E0%B4%BE%E0%B4%B5%E0%B4%BF%E0%B4%B7%E0%B5%8D%E0%B4%9F%E0%B4%AF%E0%B4%BE%E0%B4%AF%20%E0%B4%B8%E0%B5%80%E0%B4%A4"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%9A%E0%B4%BF%E0%B4%A8%E0%B5%8D%E0%B4%A4%E0%B4%BE%E0%B4%B5%E0%B4%BF%E0%B4%B7%E0%B5%8D%E0%B4%9F%E0%B4%AF%E0%B4%BE%E0%B4%AF%20%E0%B4%B8%E0%B5%80%E0%B4%A4",
+    "archiveUrl": "https://archive.org/search.php?query=Chinthavishtayaya%20Seetha%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 33,
@@ -561,7 +625,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.9,
     "summary": "\"മാറ്റുവിൻ ചട്ടങ്ങളെ സ്വയമല്ലെങ്കിൽ മാറ്റുമതുകളീ നിങ്ങളെ\" എന്ന വിപ്ലവ പ്രഖ്യാപനമുള്ള സാമൂഹിക കാവ്യം. സാവിത്രി അന്തർജ്ജനവും ചാത്തനും തമ്മിലുള്ള വിവാഹം ഇതിവൃത്തം.",
     "full_content": "ദുരവസ്ഥ (കുമാരനാശാൻ — 1922)\n\n1921-ലെ മലബാർ കലാപത്തിന്റെ പശ്ചാത്തലത്തിൽ ജാതിവ്യവസ്ഥയുടെ അസ്ഥിവാരമിളക്കിയ വിപ്ലവ കാവ്യം.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%A6%E0%B5%81%E0%B4%B0%E0%B4%B5%E0%B4%B8%E0%B5%8D%E0%B4%A5"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%A6%E0%B5%81%E0%B4%B0%E0%B4%B5%E0%B4%B8%E0%B5%8D%E0%B4%A5",
+    "archiveUrl": "https://archive.org/search.php?query=Duravastha%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 34,
@@ -578,7 +644,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.8,
     "summary": "ബുദ്ധശിഷ്യനായ ആനന്ദനും മാതംഗി എന്ന ചണ്ഡാല യുവതിയും തമ്മിലുള്ള കൂടിക്കാഴ്ചയിലൂടെ ജാതിഭേദമില്ലായ്മയുടെ മഹാസന്ദേശം പകരുന്ന കാവ്യം.",
     "full_content": "ചണ്ഡാലഭിക്ഷുകി (കുമാരനാശാൻ — 1922)\n\nജാതി ചോദിക്കാതെ വെള്ളം ചോദിച്ചുവാങ്ങിയ ആനന്ദനിലൂടെ ബുദ്ധധർമ്മത്തിന്റെ മാനവികത ഉയർത്തിപ്പിടിച്ച കൃതി.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%9A%E0%B4%A3%E0%B5%8D%E0%B4%A1%E0%B4%BE%E0%B4%B2%E0%B4%AD%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%B7%E0%B5%81%E0%B4%95%E0%B4%BF"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%9A%E0%B4%A3%E0%B5%8D%E0%B4%A1%E0%B4%BE%E0%B4%B2%E0%B4%AD%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%B7%E0%B5%81%E0%B4%95%E0%B4%BF",
+    "archiveUrl": "https://archive.org/search.php?query=Chandalabhikshuki%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 35,
@@ -595,7 +663,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.9,
     "summary": "വാസവദത്ത എന്ന സുന്ദരിയായ നർത്തകിയും ഉപഗുപ്തൻ എന്ന ബുദ്ധസന്യാസിയും തമ്മിലുള്ള ആത്മബന്ധവും കരുണയുടെ അമൃതസ്പർശവും പകർന്നുതരുന്ന ആശാന്റെ അന്ത്യകൃതി.",
     "full_content": "കരുണ (കുമാരനാശാൻ — 1923)\n\nശരീരസൗന്ദര്യത്തിന് അതീതമായ ആത്മീയ കരുണയുടെ വിജയം വിളംബരം ചെയ്യുന്ന കാവ്യം.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%95%E0%B4%B0%E0%B5%81%E0%B4%A3"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%95%E0%B4%B0%E0%B5%81%E0%B4%A3",
+    "archiveUrl": "https://archive.org/search.php?query=Karuna%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 36,
@@ -612,7 +682,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.8,
     "summary": "എഡ്വിൻ ആർനോൾഡിന്റെ 'ലൈറ്റ് ഓഫ് ഏഷ്യ'യെ ഉപജീവിച്ച് ശ്രീബുദ്ധന്റെ ജീവിതവും ഉപദേശങ്ങളും ആശാൻ മലയാളത്തിൽ പകർന്നുനൽകിയ മഹദ്കൃതി.",
     "full_content": "ശ്രീബുദ്ധചരിതം (കുമാരനാശാൻ)\n\nഗൗതമബുദ്ധന്റെ ജനനം, കൊട്ടാരജീവിതം, മഹാപരിത്യാഗം, ബോധോദയം എന്നിവ ഭക്തിസാന്ദ്രമായി വിവരിക്കുന്ന കൃതി.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B6%E0%B5%8D%E0%B4%B0%E0%B5%80%E0%B4%AC%E0%B5%81%E0%B4%A6%E0%B5%8D%E0%B4%A7%E0%B4%9A%E0%B4%B0%E0%B4%BF%E0%B4%A4%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B6%E0%B5%8D%E0%B4%B0%E0%B5%80%E0%B4%AC%E0%B5%81%E0%B4%A6%E0%B5%8D%E0%B4%A7%E0%B4%9A%E0%B4%B0%E0%B4%BF%E0%B4%A4%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Sree%20Buddhacharitham%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 37,
@@ -629,7 +701,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 5,
     "summary": "യേശുക്രിസ്തുവിന്റെ പാദങ്ങളിൽ കണ്ണീരൊഴുക്കി പശ്ചാത്തപിച്ച മഗ്ദലന മറിയത്തിന്റെ ഹൃദയസ്പർശിയായ കഥ മനോഹരമായ ഭാഷയിൽ വള്ളത്തോൾ അവതരിപ്പിച്ച അനശ്വര കാവ്യം.",
     "full_content": "മഗ്ദലനമറിയം (വള്ളത്തോൾ — 1921)\n\n\"തപ്താശ്രുബിന്ദുക്കളെന്തിനായ്\nമുത്തേ, നീ മാറോടു ചേർത്തു വെക്കുന്നു?\"\n\nക്രിസ്തീയ ബൈബിൾ കഥാസന്ദർഭത്തെ ഭാരതീയ കാവ്യഭംഗിയോടെ അവതരിപ്പിച്ച വള്ളത്തോളിന്റെ മാസ്റ്റർപീസ്.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AE%E0%B4%97%E0%B5%8D%E0%B4%A6%E0%B4%B2%E0%B4%A8%E0%B4%AE%E0%B4%B1%E0%B4%BF%E0%B4%AF%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AE%E0%B4%97%E0%B5%8D%E0%B4%A6%E0%B4%B2%E0%B4%A8%E0%B4%AE%E0%B4%B1%E0%B4%BF%E0%B4%AF%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Magdalana%20Mariyam%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 38,
@@ -646,7 +720,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.8,
     "summary": "പരശുരാമനും പരമശിവനും ഗണപതിയും തമ്മിലുള്ള പുരാണകഥയെ ആസ്പദമാക്കി വള്ളത്തോൾ രചിച്ച ധർമ്മസങ്കടങ്ങളുടെ കാവ്യവിരുന്ന്.",
     "full_content": "ശിഷ്യനും മകനും (വള്ളത്തോൾ — 1918)\n\nശിഷ്യഭക്തിയും പിതൃസ്നേഹവും തമ്മിലുള്ള സംഘർഷത്തെ പൗരാണിക പ്രൗഢിയോടെ അവതരിപ്പിച്ച കാവ്യം.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B6%E0%B4%BF%E0%B4%B7%E0%B5%8D%E0%B4%AF%E0%B4%A8%E0%B5%81%E0%B4%82%20%E0%B4%AE%E0%B4%95%E0%B4%A8%E0%B5%81%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B6%E0%B4%BF%E0%B4%B7%E0%B5%8D%E0%B4%AF%E0%B4%A8%E0%B5%81%E0%B4%82%20%E0%B4%AE%E0%B4%95%E0%B4%A8%E0%B5%81%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Shishyanum%20Makanum%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 39,
@@ -663,7 +739,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.7,
     "summary": "തനിക്ക് പെട്ടെന്നുണ്ടായ ബധിരതയിൽ മനംനൊന്ത് വള്ളത്തോൾ രചിച്ച വികാരസാന്ദ്രമായ വിലാപകാവ്യം.",
     "full_content": "ബധിരവിലാപം (വള്ളത്തോൾ — 1910)\n\nശബ്ദങ്ങളുടെ ലോകം തനിക്ക് നഷ്ടപ്പെട്ടതിലുള്ള കവിയുടെ തീവ്രവേദനയും ഈശ്വരസമർപ്പണവും തുളുമ്പുന്ന രചന.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AC%E0%B4%A7%E0%B4%BF%E0%B4%B0%E0%B4%B5%E0%B4%BF%E0%B4%B2%E0%B4%BE%E0%B4%AA%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AC%E0%B4%A7%E0%B4%BF%E0%B4%B0%E0%B4%B5%E0%B4%BF%E0%B4%B2%E0%B4%BE%E0%B4%AA%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Badhiravilapam%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 40,
@@ -680,7 +758,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.7,
     "summary": "ബാണാസുരന്റെ തടവറയിൽ കിടക്കുന്ന അനിരുദ്ധന്റെയും ഉഷയുടെയും പ്രണയകഥയുടെ പശ്ചാത്തലത്തിൽ ആത്മാഭിമാനത്തിന്റെ സന്ദേശം നൽകുന്ന കൃതി.",
     "full_content": "ബന്ധനസ്ഥനായ അനിരുദ്ധൻ (വള്ളത്തോൾ — 1914)\n\nസ്വാതന്ത്ര്യദാഹത്തിന്റെയും പ്രണയത്തിന്റെയും അത്യുജ്ജ്വല കാവ്യാവിഷ്കാരം.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AC%E0%B4%A8%E0%B5%8D%E0%B4%A7%E0%B4%A8%E0%B4%B8%E0%B5%8D%E0%B4%A5%E0%B4%A8%E0%B4%BE%E0%B4%AF%20%E0%B4%85%E0%B4%A8%E0%B4%BF%E0%B4%B0%E0%B5%81%E0%B4%A6%E0%B5%8D%E0%B4%A7%E0%B5%BB"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AC%E0%B4%A8%E0%B5%8D%E0%B4%A7%E0%B4%A8%E0%B4%B8%E0%B5%8D%E0%B4%A5%E0%B4%A8%E0%B4%BE%E0%B4%AF%20%E0%B4%85%E0%B4%A8%E0%B4%BF%E0%B4%B0%E0%B5%81%E0%B4%A6%E0%B5%8D%E0%B4%A7%E0%B5%BB",
+    "archiveUrl": "https://archive.org/search.php?query=Bandhanasthanaya%20Aniruddhan%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 41,
@@ -697,7 +777,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.9,
     "summary": "ദേശസ്നേഹം, പ്രകൃതിഭംഗി, ഗാന്ധിജി, ഇന്ത്യൻ സ്വാതന്ത്ര്യസമരം എന്നിവയെ പ്രകീർത്തിക്കുന്ന വള്ളത്തോളിന്റെ കവിതാ സമാഹാര പരമ്പര.",
     "full_content": "സാഹിത്യമഞ്ജരി (വള്ളത്തോൾ)\n\n\"ഭാരതമെന്നു കേട്ടാലഭിമാനപൂരിതമാകണം അന്തരംഗം,\nകേരളമെന്നു കേട്ടാലോ തിളയ്ക്കണം ചോര നമുക്കു ഞരമ്പുകളിൽ.\"\n\nദേശീയപ്രസ്ഥാനത്തിന്റെ കാഹളമായി മാറിയ മലയാളത്തിന്റെ മഹാകവിയുടെ കവിതകൾ.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B8%E0%B4%BE%E0%B4%B9%E0%B4%BF%E0%B4%A4%E0%B5%8D%E0%B4%AF%E0%B4%AE%E0%B4%9E%E0%B5%8D%E0%B4%9C%E0%B4%B0%E0%B4%BF"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B8%E0%B4%BE%E0%B4%B9%E0%B4%BF%E0%B4%A4%E0%B5%8D%E0%B4%AF%E0%B4%AE%E0%B4%9E%E0%B5%8D%E0%B4%9C%E0%B4%B0%E0%B4%BF",
+    "archiveUrl": "https://archive.org/search.php?query=Sahithyamanjari%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 42,
@@ -714,7 +796,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.8,
     "summary": "വിശ്വാമിത്ര മഹർഷിയും ശകുന്തളയും തമ്മിലുള്ള ഹൃദയസ്പർശിയായ കൂടിക്കാഴ്ചയെ കേന്ദ്രീകരിച്ചുള്ള വള്ളത്തോളിന്റെ ലഘുകാവ്യം.",
     "full_content": "അച്ഛനും മകളും (വള്ളത്തോൾ — 1936)\n\nതപോനിഷ്ഠനായ വിശ്വാമിത്രനിലെ വാത്സല്യനിധിയായ പിതാവിനെ വരച്ചുകാട്ടുന്ന കൃതി.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%85%E0%B4%9A%E0%B5%8D%E0%B4%9B%E0%B4%A8%E0%B5%81%E0%B4%82%20%E0%B4%AE%E0%B4%95%E0%B4%B3%E0%B5%81%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%85%E0%B4%9A%E0%B5%8D%E0%B4%9B%E0%B4%A8%E0%B5%81%E0%B4%82%20%E0%B4%AE%E0%B4%95%E0%B4%B3%E0%B5%81%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Achchanum%20Makalum%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 43,
@@ -731,7 +815,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.9,
     "summary": "പതിനേഴാം നൂറ്റാണ്ടിലെ വേണാട് ചരിത്രവും ഉമയമ്മ റാണിയുടെ ഭരണവും ആസ്പദമാക്കി ഉള്ളൂർ രചിച്ച ലക്ഷണയുക്തമായ വിഖ്യാത മഹാകാവ്യം.",
     "full_content": "ഉമാകേരളം (ഉള്ളൂർ — 1914)\n\nമലയാളത്തിലെ പ്രമുഖ മഹാകാവ്യങ്ങളിൽ ഒന്നായ ഉമാകേരളം 30 സർഗ്ഗങ്ങളിലായി തിരുവിതാംകൂർ ചരിത്രത്തിന്റെ വീരഗാഥ ആലപിക്കുന്നു.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%89%E0%B4%AE%E0%B4%BE%E0%B4%95%E0%B5%87%E0%B4%B0%E0%B4%B3%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%89%E0%B4%AE%E0%B4%BE%E0%B4%95%E0%B5%87%E0%B4%B0%E0%B4%B3%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Umakeralam%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 44,
@@ -748,7 +834,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.8,
     "summary": "\"ഒരു തുള്ളി വെളിച്ചം നീയെനിക്കു തന്നാലൊരു കോടി സൂര്യനായ് ഞാൻ തിളങ്ങാം\" — പ്രപഞ്ച സ്നേഹത്തിന്റെ ദിവ്യസന്ദേശം നൽകുന്ന ഉള്ളൂരിന്റെ അനശ്വര കവിത.",
     "full_content": "പ്രേമസംഗീതം (ഉള്ളൂർ)\n\nവിശ്വമാനവികതയും സർവ്വചരാചരങ്ങളോടുമുള്ള നിരുപാധിക സ്നേഹവും പ്രഖ്യാപിക്കുന്ന ഉള്ളൂരിന്റെ ഭാവഗീതം.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B5%87%E0%B4%AE%E0%B4%B8%E0%B4%82%E0%B4%97%E0%B5%80%E0%B4%A4%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B5%87%E0%B4%AE%E0%B4%B8%E0%B4%82%E0%B4%97%E0%B5%80%E0%B4%A4%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Premasangeetham%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 45,
@@ -765,7 +853,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.8,
     "summary": "ഭാഗവതത്തിലെ പിംഗള എന്ന വേശ്യയുടെ മാനസാന്തരവും ആത്മീയ മോക്ഷവും പ്രമേയമാക്കിയ ഉള്ളൂരിന്റെ അതിസുന്ദരമായ ഖണ്ഡകാവ്യം.",
     "full_content": "പിംഗള (ഉള്ളൂർ — 1928)\n\nലൗകിക സുഖങ്ങളുടെ വ്യർത്ഥത മനസ്സിലാക്കി ഈശ്വരസാക്ഷാത്കാരത്തിലേക്ക് ഉയർന്ന ഒരു സ്ത്രീയുടെ കഥ.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AA%E0%B4%BF%E0%B4%82%E0%B4%97%E0%B4%B3"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AA%E0%B4%BF%E0%B4%82%E0%B4%97%E0%B4%B3",
+    "archiveUrl": "https://archive.org/search.php?query=Pingala%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 46,
@@ -782,7 +872,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.9,
     "summary": "മഹാഭാരതത്തിലെ ദാനവീരനായ കർണ്ണന്റെ ഔദാര്യവും സൂര്യദേവനുമായുള്ള സംവാദവും പ്രമേയമാക്കിയ ഉള്ളൂരിന്റെ പ്രശസ്ത കാവ്യം.",
     "full_content": "കർണ്ണഭൂഷണം (ഉള്ളൂർ — 1929)\n\nതന്റെ കവചകുണ്ഡലങ്ങൾ യാചകനായെത്തുന്ന ഇന്ദ്രന് ദാനം ചെയ്യാൻ മടിക്കാത്ത കർണ്ണന്റെ അചഞ്ചലമായ ധീരത വാഴ്ത്തുന്ന കൃതി.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%95%E0%B5%BC%E0%B4%A3%E0%B5%8D%E0%B4%A3%E0%B4%AD%E0%B5%82%E0%B4%B7%E0%B4%A3%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%95%E0%B5%BC%E0%B4%A3%E0%B5%8D%E0%B4%A3%E0%B4%AD%E0%B5%82%E0%B4%B7%E0%B4%A3%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Karnabhooshanam%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 47,
@@ -799,7 +891,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.7,
     "summary": "ചോതനാഥൻ എന്ന ഭക്തന്റെ നിഷ്കളങ്കമായ ഈശ്വരഭക്തിയെ ആസ്പദമാക്കി ഉള്ളൂർ രചിച്ച ഹൃദയഹാരിയായ ഭക്തികാവ്യം.",
     "full_content": "ഭക്തിദീപിക (ഉള്ളൂർ — 1933)\n\nആചാരങ്ങൾക്കല്ല, പരിശുദ്ധമായ ഭക്തിക്കാണ് ഈശ്വരപ്രീതി ലഭിക്കുക എന്ന സന്ദേശം.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AD%E0%B4%95%E0%B5%8D%E0%B4%A4%E0%B4%BF%E0%B4%A6%E0%B5%80%E0%B4%AA%E0%B4%BF%E0%B4%95"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AD%E0%B4%95%E0%B5%8D%E0%B4%A4%E0%B4%BF%E0%B4%A6%E0%B5%80%E0%B4%AA%E0%B4%BF%E0%B4%95",
+    "archiveUrl": "https://archive.org/search.php?query=Bhaktideepika%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 48,
@@ -816,7 +910,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 5,
     "summary": "മലയാളത്തിൽ ഏറ്റവുമധികം വിറ്റഴിക്കപ്പെടുകയും വായിക്കപ്പെടുകയും ചെയ്ത പ്രണയ വിലാപകാവ്യം. ഇടപ്പള്ളി രാഘവൻപിള്ളയുടെ ആത്മഹത്യയെ ആസ്പദമാക്കി രചിച്ചത്.",
     "full_content": "രമണൻ (ചങ്ങമ്പുഴ കൃഷ്ണപിള്ള — 1936)\n\n\"കാനനച്ഛായയിലാടുമേയ്ക്കാൻ\nഞാനും വരട്ടെയോ നിന്റെകൂടെ?\"\n\nരമണന്റെയും ചന്ദ്രികയുടെയും അനശ്വര പ്രണയവും വർഗ്ഗവ്യത്യാസം തീർത്ത വേർപാടും രമണന്റെ ആത്മഹത്യയും മലയാളി ഹൃദയങ്ങളിൽ വിങ്ങിപ്പൊട്ടിയ വിലാപകാവ്യം.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B0%E0%B4%AE%E0%B4%A3%E0%B5%BB"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B0%E0%B4%AE%E0%B4%A3%E0%B5%BB",
+    "archiveUrl": "https://archive.org/search.php?query=Ramanan%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 49,
@@ -833,7 +929,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 5,
     "summary": "ജന്മിത്വത്തിന്റെ ക്രൂരതയ്ക്കിരയായ മലയപ്പുലയന്റെയും കുഞ്ഞുങ്ങളുടെയും കണ്ണീർക്കഥ പറയുന്ന മലയാളത്തിലെ ഏറ്റവും പ്രശസ്തമായ വിപ്ലവ സാമൂഹിക കവിത.",
     "full_content": "വാഴക്കുല (ചങ്ങമ്പുഴ — 1937)\n\nതങ്ങൾ നട്ടുവളർത്തിയ വാഴക്കുല ജന്മിയുടെ ആജ്ഞയാൽ അറുത്തു നൽകേണ്ടിവന്ന ദരിദ്ര കർഷക കുടുംബത്തിന്റെ നൊമ്പരം കേരളത്തിൽ കർഷക പ്രസ്ഥാനങ്ങളുടെ തീപ്പന്തമായി മാറി.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B5%E0%B4%BE%E0%B4%B4%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%B2"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B5%E0%B4%BE%E0%B4%B4%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%B2",
+    "archiveUrl": "https://archive.org/search.php?query=Vazhakkula%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 50,
@@ -850,7 +948,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.8,
     "summary": "മരണത്തിനും പ്രണയത്തിനും മീതെ ചങ്ങമ്പുഴയുടെ കാവ്യഭാവന തീർത്ത അനശ്വരമായ ഗീതകം.",
     "full_content": "സ്പന്ദിക്കുന്ന അസ്ഥിമാടം (ചങ്ങമ്പുഴ)\n\nപ്രണയനൈരാശ്യവും മരണത്തോടുള്ള അഭിനിവേശവും നിറഞ്ഞുനിൽക്കുന്ന ചങ്ങമ്പുഴയുടെ പ്രശസ്ത കൃതി.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B8%E0%B5%8D%E0%B4%AA%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%A8%E0%B5%8D%E0%B4%A8%20%E0%B4%85%E0%B4%B8%E0%B5%8D%E0%B4%A5%E0%B4%BF%E0%B4%AE%E0%B4%BE%E0%B4%9F%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B8%E0%B5%8D%E0%B4%AA%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%A8%E0%B5%8D%E0%B4%A8%20%E0%B4%85%E0%B4%B8%E0%B5%8D%E0%B4%A5%E0%B4%BF%E0%B4%AE%E0%B4%BE%E0%B4%9F%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Spandikkunna%20Asthimadam%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 51,
@@ -867,7 +967,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.8,
     "summary": "ചങ്ങമ്പുഴയുടെ ആദ്യകാല വികാരസാന്ദ്രമായ ഗാനകവിതകളുടെ സമാഹാരം.",
     "full_content": "ബാഷ്പാഞ്ജലി (ചങ്ങമ്പുഴ — 1934)\n\nകണ്ണീരും കിനാവും സംഗീതവും ഇഴചേർത്ത ചങ്ങമ്പുഴയുടെ ആദ്യകാല കവിതകൾ.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AC%E0%B4%BE%E0%B4%B7%E0%B5%8D%E0%B4%AA%E0%B4%BE%E0%B4%9E%E0%B5%8D%E0%B4%9C%E0%B4%B2%E0%B4%BF"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AC%E0%B4%BE%E0%B4%B7%E0%B5%8D%E0%B4%AA%E0%B4%BE%E0%B4%9E%E0%B5%8D%E0%B4%9C%E0%B4%B2%E0%B4%BF",
+    "archiveUrl": "https://archive.org/search.php?query=Bashpanjali%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 52,
@@ -884,7 +986,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.8,
     "summary": "സാമൂഹിക അനീതികൾക്കെതിരെയും സാമ്രാജ്യത്വത്തിനെതിരെയും ചങ്ങമ്പുഴ ഉയർത്തിയ വിപ്ലവകാഹളം.",
     "full_content": "രക്തപുഷ്പങ്ങൾ (ചങ്ങമ്പുഴ — 1944)\n\nവിപ്ലവ ചിന്തകളും സാമൂഹിക മുന്നേറ്റങ്ങളും പ്രതിഫലിക്കുന്ന കവിതകൾ.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B0%E0%B4%95%E0%B5%8D%E0%B4%A4%E0%B4%AA%E0%B5%81%E0%B4%B7%E0%B5%8D%E0%B4%AA%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B5%BE"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B0%E0%B4%95%E0%B5%8D%E0%B4%A4%E0%B4%AA%E0%B5%81%E0%B4%B7%E0%B5%8D%E0%B4%AA%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B5%BE",
+    "archiveUrl": "https://archive.org/search.php?query=Raktapushpangal%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 53,
@@ -901,7 +1005,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.9,
     "summary": "ആത്മഹത്യയ്ക്ക് തൊട്ടുമുമ്പ് ഇടപ്പള്ളി എഴുതിയ ലോകപ്രശസ്തമായ വിടവാങ്ങൽ കവിത. സ്വന്തം മരണത്തെ പ്രണയിനിയായി കണ്ട കവിയുടെ അന്ത്യാഭിലാഷം.",
     "full_content": "മണിനാദം (ഇടപ്പള്ളി രാഘവൻ പിള്ള — 1936)\n\n\"നാളെ ഞാനെന്നൊരു വ്യക്തിയി-\nപ്പാരിലില്ലാതായിടാമെന്നാലും\nവേളയോടൊത്തു പ്രകൃതിതൻ മേളന-\nമേളമൊന്നിങ്ങു തടസ്സപ്പെടില്ല.\"\n\nമലയാളത്തിലെ ഏറ്റവും ഹൃദയഭേദകമായ കാവ്യ വരികൾ.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AE%E0%B4%A3%E0%B4%BF%E0%B4%A8%E0%B4%BE%E0%B4%A6%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AE%E0%B4%A3%E0%B4%BF%E0%B4%A8%E0%B4%BE%E0%B4%A6%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Maninaadam%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 54,
@@ -918,7 +1024,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.7,
     "summary": "ഇടപ്പള്ളിയുടെ മൃദുല വികാരങ്ങളും പ്രകൃതിവർണ്ണനകളും നിറഞ്ഞ കവിതാസമാഹാരം.",
     "full_content": "തുഷാരഹാരം (ഇടപ്പള്ളി രാഘവൻ പിള്ള)\n\nറൊമാന്റിക് കാവ്യഭംഗിയുടെ മനോഹരമായ നിമിഷങ്ങൾ പകർന്നുതരുന്ന കൃതി.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%A4%E0%B5%81%E0%B4%B7%E0%B4%BE%E0%B4%B0%E0%B4%B9%E0%B4%BE%E0%B4%B0%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%A4%E0%B5%81%E0%B4%B7%E0%B4%BE%E0%B4%B0%E0%B4%B9%E0%B4%BE%E0%B4%B0%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Thusharaharam%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 55,
@@ -935,7 +1043,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.8,
     "summary": "മലയാളത്തിലെ വിലാപകാവ്യ ശാഖയ്ക്ക് മാതൃകയായി മാറിയ വി.സിയുടെ വിഖ്യാത കവിത. 23-ാം വയസ്സിൽ അന്തരിച്ച പ്രതിഭാധനനായ കവിയുടെ രചന.",
     "full_content": "ഒരു വിലാപം (വി. സി. ബാലകൃഷ്ണപ്പണിക്കർ — 1908)\n\nമരണത്തെക്കുറിച്ചും പ്രണയനഷ്ടത്തെക്കുറിച്ചുമുള്ള ആഴമേറിയ കാവ്യാവിഷ്കാരം.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%92%E0%B4%B0%E0%B5%81%20%E0%B4%B5%E0%B4%BF%E0%B4%B2%E0%B4%BE%E0%B4%AA%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%92%E0%B4%B0%E0%B5%81%20%E0%B4%B5%E0%B4%BF%E0%B4%B2%E0%B4%BE%E0%B4%AA%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Oru%20Vilapam%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 56,
@@ -952,7 +1062,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.7,
     "summary": "പ്രപഞ്ച രഹസ്യങ്ങളെയും ഈശ്വരചൈതന്യത്തെയും വർണ്ണിക്കുന്ന വി.സിയുടെ ദാർശനിക കവിത.",
     "full_content": "വിശ്വരൂപം (വി. സി. ബാലകൃഷ്ണപ്പണിക്കർ)\n\nപ്രകൃതിയുടെ വിരാട് രൂപത്തെ ഭാവനയിൽ കണ്ടെടുക്കുന്ന കവിത.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B5%E0%B4%BF%E0%B4%B6%E0%B5%8D%E0%B4%B5%E0%B4%B0%E0%B5%82%E0%B4%AA%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B5%E0%B4%BF%E0%B4%B6%E0%B5%8D%E0%B4%B5%E0%B4%B0%E0%B5%82%E0%B4%AA%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Viswaroopam%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 57,
@@ -969,7 +1081,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.9,
     "summary": "ശങ്കരാചാര്യരുടെ മനീഷാപഞ്ചകത്തെ അടിസ്ഥാനമാക്കി കേരളത്തിലെ ജാതിവ്യവസ്ഥയ്ക്കെതിരെ അഞ്ഞടിച്ച വിപ്ലവ നവോത്ഥാന ഗാനം.",
     "full_content": "ജാതിക്കുമ്മി (പണ്ഡിറ്റ് കെ. പി. കറുപ്പൻ — 1912)\n\nതീണ്ടലും തൊടീലും കൊടികുത്തിവാണ കൊച്ചിയിൽ അധഃസ്ഥിതരുടെ അവകാശങ്ങൾക്കായി ശബ്ദമുയർത്തിയ കാവ്യ വിപ്ലവം.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%9C%E0%B4%BE%E0%B4%A4%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%AE%E0%B5%8D%E0%B4%AE%E0%B4%BF"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%9C%E0%B4%BE%E0%B4%A4%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%AE%E0%B5%8D%E0%B4%AE%E0%B4%BF",
+    "archiveUrl": "https://archive.org/search.php?query=Jathikkummi%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 58,
@@ -986,7 +1100,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 5,
     "summary": "മാപ്പിളപ്പാട്ട് സാഹിത്യത്തിലെ ഇതിഹാസ കാവ്യം. ഇസ്ലാമിക ചരിത്രത്തിലെ പ്രഥമ യുദ്ധമായ ബദർ യുദ്ധത്തിന്റെ പശ്ചാത്തലത്തിൽ വൈദ്യർ രചിച്ച വീരരസപ്രധാനമായ കാവ്യം.",
     "full_content": "ബദർ പടപ്പാട്ട് (മോയിൻകുട്ടി വൈദ്യർ — 1876)\n\nഇരുപത്തിയേഴാം വയസ്സിൽ മോയിൻകുട്ടി വൈദ്യർ രചിച്ച മാപ്പിളപ്പാട്ടുകളിലെ രാജാവ്. അറബി-മലയാളം ഭാഷാശൈലിയും ദ്രാവിഡ വൃത്തങ്ങളും ഇഴചേർത്ത സംഗീതാത്മക രചന.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AC%E0%B4%A6%E0%B5%BC%20%E0%B4%AA%E0%B4%9F%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B4%BE%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B5%8D"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AC%E0%B4%A6%E0%B5%BC%20%E0%B4%AA%E0%B4%9F%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B4%BE%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B5%8D",
+    "archiveUrl": "https://archive.org/search.php?query=Badr%20Padappattu%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 59,
@@ -1003,7 +1119,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.8,
     "summary": "മലപ്പുറത്തെ ചരിത്രപ്രസിദ്ധമായ പോരാട്ടങ്ങളെയും രക്തസാക്ഷികളെയും അനുസ്മരിക്കുന്ന മോയിൻകുട്ടി വൈദ്യരുടെ പ്രസിദ്ധ വീരഗാഥ.",
     "full_content": "മലപ്പുറം പടപ്പാട്ട് (മോയിൻകുട്ടി വൈദ്യർ)\n\nത്യാഗത്തിന്റെയും ആത്മാർപ്പണത്തിന്റെയും ചരിത്രം പറയുന്ന മാപ്പിളപ്പാട്ട് കാവ്യം.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AE%E0%B4%B2%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B5%81%E0%B4%B1%E0%B4%82%20%E0%B4%AA%E0%B4%9F%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B4%BE%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B5%8D"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AE%E0%B4%B2%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B5%81%E0%B4%B1%E0%B4%82%20%E0%B4%AA%E0%B4%9F%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B4%BE%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B5%8D",
+    "archiveUrl": "https://archive.org/search.php?query=Malappuram%20Padappattu%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 60,
@@ -1020,7 +1138,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.9,
     "summary": "ബദറുൽ മുനീർ രാജകുമാരന്റെയും ഹുസ്നുൽ ജമാൽ എന്ന രാജകുമാരിയുടെയും ദിവ്യപ്രണയം പറയുന്ന മോയിൻകുട്ടി വൈദ്യരുടെ ആദ്യകാല പ്രണയകാവ്യം.",
     "full_content": "ബദറുൽ മുനീർ ഹുസ്നുൽ ജമാൽ (മോയിൻകുട്ടി വൈദ്യർ — 1872)\n\nഇശലുകളുടെ മാന്ത്രികത കൊണ്ട് മലയാളികളെ വിസ്മയിപ്പിച്ച മാപ്പിള റൊമാന്റിക് കാവ്യം.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AC%E0%B4%A6%E0%B4%B1%E0%B5%81%E0%B5%BD%20%E0%B4%AE%E0%B5%81%E0%B4%A8%E0%B5%80%E0%B5%BC%20%E0%B4%B9%E0%B5%81%E0%B4%B8%E0%B5%8D%E0%B4%A8%E0%B5%81%E0%B5%BD%20%E0%B4%9C%E0%B4%AE%E0%B4%BE%E0%B5%BD"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AC%E0%B4%A6%E0%B4%B1%E0%B5%81%E0%B5%BD%20%E0%B4%AE%E0%B5%81%E0%B4%A8%E0%B5%80%E0%B5%BC%20%E0%B4%B9%E0%B5%81%E0%B4%B8%E0%B5%8D%E0%B4%A8%E0%B5%81%E0%B5%BD%20%E0%B4%9C%E0%B4%AE%E0%B4%BE%E0%B5%BD",
+    "archiveUrl": "https://archive.org/search.php?query=Badrul%20Muneer%20Husnul%20Jamal%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 61,
@@ -1037,7 +1157,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 5,
     "summary": "മലയാള ഭാഷയുടെ പിതാവായ എഴുത്തച്ഛൻ രചിച്ച മലയാളത്തിലെ ഏറ്റവും ശ്രേഷ്ഠമായ ഇതിഹാസ കാവ്യം. കർക്കിടക മാസത്തിൽ ഓരോ മലയാളി ഭവനങ്ങളിലും പാരായണം ചെയ്യുന്ന പുണ്യഗ്രന്ഥം.",
     "full_content": "അദ്ധ്യാത്മരാമായണം കിളിപ്പാട്ട് (തുഞ്ചത്തെഴുത്തച്ഛൻ)\n\nശ്രീരാമന്റെ ദിവ്യചരിതത്തിലൂടെ ഭക്തിയും നീതിയും ധർമ്മവും മലയാളക്കരയിൽ വിതറിയ ഭാഷാപൂർവ്വപിതാവിന്റെ അമരസൃഷ്ടി.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%85%E0%B4%A6%E0%B5%8D%E0%B4%A7%E0%B5%8D%E0%B4%AF%E0%B4%BE%E0%B4%A4%E0%B5%8D%E0%B4%AE%E0%B4%B0%E0%B4%BE%E0%B4%AE%E0%B4%BE%E0%B4%AF%E0%B4%A3%E0%B4%82%20%E0%B4%95%E0%B4%BF%E0%B4%B3%E0%B4%BF%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B4%BE%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B5%8D"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%85%E0%B4%A6%E0%B5%8D%E0%B4%A7%E0%B5%8D%E0%B4%AF%E0%B4%BE%E0%B4%A4%E0%B5%8D%E0%B4%AE%E0%B4%B0%E0%B4%BE%E0%B4%AE%E0%B4%BE%E0%B4%AF%E0%B4%A3%E0%B4%82%20%E0%B4%95%E0%B4%BF%E0%B4%B3%E0%B4%BF%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B4%BE%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B5%8D",
+    "archiveUrl": "https://archive.org/search.php?query=Adhyatma%20Ramayanam%20Kilippattu%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 62,
@@ -1054,7 +1176,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 5,
     "summary": "വ്യാസഭാരതത്തെ കിളിപ്പാട്ട് വൃത്തത്തിൽ എഴുത്തച്ഛൻ ഭാഷാന്തരം ചെയ്ത മലയാള സാഹിത്യത്തിന്റെ മഹാസ്തംഭം.",
     "full_content": "ശ്രീമഹാഭാരതം കിളിപ്പാട്ട് (തുഞ്ചത്തെഴുത്തച്ഛൻ)\n\nകുരുക്ഷേത്രയുദ്ധവും ഗീതാസന്ദേശവും ധർമ്മാധർമ്മങ്ങളുടെ നിത്യസംഘർഷങ്ങളും ആലപിക്കുന്ന കാവ്യം.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B6%E0%B5%8D%E0%B4%B0%E0%B5%80%E0%B4%AE%E0%B4%B9%E0%B4%BE%E0%B4%AD%E0%B4%BE%E0%B4%B0%E0%B4%A4%E0%B4%82%20%E0%B4%95%E0%B4%BF%E0%B4%B3%E0%B4%BF%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B4%BE%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B5%8D"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B6%E0%B5%8D%E0%B4%B0%E0%B5%80%E0%B4%AE%E0%B4%B9%E0%B4%BE%E0%B4%AD%E0%B4%BE%E0%B4%B0%E0%B4%A4%E0%B4%82%20%E0%B4%95%E0%B4%BF%E0%B4%B3%E0%B4%BF%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B4%BE%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B5%8D",
+    "archiveUrl": "https://archive.org/search.php?query=Sree%20Mahabharatham%20Kilippattu%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 63,
@@ -1071,7 +1195,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.9,
     "summary": "\"ഹരിശ്രീ ഗണപതയേ നമഃ\" അക്ഷരമാല ക്രമത്തിൽ എഴുത്തച്ഛൻ രചിച്ച 66 ശ്ലോകങ്ങളുള്ള തത്വചിന്താപരവും ഭക്തിനിർഭരവുമായ സ്തോത്രം.",
     "full_content": "ഹരിനാമകീർത്തനം (തുഞ്ചത്തെഴുത്തച്ഛൻ)\n\nഅദ്വൈതവേദാന്ത തത്വങ്ങളെ ലളിതമായ മലയാള പദങ്ങളിൽ സന്നിവേശിപ്പിച്ച സ്തോത്രകാവ്യം.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B9%E0%B4%B0%E0%B4%BF%E0%B4%A8%E0%B4%BE%E0%B4%AE%E0%B4%95%E0%B5%80%E0%B5%BC%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B4%A8%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B9%E0%B4%B0%E0%B4%BF%E0%B4%A8%E0%B4%BE%E0%B4%AE%E0%B4%95%E0%B5%80%E0%B5%BC%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B4%A8%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Harinamakeerthanam%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 64,
@@ -1088,7 +1214,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 5,
     "summary": "\"കണ്ടുകണ്ടങ്ങിരിക്കും ജനങ്ങളെ കണ്ടില്ലെന്നു വരുത്തുന്നതും ഭവാൻ\" — ജീവിതത്തിന്റെ നൈമിഷികതയും അഹംഭാവത്തിന്റെ വ്യർത്ഥതയും ലളിതമലയാളത്തിൽ പാടിയ പൂന്താനത്തിന്റെ അമൃതവാണി.",
     "full_content": "ജ്ഞാനപ്പാന (പൂന്താനം നമ്പൂതിരി)\n\nപാന വൃത്തത്തിൽ രചിക്കപ്പെട്ട മലയാള തത്വചിന്താ സാഹിത്യത്തിലെ അതിവിശിഷ്ട കൃതി.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%9C%E0%B5%8D%E0%B4%9E%E0%B4%BE%E0%B4%A8%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B4%BE%E0%B4%A8"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%9C%E0%B5%8D%E0%B4%9E%E0%B4%BE%E0%B4%A8%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B4%BE%E0%B4%A8",
+    "archiveUrl": "https://archive.org/search.php?query=Jnanappana%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 65,
@@ -1105,7 +1233,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.8,
     "summary": "കുഞ്ഞുങ്ങളെ നഷ്ടപ്പെട്ട ഒരു ബ്രാഹ്മണന്റെ ദുഃഖവും അർജ്ജുനന്റെ പ്രതിജ്ഞയും ശ്രീകൃഷ്ണന്റെ കാരുണ്യവും പറയുന്ന പൂന്താനത്തിന്റെ ഭക്തികാവ്യം.",
     "full_content": "സന്താനഗോപാലം പാന (പൂന്താനം നമ്പൂതിരി)\n\nവാത്സല്യവും ഭക്തിയും വഴിഞ്ഞൊഴുകുന്ന പാനരചന.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B8%E0%B4%A8%E0%B5%8D%E0%B4%A4%E0%B4%BE%E0%B4%A8%E0%B4%97%E0%B5%8B%E0%B4%AA%E0%B4%BE%E0%B4%B2%E0%B4%82%20%E0%B4%AA%E0%B4%BE%E0%B4%A8"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B8%E0%B4%A8%E0%B5%8D%E0%B4%A4%E0%B4%BE%E0%B4%A8%E0%B4%97%E0%B5%8B%E0%B4%AA%E0%B4%BE%E0%B4%B2%E0%B4%82%20%E0%B4%AA%E0%B4%BE%E0%B4%A8",
+    "archiveUrl": "https://archive.org/search.php?query=Santhana%20Gopalam%20Pana%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 66,
@@ -1122,7 +1252,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.9,
     "summary": "മഞ്ഞപ്പട്ടുടുത്ത കൃഷ്ണന്റെ ബാലലീലകളെ ശുദ്ധമലയാളത്തിൽ ഗാഥാവൃത്തത്തിൽ രചിച്ച പ്രാചീന മലയാള കാവ്യവിസ്മയം.",
     "full_content": "കൃഷ്ണഗാഥ (ചെറുശ്ശേരി നമ്പൂതിരി)\n\nസംസ്കൃത ബാഹുല്യമില്ലാത്ത തനിമലയാള ശൈലിയിൽ ഉദയംകൊണ്ട ക്ലാസിക് ഗാഥ.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%95%E0%B5%83%E0%B4%B7%E0%B5%8D%E0%B4%A3%E0%B4%97%E0%B4%BE%E0%B4%A5"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%95%E0%B5%83%E0%B4%B7%E0%B5%8D%E0%B4%A3%E0%B4%97%E0%B4%BE%E0%B4%A5",
+    "archiveUrl": "https://archive.org/search.php?query=Krishnagatha%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 67,
@@ -1139,7 +1271,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 5,
     "summary": "നളന്റെയും ദമയന്തിയുടെയും പ്രണയവും ദുരിതങ്ങളും നാലു ദിവസത്തെ കഥകളി രൂപത്തിൽ ആവിഷ്കരിച്ച ലോകോത്തര ദൃശ്യകാവ്യ സാഹിത്യം.",
     "full_content": "നളചരിതം ആട്ടക്കഥ (ഉണ്ണായി വാര്യർ)\n\nമലയാളത്തിന്റെ ശാകുന്തളം എന്ന് വിശേഷിപ്പിക്കപ്പെടുന്ന കഥകളി ആട്ടക്കഥ.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%A8%E0%B4%B3%E0%B4%9A%E0%B4%B0%E0%B4%BF%E0%B4%A4%E0%B4%82%20%E0%B4%86%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%A5"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%A8%E0%B4%B3%E0%B4%9A%E0%B4%B0%E0%B4%BF%E0%B4%A4%E0%B4%82%20%E0%B4%86%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%A5",
+    "archiveUrl": "https://archive.org/search.php?query=Nalacharitham%20Aattakkatha%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 68,
@@ -1156,7 +1290,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.9,
     "summary": "ഭീമന്റെ സൗഗന്ധികപ്പൂവ് തേടിയുള്ള യാത്രയും ഹനുമാനുമായുള്ള സമാഗമവും ആക്ഷേപഹാസ്യത്തിലൂടെ തുള്ളൽ രൂപത്തിൽ നമ്പ്യാർ അവതരിപ്പിച്ച കൃതി.",
     "full_content": "കല്യാണസൗഗന്ധികം തുള്ളൽ (കുഞ്ചൻ നമ്പ്യാർ)\n\nതുള്ളൽ പ്രസ്ഥാനത്തിന്റെ ജനയിതാവായ കുഞ്ചൻ നമ്പ്യാരുടെ എക്കാലത്തെയും ജനപ്രിയ തുള്ളൽ കൃതി.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%95%E0%B4%B2%E0%B5%8D%E0%B4%AF%E0%B4%BE%E0%B4%A3%E0%B4%B8%E0%B5%97%E0%B4%97%E0%B4%A8%E0%B5%8D%E0%B4%A7%E0%B4%BF%E0%B4%95%E0%B4%82%20%E0%B4%A4%E0%B5%81%E0%B4%B3%E0%B5%8D%E0%B4%B3%E0%B5%BD"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%95%E0%B4%B2%E0%B5%8D%E0%B4%AF%E0%B4%BE%E0%B4%A3%E0%B4%B8%E0%B5%97%E0%B4%97%E0%B4%A8%E0%B5%8D%E0%B4%A7%E0%B4%BF%E0%B4%95%E0%B4%82%20%E0%B4%A4%E0%B5%81%E0%B4%B3%E0%B5%8D%E0%B4%B3%E0%B5%BD",
+    "archiveUrl": "https://archive.org/search.php?query=Kalyanasougandhikam%20Thullal%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 69,
@@ -1173,7 +1309,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.8,
     "summary": "ദുര്യോധനന്റെ അഹങ്കാരവും ഗന്ധർവ്വന്മാരുമായുള്ള യുദ്ധവും പരിഹാസത്തിന്റെ കൂരമ്പുകൾ കൊണ്ട് വരച്ചുകാട്ടുന്ന ഓട്ടൻ തുള്ളൽ.",
     "full_content": "ഘോഷയാത്ര തുള്ളൽ (കുഞ്ചൻ നമ്പ്യാർ)\n\nഫ്യൂഡൽ പ്രഭുക്കന്മാരുടെ പൊങ്ങച്ചങ്ങളെ കണക്കിന് പരിഹസിച്ച നമ്പ്യാരുടെ രചന.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%98%E0%B5%8B%E0%B4%B7%E0%B4%AF%E0%B4%BE%E0%B4%A4%E0%B5%8D%E0%B4%B0%20%E0%B4%A4%E0%B5%81%E0%B4%B3%E0%B5%8D%E0%B4%B3%E0%B5%BD"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%98%E0%B5%8B%E0%B4%B7%E0%B4%AF%E0%B4%BE%E0%B4%A4%E0%B5%8D%E0%B4%B0%20%E0%B4%A4%E0%B5%81%E0%B4%B3%E0%B5%8D%E0%B4%B3%E0%B5%BD",
+    "archiveUrl": "https://archive.org/search.php?query=Ghoshyathra%20Thullal%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 70,
@@ -1190,7 +1328,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.8,
     "summary": "വിരാടരാജധാനിയിലെ സൈരന്ധ്രിയായ ദ്രൗപദിയെ കാമിച്ച കീചകനെ ഭീമസേനൻ നിഗ്രഹിക്കുന്ന കഥ പറയുന്ന പ്രശസ്ത ആട്ടക്കഥ.",
     "full_content": "കീചകവധം ആട്ടക്കഥ (ഇരയിമ്മൻ തമ്പി)\n\nസ്വാതിതിരുനാളിന്റെ കൊട്ടാരം വിദഗ്ദ്ധനും കവിയുമായ ഇരയിമ്മൻ തമ്പിയുടെ ക്ലാസിക് ആട്ടക്കഥ.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%95%E0%B5%80%E0%B4%9A%E0%B4%95%E0%B4%B5%E0%B4%A7%E0%B4%82%20%E0%B4%86%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%A5"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%95%E0%B5%80%E0%B4%9A%E0%B4%95%E0%B4%B5%E0%B4%A7%E0%B4%82%20%E0%B4%86%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%A5",
+    "archiveUrl": "https://archive.org/search.php?query=Keechakavadham%20Aattakkatha%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 71,
@@ -1207,7 +1347,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 5,
     "summary": "സ്വാതിതിരുനാൾ മഹാരാജാവിന്റെ ജനനത്തിൽ ആഹ്ലാദഭരിതനായി ഇരയിമ്മൻ തമ്പി രചിച്ച, ലോകമലയാളികളുടെ എക്കാലത്തെയും പ്രിയപ്പെട്ട താരാട്ടുപാട്ട്.",
     "full_content": "ഓമനത്തിങ്കൾക്കിടാവോ (ഇരയിമ്മൻ തമ്പി — 1813)\n\n\"ഓമനത്തിങ്കൾക്കിടാവോ, നല്ല കോമളത്താമരപ്പൂവോ,\nപൂവിൽ നിറഞ്ഞ മധുവോ, പരിപൂർണ്ണേന്ദുതന്റെ നിലാവോ?\"\n\nമലയാളത്തിലെ ഏറ്റവും ശ്രേഷ്ഠമായ താരാട്ടുഗാനം.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%93%E0%B4%AE%E0%B4%A8%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B4%BF%E0%B4%99%E0%B5%8D%E0%B4%95%E0%B5%BE%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%BF%E0%B4%9F%E0%B4%BE%E0%B4%B5%E0%B5%8B"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%93%E0%B4%AE%E0%B4%A8%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B4%BF%E0%B4%99%E0%B5%8D%E0%B4%95%E0%B5%BE%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%BF%E0%B4%9F%E0%B4%BE%E0%B4%B5%E0%B5%8B",
+    "archiveUrl": "https://archive.org/search.php?query=Omanathinkal%20Kidavo%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 72,
@@ -1224,7 +1366,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 5,
     "summary": "മതങ്ങൾക്കും ജാതികൾക്കും അതീതമായി പ്രപഞ്ചനാഥനായ ഏകദൈവത്തെ സ്തുതിക്കുന്ന ഗുരുവിന്റെ വിഖ്യാതമായ 10 ശ്ലോക പ്രാർത്ഥന.",
     "full_content": "ദൈവദശകം (ശ്രീനാരായണ ഗുരു — 1914)\n\n\"ദൈവമേ! കാത്തുകൊൾകങ്ങു കൈവിടാതിങ്ങു ഞങ്ങളെ;\nനാവികൻ നീ ഭവാബ്ധിക്കൊരാവഹം തോണി നിൻപദം.\"\n\nവിശ്വമാനവികതയുടെ ആഗോള പ്രാർത്ഥനാഗീതം.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%A6%E0%B5%88%E0%B4%B5%E0%B4%A6%E0%B4%B6%E0%B4%95%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%A6%E0%B5%88%E0%B4%B5%E0%B4%A6%E0%B4%B6%E0%B4%95%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Daivadasakam%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 73,
@@ -1241,7 +1385,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 5,
     "summary": "\"അവനവനാത്മസുഖത്തിനാചരിക്കുന്നവയപരന്നു സുഖത്തിനായ് വരേണം\" — ശ്രീനാരായണഗുരുവിന്റെ അതിശ്രേഷ്ഠമായ ദാർശനിക കൃതി.",
     "full_content": "ആത്മോപദേശശതകം (ശ്രീനാരായണ ഗുരു — 1897)\n\nനൂറു ശ്ലോകങ്ങളിലൂടെ അദ്വൈതദർശനത്തെ സാധാരണക്കാരന്റെ ജീവിതമൂല്യമാക്കി മാറ്റിയ ഗുരുവിന്റെ മാസ്റ്റർപീസ്.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%86%E0%B4%A4%E0%B5%8D%E0%B4%AE%E0%B5%8B%E0%B4%AA%E0%B4%A6%E0%B5%87%E0%B4%B6%E0%B4%B6%E0%B4%A4%E0%B4%95%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%86%E0%B4%A4%E0%B5%8D%E0%B4%AE%E0%B5%8B%E0%B4%AA%E0%B4%A6%E0%B5%87%E0%B4%B6%E0%B4%B6%E0%B4%A4%E0%B4%95%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Atmopadesha%20Sathakam%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 74,
@@ -1258,7 +1404,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.8,
     "summary": "യോഗശാസ്ത്രത്തിലെ കുണ്ഡലിനീ ശക്തിയെയും ആത്മീയ ഉണർവ്വിനെയും കുറിച്ച് ഗുരു ലളിതമായ പാട്ടുരൂപത്തിൽ ചിട്ടപ്പെടുത്തിയ കൃതി.",
     "full_content": "കുണ്ഡലിനിപ്പാട്ട് (ശ്രീനാരായണ ഗുരു)\n\nയോഗ സാധനയുടെ പടവുകൾ വിവരിക്കുന്ന തത്വചിന്താഗാനം.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%95%E0%B5%81%E0%B4%A3%E0%B5%8D%E0%B4%A1%E0%B4%B2%E0%B4%BF%E0%B4%A8%E0%B4%BF%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B4%BE%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B5%8D"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%95%E0%B5%81%E0%B4%A3%E0%B5%8D%E0%B4%A1%E0%B4%B2%E0%B4%BF%E0%B4%A8%E0%B4%BF%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B4%BE%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B5%8D",
+    "archiveUrl": "https://archive.org/search.php?query=Kundalinippattu%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 75,
@@ -1275,7 +1423,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.9,
     "summary": "വേദങ്ങളും ഉപനിഷത്തുകളും പഠിക്കാൻ സർവ്വ മനുഷ്യർക്കും തുല്യാവകാശമുണ്ടെന്ന് പ്രാമാണികമായി തെളിയിച്ച ചട്ടമ്പിസ്വാമികളുടെ വിപ്ലവകരമായ കൃതി.",
     "full_content": "വേദാധികാര നിരൂപണം (ചട്ടമ്പി സ്വാമികൾ — 1890)\n\nബ്രാഹ്മണർക്ക് മാത്രമായി വേദാധികാരം പരിമിതപ്പെടുത്തിയ ഫ്യൂഡൽ സവർണ്ണ മേധാവിത്വത്തിന്റെ കപടതകളെ വേദവാക്യങ്ങൾ കൊണ്ട് തന്നെ ചട്ടമ്പിസ്വാമികൾ തുറന്നുകാട്ടിയ ചരിത്രരചന.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B5%E0%B5%87%E0%B4%A6%E0%B4%BE%E0%B4%A7%E0%B4%BF%E0%B4%95%E0%B4%BE%E0%B4%B0%20%E0%B4%A8%E0%B4%BF%E0%B4%B0%E0%B5%82%E0%B4%AA%E0%B4%A3%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B5%E0%B5%87%E0%B4%A6%E0%B4%BE%E0%B4%A7%E0%B4%BF%E0%B4%95%E0%B4%BE%E0%B4%B0%20%E0%B4%A8%E0%B4%BF%E0%B4%B0%E0%B5%82%E0%B4%AA%E0%B4%A3%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Vedadhikara%20Niroopanam%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 76,
@@ -1292,7 +1442,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.8,
     "summary": "കേരളോല്പത്തി ഐതിഹ്യങ്ങളിലെ അസത്യങ്ങളെ പൊളിച്ചടുക്കി, കേരളത്തിലെ ആദ്യകാല നിവാസികളുടെ ചരിത്രം വസ്തുനിഷ്ഠമായി സ്ഥാപിച്ച ഗവേഷണഗ്രന്ഥം.",
     "full_content": "പ്രാചീന മലയാളം (ചട്ടമ്പി സ്വാമികൾ — 1913)\n\nകേരള ചരിത്രരചനാരീതിയിൽ വിപ്ലവം സൃഷ്ടിച്ച വസ്തുനിഷ്ഠമായ അന്വേഷണ ഗ്രന്ഥം.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%BE%E0%B4%9A%E0%B5%80%E0%B4%A8%20%E0%B4%AE%E0%B4%B2%E0%B4%AF%E0%B4%BE%E0%B4%B3%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%BE%E0%B4%9A%E0%B5%80%E0%B4%A8%20%E0%B4%AE%E0%B4%B2%E0%B4%AF%E0%B4%BE%E0%B4%B3%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Pracheena%20Malayalam%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 77,
@@ -1309,7 +1461,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.8,
     "summary": "ആനന്ദമത സ്ഥാപകനായ ശിവയോഗി അന്ധവിശ്വാസങ്ങളെയും അനാചാരങ്ങളെയും എതിർത്ത് മനസ്സിന്റെ ശുദ്ധിയാണ് യഥാർത്ഥ മോക്ഷമെന്ന് ഉദ്ഘോഷിച്ച കൃതി.",
     "full_content": "മോക്ഷപ്രദീപം (ബ്രഹ്മാനന്ദ സ്വാമി ശിവയോഗി — 1905)\n\nയാഗങ്ങളും ബലികളും അർത്ഥശൂന്യമാണെന്നും അഹിംസയും മനശ്ശാന്തിയുമാണ് പരമമെന്നും വാദിച്ച നവോത്ഥാന ഗ്രന്ഥം.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AE%E0%B5%8B%E0%B4%95%E0%B5%8D%E0%B4%B7%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%A6%E0%B5%80%E0%B4%AA%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AE%E0%B5%8B%E0%B4%95%E0%B5%8D%E0%B4%B7%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%A6%E0%B5%80%E0%B4%AA%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Mokshapradeepam%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 78,
@@ -1326,7 +1480,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 5,
     "summary": "മലയാളത്തിലെ മാത്രമല്ല, ഏതൊരു ഇന്ത്യൻ ഭാഷയിലെയും ആദ്യത്തെ യാത്രാവിവരണ ഗ്രന്ഥം. റോമിലേക്കും പോർച്ചുഗലിലേക്കും നടത്തിയ സാഹസിക കടൽയാത്രയുടെ അനുഭവരേഖ.",
     "full_content": "വർത്തമാനപ്പുസ്തകം (പാറേമ്മാക്കൽ തോമ്മാക്കത്തനാർ — 1785)\n\nമലയാള യാത്രാവിവരണ സാഹിത്യത്തിന്റെ അമരഗ്രന്ഥം. 1778 മുതൽ 1786 വരെയുള്ള കാലഘട്ടത്തിൽ തോമ്മാക്കത്തനാർ കേരളത്തിൽ നിന്ന് യൂറോപ്പിലേക്ക് നടത്തിയ ദീർഘയാത്രയുടെ ചരിത്രമൂല്യമുള്ള വിവരണം.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B5%E0%B5%BC%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B4%AE%E0%B4%BE%E0%B4%A8%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B5%81%E0%B4%B8%E0%B5%8D%E0%B4%A4%E0%B4%95%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B5%E0%B5%BC%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B4%AE%E0%B4%BE%E0%B4%A8%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B5%81%E0%B4%B8%E0%B5%8D%E0%B4%A4%E0%B4%95%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Varthamanappusthakam%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 79,
@@ -1343,7 +1499,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 5,
     "summary": "മലയാള ഭാഷാവ്യാകരണത്തിന്റെ ആധികാരിക ബൈബിൾ. ദ്രാവിഡ ഭാഷാ കുടുംബത്തിൽ മലയാളത്തിന്റെ ഉത്ഭവവും വികാസവും ശാസ്ത്രീയമായി സമർത്ഥിച്ച കൃതി.",
     "full_content": "കേരളപാണിനീയം (എ. ആർ. രാജരാജവർമ്മ — 1896)\n\nമലയാള വ്യാകരണ നിയമങ്ങൾക്ക് ശാസ്ത്രീയ അടിത്തറയിട്ട എ.ആറിന്റെ അനശ്വര സംഭാവന.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%95%E0%B5%87%E0%B4%B0%E0%B4%B3%E0%B4%AA%E0%B4%BE%E0%B4%A3%E0%B4%BF%E0%B4%A8%E0%B5%80%E0%B4%AF%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%95%E0%B5%87%E0%B4%B0%E0%B4%B3%E0%B4%AA%E0%B4%BE%E0%B4%A3%E0%B4%BF%E0%B4%A8%E0%B5%80%E0%B4%AF%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Kerala%20Panineeyam%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 80,
@@ -1360,7 +1518,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.8,
     "summary": "മലയാള സാഹിത്യത്തിലെ അലങ്കാരശാസ്ത്ര സിദ്ധാന്തങ്ങളെ സുന്ദരമായ ലക്ഷ്യലക്ഷണങ്ങളോടെ ക്രമീകരിച്ച ആധികാരിക ഗ്രന്ഥം.",
     "full_content": "ഭാഷാഭൂഷണം (എ. ആർ. രാജരാജവർമ്മ — 1902)\n\nകാവ്യാലങ്കാരങ്ങളെ ലളിതമായി പ്രതിപാദിക്കുന്ന സാഹിത്യശാസ്ത്ര ഗ്രന്ഥം.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AD%E0%B4%BE%E0%B4%B7%E0%B4%BE%E0%B4%AD%E0%B5%82%E0%B4%B7%E0%B4%A3%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AD%E0%B4%BE%E0%B4%B7%E0%B4%BE%E0%B4%AD%E0%B5%82%E0%B4%B7%E0%B4%A3%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Bhashabhooshanam%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 81,
@@ -1377,7 +1537,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.8,
     "summary": "സംസ്കൃത-മലയാള കാവ്യവൃത്തങ്ങളെയും ഛന്ദസ്സുകളെയും കുറിച്ചുള്ള സമ്പൂർണ്ണ ഗൈഡ്. മലയാള കവികളുടെ പ്രധാന പഠന സഹായി.",
     "full_content": "വൃത്തമഞ്ജരി (എ. ആർ. രാജരാജവർമ്മ — 1904)\n\nവൃത്തശാസ്ത്ര നിയമങ്ങളെ പദ്യരൂപത്തിലുള്ള ഉദാഹരണങ്ങളോടെ വിശദീകരിക്കുന്ന കൃതി.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B5%E0%B5%83%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B4%AE%E0%B4%9E%E0%B5%8D%E0%B4%9C%E0%B4%B0%E0%B4%BF"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B5%E0%B5%83%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B4%AE%E0%B4%9E%E0%B5%8D%E0%B4%9C%E0%B4%B0%E0%B4%BF",
+    "archiveUrl": "https://archive.org/search.php?query=Vrittamanjari%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 82,
@@ -1394,7 +1556,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 5,
     "summary": "പ്രാചീന കാലം മുതലുള്ള മലയാള സാഹിത്യത്തിന്റെ സമഗ്രവും ആധികാരികവുമായ ബൃഹദ് ചരിത്ര ഗ്രന്ഥം. ഉള്ളൂരിന്റെ ഗവേഷണ ജീവിതത്തിന്റെ പരമോന്നത സൃഷ്ടി.",
     "full_content": "കേരള സാഹിത്യ ചരിത്രം (ഉള്ളൂർ എസ്. പരമേശ്വരയ്യർ)\n\nമലയാള സാഹിത്യ ഗവേഷണത്തിലെ സർവ്വവിജ്ഞാനകോശമെന്ന് വിശേഷിപ്പിക്കപ്പെടുന്ന അമൂല്യ കൃതി.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%95%E0%B5%87%E0%B4%B0%E0%B4%B3%20%E0%B4%B8%E0%B4%BE%E0%B4%B9%E0%B4%BF%E0%B4%A4%E0%B5%8D%E0%B4%AF%20%E0%B4%9A%E0%B4%B0%E0%B4%BF%E0%B4%A4%E0%B5%8D%E0%B4%B0%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%95%E0%B5%87%E0%B4%B0%E0%B4%B3%20%E0%B4%B8%E0%B4%BE%E0%B4%B9%E0%B4%BF%E0%B4%A4%E0%B5%8D%E0%B4%AF%20%E0%B4%9A%E0%B4%B0%E0%B4%BF%E0%B4%A4%E0%B5%8D%E0%B4%B0%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Kerala%20Sahithya%20Charithram%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 83,
@@ -1411,7 +1575,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.8,
     "summary": "കാളിദാസന്റെ മേഘസന്ദേശത്തിന്റെ മാതൃകയിൽ ഹരിപ്പാട്ട് തടവിൽ കഴിഞ്ഞിരുന്ന കേരളവർമ്മ തന്റെ പ്രിയതമയായ ലക്ഷ്മീഭായി തമ്പുരാട്ടിക്ക് മയിലിലൂടെ അയച്ച സന്ദേശം.",
     "full_content": "മയൂരസന്ദേശം (കേരളവർമ്മ — 1894)\n\nമലയാള സന്ദേശകാവ്യങ്ങളിൽ പ്രഥമസ്ഥാനം അലങ്കരിക്കുന്ന ക്ലാസിക് കൃതി.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AE%E0%B4%AF%E0%B5%82%E0%B4%B0%E0%B4%B8%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%87%E0%B4%B6%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%AE%E0%B4%AF%E0%B5%82%E0%B4%B0%E0%B4%B8%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%87%E0%B4%B6%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Mayoorasandesham%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 84,
@@ -1428,7 +1594,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.8,
     "summary": "കാളിദാസ മഹാകവിയുടെ വിശ്വപ്രസിദ്ധമായ ശാകുന്തളം നാടകത്തിന് കേരളവർമ്മ നൽകിയ മണിപ്രവാള വിവർത്തനം.",
     "full_content": "അഭിജ്ഞാനശാകുന്തളം (കേരളവർമ്മ വിവർത്തനം)\n\nമലയാളത്തിൽ നാടക പ്രസ്ഥാനത്തിന് പ്രചോദനം നൽകിയ ആദ്യകാല തർജ്ജമ.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%85%E0%B4%AD%E0%B4%BF%E0%B4%9C%E0%B5%8D%E0%B4%9E%E0%B4%BE%E0%B4%A8%E0%B4%B6%E0%B4%BE%E0%B4%95%E0%B5%81%E0%B4%A8%E0%B5%8D%E0%B4%A4%E0%B4%B3%E0%B4%82%20%E0%B4%B5%E0%B4%BF%E0%B4%B5%E0%B5%BC%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B4%A8%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%85%E0%B4%AD%E0%B4%BF%E0%B4%9C%E0%B5%8D%E0%B4%9E%E0%B4%BE%E0%B4%A8%E0%B4%B6%E0%B4%BE%E0%B4%95%E0%B5%81%E0%B4%A8%E0%B5%8D%E0%B4%A4%E0%B4%B3%E0%B4%82%20%E0%B4%B5%E0%B4%BF%E0%B4%B5%E0%B5%BC%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B4%A8%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Abhijnana%20Shakunthalam%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 85,
@@ -1445,7 +1613,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.9,
     "summary": "മലയാളത്തിലെ മാധ്യമപ്രവർത്തനത്തിന്റെ ധാർമ്മികതയെയും സ്വാതന്ത്ര്യത്തെയും കുറിച്ച് എഴുതപ്പെട്ട പ്രഥമ പത്രപ്രവർത്തന ശാസ്ത്രഗ്രന്ഥം.",
     "full_content": "വൃത്താന്തപത്രപ്രവർത്തനം (സ്വദേശാഭിമാനി രാമകൃഷ്ണപിള്ള — 1912)\n\nപത്രപ്രവർത്തനം ഒരു സേവനവും ജനകീയ ദൗത്യവുമാണെന്ന് പ്രഖ്യാപിച്ച സ്വദേശാഭിമാനിയുടെ ചരിത്രഗ്രന്ഥം.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B5%E0%B5%83%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B4%BE%E0%B4%A8%E0%B5%8D%E0%B4%A4%E0%B4%AA%E0%B4%A4%E0%B5%8D%E0%B4%B0%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%B5%E0%B5%BC%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B4%A8%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B5%E0%B5%83%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B4%BE%E0%B4%A8%E0%B5%8D%E0%B4%A4%E0%B4%AA%E0%B4%A4%E0%B5%8D%E0%B4%B0%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%B5%E0%B5%BC%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B4%A8%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Vritthanthapathrapravarthanam%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 86,
@@ -1462,7 +1632,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.9,
     "summary": "ഏതൊരു ഇന്ത്യൻ ഭാഷയിലും കാൾ മാർക്സിനെക്കുറിച്ച് എഴുതപ്പെട്ട ഏറ്റവും ആദ്യത്തെ ജീവചരിത്ര ഗ്രന്ഥം.",
     "full_content": "കാൾ മാർക്സ് (സ്വദേശാഭിമാനി രാമകൃഷ്ണപിള്ള — 1912)\n\nമാർക്സിയൻ സോഷ്യലിസ്റ്റ് ചിന്തകളെ ഇന്ത്യയിൽ ആദ്യമായി അവതരിപ്പിച്ച വിപ്ലവകരമായ ജീവചരിത്രം.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%95%E0%B4%BE%E0%B5%BE%20%E0%B4%AE%E0%B4%BE%E0%B5%BC%E0%B4%95%E0%B5%8D%E0%B4%B8%E0%B5%8D%20%E0%B4%9C%E0%B5%80%E0%B4%B5%E0%B4%9A%E0%B4%B0%E0%B4%BF%E0%B4%A4%E0%B5%8D%E0%B4%B0%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%95%E0%B4%BE%E0%B5%BE%20%E0%B4%AE%E0%B4%BE%E0%B5%BC%E0%B4%95%E0%B5%8D%E0%B4%B8%E0%B5%8D%20%E0%B4%9C%E0%B5%80%E0%B4%B5%E0%B4%9A%E0%B4%B0%E0%B4%BF%E0%B4%A4%E0%B5%8D%E0%B4%B0%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Karl%20Marx%20Biography%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 87,
@@ -1479,7 +1651,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 5,
     "summary": "രാജഭരണത്തിന്റെ അനീതികൾക്കെതിരെ പോരാടിയതിന് തിരുവിതാംകൂറിൽ നിന്ന് നാടുകടത്തപ്പെട്ട ധീര പത്രപ്രവർത്തകന്റെ ആത്മകഥാപരമായ ചരിത്രരേഖ.",
     "full_content": "എന്റെ നാടുകടത്തൽ (സ്വദേശാഭിമാനി രാമകൃഷ്ണപിള്ള — 1911)\n\nഅധികാരത്തിന് മുന്നിൽ തലകുനിക്കാത്ത ഒരു മലയാളി മാധ്യമപ്രവർത്തകന്റെ ത്യാഗോജ്ജ്വല ജീവിതം.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%8E%E0%B4%A8%E0%B5%8D%E0%B4%B1%E0%B5%86%20%E0%B4%A8%E0%B4%BE%E0%B4%9F%E0%B5%81%E0%B4%95%E0%B4%9F%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B5%BD"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%8E%E0%B4%A8%E0%B5%8D%E0%B4%B1%E0%B5%86%20%E0%B4%A8%E0%B4%BE%E0%B4%9F%E0%B5%81%E0%B4%95%E0%B4%9F%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B5%BD",
+    "archiveUrl": "https://archive.org/search.php?query=Ente%20Nadukadathal%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 88,
@@ -1496,7 +1670,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.7,
     "summary": "പതിനാലാം നൂറ്റാണ്ടിലെ കേരളത്തിന്റെ ഭൂപ്രകൃതിയും രാജവീഥികളും സംസ്കാരവും മണിപ്രവാള ശൈലിയിൽ വർണ്ണിക്കുന്ന പ്രാചീന സന്ദേശകാവ്യം.",
     "full_content": "ഉണ്ണുനീലിസന്ദേശം (14-ാം നൂറ്റാണ്ട്)\n\nതിരുവനന്തപുരം മുതൽ കടുത്തുരുത്തി വരെയുള്ള നാട്ടുപഴമയും യാത്രാവഴികളും വെളിവാക്കുന്ന ചരിത്രരേഖ.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%89%E0%B4%A3%E0%B5%8D%E0%B4%A3%E0%B5%81%E0%B4%A8%E0%B5%80%E0%B4%B2%E0%B4%BF%E0%B4%B8%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%87%E0%B4%B6%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%89%E0%B4%A3%E0%B5%8D%E0%B4%A3%E0%B5%81%E0%B4%A8%E0%B5%80%E0%B4%B2%E0%B4%BF%E0%B4%B8%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%87%E0%B4%B6%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Unnuneeli%20Sandesam%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 89,
@@ -1513,7 +1689,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.8,
     "summary": "മണിപ്രവാള ഭാഷയ്ക്കും സാഹിത്യത്തിനും വ്യാകരണവും ലക്ഷണങ്ങളും നിഷ്കർഷിച്ച സംസ്കൃതത്തിലെഴുതപ്പെട്ട പ്രാചീന മലയാള ശാസ്ത്രഗ്രന്ഥം.",
     "full_content": "ലീലാതിലകം (14-ാം നൂറ്റാണ്ട്)\n\n\"ഭാഷാ സംസ്കൃത യോഗോ മണിപ്രവാളം\" — മലയാള ഭാഷാ ചരിത്ര ഗവേഷണത്തിലെ അനിഷേധ്യ ഗ്രന്ഥം.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B2%E0%B5%80%E0%B4%B2%E0%B4%BE%E0%B4%A4%E0%B4%BF%E0%B4%B2%E0%B4%95%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%B2%E0%B5%80%E0%B4%B2%E0%B4%BE%E0%B4%A4%E0%B4%BF%E0%B4%B2%E0%B4%95%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Leelathilakam%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 90,
@@ -1530,7 +1708,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.8,
     "summary": "പാശ്ചാത്യ സാഹിത്യ പ്രസ്ഥാനങ്ങളെയും ആധുനിക ചിന്തകളെയും മലയാളത്തിലേക്ക് ആവാഹിച്ച കേസരിയുടെ വിപ്ലവകരമായ ലേഖന സമാഹാരം.",
     "full_content": "നവലോകം (കേസരി എ. ബാലകൃഷ്ണപിള്ള)\n\nമലയാള സാഹിത്യ നിരൂപണത്തിൽ വിപ്ലവം സൃഷ്ടിച്ച കേസരിയുടെ ദീർഘദർശിയായ ചിന്തകൾ.",
-    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%A8%E0%B4%B5%E0%B4%B2%E0%B5%8B%E0%B4%95%E0%B4%82"
+    "readUrl": "https://ml.wikisource.org/w/index.php?search=%E0%B4%A8%E0%B4%B5%E0%B4%B2%E0%B5%8B%E0%B4%95%E0%B4%82",
+    "archiveUrl": "https://archive.org/search.php?query=Navalokam%20malayalam",
+    "sourceName": "മലയാളം വിക്കിഗ്രന്ഥശാല (Wikisource)"
   },
   {
     "id": 91,
@@ -1547,7 +1727,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 5,
     "summary": "സൗദിയിൽ എത്തുന്ന ഓരോ പ്രവാസിയും അറിഞ്ഞിരിക്കേണ്ട സുപ്രധാന എമർജൻസി നമ്പറുകൾ, താമസ രേഖകൾ, ട്രാഫിക് നിയമങ്ങൾ, നിത്യജീവിത മാർഗ്ഗരേഖകൾ എന്നിവ ഒറ്റനോട്ടത്തിൽ.",
     "full_content": "🇸🇦 സൗദി പ്രവാസി സമ്പൂർണ്ണ അതിജീവന ഗൈഡ് (2026 Edition)\nരചന: D&J Techies · KSA Malayali Hub\n\n1. അത്യാവശ്യ എമർജൻസി നമ്പറുകൾ (Saudi Emergency Numbers):\n• പോലീസ് (Police): 999\n• ആംബുലൻസ് (Ambulance / Red Crescent): 997\n• ട്രാഫിക് പോലീസ് / അപകടങ്ങൾ (Traffic Accidents): 993\n• സിവിൽ ഡിഫൻസ് / ഫയർഫോഴ്സ് (Fire): 998\n• ഹൈവേ പട്രോൾ (Highway Patrol): 996\n• ജനറൽ എമർജൻസി (General Unified Emergency): 911 (Makkah, Riyadh, Eastern Province)\n• ഇന്ത്യൻ എംബസി റിയാദ് (Embassy Helpline): 800 247 1234 / +966 11 488 4101\n• ഇന്ത്യൻ കോൺസുലേറ്റ് ജിദ്ദ (Consulate Helpline): 800 244 0003\n\n2. ബാങ്കിംഗ് & പണമിടപാടുകൾ:\nസൗദിയിൽ നിയമാനുസൃതമായ ബാങ്ക് അക്കൗണ്ടുകൾ വഴിയോ അംഗീകൃത മണി എക്സ്ചേഞ്ചുകൾ വഴിയോ (Urpay, STC Pay, Enjaz, Tahweel Al Rajhi) മാത്രമേ നാട്ടിലേക്ക് പണം അയക്കാവൂ. വ്യക്തിഗത അക്കൗണ്ടുകൾ മറ്റുള്ളവർക്ക് പണമിടപാടിനായി നൽകുന്നത് കടുത്ത സാമ്പത്തിക കുറ്റകൃത്യമാണ്.\n\n3. സൈബർ നിയമങ്ങൾ (Anti-Cybercrime Laws):\nസൗദിയിൽ മറ്റുള്ളവരുടെ അനുവാദമില്ലാതെ ഫോട്ടോയോ വീഡിയോയോ എടുക്കുന്നതും സോഷ്യൽ മീഡിയയിൽ പ്രചരിപ്പിക്കുന്നതും കടുത്ത ശിക്ഷാർഹമാണ്. ഔദ്യോഗിക സ്ഥാപനങ്ങൾ, സൈനിക കേന്ദ്രങ്ങൾ, പള്ളികളിലെ സ്ത്രീകൾ എന്നിവരുടെ ചിത്രങ്ങൾ പകർത്തരുത്.",
-    "readUrl": "#guide-91"
+    "readUrl": "/sahayi#labour-law-guide",
+    "archiveUrl": "https://archive.org/search.php?query=saudi+labour+law+malayalam",
+    "sourceName": "KSA Malayali Hub Sahayi"
   },
   {
     "id": 92,
@@ -1564,7 +1746,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 5,
     "summary": "സൗദി ലേബർ ലോ പ്രകാരമുള്ള സർവീസ് ആനുകൂല്യം (End of Service Benefit), നോട്ടീസ് പിരീഡ്, വാർഷിക ലീവ് സാലറി, പിരിച്ചുവിടൽ നഷ്ടപരിഹാരം എന്നിവയുടെ കൃത്യമായ കണക്കുകൂട്ടൽ നിയമങ്ങൾ.",
     "full_content": "⚖️ സൗദി തൊഴിൽ നിയമവും ഗ്രാറ്റുവിറ്റിയും (EOSB Complete Rules)\nരചന: D&J Techies · KSA Malayali Hub\n\n1. സർവീസ് ആനുകൂല്യം കണക്കാക്കുന്ന വിധം (Article 84):\n• ആദ്യത്തെ 5 വർഷം വരെ: ഓരോ പൂർണ്ണ വർഷത്തിനും 15 ദിവസത്തെ വേതനം (അവസാന വാങ്ങിയ അടിസ്ഥാന ശമ്പളം + ഹൗസിംഗ് + ട്രാൻസ്പോർട്ട് അലവൻസ്).\n• 5 വർഷത്തിന് മുകളിൽ: 5 വർഷത്തിന് ശേഷമുള്ള ഓരോ വർഷത്തിനും 30 ദിവസത്തെ (1 മാസത്തെ) പൂർണ്ണ വേതനം.\n\n2. രാജിവെക്കുമ്പോഴുള്ള നിയമം (Article 85):\n• 2 വർഷത്തിൽ താഴെ സർവീസ്: ഗ്രാറ്റുവിറ്റി ലഭിക്കില്ല.\n• 2 മുതൽ 5 വർഷം വരെ: അർഹമായ തുകയുടെ 1/3 (മൂന്നിലൊന്ന്).\n• 5 മുതൽ 10 വർഷം വരെ: അർഹമായ തുകയുടെ 2/3 (മൂന്നിൽ രണ്ട്).\n• 10 വർഷത്തിന് മുകളിൽ: 100% പൂർണ്ണ ആനുകൂല്യം.\n\n3. കമ്പനി പിരിച്ചുവിടുമ്പോൾ (Termination by Employer):\nതൊഴിലാളിയെ കമ്പനി പിരിച്ചുവിടുകയോ കോൺട്രാക്ട് കാലാവധി പൂർത്തിയാവുകയോ ചെയ്താൽ സർവീസ് വർഷങ്ങൾക്ക് ആനുപാതികമായി 100% ഗ്രാറ്റുവിറ്റി ലഭിക്കും.\n\n4. നോട്ടീസ് പിരീഡ് (Notice Period):\nഅൺലിമിറ്റഡ് കോൺട്രാക്ടുകളിൽ കുറഞ്ഞത് 60 ദിവസവും, ഫിക്സഡ് ടേം കോൺട്രാക്ടുകളിൽ കുറഞ്ഞത് 30 ദിവസവും നോട്ടീസ് നൽകണം.",
-    "readUrl": "#guide-92"
+    "readUrl": "/sahayi#eosb-calc-section",
+    "archiveUrl": "https://archive.org/search.php?query=saudi+eosb+gratuity+law",
+    "sourceName": "KSA Malayali Hub EOSB"
   },
   {
     "id": 93,
@@ -1581,7 +1765,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 5,
     "summary": "ഇഖാമ കാലാവധി പരിശോധന, ഖിവ പോർട്ടൽ വഴിയുള്ള സ്പോൺസർഷിപ്പ് മാറ്റം (തനാസുൽ), അബ്ഷിർ സേവനങ്ങൾ, ഹുറൂബ് വന്നാൽ ചെയ്യേണ്ട നിയമപരമായ പരിഹാരങ്ങൾ.",
     "full_content": "📱 ഇഖാമ, ഖിവ, അബ്ഷിർ & ഹുറൂബ് സമ്പൂർണ്ണ സഹായി\nരചന: D&J Techies · KSA Malayali Hub\n\n1. ഇഖാമ സ്റ്റാറ്റസ് & പുതുക്കൽ:\nഅബ്ഷിർ (Absher) അല്ലെങ്കിൽ Muqeem പോർട്ടൽ വഴി ഇഖാമയുടെ വാലിഡിറ്റി പരിശോധിക്കാം. ഇഖാമ കാലാവധി കഴിഞ്ഞ് 3 ദിവസത്തിനുള്ളിൽ പുതുക്കിയില്ലെങ്കിൽ ആദ്യ തവണ 500 റിയാൽ പിഴയും രണ്ടാം തവണ 1000 റിയാൽ പിഴയും ചുമത്തപ്പെടും.\n\n2. ഖിവ (Qiwa) പോർട്ടൽ വഴി സ്പോൺസർഷിപ്പ് മാറ്റം:\nനിലവിലെ സ്പോൺസറുടെ അനുവാദമില്ലാതെ തനാസുൽ ആകുന്ന സാഹചര്യങ്ങൾ:\n• കോൺട്രാക്ട് കാലാവധി അവസാനിക്കുകയും സ്പോൺസർ പുതുക്കാതിരിക്കുകയും ചെയ്യുക.\n• ഇഖാമയോ വർക്ക് പെർമിറ്റോ കാലാവധി കഴിഞ്ഞ് സ്പോൺസർ പുതുക്കാതിരിക്കുക.\n• തുടർച്ചയായി 3 മാസം ശമ്പളം നൽകാതിരിക്കുക.\n• കമ്പനി റെഡ് കാറ്റഗറിയിൽ ആവുക.\n\n3. ഹുറൂബ് (Absence from Work / Huroob):\nതൊഴിലാളി ജോലിക്ക് ഹാജരാകുന്നില്ലെന്ന് കാണിച്ച് സ്പോൺസർ ഫയൽ ചെയ്യുന്ന പരാതിയാണ് ഹുറൂബ്. 60 ദിവസത്തിനകം പുതിയ സ്പോൺസറിലേക്ക് മാറുകയോ അല്ലെങ്കിൽ ലേബർ കോടതിയെ സമീപിച്ച് ഹുറൂബ് റദ്ദാക്കുകയോ ചെയ്യണം.",
-    "readUrl": "#guide-93"
+    "readUrl": "/sahayi#qiwa-absher-guide",
+    "archiveUrl": "https://archive.org/search.php?query=saudi+iqama+qiwa+guide",
+    "sourceName": "KSA Malayali Hub Qiwa"
   },
   {
     "id": 94,
@@ -1598,7 +1784,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 5,
     "summary": "നാട്ടിൽ നിന്ന് സൗദിയിലേക്ക് വരുമ്പോൾ കസ്റ്റംസിൽ പിടിക്കപ്പെടാൻ സാധ്യതയുള്ള നിരോധിത മരുന്നുകൾ, അനുവദനീയമായ ലഗേജ് ഭാരം, മെഡിക്കൽ കുറിപ്പടി നിയമങ്ങൾ.",
     "full_content": "✈️ സൗദി എയർപോർട്ട് യാത്രയും നിരോധിത മരുന്നുകളും\nരചന: D&J Techies · KSA Malayali Hub\n\n1. കർശനമായി നിരോധിച്ച മരുന്നുകൾ (Strictly Prohibited):\n• ട്രമഡോൾ (Tramadol), മോർഫിൻ (Morphine), കോഡിൻ അടങ്ങിയ കഫ് സിറപ്പുകൾ.\n• ഉറക്കഗുളികകൾ: ഡയസെപാം (Diazepam), ക്ലോണസെപാം (Clonazepam), അൽപ്രാസൊളാം (Alprazolam).\n• ചിലതരം പെയിൻകില്ലറുകൾ & ആന്റി-ഡിപ്രസന്റ് മരുന്നുകൾ.\n\n2. അടിയന്തര രോഗികൾ മരുന്ന് കൊണ്ടുവരുമ്പോൾ ശ്രദ്ധിക്കേണ്ടവ:\n• രജിസ്റ്റർ ചെയ്ത ഡോക്ടറുടെ ഒപ്പും സീലുമുള്ള ഒറിജിനൽ ഇംഗ്ലീഷ് കുറിപ്പടി (Prescription).\n• കുറിപ്പടിക്ക് 3 മാസത്തിൽ കൂടുതൽ പഴക്കമുണ്ടാകരുത്.\n• പരമാവധി 30 ദിവസത്തേക്കുള്ള മരുന്ന് മാത്രമേ കയ്യിൽ കരുതാൻ പാടുള്ളൂ.\n• ഗുളികകൾ ഒറിജിനൽ സ്ട്രിപ്പിലോ ബോട്ടിലിലോ തന്നെയായിരിക്കണം.\n\n3. മറ്റ് നിരോധിത വസ്തുക്കൾ:\nപോർക്ക് അടങ്ങിയ ഭക്ഷണങ്ങൾ, മദ്യം, ലഹരി പദാർത്ഥങ്ങൾ, ഡ്രോൺ ക്യാമറകൾ (അനുമതിയില്ലാതെ), മതവിരുദ്ധ സാഹിത്യങ്ങൾ.",
-    "readUrl": "#guide-94"
+    "readUrl": "/health#banned-medicines-section",
+    "archiveUrl": "https://archive.org/search.php?query=saudi+customs+banned+medicines",
+    "sourceName": "KSA Malayali Hub Health"
   },
   {
     "id": 95,
@@ -1615,7 +1803,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.9,
     "summary": "STC, Mobily, Zain, Virgin, Friendi, Red Bull സിമ്മുകളുടെ ബാലൻസ് ചെക്ക്, സ്വന്തം നമ്പർ കണ്ടെത്തൽ, ഡാറ്റ ഓഫറുകൾ, കസ്റ്റമർ കെയർ നമ്പറുകൾ.",
     "full_content": "📶 സൗദി ടെലികോം USSD സിം കോഡുകൾ\nരചന: D&J Techies · KSA Malayali Hub\n\n1. STC (സവാ / Sawa):\n• ബാലൻസ് ചെക്ക്: *166#\n• സ്വന്തം നമ്പർ അറിയാൻ: *150#\n• കസ്റ്റമർ കെയർ: 900\n• റീച്ചാർജ് കോഡ്: *155*റീച്ചാർജ് നമ്പർ#\n\n2. Mobily (മൊബിലി):\n• ബാലൻസ് ചെക്ക്: *1411#\n• സ്വന്തം നമ്പർ അറിയാൻ: *222#\n• കസ്റ്റമർ കെയർ: 1100\n• റീച്ചാർജ് കോഡ്: *1400*റീച്ചാർജ് നമ്പർ#\n\n3. Zain (സെയ്ൻ):\n• ബാലൻസ് ചെക്ക്: *142#\n• സ്വന്തം നമ്പർ അറിയാൻ: *178#\n• കസ്റ്റമർ കെയർ: 959\n• റീച്ചാർജ് കോഡ്: *141*റീച്ചാർജ് നമ്പർ#\n\n4. Virgin Mobile:\n• ബാലൻസ് ചെക്ക്: *102#\n• കസ്റ്റമർ കെയർ: 1789",
-    "readUrl": "#guide-95"
+    "readUrl": "/sahayi#sim-codes-section",
+    "archiveUrl": "https://archive.org/search.php?query=saudi+telecom+ussd+codes",
+    "sourceName": "KSA Malayali Hub Telecom"
   },
   {
     "id": 96,
@@ -1632,7 +1822,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 5,
     "summary": "ആശുപത്രി, ബാങ്ക്, സൂപ്പർമാർക്കറ്റ്, ടാക്സി, ഓഫീസ് എന്നിവിടങ്ങളിൽ സൗദിയിൽ ഏറ്റവും കൂടുതൽ ഉപയോഗിക്കുന്ന 100+ അറബിക് സംഭാഷണ ശകലങ്ങളും അർത്ഥങ്ങളും.",
     "full_content": "🗣️ അറബിക് - മലയാളം - ഹിന്ദി സംഭാഷണ സഹായി\nരചന: D&J Techies · KSA Malayali Hub\n\n1. പൊതുവായ ആശംസകൾ:\n• അസ്സലാമു അലൈക്കും (Peace be upon you) — നമസ്കാരം\n• ശുക്റൻ (Shukran) — നന്ദി\n• അഫ്‌വാൻ (Afwan) — സ്വാഗതം / ക്ഷമിക്കണം\n• മിൻ ഫദ്‌ലക് (Min Fadlak) — ദയവുചെയ്ത് (Please)\n• ഐവ / നആം (Aywa / Na'am) — അതെ (Yes)\n• ലാ (Laa) — ഇല്ല (No)\n\n2. ദൈനംദിന സംഭാഷണങ്ങൾ:\n• കാം ഹാദ? (Kam Hadha?) — ഇതിന് എത്ര വിലയാണ്?\n• ഫീ മൗജൂദ്? (Fee Mawjood?) — ഇവിടെ ലഭ്യമാണോ?\n• അന മരീദ് (Ana Mareed) — എനിക്ക് സുഖമില്ല / അസുഖമാണ്\n• ഫിൻ അൽ മുസ്തശ്ഫാ? (Fein Al Mustashfa?) — ആശുപത്രി എവിടെയാണ്?\n• കം സാഅ അൽആൻ? (Kam Sa'ah Al-Aan?) — ഇപ്പോൾ സമയം എത്രയായി?\n• അന മാ അഫ്ഹം അറബി (Ana ma afham Arabi) — എനിക്ക് അറബി മനസ്സിലാകുന്നില്ല",
-    "readUrl": "#guide-96"
+    "readUrl": "/health#voice-translator-section",
+    "archiveUrl": "https://archive.org/search.php?query=arabic+malayalam+daily+phrases",
+    "sourceName": "KSA Malayali Hub Translator"
   },
   {
     "id": 97,
@@ -1649,7 +1841,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 5,
     "summary": "സൗദി കൗൺസിൽ ഓഫ് ഹെൽത്ത് ഇൻഷുറൻസ് (CHI) പോർട്ടൽ വഴി ഇൻഷുറൻസ് പരിരക്ഷ പരിശോധിക്കുന്ന വിധം, നെറ്റ്‌വർക്ക് ക്ലിനിക്കുകൾ, അടിയന്തര ചികിത്സാ അവകാശങ്ങൾ.",
     "full_content": "🏥 സൗദി ഹെൽത്ത് ഇൻഷുറൻസ് (CHI) സമഗ്ര ഗൈഡ്\nരചന: D&J Techies · KSA Malayali Hub\n\n1. സൗദി ഹെൽത്ത് ഇൻഷുറൻസ് കൗൺസിൽ (CHI):\nസൗദി അറേബ്യയിലെ സ്വകാര്യ മേഖലയിലെ ഓരോ പ്രവാസിക്കും അവരുടെ തൊഴിലുടമ (സ്പോൺസർ) നിർബന്ധമായും മെഡിക്കൽ ഇൻഷുറൻസ് നൽകിയിരിക്കണം. chi.gov.sa വഴി ഇഖാമ നമ്പർ നൽകി ഇൻഷുറൻസ് നിലവിലുണ്ടോ എന്ന് പരിശോധിക്കാം.\n\n2. കോ-പേയ്മെന്റ് (Deductible / Co-pay):\nഒരു ഡോക്ടറെ കാണുമ്പോഴോ മരുന്ന് വാങ്ങുമ്പോഴോ പോളിസി അനുസരിച്ച് പരമാവധി 20% (പരമാവധി 75 മുതൽ 100 റിയാൽ വരെ) മാത്രമേ തൊഴിലാളി നൽകേണ്ടതുള്ളൂ. ബാക്കി തുക ഇൻഷുറൻസ് കമ്പനി വഹിക്കണം.\n\n3. എമർജൻസി ചികിത്സ (Emergency Care):\nഅപകടങ്ങളോ ജീവന് ഭീഷണിയായ അടിയന്തര സാഹചര്യങ്ങളോ ഉണ്ടായാൽ, ഇൻഷുറൻസ് നെറ്റ്‌വർക്കിൽ ഇല്ലാത്ത ആശുപത്രിയാണെങ്കിൽ പോലും രോഗിയെ പ്രവേശിപ്പിച്ച് പ്രാഥമിക ചികിത്സ നൽകാൻ ആശുപത്രി ബാധ്യസ്ഥരാണ്.",
-    "readUrl": "#guide-97"
+    "readUrl": "/health#chi-insurance-guide",
+    "archiveUrl": "https://archive.org/search.php?query=saudi+council+health+insurance",
+    "sourceName": "KSA Malayali Hub Health"
   },
   {
     "id": 98,
@@ -1666,7 +1860,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 5,
     "summary": "നുസുക് (Nusuk) ആപ്പ് വഴി ഉംറ പെർമിറ്റ് എടുക്കുന്ന വിധം, മീഖാത്തിൽ നിന്നുള്ള ഇഹ്റാം, ത്വവാഫ്, സഅ്‌യ്, തഖ്‌സീർ, മദീന മസ്ജിദുന്നബവി സന്ദർശന നിയമങ്ങൾ.",
     "full_content": "🕋 ഉംറ & സിയാറത്ത് സമ്പൂർണ്ണ മാർഗ്ഗരേഖ\nരചന: D&J Techies · KSA Malayali Hub\n\n1. ഉംറയുടെ നാല് പ്രധാന ഘടകങ്ങൾ:\n• ഇഹ്റാം (Ihram): നിശ്ചിത മീഖാത്തുകളിൽ വെച്ച് ഇഹ്റാം വസ്ത്രം ധരിച്ച് നിയ്യത്ത് ചെയ്യുക.\n• ത്വവാഫ് (Tawaf): കഅ്ബയെ ഏഴുതവണ വലംവെക്കുക (ഹജറുൽ അസ്‌വദ് മുതൽ തുടങ്ങി അവിടെത്തന്നെ അവസാനിക്കുക).\n• സഅ്‌യ് (Sa'i): സഫാ-മർവ്വ കുന്നുകൾക്കിടയിൽ ഏഴുതവണ നടക്കുക.\n• തഖ്‌സീർ / ഹൽഖ് (Hair trimming/shaving): പുരുഷന്മാർ മുടി വടിക്കുകയോ വെട്ടുകയോ ചെയ്യുക; സ്ത്രീകൾ വിരൽത്തുമ്പിന്റെ അത്രയും മുടി മുറിക്കുക.\n\n2. നുസുക് (Nusuk App) നിർബന്ധം:\nമക്കയിലെ ഉംറയ്ക്കും മദീനയിലെ റൗളാ ശരീഫ് സന്ദർശനത്തിനും നുസുക് ആപ്പ് വഴി മുൻകൂട്ടി പെർമിറ്റ് എടുക്കണം.",
-    "readUrl": "#guide-98"
+    "readUrl": "/travel#umrah-guide-section",
+    "archiveUrl": "https://archive.org/search.php?query=umrah+ziyarat+malayalam+guide",
+    "sourceName": "KSA Malayali Hub Travel"
   },
   {
     "id": 99,
@@ -1683,7 +1879,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 4.9,
     "summary": "മക്ക, ജിദ്ദ, മദീന, റാബിഗ് നഗരങ്ങളെ ബന്ധിപ്പിക്കുന്ന മണിക്കൂറിൽ 300 കി.മീ വേഗതയുള്ള ഹറമൈൻ എക്സ്പ്രസ് ട്രെയിൻ ബുക്കിംഗ്, നിരക്കുകൾ, ബാഗേജ് നിയമങ്ങൾ.",
     "full_content": "🚄 ഹറമൈൻ ഹൈ-സ്പീഡ് ട്രെയിൻ & SAPTCO സഹായി\nരചന: D&J Techies · KSA Malayali Hub\n\n1. ഹറമൈൻ ട്രെയിൻ സ്റ്റേഷനുകൾ (5 Stations):\n1. മക്ക (Makkah Al-Rusaifah)\n2. ജിദ്ദ അൽ-സുലൈമാനിയ്യ (Jeddah Al-Sulaymaniyah)\n3. ജിദ്ദ എയർപോർട്ട് ടെർമിനൽ 1 (KAIA Airport)\n4. കിംഗ് അബ്ദുള്ള ഇക്കണോമിക് സിറ്റി (KAEC Rabigh)\n5. മദീന (Madinah)\n\n2. യാത്രാ സമയം:\n• ജിദ്ദ എയർപോർട്ട് - മക്ക: 54 മിനിറ്റ്\n• ജിദ്ദ - മദീന: 1 മണിക്കൂർ 50 മിനിറ്റ്\n• മക്ക - മദീന: 2 മണിക്കൂർ 15 മിനിറ്റ്\n\n3. ബാഗേജ് അലവൻസ്:\nഓരോ യാത്രക്കാരനും ഒരു വലിയ ബാഗ് (പരമാവധി 25 കി.ഗ്രാം) + ഒരു ഹാൻഡ് ബാഗ് മാത്രമേ അനുവദിക്കൂ.\n\n4. ഒഫീഷ്യൽ ബുക്കിംഗ്:\nsar.hhr.sa വഴിയോ HHR Train മൊബൈൽ ആപ്പ് വഴിയോ ടിക്കറ്റുകൾ ബുക്ക് ചെയ്യാം.",
-    "readUrl": "#guide-99"
+    "readUrl": "/travel#haramain-train-section",
+    "archiveUrl": "https://archive.org/search.php?query=haramain+high+speed+train+guide",
+    "sourceName": "KSA Malayali Hub Travel"
   },
   {
     "id": 100,
@@ -1700,7 +1898,9 @@ window.MALAYALAM_LIBRARY_DATA = [
     "rating": 5,
     "summary": "പ്രവാസി ക്ഷേമനിധി പെൻഷൻ അപേക്ഷ, നോർക്ക ഐഡി കാർഡ്, 5 ലക്ഷം രൂപയുടെ പ്രവാസി രക്ഷാ ഇൻഷുറൻസ്, സാന്ത്വന ധനസഹായം, പ്രവാസി ഭദ്രത വായ്പകൾ.",
     "full_content": "🌴 നോർക്ക റൂട്ട്സ് & പ്രവാസി ക്ഷേമനിധി സമഗ്ര വിവരങ്ങൾ\nരചന: D&J Techies · KSA Malayali Hub\n\n1. പ്രവാസി ക്ഷേമനിധി പെൻഷൻ (Pravasi Welfare Board):\n• 18 മുതൽ 60 വയസ്സുവരെയുള്ള പ്രവാസികൾക്ക് അംഗമാകാം.\n• പ്രതിമാസം 350 രൂപ അംശാദായം അടയ്ക്കണം.\n• കുറഞ്ഞത് 5 വർഷം വിഹിതമടച്ച് 60 വയസ്സ് പൂർത്തിയാകുമ്പോൾ പ്രതിമാസ പെൻഷൻ ലഭിക്കും.\n\n2. നോർക്ക ഐഡി കാർഡ് (Pravasi Identity Card):\n• 3 വർഷ കാലാവധിയുള്ള ഡിജിറ്റൽ തിരിച്ചറിയൽ കാർഡ് (ഫീസ്: 315 രൂപ).\n• 5 ലക്ഷം രൂപയുടെ അപകട മരണ ഇൻഷുറൻസ് പരിരക്ഷ സൗജന്യമായി ലഭിക്കുന്നു.\n\n3. സാന്ത്വന പദ്ധതി (Santhwana Scheme):\nനാട്ടിൽ തിരിച്ചെത്തിയ സാമ്പത്തികമായി പിന്നോക്കം നിൽക്കുന്ന പ്രവാസികൾക്ക് ഗുരുതര രോഗങ്ങൾക്കുള്ള ചികിത്സാ സഹായം (പരമാവധി 50,000 രൂപ), മരണാനന്തര സഹായം (1 ലക്ഷം രൂപ), വിവാഹ ധനസഹായം (15,000 രൂപ).",
-    "readUrl": "#guide-100"
+    "readUrl": "/norka#norka-services-section",
+    "archiveUrl": "https://archive.org/search.php?query=norka+roots+pravasi+welfare",
+    "sourceName": "KSA Malayali Hub NORKA"
   }
 ];
 

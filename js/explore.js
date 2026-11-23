@@ -162,13 +162,13 @@
                 <p style="font-size:0.86rem; color:var(--text-muted); margin:0 0 10px; font-weight:600;">✍️ ${escapeHtml(book.author)} ${metaStr}</p>
                 <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.6; margin:0 0 16px; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;">${escapeHtml(book.summary || "")}</p>
               </div>
-              <div style="display:flex; gap:8px; margin-top:10px;">
-                <button type="button" class="airport-action-btn view-book-btn" data-id="${book.id}" style="flex:1; margin:0; padding:10px 12px; font-size:0.85rem; font-weight:700;">
-                  <span>📖 വായിക്കാം</span>
-                </button>
-                <button type="button" class="airport-action-btn pdf-book-btn" data-id="${book.id}" style="flex:1; margin:0; padding:10px 12px; font-size:0.85rem; font-weight:700; background:linear-gradient(135deg,#047857,#065f46); color:#fff; border-color:#047857;">
-                  <span>⬇️ PDF</span>
-                </button>
+              <div style="display:flex; gap:8px; margin-top:auto; padding-top:12px; border-top:1px solid var(--border);">
+                <a href="${book.readUrl || 'https://ml.wikisource.org'}" ${book.category === 'pravasi' || book.id > 90 ? '' : 'target="_blank" rel="noopener noreferrer"'} class="airport-action-btn" style="flex:1; margin:0; padding:10px 10px; font-size:0.84rem; font-weight:700; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; gap:5px; background:rgba(4,120,87,0.12); color:#047857; border:1px solid rgba(4,120,87,0.35); border-radius:8px;">
+                  <span>${book.category === 'pravasi' || book.id > 90 ? '📖 ഗൈഡ് ↗' : '📖 വായിക്കാം ↗'}</span>
+                </a>
+                <a href="${book.archiveUrl || 'https://archive.org/search.php?query=' + encodeURIComponent((book.englishTitle || book.title) + ' malayalam')}" target="_blank" rel="noopener noreferrer" class="airport-action-btn" style="flex:1; margin:0; padding:10px 10px; font-size:0.84rem; font-weight:700; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; gap:5px; background:rgba(59,130,246,0.12); color:#2563eb; border:1px solid rgba(59,130,246,0.35); border-radius:8px;">
+                  <span>🏛️ ആർക്കൈവ് ↗</span>
+                </a>
               </div>
             </div>
           `;
@@ -189,15 +189,14 @@
       // Add event listeners for whole card clicks
       booksContainer.querySelectorAll(".library-card").forEach((card) => {
         card.addEventListener("click", (e) => {
-          if (e.target.closest(".pdf-book-btn")) return;
+          if (e.target.closest("a") || e.target.closest(".airport-action-btn")) return;
           const bookId = card.getAttribute("data-book-id");
           const found = books.find((b) => String(b.id) === String(bookId));
           if (found) openBookModal(found);
         });
         card.addEventListener("keydown", (e) => {
           if (e.key === "Enter" || e.key === " ") {
-            if (e.target.closest(".pdf-book-btn")) return;
-            e.preventDefault();
+            if (e.target.closest("a") || e.target.closest(".airport-action-btn")) return;
             const bookId = card.getAttribute("data-book-id");
             const found = books.find((b) => String(b.id) === String(bookId));
             if (found) openBookModal(found);
